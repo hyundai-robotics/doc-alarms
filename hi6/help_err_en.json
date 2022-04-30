@@ -1,0 +1,1732 @@
+{
+	"E1" : {
+		"msg" : "Power failure detected",
+		"cause" : "Power failure or CB (circuit brake) off while in the Motor On state",
+		"remedy" : "Not required to take measures considering that this is for storing the power failure state in the error history."
+	},
+	"E2" : {
+		"msg" : "Hardware limit switch signal inputted",
+		"cause" : "The limit switch signal, installed at the end of the moving area of each of the robot’s axis, is inputted.",
+		"remedy" : "In the system menu, after Motor On (pressing the Motor On button after grabbing the Enable switch), move to within the moving area using the jog key.Refer to the fault repair methods.",
+		"help_idx" : "E0002",
+		"help_title" : "[TroubleShoot]Hardware limit switch signal inputted"
+	},
+	"E3" : {
+		"msg" : "Brake power overload (brake power) generated",
+		"cause" : "The fuse generating brake power was disconnected by Overcurrent in the AC 220 V power line.",
+		"remedy" : "Refer to the fault repair methods."
+	},
+	"E4" : {
+		"msg" : "Arm interference limit switch signal inputted",
+		"cause" : "The limit switch signal, installed to prevent robot arm interference, is inputted",
+		"remedy" : "In the system menu, after Motor On (pressing the Motor On button after grabbing the Enable switch), move to within the moving area using the jog key.Refer to the fault repair methods."
+	},
+	"E5" : {
+		"msg" : "DSP version not existent in the main board flash ROM",
+		"cause" : "When power on, It is generated if there is no saved DSP execution code in main board flash ROM.",
+		"remedy" : "Upgrade the DSP version using the system version-up function (R286)or IVUF.(Intergraded Version Up Function)"
+	},
+	"E6" : {
+		"msg" : "Collision sensor operating",
+		"cause" : "Collision sensor signal is inputted.",
+		"remedy" : "Check whether the robot end-effector tool is transformed. Start up after removing all the error causes."
+	},
+	"E7" : {
+		"msg" : "Stick signal detected",
+		"cause" : "Stick signal inputted when the welding sequence ends.",
+		"remedy" : "1) Check the stick detection signal.2) Remove the stick."
+	},
+	"E8" : {
+		"msg" : "Motor temperature increased (hardwiring)",
+		"cause" : "Excessive increase of the motor temperature is detected through the temperature sensor wired to each axis of the robot.",
+		"remedy" : "Refer to the fault repair methods."
+	},
+	"E9" : {
+		"msg" : "Verification error after #%s DSP version downloaded",
+		"cause" : "There is something wrong with the data of the execution code transmitted through the servo board HPI port.",
+		"remedy" : "1) Check whether a servo board is mounted.2) Check the servo board DIP switch by referring to the fault repair methods."
+	},
+	"E10" : {
+		"msg" : "AMP regenerative discharge resistor overheated",
+		"cause" : "The regenerative discharge resistor temperature increased above the reference value and the overheating detection sensor is abnormal.",
+		"remedy" : "Refer to the fault repair methods.",
+		"help_idx" : "E0010",
+		"help_title" : "[TroubleShoot]AMP regenerative discharge resistor overheated"
+	},
+	"E11" : {
+		"msg" : "AMP overvoltage (P-N) generated",
+		"cause" : "The motor voltage (P-N) set value exceeded.",
+		"remedy" : "Check the controller panel AC input power (Usable in the rated power). Check the connection state of the regenerative discharge resistor.",
+		"help_idx" : "E0011",
+		"help_title" : "[TroubleShoot]AMP overvoltage (P-N) generated"
+	},
+	"E12" : {
+		"msg" : "Brake power abnormal",
+		"cause" : "Brake voltage lowered.",
+		"remedy" : "1) Check the brake power, and raise the voltage up to 24~26V.2) CNPB wiring may be bad. Check the CNB wiring.3) Replace the brake SMPS inside the electronic module.4) Replace the system board."
+	},
+	"E13" : {
+		"msg" : "PWM error!!; Sequence line contact defective",
+		"cause" : "Because of PWM off-line’s defective contact between AMP and sequence board PWM command signal is not inputted into the drive system",
+		"remedy" : "1) Check the drive system CNSG cable.2) Even after taking the above measures, if the error should occur again, contact our company for inquiries."
+	},
+	"E14" : {
+		"msg" : "Safety switch (EM, OTR, TS, and others) instant contact generated",
+		"cause" : "Safety switch (emergency stop, motor overheating, limit switch, and others) instant contact generated.",
+		"remedy" : "1) Check the safety switch.2) Even after taking the above measures, if the error should occur again, contact our company for inquiries.",
+		"help_idx" : "E0014",
+		"help_title" : "[TroubleShoot]Safety switch (EM, OTR, TS, and others) instant contact generated"
+	},
+	"E15" : {
+		"msg" : "Teaching pendant operation abnormal",
+		"cause" : "Communication disconnection detected between the teaching pendant and the main board.",
+		"remedy" : "Simply ignore it.Contact our company for inquiries for T/P errors.Teaching pendant is abnormal, or communication is defective.Please contact to HHI.TEL   : 052-202-7927,7949,7956,7957FAX   : 052-202-7960E-Mail: robotas@hhi.co.kr",
+		"help_idx" : "E0015",
+		"help_title" : "[TroubleShoot]Teaching pendant operation abnormal"
+	},
+	"E17" : {
+		"msg" : "Conveyor pulse line abnormal",
+		"cause" : "Conveyor pulse not inputted.",
+		"remedy" : "1) Check the conveyor encoder power.2) Check the access of the conveyor encoder pulse line.3) Replace the conveyor I/F board."
+	},
+	"E18" : {
+		"msg" : "Arc board access abnormal",
+		"cause" : "Problem with the connection to the arc board.",
+		"remedy" : "Check the communication and power lines between the arc board and the main board."
+	},
+	"E19" : {
+		"msg" : "Conveyor pulse allowable frequency exceeded",
+		"cause" : "Conveyor pulse count inputted a larger value than the allowable frequency.",
+		"remedy" : "1) Check the allowable frequency set value.2) Check whether signal noise is being inputted into the pulse line."
+	},
+	"E20" : {
+		"msg" : "Conveyor I/F board access abnormal",
+		"cause" : "Problem with the connection to the conveyor I/F board.",
+		"remedy" : "Check the communication and power lines between the conveyor I/F board and the main board."
+	},
+	"E21" : {
+		"msg" : "Conveyor pulse allowable speed exceeded",
+		"cause" : "Conveyor allowable speed high",
+		"remedy" : "1) Check the conveyor allowable speed set value.2) Check whether signal noise is being inputted into the pulse line."
+	},
+	"E22" : {
+		"msg" : "Intermodule communication abnormal",
+		"cause" : "Communication error generated between the main board and  system I/O(BS530) module.",
+		"remedy" : "Refer to the fault repair methods.",
+		"help_idx" : "E0022",
+		"help_title" : "[TroubleShoot]Intermodule communication abnormal"
+	},
+	"E31" : {
+		"msg" : "Mode switch fault",
+		"cause" : "Teach Pendant(T/P) mode switch fault or access state abnormal.",
+		"remedy" : "Check the access state of the mode switch or of the line."
+	},
+	"E32" : {
+		"msg" : "User IO board (#%s) communication abnormal",
+		"cause" : "Communication error generated among the main board and user I/O modules.",
+		"remedy" : "Refer to the measures for the relevant items of the user I/O modules.",
+		"help_idx" : "E0032",
+		"help_title" : "[TroubleShoot]User IO board (#%s) communication abnormal"
+	},
+	"E33" : {
+		"msg" : "AMP undervoltage generated",
+		"cause" : "Servo amp P-N voltage lowered.",
+		"remedy" : "Check the state of the regenerative discharge and the servo amp input power.",
+		"help_idx" : "E0033",
+		"help_title" : "[TroubleShoot]AMP undervoltage generated"
+	},
+	"E34" : {
+		"msg" : "AMP overcurrent generated",
+		"cause" : "Surge voltage inflow into the servo amp, disconnecting F1 or F2.",
+		"remedy" : "Check the connection state of the controller external and internal power.",
+		"help_idx" : "E0034",
+		"help_title" : "[TroubleShoot]AMP overcurrent generated"
+	},
+	"E35" : {
+		"msg" : "Hardware limit (additional axis)",
+		"cause" : "The limit switch signal, installed at the end of the moving area of the additional axis (including the traverse axis), is inputted.",
+		"remedy" : "In the system menu, after Motor On (pressing the Motor On button after grabbing the Enable switch), move to within the  moving area using the jog key.Refer to E0002 of the fault repair methods."
+	},
+	"E36" : {
+		"msg" : "Hardware limit (expansion 16 axes)",
+		"cause" : "The limit switch signal, installed at the end of the moving area of of expansion 16 axes, is inputted.",
+		"remedy" : "In the system menu, after Motor On (pressing the Motor On button after grabbing the Enable switch), move to within the moving area using the jog key.Refer to E0002 of the fault repair methods."
+	},
+	"E37" : {
+		"msg" : "Control power overload (control power) generated",
+		"cause" : "The control power fuse was disconnected by Overcurrent in the AC 220 V power line.",
+		"remedy" : "Remove the causes of fuse disconnection, and then replace the fuse."
+	},
+	"E38" : {
+		"msg" : "Motor power overload (motors power) generated",
+		"cause" : "Overcurrent generated in the RST line for the motor power, tripping CP(Circuit Protector).",
+		"remedy" : "Remove the causes of CP trip, and then recover the CP switch."
+	},
+	"E39" : {
+		"msg" : "SMPS power overload (SMPS power) generated",
+		"cause" : "The fuse generating SMPS power was disconnected by overcurrent in the AC48 V power line.",
+		"remedy" : "Remove the causes of fuse disconnection, and then replace the fuse."
+	},
+	"E41" : {
+		"msg" : "(%s axis) motor temperature increased (hardwiring)",
+		"cause" : "Additional axis motor temperature increased excessively.",
+		"remedy" : "Refer to E0008 of the fault repair methods."
+	},
+	"E42" : {
+		"msg" : "General guard switch access error",
+		"cause" : "General safety guard connection is abnormal",
+		"remedy" : "Check the access state of the general safety guard or of the line."
+	},
+	"E43" : {
+		"msg" : "Safety plug access error",
+		"cause" : "Safety guard(auto guard) switch access in auto mode  is abnormal",
+		"remedy" : "Check the access state of the safety plug switch or of the line."
+	},
+	"E44" : {
+		"msg" : "Lift axis belt breaking detection sensor operating",
+		"cause" : "Lift axis motor driving belt broken. Or, sensor cable broken inside the robot.",
+		"remedy" : "Replace the motor driving  belt, or check the sensor cable inside the robot.",
+		"help_idx" : "E0044",
+		"help_title" : "[TroubleShoot]Lift axis belt breaking detection sensor operating"
+	},
+	"E45" : {
+		"msg" : "Shift to auto mode remotely requested",
+		"cause" : "Change to auto mode requested remotely while the controller in manual mode.",
+		"remedy" : "Change the mode switch to auto mode on the teach pendant."
+	},
+	"E46" : {
+		"msg" : "Shift from auto mode to manual performed remotely",
+		"cause" : "Operation mode of the teach pendant changed to manual mode while in the remote auto mode.",
+		"remedy" : "Try after changing the remote mode to manual."
+	},
+	"E47" : {
+		"msg" : "Motion processing time exceeded",
+		"cause" : "It is not enough processing time for robot motion.",
+		"remedy" : "If much time is assigned to the embedded PLC, reduce the assigned time by making a request to the engineers of our company."
+	},
+	"E48" : {
+		"msg" : "Remote mode (system) signal not inputted.",
+		"cause" : "1) Motor On tried in remote mode while the remote mode signal in the BD530 board not inputted.2) Mode switch manipulated in remote mode while remote mode signal in the BD530 board not inputted.",
+		"remedy" : "1) Check the remote mode(system) signal in private input monitoring window.2) If not inputted, check the remote signal(pin 3,5) of TBRMT terminal block in BD530 board."
+	},
+	"E49" : {
+		"msg" : "External startup possible after joystick mode deactivated",
+		"cause" : "Possible to external start command of  the LCD inspection robot only after the joystick mode released",
+		"remedy" : "1) Release the joystick mode.2) Even after release the joystick mode, if external start command is impossible, check whether the joystick mode signal is normal."
+	},
+	"E50" : {
+		"msg" : "Light curtain detection signal inputted.",
+		"cause" : "Light curtain detection signal inputted.",
+		"remedy" : "Check the access state of the light curtain or of the line."
+	},
+	"E51" : {
+		"msg" : "Expansion brake board communication abnormal",
+		"cause" : "The communication problem between the expansion brake board and the main board has occurred.",
+		"remedy" : "Refer to the troubleshooting for the related item."
+	},
+	"E52" : {
+		"msg" : "PRM board communication abnormal",
+		"cause" : "The communication problem between the PRM and the main board has occurred.",
+		"remedy" : "1) Check after inputting the controller power again.2) Check the cable for CAN1 of the PRM BD592 board."
+	},
+	"E53" : {
+		"msg" : "PRM PN overcurrent generated",
+		"cause" : "The PRM PN current has exceeded the error reference value above the PRM regenerative capacity,.",
+		"remedy" : "Check the error by lowering the robot playback speed."
+	},
+	"E54" : {
+		"msg" : "PRM 3-phase overcurrent generated",
+		"cause" : "Beyond the PRM regenerative capacity, the PRM 3-phase current has exceeded the error reference value.",
+		"remedy" : "Check the error by lowering the robot playback speed."
+	},
+	"E55" : {
+		"msg" : "PRM IPM fault signal detected",
+		"cause" : "Fault signal has been detected at PRM IPM.",
+		"remedy" : "1) Check the PRM fan.2) Check the error by lowering the robot playback speed."
+	},
+	"E101" : {
+		"msg" : "Servo board count insufficient",
+		"cause" : "Total axis number has set above the axis count can be controlled by the servo board.",
+		"remedy" : "1) Check the total count of the axes to control2) Add a servo board."
+	},
+	"E102" : {
+		"msg" : "Robot type not matched",
+		"cause" : "Unsupported robot type.",
+		"remedy" : "Check the set robot type."
+	},
+	"E103" : {
+		"msg" : "(%s axis) encoder abnormal: Communication processing time exceeded",
+		"cause" : "Encoder data has not been received within the encoder communication processing time.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E104" : {
+		"msg" : "(%s axis) encoder abnormal: Data frame incomplete",
+		"cause" : "Data received but not in the set typeIncomplete data frame has received in encoder communication.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E105" : {
+		"msg" : "(%s axis) encoder abnormal: Encoder disconnected",
+		"cause" : "Encoder comminication cable has disconnected.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E106" : {
+		"msg" : "(%s axis) encoder abnormal: Received data defective",
+		"cause" : "Invalid data frame(invalid data format) has received in encoder communication.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E107" : {
+		"msg" : "(%s axis) encoder abnormal: Invalid bit sequence",
+		"cause" : "Invalid data frame(invalid bit sequence) has received in encoder communication.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E108" : {
+		"msg" : "(%s axis) encoder abnormal: Encoder reset required",
+		"cause" : "Encoder data is out of valid range.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0108",
+		"help_title" : "[TroubleShoot](%s axis) encoder abnormal: Encoder reset required"
+	},
+	"E112" : {
+		"msg" : "(%s axis) IPM fault signal detected",
+		"cause" : "Fault signal generated at IPM of the faulty axis.",
+		"remedy" : "1) Check the motor-drive parts.2) Check the robot operation.3) Check the controller cooling fan.4) Refer to the troubleshooting manual",
+		"help_idx" : "E0112",
+		"help_title" : "[TroubleShoot](%s axis) IPM fault signal detected"
+	},
+	"E113" : {
+		"msg" : "(%s axis) overcurrent generated",
+		"cause" : "Current, above the allowable value, flowing through the motor or the drive system.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0113",
+		"help_title" : "[TroubleShoot](%s axis) overcurrent generated"
+	},
+	"E114" : {
+		"msg" : "(%s axis) drive system control voltage lowered",
+		"cause" : "+15 V, the control power supplied to the servo drive system, lowered.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0114",
+		"help_title" : "[TroubleShoot](%s axis) drive system control voltage lowered"
+	},
+	"E115" : {
+		"msg" : "(%s axis) received command code abnormal",
+		"cause" : "Wrong command code has received by the servo board from the main board.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0115",
+		"help_title" : "[TroubleShoot](%s axis) received command code abnormal"
+	},
+	"E117" : {
+		"msg" : "(%s axis) position deviation set value exceeded",
+		"cause" : "Position deviation is larger than the setting value.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0117",
+		"help_title" : "[TroubleShoot](%s axis) position deviation set value exceeded"
+	},
+	"E118" : {
+		"msg" : "(%s axis) speed deviation set value exceeded",
+		"cause" : "Speed deviation is larger than the setting value.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E119" : {
+		"msg" : "(%s axis) overload generated",
+		"cause" : "Motor is being operated above the setting overload level.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0119",
+		"help_title" : "[TroubleShoot](%s axis) overload generated"
+	},
+	"E122" : {
+		"msg" : "Servo on time limit exceeded",
+		"cause" : "Servo On has not executed within the time limit when servo on operated or power saving deactivated.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0122",
+		"help_title" : "[TroubleShoot]Servo on time limit exceeded"
+	},
+	"E123" : {
+		"msg" : "Servo off time limit exceeded",
+		"cause" : "Servo Off has not executed within the time limit when Servo Off operated or power saving activated.",
+		"remedy" : "1) Replace the servo board.2) Contact our maintenance team."
+	},
+	"E124" : {
+		"msg" : "Servo error clear time limit exceeded",
+		"cause" : "Motor On is impossible because of pending servo error.",
+		"remedy" : "Clear pending servo error."
+	},
+	"E125" : {
+		"msg" : "Target position reach time exceeded",
+		"cause" : "Within 10 seconds, the current value could not reach the target position.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E126" : {
+		"msg" : "Trying manipulating outside the operation area",
+		"cause" : "Case of trying a work outside the robot operation area.",
+		"remedy" : "Check whether the robot can reach the work target position."
+	},
+	"E127" : {
+		"msg" : "MSHP operation abnormal",
+		"cause" : "MSHP is not operable.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0127",
+		"help_title" : "[TroubleShoot]MSHP operation abnormal"
+	},
+	"E131" : {
+		"msg" : "(%s axis) bit jump (normal operation) error",
+		"cause" : "While in normal speed operation, the current speed exceeded the high-speed detection level (BJH).",
+		"remedy" : "1) Check the servo board CNEC connector.2) Check CNR4.3) Check whether the setting of BJH is 1.5 times the max. speed."
+	},
+	"E132" : {
+		"msg" : "(%s axis) bit jump (low-speed operation) error",
+		"cause" : "While in low speed operation (Jog, step forward/backward, and the low-speed command signal input set in the input signal assignment), the current speed exceeded the low-speed detection level (BJL).",
+		"remedy" : "1) Check the servo board CNEC connector.2) Check CNR4.3) Check whether the setting of BJH is 1.5 times the max. speed."
+	},
+	"E133" : {
+		"msg" : "(%s axis) command value abnormal",
+		"cause" : "The servo board has received invalid position command.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0133",
+		"help_title" : "[TroubleShoot](%s axis) command value abnormal"
+	},
+	"E134" : {
+		"msg" : "(%s axis) max. speed exceeded",
+		"cause" : "Position command, transmitted to the servo board, exceeded the max. speed.",
+		"remedy" : "Refer to the troubleshooting manual",
+		"help_idx" : "E0134",
+		"help_title" : "[TroubleShoot](%s axis) max. speed exceeded"
+	},
+	"E135" : {
+		"msg" : "(%s axis) PWM off when servo on",
+		"cause" : "PWM error!Due to defective contact in PWM off-line between AMP and sequence board, the PWM command could not be transfered to the drive system.",
+		"remedy" : "Check the CNSG cable in the drive system.If the error could not be cleared, contact our maintenance team."
+	},
+	"E136" : {
+		"msg" : "Servo AMP control voltage lowered",
+		"cause" : "Control power +15 V lowered, and abnormality with SMPS for the regenerative control in the drive system.",
+		"remedy" : "Refer to the troubleshooting manual"
+	},
+	"E137" : {
+		"msg" : "(%s axis) encoder pulse setting improper",
+		"cause" : "In the servo parameter, the \"\"PULS\"\" value for setting the encoder pulse is a value that cannot be used.",
+		"remedy" : "Check “PULS” of the servo parameter."
+	},
+	"E138" : {
+		"msg" : "Prior position recovery time limit exceeded",
+		"cause" : "Prior position recovery time out has occurred.",
+		"remedy" : "1) Check the servo loop gain setting value.2) Check the encoder power voltage.3) Check the encoder wiring."
+	},
+	"E139" : {
+		"msg" : "Filter change time limit exceeded",
+		"cause" : "Communication defective between the main board and the servo board.",
+		"remedy" : "1) Check the connection state of  the main board or of the servo board.2) Replace the main board or the servo board."
+	},
+	"E140" : {
+		"msg" : "MSPR operation abnormal",
+		"cause" : "Drive system main power supply relay is not operable.",
+		"remedy" : "Check the CNPC cable and the MSPR relay of the drive system.",
+		"help_idx" : "E0140",
+		"help_title" : "[TroubleShoot]MSPR operation abnormal"
+	},
+	"E150" : {
+		"msg" : "Fault by CPU exception",
+		"cause" : "CPU fault has occurred and the controller has terminated abnormally.",
+		"remedy" : "Execute the backup of all files of the controller, and send them to our maintenance team."
+	},
+	"E151" : {
+		"msg" : "Step command execution impossible",
+		"cause" : "Wrong step information created, making robot operation impossible.",
+		"remedy" : "Contact our maintenance team."
+	},
+	"E154" : {
+		"msg" : "%s gun) max. tip consumption amount exceeded",
+		"cause" : "The total tip consumption amount detected by gun search exceeded the maximum tip consumption amount in the servo gun parameter.",
+		"remedy" : "1) Check the max. tip consumption amount of the servo gun parameter.2) Replace the tip."
+	},
+	"E155" : {
+		"msg" : "%s gun) max. moving tip consumption amount exceeded",
+		"cause" : "The moving tip consumption amount detected by gun search exceeded the maximum moving tip consumption amount in the servo gun parameter.",
+		"remedy" : "1) Check the max. moving tip consumption amount of the servo gun parameter.2) Replace the tip."
+	},
+	"E156" : {
+		"msg" : "%s gun) max. fixed tip consumption amount exceeded",
+		"cause" : "The fixed tip consumption amount detected by gun search exceeded the maximum moving tip consumption amount  in the servo gun parameter.",
+		"remedy" : "1) Check the max. fixed tip consumption amount of the servo gun parameter.2) Replace the tip."
+	},
+	"E157" : {
+		"msg" : "(%s axis) torsion deviation excessive",
+		"cause" : "May be generated with a gantry-type robot that supports 2-axis sync. Traverse axis torsion amount larger than the amount set in the 2-axis sync servo parameter.",
+		"remedy" : "Adjust the torsion deviation level of the 2-axis sync servo parameter."
+	},
+	"E158" : {
+		"msg" : "Torsion recovery time limit exceeded",
+		"cause" : "In the 2-axis sync supportable gantry-type robot, the torsion recovery operation time limit of 5 seconds was exceeded while in the Motor On state.",
+		"remedy" : "1) Check whether an interfering object exists on the traverse axis.2) Check the power voltage and wiring of the encoder.3) Replace the motor."
+	},
+	"E159" : {
+		"msg" : "(%s axis) axis speed limit value exceeded",
+		"cause" : "Posture in which the axis rotates rapidly during interpolation operation.",
+		"remedy" : "1) Lower the step record speed.2) Change the relevant step posture."
+	},
+	"E160" : {
+		"msg" : "(%s axis) collision detected",
+		"cause" : "Disturbance torque has exceeded the collision detection level.",
+		"remedy" : "1) Remove the cause of collision when collision is occurred.2) Adjust the collision detection level."
+	},
+	"E161" : {
+		"msg" : "(%s axis) shock detected",
+		"cause" : "Disturbance torque variation rate has exceeded the shock detection level.",
+		"remedy" : "1) Remove the cause of collision when collision is occurred.2) Adjust the collision detection level."
+	},
+	"E162" : {
+		"msg" : "(%s axis) current sensor abnormal",
+		"cause" : "AMP current feedback offset value is too large.",
+		"remedy" : "1) Check +/-15 V power of the complex power unit.2) Replace the servo board.3) Replace AMP."
+	},
+	"E163" : {
+		"msg" : "Axis slipped while in power-saving mode",
+		"cause" : "Axis has slipped while in power saving mode.",
+		"remedy" : "Replace the system input and output boards."
+	},
+	"E164" : {
+		"msg" : "Dynamic brake abnormal",
+		"cause" : "Abnormality generated with the AMP dynamic brake.Dynamic brake in AMP is abnormal",
+		"remedy" : "1) Check the CNBS cable connected between the servo board and AMP.2) Replace AMP."
+	},
+	"E165" : {
+		"msg" : "(%s axis) impossible to maintain servo lock for the %s phase",
+		"cause" : "Impossible to supply current to the motor.It is Impossible to supply current to the motor.",
+		"remedy" : "Check the motor wire, AMP, the servo board, and the CNBS cable between AMP and the servo board.",
+		"help_idx" : "E0165",
+		"help_title" : "[TroubleShoot](%s axis) impossible to maintain servo lock for the %s phase"
+	},
+	"E170" : {
+		"msg" : "Stopping time (5 seconds) exceeded",
+		"cause" : "When the stop signal is inputted while operating, the time from deceleration to stopping completely exceeded 5 seconds.",
+		"remedy" : "Ensure that the sum of  the acceleration time and the deceleration rate ,which is converted in time domain, is below 5 seconds.Refer to the acceleration and deceleration parameter of the operation manual."
+	},
+	"E171" : {
+		"msg" : "Gun opening time (5 seconds) exceeded",
+		"cause" : "In the spot welding and gun search function, the time taken from squeeze to opening exceeded 5 seconds.",
+		"remedy" : "1) Check whether the gun is stuck to the welding workpiece or interfered with.2) Check whether the gun of the moving side is stuck or interfered with."
+	},
+	"E172" : {
+		"msg" : "(%s axis) endless rotation position abnormal",
+		"cause" : "Difference between the backed-up endless axis encoder value and the value read during initialization is above 0x 20000.",
+		"remedy" : "1) Calibrate the endless axis encoder offset again.2) Reset the endless axis encoder and calibrate the encoder."
+	},
+	"E173" : {
+		"msg" : "Endless rotation amount overflow",
+		"cause" : "Endless step record position exceeded the encoder use range.",
+		"remedy" : "Adjust the step position after manually resetting the position of the endless using the R350 code."
+	},
+	"E174" : {
+		"msg" : "DSP 1 initialization abnormal",
+		"cause" : "No initialization completion response in DSP 1 of the servo board 1.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Check whether the DS1, DS2, and S1 switches inside the servo board operate normally.3) Replace the servo board."
+	},
+	"E175" : {
+		"msg" : "DSP 2 initialization abnormal",
+		"cause" : "No initialization completion response in DSP 2 of the servo board 1.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Check whether the DS1, DS2, and S1 switches inside the servo board operate normally.3) Replace the servo board."
+	},
+	"E176" : {
+		"msg" : "DSP 3 initialization abnormal",
+		"cause" : "No initialization completion response in DSP 1 of the servo board 2",
+		"remedy" : "1) Check the mounting state of the servo board.2) Check whether the DS1, DS2, and S1 switches inside the servo board operate normally.3) Replace the servo board."
+	},
+	"E177" : {
+		"msg" : "DSP 4 initialization abnormal",
+		"cause" : "No initialization completion response in DSP 2 of the servo board 2.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Check whether the DS1, DS2, and S1 switches inside the servo board operate normally.3) Replace the servo board."
+	},
+	"E178" : {
+		"msg" : "DSP 1 version not matched",
+		"cause" : "Impossible to use the robot because of the DSP 1 ROM version of the servo board 1 not matching the main version.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E179" : {
+		"msg" : "DSP 2 version not matched",
+		"cause" : "Impossible to use the robot because of the DSP 2 ROM version of the servo board 1 not matching the main version.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E180" : {
+		"msg" : "DSP 3 version not matched",
+		"cause" : "Impossible to use the robot because of the DSP 1 ROM version of the servo board 2 not matching the main version.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E181" : {
+		"msg" : "DSP 4 version not matched",
+		"cause" : "Impossible to use the robot because of the DSP 2 ROM version of the servo board 2 not matching the main version.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E182" : {
+		"msg" : "DSP 1 communication abnormal",
+		"cause" : "Communication fault between the main CPU and DSP 1 of the servo board 1.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Replace the servo board."
+	},
+	"E183" : {
+		"msg" : "DSP 2 communication abnormal",
+		"cause" : "Communication fault between the main CPU and DSP 2 of the servo board 1.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Replace the servo board."
+	},
+	"E184" : {
+		"msg" : "DSP 3 communication abnormal",
+		"cause" : "Communication fault between the main CPU and DSP 1 of the servo board 2.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Replace the servo board."
+	},
+	"E185" : {
+		"msg" : "DSP 4 communication abnormal",
+		"cause" : "Communication fault between the main CPU and DSP 2 of the servo board 2.",
+		"remedy" : "1) Check the mounting state of the servo board.2) Replace the servo board."
+	},
+	"E186" : {
+		"msg" : "DSP 1 detected the main watchdog",
+		"cause" : "DSP 1 of the servo board 1 detected abnormality with the watchdog of the main.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E187" : {
+		"msg" : "DSP 2 detected the main watchdog",
+		"cause" : "DSP 2 of the servo board 1 detected abnormality with the watchdog of the main.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E188" : {
+		"msg" : "DSP 3 detected the main watchdog",
+		"cause" : "DSP 1 of the servo board 2 detected abnormality with the watchdog of the main.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E189" : {
+		"msg" : "DSP 4 detected the main watchdog",
+		"cause" : "DSP 2 of the servo board 2 detected abnormality with the watchdog of the main.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E190" : {
+		"msg" : "(%s axis) undefined servo error occurred in initialization",
+		"cause" : "Unknown error code received from the servo board during the reception of the encoder initial absolute position data.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E191" : {
+		"msg" : "(%s axis) undefined servo error occurred",
+		"cause" : "Unknown error code received from the servo board during operation.",
+		"remedy" : "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
+	},
+	"E192" : {
+		"msg" : "Additional axis drive system number designation error",
+		"cause" : "Additional axis drive system number designation duplicated.",
+		"remedy" : "In the additional axis parameter setting, check whether the BD, DSP, and AXIS numbers are designated in duplication."
+	},
+	"E193" : {
+		"msg" : "(%s axis) encoder type that does not support the endless",
+		"cause" : "The number of pulse of endless axis encoder is set incorrectly.",
+		"remedy" : "In the menu of Servo Parameter/Motor, Encoder type, check whether the PLUS value is 1024, 2048, 4096, and 8192."
+	},
+	"E194" : {
+		"msg" : "Allowable tool load value exceeded",
+		"cause" : "Tool load exceeded the range of allowable load for the robot.",
+		"remedy" : "1) Check the weight, moment, and inertia capacity in the tool data.2) Depending on the check result, replace the tool with another one that has lower tool weight, inertia values and closer center of mass. If impossible to replace the tool, consider the replacement of the robot."
+	},
+	"E195" : {
+		"msg" : "Sync axis not designated using the same DSP",
+		"cause" : "To execute the sync control, both sync axes should be configured in a way in which they can be controlled by one DSP.",
+		"remedy" : "Change the system configuration to allow 1 DSP to control 2 sync axes. When adding a sync axis to a robot with 5 or less axes, it is possible to configure a structure in which sync control can be executed through 1 DSP. However, when adding a sync axis to a robot with 6 or more axes, it is impossible to assign 1 DSP to 2 sync axes, meaning that another servo board should be used."
+	},
+	"E196" : {
+		"msg" : "System board servo brake error",
+		"cause" : "Servo not clearing the servo brake signal while in the Motor On state.",
+		"remedy" : "Check whether Motor On cannot be executed because there is an error generated with initialization or the encoder. Considering that signals are inputted through the BD542 board, AMP, and the BD530 board, check the boards and the relay cables."
+	},
+	"E197" : {
+		"msg" : "Expansion system board servo brake error",
+		"cause" : "Servo not clearing the servo brake signal while in the Motor On state.",
+		"remedy" : "Check whether Motor On cannot be executed because there is an error generated with initialization or the encoder. Considering that signals are inputted through the BD542 board, AMP, and the expansion system boards BD53E and BD530, check the boards and the relay cables."
+	},
+	"E198" : {
+		"msg" : "(%s axis) Motor command exceeded allowable position deviation value",
+		"cause" : "Difference between the motor command and the current position generated above the position deviation level.",
+		"remedy" : "Check whether there is any excessive physical interference with the robot manipulator."
+	},
+	"E199" : {
+		"msg" : "ENDLESS RESET is impossible (robot locked)",
+		"cause" : "Endless command executed while in the robot lock state.",
+		"remedy" : "Deactivate the robot lock state, and execute the command."
+	},
+	"E200" : {
+		"msg" : "(%s axis) max. speed exceeded during the cooperative operation",
+		"cause" : "Command exceeding the max. speed of the robot is inputted during tracking for cooperative operation",
+		"remedy" : "At the reference position of the slave in cooperative operation, change the robot posture or the cooperation record position, or lower the record speed for playing back."
+	},
+	"E201" : {
+		"msg" : "Cooperative operation initiation error",
+		"cause" : "Error with the transmission and reception of sync signals between cooperative robots. Played back in mutually different modes.",
+		"remedy" : "Check the communication state. Set the cooperative robots into the same mode first, and then operate them."
+	},
+	"E203" : {
+		"msg" : "Cooperative counterpart robot abnormal-Emergency stop",
+		"cause" : "Counterpart robot Motor Off during cooperative operation. Motor Off and stops.",
+		"remedy" : "Take measures for the causes related to the counterpart robots first and the turn the Motor On and start up again."
+	},
+	"E204" : {
+		"msg" : "Robot 0 cooperative control communication disconnected",
+		"cause" : "Communication off with the robot during cooperative jog and playback.",
+		"remedy" : "Check whether the connection between the communication line and the communication card is smooth. May find abnormality through diagnosis of HiNet."
+	},
+	"E205" : {
+		"msg" : "System HiNet communication abnormal",
+		"cause" : "Cooperative control HiNet communication not operating.",
+		"remedy" : "Check whether the connection between the communication line and the communication card is smooth. May find abnormality through diagnosis of HiNet."
+	},
+	"E210" : {
+		"msg" : "%s) axis servo tool access initialization failed",
+		"cause" : "Failed in the initialization process for accessing the servo tool.",
+		"remedy" : "Check whether the DSP version is 4.13 or higher. Check whether the ATC access is defective or the encoder power is not inputted."
+	},
+	"E211" : {
+		"msg" : "%s) axis servo tool servo on time limit exceeded",
+		"cause" : "Servo of the servo tool not on within the time limit.",
+		"remedy" : ""
+	},
+	"E212" : {
+		"msg" : "%s) axis servo tool filter clear time exceeded",
+		"cause" : "Failed to clear the filter while trying servo tool access.",
+		"remedy" : "Communication defective between the main board and the servo board. Check the connection first, and, if nothing abnormal, replace the board for use."
+	},
+	"E213" : {
+		"msg" : "%s) axis servo tool servo off time limit exceeded",
+		"cause" : "Servo Off not executed within the time limit during the servo tool separation process.",
+		"remedy" : "Check the ATC connection. Replace the servo board."
+	},
+	"E214" : {
+		"msg" : "%s) axis servo tool encoder power connection failed",
+		"cause" : "Encoder power connection processing failed during the servo tool axis connection processing.",
+		"remedy" : "Check for abnormality with the servo tool axis encoder power control system, and replace the relevant part."
+	},
+	"E215" : {
+		"msg" : "%s) axis servo tool encoder power separation failed",
+		"cause" : "Encoder power separation trial failed while processing servo tool axis separation.",
+		"remedy" : "Check for abnormality with the servo tool axis encoder power control system, and replace the relevant part."
+	},
+	"E216" : {
+		"msg" : "%s) axis servo tool encoder data abnormal",
+		"cause" : "Encoder reception result abnormal during the servo tool axis connection processing.",
+		"remedy" : "Check whether the battery of the connected encoder is discharged, and reset the encoder before retrying. After resetting the encoder, calibrate the offset."
+	},
+	"E217" : {
+		"msg" : "Traverse sync axis acceleration/deceleration parameters error",
+		"cause" : "While sync control of 2 traverse axes will be possible only when the max. speed, acceleration time, and deceleration rate are identical, the above parameter has different values.",
+		"remedy" : "Check the acceleration and deceleration parameters of the robot parameter, and set the same acceleration and deceleration parameters in the traverse sync axes."
+	},
+	"E218" : {
+		"msg" : "%s axis) overload detected",
+		"cause" : "Overloading generated with the axis. Large volume of current, more than the rated current (Ir) set in the servo parameter, continued sufficiently enough for the current to cause damage to the motor.",
+		"remedy" : "In case of the servo gun axis, check whether there is abnormality with the overload detection level setting, and also whether there is any mechanical problem with the servo gun. Do not allow squeezing to take place continuously above the rated current."
+	},
+	"E219" : {
+		"msg" : "SMOV impossible for the unselected station",
+		"cause" : "If not selected using the SELSTN command, which is designed for the positioner independent operation, a station cannot execute the positioner sync command (SMOV).",
+		"remedy" : "Select a correct station that is to be used in the SELSTN command. Set in a way in which the station number of the SMOV command is identical to the number set in SELSTN."
+	},
+	"E220" : {
+		"msg" : "%s axis) encoder noise inflow",
+		"cause" : "Current robot position not the same as the position read again in the encoder. Noise inflow into the encoder.",
+		"remedy" : "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot."
+	},
+	"E221" : {
+		"msg" : "%s axis) absolute value encoder data reception failed",
+		"cause" : "Tried but failed to receive the absolute encoder data from the encoder to check the state of noise inflow into the encoder.",
+		"remedy" : "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot."
+	},
+	"E222" : {
+		"msg" : "Same cube simultaneous entry detected",
+		"cause" : "Current position, which the robot TCP entered, is the cube area where other robot is working. Robots entering the same cube simultaneously are in deadlock, making it impossible to play back.",
+		"remedy" : "In manual mode, move the robot outside the cube area using the jog. To avoid deadlock during playback, correct the program."
+	},
+	"E223" : {
+		"msg" : "(%s axis) encoder disconnected or communication failed",
+		"cause" : "Error generated while receiving position data from the serial encoder.",
+		"remedy" : "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot.",
+		"help_idx" : "E0223",
+		"help_title" : "[TroubleShoot](%s axis) encoder disconnected or communication failed"
+	},
+	"E224" : {
+		"msg" : "(%s axis) encoder state abnormality generated",
+		"cause" : "Error state, such as errors related to overflow, overspeed, internal condenser voltage, and LED, received from the encoder.",
+		"remedy" : "If errors continue to be generated even when resetting in the encoder reset function, replace the encoder (motor).",
+		"help_idx" : "E0224",
+		"help_title" : "[TroubleShoot](%s axis) encoder state abnormality generated"
+	},
+	"E225" : {
+		"msg" : "(%s axis) soft limit encoder use range exceeded",
+		"cause" : "Soft limit, currently set, exceeded the range usable by the encoder.",
+		"remedy" : "When a machine parameter file is newly loaded into the controller, execute initialization in the order of resetting the relevant axis encoder, calibrating the encoder offset, setting the axis origin, and setting the soft limit. Otherwise, check the limit and carry out setting for a proper position."
+	},
+	"E226" : {
+		"msg" : "(%s axis) encoder allowable use range exceeded",
+		"cause" : "Impossible to move to a commanded position that exceeds the encoder use range",
+		"remedy" : "In manual mode, convert to the axis coordinate system, and then, in the system setting mode, manipulate the jog in the direction of the encoder origin. If the encoder allowable range is abnormal, reset the encoder, and then initialize the relevant axis again."
+	},
+	"E227" : {
+		"msg" : "Cooperative control sync sequence error",
+		"cause" : "Robot command sequence difference generated between the master robot and the slave robot.",
+		"remedy" : "Check the state of the cooperative control network. Check whether the slave is executing the power saving function. Set the slave robot power saving function as disabled."
+	},
+	"E228" : {
+		"msg" : "Step target outside the operating range",
+		"cause" : "Target position of the current or next step outside the robot operation area.",
+		"remedy" : "Check the problematic step through the step go.Check all shift registers. Change the step target position."
+	},
+	"E229" : {
+		"msg" : "(%s axis) encoder overheating detected",
+		"cause" : "Encoder internal temperature increased to the limit value.",
+		"remedy" : "Check the motor temperature, and adjust the robot operation speed."
+	},
+	"E230" : {
+		"msg" : "%s axis) encoder state abnormality not deactivated during servo tool access",
+		"cause" : "In the servo tool to access, the error state, such as errors related to overflow, overspeed, internal condenser voltage, and LED, is received from the encoder.",
+		"remedy" : "Access the encoder power by force using the R359 function of the servo gun, and then execute the encoder reset function. If the error not cleared, replace the motor of the servo gun."
+	},
+	"E231" : {
+		"msg" : "%s axis) encoder disconnected / communication failed during servo tool access",
+		"cause" : "In the servo tool to access, an error is generated while receiving position data from the serial encoder.",
+		"remedy" : "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot."
+	},
+	"E232" : {
+		"msg" : "%s axis) encoder battery replacement and reset required",
+		"cause" : "Encoder battery separated or voltage too low, causing the encoder alarm.",
+		"remedy" : "Check the state related to encoder battery voltage and the connection of cables, and then replace the battery before resetting the encoder."
+	},
+	"E233" : {
+		"msg" : "Step target position analyzed as the collision position",
+		"cause" : "Taught or calculated step target position judged to be a position of collision.",
+		"remedy" : "Change the step position. In case of generating a step through calculation, it is necessary to program in a way to avoid collision."
+	},
+	"E234" : {
+		"msg" : "(%s axis) average speed limit value exceeded",
+		"cause" : "Operating while exceeding the average speed limit.",
+		"remedy" : "Lifetime of the robot may be significantly reduced if the robot is operated exceeding the average speed set for each robot axis. Use the robot by lowering the operation speed."
+	},
+	"E235" : {
+		"msg" : "Restarting failed. Take precautions about trajectory when restarting!",
+		"cause" : "After stopping, start up after performing other operations such as step backward.",
+		"remedy" : "Take precautions because the recalculated trajectory may be different from the previous one. To maintain the same path as the previous one, execute the program again from the initial step."
+	},
+	"E236" : {
+		"msg" : "Motion plan failed",
+		"cause" : "Motion plan failed, processing the robot as in the stopped state.",
+		"remedy" : "Contact our R&D center. Adjust the speed or the step position as a temporary method."
+	},
+	"E237" : {
+		"msg" : "Detection of interference with the robot 0) arm area",
+		"cause" : "Arm interference detection function operating. Interference with the robot 0) detected through HiNet.",
+		"remedy" : "Change the arm interference detection function to the disabled mode to avoid the robot, and then change the arm interference detection function back to the enabled mode."
+	},
+	"E238" : {
+		"msg" : "Sensor speed tracking impossible",
+		"cause" : "Sensor speed too fast to track during the sensor (press) sync operation.",
+		"remedy" : "Adjust the sensor speed."
+	},
+	"E239" : {
+		"msg" : "A sensor's recorded position of Step data do not increasing sequentially.",
+		"cause" : "When applying sensor sync, a sensor's position data in the step data should be recorded increasing as the step data increases.",
+		"remedy" : "Check recorded sensor's position in the Step-data through the Quick-Open function, and please modify the recorded sensor's position."
+	},
+	"E241" : {
+		"msg" : "CmdManagerISR in main cpu board software exceeded the allowable time.",
+		"cause" : "Error to be generated when CmdManagerISR not finished within the allowable time.",
+		"remedy" : "Carry out backup of all files of the controller, and send them to our company."
+	},
+	"E242" : {
+		"msg" : "MainISR in main cpu board software exceeded the allowable time.",
+		"cause" : "Error to be generated when MainISR not finished within the allowable time.",
+		"remedy" : "1) Check whether the PLC execution time value set in the control environment setting is too large. The default value is 2ms/20ms.2) Carry out backup of all files of the controller, and send them to our company."
+	},
+	"E243" : {
+		"msg" : "CPU Exception detected on the main cpu board.",
+		"cause" : "A CPU Exception is a type of main cpu hardware/software error that occurs when a robot contoroller's central processing unit detects a hardware/software problem.",
+		"remedy" : "Carry out backup of all files, and send them to our company."
+	},
+	"E244" : {
+		"msg" : "Counterpart robots in the arm-interference prevention funtion are not prepared.",
+		"cause" : "Problem with the arm-interference prevention condition or the cooperative control state of the counterpart robot.",
+		"remedy" : "Check the arm-interference prevention condition and cooperative control state of the counterpart robot."
+	},
+	"E245" : {
+		"msg" : "The step setting for using spline interpolation is not proper.",
+		"cause" : "Distance in recorded position data is too short between the current-step and the previous step.",
+		"remedy" : "Make the distance between the relevant step and the previous step longer."
+	},
+	"E246" : {
+		"msg" : "The step setting for using spline interpolation is not proper.",
+		"cause" : "The position data between Current-step and Pre/Post-step is almost opposite.",
+		"remedy" : "Adjust in a way to ensure that directions before and after the relevant step are not opposite."
+	},
+	"E247" : {
+		"msg" : "Path recovery is impossible.",
+		"cause" : "Distance outside the path deviation point exceeded the set path recovery allowable distance. System ->Control parameter ->Control environment setting ->Auto mode path recovery allowable distance",
+		"remedy" : "Shift to manual mode, and recover the path; then, enter the set path recovery allowable distance before starting up again."
+	},
+	"E248" : {
+		"msg" : "Robot operation expected on a different path from the previous path.",
+		"cause" : "Causes by including unexpected step data correction or errors of software.",
+		"remedy" : "Must manually check the path when starting up. When an error with software is suspected, carry out backup of the files of the controller, and then contact our company."
+	},
+	"E249" : {
+		"msg" : "Torque, larger than the setting value, applied to the relevant axis reducer",
+		"cause" : "Possibility of shock to mechanism, vibration, or abnormality with encoder data",
+		"remedy" : "If not in the case of the causes described above, lower the speed of the relevant step. If other causes are suspected, contact the A/S department of our company."
+	},
+	"E251" : {
+		"msg" : "0) axis AXISCTRL CUR allowable distance exceeded",
+		"cause" : "After the AXISCTRL CUR function is executed, the movement distance from the reference position exceeded the allowable value.",
+		"remedy" : "End the AXISCTRL CUR function."
+	},
+	"E252" : {
+		"msg" : "Roller hemming force error exceeded the allowable tolerance.",
+		"cause" : "Roller hemming speed is too fast to control the roller hemming force in real time.",
+		"remedy" : "Lower the roller hemming speed, or increase the TOL_E value."
+	},
+	"E253" : {
+		"msg" : "Roller hemming force has been Exceeded 2.5 kN.",
+		"cause" : "Roller hemming speed is too fast to control the roller hemming force in real time.",
+		"remedy" : "Lower the roller hemming speed, or check whether there is any problem with the recored step data."
+	},
+	"E254" : {
+		"msg" : "Collision detected.",
+		"cause" : "The robot controller detected collision in external force between robot and peripheral systems.The robot controller also can detected collision by highly sensitivity setting value in the robot external force.",
+		"remedy" : "If the error is generated frequently even when it is not the case of external collision, disable the collision detection function temporarily first, and contact the A/S department of our company."
+	},
+	"E255" : {
+		"msg" : "Safespace(Functional Safety) is violated.",
+		"cause" : "Deviated from the robot safety area.",
+		"remedy" : "Move the robot to the safety setting area."
+	},
+	"E256" : {
+		"msg" : "Output torque limit exceeded",
+		"cause" : "Torque saturation has been occured during the error detection time.",
+		"remedy" : "Check the 3-phase input voltage. (based on 220 V, tolerance range 10%)Initialize the servo parameter of the robot parameter."
+	},
+	"E257" : {
+		"msg" : "Acceleration/deceleration torque insufficient",
+		"cause" : "Cause 1: Tool dynamics abnormal, Cause 2: Torque application factor inputted at very low level",
+		"remedy" : "If the causes 1 and 2 are normal, contact the A/S department of our company for inquiries."
+	},
+	"E258" : {
+		"msg" : "Network (EN2, User Ethernet port) setting error",
+		"cause" : "EN2 network (IP address, subnet mask, and gateway) set wrongly",
+		"remedy" : "Reset the EN2 network by referring to the function manual."
+	},
+	"E259" : {
+		"msg" : "Force sensor communication failed",
+		"cause" : "Cable disconnected or Net-box power cut off.",
+		"remedy" : "Check the cable between the sensor and the controller, and the Net-box power connection."
+	},
+	"E260" : {
+		"msg" : "Force control function use disabled",
+		"cause" : "Force control function use set as disabled.",
+		"remedy" : "In [Force control]-[Use environment setting], set the function use as enabled."
+	},
+	"E261" : {
+		"msg" : "Undefined motion error",
+		"cause" : "Robot stopped because of an undefined motion error. Error with the system (motion software)",
+		"remedy" : "Contact the A/S department of our company for inquiries."
+	},
+	"E262" : {
+		"msg" : "0) axis bit constant abnormal",
+		"cause" : "The additional axis number setting is wrong.",
+		"remedy" : "Reset the axis number in the additional axis parameter setting."
+	},
+	"E263" : {
+		"msg" : "The software version in the main CPU board do not match with the software version in servo CPU board.",
+		"cause" : "The software version in the main CPU board is lower. Then  it's impossible to use the robot.",
+		"remedy" : "Contact our company for inquiries.Please upgrade the software version in the main CPU board."
+	},
+	"E264" : {
+		"msg" : "(%s axis) filter change value not matched",
+		"cause" : "Filter change result different from the requested filter value.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E265" : {
+		"msg" : "(%s axis)Undesirable motion detected",
+		"cause" : "The abnormal movements of the axis detected.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E266" : {
+		"msg" : "Dual motor axes are not assigned using the same DSP unit",
+		"cause" : "To execute the dual motor control, both related axes should be configured in a way in which they can be controlled by one DSP unit.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E267" : {
+		"msg" : "Too many motors are assigned to the same joint.",
+		"cause" : "More than two motors assigned to the same joint.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E268" : {
+		"msg" : "(%s axis) High speed collision detected",
+		"cause" : "It is likely that a sudden impact has applied to the robot.",
+		"remedy" : "Please identify the possible cause of the collision."
+	},
+    "E269": {
+        "msg": "(%s axis) Slow speed collision detected",
+        "cause": "It is likely that a small external force has applied to the robot for some time.",
+        "remedy": "Please identify the possible cause of the collision."
+    },
+    "E300": {
+        "msg": "서보 초기화 이상",
+        "cause": "서보 초기화에 실패하였습니다.",
+        "remedy": "당사에 문의하십시오."
+    },
+    "E301": {
+        "msg": "서보 상태 이상",
+        "cause": "서보제어기 상태이상이 검지 되었습니다.",
+        "remedy": "지속적인 문제 발생 시 당사에 문의하십시오."
+    },
+    "E302": {
+        "msg": "%s축) 서보지령 이상",
+        "cause": "서보지령 이상이 검출 되었습니다.",
+        "remedy": "당사에 문의하십시오."
+    },
+    "E303": {
+        "msg": "엔코더 피드백 수신 실패",
+        "cause": "엔코더 데이터 수신에 실패 하였습니다.",
+        "remedy": "케이블 연결상태를 점검 하십시오."
+    },
+    "E304": {
+        "msg": "%s축) 토크지령 제한치 초과",
+        "cause": "토크지령이 제한 범위를 초과하였습니다.",
+        "remedy": "서보 파라미터들을 확인 하십시오."
+    },
+    "E305": {
+        "msg": " %s축) 피드포워드 토크지령 제한치 초과",
+        "cause": "피드포워드 토크가 허용 범위를 초과 하였습니다.",
+        "remedy": "당사에 문의하십시오."
+    },
+    "E306": {
+        "msg": "%s축) 피드백 토크지령 제한치 초과",
+        "cause": "제어지령이 허용 토크를 초과 하였습니다.",
+        "remedy": "서보 파라미터들을 확인 하십시오."
+    },
+    "E307": {
+        "msg": "%s축) 추종에러 제한치 초과",
+        "cause": "축의 제어오차가 허용 범위를 초과 하였습니다.",
+        "remedy": "서보 파라미터들을 확인 하십시오."
+    },
+    "E308": {
+        "msg": "피드백 게인 오류",
+        "cause": "피드백 게인이 정상범위를 벗어났습니다.",
+        "remedy": "서보 파라미터를 초기화 하십시오."
+    },
+    "E309" : {
+		"msg" : "관측기 이상",
+		"cause" : "관측기의 상태 이상이 검지되었습니다.",
+		"remedy" : "당사에 문의하십시오."
+	},
+	"E1001" : {
+		"msg" : "Selected Job program not existent",
+		"cause" : "Relevant program not existent in the controller.",
+		"remedy" : "Check the program number, and then make a selection."
+	},
+	"E1002" : {
+		"msg" : "Selected step not existent",
+		"cause" : "Step number, larger than the total step count of the current program, selected.",
+		"remedy" : "Check the step number, and then make a selection."
+	},
+	"E1003" : {
+		"msg" : "Total Job file counter exceeded over 703",
+		"cause" : "The max. count of Job files in a controller limited to 703.",
+		"remedy" : "Delete unnecessary files, and then prepare."
+	},
+	"E1004" : {
+		"msg" : "Job Program and machine parameters different in axis count",
+		"cause" : "Value in the selected job program is different from the robot axis count registered in the machine parameter.",
+		"remedy" : "It seems that a program of another type of robot or of a robot with a different additional axis count is selected. Please check."
+	},
+	"E1005" : {
+		"msg" : "Job Program and machine parameters different in manipulator",
+		"cause" : "Value in the selected job program is different from the robot type registered in the machine parameter.",
+		"remedy" : "It seems that a program of another type of robot is selected. Please check."
+	},
+	"E1006" : {
+		"msg" : "File storage area capacity insufficient",
+		"cause" : "File memory capacity insufficient.",
+		"remedy" : "Delete unnecessary files, and then prepare."
+	},
+	"E1007" : {
+		"msg" : "Brake slipped: Exceeded over 50 mm",
+		"cause" : "Brake slip exceeded over 50 mm during stud welding squeeze.",
+		"remedy" : "1) Check the squeeze.2) Check all axis motors for slip, and replace those with a significant slip compared with others."
+	},
+	"E1008" : {
+		"msg" : "Brake slip counter exceeded",
+		"cause" : "The count of brake slip due to stud welding squeeze exceeded the set count of deviation detection frequency.",
+		"remedy" : "1) Check the squeeze.2) Check all axis motors for slip, and replace those with a significant slip compared with others."
+	},
+	"E1009" : {
+		"msg" : "File on robot controller is not access simultaneously.",
+		"cause" : "Impossible to execute controller external side ->internal copying and internal ->external copying for the same file. (RS-232C, Ethernet, and USB)",
+		"remedy" : "Wait for a moment, and retry when other user complete copying."
+	},
+	"E1010" : {
+		"msg" : "Taught step count insufficient",
+		"cause" : "Insufficient step count in the record program for conveyor angle auto setting or user coordinate system setting.",
+		"remedy" : "1) Conveyor angle auto setting: 2 steps (linear), 3 steps (circular) needed2) User coordinate system setting: 3 steps needed"
+	},
+	"E1011" : {
+		"msg" : "Recorded Step position is too close",
+		"cause" : "Individual step positions of the program recorded for conveyor angel auto setting are too close, making it impossible to acquire the conveyor angle.",
+		"remedy" : "In case of a linear conveyor, please record 2 points while keeping an interval of 1 m."
+	},
+	"E1012" : {
+		"msg" : "Recorded points existent on a linear line",
+		"cause" : "3 steps in the program prepared for setting the user coordinate system are on a linear line, making it impossible to acquire the coordinate system data.",
+		"remedy" : "By referring to the operation manual, make sure that 3 points are located on the same plane surface area but not on the same linear line."
+	},
+	"E1013" : {
+		"msg" : "Selected function not existent",
+		"cause" : "Function of the relevant number is not existent.",
+		"remedy" : "Check the step function number."
+	},
+	"E1014" : {
+		"msg" : "File handle assignment failed",
+		"cause" : "More than 4 copy operations tried through multiple paths. (RS-232C, Ethernet, USB memory)",
+		"remedy" : "Wait for a moment, and retry when other people finish copying."
+	},
+	"E1015" : {
+		"msg" : "Impossible to edit protected programs",
+		"cause" : "Impossible to edit a protected program by unit of step.",
+		"remedy" : "Deactivate protection of the relevant file, and then execute."
+	},
+	"E1016" : {
+		"msg" : "Functions impossible to correct individually",
+		"cause" : "Tried selecting and correcting functions, while they had no parameter to be corrected, in the individual function correction function.",
+		"remedy" : "Check the function to correct."
+	},
+	"E1017" : {
+		"msg" : "No data existent in the selected program",
+		"cause" : "Tried deleting or correcting unexistent programs.",
+		"remedy" : "Check the selected program is exist."
+	},
+	"E1018" : {
+		"msg" : "The step data does not exist",
+		"cause" : "The step number selected does not exist.",
+		"remedy" : "Check the step number."
+	},
+	"E1021" : {
+		"msg" : "Unassigned welding condition signal existent",
+		"cause" : "Count of the welding condition signals to be outputted larger than the assigned value.",
+		"remedy" : "Check the assigned welding condition signal in the setting of  System / Control parameter / Input and output signal."
+	},
+	"E1023" : {
+		"msg" : "Checksum abnormal in the selected step",
+		"cause" : "Checksum of the taught step wrong.",
+		"remedy" : "Delete the selected step, and add one again."
+	},
+	"E1024" : {
+		"msg" : "Palletize program changed",
+		"cause" : "Impossible to change and start up again a program in the middle of palletizing.",
+		"remedy" : "Initialize the palletize counter, and then reset the counter value for use."
+	},
+	"E1025" : {
+		"msg" : "The Axis count in POSE/SHIFT variable(or constant) is different in machine parameter(Robot.MCH)",
+		"cause" : "Axis count of the POSE/SHIFT variable(or constant) does not match the axis count of the ROBOT.MCH file set while initializing the system.",
+		"remedy" : "Set the Axis count of the POSE/SHIFT variable(or constant) file to match the system setting."
+	},
+	"E1026" : {
+		"msg" : "Auto calibration requires 4 steps or more",
+		"cause" : "Step count recorded in the auto calibration program should be 4 or higher.",
+		"remedy" : "When preparing a program for auto calibration, record more than 6 steps, if possible, and program in a way in which various postures can be acquired."
+	},
+	"E1027" : {
+		"msg" : "Program damaged",
+		"cause" : "Auto calibration setting program damaged because of the backup memory damage.",
+		"remedy" : "With the help of the A/S staff of our company, initialize the memory."
+	},
+	"E1028" : {
+		"msg" : "Auto calibration tool number different",
+		"cause" : "Auto calibration targeted tool different from the tool number recorded in the setting program.",
+		"remedy" : "Match the tool number."
+	},
+	"E1029" : {
+		"msg" : "Robot that does not support auto calibration",
+		"cause" : "Auto calibration function will be supported only for 6-axis multijoint robots.",
+		"remedy" : "1) Check again Service / System diagnosis / System version / Robot type.2) TCP and the origin of axis should be input by users only."
+	},
+	"E1030" : {
+		"msg" : "Additional axis operated",
+		"cause" : "Should not move the additional axis when recording an auto calibration program for a robot with additional axes.",
+		"remedy" : "The porgoram for auto calibration requries only robot axes be moved. Modify the program not to move the additional axis."
+	},
+	"E1031" : {
+		"msg" : "Teaching posture poor",
+		"cause" : "Impossible to execute auto calibration because the postures recorded in the auto calibration program are similar to each other.",
+		"remedy" : "If possible, record mutually different postures, and carry out teaching in a way in which the wrist axis can vary significantly at individual steps."
+	},
+	"E1032" : {
+		"msg" : "Axis origin calibration value too large",
+		"cause" : "Could be dangerous when operating the robot because the axis origin calibration value acquired from the result of executing auto calibration is too large.",
+		"remedy" : "1) Check whether the robot type is selected correctly.2) Move the root to the reference pin position, and then set the axis origin. After that, reexecute the autocalibration function.3) Prepare a program for auto calibration in a way in which the interstep position error can be minimized."
+	},
+	"E1033" : {
+		"msg" : "Auto calibration error",
+		"cause" : "Wrong calculation for auto calibration.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E1034" : {
+		"msg" : "Collision sensor operating",
+		"cause" : "Collision sensor input generated.",
+		"remedy" : "1) Check whether the tool form is abnormal.2) If there are no more causes of errors, reoperate the robot.3) If collision does not occur, check the signal algorithm in the setting of System / User environment / Collision sensor."
+	},
+	"E1035" : {
+		"msg" : "Number of entered workpieces exceeded the allowable count",
+		"cause" : "In the setting menu of System / Application parameter / Conveyor / Conveyor parameter, if “Allow” in the menu of Multiple Workpiece Entry =<Allow, Error, Ignore>is selected, the robot will allow multiple workpieces to enter during conveyor sync operation. In this case, the total count of entered workpieces is larger than 10.",
+		"remedy" : "Stop the system, and clear the process; then, restart the line."
+	},
+	"E1036" : {
+		"msg" : "Welding completion wait time(WI) exceeded",
+		"cause" : "While executing the servo gun welding, no welding completion (WI) signal was inputted during the WI input wait time in the menu of System / Application parameter / Spot&Stud / Servo gun welding data (condition, sequence) / Welding sequence.",
+		"remedy" : "Check the wire connection diagram of welding execution signal / welding condition signal / welding completion signal, and the peripheral facilities. When an error is generated, refer to the method, regarding how to process in case of no input of WI signal, described in the menu of System / Application parameter / Spot&Stud / Servo gun welding data (condition, sequence) / Common data, to decide whether to wait until the welding completion (WI) signal is inputted."
+	},
+	"E1038" : {
+		"msg" : "Impossible robot posture to compensate tip consumption amount",
+		"cause" : "The root posture you recoreded can not reach the posture after compensate the tip consumption amount.",
+		"remedy" : "Avoid the robot posture near B-Axis dead zone and limit of the robot work space."
+	},
+	"E1039" : {
+		"msg" : "Sync axis torsion deviation exceeded the allowable value",
+		"cause" : "When operating the robot with a traverse axis capable of 2-axis sync, the torsion of the mechanical positions of the two axes exceeded the allowable value set in the 2-axis sync servo parameter.",
+		"remedy" : "1) Set the same servo gain for the servo gain.2) Increase the Kp gain of the delayed axis."
+	},
+	"E1040" : {
+		"msg" : "Robot that does not support interpolation ON",
+		"cause" : "Impossible to use interpolation on (linear line, circular curve) for a robot capable of 2-axis sync.",
+		"remedy" : "Correct the step by making interpolation off, and then start up the robot."
+	},
+	"E1041" : {
+		"msg" : "The positioner group axis count exceeded",
+		"cause" : "The axis count, designated with the positioner group, exceeded 2.",
+		"remedy" : "Set a value of 2 or lower for the relevant group in the setting of the System/Initialize/Positioner group."
+	},
+	"E1042" : {
+		"msg" : "Reference point recorded in the program",
+		"cause" : "Impossible to record a reference point (REFP) in the positioner calibration program.",
+		"remedy" : "Record the reference point (REFP), of the steps of the calibration program, as the step."
+	},
+	"E1043" : {
+		"msg" : "Impossible to calibrate: Required to correct the position",
+		"cause" : "Floating-point operation error generated while operating for calibration.",
+		"remedy" : "Correct the step record position of the calibration program. In order to perform accurate calibration, carry out teaching in a way in which the angle between points can be 30 degrees or wider."
+	},
+	"E1044" : {
+		"msg" : "Trying Motor On without calibrating the encoder offset",
+		"cause" : "After selecting in the menu of System/Initialize/Robot type, it will be impossible to try Motor On without calibrating the encoder offset.",
+		"remedy" : "After selecting in the setting of System / Initialize / Robot type, the user must execute the motor in operation after calibrating the encoder offset."
+	},
+	"E1045" : {
+		"msg" : "Any value has not been input in a condition/palletize counter.",
+		"cause" : "When setting the count or palletize counter using the external input, there is no input of counter value, which is to be set 800ms earlier after selecting the register.",
+		"remedy" : "After selecting of the registers, Please be input the value before 800msec."
+	},
+	"E1046" : {
+		"msg" : "Auto mode selection signal input while servo gun opening by an external signal",
+		"cause" : "Auto operation signal inputted during the servo gun manual operation through external signals.",
+		"remedy" : "Execute the operation after the servo gun manual operation is completed."
+	},
+	"E1047" : {
+		"msg" : "FIFO register exceeded 20",
+		"cause" : "While in the setting of (1) Applicable count<20>in the FIFO function in the menu of System/User environment, more than 20 programs are about to be reserved.",
+		"remedy" : "Enter the setting of Service / Register / FIFO register, and check the count of reserved programs."
+	},
+	"E1048" : {
+		"msg" : "Welding access number selection signal abnormal",
+		"cause" : "Value that is to be inputted as the gun access number during the welding gun manual/auto access through external signals, is selected wrongly.",
+		"remedy" : "Check the value inputted as the gun access number."
+	},
+	"E1049" : {
+		"msg" : "(%s axis) impossible to execute while the servo tool is accessed",
+		"cause" : "Tried while the servo tool already attached to the system.",
+		"remedy" : "Check the state of attachment of the servo tool."
+	},
+	"E1050" : {
+		"msg" : "(%s axis) impossible to execute while the (%s axis) servo tool is separated",
+		"cause" : "Tried while the servo tool already separated from the system.",
+		"remedy" : "Check the state of attachment of the servo tool."
+	},
+	"E1051" : {
+		"msg" : "Spot gun change environment improper",
+		"cause" : "While the spot gun change count is 0, the GUNGHNG command or the manual gun access or separation is executed.",
+		"remedy" : "Set the spot gun change count when the user wants to use the spot gun change function."
+	},
+	"E1052" : {
+		"msg" : "Gun change manual execution time exceeded",
+		"cause" : "The relevant command is not completed within 5 seconds when executing the welding access or separation command manually.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"E1056" : {
+		"msg" : "(%s axis) servo tool change environment improper",
+		"cause" : "Case of executing the relevant command while not in the servo tool change environment.",
+		"remedy" : "Reset the controller into the servo tool change environment."
+	},
+	"E1057" : {
+		"msg" : "Same additional axis designated in duplication",
+		"cause" : "Additional axis which the parameters, recorded in the relevant command, will refer to is designated in duplication.",
+		"remedy" : "Check the relevant command statement."
+	},
+	"E1101" : {
+		"msg" : "(%s axis) soft limit exceeded",
+		"cause" : "Each robot axis encoder data reached the set soft limit during teaching or auto operation.",
+		"remedy" : "Move the robot within the set range."
+	},
+	"E1102" : {
+		"msg" : "Trying Motor On while inputting through the axis operating key",
+		"cause" : "The Motor On operation while pressing the axis operation key.",
+		"remedy" : "Do not press the axis manipulation key when executing Motor On."
+	},
+	"E1105" : {
+		"msg" : "Trying jumping to an inexistent step",
+		"cause" : "The step number to be executed is larger than the currently selected program’s final step number.",
+		"remedy" : "Check the final step number of the current program."
+	},
+	"E1106" : {
+		"msg" : "Trying jumping to an inexistent function",
+		"cause" : "The function number to be executed is larger than the currently selected program’s final function number.",
+		"remedy" : "Check the final function number of the current program."
+	},
+	"E1107" : {
+		"msg" : "Retract step number improper",
+		"cause" : "Step to retract not existent in the timer conditional shift function.",
+		"remedy" : "Check the final step number of the current program."
+	},
+	"E1108" : {
+		"msg" : "Retract condition generated",
+		"cause" : "The condition is irrational in executing the conditional function.",
+		"remedy" : "Check the state of various received data of the program."
+	},
+	"E1109" : {
+		"msg" : "Improper robot posture for interpolation ON",
+		"cause" : "An interpolation operation was executed in a posture in which the robot cannot process interpolation.",
+		"remedy" : "Operate after changing the posture through axis independent operation."
+	},
+	"E1110" : {
+		"msg" : "Tried to move outside the operation area",
+		"cause" : "Movement to a unreachable position by the robot tool end was tried.",
+		"remedy" : "Rereview whether the workpiece and the robot position are proper."
+	},
+	"E1111" : {
+		"msg" : "Arm-formed angle too wide",
+		"cause" : "H- and V-axes reached an interfering state.",
+		"remedy" : "Move the robot in an interference-free direction."
+	},
+	"E1112" : {
+		"msg" : "Arm-formed angle too narrow",
+		"cause" : "H- and V-axes reached an interfering state.",
+		"remedy" : "Move the robot in an interference-free direction."
+	},
+	"E1113" : {
+		"msg" : "No step existent to jump",
+		"cause" : "The target step of the step jump function is not existent while in playback operation.",
+		"remedy" : "Check the parameter of the current program."
+	},
+	"E1114" : {
+		"msg" : "Inexistent step called",
+		"cause" : "The target step of the step call function is not existent while in playback operation.",
+		"remedy" : "Check the parameter of the current program."
+	},
+	"E1115" : {
+		"msg" : "Impossible to call a step more than 9 times without return",
+		"cause" : "Step call was executed more than 9 times without return.",
+		"remedy" : "Do not call a step more than 9 times without return."
+	},
+	"E1116" : {
+		"msg" : "Impossible to return without calling a step",
+		"cause" : "The step return function is existent while the step call function not.",
+		"remedy" : "Must use step return together with step call."
+	},
+	"E1117" : {
+		"msg" : "Return program and current program different",
+		"cause" : "A program to execute step return does not match the number of the program currently being executed.",
+		"remedy" : "Check whether there is an occurrence of a step call before step return of the current program."
+	},
+	"E1118" : {
+		"msg" : "No step existent to return",
+		"cause" : "The target step of the step return function is not existent while in playback operation.",
+		"remedy" : "Check the parameter of the current program."
+	},
+	"E1119" : {
+		"msg" : "No program existent to jump",
+		"cause" : "The target program of the program jump function is not existent while in playback operation.",
+		"remedy" : "Check the existence/inexistence of the program, and check the parameter of the current program"
+	},
+	"E1120" : {
+		"msg" : "Axis count different in the program to jump",
+		"cause" : "A target program axis count of the program jump function is different from the robot axis count while in auto operation.",
+		"remedy" : "Check the program to jump."
+	},
+	"E1121" : {
+		"msg" : "No program existent to call",
+		"cause" : "The target program of the program call function is not existent while in auto operation.",
+		"remedy" : "Check the existence/inexistence of the program, and check the parameter of the coded program"
+	},
+	"E1122" : {
+		"msg" : "Axis count different in the program to call",
+		"cause" : "A target program axis count of the program call function is different from the robot axis count while in playback operation.",
+		"remedy" : "Check the program to call."
+	},
+	"E1123" : {
+		"msg" : "Impossible to call a program more than 9 times without return",
+		"cause" : "Program calling was executed more than 9 times without return.",
+		"remedy" : "Do not call a step more than 9 times without return."
+	},
+	"E1124" : {
+		"msg" : "No program existent to return",
+		"cause" : "Target program of the program return function is not existent while in playback operation.",
+		"remedy" : "Check the existence/inexistence of the program, and check the parameter of the current program"
+	},
+	"E1125" : {
+		"msg" : "The number of axes is different from the program to return",
+		"cause" : "Target program axis count of the program return function is different from the robot axis count while in playback operation.",
+		"remedy" : "Check the existence/inexistence of the program, and check the parameter of the current program"
+	},
+	"E1126" : {
+		"msg" : "Circular interpolation position improper",
+		"cause" : "The recorded steps are too close or on a linear line, making it impossible to make a circular curve.",
+		"remedy" : "Correct the step position to make a circular curve."
+	},
+	"E1127" : {
+		"msg" : "Undefined playback error.",
+		"cause" : "-",
+		"remedy" : "-"
+	},
+	"E1128" : {
+		"msg" : "Unexecutable output (DO) signal",
+		"cause" : "Case of designating a DO signal that cannot be outputted while in playback operation.",
+		"remedy" : "Check the number for the output signal."
+	},
+	"E1129" : {
+		"msg" : "Undefined speed unit",
+		"cause" : "Operation was executed using other units of speed than [%] and mm/sec.",
+		"remedy" : "Check the condition of the current step."
+	},
+	"E1130" : {
+		"msg" : "'end' command not existent",
+		"cause" : "Case of operating a program that does not include the 'end' command.",
+		"remedy" : "Add the 'end' command to the program."
+	},
+	"E1133" : {
+		"msg" : "Unexecutable function",
+		"cause" : "Case of designating a function that cannot be executed while playback operation.",
+		"remedy" : "Check the parameter of the current program."
+	},
+	"E1135" : {
+		"msg" : "END relay output abnormal",
+		"cause" : "The END relay time gets longer than 15 seconds. This error would not be generated normally because the set time is within 10 seconds.",
+		"remedy" : "Abnormality is generated with the parameter. Check the control parameter file."
+	},
+	"E1136" : {
+		"msg" : "Playback operating protection activated program",
+		"cause" : "1) Palyback operation impossible from the step 0.2) Make sure that step forward/backward will not take place.",
+		"remedy" : "Execute after deactivating the playback operating protection of the relevant program."
+	},
+	"E1139" : {
+		"msg" : "GI signal number improper",
+		"cause" : "The timer conditional GI signal number is wrong while in playback operation.",
+		"remedy" : "Check and change the parameter of the current program."
+	},
+	"E1140" : {
+		"msg" : "Port number improper",
+		"cause" : "A port to be designated in the sift data request function was designated as the one for T/P.",
+		"remedy" : "Designate universal port in the port designation section of the shift data request function."
+	},
+	"E1141" : {
+		"msg" : "Serial port #1 usage improper",
+		"cause" : "The usage of the serial port (RS232C) is different.",
+		"remedy" : "Check the usage of the serial port in the menu of System / Control parameter / Serial port."
+	},
+	"E1142" : {
+		"msg" : "Shift data request duplicated",
+		"cause" : "While the shift data request function is already being executed, the shift data request function is reexecuted before the previously requested shift data comes in from outside first.",
+		"remedy" : "1) Check whether the shift data function of the current program is duplicated.2) Check the state of the connection with external sensors."
+	},
+	"E1143" : {
+		"msg" : "Recommended to add the function jump end function",
+		"cause" : "Will be generated when executing the function jump function   without the end function while in playback operation.",
+		"remedy" : "Check and change the parameter of the current program."
+	},
+	"E1144" : {
+		"msg" : "Recommended to add the function jump function",
+		"cause" : "Will be generated when executing the end function without the function jump function while in playback operation.",
+		"remedy" : "Check and change the parameter of the current program."
+	},
+	"E1145" : {
+		"msg" : "Function jump range exceeded",
+		"cause" : "Will be generated when exceeding the jump range calculated in the function jump.",
+		"remedy" : "Check the function jump parameter."
+	},
+	"E1146" : {
+		"msg" : "The register number of Palletize functions is over 4.",
+		"cause" : "More than 5 of the register number in palletize functions are existent in the program to be executed.",
+		"remedy" : "Please use lower value of the register count in the palletize function."
+	},
+	"E1147" : {
+		"msg" : "Palletize start and end not matched",
+		"cause" : "Palletize end is existent while palletize start not.",
+		"remedy" : "Check the content of the current program."
+	},
+	"E1148" : {
+		"msg" : "Palletize function already in execution",
+		"cause" : "A palletize start command is given in the middle of the palletize function being executed.",
+		"remedy" : "Check the content of the current program."
+	},
+	"E1149" : {
+		"msg" : "Recommended to hold palletizing and to start up",
+		"cause" : "Selected other program and started up from the step 0 in the middle of the palletize function being executed.",
+		"remedy" : "Reset, and start up the palletize function."
+	},
+	"E1150" : {
+		"msg" : "Impossible to use during the palletize operation",
+		"cause" : "The P reset command was executed in the middle of the palletize function being executed.",
+		"remedy" : "Execute after ending palletize."
+	},
+	"E1151" : {
+		"msg" : "No function existent to jump",
+		"cause" : "The function jump function does not include a function number to jump.",
+		"remedy" : "Check the parameter of the made program."
+	},
+	"E1152" : {
+		"msg" : "Search function use improper",
+		"cause" : "The search on and off operations are not matched.",
+		"remedy" : "Check the parameter of the made program."
+	},
+	"E1153" : {
+		"msg" : "Required to set the reference position data record mode",
+		"cause" : "The search function was executed without setting the search reference position in the search function.",
+		"remedy" : "Turn on the \"\"Robot search ref. pose record\"\" in application condition [App. cnd], and excute after record the reference position by operating with 1Cycle."
+	},
+	"E1154" : {
+		"msg" : "Possibly only in 1Cycle mode of playback operation",
+		"cause" : "While the search reference position data can be recorded only in 1 cycle operation in auto mode, this will be generated when this rule is violated.",
+		"remedy" : "Execute after setting 1 cycle for the auto mode in the condition setting."
+	},
+	"E1155" : {
+		"msg" : "Search range exceeded",
+		"cause" : "Robot interrupt was not generated even when exceeding the search range.",
+		"remedy" : "Check the search target, or the search range setting in the application condition."
+	},
+	"E1156" : {
+		"msg" : "3 points for coordinate conversion on the same linear line",
+		"cause" : "In the coordinate conversion function, the 3 points are taught on the same linear line, making it impossible to execute conversion calculation.",
+		"remedy" : "Check the teaching point."
+	},
+	"E1157" : {
+		"msg" : "Impossible to input the data in the shift register",
+		"cause" : "Function executed while no data inputted through the RS232C port for online XYZ shift and online coordinate conversion.",
+		"remedy" : "Change the program to ensure that data can be inputted through the RS232C port before executing online XYZ shift and online coordinate conversion."
+	},
+	"E1158" : {
+		"msg" : "Setting step for the coordinate conversion not existent",
+		"cause" : "The reference step number in the coordinate conversion function parameter is for an inexistent step.",
+		"remedy" : "Check the coordinate conversion function parameter in the current program."
+	},
+	"E1159" : {
+		"msg" : "Impossible to take the coordinate converted posture",
+		"cause" : "Coordinate conversion result exceeded the robot operation range.",
+		"remedy" : "Correct the recorded step position."
+	},
+	"E1161" : {
+		"msg" : "Posture that makes the interpolation processing impossible",
+		"cause" : "Robot operated in a posture in which an interpolation operation cannot be processed.",
+		"remedy" : "Carry out teaching after changing the robot posture."
+	},
+	"E1162" : {
+		"msg" : "3 points for coordinate conversion too close",
+		"cause" : "3 points taught in the coordinate conversion function too close, making it impossible to carry out conversion calculation.",
+		"remedy" : "Check the teaching point."
+	},
+	"E1163" : {
+		"msg" : "Shift calculation result deviated from the operation area",
+		"cause" : "Shift position deviated from the robot operation area.",
+		"remedy" : "Check the shift amount, and inspect the work process to ensure the work can be executed within the operation area."
+	},
+	"E1164" : {
+		"msg" : "XYZ shift reference coordinate setting inaccurate",
+		"cause" : "Reference coordinate system setting in the XYZ shift function is inaccurate.",
+		"remedy" : "Check the XYZ shift function parameter in the current program."
+	},
+	"E1165" : {
+		"msg" : "Search reference coordinate setting inaccurate",
+		"cause" : "Reference coordinate system setting in the search function is inaccurate.",
+		"remedy" : "Check the search function parameter in the current program."
+	},
+	"E1166" : {
+		"msg" : "Palletize reference coordinate setting inaccurate",
+		"cause" : "Reference coordinate system setting in the palletize function is inaccurate.",
+		"remedy" : "Check the palletize function parameter in the current program."
+	},
+	"E1167" : {
+		"msg" : "Search target position deviated from the operation area",
+		"cause" : "Search range deviated from the robot operation area.",
+		"remedy" : "Lower the search range value in the condition setting"
+	},
+	"E1168" : {
+		"msg" : "Search function is only available in linear interpolation.",
+		"cause" : "A searching step is not a linear interpolation.",
+		"remedy" : "Change the interpolation type of the searching step to linear one."
+	},
+	"E1169" : {
+		"msg" : "Step content error while in playback",
+		"cause" : "Error with the step data that are read to execute the program.",
+		"remedy" : "Delete the error step and record it again."
+	},
+	"E1171" : {
+		"msg" : "Coordinate transformation result deviated from the workspace",
+		"cause" : "When executing the on/off-line coordinate transformation function, the transformation result exceeded the robot workspace.",
+		"remedy" : "Retry by changing the robot pose or the robot installation position or the workpiece position."
+	},
+	"E1189" : {
+		"msg" : "WCR not detected when welding starts",
+		"cause" : "Arc was not ignited in welding start. (Retry count exceeded)",
+		"remedy" : "Check the welding power source."
+	},
+	"E1190" : {
+		"msg" : "Unsupported command",
+		"cause" : "Command, not proper for the current setting, used",
+		"remedy" : "Change the command or the setting."
+	},
+	"E1192" : {
+		"msg" : "Arc sensing error (current range exceeded).",
+		"cause" : "The detected welding current exceeded the range. In other words, the abnormal detecting margin is exceeded during the abnormal detecting time.",
+		"remedy" : "1) Check the welding current detection circuit.2) If it is the case of the end point, set the processing method for abnormal current as the end point.3)  If not the case of an end point, adjust the current abnormal detecting margin and time."
+	},
+	"E1193" : {
+		"msg" : "Arc sensing error (current detection value too unstable)",
+		"cause" : "The count of curve fitting error weaving from the detected welding current was exceeded the curve fitting failure permitted cycle in arc sensing with curve fitting algorithm.",
+		"remedy" : "1) Check the welding current detection circuit.2) Set the bead detecting curve value in the direction of - at a slightly lower level.3) When using the bead detection function, set bead detection to 'Welding stop'."
+	},
+	"E1194" : {
+		"msg" : "Arc sensing error (left and right sensing ranges exceeded)",
+		"cause" : "This error will be occured when the calculated side tracking distance cannot be catched up for a certain cycle.",
+		"remedy" : "Adjust the voltage coefficient or the tracking distance per sampling/cycle."
+	},
+	"E1195" : {
+		"msg" : "Arc sensing error (upper and lower sensing ranges exceeded)",
+		"cause" : "This error will be occured when the calculated height tracking distance cannot be catched up for a certain cycle.",
+		"remedy" : "Adjust the voltage coefficient or the tracking distance per sampling/cycle."
+	},
+	"E1196" : {
+		"msg" : "Shift limit exceeded",
+		"cause" : "Shift amount exceeded the set shift limit value.",
+		"remedy" : "Reduce the shift amount, or adjust the shift limit value again."
+	},
+	"E1197" : {
+		"msg" : "Invalid step use for circular-Interpolation",
+		"cause" : "There should be more than 2 steps at least to operate the circular interpolation.",
+		"remedy" : "Add a step."
+	},
+	"E1198" : {
+		"msg" : "No approach step for calculating the weaving coordinate",
+		"cause" : "Weaving tried without an approach step or REFP 2.",
+		"remedy" : "Input an approach step or REFP 2."
+	},
+	"E1199" : {
+		"msg" : "Impossible to read the step currently set",
+		"cause" : "Failed to calculate, in the retry or restart function, the pose for robot movement.",
+		"remedy" : "Add one step after the arc end step."
+	},
+	"E1200" : {
+		"msg" : "Impossible to read the immediate previous step",
+		"cause" : "Failed to calculate, in the retry or restart function, the pose for robot movement.",
+		"remedy" : "Add one step before the arc start step."
+	},
+	"E1201" : {
+		"msg" : "General error",
+		"cause" : "Internal error.",
+		"remedy" : "If the problem repeats itself, contact our company for inquiries."
+	},
+	"E1202" : {
+		"msg" : "Robot language syntax error",
+		"cause" : "General syntax error with the robot language.",
+		"remedy" : "Check whether the robot language syntax is wrong."
+	},
+	"E1203" : {
+		"msg" : "Label length limit exceeded",
+		"cause" : "Label length exceeded 8 characters.",
+		"remedy" : "Reduce the length of the label down to below 8 characters."
+	},
+	"E1204" : {
+		"msg" : "Component count incorrect",
+		"cause" : "Count of factors in the pose and shift constant are not matched.",
+		"remedy" : "Check the count of elements of the pose or shift constant. In case of shift constant, it is base axis count + additional axis count, and, in case of pose constant, it is base axis count + additional axis count +1 (config.)."
+	},
+	"E1205" : {
+		"msg" : "Parenthesis used wrongly",
+		"cause" : "No parentheses existent at the positions that need pose/shift constants in an expression or a function.",
+		"remedy" : "Check whether a pair of parentheses are used properly."
+	},
+	"E1206" : {
+		"msg" : "Variable type designator used wrongly",
+		"cause" : "Variable type designator of the V variable written wrongly.",
+		"remedy" : "Use one of “%”, “!”, and “$” as the variable type designator."
+	},
+	"E1207" : {
+		"msg" : "“[” missed",
+		"cause" : "Number missed or “[” not existent in the variable.",
+		"remedy" : "Check whether there is a number missed in the variable or whether a pair of  “[‘ and ’]” are used properly."
+	},
+	"E1208" : {
+		"msg" : "“]” missed",
+		"cause" : "“]” not existent at the necessary position in the variable.",
+		"remedy" : "Check whether a pair of  “[‘ and ’]” are used properly in the variable number."
+	},
+	"E1209" : {
+		"msg" : "Variable number range exceeded",
+		"cause" : "Number value of the variable exceeded the limit range.",
+		"remedy" : "Use the variable number within the number range of the relevant variable type."
+	},
+	"E1210" : {
+		"msg" : "Variable number used wrongly",
+		"cause" : "Syntax of the constant or expression, used as the number of the variable, wrong",
+		"remedy" : "Check whether the variable number syntax is used properly."
+	},
+	"E1211" : {
+		"msg" : "Should be divided with a blank",
+		"cause" : "Command sentence and parameters written without a space.",
+		"remedy" : "Separate the command sentence and the parameters with a space."
+	},
+	"E1212" : {
+		"msg" : "Shift operation wrong",
+		"cause" : "Shift operation expression wrong in syntax, or the shift value not proper.",
+		"remedy" : "Check whether the shift operation syntax or the shift value is proper."
+	},
+	"E1213" : {
+		"msg" : "Interpolation designation wrong",
+		"cause" : "Interpolation designation in the MOVE statement wrong in syntax.",
+		"remedy" : "Use one of “P”, “L”, and “C” for the interpolation designation."
+	},
+	"E1214" : {
+		"msg" : "“,” missed",
+		"cause" : "“.” not existent at the necessary position in the command or the function.",
+		"remedy" : "Check whether factors are divided using “,”."
+	},
+	"E1215" : {
+		"msg" : "Pose expression wrong",
+		"cause" : "Pose expression in the MOVE statement not proper.",
+		"remedy" : "Check the pose type syntax. In case of a hidden pose move, check the speed designation syntax."
+	},
+	"E1216" : {
+		"msg" : "Pose expression wrong",
+		"cause" : "Speed designation in the MOVE statement not proper.",
+		"remedy" : "Check the speed designation syntax. S={Speed}"
+	},
+	"E1217" : {
+		"msg" : "“=” missed",
+		"cause" : "“=” not existent at the necessary position.",
+		"remedy" : "Check whether “=” is used properly in designating parameter in an assignment statement or a general command statement."
+	},
+	"E1218" : {
+		"msg" : "Unit wrong",
+		"cause" : "Speed unit in the MOVE statement wrong in syntax.",
+		"remedy" : "Use one of “cm/min,” “mm/sec,” “sec,” and “%” as the unit of speed."
+	},
+	"E1219" : {
+		"msg" : "Precision level designation wrong",
+		"cause" : "Precision designation in the MOVE statement not proper.",
+		"remedy" : "Check the precision designation syntax."
+	},
+	"E1220" : {
+		"msg" : "Tool number designation wrong",
+		"cause" : "Tool designation in the MOVE statement not proper.",
+		"remedy" : "Check the tool designation syntax."
+	}
+}

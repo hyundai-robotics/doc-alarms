@@ -1,0 +1,2122 @@
+{
+	"W1" : {
+		"msg" : "Backup memory damaged",
+		"cause" : "It occurs when damage is found in all kinds of files.",
+		"remedy" : "Initialize the internal memory, and load all kinds of files backed up in USB memory."
+	},
+	"W2" : {
+		"msg" : "Temperature increases inside the panel. Take precautions.",
+		"cause" : "It occurs when the controller temperature is above 65 degrees Celsius.",
+		"remedy" : "Refer to Troubleshooting Manual."
+	},
+	"W3" : {
+		"msg" : "Delete as the program is damaged.",
+		"cause" : "Program to execute is damaged.",
+		"remedy" : "Delete the program, and load the backup program again."
+	},
+	"W4" : {
+		"msg" : "Emergency stop being inputted.",
+		"cause" : "It occurs when [Motor ON] is done in an emergency stop state.",
+		"remedy" : "Execute after deactivating emergency stop."
+	},
+	"W5" : {
+		"msg" : "Backup battery voltage lowered.",
+		"cause" : "Backup battery voltage connected to Main board BATCN connector is below the reference value.",
+		"remedy" : "Replace the backup battery."
+	},
+	"W9" : {
+		"msg" : "Brake slipped (exceeding the set value)",
+		"cause" : "It happens when brake slip by compression during stud welding exceeds the reference value.",
+		"remedy" : "Check the axis with the largest slip in the brake slip count.Replace the motor of the axis with the largest slip."
+	},
+	"W10" : {
+		"msg" : "Fieldbus power supply defective",
+		"cause" : "Fieldbus power is not supplied.",
+		"remedy" : "In case of DeviceNet, check whether the +24 V power supply line of the DeviceNet cable is properly connected, and measure the voltage with a multimeter.Take measures to ensure that the +24 V power of the DeviceNet cable is supplied properly."
+	},
+	"W11" : {
+		"msg" : "Fieldbus network connection defective",
+		"cause" : "Fieldbus network connection is not normal.",
+		"remedy" : "Check whether the fieldbus connector is disconnected.Check whether each fieldbus network cable connection complies with the fieldbus regulation."
+	},
+	"W12" : {
+		"msg" : "CC-Link communication in idle state (PLC STOP)",
+		"cause" : "Master stops I/O operating.",
+		"remedy" : "If PLC is in the program mode, change it to the run mode."
+	},
+	"W13" : {
+		"msg" : "CC-Link communication module not detected.",
+		"cause" : "Fieldbus module is not sensed.",
+		"remedy" : "If CC-Link communication is not to be used, set the use of CC-Link communication as disabled."
+	},
+	"W14" : {
+		"msg" : "CC-Link setting error",
+		"cause" : "Parameter setting for fieldbus master is not identical with that of slave.",
+		"remedy" : "Check whether the CC-Link master and slave parameters are set properly, and, if something is wrong, make a correction."
+	},
+	"W15" : {
+		"msg" : "Fieldbus general error",
+		"cause" : "BD420 board fieldbus has an error.",
+		"remedy" : "Check whether there is a problem with the setting of the fieldbus and master as well as with the cabling."
+	},
+	"W16" : {
+		"msg" : "Improper numbers used for GE or DE signal",
+		"cause" : "The specified values for GE or DE variable are incorrect. The values are out of range.",
+		"remedy" : "1) Different from the value that is based on the cooperative robot number.2)GE: Min.=(Robot#-1)*4+1, Max.=(Robot#-1)*4+43)DE: Min.=(Robot#-1)*32+1, Max.=(Robot#-1)*32+32"
+	},
+	"W17" : {
+		"msg" : "External emergency stop being inputted.",
+		"cause" : "It happens when [motor ON] is done at the status that external emergency halt is inserted.",
+		"remedy" : "In the exclusive input signal monitoring menu, check the state and take measures."
+	},
+	"W18" : {
+		"msg" : "Communication disconnected with the DeviceNet node #%s.",
+		"cause" : "It occurs if the response is lost after a normal communication operation.",
+		"remedy" : "Check the state of the cable."
+	},
+	"W19" : {
+		"msg" : "DeviceNet node #%s input size not matched.",
+		"cause" : "It occurs if the input size of corresponding node has been changed.",
+		"remedy" : "Check the input module of the relevant node, or execute the [Rescan] function."
+	},
+	"W20" : {
+		"msg" : "DeviceNet node #%s output size not matched.",
+		"cause" : "It occurs if the output size of corresponding node has been changed.",
+		"remedy" : "Check the output module of the relevant node, or execute the [Rescan] function."
+	},
+	"W21" : {
+		"msg" : "DeviceNet node #%s I/O size too large.",
+		"cause" : "It occurs if the I/O size of each node exceeds 16 bytes.",
+		"remedy" : "Distribute the input and output by adding a fieldbus adapter."
+	},
+	"W22" : {
+		"msg" : "DeviceNet node #%s not responding.",
+		"cause" : "It occurs if there is no response after the power on.",
+		"remedy" : "Check the state of the cable of the relevant node."
+	},
+	"W23" : {
+		"msg" : "Embedded DeviceNet master address (0) colliding.",
+		"cause" : "It occurs if one of the node has Mac ID as same as Master Mac ID (0)",
+		"remedy" : "Turn the power off, and change the address (MAC ID) of the #0 slave node."
+	},
+	"W24" : {
+		"msg" : "Optional function temporary license key free trial period exceeded.",
+		"cause" : "The trial period of optional functions using temporal license has been expired.",
+		"remedy" : "Make a request to our company for the purchase of an official license to use the relevant function."
+	},
+	"W25" : {
+		"msg" : "Only (%s) days left for the optional function temporary license key free trial period.",
+		"cause" : "The trial period of optional functions using temporal license is going to be expired soon.",
+		"remedy" : "Make a request to our company for the purchase of an official license to use the relevant function."
+	},
+	"W26" : {
+		"msg" : "Required to inject grease! Check the system characteristic data/movement distance.",
+		"cause" : "Warning is generated depending on the distance set for filling the grease and the date for it.",
+		"remedy" : "After supplementing grease, initialize all values in the menu for setting the grease injection schedule of the robot parameter of T/P. *For information: W0018 at the range of V30.09-84–V30.09-88."
+	},
+	"W27" : {
+		"msg" : "CC-Link master set as CC-Link v1.0",
+		"cause" : "There is a mismatch in the CC-Link version between the master and the robot controller. The CC-Link version of the robot controller is V2.0. But the CC-Link version of the master is V1.0",
+		"remedy" : "Please match the CC-Link version of the CC-Link master and the robot controller."
+	},
+	"W28" : {
+		"msg" : "Robot fan (R-FAN) fault.",
+		"cause" : "A failure occurs to the robot fan (R-FAN).",
+		"remedy" : "Check the operation state of the robot fan (R-FAN)."
+	},
+	"W30" : {
+		"msg" : "PRM PN over-voltage generated",
+		"cause" : "PRM PN voltage has exceeded the over-voltage warning reference value.",
+		"remedy" : "1) Check the PRM input 3-phase voltage.2) Check the PRM input PN voltage."
+	},
+	"W31" : {
+		"msg" : "PRM PN under-voltage generated",
+		"cause" : "PRM PN voltage is below the under-voltage warning reference value.",
+		"remedy" : "1) Check the PRM input 3-phase voltage.2) Check the PRM input PN voltage.3) Check the state of the NFBRST and NFBPN of PRM."
+	},
+	"W32" : {
+		"msg" : "PRM 3-phase over-voltage generated",
+		"cause" : "PRM 3-phase voltage has exceeded the over-voltage warning reference value.",
+		"remedy" : "Check the PRM input 3-phase voltage."
+	},
+	"W33" : {
+		"msg" : "PRM 3-phase under-voltage generated",
+		"cause" : "PRM 3-phase voltage is below the under-voltage warning reference value..",
+		"remedy" : "1) Check the PRM input 3-phase voltage.2) Check the state of the NFBRST and NFBPN of PRM."
+	},
+	"W34" : {
+		"msg" : "PRM 3-phase voltage frequency abnormal",
+		"cause" : "PRM 3-phase voltage frequency has exceeded the warning reference value.",
+		"remedy" : "1) Check the PRM input 3-phase voltage.2) Check the state of the NFBRST and NFBPN of PRM."
+	},
+	"W35" : {
+		"msg" : "PRM ADC offset value abnormal",
+		"cause" : "PRM ADC Offset value has exceeded the warning reference value.",
+		"remedy" : "Check after reinputting the controller power."
+	},
+	"W36" : {
+		"msg" : "PRM 3-phase voltage offset value abnormal",
+		"cause" : "The offset value of PRM input 3-phase voltage has exceeded the warning reference value.",
+		"remedy" : "Check the PRM input 3-phase voltage."
+	},
+	"W37" : {
+		"msg" : "PRM heat protection panel or reactor temperature increased",
+		"cause" : "The temperature rise of the PRM heat sink or reactor has exceeded the warning reference value.",
+		"remedy" : "Check the PRM fan."
+	},
+	"W38" : {
+		"msg" : "PRM regenerative current abnormal",
+		"cause" : "PRM regenerative current error is detected.",
+		"remedy" : "Check after reinputting the controller power."
+	},
+	"W39" : {
+		"msg" : "PRM control power (+15 V/−15 V) abnormal",
+		"cause" : "PRM control power (+15V/-15V) is in error.",
+		"remedy" : "1) Check the POW LED of the PRM BD591 board.2) Check CNP24 (24 V) of the PRM BD591 board."
+	},
+	"W40" : {
+		"msg" : "PRM load capacity abnormal",
+		"cause" : "PRM load capacity error has exceeded the warning reference value.",
+		"remedy" : "Check the warning by lowering the robot playback speed."
+	},
+	"W41" : {
+		"msg" : "PRM NFB Trip",
+		"cause" : "PRM NFB Trip is occurred",
+		"remedy" : "Check the state of the NFBRST and NFBPN of PRM."
+	},
+	"W42" : {
+		"msg" : "PRM PN current exceeded the warning reference value.",
+		"cause" : "PRM PN current has exceeded the warning reference value caused by over PRM regenerative capacity.",
+		"remedy" : "Check the warning by lowering the robot playback speed."
+	},
+	"W43" : {
+		"msg" : "PRM 3-phase current  exceed the warning reference value.",
+		"cause" : "PRM 3-phase current has exceeded the warning reference value caused by over PRM regenerative capacity.",
+		"remedy" : "Check the warning by lowering the robot playback speed."
+	},
+	"W51" : {
+		"msg" : "As the high load mode is “disabled,” earlier fault with the robot is expected.",
+		"cause" : "High load mode is disabled.",
+		"remedy" : "Set the high load mode as “disabled” only when the user takes the risk of an earlier fault with the robot."
+	},
+	"W52" : {
+		"msg" : "Relevant tool load data not set (operating in the high load mode)",
+		"cause" : "The robot was operated without setting the load data of the relevenat tool. The robot operates in the high load mode.",
+		"remedy" : "Execute load estimation for the relevant tool, or execute directly using the CAD data before use."
+	},
+	"W53" : {
+		"msg" : "Relevant tool load data not set",
+		"cause" : "The robot was operated without setting the load data of the relevenat tool.",
+		"remedy" : "Execute load estimation for the relevant tool, or execute directly using the CAD data before use."
+	},
+	"W54" : {
+		"msg" : "Dupilicated CAN port usage",
+		"cause" : "Other application is using this CAN port.",
+		"remedy" : "Set the port so that 1 CAN port will not be used for more than 2 applications."
+	},
+	"W55" : {
+		"msg" : "Impossible to use #n node of the embedded fieldbus.",
+		"cause" : "The size of the previous node exceeds 16 bytes (128 points), so it is already occupied #n node's I/O.",
+		"remedy" : "Use another node number."
+	},
+	"W56" : {
+		"msg" : "Object FB3 is already being used by another communication channel.",
+		"cause" : "Other communication channel is already using the FB3.",
+		"remedy" : "Check whether another communication system that uses FB3 is used."
+	},
+	"W57" : {
+		"msg" : "Object FB5 is already being used by another communication channel.",
+		"cause" : "Other communication channel is already using the FB5.",
+		"remedy" : "Check whether another communication system that uses FB5 is used."
+	},
+	"W104" : {
+		"msg" : "(%s axis) encoder battery voltage lowered",
+		"cause" : "Battery voltage is too low in the relevant axis encoder.",
+		"remedy" : "Check the relevant encoder battery voltage according to the controller operation manual.Check the connection of the relevant axis encoder battery."
+	},
+	"W105" : {
+		"msg" : "%s gun) total tips exceeded the wear amount for replacement",
+		"cause" : "It occurs when total tip wear detected with gun search is in excess of tip exchange wear amount set in servo gun parameter.",
+		"remedy" : "Inspect the wear amount of the moving and fixed tips, and replace them."
+	},
+	"W106" : {
+		"msg" : "%s gun) moving tip exceeded the wear amount for replacement",
+		"cause" : "It occurs when moving tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
+		"remedy" : "Inspect the wear amount of the moving tip, and replace the tip."
+	},
+	"W107" : {
+		"msg" : "%s gun) fixed tip exceeded the wear amount for replacement",
+		"cause" : "It occurs when fixed tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
+		"remedy" : "Inspect the wear amount of the fixed tip, and replace the tip."
+	},
+	"W108" : {
+		"msg" : "Actual pressurization force exceeded the set value during the jog operation",
+		"cause" : "It occurs when actual pressurization force is in excess of set value in manual pressurizing. In this case, operate the servo gun axis in the opposite direction.",
+		"remedy" : "Check whether sufficient pressurization force is set for the axis that needs to be manipulated.As a mechanical problem is expected with the servo gun, contact the servo gun manufacturer for inquiry."
+	},
+	"W109" : {
+		"msg" : "Impossible to manually operate a servo gun that is not selected",
+		"cause" : "The servo gun you intend to operate is different from the selected servo gun number.",
+		"remedy" : "After selecting the servo gun, manipulate the jog manually. Using the R210 code, select and operate the servo gun that needs to be manipulated."
+	},
+	"W110" : {
+		"msg" : "Pressurization force detection disabled.",
+		"cause" : "This occurs when the pressurization force level of the servo gun parameter menu or the pressurization force error detection delay time is not set.",
+		"remedy" : "Check the pressurization force level or the pressurization force error detection delay time in the servo gun parameter menu."
+	},
+	"W111" : {
+		"msg" : "Prior position recovery error detection distance exceeded",
+		"cause" : "It occurs when the recovery distance simultaneously with motor ON input is larger than the set value of error detecting distance in case the prior recovery function is enabled in [Motor ON].",
+		"remedy" : "Expand the prior position recovery error detection distance.Set the prior position recovery function as disabled.Contact the A/S department of our company."
+	},
+	"W112" : {
+		"msg" : "Prior position recovery distance exceeded",
+		"cause" : "It occurs when the recovery distance simultaneously with operation ready ON input is larger than the set value in case prior the position recovery function is enabled in [Operation Ready ON].",
+		"remedy" : "Set the recovery distance at a larger value than the currently set value."
+	},
+	"W116" : {
+		"msg" : "Impossible to maintain the previously used weaving operation.",
+		"cause" : "It happens weaving movement, which is made when WEAVON command is performed, cannot be maintained.",
+		"remedy" : "1) Restart from the step where the WEAVON command exists.2) If welding is progressing, change to the welding off mode, and then start from the command where the WEAVON command exists to the position where the welding was cut off. Afterward, change to the welding on mode, and progress the work."
+	},
+	"W117" : {
+		"msg" : "(%s axis) manual operation in which the high speed command is generated.",
+		"cause" : "Robot is in a posture with high speed while manually operated in Cartesian coordinate system or tool coordinate system.",
+		"remedy" : "Change the robot posture by manipulating in the joint coordinate system, and then manipulate manually as desired."
+	},
+	"W118" : {
+		"msg" : "#1 servo CPU version is an old one",
+		"cause" : "The robot may be used, but it has problems in the use of some functions due to the old CPU version of 1st servo in the 1st servo board.",
+		"remedy" : "It is possible to continuously use the functions that have been used. However, to use the new functions, contact the A/S department of our company for version-up."
+	},
+	"W119" : {
+		"msg" : "#2 servo CPU version is an old one",
+		"cause" : "The robot may be used, but it has problems in the use of some functions due to the old CPU version of 2nd servo in the 1st servo board.",
+		"remedy" : "It is possible to continuously use the functions that have been used. However, to use the new functions, contact the A/S department of our company for version-up."
+	},
+	"W120" : {
+		"msg" : "#3 servo CPU version is an old one",
+		"cause" : "The robot may be used, but it has problems in the use of some functions due to the old CPU version of 1st servo in the 2nd  servo board.",
+		"remedy" : "It is possible to continuously use the functions that have been used. However, to use new functions, contact the A/S department of our company for version-up."
+	},
+	"W121" : {
+		"msg" : "#4 servo CPU version is an old one",
+		"cause" : "The robot may be used, but it has problems in the use of some functions due to the old CPU version of 2nd servo in the 2nd  servo board.",
+		"remedy" : "It is possible to continuously use the functions that have been used. However, to use new functions, contact the A/S department of our company for version-up."
+	},
+	"W123" : {
+		"msg" : "Stop signal received from partner robot",
+		"cause" : "Stop instruction is received from the partner robot during cowork control operation. In this case, the above message is output, and the robot stops.",
+		"remedy" : "Operate the slave side robot, and then start the master to resume the program again."
+	},
+	"W124" : {
+		"msg" : "Slave robot jog operation impossible",
+		"cause" : "It is set as salve in the condition of manual cowork control. The robot set as slave is impossible to operate separately.",
+		"remedy" : "To operate individual robots manually, change the manual cooperative state. To change the manual cooperative state, the user needs to use the F key or R351 code."
+	},
+	"W125" : {
+		"msg" : "Abnormality with the position of the attached servo gun",
+		"cause" : "The position of servo gun attached by GUNCHNG ON instruction or instruction for manual gun connection is different from the one remained in its memory when separating.",
+		"remedy" : "It is normal if it is generated when accessing the servo gun initially. If it is generated in other cases than the initial access, inspect the following items. It can be generated when a wrong servo gun number is selected; thus, please check carefully. Check whether the servo gun encoder battery level remains."
+	},
+	"W131" : {
+		"msg" : "Cooperative jog operation impossible—Master robot duplicated",
+		"cause" : "Among robots connected to HiNet are more than two robots set as Master in their manual cowork.",
+		"remedy" : "Set only one unit as the manual cooperative master. Change the setting."
+	},
+	"W132" : {
+		"msg" : "Cooperative jog operation impossible—Slave robot not selected",
+		"cause" : "Jog operation is attempted for Master robot without setting the Slave robot to be available to cowork.",
+		"remedy" : "Check whether a slave robot is selected, and then prepare the slave robot for cooperation (Jog off/Enabling switch on). Manipulate afterward."
+	},
+	"W133" : {
+		"msg" : "Slave robot jog setting changed—Stopped",
+		"cause" : "A robot chaged its manual cowork is detected among the coworking Slave robots Master during cowork jog operation with robot.",
+		"remedy" : "Manipulate after rechecking the cooperative state of the slave."
+	},
+	"W134" : {
+		"msg" : "Master tool coordinate system not selected",
+		"cause" : "It occurs when attempting to operate jog for Slave robot in a CMOV recording mode(R351,3).Master robot is not specified.Or it may occur when using Step Forward of CMOV.The currently set number of Master is different from the recorded Master",
+		"remedy" : "Set a proper master robot into the manual cooperation master state."
+	},
+	"W137" : {
+		"msg" : "Manual operation in which the tool end high speed command is generated.",
+		"cause" : "During the manual operation of a cross coordinate and a tool coordinate, the speed of the tool end of the robot exceeded safety speed limits.",
+		"remedy" : "Check whether the B-axis is near 0 deg. It is required to manipulate the axis coordinate manually when the B-axis is near 0 deg."
+	},
+	"W138" : {
+		"msg" : "Reducer residual rated lifetime left under 10%",
+		"cause" : "The reducer of the warned axis has less than 10% of the initial rated life-time.",
+		"remedy" : "By referring to the expected lifetime of the reducer of the relevant axis under the current operation condition, prepare for its replacement."
+	},
+	"W139" : {
+		"msg" : "Tool mass error exceeded the allowable tolerance",
+		"cause" : "The mass of the current tool is much lower than the real mass. Over-demanding motions are expected.",
+		"remedy" : "Check the value of the mass / center of mass, gravity direction, or reference posture of the relevant tool."
+	},
+	"W140" : {
+		"msg" : "Reducer expected lifetime left under 4 hours",
+		"cause" : "The reducer of the warned axis has less than 4 hours under the current robot motions. Thus, an early demage of the reducer is expected.",
+		"remedy" : "Check whether the physical property value of the relevant tool is inputted properly. If the relevant tool’s physical property value is judged to be normal, contact the engineer for inquiry."
+	},
+	"W141" : {
+		"msg" : "Tool (0) allowable inertia exceeded. Used in high load mode",
+		"cause" : "As the tool's inertia exceeds the value allowed for the wrist axis, the performance and life-span of the robot is lowered.",
+		"remedy" : "In principle, it is required to make adjustments in a way in which the tool inertia can be reduced. However, when such is impossible, set the high load mode as enabled for use."
+	},
+	"W142" : {
+		"msg" : "(%s axis) average load rate abnormal during operation",
+		"cause" : "The average load factor set for the detection of warning is exceeded.",
+		"remedy" : "If the robot axis, for which a warning is generated, is operating excessively, reduce the tool load or lower the speed. While operating normally in the same condition, if the robot has an error, it is required to check the mechanism."
+	},
+	"W143" : {
+		"msg" : "(%s axis) encoder data abnormal. Required to check.",
+		"cause" : "By a problem of Serial Encoder, jump phenomenon of position data occurs",
+		"remedy" : "A servo board handles the compensation for the jump phenomenon of position data, but you refer to our A/S department for prevention of sustained problem occurrence, and please be replaced with a motor."
+	},
+	"W144" : {
+		"msg" : "Safety restartup mode operating",
+		"cause" : "If it is restarted, the position of the step will be changed, allowing it to run in a safe velocity.",
+		"remedy" : "When needed to move at the recorded speed, and not the safe speed, execute motor off and then start up again."
+	},
+	"W145" : {
+		"msg" : "(%s axis) encoder communication abnormal. Required to check.",
+		"cause" : "The encoder communication failures have occurred more than 6 times consecutively.",
+		"remedy" : "Required to check the encoder line and the DSP board of the relevant axis."
+	},
+	"W146" : {
+		"msg" : "(%s axis) encoder temperature abnormal. Required to check.",
+		"cause" : "The temperature of the encoder at the axis where the warning occurs is above 85℃",
+		"remedy" : "Required to check the load factor of the relevant axis. In case of an axis with a fan mounted, check the fan as well. Contact the A/S department of our company for inquiries."
+	},
+	"W147" : {
+		"msg" : "Stopped as the interference between the robot %s and the arm is expected.",
+		"cause" : "As the interference with the arm is expected if the robot runs continuously, the stopping occurs due to the arm interference detection function.",
+		"remedy" : "Change the step condition in a way to prevent arm interference."
+	},
+	"W149" : {
+		"msg" : "Arc welding tip use time limit left 10% or below.",
+		"cause" : "The welding tip has been used for more than 90% of set time limit.",
+		"remedy" : "Replace the welding tip, and then initialize the tip use time."
+	},
+	"W150" : {
+		"msg" : "Arc welding tip use time limit exceeded.",
+		"cause" : "The welding tip has been used for more than the time limit.",
+		"remedy" : "Replace the welding tip, and then initialize the tip use time."
+	},
+	"W151" : {
+		"msg" : "When the embedded PLC is on and SP11 is off, then FN output will be impossible",
+		"cause" : "The FN signal can't be out when embedded PLC is enabled and the SP11 is turned off.",
+		"remedy" : "Turn off the embedded PLC. Add SP11 On when using an embedded PLC."
+	},
+	"W152" : {
+		"msg" : "Measured panel thickness exceeded the normal range",
+		"cause" : "The measured panel thickness after pressure completion exceeds the tolerance of reference thickness.",
+		"remedy" : "Check whether the panel is missed.Record the gun search position, and carry out gun search again."
+	},
+	"W153" : {
+		"msg" : "Reducer motor current that exceeds the allowable level is detected.",
+		"cause" : "The load of tool and additional weight is not correct, or the current of a motor is increased due to increase of motor temperature.",
+		"remedy" : "Check the tool load and the additional weight. If normal, contact the A/S department of our company for inquiries."
+	},
+	"W154" : {
+		"msg" : "Roller hemming force error exceeded the allowable tolerance for warning.",
+		"cause" : "The speed for roller hemming is too fast to control the desired force in real time.",
+		"remedy" : "Lower the roller hemming speed or increase the TOL_W value."
+	},
+	"W155" : {
+		"msg" : "Output torque exceeded the normal range.",
+		"cause" : "The saturation of torque occurs during warning detection time.",
+		"remedy" : "Check the 3-phase input voltage. (based on 220 V, tolerance range 10%)Initialize the servo parameter of the robot parameter."
+	},
+	"W156" : {
+		"msg" : "Sensing-induced tracking distance exceeded the limit value",
+		"cause" : "The tracking distance during height sensing exceeds the limit.",
+		"remedy" : "Check whether the sensing function operates normally.If the limit value is too small, set it again by increasing it."
+	},
+	"W157" : {
+		"msg" : "Welder internal Synergic being changed.",
+		"cause" : "Welder cannot receive commands because the welder is in changing synergic setting.",
+		"remedy" : "Wait for up to 6 seconds additionally until the communication with the welder becomes normal.If the Synergic setting in the welding condition is not changed, the wait time will be minimized."
+	},
+	"W158" : {
+		"msg" : "Synergic or welding mode abnormal in the welding condition",
+		"cause" : "Welder won't support current synergic code or welding mode.",
+		"remedy" : "Set the Synergic setting and the welding mode that are supported by the welder.In case of some welders, the supportable Synergic setting varies depending on the welding mode."
+	},
+	"W159" : {
+		"msg" : "No port assigned for welder arc on.",
+		"cause" : "The port which outputs the 'Arc On' command is not assigned.",
+		"remedy" : "Check the assignment state of the signal that outputs welding start to the welder."
+	},
+	"W160" : {
+		"msg" : "Speed lowered in the section that the robot speed needs to be maintained. Required to correct teaching.",
+		"cause" : "Current job program cannot move the taught speed because of limit of axis speed and so on.",
+		"remedy" : "Change the position and speed of step to move along the taught speed.(Avoid rapid pose change.)"
+	},
+	"W161" : {
+		"msg" : "Impossible to use the gravity compensation function.",
+		"cause" : "A stiffness value is invalid.",
+		"remedy" : "Check the stiffness value in the CLB file."
+	},
+	"W162" : {
+		"msg" : "(%s axis) abnormality detected during the brake hold test.",
+		"cause" : "The change amount of motor angle exceeded reference value during the brake hold test.",
+		"remedy" : "1) Check whether the hold test reference value for the relevant axis is set too low.2) Check whether the robot is retracted to a safe position while motor on.3) If the robot did not move to the retraction position, move it to a safe position manually.4) Check the state of the brake of the relevant axis. (Regarding whether the brake operates and infiltration by oil)5) In case a problem with an axis is identified, replace the relevant motor."
+	},
+	"W163" : {
+		"msg" : "(%s axis) abnormality detected during the brake release test.",
+		"cause" : "The change amount of motor angle was less than reference value during the brake release test.",
+		"remedy" : "1) Check whether the release test reference value for the relevant axis is set too high.2) Check whether the brake control signal for the relevant axis is outputted normally.3) Check the brake release sound to see whether the relevant axis brake is operational.4) When a position deviation error is generated and the relevant axis cannot be moved, use another axis jog to move to a safe position.5) Check the state of the relevant axis motor brake. (Regarding whether the brake operates and state of the motor power)6) In case of an axis the problem of which is identified, replace the relevant motor."
+	},
+	"W164" : {
+		"msg" : "Gun search reference position changed. Execute gun search again.",
+		"cause" : "Gun search reference position has been changed, because external ROBOT.SWD file was copied.",
+		"remedy" : "1) Record the gun search reference position again by executing the processes 2 and 3 in order.2) Set the “gun search referenceposition record” as “enabled,” and then execute gun search.3) Set the “gun search reference position record” as “disabled,” and then execute gun search."
+	},
+	"W165" : {
+		"msg" : "%s gun)Squeeze—Current table changed because of SWD file change",
+		"cause" : "Previous pressure-current table is changed because external 'ROBOT.SWD' is copied to the controller.",
+		"remedy" : "Enter the servo gun auto setting menu, and then recover the existing setting or reflect the current setting."
+	},
+	"W166" : {
+		"msg" : "%s gun)Gun search information changed because of SWD file change.",
+		"cause" : "The information of gun search is changed because external 'ROBOT.SWD' is copied to the controller.",
+		"remedy" : "Enter the servo gun auto setting menu, and then recover the existing setting or reflect the current setting."
+	},
+	"W167" : {
+		"msg" : "%s gun)Gun deflection amount setting changed because of SWD file change.",
+		"cause" : "The setting for gun bent is changed because external 'ROBOT.SWD' is copied to the controller.",
+		"remedy" : "Enter the servo gun auto setting menu, and then recover the existing setting or reflect the current setting."
+	},
+	"W168" : {
+		"msg" : "%s gun)Panel thickness calibration setting changed because of SWD file change.",
+		"cause" : "The setting for thickness measurement compensation is changed because external 'ROBOT.SWD' is copied to the controller.",
+		"remedy" : "Enter the servo gun auto setting menu, and then recover the existing setting or reflect the current setting."
+	},
+	"W169" : {
+		"msg" : "(%s axis) servo IP higher than the controller specification.",
+		"cause" : "The setting of servo Ip value exceeded permitted value.",
+		"remedy" : "Initialize the servo parameter"
+	},
+	"W170" : {
+		"msg" : "(%s axis) motion Itp higher than IP.",
+		"cause" : "The setting of motion Itp value exceeded permitted value.",
+		"remedy" : "Initialize the Itp value"
+	},
+	"W171" : {
+		"msg" : "Impossible for the robot to follow the sync speed at the %s step.",
+		"cause" : "In motion planning, the robot could not move with sync speed.",
+		"remedy" : "Correct the teaching at the sync position, or lower the sensor input speed."
+	},
+	"W172" : {
+		"msg" : "Main board CPU overheating detected",
+		"cause" : "Main board CPU temperature exceeded permitted range.",
+		"remedy" : "Check the controller according to the fault repair methods."
+	},
+	"W173" : {
+		"msg" : "Controller internal overheating detected",
+		"cause" : "Controller's internal temperature exceeded permitted range.",
+		"remedy" : "Check the controller according to the fault repair methods."
+	},
+	"W174" : {
+		"msg" : "Step set warning outputted.",
+		"cause" : "Current robot's cursor of program, step, function number has been changed out of playback flow.",
+		"remedy" : "Be careful whether there is any collision on the robot path."
+	},
+	"W175" : {
+		"msg" : "The COC master command duplicated(cnt:%s)",
+		"cause" : "The master command sequence duplicated",
+		"remedy" : "Check HiNet network connection status."
+	},
+	"W176" : {
+		"msg" : "The COC master command sequence missed(cnt:%s)",
+		"cause" : "The master command missed.",
+		"remedy" : "Check HiNet network connection status."
+	},
+	"W177" : {
+		"msg" : "As the high load mode is “Exception,” earlier fault with the robot is expected.",
+		"cause" : "High load exception mode is activated.",
+		"remedy" : "Set the high load mode as “Exception” only when the user takes the risk of an earlier fault with the robot."
+	},
+	"W178" : {
+		"msg" : "HiNet master command check sum error(Rob:%s)",
+		"cause" : "The received master command check sum mismatch.",
+		"remedy" : "Check HiNet network connection status."
+	},
+	"W179" : {
+		"msg" : "HiNet status data checksum error(Rob:%s)",
+		"cause" : "The received status data check sum mismatch.",
+		"remedy" : "Check HiNet network connection status."
+	},
+	"W180" : {
+		"msg" : "HiNet master command seq. error",
+		"cause" : "The order of transfer command is inappropriate.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"W181" : {
+		"msg" : "%s)The motor current exceeds the maximum value.(Load Estimation NonExecuted)",
+		"cause" : "Overcurrent is detected and the load estimation is not executed.",
+		"remedy" : "Execute the load estimation."
+	},
+	"W182" : {
+		"msg" : "%s) The motor current exceeds the maximum value.(Tool load modified)",
+		"cause" : "Overcurrent is detected and the tool load moditied by user.",
+		"remedy" : "Check the tool load and the additional weight. If normal, contact the A/S department of our company for inquiries."
+	},
+	"W183" : {
+		"msg" : "(%s Axis) rotational sealer axis needs endless setting",
+		"cause" : "The sealer axis is not endless axis.",
+		"remedy" : "Perform the endless setting for the rotational sealer axis."
+	},
+	"W2000" : {
+		"msg" : "Power failure is operating",
+		"cause" : "The power failure is operating in motor on.When the power failure is operating, it can generate the following errors.E02506 AMP PN undervoltage occurredE02507 AMP diode module abnormal or insufficient AC input voltageE02631 (%s axis) position deviation exceeded for each speedW00153 Reducer motor current that exceeds the allowable level is detected.",
+		"remedy" : "Check main power of the controller and signal block diagram of the power failure."
+	},
+    "W2580": {
+        "msg": "Manual brake release enable switch abnormal",
+        "cause": "Error occurred in manual brake release enable switch.",
+        "remedy": "Check the manual brake release function and, if abnormality is found, replace the system board."
+    },
+    "W2581": {
+        "msg": "%s축) SMT_DA 엔코더 배터리 저전압",
+        "cause": "SMT_DA 서보 드라이버 경고",
+        "remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+    },
+    "W2582": {
+        "msg": "%s축) SMT_DA 소프트웨어 위치제한 초과",
+        "cause": "SMT_DA 서보 드라이버 경고",
+        "remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+    },
+    "W2583": {
+        "msg": "%s축) SMT_DA 외력에 의한 모터 구동",
+        "cause": "SMT_DA 서보 드라이버 경고",
+        "remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+    },
+    "W2584": {
+        "msg": "%s축) SMT_DA 운전 과부하",
+        "cause": "SMT_DA 서보 드라이버 경고",
+        "remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+    },
+    "W2585": {
+        "msg": "%s축) SMT_DA 설정 이상",
+        "cause": "SMT_DA 서보 드라이버 경고",
+        "remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+    },
+	"W4705" : {
+		"msg" : "SafeSpace Ethernet Timeout(50ms)",
+		"cause" : "SafeSpace Ethernet communication timeout for 50ms",
+		"remedy" : "1. Check the Ethernet communication between Hi5a and SafeSpace"
+	},
+	"W4706" : {
+		"msg" : "SafeSpace Ethernet Timeout(100ms)",
+		"cause" : "SafeSpace Ethernet communication timeout for 100ms",
+		"remedy" : "1. Check the Ethernet communication between Hi5a and SafeSpace"
+	},
+	"W4707" : {
+		"msg" : "SafeSpace Ethernet Timeout(150ms)",
+		"cause" : "SafeSpace Ethernet communication timeout for 150ms",
+		"remedy" : "1. Check the Ethernet communication between Hi5a and SafeSpace"
+	},
+	"W5461" : {
+		"msg" : "Sensorless mastering test should execute within %s hours.",
+		"cause" : "Pre-alarm for mastering test.",
+		"remedy" : "Ready for mastering test."
+	},
+	"W5462" : {
+		"msg" : "Sensor-based mastering test should execute within %s hours.",
+		"cause" : "Pre-alarm for mastering test.",
+		"remedy" : "Ready for mastering test."
+	},
+	"W14150" : {
+		"msg" : "There are syntax error in WEAVON condition number.",
+		"cause" : "The conditon number of WEAVON was entered incorrectly.",
+		"remedy" : "Enter a integer between 1 to 32 in WEAVON condition number."
+	},
+	"W21001" : {
+		"msg" : "%s axis)Test result are not suitable for test.",
+		"cause" : "The hold test angle variation of warning axis exceeds the release test angle variation.",
+		"remedy" : "1) Increase the torque applied ratio to the maximum. And run the reference value auto settig.2) Check the wiring of brake part.3) Check whether the brake open/close output is normal in system IO board.4) Check the motor of warning axis.5) If there is no error, exclude the axis and run the brake test."
+	},
+	"W21002" : {
+		"msg" : "%s axis)Angle variation is too large in Brake hold test.",
+		"cause" : "The angle variation exceeds 0.01 rad in brake hold test.",
+		"remedy" : "1) Decrease the torque applied ratio to the minimum. And run the reference value auto settig.2) Check the wiring of brake part.3) Check whether the brake open/close output is normal in system IO board.4) Check the motor of warning axis.5) If there is no error, exclude the axis and run the brake test."
+	},
+	"W21003" : {
+		"msg" : "%s axis)motor is a type without brake.",
+		"cause" : "Brake hold test has been executed on the motor without brake.",
+		"remedy" : "After remove the check in 'brake hold test' of warning axis, run the test again."
+	},
+	"W21011" : {
+		"msg" : "The gas pressure(command) of the spring is lower than the reference warning criteria.(%s bar)",
+		"cause" : "The estimated pressure by the gas spring pressure inspection function is lower than the minimum warning reference.",
+		"remedy" : "1) Make sure whether load estimation is accurate.2) Check the load data and run the gas spring pressure inspection function again.3) If the warning detected again, check the real pressure of gas spring."
+	},
+	"W21012" : {
+		"msg" : "The gas pressure(command) of the spring is higher than the reference warning criteria.(%s bar)",
+		"cause" : "The estimated pressure by the gas spring pressure inspection function is higher than the maximum warning reference.",
+		"remedy" : "1) Make sure whether load estimation is accurate.2) Check the load data and run the gas spring pressure inspection function again.3) If the warning detected again, check the real pressure of gas spring."
+	},
+	"W21013" : {
+		"msg" : "This robot does not support the gas spring pressure inspection function.",
+		"cause" : "This robot model does not support the gas spring pressure inspection function.",
+		"remedy" : "Delete the gas spring pressure inspection command."
+	},
+	"W21014" : {
+		"msg" : "The gas spring pressure(command) error.(Load not estimated)",
+		"cause" : "The gas spring pressure error was occured without load estimation.",
+		"remedy" : "1) Please run the gas spring presuure test after load estimation.2) If the load estimatno is unavailable, change the option of 'the gas spring pressure estimation at standstill' to estimation."
+	},
+	"W21015" : {
+		"msg" : "The gas pressure(stop) of the spring is lower than the reference warning criteria.(%s bar)",
+		"cause" : "The estimated pressure by the gas spring pressure inspection function is lower than the minimum warning reference.",
+		"remedy" : "1) Make sure whether load estimation is accurate.2) Check the load data and run the gas spring pressure inspection function again.3) If the warning detected again, check the real pressure of gas spring."
+	},
+	"W21016" : {
+		"msg" : "The gas pressure(stop) of the spring is higher than the reference warning criteria.(%s bar)",
+		"cause" : "The estimated pressure by the gas spring pressure inspection function is higher than the maximum warning reference.",
+		"remedy" : "1) Make sure whether load estimation is accurate.2) Check the load data and run the gas spring pressure inspection function again.3) If the warning detected again, check the real pressure of gas spring."
+	},
+	"W21017" : {
+		"msg" : "The gas spring pressure(stop) error.(Load not estimated)",
+		"cause" : "The gas spring pressure error was occured without load estimation.",
+		"remedy" : "1) Please run the gas spring presuure test after load estimation.2) If the load estimatno is unavailable, change the option of 'the gas spring pressure estimation at standstill' to estimation."
+	},
+	"W21021" : {
+		"msg" : "(%s axis)Driving part abnormality detected.",
+		"cause" : "The some results of driving part examination exceed the standard criteria.",
+		"remedy" : "1) In case of incorrect tool parameters, unusual warning can be occurred. Check the tool parameters and tool parameter estimation function.2) Check the tool, tool parameter, and examination pose are same with those for standard criteria.3) If the results of 1) and 2) have no problem, then check the reducer and motor of the axis.4) If the results of 1) and 2) have some problem or the reducer and motor in 3) has no problem, then reset the standard criteria of the axis."
+	},
+	"W22200" : {
+		"msg" : "Error with the auto mode setting in the robot ready output condition.",
+		"cause" : "The auto mode was duplicated in robot ready condition.",
+		"remedy" : "In the condition screen of System-Control parameter-Robot ready, select the auto mode between 1 cycle and repetition."
+	},
+	"W22201" : {
+		"msg" : "The output signal was not assigned in home position.",
+		"cause" : "The output signal was not assigned in home position.",
+		"remedy" : "In the screen of System-Control parameter-Origin registration, set the use of items that will not be used as off."
+	},
+	"W26000" : {
+		"msg" : "CIE:All task is executing. Wait minute.",
+		"cause" : "There is using all task.(CIE:Command Independent Execution)",
+		"remedy" : "Execute as soon as the task currently being executed is ended."
+	},
+	"W26001" : {
+		"msg" : "CIE:In use axis in other task. Wait minute.",
+		"cause" : "There is using the current axis in other task.(CIE:Command Independent Execution)",
+		"remedy" : "Execute as soon as the axis currently being used by another task is ended."
+	},
+	"W26002" : {
+		"msg" : "CIE:Wait minute for execution.",
+		"cause" : "There is executing motion process now.(CIE:Command Independent Execution)",
+		"remedy" : "Execute as soon as the motion command generator currently being executed is ended."
+	},
+	"W26003" : {
+		"msg" : "CIE:Duplicated execution of task program.",
+		"cause" : "Task program of the CIE is already operating.(CIE:Command Independent Execution)",
+		"remedy" : "Check the operating state of sub-tasks."
+	},
+	"W26004" : {
+		"msg" : "CIE:Duplicated execution of the same task number.",
+		"cause" : "The task number of TaskStart command is already operating.(CIE:Command Independent Execution)",
+		"remedy" : "Check the operating state of sub-tasks."
+	},
+	"W26005" : {
+		"msg" : "CIE:Stop signal is operating.",
+		"cause" : "The TaskStart command in CIE is executed when stop signal is operating(CIE:Command Independent Execution)",
+		"remedy" : "Check the stop signal."
+	},
+	"W26100" : {
+		"msg" : "The subtask programs that be running are terminated.",
+		"cause" : "The program of main task has changed.",
+		"remedy" : "Check the current working status of sub-tasks."
+	},
+	"W26101" : {
+		"msg" : "Duplicated execution of the same task number.",
+		"cause" : "The task number of TaskStart command is already operating.",
+		"remedy" : "Check the operating state of sub-tasks."
+	},
+	"W26102" : {
+		"msg" : "Unable to remote start:Program is operating",
+		"cause" : "Program is already running.",
+		"remedy" : "Try again after the running program is complete."
+	},
+	"W26103" : {
+		"msg" : "Unable to remote start:Spot command is operating",
+		"cause" : "It is unable to execute while spot command is running.",
+		"remedy" : "Try again after the spot command is complete."
+	},
+	"W26104" : {
+		"msg" : "Unable to remote start:Empty task",
+		"cause" : "The task index executed is not registered.",
+		"remedy" : "If the error is generated continuously, contact our company for inquiries."
+	},
+	"W28000" : {
+		"msg" : "HRMS server operation failed",
+		"cause" : "Impossible to create a network channel for operating HRMS server.",
+		"remedy" : "Check the connection of the main board Ethernet connector."
+	},
+	"W28001" : {
+		"msg" : "HRMS service channel generation impossible",
+		"cause" : "Failed to configure a channel for transmitting and receiving robot data for HRMS.",
+		"remedy" : "Check the HRMS network."
+	},
+	"W28002" : {
+		"msg" : "HRMS service response wait time exceeded",
+		"cause" : "No response received from the HRMS client for a certain period.",
+		"remedy" : "Check the HRMS network."
+	},
+	"W28003" : {
+		"msg" : "HRMS service request item not enabled.",
+		"cause" : "Mismatching between the requested item and the HRMS internal data table.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"W28004" : {
+		"msg" : "Failed to collect data for the HRMS service",
+		"cause" : "Error generated while collecting data as requested by the HRMS client.",
+		"remedy" : "Contact our company for inquiries."
+	},
+	"W28300" : {
+		"msg" : "Mismatch of the selected program.",
+		"cause" : "The selected external program number differ from running it.",
+		"remedy" : "Please check the main process program."
+	},
+	"W28301" : {
+		"msg" : "Mismatch of S/W version between teach pendant - main b/d",
+		"cause" : "The software version is mismatched between teach pendant and main b/d. There is chance of mis-operation.",
+		"remedy" : "Please match the version by software update."
+	},
+	"W28302" : {
+		"msg" : "Start playback with low speed",
+		"cause" : "Start playback with low speed because of encoder temperature and robot stopped time.",
+		"remedy" : "Check the value in the menu of [Control setting]-[Playback speed auto control]."
+	},
+	"W28303" : {
+		"msg" : "Playback speed is restored to origianl speed(%s%%)",
+		"cause" : "Playback speed increases linearly from low speed to original speed.",
+		"remedy" : "Check the value in the menu of [Control setting]-[Playback speed auto control]."
+	},
+	"W28304" : {
+		"msg" : "Finish low speed playback",
+		"cause" : "Finish low speed playback because of satisfying the time of low speed playback.",
+		"remedy" : "If you want to change the low speed playback time, modify the value in the menu for Playback speed auto control."
+	},
+	"W28305" : {
+		"msg" : "Program reservation is possible on remote mode",
+		"cause" : "The operatiing mode for program reservation is not remote mode.",
+		"remedy" : "Check the opertioning mode."
+	},
+	"W28306" : {
+		"msg" : "SONL:Ref. pose record mode for robot search",
+		"cause" : "SONL command can't execute in the robot search record \"ON\" mode.",
+		"remedy" : "The reference pose record for robot search has to \"OFF\".(Refer to \"Robot search ref. pose record\" of the Condition Setting/Application Condition)"
+	},
+	"W28308" : {
+		"msg" : "In Loadestimation process, estimation error of mass exceeds permissible range.",
+		"cause" : "Estimated mass is larger than permissible mass range.",
+		"remedy" : "Check the attached tool."
+	},
+	"W28309" : {
+		"msg" : "TH parameter for TH meandering reduction function is set improperly.",
+		"cause" : "TH parameters is not set as [highest>medium>lowest].",
+		"remedy" : "Set TH parameter as [highest>medium>lowest]."
+	},
+	"W28310" : {
+		"msg" : "Hand height configuration for TH meandering reduction function is set improperly.",
+		"cause" : "Hand height is not set as [lowest<medium<highest].",
+		"remedy" : "Set hand height as [lowest<medium<highest]."
+	},
+	"W28311" : {
+		"msg" : "Hand height for TH meandering reduction function is set improperly.",
+		"cause" : "Hand height for TH meandering reduction function is set as negative number.",
+		"remedy" : "Set Hand height for TH meandering reduction function as positive number."
+	},
+	"W28312" : {
+		"msg" : "Reference point of RINT was not recorded",
+		"cause" : "The search reference point can not record because of robot stop fault.",
+		"remedy" : "Execute SEA command again."
+	},
+	"W28313" : {
+		"msg" : "Shift value of RINT was not recorded",
+		"cause" : "The search shift value can not record because of robot stop fault.",
+		"remedy" : "Execute SEA command again."
+	},
+	"W28314" : {
+		"msg" : "TRIGGOUT(X/Y/Z):Position triggering fail(Step No=%s)",
+		"cause" : "The specified TRIGGOUT(X,Y,Z) position can't detect.",
+		"remedy" : "Confirm the specified position and set again.Refer to detection position information of the step that occurred warning(W28314) in HISTORY file.Check coordinate system the recorded step."
+	},
+	"W28315" : {
+		"msg" : "TRIGGOUT(X/Y/Z):Can't postion triggering(Step No=%s)",
+		"cause" : "A number of TRIGGOUT(X,Y,Z) functions were executed.(Maximum 5EA)",
+		"remedy" : "Confirm the TRIGGOUT(X,Y,Z) functions of the step that occurred warning(W28315)."
+	},
+	"W28500" : {
+		"msg" : "IL Program number(#%s) mismatch between IL option and current program number",
+		"cause" : "Current program does not match with the program number in IL option of MOVE command.",
+		"remedy" : "1) If you copy and paste current job program, assign a nuw IL option number.2)If the previous program number is changed, reset and learn the IL data again."
+	},
+	"W28501" : {
+		"msg" : "IL Step number(#%s) mismatch between IL option and current step number",
+		"cause" : "Current step does not match with the step number in IL option of MOVE command.",
+		"remedy" : "1) If you use the program after deletion or insertion a step, reset and learn the IL data again.2) If you use the program after copy a step, assign a new IL option number."
+	},
+	"W28502" : {
+		"msg" : "ROBOT.INL does not exist.",
+		"cause" : "MOVE command including IL option is executed without ROBOT.INL.",
+		"remedy" : "1)If you do not enable the learning control function after initialization, enable the function.2)If you delete the ROBOT.INL file, enable after disable the function to make the file."
+	},
+	"W28503" : {
+		"msg" : "The learning control function is disabled(teaching)",
+		"cause" : "The MOVE command including IL option is taught while the learning control is disabled.",
+		"remedy" : "Enable the learning control function to use the IL option in MOVE command."
+	},
+	"W28504" : {
+		"msg" : "The learning control function is disabled(playback)",
+		"cause" : "The MOVE command including IL option is executed while the learning control is disabled.",
+		"remedy" : "Enable the learning control function to use the IL option in MOVE command."
+	},
+	"W28790" : {
+		"msg" : "Teachpendant S/W U/I stop detected - General(%s)",
+		"cause" : "Teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28791" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Appl.Key(%s)",
+		"cause" : "During application key handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28792" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Main Key(%s)",
+		"cause" : "During main dialog key handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28793" : {
+		"msg" : "Teachpendant S/W U/I stop detected - LEdit Key(%s)",
+		"cause" : "During JOB editor key handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28794" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Setup Key(%s)",
+		"cause" : "During setup screen key handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28795" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Cs.Key(%s)",
+		"cause" : "During dialog key handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28796" : {
+		"msg" : "Teachpendant S/W U/I stop detected - TBar Draw(%s)",
+		"cause" : "During TitleBar drawing, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28797" : {
+		"msg" : "Teachpendant S/W U/I stop detected - SBar Draw(%s)",
+		"cause" : "During StatusBar drawing, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28798" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Lang.Draw(%s)",
+		"cause" : "During JOB editor drawing, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28801" : {
+		"msg" : "Teachpendant S/W U/I stop detected - Timer(%s)",
+		"cause" : "During timer handling, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28802" : {
+		"msg" : "Teachpendant S/W U/I stop detected - FileMng(%s)",
+		"cause" : "During file manager operation, teachpendant is automatically rebooted, because teachpendant S/W's user interface stop is detected.",
+		"remedy" : "Misoperation of software or misdetection by long task. Contact the A/S department of our company."
+	},
+	"W28810" : {
+		"msg" : "Teachpendant S/W exception detected - General(%s)",
+		"cause" : "Teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28811" : {
+		"msg" : "Teachpendant S/W exception detected - Key(%s)",
+		"cause" : "During key handling, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28812" : {
+		"msg" : "Teachpendant S/W exception detected - Timer(%s)",
+		"cause" : "During timer handling, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28813" : {
+		"msg" : "Teachpendant S/W exception detected - BgComm(%s)",
+		"cause" : "During background communication, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28814" : {
+		"msg" : "Teachpendant S/W exception detected - SBarUpdate(%s)",
+		"cause" : "During updating StatusBar, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28815" : {
+		"msg" : "Teachpendant S/W exception detected - ProcSync(%s)",
+		"cause" : "During ProcSync service, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28816" : {
+		"msg" : "Teachpendant S/W exception detected - JogComm(%s)",
+		"cause" : "During jog communication, teachpendant software's fault is detected.",
+		"remedy" : "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+	},
+	"W28829" : {
+		"msg" : "%s WER log(s) exist in teachpendant. (clear: R19)",
+		"cause" : "Teachpendant fault log is stored in teachpendant flash memory, so periodically this warning occurs.",
+		"remedy" : "Insert USB memory and select a target folder in file manager.Using [F1:Entire Backup], you can back up the WER logs and clear them. Or, you can only clear WER logs with R19."
+	},
+	"W30001" : {
+		"msg" : "%s gun) moving tip exceeded the wear amount for replacement(ServoGun)",
+		"cause" : "It occurs when moving tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
+		"remedy" : "Inspect the wear amount of the moving tip, and replace the tip."
+	},
+	"W30002" : {
+		"msg" : "%s gun) fixed tip exceeded the wear amount for replacement(ServoGun)",
+		"cause" : "It occurs when fixed tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
+		"remedy" : "Inspect the wear amount of the fixed tip, and replace the tip."
+	},
+	"W30003" : {
+		"msg" : "%s gun) fixed tip exceeded the wear amount for replacement(Eqless Gun)",
+		"cause" : "It occurs when fixed tip wear detected with gun search is in excess of moving tip exchange wear amount set in Eq'less gun parameter.",
+		"remedy" : "Inspect the wear amount of the fixed tip of the Eqless gun, and replace the tip."
+	},
+	"W30004" : {
+		"msg" : "%s gun) total tips exceeded the wear amount for replacement(movement error)",
+		"cause" : "It occurs when total tip wear detected with gun search is in excess of tip exchange wear amount set in servo gun parameter.1)The servo gun does not work properly.2)The brake is not released.",
+		"remedy" : "1) Check the total tip consumption for replacement in the servo gun parameter.2) Replace the tip.3)If the servo gun can not move and the brake can be released by jog, check the servo gun and power system(motor, amp).4)Check related parts such as brakes and brake boards."
+	},
+	"W30005" : {
+		"msg" : "%s gun) moving tip exceeded the wear amount for replacement(movement error)",
+		"cause" : "It occurs when moving tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.1)The servo gun does not work properly.2)The brake is not released.",
+		"remedy" : "1) Check the moving tip consumption for replacement in the servo gun parameter.2) Replace the tip.3)If the servo gun can not move and the brake can be released by jog, check the servo gun and power system(motor, amp).4)Check related parts such as brakes and brake boards."
+	},
+	"W30006" : {
+		"msg" : "%s gun) fixed tip exceeded the wear amount for replacement(movement error)",
+		"cause" : "It occurs when fixed tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.1)The servo gun does not work properly.2)The brake is not released.",
+		"remedy" : "1) Check the fixed tip consumption for replacement in the servo gun parameter.2) Replace the tip.3)If the servo gun can not move and the brake can be released by jog, check the servo gun and power system(motor, amp).4)Check related parts such as brakes and brake boards."
+	},
+	"W30007" : {
+		"msg" : "Pressurization force detection disabled(SPOT)",
+		"cause" : "The pressurization force level of the servo gun parameter menu or the pressurization force error detection delay time is not set.",
+		"remedy" : "Check the pressurization force level or the pressurization force error detection delay time in the servo gun parameter menu."
+	},
+	"W30008" : {
+		"msg" : "Pressurization force detection disabled(manual pressure)",
+		"cause" : "The pressurization force level of the servo gun parameter menu or the pressurization force error detection delay time is not set.",
+		"remedy" : "Check the pressurization force level or the pressurization force error detection delay time in the servo gun parameter menu."
+	},
+	"W30009" : {
+		"msg" : "Pressurization force detection disabled(pressure tunning)",
+		"cause" : "The pressurization force level of the servo gun parameter menu or the pressurization force error detection delay time is not set.",
+		"remedy" : "Check the pressurization force level or the pressurization force error detection delay time in the servo gun parameter menu."
+	},
+	"W32041" : {
+		"msg" : "Welder abnormality signal input",
+		"cause" : "This error occured when welding error signal has inputted.",
+		"remedy" : "1) Refer the details of simultaneous welder error.2) To ignore the error signal, Set the item in 'Application Parameter->Arc Welding' dialog to 'diable'."
+	},
+	"W32042" : {
+		"msg" : "Shiedl gas for welding short signal input",
+		"cause" : "This error occured when welding shield gas is shortage.",
+		"remedy" : "1) Charge the welding shield gas.2) To ignore the error signal, Set the item in 'Application Parameter->Arc Welding' dialog to 'diable'."
+	},
+	"W32043" : {
+		"msg" : "Welding wire error signal input",
+		"cause" : "This error occured when welding wire is shortage.",
+		"remedy" : "1) Refill the welding wire.2) To ignore the error signal, Set the item in 'Application Parameter->Arc Welding' dialog to 'diable'."
+	},
+	"W32044" : {
+		"msg" : "Welder cooling system error signal input",
+		"cause" : "Coolant status error signal has been input.",
+		"remedy" : "1) Check the coolant system.2) If there is no error, check the input port in 'Application Parameter->Arc Welding' dialog."
+	},
+	"W32200" : {
+		"msg" : "Welder communication setting not matching with the controller setting",
+		"cause" : "Current controller's fieldbus setting is in status that cannot support the communication for Fronius welder.",
+		"remedy" : "1) Enter the dialog box of “System-Initialize-Usage setting-F1: Welder,” and then check whether the welder communication method is proper.2) If the welder communication method is proper, check whether the relevant DeviceNet master or Ethernet/IP is set."
+	},
+	"W32201" : {
+		"msg" : "WM) The welding machine power undervoltage occurred.",
+		"cause" : "The power was supplied voltage that is less than 80% for 3 seconds.",
+		"remedy" : "Check the welder power supply."
+	},
+	"W32202" : {
+		"msg" : "WM) The power supplied to the welding machine is too hight.",
+		"cause" : "The power was supplied voltage that is more than 120% for 3 seconds.",
+		"remedy" : "Check the welder power supply."
+	},
+	"W32203" : {
+		"msg" : "WM) Memory data error occurred.",
+		"cause" : "Welding condition data execeeded the normal range.",
+		"remedy" : "1) Check whether the welding condition data are within the normal range.2) If the problem is generated again, replace the welder."
+	},
+	"W32204" : {
+		"msg" : "WM) Internal memory battery error occurred.",
+		"cause" : "internal memory battery was less than 2.6V.",
+		"remedy" : "After replacing the welder, contact the welder company."
+	},
+	"W32205" : {
+		"msg" : "WM) Coolant error occurred.",
+		"cause" : "Coolant flow was not detected in water-cooling mode.",
+		"remedy" : "Check the state of the water cooling-type cooling system."
+	},
+	"W32206" : {
+		"msg" : "WM) Intermal temperature is abnormal.",
+		"cause" : "Welding machine temperature switch was open.",
+		"remedy" : "1) Check the air ventilation state of the welder.2) If overheating is generated internally continuously, replace the welder."
+	},
+	"W32207" : {
+		"msg" : "WM) Over-current occurred.",
+		"cause" : "Current that is more than 400[A] was detected for 0.25 seconds.",
+		"remedy" : "Adjust to ensure that the distance between the welding torch and the base material is not too close."
+	},
+	"W32208" : {
+		"msg" : "WM) Overload of feeding motor occurred.",
+		"cause" : "Motor speed that is less than 80% of command value was detected for 0.5 seconds.",
+		"remedy" : "1) Check the state of the welder feeder and wire feeding.2) If an error is generated continuously, replace the wire feeder."
+	},
+	"W32209" : {
+		"msg" : "WM) Current was cut and wiring error occurred.",
+		"cause" : "Feeder motor drive error occurred and output voltage Feedback was not detected.",
+		"remedy" : "Check the connection state of the welder and feeder."
+	},
+	"W32210" : {
+		"msg" : "WM) Feedback wiring error detected.",
+		"cause" : "Current was detected but feedback signal wasn't detected.",
+		"remedy" : "Check the connection state of the voltage feedback connection line between the welder and the base material."
+	},
+	"W32211" : {
+		"msg" : "WM) Inverter error detected.",
+		"cause" : "Drive module error was detected at the welder.",
+		"remedy" : "1) Check the IGBT module of the welder.2) If an error is generated continuously, replace the welder."
+	},
+	"W32221" : {
+		"msg" : "WM) The comm. buffer error occurred in welding start.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Welding start)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32222" : {
+		"msg" : "WM) The comm. buffer error occurred in retry process.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Retry)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32223" : {
+		"msg" : "WM) The comm. buffer error occurred in process changing retry condition to main one.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Retry->main)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32224" : {
+		"msg" : "WM) The comm. buffer error occurred in restart process.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Restart)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32225" : {
+		"msg" : "WM) The comm. buffer error occurred in process changing restart condition to main one.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Restart->main)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32226" : {
+		"msg" : "WM) The comm. buffer error occurred in ASR process.",
+		"cause" : "The transmit buffer wasn't empty within the specified time due to communication error to welding machine. (Auto stick recovery)",
+		"remedy" : "1) Turn off the controller and the welder, and then check the communication line connection state and the power connection. After that, reexecute.2) If the problem is generated again, replace the welder.3) If the problem is not solved, transfer the backup file to the A/S department of our company."
+	},
+	"W32227" : {
+		"msg" : "Panasonic welder error (BO2) tip short-circuit abnormality detected.",
+		"cause" : "Short-circuit detected between the wire and the workpiece in the Panasonic welder.",
+		"remedy" : "1) Check the distance between the welding torch and the base material.2) Check the connector and wiring at the wire feeder side.3) When the problem repeats itself, replace the torch, feeder, and welder."
+	},
+	"W32228" : {
+		"msg" : "Panasonic welder error (BO3) emergency stop 2 detected.",
+		"cause" : "Welder emergency stop input signal 2 detected.",
+		"remedy" : "1) Check whether the emergency stop input signal #2 in the welder terminal is connected properly.2) When the problem repeats itself, replace the welder."
+	},
+	"W32229" : {
+		"msg" : "Panasonic welder error (BO4) communication abnormality detected.",
+		"cause" : "Problem detected with the communication between the welder and the feeder unit.",
+		"remedy" : "1) Investigate the connection between the welder and the feeder unit.2) Check the fuses in the welding power section.3) Replace the relay part between the feeder unit and the controller."
+	},
+	"W32230" : {
+		"msg" : "Panasonic welder error (BO5) governor abnormality detected.",
+		"cause" : "Errors that occur only to welders that have special specifications are generated.",
+		"remedy" : "1) Replace the welder.3) When the problem repeats itself, contact our company."
+	},
+	"W32231" : {
+		"msg" : "Panasonic error (B06) encoder abnormality detected.",
+		"cause" : "Wire feed motor not rotating normally, or encoder signal disconnection expected.Required to try to rotate the motor. If it rotates even slightly, the problem may be damage to the encoder or disconnection of the wiring.",
+		"remedy" : "Replace the feeder unit."
+	},
+	"W32232" : {
+		"msg" : "Panasonic error (B07) motor abnormality detected.",
+		"cause" : "Detected that the wire feed motor rotates without a command for rotation.If the motor rotates actually, there may be a fault with PCB in the wire feed system.",
+		"remedy" : "Replace the feeder unit."
+	},
+	"W32233" : {
+		"msg" : "Panasonic error (B08) secondary overvoltage detected.",
+		"cause" : "Error generated with the secondary circuit causes voltage exceeding the maximum rate to be supplied.",
+		"remedy" : "Turn off the power switch, and clear causes of the error and overvoltage."
+	},
+	"W32234" : {
+		"msg" : "Panasonic error (B09) secondary overcurrent detected.",
+		"cause" : "Short-circuit generated with the secondary circuit causes current exceeding the maximum rate to be supplied.",
+		"remedy" : "Turn off the power switch, and clear causes of short-circuiting and overcurrent."
+	},
+	"W32235" : {
+		"msg" : "Panasonic error (B010) temperature increase abnormality detected.",
+		"cause" : "Welder internal temperature increased higher than the allowable value.",
+		"remedy" : "1) Turn off the power switch until the internal temperature decreases.2) Clear the causes of the increase of internal temperature (exceeding the usage rate, or impurities in the air vent system at the side and front sections)."
+	},
+	"W32236" : {
+		"msg" : "Panasonic error (B011) primary overvoltage detected.",
+		"cause" : "Input voltage higher than the allowable range.",
+		"remedy" : "Turn off the power switch, and make sure that the input voltage stays within +10% of the rated voltage."
+	},
+	"W32237" : {
+		"msg" : "Panasonic error (B012) primary undervoltage detected.",
+		"cause" : "Input voltage lower than the allowable range.",
+		"remedy" : "Turn off the power switch, and make sure that the input voltage stays within -10% of the rated voltage."
+	},
+	"W32238" : {
+		"msg" : "Panasonic error (B013) torch switch abnormality detected.",
+		"cause" : "Welding started within 3 seconds after the power switch input.For safety, welding can be carried out after 3 seconds.",
+		"remedy" : "Turn off the power switch, and retry."
+	},
+	"W32239" : {
+		"msg" : "Panasonic error (B014) CT offset abnormality detected.",
+		"cause" : "When the power switch input occurs, output current or output voltage is detected.Possibly the case in which there is a fault with the product, or external current or voltage is supplied to the secondary side of the welder.",
+		"remedy" : "1) Check whether power is supplied to the secondary side of the welder.1) Replace the welder."
+	},
+	"W32240" : {
+		"msg" : "Panasonic error (B015) VT offset abnormality detected.",
+		"cause" : "When the power switch input occurs, output current or output voltage is detected.Possibly the case in which there is a fault with the product, or external current or voltage is supplied to the secondary side of the welder.",
+		"remedy" : "1) Check whether power is supplied to the secondary side of the welder.1) Replace the welder."
+	},
+	"W32241" : {
+		"msg" : "Panasonic error (B016) cooling circuit abnormality detected.",
+		"cause" : "Abnormality detected with the welder cooling circuit.",
+		"remedy" : "Replace the welder."
+	},
+	"W32242" : {
+		"msg" : "Panasonic error (B017) gas decompression abnormality detected.",
+		"cause" : "Gas decompression abnormality detected with the welder.",
+		"remedy" : "1) Check the state of connection of the welding gas and the amount of the rest.2) Replace the welder."
+	},
+	"W32243" : {
+		"msg" : "Panasonic error (B018) emergency stop abnormality detected.",
+		"cause" : "Signal, connected to the emergency stop section of the jig terminal, being inputted.",
+		"remedy" : "Turn off the power switch, and check the causes of the emergency stop signal at the jig terminal."
+	},
+	"W32244" : {
+		"msg" : "Panasonic error (B019) external input 1 abnormality detected.",
+		"cause" : "Signal, connected to EXT1 inside the welder, being inputted. (negative logic)",
+		"remedy" : "Check the connection of the collision sensor or the terminal at the STOP01 terminal inside the welder."
+	},
+	"W32245" : {
+		"msg" : "Panasonic error (B020) external input 2 abnormality detected.",
+		"cause" : "Signal, connected to EXT2 inside the welder, being inputted. (negative logic)",
+		"remedy" : "Check the connection of the terminal at the STOP02 terminal inside the welder."
+	},
+	"W32246" : {
+		"msg" : "Panasonic error (B021) memory abnormality detected.",
+		"cause" : "Abnormality detected with the memory inside the welder.",
+		"remedy" : "1) Turn off the welder, and turn it on again.2) Replace the welder."
+	},
+	"W32247" : {
+		"msg" : "Panasonic error (B022) CPU abnormality detected.",
+		"cause" : "Abnormality detected with the CPU inside the welder.",
+		"remedy" : "1) Turn off the welder, and turn it on again.2) Replace the welder."
+	},
+	"W32248" : {
+		"msg" : "Panasonic error (B023) arc start abnormality detected.",
+		"cause" : "After the welding startup signal is inputted, arc does not start within 4 seconds.",
+		"remedy" : "Check whether the voltage detection line is disconnected or defective in connection."
+	},
+	"W32251" : {
+		"msg" : "Welder Synergic program number not available.",
+		"cause" : "The valid synergic program number did not selected in welding start condition of robot.",
+		"remedy" : "Input the number of the Synergic program to work with in the welding start condition dialog box.For the Synergic program list, refer to the welder Synergic table."
+	},
+	"W32252" : {
+		"msg" : "WM) Over-temperature in secondary circuit of the machine",
+		"cause" : "Fronius welding machine has detected over-temperature in secondary circuit.",
+		"remedy" : "Stop the work, and put the welder in wait mode to lower the temperature."
+	},
+	"W32253" : {
+		"msg" : "WM) Over-temperature in primary circuit of the machine",
+		"cause" : "Fronius welding machine has detected over-temperature in primary circuit.",
+		"remedy" : "Stop the work and put the welder in wait mode to lower the temperature."
+	},
+	"W32254" : {
+		"msg" : "WM) Temperature sensor fault occurred.",
+		"cause" : "Fronius welding machine has detected temperature sensor fault. (short circuit or open circuit)",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32255" : {
+		"msg" : "WM) DSP error occurred.",
+		"cause" : "Fronius welding machine has detected DSP error.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32256" : {
+		"msg" : "WM) HOST error occurred.",
+		"cause" : "Fronius welding machine has detected HOST  error.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32257" : {
+		"msg" : "WM) Fault in wirefeeding system (XX and Y ->error list SR40)",
+		"cause" : "Fronius welding machine has detected wire feeding system error.",
+		"remedy" : "Check the wire feeder system, cable, buffer, and the servo torch of the Fronius welder."
+	},
+	"W32258" : {
+		"msg" : "WM) Over-temperature in the control circuit",
+		"cause" : "Fronius welding machine has detected over temperature in the control unit.",
+		"remedy" : "Stop the work, and put the welder in wait mode to lower the temperature."
+	},
+	"W32259" : {
+		"msg" : "WM) Robot not ready",
+		"cause" : "The robot controller didn't send the 'Robot ready' singal.",
+		"remedy" : "1) Check whether the “Robot Ready” signal of the welder setting in the robot controller is set correctly according to the communication map.2) Check whether the signal set in the controller monitoring setting is outputted.3) Check whether there is a problem with the welder communication module."
+	},
+	"W32260" : {
+		"msg" : "WM) Flow watchdog has detected.",
+		"cause" : "Coolant flow of the welding machine watchdog occurred.",
+		"remedy" : "Check the cooling unit."
+	},
+	"W32261" : {
+		"msg" : "WM) The licence key is faulty.",
+		"cause" : "The licence key is faulty for the welding machine licence function",
+		"remedy" : "Check whether the license key inputted in the welder is enabled."
+	},
+	"W32262" : {
+		"msg" : "WM) Phase failure occurred.",
+		"cause" : "Phase state of power supplied to the welding machine was not normal.",
+		"remedy" : "1) Check the welder main power fuse.2) Check the lead and the plug of the main power line."
+	},
+	"W32263" : {
+		"msg" : "WM) Intermediate circuit-balance error",
+		"cause" : "Welding machine has detected intermediate circuit-balance error.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32264" : {
+		"msg" : "WM) Mains undervoltage has detected.",
+		"cause" : "Mains voltage that supplied to the welding machine has fallen below lower limit of tolerance range (+/- 15%)",
+		"remedy" : "Check the voltage of the main power supplied to the welder."
+	},
+	"W32265" : {
+		"msg" : "WM) Mains overvoltage has detected.",
+		"cause" : "Mains voltage that supplied to the welding machine has exceeded upper limit of tolerance range (+/- 15%)",
+		"remedy" : "Check the voltage of the main power supplied to the welder."
+	},
+	"W32266" : {
+		"msg" : "WM) Ground (earth) fault occurred.",
+		"cause" : "Ground (earth) of welding machine fault has detected.",
+		"remedy" : "Check the ground connection of the welder, and remove any abnormal section."
+	},
+	"W32267" : {
+		"msg" : "WM) Wire stick control has detected.",
+		"cause" : "Welding wire was shorted or stick was occurred.",
+		"remedy" : "1) Remove a short-circuited section of the wire.2) If the wire is stuck, take out the stuck section."
+	},
+	"W32268" : {
+		"msg" : "WM) “Ignition time-out” fault occurred.",
+		"cause" : "No ignition occurred within set wire length feeding",
+		"remedy" : "1) Inspect the feeding state of the wire feeder.2) Check the connection lines for executing welding."
+	},
+	"W32269" : {
+		"msg" : "WM) “Wire end” fault occurred.",
+		"cause" : "No more wire available (only if wire sensor available).",
+		"remedy" : "Supply a new wire spool."
+	},
+	"W32270" : {
+		"msg" : "WM) “Gas flow” fault occurred.",
+		"cause" : "No gas flowed out within one second after gas pre-flow time began.",
+		"remedy" : "Check the state of gas supply."
+	},
+	"W32271" : {
+		"msg" : "WM) “Arc-break monitor” fault occurred.",
+		"cause" : "After the arc breaks, no new arc appears within the timespan set for the “Arc” parameter (Setup menu 2nd)",
+		"remedy" : "Start the welding again."
+	},
+	"W32272" : {
+		"msg" : "WM) Secondary overvoltage: safety cut-out has tripped.",
+		"cause" : "Secondary overvoltage occurred in welding machine: safety cut-out has tripped.",
+		"remedy" : "1) Check the welder’s secondary circuit including TPCEL40 PCB.2) Contact the After-sales Service for the Fronius welder."
+	},
+	"W32273" : {
+		"msg" : "WM) DPS500 only: SITRE1A has activated the safety cut-out.",
+		"cause" : "SITRE1A in welding machine activated the safety cut-out.",
+		"remedy" : "1) Close the plasma reactor door.2) Cut off the start signal for short to clear the welder error 60."
+	},
+	"W32274" : {
+		"msg" : "WM) DPS500 only: Digital signal processor (DSP) detected several unwanted arcs in quick succession.",
+		"cause" : "Digital signal processor (DSP) in welding machine detected several unwanted arcs in quick succession.",
+		"remedy" : "Cut off the start signal for short to clear the welder error 61."
+	},
+	"W32275" : {
+		"msg" : "WM) TP08 overtemperature Wait until the end of the cooling phase",
+		"cause" : "TP08 in welding machine overtemperature Wait until the end of the cooling phase.",
+		"remedy" : "Wait until the cooling execution is finished."
+	},
+	"W32276" : {
+		"msg" : "WM) Interface fault occurred.",
+		"cause" : "Interbus interface error occurred in welding machine.",
+		"remedy" : "For more details, check the user manual for Interbus 2MB user manual."
+	},
+	"W32277" : {
+		"msg" : "WM) Faulty cooling unit temperature sensor",
+		"cause" : "Faulty cooling unit temperature sensor occurred in welding machine.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32278" : {
+		"msg" : "WM) Overtemperature in cooling system",
+		"cause" : "Overtemperature in cooling system occurred in welding machine.",
+		"remedy" : "Wait until the cooling execution is finished."
+	},
+	"W32279" : {
+		"msg" : "WM) JobMaster overtemperature",
+		"cause" : "JobMaster of welding machine overtemperature occurred.",
+		"remedy" : "Wait until the welder is cooled down."
+	},
+	"W32280" : {
+		"msg" : "WM) Jobmaster temperature sensor faulty",
+		"cause" : "Jobmaster temperature sensor faulty occurred in welding machine.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32281" : {
+		"msg" : "WM) Secondary safety cut-out",
+		"cause" : "Secondary safety cut-out was executed in welding machine.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32282" : {
+		"msg" : "WM) Illegal mode change during welding",
+		"cause" : "Illegal mode change occurred during welding.",
+		"remedy" : "Start the welding again."
+	},
+	"W32283" : {
+		"msg" : "WM) Gas error occurred.",
+		"cause" : "Welding machine detected gas error.",
+		"remedy" : "1) Check the gas sensor.2) Check whether gas remains.3) Check the gas sensor calibration.4) Check whether there is a problem with the solenoid valve.5) Check whether there is abnormality with gas supply."
+	},
+	"W32284" : {
+		"msg" : "WM) Limit error occurred.",
+		"cause" : "Welding machine detected limit error.",
+		"remedy" : "1) Check whether the welder current limit has been exceeded.2) Check whether the welder current limit has not been exceeded.3) Check whether the welder voltage limit has been exceeded.4) Check whether the welder voltage limit has not been exceeded."
+	},
+	"W32285" : {
+		"msg" : "WM) Configuration change (total current or Twin)",
+		"cause" : "Configuration was changed in welding machine. (total current or Twin)",
+		"remedy" : "Check the LHSB connection of the welder."
+	},
+	"W32286" : {
+		"msg" : "WM) Host computer not found.",
+		"cause" : "Host computer not found in welding machine.",
+		"remedy" : "1) Check the state of the connection with the welder.2) Check the welder software version."
+	},
+	"W32287" : {
+		"msg" : "WM) MMArc error (BIAS200 only)",
+		"cause" : "MMArc error occurred in BIA200 welding machine.",
+		"remedy" : "Contact the After-sales Service for the Fronius welder."
+	},
+	"W32288" : {
+		"msg" : "WM) Motor overcurrent",
+		"cause" : "Over current of wire feeding motor was detected in welding machine.",
+		"remedy" : "1) Check whether the welder current limit has been exceeded.2) Check whether the welder current limit has not been exceeded.3) Check whether the welder voltage limit has been exceeded.4) Check whether the welder voltage limit has not been exceeded.5) Check whether the welder vD limit has been exceeded.6) Check whether the welder vD limit has not been exceeded."
+	},
+	"W32289" : {
+		"msg" : "WM) emergency-stop",
+		"cause" : "Emergency stope was executed by welding machine.",
+		"remedy" : "1) Check whether the welder current limit has been exceeded.2) Check whether the welder current limit has not been exceeded.3) Check whether the welder voltage limit has been exceeded.4) Check whether the welder voltage limit has not been exceeded.5) Check whether the welder vD limit has been exceeded.6) Check whether the welder vD limit has not been exceeded."
+	},
+	"W32290" : {
+		"msg" : "WM) Power source switched off or no mains voltage.",
+		"cause" : "The main power that is supplied to power source switched off or no mains voltage is too low.",
+		"remedy" : "1) Turn on the welder power.2) Check the voltage of the main power supplied to the welder."
+	},
+	"W32291" : {
+		"msg" : "WM) Welder error %s number transmitted to controller",
+		"cause" : "Undefined weld error occurred in welding machine.",
+		"remedy" : "1) Check the actually inputted welder error number through the welding monitoring screen.2) Check the relevant error number in the welder manual or with the welder company."
+	},
+	"W32401" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "The current cannot be output because of wrong port number in general interface for arc welding machine(GIFAW).1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32402" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32403" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32404" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32405" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32406" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32407" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32408" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32409" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "The output of current is less than the assigned minimum value.(Minimum value output)1) The output of current is less than the assigned minimum value.2) Abnomal current is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output current(power, feeding speed) in arc welding condition."
+	},
+	"W32410" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "The output of current is larger than the assigned maximum value.(Maximum value output)1) The output of current is larger than the assigned maximum value.2) Abnomal current is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output current(power, feeding speed) in arc welding condition."
+	},
+	"W32411" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "The voltage cannot be output because of wrong port number in general interface for arc welding machine(GIFAW)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32412" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32413" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32414" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32415" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32416" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32417" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32418" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32419" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "The output of voltage is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output voltage(arc length correction, voltage correction) in arc welding condition."
+	},
+	"W32420" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "The output of voltage is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output voltage(arc length correction, voltage correction) in arc welding condition."
+	},
+	"W32421" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The dynamic correction cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32422" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32423" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32424" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32425" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32426" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32427" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32428" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal dynamic correction port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32429" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of dynamic correction is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of dynamic correction in arc welding condition."
+	},
+	"W32430" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of dynamic correction is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output of dynamic correction in arc welding condition."
+	},
+	"W32431" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The burnback cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32432" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32433" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32434" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32435" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32436" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32437" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32438" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal burnback port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32439" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output value is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of burnback in arc welding condition."
+	},
+	"W32440" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of value is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output of burnback in arc welding condition."
+	},
+	"W32441" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The inductor effect cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32442" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32443" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32444" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32445" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32446" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32447" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32448" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal inductor effect port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32449" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output value is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of inductor effect in arc welding condition."
+	},
+	"W32450" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of value is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) ArcCheck the output of inductor effect in arc welding condition."
+	},
+	"W32451" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The user defined(1) cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32452" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32453" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32454" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32455" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32456" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32457" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32458" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(1) port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32459" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output value is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of user defined(1) effect in arc welding condition."
+	},
+	"W32460" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of value is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output of user defined(1) effect in arc welding condition."
+	},
+	"W32461" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The user defined(2) cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32462" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32463" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32464" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32465" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32466" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32467" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32468" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(2) port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32469" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output value is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of user defined(2) effect in arc welding condition."
+	},
+	"W32470" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of value is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output of user defined(2) effect in arc welding condition."
+	},
+	"W32471" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The user defined(3) cannot be output because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32472" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32473" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32474" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32475" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32476" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32477" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32478" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined(3) port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32479" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output value is less than the assigned minimum value.(Minimum value output)1) The output value is less than the assigned minimum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the minimum value of the port referring the specification of welding machine.2) Check the output of user defined(3) effect in arc welding condition."
+	},
+	"W32480" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The output of value is larger than the assigned maximum value.(Maximum value output)1) The output value is larger than the assigned maximum value.2) Abnomal value is output.",
+		"remedy" : "1) Check the maximum value of the port referring the specification of welding machine.2) Check the output of user defined(3) effect in arc welding condition."
+	},
+	"W32481" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "The current cannot be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32482" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32483" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32484" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32485" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32486" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32487" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32488" : {
+		"msg" : "Abnomal current port setting for GIFAW.",
+		"cause" : "Abnomal current input port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32491" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "The voltage cannot be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32492" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32493" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32494" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32495" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32496" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32497" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32498" : {
+		"msg" : "Abnomal voltage port setting for GIFAW.",
+		"cause" : "Abnomal voltage input port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32501" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The feed motor current cannot be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32502" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32503" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32504" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32505" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32506" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32507" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32508" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal current of feed motor input port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32511" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The feeding speed cannot be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32512" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32513" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32514" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32515" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32516" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32517" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32518" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal feeding speed input port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32521" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The user defined(1) be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32522" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32523" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32524" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32525" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32526" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32527" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32528" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(1) port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32531" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "The user defined(2) be input because of wrong port number in general interface for arc welding machine.(The number of port is abnormal)1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32532" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(Max range is minus)1) The max range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32533" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(Min range is minus)1) The min range of the port is minus.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32534" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(Min range is larger than max range.)1) The minimum range of the port is larger than maximum range.2) If you assigned it successfully, the 'ROBOT.AGP' may be corrupted.",
+		"remedy" : "1) Correct the setting of the port referring the specification of welding machine.2) Reset the 'ROBOT.AGP' after inspecting the contents of the file."
+	},
+	"W32535" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(The min and max range are zero.)The mininmu and maximum ranges are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32536" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(The min and max range are equal.)The mininmu and maximum ranges are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32537" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(The min and max value are zero.)The mininmu and maximum values are assigned to zero.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W32538" : {
+		"msg" : "Abnomal port setting for GIFAW.",
+		"cause" : "Abnomal user defined  input(2) port setting for general interface for arc welding machine.(The min and max value are equal.)The mininmu and maximum values are equal.",
+		"remedy" : "Correct the setting of the port referring the specification of welding machine."
+	},
+	"W34100" : {
+		"msg" : "Supplying grease automatically is not possible because #%s grease feeder is empty.",
+		"cause" : "The grease pouch is empty.",
+		"remedy" : "1)Check the part where warning takes place from the message.2)Fill up the pouch with grease."
+	},
+	"W34101" : {
+		"msg" : "Supplying grease automatically is not possible because #%s grease feeder is overloaded.",
+		"cause" : "The grease feeder is clogged up.",
+		"remedy" : "1)Check the part where warning takes place from the message.2)After pressing lock button for unlocking, Press purge button until 'P' appear on the LCD screen."
+	},
+	"W34102" : {
+		"msg" : "The status of grese feeder is not properly determined!",
+		"cause" : "It occurs when the determination of grease feeder's status is incorrect",
+		"remedy" : "1)Check the warning message took place consistently.2)Contact our company for inquiries."
+	},
+	"W34103" : {
+		"msg" : "Supplying grease automatically need a charge because #%s grease feeder is Low.",
+		"cause" : "The grease pouch is empty.",
+		"remedy" : "1)Check the part where warning takes place from the message.2)Fill up the pouch with grease."
+	},
+	"W36000" : {
+		"msg" : "GUN LED is not actived([GUN] key input signal)",
+		"cause" : "The input signal for GUN LED control using painting App. is not actived.",
+		"remedy" : "Check the external input signal for GUN LED control"
+	},
+	"W36001" : {
+		"msg" : "The number of Atom/Spray output signal is not assigned.",
+		"cause" : "The number of Atom/Spray output signal using painting App. is not assigned.",
+		"remedy" : "Check the assigned output signal number in System-Application parameter-Painting-Output signal assignment."
+	},
+	"W36002" : {
+		"msg" : "GUN LED is not actived([GUN] key on T/P)",
+		"cause" : "The GUN LED using painting App. is not actived.",
+		"remedy" : "Press [SHIFT][GUN] key simultaneously in auto mode."
+	}
+}
