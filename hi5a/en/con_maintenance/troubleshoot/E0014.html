@@ -1,0 +1,336 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0014 Instant contact of safety switch (EM, OTR, TS etc.)</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.4.1. Outline</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><A name="_Ref215579260"></A><A name="_Toc215579032"><SPAN lang="EN-US">For some reason the motor’s power supply to AMP has been shut down. Main examines the safety signals in order find the reason of the motor’s power shut down. If no reason is found, this message will be displayed.</SPAN></A></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">Following diagram shows compositions of various safety signals that can shut down the motor’s power. Main periodically examines the ON/OFF status of those safety signals. If a momentary contact malfunction occurs between the periods, main will not be able to detect it and displays this message instead.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="410" src="images/image41.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998229"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.14 Concept Diagram of Safety Circuit for Motor’s Power ON/OFF</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.4.2. </SPAN><SPAN lang="EN-AU">Causes and checking methods</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="98%" style="width:98.0%;border-collapse:collapse;border:none">
+			<TR style="height:102.5pt">
+				<TD width="584" style="width:437.75pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:102.5pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check the status of DC 24V (P1-M1) power and cables </SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check if there is a problem with CPUERR, EXOUT signals </SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check the safety switch and signal wirings</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check the System Board, Electrical Module</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the status of DC 24V (P1-M1) power and cables.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the System Board is being supplied with DC 24V control power (P1, M1) properly. This error can be caused if there is a problem with the power as it will affect the safety sequence of the System Board. Power is to be supplied by SMPS’s CN6 Connector-System Board CNP2 Connector. Please check if the power level is varying or is there any problem with the cable.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="555" height="363" src="images/image42.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998230"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.15 Method of Connecting DC24V Power and Measuring Voltage of the System Board (BD530)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if there is a problem with CPUERR, EXOUT signals</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Main board generates CPUERR or EXOUT signals in a case when systemic error has occurred (e.g. power shut down, Servo error). This signal will be transferred to the System Board and block the motor on command in terms of hardware. Motor’s power will be immediately shut down for a safety reason. However, these signals may be generated abnormally, and it will shut down the motor’s power.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">System Board’s 7-segment index may give you an indication of the situation.7-segment displays “H” when CPUERR is being transmitted to the System Board. Also the CPUERR, EXOUT LED which located at the center of the System Board indicate the error situation (figure 6.21) These LED lights will be on if it is a normal status, and the lights will be off if it is not.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">However if the signal appears time to time for a very short moments, 7-segment and LED won’t be able to indicate it. In such case, error occurrence must be observed while ignoring the two signals by using DIP switch SW1. Method to ignore the signal is to, as shown in the figure 6.21, turn on the No 1(to ignore CPUERR) and the No 2 (to ignore EXOUT) of the DIP switch SW1. At this point all LED lights will be on.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error no longer persists after the system restart, main board generated these signals or CANS1 Connector/Cable malfunction is suspected.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc258998345"><SPAN lang="EN-US"><IMG width="450" height="232" src="images/image43.jpg"></SPAN></A></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998231"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.16 Location 7-SEG, LED and DIP Switch (CPUERR error related) on a System Board</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a Main Board generating this signal without any other indication of errors, please check the PLD version of the Main Board. Over V0.7 is normal. If main board’s PLD version is normal, please examine the CANS1 connector and cables.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	
+	
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	  <P style="margin-left:40pt">
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+            <tr>
+                <td ><IMG src="images/prohibit.png"/></td>
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+                    Cautions: Please use only No 1 (to ignore CPUERR) and No2 (to ignore EXOUT) of the DIP switch SW1 for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+                </td>
+            </tr>
+        </table>
+    </P>
+    <P></P>
+		
+	
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the safety switch and signal wirings.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Safety switch input may goes OFF for a short moment which cannot be detected by the Main Board for following reasons.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Switch malfunction</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Wiring malfunction: Exposure or damage on a cable</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Wirings installation problem: </SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Separated distance between power lines, cables that consume a large amount of electric power must be greater than 10CM. Alternatively electrical shielding by using a metal marital plates are required. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN style="position:absolute;z-index:251663360;left:0px;margin-left:75px;margin-top:2px;width:518px;height:72px">
+
+		</SPAN></P>
+		
+		
+	
+	<P style="margin-left:40pt">
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+            <tr>
+                <td ><IMG src="images/prohibit.png"/></td>
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+                </td>
+            </tr>
+        </table>
+    </P>
+    
+    
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">Available safety switches are as below, and they can be connected through a System Board. Please check the above for the safety switches that are being used.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="border-collapse:collapse;border:none">
+			<THEAD>
+				<TR style="height:1.0cm">
+					<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Types</SPAN></B></P>
+					</TD>
+					<TD width="255" style="width:191.35pt;border:solid windowtext 1.0pt;border-left:none;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Connecting method</SPAN></B></P>
+					</TD>
+					<TD width="189" style="width:141.7pt;border:solid windowtext 1.0pt;border-left:none;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Disabling method</SPAN></B></P>
+					</TD>
+				</TR>
+			</THEAD>
+			<TR>
+				<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Emergency stop switch(External) &#8211;point of contact type</SPAN></B></P>
+				</TD>
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="228" height="118" src="images/image46.jpg"></SPAN></P>
+				</TD>
+				<TD width="189" style="width:141.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="113" height="122" src="images/image47.jpg"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Emergency stop switch(External)-semiconductor type</SPAN></B></P>
+				</TD>
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="228" height="117" src="images/image48.jpg"></SPAN></P>
+				</TD>
+				<TD width="189" style="width:141.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="148" height="103" src="images/image49.jpg"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety guard (Auto)-point of contact type</SPAN></B></P>
+				</TD>
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="232" height="106" src="images/image50.jpg"></SPAN></P>
+				</TD>
+				<TD width="189" style="width:141.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="113" height="113" src="images/image51.jpg"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety guard (Auto)-semiconductor type</SPAN></B></P>
+				</TD>
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="227" height="108" src="images/image52.jpg"></SPAN></P>
+				</TD>
+				<TD width="189" style="width:141.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="156" height="94" src="images/image53.jpg"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="161" style="width:120.55pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety guard (General)</SPAN></B></P>
+				</TD>
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="228" height="113" src="images/image54.jpg"></SPAN></P>
+				</TD>
+				<TD width="189" style="width:141.7pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="142" height="142" src="images/image55.jpg"></SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN style="position:absolute;z-index:251664384;left:0px;margin-left:72px;margin-top:0px;width:518px;height:79px">
+
+		</SPAN></P>
+		
+	<P style="margin-left:40pt">
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+            <tr>
+                <td ><IMG src="images/prohibit.png"/></td>
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+                </td>
+            </tr>
+        </table>
+    </P>
+    
+    
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">Other switches that are related to a safety and system operation which may effect to this error are as below.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="98%" style="border-collapse:collapse;border:none">
+			<THEAD>
+				<TR style="height:1.0cm">
+					<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Types</SPAN></B></P>
+					</TD>
+					<TD width="274" style="width:205.55pt;border:solid windowtext 1.0pt;border-left:none;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Connecting method</SPAN></B></P>
+					</TD>
+					<TD width="198" style="width:148.75pt;border:solid windowtext 1.0pt;border-left:none;background:#DDD9C3;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+						<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Disabling method</SPAN></B></P>
+					</TD>
+				</TR>
+			</THEAD>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Enabling switch (TP)</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><A name="OLE_LINK23"></A><A name="OLE_LINK22"><SPAN lang="EN-US"><IMG width="218" height="117" src="images/image57.png"></SPAN></A></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="99" height="114" src="images/image58.png"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Remote mode input</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><A name="OLE_LINK25"></A><A name="OLE_LINK24"><SPAN lang="EN-US"><IMG width="218" height="107" src="images/image59.png"></SPAN></A></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="99" height="99" src="images/image60.png"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Limit switch</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><A name="OLE_LINK27"></A><A name="OLE_LINK26"><SPAN lang="EN-US"><IMG width="218" height="107" src="images/image61.png"></SPAN></A></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="151" height="106" src="images/image62.png"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Arm interference switch</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="218" height="107" src="images/image63.png"></SPAN></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">No1,No2 of SW5 is ON</SPAN></B></P>
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="99" height="67" src="images/image64.jpg"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Emergency stop switch (TP)</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">System Board &#8211; Wiring between Teach Pendants</SPAN></B></P>
+					<P class="unnamed" align="center" style="text-align:center"><A name="OLE_LINK29"></A><A name="OLE_LINK28"><SPAN lang="EN-US"><IMG width="218" height="117" src="images/image65.png"></SPAN></A></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="112" height="115" src="images/image66.png"></SPAN></P>
+				</TD>
+			</TR>
+			<TR>
+				<TD width="132" style="width:99.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Emergency stop switch (OP)</SPAN></B></P>
+				</TD>
+				<TD width="274" style="width:205.55pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><A name="OLE_LINK31"></A><A name="OLE_LINK30"><SPAN lang="EN-US"><IMG width="218" height="117" src="images/image67.png"></SPAN></A></P>
+				</TD>
+				<TD width="198" style="width:148.75pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="115" height="116" src="images/image68.png"></SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998346"></A><A name="_Toc215982732"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the System Board, Electrical Module.</SPAN></B></A></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (wires, connector etc.) malfunction</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the cabling between the Electrical Module (PSM or PDM) that an electrical connector is installed and the System Board (BD530) that collects monitoring signals.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The cable name is CNMS and it enters to the Electrical Module through the top rear of the System Board (figure 6.22). Please check the connection status of this cable’s connector.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="339" height="229" src="images/image69.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="342" height="210" src="images/image70.jpg" alt="C-26"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998232"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.17 CNMC Cable on the Electrical Module</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998347"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></A></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Input signal processing unit malfunction from the inside of System Board can be a cause of this error. Please replace the System Board and examine it. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Module malfunction</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Internal electrical module malfunction can be categorized as a electrical board (BD5C2 or BD5C0), Electrical connector (MC1, MC2), and wirings between the electrical board and the electrical connector (figure 6.23) However it is difficult to examine the inside of Electrical Module in a field where a Robot has already been installed, so alternatively please replace the Electrical Module.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="533" height="280" src="images/image71.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="629" height="234" src="images/image72.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998233"></A><A name="_Toc442373789"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.18 Inner Structure of Electrical Module</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="499" height="312" src="images/image73.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S controller electrical board (BD5C2)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="563" height="274" src="images/image74.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N controller electrical board (BD5C0)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998234"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.19 Electrical board</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

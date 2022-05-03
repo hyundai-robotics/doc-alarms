@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0134(○&#36724;)超出最大速度</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+<P style="margin-left:57.65pt;text-indent:-42.65pt"><A name="_Toc410654401"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;font-weight:normal">1.1.26.1. </SPAN><SPAN style="font-family:SimSun">&#27010;要</SPAN></A></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">机器人&#36724;速度超出最高速度。&#36825;&#23646;于机器人&#27809;有正常受控制的&#29366;&#24577;，&#20174;而被判&#20026;&#38169;&#35823;而停止机器人。</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">&#20174;主板向伺服板&#21457;送指令&#26102;，&#21457;送限制指令以免超&#36807;最高速度。因机器人不能&#36319;&#38543;此指令而在速度上&#21457;生</SPAN><SPAN lang="EN-US" style="font-family:SimSun">overshoot</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#26102;，&#21017;&#20250;&#21457;生超出最高速&#38169;&#35823;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+<P style="margin-left:57.65pt;text-indent:-42.65pt"><A name="_Toc410654401"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;font-weight:normal">1.1.26.2. </SPAN><SPAN style="font-family:SimSun">原因及&#26816;&#26597;方法</SPAN></A></P>
+<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:92.6pt">
+				<TD width="583" style="width:437.3pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:92.6pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.3pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:SimSun">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#30830;&#35748;机器人姿&#21183;是否接近于特&#24322;点附近。</SPAN></B></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.3pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:SimSun">2.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;</SPAN></B><B><SPAN lang="ZH-CN" style="font-family:SimSun">附加&#36724;&#35831;&#30830;&#35748;加&#20943;速&#21442;&#25968;&#35774;定&#20540;和工作中的&#36127;荷率。</SPAN></B></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.3pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">3.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><B><SPAN style="font-family:SimSun">&#35831;&#35843;整作&#19994;程序。</SPAN></B></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:SimSun">(1)</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#30830;&#35748;机器人姿&#21183;是否接近于特&#24322;点附近。</SPAN></B></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">在特&#24322;点附近的姿&#21183;中，若不是&#25191;行</SPAN><SPAN lang="EN-US" style="font-family:SimSun">PtP</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#25554;&#34917;而是&#25191;行</SPAN><SPAN lang="EN-US" style="font-family:SimSun">L</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#25554;&#34917;或</SPAN><SPAN lang="EN-US" style="font-family:SimSun">C</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#25554;&#34917;，可能&#20250;&#21457;生此&#38169;&#35823;。特&#24322;点在</SPAN><SPAN lang="EN-US" style="font-family:SimSun">B</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36724;接近</SPAN><SPAN lang="EN-US" style="font-family:SimSun">0deg</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">的情&#20917;和手腕部中心接近</SPAN><SPAN lang="EN-US" style="font-family:SimSun">S</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36724;旋&#36716;中心&#36724;&#26102;&#21457;生。若需要&#32463;&#36807;特&#24322;点附近，&#35831;把&#35813;步&#39588;&#21464;更&#20026;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">PtP</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#25554;&#34917;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="0" cellspacing="0" cellpadding="0" width="83%" style="width:83.38%;margin-left:4.55pt;border-collapse:collapse">
+			<TR>
+				<TD width="261" valign="top" style="width:195.75pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:SimSun"><IMG width="213" height="176" src="images/image231.jpg"></SPAN></P>
+					<P class="unnamed" align="center" style="text-align:center"><A name="_Toc410655041"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270; </SPAN></A><SPAN lang="EN-US" style="font-family:SimSun">5.66 B</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36724;特&#24322;点</SPAN></P>
+				</TD>
+				<TD width="255" valign="top" style="width:191.4pt;padding:0cm 5.4pt 0cm 5.4pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:SimSun"><IMG width="213" height="176" src="images/image232.jpg"></SPAN></P>
+					<P class="unnamed" align="center" style="text-align:center"><A name="_Toc410655042"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270; </SPAN></A><SPAN lang="EN-US" style="font-family:SimSun">5.67 S</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36724;特&#24322;点</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:SimSun">(2)</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">附加&#36724;&#35831;&#30830;&#35748;加&#20943;速&#21442;&#25968;&#35774;定&#20540;和&#21160;作中&#36127;荷率。</SPAN></B></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">附加&#36724;加&#20943;速&#21442;&#25968;的最高速度&#36807;高或加速&#26102;&#38388;&#36807;短而&#23548;致&#39532;&#36798;&#25197;矩不足。此&#26102;，&#24212;&#35266;察机器人工作中的&#36127;荷率&#24182;降低</SPAN><SPAN lang="EN-US" style="font-family:SimSun">I/Ip</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">最高速度或大幅&#35843;整加速&#26102;&#38388;。</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">系&#32479;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US" style="font-family:SimSun">3. </SPAN><SPAN style="font-family:SimSun">机器人&#21442;&#25968;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US" style="font-family:SimSun">6. </SPAN><SPAN style="font-family:SimSun">加&#20943;速&#21442;&#25968;</SPAN></P>
+	<P class="unnamed" style="text-indent:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">在此可以修改附加&#36724;的加&#20943;速&#21442;&#25968;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="290" height="237" src="images/image234.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:SimSun">(3)</SPAN><SPAN style="font-family:SimSun">&#35831;&#35843;整作&#19994;程序。 </SPAN></B></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#21464;更作&#19994;程序的相&#20851;步&#39588;或之前步&#39588;的步&#39588;&#26465;件。第一、&#21464;更&#20026;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">“Acc=0”;</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">第二、降低步&#39588;的速度</SPAN><SPAN lang="EN-US" style="font-family:SimSun">;</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">第三、在移&#21160;路&#24452;中添加一&#20010;步&#39588;，按照以上方法&#21464;更程序&#26465;件。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

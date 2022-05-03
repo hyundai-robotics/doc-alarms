@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0022 IO板通信&#24322;常</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+<P style="margin-left:57.65pt;text-indent:-42.65pt"><A name="_Toc410654401"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;font-weight:normal">1.1.9.1. </SPAN><SPAN style="font-family:SimSun">&#27010;要</SPAN></A></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">控制器的</SPAN><SPAN lang="EN-US" style="font-family:SimSun">IO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">板通&#36807;采用</SPAN><SPAN lang="EN-US" style="font-family:SimSun">RS232</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">通信&#19982;主板交&#25442;&#25968;据。</SPAN><SPAN lang="EN-US" style="font-family:SimSun">E0022</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">是主板&#26816;&#27979;到&#19982;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">IO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">板之&#38388;的通信存在&#24322;常&#26102;所&#26174;示的&#38169;&#35823;代&#30721;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="351" height="117" src="images/image103.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc410654993"></A><A name="_Toc390108563"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270; </SPAN></A><SPAN lang="EN-US" style="font-family:SimSun">5.18 </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">主板和</SPAN><SPAN lang="EN-US" style="font-family:SimSun">IO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">板的通信</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">IO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">板是一&#31181;主要用于管制控制器&#30005;源&#39034;序的&#36755;入</SPAN><SPAN lang="EN-US" style="font-family:SimSun">/</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36755;出的模&#22359;，&#21457;生一次&#38169;&#35823;，&#19982;此有&#20851;的所有功能都&#20250;被停止，主板&#23558;&#20250;中&#26029;通&#35759;。因此，&#20026;了正常恢&#22797;所有功能，&#39035;重新投入&#30005;源到控制器。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+<P style="margin-left:57.65pt;text-indent:-42.65pt"><A name="_Toc410654401"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;font-weight:normal">1.1.9.2. </SPAN><SPAN style="font-family:SimSun">原因及&#26816;&#26597;方法</SPAN></A></P>
+<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="463" height="172" src="images/image104.png" alt="텍스트 상자: (1)	一般&#26816;&#26597;
+n	&#35831;&#30830;&#35748; CNIO 通&#35759;&#30005;&#32518;的&#36830;接&#29366;&#24577;。
+n	&#35831;&#30830;&#35748;&#30005;源&#29366;&#24577;(&#30005;源&#30005;&#21387;或&#30005;&#32518;&#36830;接&#29366;&#24577;)。
+
+(2)	重新&#20174;新投入控制器&#30005;源后也&#32487;&#32493;&#21457;生&#38169;&#35823;&#26102;
+n	&#35831;更替&#25442;IO板。
+n	&#35831;更替&#25442;CNIO通&#35759;&#30005;&#32518;。
+n	&#35831;更替&#25442;主板。
+"></SPAN></P>
+	<P class="unknown252" style="margin-left:57.8pt;word-break:keep-all"></P>
+	<P class="unknown252" style="margin-left:57.8pt;word-break:keep-all"></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">一般&#26816;&#26597;</SPAN></B></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">若在系&#32479;正常&#36816;行的&#29366;&#24577;下&#21457;生此&#38169;&#35823;，&#35831;先&#26816;&#26597;以下&#39033;目。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<TABLE class="unnamed" border="0" cellspacing="0" cellpadding="0" style="background:#D9D9D9;border-collapse:collapse">
+		<TR style="height:63.45pt">
+			<TD width="80" style="width:60.2pt;padding:0cm 5.4pt 0cm 5.4pt;height:63.45pt">
+				<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun"><IMG width="66" height="55" src="images/image102.png" alt="10_주의"></SPAN></P>
+			</TD>
+			<TD width="539" style="width:404.1pt;padding:0cm 5.4pt 0cm 5.4pt;height:63.45pt">
+				<P class="unnamed"><SPAN style="position:absolute;z-index:251644928;left:0px;margin-left:1px;margin-top:2px;width:528px;height:77px">
+					<TABLE cellpadding="0" cellspacing="0">
+						<TR>
+							<TD width="528" height="77" style="vertical-align:top"></TD>
+						</TR>
+					</TABLE>
+					</SPAN><SPAN style="position:absolute;left:0pt;z-index:251644928">
+					<TABLE cellpadding="0" cellspacing="0" width="100%">
+						<TR>
+							<TD></TD>
+						</TR>
+					</TABLE>
+					</SPAN></P>
+				<DIV style="padding:3.6pt 7.2pt 3.6pt 7.2pt" class="shape">
+					<P class="unnamed"><B><SPAN lang="ZH-CN" style="font-family:SimSun">&#21442;考</SPAN></B></P>
+					<P class="unnamed"><B><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">若&#21457;生</SPAN><SPAN lang="EN-US" style="font-family:SimSun;color:red">“E0022</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">&#20869;部模&#22359;&#38388;通&#35759;&#24322;常</SPAN><SPAN lang="EN-US" style="font-family:SimSun;color:red">”</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">，&#21363;使系&#32479;板重新&#24320;始通&#35759;，主板也不&#20250;&#19982;系&#32479;板重新&#24320;始通&#35759;。只有重&#21551;控制器才能重新&#24320;始通&#35759;。</SPAN></B></P>
+				</DIV>
+			</TD>
+		</TR>
+	</TABLE>
+	&nbsp;
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">3.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#30830;&#35748;通&#35759;&#30005;&#32518;的&#36830;接&#29366;&#24577;。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;主板和系&#32479;板之&#38388;的通信&#30005;&#32518; </SPAN><SPAN lang="EN-US" style="font-family:SimSun">(CNIO)</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">是否&#36830;接良好。 &#36825;可能是因&#36830;接器的接&#35302;不良所致，&#35831;&#25286;&#21368;主板的</SPAN><SPAN lang="EN-US" style="font-family:SimSun">CNIO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36830;接器和系&#32479;板的</SPAN><SPAN lang="EN-US" style="font-family:SimSun">CNIO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36830;接器后，再次&#30830;&#35748;此&#38169;&#35823;是否&#21457;生。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG src="images/image106.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc410654994"></A><A name="_Toc390108564"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270; </SPAN></A><SPAN lang="EN-US" style="font-family:SimSun">5.19 </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">主板和</SPAN><SPAN lang="EN-US" style="font-family:SimSun">IO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">板的通信&#30005;&#32518;&#36830;接</SPAN><SPAN lang="EN-US" style="font-family:SimSun"> </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">4.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#30830;&#35748;&#30005;源&#29366;&#24577;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">(</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#30005;源&#30005;&#21387;或&#30005;&#32518;&#36830;接&#29366;&#24577;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">)</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#30830;&#35748;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">DC 5V</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">控制&#30005;源是否正常供&#24212;到系&#32479;板。&#30005;源有&#24322;常&#26102;系&#32479;板不能&#36816;行，因此可能&#20250;&#21457;生此&#38169;&#35823;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;通&#36807;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">SMPS</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">的&#36755;出端子&#26816;&#26597;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">DC 5V </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">控制&#30005;源&#30005;&#21387;是否介于</SPAN><SPAN lang="EN-US" style="font-family:SimSun">5.0V~5.3V</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">范&#22260;&#20869;。如果&#30005;&#21387;超出&#35813;范&#22260;，可能影&#21709;通&#35759;&#29366;&#24577;。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#26816;&#39564;点（&#26816;&#26597;位置）如下&#22270;所示，如果超出范&#22260;外&#35831;在</SPAN><SPAN lang="EN-US" style="font-family:SimSun">SMPS</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">上&#23558;&#30005;&#21387;&#35843;整到</SPAN><SPAN lang="EN-US" style="font-family:SimSun">5.0V~5.3V</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">范&#22260;&#20869;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="459" height="518" src="images/image107.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc410654995"></A><A name="_Toc390108565"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270; </SPAN></A><SPAN lang="EN-US" style="font-family:SimSun">5.20 DC 5V</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#30005;源&#30005;&#21387;&#27979;定及&#35843;整方法</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">重&#21551;控制器&#30005;源后也&#32487;&#32493;&#21457;生&#38169;&#35823;&#26102;</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">若在重&#21551;控制器&#30005;源的&#29366;&#24577;下，因&#38169;&#35823;已&#32463;&#21457;生而出&#29616;&#38169;&#35823;信息&#26102;，&#35831;按照以下&#39034;序更&#25442;&#30005;路板或&#30005;&#32518;，判&#26029;是否有&#24322;常。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">&#35831;</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">更</SPAN><SPAN style="font-family:SimSun">&#25442;<SPAN lang="EN-US">IO</SPAN>板。</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">2.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;更&#25442;</SPAN><SPAN lang="EN-US" style="font-family:SimSun">CNIO</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">通&#35759;&#30005;&#32518;。</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:SimSun">3.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">&#35831;</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">更</SPAN><SPAN style="font-family:SimSun">&#25442;主板。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="429" height="410" src="images/image108.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:SimSun">&nbsp;</SPAN></P>
+
+</BODY>
+</HTML>

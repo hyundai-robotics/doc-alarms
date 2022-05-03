@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02633 (○&#36724;) 超&#36807;位置偏差 &#8211; 未&#36827;行&#36127;&#36733;&#20272;算</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U><SPAN lang="ZH-CN" style="font-family:SimSun">原&#38169;&#35823;代&#30721;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">: E0117 (</SPAN><SPAN lang="EN-US" style="font-family:SimSun">○</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36724;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">) </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">超出位置偏差&#35774;定&#20540;</SPAN></U></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.60.1. </SPAN><SPAN style="font-family:SimSun">&#27010;要</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">位置偏差比&#35774;定&#20540;大。根据伺服控制的机器人&#21160;作中移&#21160;命令位置和&#23454;&#38469;位置之&#38388;的差&#24322;太大&#26102;、伺服工作中移&#21160;命令位置&#19982;&#23454;&#38469;位置之&#38388;的差&#24322;太大&#26102;、伺服板在伺服&#35745;算中&#20250;感知&#38169;&#35823;&#24182;停止机器人。</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">位置偏差大，且未&#36827;行&#36127;&#36733;&#20272;算&#26102;&#21457;生&#35813;&#38169;&#35823;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.60.2. </SPAN><SPAN style="font-family:SimSun">原因及&#26816;&#26597;方法</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="97%" style="width:97.7%;border-collapse:collapse;border:none">
+			<TR style="height:87.8pt">
+				<TD width="602" style="width:451.45pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:87.8pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36827;行&#36127;&#36733;&#20272;算后&#30830;&#35748;是否仍然&#21457;生&#38169;&#35823;。</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36827;行&#36127;&#36733;&#20272;算后&#30830;&#35748;是否仍然&#21457;生&#38169;&#35823;。</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#30830;&#35748;&#36127;荷的方法中使用&#35745;&#27979;&#20202;的方法最精&#30830;、但不得以&#26102;可以使用控制器功能中的&#36127;&#36733;&#20272;&#35745;功能&#30830;&#35748;。&#36127;&#36733;&#20272;&#35745;功能只能推定安&#35013;于机器人&#32456;端的工具部分。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN style="font-family:SimSun">&#36127;&#36733;&#20272;&#35745;方法如下。</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">&#36827;入&#36127;&#36733;&#20272;&#35745;功能。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">『</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">[F2]: </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">系&#32479;』</SPAN><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">→ </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">『</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">6: </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">自&#21160;定&#25968;&#35774;置』</SPAN><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">→ </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">『</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">4: </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36127;&#36733;&#20272;&#35745;功能』</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="409" height="251" src="images/image285.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="409" height="246" src="images/image168.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="409" height="246" src="images/image169.jpg"></SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">在&#36127;&#36733;&#20272;&#35745;功能&#36873;&#25321;工具&#32534;&#21495;、推定方法及&#24815;性推定&#19982;否。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="441" height="264" src="images/image170.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36127;&#36733;&#20272;&#35745;后要保存的工具&#32534;&#21495;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">推定方法</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">: </SPAN><SPAN style="font-family:SimSun">&#36127;&#36733;&#20272;&#35745;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">2</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">&#24815;性推定</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">: </SPAN><SPAN style="font-family:SimSun">&#21551;用</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image171.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">点&#20987;正常&#36816;行&#24182;&#25191;行。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">按&#39532;&#36798;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">On</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#24320;&#20851;后&#35774;置</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Dead man</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">后点&#20987;正常&#36816;行。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="272" src="images/image172.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#20915;定是否注&#20876;&#36127;&#36733;&#20272;&#35745;&#32467;果。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36127;&#36733;&#20272;&#35745;&#36816;行&#32467;束、推定&#32467;果就&#20250;&#26174;示于&#30011;面。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN style="position:absolute;z-index:251699712;left:0px;margin-left:244px;margin-top:124px;width:252px;height:175px"></SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="442" height="264" src="images/image287.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">在此按&#32467;束按&#38062;、就&#20250;&#24377;出是否反映&#32467;果的&#30830;&#35748;&#31383;、在此按</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">‘</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">是</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">’</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">就&#20250;保存。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

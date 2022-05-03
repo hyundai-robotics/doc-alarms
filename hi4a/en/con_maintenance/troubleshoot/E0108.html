@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0108 (axis ○) Enc Err:Encoder reset needed</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.15.1. Outline</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">When turning on the controller power, the absolute encoder data from the encoder exceeded the working range limit of the encoder. It may occur if a new motor is installed. Place the robot on the reference position and then reset the encoder to use it in the normal working range. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.15.2. Causes and checking methods</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="459" height="60" src="images/image135.png" alt="텍스트 상자: 1.	Reset the encoder.
+2.	Set the encoder setting to offset again.
+"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Reset the encoder. </SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">To reset the encoder, connect the RST and P5E terminals of the encoders of the axes for 3 min with the controller on. Open the cover at the back of the robot's body to find connectors for resetting of the encoders. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="252" height="214" src="images/image129.png" alt="f6_4.wmf"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc390108592"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Figure </SPAN></A><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.47 Connector for resetting of the encoder</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">2.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Set the encoder setting to offset again.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">If the encoder is reset, the axis position will be lost. Send the robot to the reference position and set the encoder to offset again. It is recommended that the encoder is reset again just before offsetting at the robot reference position. The robot has an interference coefficient between axes so send all axes to the reference positions and set them to offset.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">To set the encoder to offset, select System&gt; 3: Robot Parameter&gt; 5: Encoder Offset Setting&gt; Encoder Correction (Record Position) in manual mode.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Note that pressing the ALL correction key will correct the encoder offset for all axes.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="440" height="359" src="images/image136.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

@@ -1,0 +1,81 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0119 (axis ○) Overload</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.21.1. Outline</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The motor or the drive unit is being overloaded. If a motor or drive operation exceeds continuous working conditions, the service life is decreased because of overheating, so the servo board detects the error and stops the robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.21.2. Causes and checking methods</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="459" height="141" src="images/image225.png" alt="텍스트 상자: 1.	Relieve the load condition.
+2.	Please examine if there is a possible collision point during the robot’s operation.
+3.	Please check if the axis brake works properly.
+4.	Please replace the Servo board and examine the error.
+5.	Please examine if the drive unit operates normally.
+"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Relieve the load condition.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">If the overload error occurs during a normal robot operation, check if it is because of load condition, or the controller or robot body even with a normal load condition. Relieve the working load condition of the robot in the following manner to see if the overload error is solved. </SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Check the reduced tool load.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Check the robot waiting time inserted or the reduced robot speed.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">If the overload error persists even with relieved load condition, check the controller or the robot body for any problem.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;background:yellow">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Both the tool weight and the inertia size are important for the load of the robot. For the allowed inertia for each robot, check the maintenance manual. Here is an example of an HX165 robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;background:yellow">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="267" height="188" src="images/image226.png" alt="f3_7.wmf"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;background:yellow">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc390108607"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Figure </SPAN></A><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.62 Inertia is allowed for the wrist axis of the HX165 robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">2.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Examine if there is a possible collision point during the robot’s operation.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please check if there is a point where the robot may be interfered or may have a collision in the operation area. This error may occur if the robot is interfered by other equipment. In that case, please modify the job program so that the interference will not occur.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">3.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Check if the axis brake works properly.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The brake release functions of the corresponding axis may have an error or the release voltage of the brake release may have a problem.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Examine if the brake release of each axis has an error.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please remove the motor’s power supply (motor off), and check if you can release the brake of the axis with a manual brake switch. You can confirm it with the sound of the brake release from the motor.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="616" height="73" src="images/image227.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="604" height="330" src="images/image228.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Examine the error on the brake’s power supply</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">If the “E0012 brake power error” message is displayed at the same time, there is an error on the brake’s power supply unit. </SPAN></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The capacitor and rectifier are installed on top of the controller. A DC24V power is generated from the 20 V one. Check if the DC24V is generated by using a tester.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="377" height="401" src="images/image229.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">4.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Replace the Servo board and examine the error.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">After the replacement of the Servo board, if the error does not persist, the Servo board is faulty. Please replace the Servo board with a new one.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="368" height="323" src="images/image230.png"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Examine if the drive unit operates normally.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="text-indent:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please check if the drive unit of the corresponding axis (motor, decelerator) works properly.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="305" height="219" src="images/image231.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

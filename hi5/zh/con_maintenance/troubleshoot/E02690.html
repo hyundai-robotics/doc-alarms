@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02690 超出伺服&#24320;&#21551;限制&#26102;&#38388;</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U><SPAN lang="ZH-CN" style="font-family:SimSun">原&#38169;&#35823;代&#30721;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">: E0122 </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">超出伺服&#24320;&#21551;限制&#26102;&#38388;</SPAN></U></B></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.66.1. </SPAN><SPAN style="font-family:SimSun">&#27010;要</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">在</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">MAIN</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">向伺服&#21457;送&#39532;&#36798;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">ON</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">指令、但伺服&#27809;有&#21551;&#21160;&#39532;&#36798;&#26102;&#21457;生。</SPAN><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">MAIN</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#19982;伺服&#38388;的通&#35759;有&#38382;&#39064;&#26102;&#20250;&#21457;生。</SPAN><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN></P>
+	<P class="unnamed"><SPAN lang="ZH-CN" style="font-family:SimSun">在</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">MAIN</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">向伺服&#21457;送&#39532;&#36798;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">ON</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">指令之前&#21457;送伺服&#38169;&#35823;</SPAN><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">clear </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">指令、伺服&#38169;&#35823;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">clear</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">后再&#21457;送&#39532;&#36798;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">ON </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">指令。如果伺服&#38169;&#35823;&#27809;有被</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">clear</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">、&#35813;伺服&#38169;&#35823;就&#20250;再次出&#29616;、因此不能&#36755;出&#39532;&#36798;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">ON</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">指令。因此、如果不是</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">MAIN</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#19982;伺服&#38388;的通&#35759;&#38382;&#39064;、就&#20250;正常&#21551;&#21160;&#39532;&#36798;或&#21457;生其&#23427;伺服&#38169;&#35823;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.66.2. </SPAN><SPAN style="font-family:SimSun">原因及&#26816;&#26597;方法</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:61.3pt">
+				<TD width="574" style="width:430.2pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:61.3pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;主板&#19982;伺服板是否正常安&#35013;。</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;基板是否正&#30830;安&#35013;。</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;基板&#24322;常&#19982;否。</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;主板&#19982;伺服基板是否正&#30830;安&#35013;。</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">主板&#19982;伺服板&#27809;有正&#30830;安&#35013;于</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Rack</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">或基板有&#38382;&#39064;、就&#20250;出&#29616;通&#35759;&#38382;&#39064;、&#20174;而&#21457;生&#38169;&#35823;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN style="position:absolute;z-index:251633152;left:0px;margin-left:76px;margin-top:6px;width:531px;height:71px">
+		<TABLE cellpadding="0" cellspacing="0">
+			<TR>
+				<TD width="531" height="71" style="vertical-align:top"></TD>
+			</TR>
+		</TABLE>
+		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251633152">
+		<TABLE cellpadding="0" cellspacing="0" width="100%">
+			<TR>
+				<TD></TD>
+			</TR>
+		</TABLE>
+		</SPAN></P>
+<table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+	<tr>
+		<td ><IMG src="images/warn.jpg"/></td>
+<td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+<P class="unnamed"><B><SPAN lang="ZH-CN" style="font-family:SimSun">警告</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(Warning)</SPAN></B></P>
+		<P class="unnamed"><B><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">&#20026;了保&#25252;之前作&#19994;程序、&#20174;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:red">Rack</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">去除基板之前必&#39035;利用</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:red">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun;color:red">&#36719;&#30424;&#22791;&#20221;主板的所有文件。</SPAN></B></P>
+		</td>
+	</tr>
+</table>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#23558;主板文件&#22791;&#20221;到</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#36719;&#30424;的方法如下。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="523" height="190" src="images/image296.jpg" alt="K-1"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc494381320"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270;</SPAN></A><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.195 </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">在示&#25945;器上&#25554;入</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">的方法</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">TP</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">辨&#35782;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">后、&#30011;面就&#20250;&#26174;示以下&#22270;&#26631;。</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="440" height="275" src="images/image297.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN style="font-family:SimSun">&#20026;了&#22791;&#20221;文件、&#36827;入</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">服&#21153;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5. </SPAN><SPAN style="font-family:SimSun">文件管理</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Window</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">就&#20250;&#26174;示如同探索器的&#30011;面。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">在此&#22797;制&#26174;示于</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">M/B</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">的文件后放入</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#21363;可。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="305" src="images/image148.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="305" src="images/image149.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">如</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Window</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">探索器所示、&#36824;可在</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">USB</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#21019;建新文件&#22841;、&#24182;使用&#36719;&#38190;&#30424;&#21464;更文件&#22841;名&#31216;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="272" src="images/image150.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="264" src="images/image151.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#26816;&#26597;基板是否正&#30830;安&#35013;。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#35831;&#20174;</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Rack</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">去除主板&#19982;伺服板后重新安&#35013;。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG width="391" height="270" src="images/image298.jpg" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc494381321"></A><A name="_Toc440012565"><SPAN lang="ZH-CN" style="font-family:SimSun">&#22270;</SPAN></A><SPAN lang="ZH-CN" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"> </SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.196 </SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">控制器&#20869;部</SPAN><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Rack</SPAN><SPAN lang="ZH-CN" style="font-family:SimSun">位置</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN style="font-family:SimSun">&#35831;&#26816;&#26597;基板&#24322;常&#19982;否。</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="ZH-CN" style="font-family:SimSun">&#20026;了判&#26029;基板&#24322;常&#19982;否、&#35831;替&#25442;基板。</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

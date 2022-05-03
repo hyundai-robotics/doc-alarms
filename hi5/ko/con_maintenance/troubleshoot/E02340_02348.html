@@ -1,0 +1,157 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02340 승강축 벨트센서 동작 중 (E02340 ~ E02348)</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U>기존 에러코드<SPAN lang="EN-US">: E0044 </SPAN>승강축 벨트 끊어짐 감지 센서 동작 중</U></B></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt;text-indent:-42.55pt" class="4"><SPAN lang="EN-US" style="font-weight:normal">1.1.36.1. </SPAN><SPAN style="font-family:굴림체">개요</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed">로봇의 구동 축 중 벨트로 동력이 전달되는 축에 설치된 센서가 벨트의 유무를 판단하고 있습니다<SPAN lang="EN-US">. </SPAN>벨트의 파단으로 인하여 센서의 검지 범위 이내에 벨트가 없을 경우 에러가 발생하게 됩니다<SPAN lang="EN-US">. </SPAN>또한<SPAN lang="EN-US">, </SPAN>센서와 제어기에 장착된 보드 사이에 연결에 이상이 생겨도 에러가 발생합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt;text-indent:-42.55pt" class="4"><SPAN lang="EN-US" style="font-weight:normal">1.1.36.2. </SPAN><SPAN style="font-family:굴림체">원인</SPAN> <SPAN style="font-family:굴림체">및</SPAN> <SPAN style="font-family:굴림체">점검방법</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:192.5pt">
+				<TD width="574" style="width:430.65pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:192.5pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.45pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>에러 발생 상태를 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-left:100.0pt;text-indent:-20.0pt"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>모니터링 창에서 전용 입력신호를 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-left:100.0pt;text-indent:-20.0pt"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">BD58B </SPAN>보드의 릴레이 동작 상태를 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt;</SPAN>모니터링 창에서는 에러 상태이고<SPAN lang="EN-US">, </SPAN>릴레이는 정상<SPAN lang="EN-US">(ON)</SPAN>인 경우<SPAN lang="EN-US">&gt;</SPAN></B></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>에러 검지 관련 부품을 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">CNSGC </SPAN>케이블을 교체한 후 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">BD530/BD531 </SPAN>보드를 교체한 후 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt;</SPAN>모니터링 창에서도 에러이고<SPAN lang="EN-US">, </SPAN>릴레이가 비정상<SPAN lang="EN-US">(OFF)</SPAN>인 경우<SPAN lang="EN-US">&gt;</SPAN></B></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>로봇을 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>로봇 구동부의 벨트의 상태를 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>벨트 파단 검지 센서의 동작을 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>에러 발생 상태를 확인하여 주십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>TP510</SPAN>의 모니터링 창에서 전용 입력신호를 확인</P>
+	<P class="unnamed" style="margin-left:60.0pt">우선 티칭펜던트의 전용 입력신호 창에서 승강축벨트<SPAN lang="EN-US">/</SPAN>리밋<SPAN lang="EN-US">(Arm) </SPAN>항목이 계속 입력되고 있는지를 확인합니다<SPAN lang="EN-US">. </SPAN>이 창은 『<SPAN lang="EN-US">[F1]: </SPAN>서비스』 → 『<SPAN lang="EN-US">1: </SPAN>모니터링』 → 『<SPAN lang="EN-US">2: </SPAN>입출력 신호』 → 『<SPAN lang="EN-US">1: </SPAN>전용 입력신호』를 선택하면 볼 수 있습니다<SPAN lang="EN-US">. </SPAN>승강축벨트<SPAN lang="EN-US">/</SPAN>리밋<SPAN lang="EN-US">(Arm) </SPAN>항목이 황색표시가 되어 있으면 에러상태를 나타냅니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="367" height="224" src="images/image97.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247164"></A><A name="_Toc425336705">그림 </A><SPAN lang="EN-US">1.137 </SPAN>전용 입력신호에서 승강축 벨트 확인</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>BD58B </SPAN>보드의 릴레이 동작 상태 확인</P>
+	<P class="unnamed" style="margin-left:60.0pt">로봇 구동부에 설치된 근접 센서는 벨트 표면에 빛의 반사 여부로 파단을 검지하여<SPAN lang="EN-US"> ON/OFF </SPAN>신호를 제어기로 송신합니다<SPAN lang="EN-US">. </SPAN>제어기에 입력된 신호는<SPAN lang="EN-US"> BD58B </SPAN>보드에서 낙하방지 브레이크 연동과 동시에 시스템 보드인<SPAN lang="EN-US"> BD530</SPAN>로 전달됩니다<SPAN lang="EN-US">. BD58B </SPAN>보드의 릴레이 동작 상태로 센서의 동작 여부를 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="387" height="261" src="images/image98.jpg" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247165"></A><A name="_Toc425336706">그림 </A><SPAN lang="EN-US">1.138 BD58B </SPAN>보드의 릴레이 상태 확인</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">BD58B </SPAN>보드의 릴레이 동작 상태는 아래의 그림과 같이 확인할 수 있습니다<SPAN lang="EN-US">. </SPAN>정상 상태의 릴레이는 코일이 동작하여 중앙에 공백이 확인됩니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="414" height="189" src="images/image99.jpg" alt="K-3"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247166"></A><A name="_Toc425336707">그림 </A><SPAN lang="EN-US">1.139 BD58B </SPAN>보드의 릴레이의 정상과 에러 상태 비교</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">BD58B </SPAN>보드의 릴레이 동작 상태로 로봇 내 어느 축의 검지 센서가 동작하는지를 확인할 수 있습니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="0" cellspacing="0" cellpadding="0" width="543" style="border-collapse:collapse">
+			<TR style="height:13.2pt">
+				<TD width="255" style="width:191.35pt;border-top:2.25pt;border-left:2.25pt;border-bottom:1.0pt;border-right:1.0pt;border-color:black;border-style:solid;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:13.2pt">
+					<P class="unnamed">① 정상일 경우</P>
+				</TD>
+				<TD width="288" style="width:216.25pt;border-top:solid black 2.25pt;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 2.25pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:13.2pt">
+					<P class="unnamed">②<SPAN lang="EN-US"> Z1 </SPAN>센서<SPAN lang="EN-US"> Off</SPAN>시<SPAN lang="EN-US">(Z1</SPAN>축 파단<SPAN lang="EN-US">)</SPAN></P>
+				</TD>
+			</TR>
+			<TR style="height:131.05pt">
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:solid black 2.25pt;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:131.05pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="220" height="177" src="images/image237.jpg" alt="K-4"></SPAN></P>
+				</TD>
+				<TD width="288" style="width:216.25pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 2.25pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:131.05pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="230" height="180" src="images/image238.jpg" alt="K-5"></SPAN></P>
+				</TD>
+			</TR>
+			<TR style="height:2.9pt">
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:solid black 2.25pt;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:2.9pt">
+					<P class="unnamed">③<SPAN lang="EN-US"> Z2 </SPAN>센서<SPAN lang="EN-US"> Off</SPAN>시<SPAN lang="EN-US"> (Z2</SPAN>축 파단<SPAN lang="EN-US">)</SPAN></P>
+				</TD>
+				<TD width="288" style="width:216.25pt;border-top:none;border-left:none;border-bottom:solid black 1.0pt;border-right:solid black 2.25pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:2.9pt">
+					<P class="unnamed">④<SPAN lang="EN-US"> Z1/Z2 </SPAN>동시 센서<SPAN lang="EN-US"> Off</SPAN>시<SPAN lang="EN-US"> (Z1/Z2</SPAN>축 파단<SPAN lang="EN-US">) </SPAN></P>
+				</TD>
+			</TR>
+			<TR style="height:128.15pt">
+				<TD width="255" style="width:191.35pt;border-top:none;border-left:solid black 2.25pt;border-bottom:solid black 2.25pt;border-right:solid black 1.0pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:128.15pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="223" height="177" src="images/image102.jpg" alt="K-6"></SPAN></P>
+				</TD>
+				<TD width="288" style="width:216.25pt;border-top:none;border-left:none;border-bottom:solid black 2.25pt;border-right:solid black 2.25pt;padding:3.6pt 7.2pt 3.6pt 7.2pt;height:128.15pt">
+					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="227" height="177" src="images/image239.jpg" alt="K-7"></SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247167"></A><A name="_Toc425336708">그림 </A><SPAN lang="EN-US">1.140 BD58B </SPAN>보드의 릴레이에서 에러 발생 위치 확인</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>에러 검지 관련 부품을 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">모니터링 창의 전용 입력신호와<SPAN lang="EN-US"> BD58B</SPAN>보드의 릴레이 상태가 다르게 확인된 경우에는<SPAN lang="EN-US"> BD58B</SPAN>와<SPAN lang="EN-US"> BD530/BD531</SPAN>를 연결하는<SPAN lang="EN-US"> CNLS </SPAN>케이블 또는<SPAN lang="EN-US"> BD530/BD531</SPAN>의 불량입니다<SPAN lang="EN-US">. </SPAN>매뉴얼의 제어기 구성을 참고하여 각 부품별로 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="430" height="323" src="images/image240.jpg" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247168"></A><A name="_Toc425336709">그림 </A><SPAN lang="EN-US">1.141 BD530/BD531</SPAN>의 교체</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>CNLS </SPAN>케이블 교체 점검</P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">CNLS </SPAN>케이블을 정상품과 교체하여 에러가 발생하지 않으면 케이블의 접속 불량입니다<SPAN lang="EN-US">. CNLS </SPAN>케이블을 정상품으로 교체하여 사용하시기 바랍니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>BD530/BD531 </SPAN>교체 점검</P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">BD530/BD531</SPAN>을 정상품과 교체하여 에러가 발생하지 않으면 해당 보드의 불량입니다<SPAN lang="EN-US">. BD530/BD531</SPAN>을 정상품으로 교체하여 사용하시기 바랍니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="378" height="150" src="images/image241.jpg" alt="K-9"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247169"></A><A name="_Toc425336710">그림 </A><SPAN lang="EN-US">1.142 BD530/BD531</SPAN>의 교체</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>로봇을 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">모니터링 창의 전용 입력신호와<SPAN lang="EN-US"> BD58B</SPAN>보드의 릴레이 상태가 일치하는 경우에는<SPAN lang="EN-US"> BD58B</SPAN>에서 실제로 센서의 에러 동작을 인식하였습니다<SPAN lang="EN-US">. </SPAN>로봇의 벨트와 검지 센서를 확인해야 합니다<SPAN lang="EN-US">. </SPAN>로봇 점검 시 센서의 오동작에 의해 승강축의 낙하를 방지하기 위해서는 반드시<SPAN lang="EN-US"> BB58B</SPAN>보드의<SPAN lang="EN-US"> CNZB1</SPAN>과<SPAN lang="EN-US"> CNBZ2 </SPAN>커넥터를 분리하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:40pt">
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+            <tr>
+                <td ><IMG src="images/warn.png"/></td>
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+                    <p style="color: #000000;"> 경고(Warning)</p>
+                    로봇의 벨트 및 파단센서 점검 시에는 승강축의 낙하를 방지하기 위해서 반드시<SPAN lang="EN-US"> BD58B</SPAN>의<SPAN lang="EN-US"> CNZB1</SPAN>과<SPAN lang="EN-US"> CNBZ2 </SPAN>커넥터를 분리하여 주십시오
+                </td>
+            </tr>
+        </table>
+    </P> 
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>로봇 구동부의 벨트 상태를 확인</P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">BD58B</SPAN>의 릴레이의 상태로 확인된 축의 벨트를 로봇에서 확인하여 주십시오<SPAN lang="EN-US">. </SPAN>벨트의 적용 여부와 위치는 로봇의 기종에 따라 변경될 수 있습니다<SPAN lang="EN-US">. </SPAN>로봇 납입 사양서 및 로봇 보수 매뉴얼을 참고하여 벨트의 상태를 점검하여 주십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="415" height="201" src="images/image242.jpg" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc456247170"></A><A name="_Toc425336711">그림 </A><SPAN lang="EN-US">1.143 </SPAN>승강축 벨트와 파단 센서의 검지</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(6)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>벨트 파단 검지 센서의 동작을 확인</P>
+	<P class="unnamed" style="margin-left:60.0pt">검지 센서는 광학타입으로서 일정거리 범위 내에 물체가 인식되는 경우에만 정상으로 검출하고<SPAN lang="EN-US">, </SPAN>그 범위를 벗어나는 경우에는 에러로 처리된다<SPAN lang="EN-US">. </SPAN>검지센서의 전면에서 물체의 거리를 변경하여 <SPAN lang="EN-US">TP510</SPAN>의 전용 입력신호의 상태를 확인하여 주십시오<SPAN lang="EN-US">. </SPAN>센서의 동작과 모니터링의 결과가 일치하지 않는 경우에는 로봇 내부의 센서와 제어기 내<SPAN lang="EN-US"> BD58B </SPAN>보드의<SPAN lang="EN-US"> TBBO </SPAN>터미널 블록 사이의 신호선 연결을 확인하여 주십시오<SPAN lang="EN-US">. </SPAN>센서의<SPAN lang="EN-US"> LED</SPAN>가 녹색으로 표시되는 경우에는 정상상태이고<SPAN lang="EN-US">, </SPAN>적색으로 바뀌는 경우가 에러 상태입니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

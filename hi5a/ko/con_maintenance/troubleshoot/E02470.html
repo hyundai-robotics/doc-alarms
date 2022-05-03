@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02470 (○축) 엔코더이상: 엔코더 리셋 필요</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U><SPAN style="background:yellow">기존 에러코드<SPAN lang="EN-US">: E0108 (○</SPAN>축<SPAN lang="EN-US">) </SPAN>엔코더이상<SPAN lang="EN-US">: </SPAN>엔코더 리셋 필요 </SPAN></U></B></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.49.1. </SPAN><SPAN style="font-family:굴림체">개요</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed">엔코더가 모터의 위치데이터를 보존하기 위해서는 상시 엔코더에 전원이 공급되어야 합니다<SPAN lang="EN-US">. </SPAN>엔코더의 전원은 제어기 전원을<SPAN lang="EN-US"> ON</SPAN>시켜 두거나 엔코더용 백업 배터리에 의해서 전원이 공급됩니다<SPAN lang="EN-US">. </SPAN>만일 엔코더용 백업 배터리가 방전되어 있는 상태에서 제어기 전원을<SPAN lang="EN-US"> OFF </SPAN>시키면 엔코더가 위치데이터를 잃어버리기 때문에 에러가 발생합니다<SPAN lang="EN-US">. </SPAN>마찬가지로 모터를 교체할 때에도 신규 모터의 엔코더는 이미 전원이 공급되지 않는 상태였기 때문에 동일한 에러가 발생합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed">엔코더를 리셋시키면 해당 축의 기준위치 데이터가 변경되므로 반드시 축좌표계 수동 조작으로 로봇을 기준자세로 이동하여 해당 축의 엔코더 보정을 재실시해야 합니다<SPAN lang="EN-US">. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.49.2. </SPAN><SPAN style="font-family:굴림체">원인</SPAN> <SPAN style="font-family:굴림체">및</SPAN> <SPAN style="font-family:굴림체">점검방법</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:117.3pt">
+				<TD width="618" style="width:463.4pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:117.3pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.45pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>엔코더 배터리 전압을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>엔코더 배터리 결선 상태를 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>모터를 교체 시험하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>엔코더 리셋 이후에는 로봇 기준위치에서 엔코더 보정을 재실시해야 합니다<SPAN lang="EN-US">.</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>엔코더 배터리 전압을 확인하십시오<SPAN lang="EN-US">. </SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">엔코더용 배터리는<SPAN lang="EN-US"> 3.6V </SPAN>입니다<SPAN lang="EN-US">. </SPAN>이 전압이<SPAN lang="EN-US"> 3.0V~3.2V </SPAN>로 저하되면 <SPAN lang="EN-US">“W0104 </SPAN>○축 엔코더<SPAN lang="EN-US">Battery </SPAN>전압저하입니다<SPAN lang="EN-US">” </SPAN>로 표시 됩니다<SPAN lang="EN-US">. </SPAN>이 경고가 발생할 때 엔코더용 배터리를 교환해야 합니다<SPAN lang="EN-US">. </SPAN>엔코더 배터리 교환은 반드시 제어기 전원이<SPAN lang="EN-US"> ON</SPAN>되어 있는 상태에서 배터리를 교체해야 합니다<SPAN lang="EN-US">. </SPAN>이 상태에서 정상적인 엔코더 배터리로 교체하면 문제 없이 로봇을 계속 사용할 수 있습니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt">엔코더 배터리 교체시기를 지나서 엔코더용 배터리 전압이<SPAN lang="EN-US"> 2.5V~3.0V </SPAN>가 되면 <SPAN lang="EN-US">“E0108 </SPAN>○축 엔코더 이상<SPAN lang="EN-US"> : </SPAN>엔코더 리셋 필요<SPAN lang="EN-US">” </SPAN>에러가 발생합니다<SPAN lang="EN-US">. </SPAN>이 에러가 발생하면 이미 엔코더의 위치데이터를 잃어버린 상태입니다<SPAN lang="EN-US">. </SPAN>엔코더 배터리를 교체하고 엔코더를 리셋 시킨 후에 축좌표계 수동 조작으로 로봇을 기준자세로 이동하여 해당 축의 엔코더 보정을 재실시 해야 합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="389" height="302" src="images/image311.jpg" alt="K-1"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289636"></A><A name="_Toc425336712">그림 </A><SPAN lang="EN-US">1.159 </SPAN>엔코더 배터리 교환 위치</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt">엔코더 리셋은 아래의 메뉴에서 실행합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>시스템</P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. </SPAN>초기화</P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">4. </SPAN>시리얼 엔코더 리셋</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="417" height="251" src="images/image129.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>엔코더 배터리 결선 상태를 점검하십시오<SPAN lang="EN-US">. </SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">엔코더 배터리 위치부터 모터까지 연결되는 배터리 결선 상태를 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>모터를 교체 시험하십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">상기 조치로도 문제가 해결되지 않는다면 엔코더 자체 고장일 가능성이 높습니다<SPAN lang="EN-US">. </SPAN>모터를 교체 시험하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

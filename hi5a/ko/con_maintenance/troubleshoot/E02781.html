@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02781 (○축) 서보록 유지 불가능 &#8211; Gain문제</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U><SPAN style="background:yellow">기존 에러코드<SPAN lang="EN-US">: E0165 (○</SPAN>축<SPAN lang="EN-US">) </SPAN>서보록 유지 불가능 </SPAN></U></B></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.85.1. </SPAN><SPAN style="font-family:굴림체">개요</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed">모터 또는 구동장치에 구동을 위한 전류가 규정치 이상으로 공급되지 못하고 있습니다<SPAN lang="EN-US">. </SPAN>로봇 또는 구동장치를 동작시키기 위해서 서보제어에 의해 만들어진 전류가 규정치 이상으로 공급되지 못하고 있어 서보보드에서 에러를 감지하며 제어기는 브레이크 해제를 막고 모터 또는 구동장치에 공급되는 전류를 차단합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed">통상 규정치 이상으로 전류가 흐르지 못하는 이유는 로봇등록오류<SPAN lang="EN-US">(</SPAN>모터 등록정보 오류<SPAN lang="EN-US">)</SPAN>로 인해 전류루프<SPAN lang="EN-US"> Gain</SPAN>이 낮을 경우 발생합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.85.2. </SPAN><SPAN style="font-family:굴림체">원인</SPAN> <SPAN style="font-family:굴림체">및</SPAN> <SPAN style="font-family:굴림체">점검방법</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="604" style="width:453.05pt;border-collapse:collapse;border:none">
+			<TR style="height:173.6pt">
+				<TD width="604" style="width:453.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:173.6pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.2pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>로봇기종이 맞게 설정되어있는지 확인하십시오</P>
+					<P class="unnamed" style="margin-left:58.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>모터 파워 라인을 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>로봇과 제어기를 연결하는 배선을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>로봇 기내 배선을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>제어기 내부 배선을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>제어기 내부 서보보드와 서보앰프간<SPAN lang="EN-US"> CNBS</SPAN>케이블을 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>기타의 부품을 교체하십시오<SPAN lang="EN-US">.</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>로봇기종이 맞게 설정 되어있는지 확인하십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">TP</SPAN>화면상의 등록된 로봇기종<SPAN lang="EN-US">(</SPAN>메커니즘<SPAN lang="EN-US">)</SPAN>과 로봇이 일치하는지 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt">
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US"><IMG width="440" height="266" src="images/image354.png" alt="모니터화면.BMP"></SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
+	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>파워 라인을 점검하십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">1</SPAN>차 전원을<SPAN lang="EN-US"> Off</SPAN>하고 해당축 구동장치의<SPAN lang="EN-US"> U, V, W</SPAN>를 분리하여 각 상의 단락 유무를 점검하십시오<SPAN lang="EN-US">. </SPAN>멀티미터<SPAN lang="EN-US">(</SPAN>테스터기<SPAN lang="EN-US">)</SPAN>와 같은 장비를 이용하여 각 상의 배선을<SPAN lang="EN-US"> 1:1</SPAN>로 체크하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:40pt">
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+            <tr>
+                <td ><IMG src="images/warn.png"/></td>
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+                    <p style="color: #000000;"> 경고(Warning)</p>
+                    전원이 투입된 상태에서 점검시 감전의 위험이 있으므로 주의하십시오.
+                </td>
+            </tr>
+        </table>
+    </P> 
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>로봇과 제어기를 연결하는 배선을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt">제어기와 로봇 또는 구동장치를 연결하는 배선을 제거하여 각 상<SPAN lang="EN-US">(U</SPAN>상<SPAN lang="EN-US">, V</SPAN>상<SPAN lang="EN-US">, W</SPAN>상<SPAN lang="EN-US">)</SPAN>이 서로 또는 접지와 단락된 곳이 있는지 확인하시고<SPAN lang="EN-US">, </SPAN>단락된 곳이 있으면 해당하는 배선을 교체하셔야 합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="413" height="323" src="images/image355.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289702">그림 </A><SPAN lang="EN-US">1.225 </SPAN>로봇과 제어기간 기본 설치 구성도</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>로봇내부의 기내배선을 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt">로봇 내부에 모터와 연결되어 있는 배선에 단락 또는 잘못 배선된 곳이 있는지 점검이 필요합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="265" height="245" src="images/image356.jpg" alt="K-2"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289703">그림 </A><SPAN lang="EN-US">1.226 </SPAN>로봇 기내 배선</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN>제어기 내부 배선을 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt">제어기 내부에 앰프와 설치되어 있는 배선 점검이 필요합니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="363" height="362" src="images/image350.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S </SPAN>제어기</P>
+	<P class="unnamed" align="left" style="text-align:left;layout-grid-mode:char"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;layout-grid-mode:char"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="336" height="328" src="images/image249.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N </SPAN>제어기</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289704">그림 </A><SPAN lang="EN-US">1.227 </SPAN>제어기 내부<SPAN lang="EN-US">(</SPAN>파워부<SPAN lang="EN-US">)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>제어기 내부 서보 보드<SPAN lang="EN-US">(DSP</SPAN>보드<SPAN lang="EN-US">)</SPAN>와 구동장치간<SPAN lang="EN-US"> CNBS</SPAN>케이블을 점검하십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">CNBS</SPAN>케이블이 올바로 설치되어 있는지 점검하십시오<SPAN lang="EN-US">. </SPAN>케이블이 올바르게 설치되어 있지 않거나 케이블 불량일 경우 해당 에러가 발생할 수 있습니다<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="326" height="335" src="images/image357.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S </SPAN>제어기</P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="411" height="304" src="images/image251.png" alt="Adobe Systems"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N </SPAN>제어기</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289705">그림 </A><SPAN lang="EN-US">1.228 </SPAN>제어기 내부<SPAN lang="EN-US">(CNBS </SPAN>케이블<SPAN lang="EN-US">)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN>기타의 부품을 교체하십시오<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt">서보보드<SPAN lang="EN-US">(BD544) </SPAN>→ 서보 구동장치 → 모터의 순으로 교체하여 에러발생 여부를 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="300" src="images/image358.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S </SPAN>제어기</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="559" height="321" src="images/image252.png" alt="Adobe Systems"></SPAN>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N </SPAN>제어기</P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289706">그림 </A><SPAN lang="EN-US">1.229 </SPAN>기타 부품교체<SPAN lang="EN-US"> (</SPAN>서보보드<SPAN lang="EN-US">, </SPAN>서보구동장치<SPAN lang="EN-US">, </SPAN>모터<SPAN lang="EN-US">)</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>
