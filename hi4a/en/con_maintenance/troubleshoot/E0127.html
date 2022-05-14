@@ -1,5 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
+癤�<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
 <HEAD>
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
@@ -11,23 +11,23 @@
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.24.1. Outline</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The motor’s power supply is supplied to the AMP according to the open/close status of magnetic contactor MSHP1 and MSHP2.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The status of MSHP1 and MSHP2 are being monitored by the main board’s conditions, and E0127 (MSHP operation error) will be generated when an abnormal operation is detected.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The motor's power supply is supplied to the AMP according to the open/close status of magnetic contactor MSHP1 and MSHP2.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The status of MSHP1 and MSHP2 are being monitored by the main board's conditions, and E0127 (MSHP operation error) will be generated when an abnormal operation is detected.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">For MSHP1 or MSHP2 to turn on, several conditions need to be satisfied, and even if they are turned on, they can be off for some reasons. The main board can identify the causes for the magnetic contactor’s operation error if it is a case that provides a monitoring function such as safety signals. However, if the main board cannot identify the magnetic contactor’s operation error, a number of examinations are required. </SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">For MSHP1 or MSHP2 to turn on, several conditions need to be satisfied, and even if they are turned on, they can be off for some reasons. The main board can identify the causes for the magnetic contactor's operation error if it is a case that provides a monitoring function such as safety signals. However, if the main board cannot identify the magnetic contactor's operation error, a number of examinations are required. </SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.24.2. Causes and checking methods</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US"><IMG width="463" height="72" src="images/image239.png" alt="텍스트 상자: 1. Replace the sequence board.
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="463" height="72" src="images/image239.png" alt="횇횠쩍쨘횈짰 쨩처��횣: 1. Replace the sequence board.
 2. Replace the IO board.
 3. Replace the MSDB1, 2 or MSHP1, 2.
 "></SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">To identify the cause of this error (MSHP operation error), you must understand the motor’s power supply insertion system. The basic concept of the motor’s power supply to the AMP (drive unit) is as follows. According to the “Motor ON Sequence,” the main MSHP operation command is used and the MSHP1 and 2 are operated while monitoring the auxiliary contact. At this stage, if the MSHP1, 2 do not activate within a certain amount of time, E0127 (MSHP operation error) will occur. If magnetic contact MSHP1 and MSHP2 turn on according to the main board’s command, AC 220 V R, S, and T three-phase power supply will be supplied to the AMP.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">To identify the cause of this error (MSHP operation error), you must understand the motor's power supply insertion system. The basic concept of the motor's power supply to the AMP (drive unit) is as follows. According to the "Motor ON Sequence," the main MSHP operation command is used and the MSHP1 and 2 are operated while monitoring the auxiliary contact. At this stage, if the MSHP1, 2 do not activate within a certain amount of time, E0127 (MSHP operation error) will occur. If magnetic contact MSHP1 and MSHP2 turn on according to the main board's command, AC 220 V R, S, and T three-phase power supply will be supplied to the AMP.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed"><A name="_Toc215579032"></A><A name="_Ref215579260"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG width="418" height="246" src="images/image240.png"></SPAN></A></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc390108609"></A><A name="_Toc215982719"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Figure </SPAN></A><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.64 Concept diagram of the safety circuit for the motor’s power on/off</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc390108609"></A><A name="_Toc215982719"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Figure </SPAN></A><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.64 Concept diagram of the safety circuit for the motor's power on/off</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Board replacement according to command system
 	<P class="unnamed">

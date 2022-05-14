@@ -1,9 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
+癤�<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
 <HEAD>
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E0134 (axis ○) Overspeed</TITLE>
+	<TITLE>E0134 (axis �뿃) Overspeed</TITLE>
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
 </HEAD>
 <BODY>
@@ -11,13 +11,13 @@
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.26.1. Outline</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The speed of the robot’s axis exceeded the maximum speed limit while in operation. An error will be generated, and the robot will be immobilized because the robot is not being controlled normally.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">When the main board sends a command to the Servo board, it will send a limited command so that the robot will not exceed the maximum speed limit. The maximum speed exceeded error may occur if the robot’s speed triggers an overshoot because the robot could not follow the command.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The speed of the robot's axis exceeded the maximum speed limit while in operation. An error will be generated, and the robot will be immobilized because the robot is not being controlled normally.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">When the main board sends a command to the Servo board, it will send a limited command so that the robot will not exceed the maximum speed limit. The maximum speed exceeded error may occur if the robot's speed triggers an overshoot because the robot could not follow the command.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.1.26.2. Causes and checking methods</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US"><IMG width="585" height="95" src="images/image245.png" alt="텍스트 상자: 1. Please check if the position of the robot is close to the singular point.
+	<P class="unnamed"><SPAN lang="EN-US"><IMG width="585" height="95" src="images/image245.png" alt="횇횠쩍쨘횈짰 쨩처��횣: 1. Please check if the position of the robot is close to the singular point.
 2. Please check the setting value of the condensation acceleration/deceleration parameter and the load factor.
 3. Please adjust the job program.
 "></SPAN></P>
@@ -26,14 +26,14 @@
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">1.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Check if the position of the robot is close to the singular point.</SPAN></B></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">This error may occur if you execute L or C interpolation instead of the PtP interpolation near the position of the singular point.</SPAN></P>
-	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">A singular point occurs when the B axis is close to 0° or the center of the wrist part is close to the spin central axis of the S axis. When passing near the singular point is required, please change the corresponding step to PtP interpolation.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">A singular point occurs when the B axis is close to 0징횈 or the center of the wrist part is close to the spin central axis of the S axis. When passing near the singular point is required, please change the corresponding step to PtP interpolation.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><IMG src="images/image246.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <IMG src="images/image247.png"></SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc390108611"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Figure </SPAN></A><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">5.66 Axis B singular point&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Figure 5.67 Axis S singular point</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">2.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Check the setting value of the condensation acceleration/deceleration parameter and the load factor.</SPAN></B></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The motor torque is insufficient because the maximum speed of condensation acceleration/deceleration parameter is too high, or the acceleration time is too short. The l/lp maximum speed had to be reduced with an observation of the load factor (during the robot’s operation) or had to increase the acceleration time.</SPAN></P>
+	<P class="unnamed" style="margin-left:38.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">The motor torque is insufficient because the maximum speed of condensation acceleration/deceleration parameter is too high, or the acceleration time is too short. The l/lp maximum speed had to be reduced with an observation of the load factor (during the robot's operation) or had to increase the acceleration time.</SPAN></P>
 	<P class="unnamed" style="margin-left:50.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(1) System</SPAN></P>
 	<P class="unnamed" style="margin-left:50.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(2) 3. Robot parameter</SPAN></P>
 	<P class="unnamed" style="margin-left:10.0pt;text-indent:40.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">(3) 6. Acceleration/deceleration parameter</SPAN></P>
@@ -45,7 +45,7 @@
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">3.<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>Adjust the job program.</SPAN></B></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please make changes of the conditions (from the job program) on a corresponding step, or the previous step. First, try “Acc=0”; second, reduce the step speed; and third, add one more step on a movement routine.</SPAN></P>
+	<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">Please make changes of the conditions (from the job program) on a corresponding step, or the previous step. First, try "Acc=0"; second, reduce the step speed; and third, add one more step on a movement routine.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">&nbsp;</SPAN></P>
 </BODY>
 </HTML>
