@@ -1,77 +1,154 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+Ôªø<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
 <HTML lang="ko-KR">
+
 <HEAD>
+
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02633 (°€ axis) Position deviation exceeded &#8211; load estimation not executed</TITLE>
+
+	<TITLE>E02633 (‚óã axis) Position deviation exceeded &#8211; load estimation not executed</TITLE>
+
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
 </HEAD>
+
 <BODY>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0117 (°€ axis) Position deviation set value exceeded</SPAN></U></B></P>
+
+	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0117 (‚óã axis) Position deviation set value exceeded</SPAN></U></B></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.60.1. Outline</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">The position deviation is larger than the set value. If the difference between the location of moving command and the actual location is too large during the operation of robot that controlled by the servo, the servo board will detect an error (during servo operation) and immobilize the robot.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">This error will occur when the position deviation is large and the load estimation is not executed. </SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.60.2. Causes and examine methods</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<DIV align="center">
+
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="97%" style="width:97.7%;border-collapse:collapse;border:none">
+
 			<TR style="height:87.8pt">
+
 				<TD width="602" style="width:451.45pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:87.8pt">
+
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Execute load estimation and then check if the error occurs again.</SPAN></P>
+
 				</TD>
+
 			</TR>
+
 		</TABLE>
+
 	</DIV>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Execute load estimation and then check if the error occurs again.</SPAN></B></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Using measuring equipment is recommended, but if it is not an option, load can be measured by using a °Æload estimation function°Ø from the controller. However this function only can measure the load of a tool that attached at the end of the Robot.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Using measuring equipment is recommended, but if it is not an option, load can be measured by using a 'load estimation function' from the controller. However this function only can measure the load of a tool that attached at the end of the Robot.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Method to estimate the load is as below.</SPAN></P>
+
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Enter to the load estimate function</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt">°∫<SPAN lang="EN-US">[F2]: System</SPAN>°ª<SPAN lang="EN-US"> °Ê </SPAN>°∫<SPAN lang="EN-US">6: Automatic constant setting</SPAN>°ª<SPAN lang="EN-US">°Ê </SPAN>°∫<SPAN lang="EN-US">4: Load estimation function</SPAN>°ª</P>
+
+	<P class="unnamed" style="margin-left:60.0pt">„Äé<SPAN lang="EN-US">[F2]: System</SPAN>„Äè<SPAN lang="EN-US"> ‚Üí </SPAN>„Äé<SPAN lang="EN-US">6: Automatic constant setting</SPAN>„Äè<SPAN lang="EN-US">‚Üí </SPAN>„Äé<SPAN lang="EN-US">4: Load estimation function</SPAN>„Äè</P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="261" src="images/image151.jpg"></SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image152.jpg"></SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image153.jpg"></SPAN></P>
+
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Select the tool number, estimation method, enable status of inertia estimation from the load estimation function.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="442" height="264" src="images/image154.jpg"></SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Tool number to save after the load estimation</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Estimation method: Load estimation 2</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Inertia estimation: Enable</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Tool number to save after the load estimation</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Estimation method: Load estimation 2</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Inertia estimation: Enable</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="444" height="266" src="images/image155.jpg"></SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Click Normal Drive to execute.</SPAN></P>
+
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Press the Motor On switch, and hold the deadman and click the Play Normal.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="278" src="images/image156.jpg"></SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Decide if you want to register the result of load estimation.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Once the load estimation drive has completed, the estimated result will be displayed on the screen.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="473" height="330" src="images/image157.jpg"></SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If you press the close button, a message box will appear to ask you if you want to reflect the result. If you click °Æyes°Ø it will be saved.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If you press the close button, a message box will appear to ask you if you want to reflect the result. If you click 'yes' it will be saved.</SPAN></P>
+
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
 </BODY>
+
 </HTML>
+
