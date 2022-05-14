@@ -1,77 +1,77 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
 <HEAD>
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02832 �ý��ۺ��� ��� �̰���</TITLE>
+	<TITLE>E02832 시스템보드 통신 미개통</TITLE>
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
 </HEAD>
 <BODY>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><B><U><SPAN style="background:yellow">���� �����ڵ�<SPAN lang="EN-US">: E0022 </SPAN>���θ�Ⱓ ����̻� </SPAN></U></B></P>
+	<P class="unnamed"><B><U><SPAN style="background:yellow">기존 에러코드<SPAN lang="EN-US">: E0022 </SPAN>내부모듈간 통신이상 </SPAN></U></B></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.88.1. </SPAN><SPAN style="font-family:����ü">����</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.88.1. </SPAN><SPAN style="font-family:굴림체">개요</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed">����� ������ �����ϸ�<SPAN lang="EN-US"> MAIN</SPAN>����� �ý��ۺ���� ����� �����ؾ� �մϴ�<SPAN lang="EN-US">. </SPAN>�׷��� �ý��ۺ������ ����� ���������� ������� �ʴ´ٸ� �� ������ �߻��մϴ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed">제어기 전원을 투입하면<SPAN lang="EN-US"> MAIN</SPAN>보드는 시스템보드와 통신을 개통해야 합니다<SPAN lang="EN-US">. </SPAN>그런데 시스템보드와의 통신이 정상적으로 개통되지 않는다면 이 에러가 발생합니다<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.88.2. </SPAN><SPAN style="font-family:����ü">����</SPAN> <SPAN style="font-family:����ü">��</SPAN> <SPAN style="font-family:����ü">���˹��</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.88.2. </SPAN><SPAN style="font-family:굴림체">원인</SPAN> <SPAN style="font-family:굴림체">및</SPAN> <SPAN style="font-family:굴림체">점검방법</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<DIV align="center">
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
 			<TR style="height:129.65pt">
 				<TD width="603" style="width:451.95pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:129.65pt">
-					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>CAN</SPAN>������̺� ���ӻ��¸� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
-					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:58.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>�ý��ۺ����� ���α׷��� ���ŵǾ����� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
-					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>������ Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
-					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>�ý��ۺ��带 ��ü�Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
-					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>���κ��带 ��ü�Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>CAN</SPAN>통신케이블 접속상태를 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:58.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>시스템보드의 프로그램이 제거되었는지 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>전원을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>시스템보드를 교체하십시오<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:57.8pt;text-indent:-17.85pt"><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>메인보드를 교체하십시오<SPAN lang="EN-US">.</SPAN></P>
 				</TD>
 			</TR>
 		</TABLE>
 	</DIV>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>CAN</SPAN>������̺� ���ӻ��¸� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>CAN</SPAN>통신케이블 접속상태를 확인하십시오<SPAN lang="EN-US">.</SPAN></B></P>
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">MAIN</SPAN>����� �ý��ۺ��尣��<SPAN lang="EN-US"> CAN</SPAN>���̺��� �� ���ӵǾ����� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">. </SPAN>Ŀ������ ���˺ҷ��� �� �����Ƿ�<SPAN lang="EN-US"> MAIN</SPAN>������<SPAN lang="EN-US"> CAN</SPAN>Ŀ���Ϳ� �ý��ۺ�����<SPAN lang="EN-US"> CAN</SPAN>Ŀ���͸� Ż���ϰ� �����߻� ���θ� �ٽ� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">MAIN</SPAN>보드와 시스템보드간의<SPAN lang="EN-US"> CAN</SPAN>케이블이 잘 접속되었는지 확인하십시오<SPAN lang="EN-US">. </SPAN>커넥터의 접촉불량일 수 있으므로<SPAN lang="EN-US"> MAIN</SPAN>보드의<SPAN lang="EN-US"> CAN</SPAN>커넥터와 시스템보드의<SPAN lang="EN-US"> CAN</SPAN>커넥터를 탈착하고 에러발생 여부를 다시 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center;word-break:keep-all"><SPAN lang="EN-US"><IMG width="263" height="298" src="images/image378.png"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S </SPAN>�����</P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S </SPAN>제어기</P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="403" height="355" src="images/image379.jpg"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N </SPAN>�����</P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N </SPAN>제어기</P>
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289718">�׸� </A><SPAN lang="EN-US">1.241 MAIN</SPAN>����<SPAN lang="EN-US">(BD511)</SPAN>�� �ý��ۺ���<SPAN lang="EN-US">(BD530)</SPAN>��<SPAN lang="EN-US"> CAN</SPAN>������̺� ����</P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289718">그림 </A><SPAN lang="EN-US">1.241 MAIN</SPAN>보드<SPAN lang="EN-US">(BD511)</SPAN>와 시스템보드<SPAN lang="EN-US">(BD530)</SPAN>의<SPAN lang="EN-US"> CAN</SPAN>통신케이블 연결</P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>�ý��ۺ����� ���α׷��� ���ŵǾ����� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>시스템보드의 프로그램이 제거되었는지 확인하십시오<SPAN lang="EN-US">.</SPAN></B></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed">�ý��ۺ����� ���α׷��� ������ ��쿡��<SPAN lang="EN-US"> 7-</SPAN>���׸�Ʈ�� <SPAN lang="EN-US">��F��</SPAN>�� ǥ���մϴ�<SPAN lang="EN-US">. </SPAN>�̶����� �ý��۹����� ����� ���� ���α׷��� �ٽ� �ٿ�ε��Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed">시스템보드의 프로그램이 삭제된 경우에는<SPAN lang="EN-US"> 7-</SPAN>세그먼트에 <SPAN lang="EN-US">“F”</SPAN>를 표시합니다<SPAN lang="EN-US">. </SPAN>이때에는 시스템버전업 기능을 통해 프로그램을 다시 다운로드하십시오<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="291" height="186" src="images/image380.png"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289719">�׸� </A><SPAN lang="EN-US">1.242 </SPAN>�ý��ۺ����� ���α׷��� ������ ���<SPAN lang="EN-US"> 7-segment </SPAN>ǥ��</P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289719">그림 </A><SPAN lang="EN-US">1.242 </SPAN>시스템보드의 프로그램이 삭제된 경우<SPAN lang="EN-US"> 7-segment </SPAN>표시</P>
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>������ Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>전원을 확인하십시오<SPAN lang="EN-US">.</SPAN></B></P>
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed">�ý��ۺ��忡 <SPAN lang="EN-US">DC 5V </SPAN>���������� ���������� ���޵Ǵ����� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">. </SPAN>������ �̻��� ���� ��� �ý��ۺ����� ������ �ȵǹǷ� �� ������ �߻��� �� �ֽ��ϴ�<SPAN lang="EN-US">. </SPAN>�켱�� ������ ������� �����Է� ���θ� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">. </SPAN>���� �׸��� ���� �ý��ۺ����� ���� ��ܿ� <SPAN lang="EN-US">DC 5V </SPAN>������ ��Ÿ���� �߱����̿���<SPAN lang="EN-US">(LED) CNP1</SPAN>�� ���嵿�ۻ��¸� ��Ÿ����<SPAN lang="EN-US"> 7-</SPAN>���׸�Ʈ�� �ֽ��ϴ�<SPAN lang="EN-US">. </SPAN></P>
+	<P class="unnamed">시스템보드에 <SPAN lang="EN-US">DC 5V </SPAN>제어전원이 정상적으로 공급되는지를 확인하십시오<SPAN lang="EN-US">. </SPAN>전원에 이상이 있을 경우 시스템보드의 동작이 안되므로 이 에러가 발생할 수 있습니다<SPAN lang="EN-US">. </SPAN>우선은 간단한 방법으로 전원입력 여부를 확인하십시오<SPAN lang="EN-US">. </SPAN>다음 그림과 같이 시스템보드의 좌측 상단에 <SPAN lang="EN-US">DC 5V </SPAN>전압을 나타내는 발광다이오드<SPAN lang="EN-US">(LED) CNP1</SPAN>과 보드동작상태를 나타내는<SPAN lang="EN-US"> 7-</SPAN>세그먼트가 있습니다<SPAN lang="EN-US">. </SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc440289741">ǥ </A><SPAN lang="EN-US">1-14 </SPAN>�ý��ۺ��� �ΰ����� ���󿩺� Ȯ�ι��</P>
+	<P class="unnamed"><A name="_Toc440289741">표 </A><SPAN lang="EN-US">1-14 </SPAN>시스템보드 인가전압 정상여부 확인방법</P>
 	<DIV align="center">
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
 			<TR style="height:1.0cm">
 				<TD width="42" style="width:31.15pt;border:solid windowtext 1.0pt;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B>����</B></P>
+					<P class="unnamed" align="center" style="text-align:center"><B>구분</B></P>
 				</TD>
 				<TD width="134" style="width:100.6pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B>�߱����̿���<SPAN lang="EN-US">(LED)</SPAN></B></P>
+					<P class="unnamed" align="center" style="text-align:center"><B>발광다이오드<SPAN lang="EN-US">(LED)</SPAN></B></P>
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">CNP1</SPAN></B></P>
 				</TD>
 				<TD width="108" style="width:80.95pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">7-</SPAN>���׸�Ʈ</B></P>
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">7-</SPAN>세그먼트</B></P>
 				</TD>
 				<TD width="321" style="width:240.9pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B>ǥ�ó���</B></P>
+					<P class="unnamed" align="center" style="text-align:center"><B>표시내용</B></P>
 				</TD>
 			</TR>
 			<TR style="height:1.0cm">
@@ -79,14 +79,14 @@
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">1</SPAN></P>
 				</TD>
 				<TD width="134" style="width:100.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">�ҵ�</P>
+					<P class="unnamed" align="center" style="text-align:center">소등</P>
 				</TD>
 				<TD width="108" style="width:80.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">�ҵ�</P>
+					<P class="unnamed" align="center" style="text-align:center">소등</P>
 				</TD>
 				<TD width="321" style="width:240.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed">�ý��ۺ��忡 ������ ���������� �ΰ����� ���ϰ� �ֽ��ϴ�<SPAN lang="EN-US">.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">SMPS, </SPAN>���̺�<SPAN lang="EN-US">, </SPAN>Ŀ�������� ���� �������� ������ �Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed">시스템보드에 전원이 정상적으로 인가되지 못하고 있습니다<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">SMPS, </SPAN>케이블<SPAN lang="EN-US">, </SPAN>커넥터접속 등의 전원관련 점검을 하십시오<SPAN lang="EN-US">.</SPAN></P>
 				</TD>
 			</TR>
 			<TR style="height:1.0cm">
@@ -94,13 +94,13 @@
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">2</SPAN></P>
 				</TD>
 				<TD width="134" style="width:100.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">����</P>
+					<P class="unnamed" align="center" style="text-align:center">점등</P>
 				</TD>
 				<TD width="108" style="width:80.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">�ҵ�</P>
+					<P class="unnamed" align="center" style="text-align:center">소등</P>
 				</TD>
 				<TD width="321" style="width:240.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed">�ý��ۺ����� ���ʿ� �ִ� <SPAN lang="EN-US">IO</SPAN>���� ����<SPAN lang="EN-US">(BD531)</SPAN>�� ������ �ΰ����� �ʰų� �����Դϴ�<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed">시스템보드의 뒤쪽에 있는 <SPAN lang="EN-US">IO</SPAN>관련 보드<SPAN lang="EN-US">(BD531)</SPAN>에 전원이 인가되지 않거나 고장입니다<SPAN lang="EN-US">.</SPAN></P>
 				</TD>
 			</TR>
 			<TR style="height:1.0cm">
@@ -108,13 +108,13 @@
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">3</SPAN></P>
 				</TD>
 				<TD width="134" style="width:100.6pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">����</P>
+					<P class="unnamed" align="center" style="text-align:center">점등</P>
 				</TD>
 				<TD width="108" style="width:80.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center">����</P>
+					<P class="unnamed" align="center" style="text-align:center">점등</P>
 				</TD>
 				<TD width="321" style="width:240.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed">���������� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+					<P class="unnamed">전원전압을 확인하십시오<SPAN lang="EN-US">.</SPAN></P>
 				</TD>
 			</TR>
 		</TABLE>
@@ -123,26 +123,26 @@
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="291" height="210" src="images/image369.png"></SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289720">�׸� </A><SPAN lang="EN-US">1.243 </SPAN>�ý��ۺ�����<SPAN lang="EN-US"> DC 5V</SPAN>�����ΰ� Ȯ��</P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289720">그림 </A><SPAN lang="EN-US">1.243 </SPAN>시스템보드의<SPAN lang="EN-US"> DC 5V</SPAN>전원인가 확인</P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:-7.1pt">����� ǥ�� ���� �߱����̿���<SPAN lang="EN-US">(LED) CNP1</SPAN>��<SPAN lang="EN-US"> 7-</SPAN>���׸�Ʈ<SPAN lang="EN-US"> 7-SEGDC</SPAN>�� ��� ����� ���¶�� ���忡 �ΰ��ǰ� �ִ�<SPAN lang="EN-US"> DC 5V </SPAN>�������� ������<SPAN lang="EN-US"> 5.0V~5.3V </SPAN>���� �̳��� �ִ��� Ȯ���Ͻʽÿ�<SPAN lang="EN-US">. </SPAN>������ �� ���� ���� ������ �ִٸ� ��ſ� ������ �� �� �ֽ��ϴ�<SPAN lang="EN-US">. </SPAN>������ġ�� ���� �׸��� ������ ���� ���� �ۿ� �ִٸ�<SPAN lang="EN-US"> SMPS</SPAN>���� ������<SPAN lang="EN-US"> 5.0V~5.3V </SPAN>�������� �����Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-left:-7.1pt">상기의 표와 같이 발광다이오드<SPAN lang="EN-US">(LED) CNP1</SPAN>과<SPAN lang="EN-US"> 7-</SPAN>세그먼트<SPAN lang="EN-US"> 7-SEGDC</SPAN>이 모두 점등된 상태라면 보드에 인가되고 있는<SPAN lang="EN-US"> DC 5V </SPAN>제어전원 전압이<SPAN lang="EN-US"> 5.0V~5.3V </SPAN>영역 이내에 있는지 확인하십시오<SPAN lang="EN-US">. </SPAN>전압이 이 영역 외의 범위에 있다면 통신에 영향을 줄 수 있습니다<SPAN lang="EN-US">. </SPAN>점검위치는 다음 그림과 같으며 만약 범위 밖에 있다면<SPAN lang="EN-US"> SMPS</SPAN>에서 전압을<SPAN lang="EN-US"> 5.0V~5.3V </SPAN>영역으로 조정하십시오<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed" style="margin-left:-7.1pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="316" height="352" src="images/image370.jpg"></SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289721">�׸� </A><SPAN lang="EN-US">1.244 DC 5V</SPAN>���� �������� �� �������</P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc440289721">그림 </A><SPAN lang="EN-US">1.244 DC 5V</SPAN>전원 전압측정 및 조정방법</P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>�ý��ۺ��带 ��ü�Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>시스템보드를 교체하십시오<SPAN lang="EN-US">.</SPAN></B></P>
 	<P class="unnamed" style="margin-bottom:4.8pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-bottom:4.8pt">���̺� �� ����Ȯ�� �Ŀ��� ������ �ذ���� ���� ��쿡�� �ý��ۺ��带 ��ü�Ͽ� �����Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-bottom:4.8pt">케이블 및 전원확인 후에도 문제가 해결되지 않을 경우에는 시스템보드를 교체하여 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed" style="margin-bottom:4.8pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-bottom:4.8pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>���κ��带 ��ü�Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></B></P>
+	<P class="unknown428" style="margin-top:0cm;margin-right:0cm;margin-bottom:4.8pt;margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN></SPAN>메인보드를 교체하십시오<SPAN lang="EN-US">.</SPAN></B></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-bottom:4.8pt">���̺�<SPAN lang="EN-US">, </SPAN>����Ȯ��<SPAN lang="EN-US">, </SPAN>�ý��ۺ��� ��ü �Ŀ��� ������ �ذ���� ���� ��쿡�� ���κ��带 ��ü�Ͽ� �����Ͻʽÿ�<SPAN lang="EN-US">.</SPAN></P>
+	<P class="unnamed" style="margin-bottom:4.8pt">케이블<SPAN lang="EN-US">, </SPAN>전원확인<SPAN lang="EN-US">, </SPAN>시스템보드 교체 후에도 문제가 해결되지 않을 경우에는 메인보드를 교체하여 점검하십시오<SPAN lang="EN-US">.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
