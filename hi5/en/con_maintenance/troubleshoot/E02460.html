@@ -1,158 +1,79 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang="utf-8">
-<HTML lang="ko-KR">
-
 <HEAD>
-
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-
 	<TITLE>E02460 (○ axis) Encoder state error (CE) received</TITLE>
-
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
-
 </HEAD>
-
 <BODY>
-
 	<P class="unnamed"><SPAN lang="ES">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0224 (○ axis) Abnormal encoder state</SPAN></U></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.40.1. Outline</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">While the servo board receives the encoder data periodically through serial communication with the encoder to carry out the servo control of the motor, this error occurs when the data received from the encoder is normal, but for the encoder data, the result of the monitoring of the inside of the encoder itself is in an erroneous state (CE).</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">Counter error (CE): Occurs when deviation in position occurs in the data of the first rotation due to a malfunction or fault when the encoder main power is turned on</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.40.2. Causes and examine methods</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-
 		<TR style="height:62.5pt">
-
 			<TD width="618" style="width:463.4pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:62.5pt">
-
 				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the supply voltage to the encoder.</SPAN></P>
-
 				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Turn off/on the main power after deactivating the error..</SPAN></P>
-
 				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>If the error keeps occurring, replace the motor (encoder) and then test it.</SPAN></P>
-
 				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 			</TD>
-
 		</TR>
-
 	</TABLE>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the supply voltage to the Encoder.</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Power supply voltage to the encoder must be in a range of 5V±5% (4.75V ~ 5.25V) - (encoder side connector's supply voltage). If the voltage is reduced below 4.75V, encoder may not operate normally and it will cause this error.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Power supply voltage to the encoder must be in a range of 5V±5% (4.75V ~ 5.25V) - (encoder side connector’s supply voltage). If the voltage is reduced below 4.75V, encoder may not operate normally and it will cause this error.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please measure the voltage of encoder side's connector-pin (3-4).</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please measure the voltage of encoder side’s connector-pin (3-4).</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="481" height="328" src="images/image202.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the measured voltage is lower than the reference voltage, it is required to turn '+5V ADJ(E) voltage adjustment terminal of the encoder power supply to ensure that the connector voltage at the encoder side can be adjusted within the reference voltage. </SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="461" height="274" src="images/image203.jpg" alt="K-2"></SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Turn off/on the main power after deactivating the error. .</SPAN></B></P>
-
 	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the error keeps occurring even when turning off/on the main power after deactivating the error, replace the motor (encoder) and then test it.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Deactivate the error in the following menu.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. Initialize</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">4. Serial encoder reset</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image236.jpg"></SPAN></P>
-
 	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-
 	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-
 	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-
 	<P class="unnamed"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>If the error keeps occurring, replace the motor (encoder) and then test it</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Motor, Servo Motor is faulty. Please replace the Servo Motor with new one. Below diagram describes the locations of each axis's motor (HS165 Robot). For other Robot, please refer to the Robot's maintenance manual to replace it.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Motor, Servo Motor is faulty. Please replace the Servo Motor with new one. Below diagram describes the locations of each axis’s motor (HS165 Robot). For other Robot, please refer to the Robot’s maintenance manual to replace it.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="264" height="405" src="images/image206.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174163"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.150 locations of each axis's motor (HS165 Robot).</SPAN></P>
-
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174163"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.150 locations of each axis’s motor (HS165 Robot).</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 </BODY>
-
 </HTML>
-

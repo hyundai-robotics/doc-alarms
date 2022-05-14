@@ -1,408 +1,204 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
 <HTML lang="utf-8">
-
 <HEAD>
-
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-
 	<TITLE>E0002 Hardware limit switch in operation</TITLE>
-
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
-
 </HEAD>
-
 <BODY>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="4"><SPAN lang="EN-US">1.1.1.1. </SPAN><SPAN lang="EN-AU">Outline</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed"><SPAN lang="EN-US">Limit switch that is installed at the end of operation area of Robot's each axis has been activated. The Robot will be immobilized immediately for a safety reason and will not be operational until it is moved to a safe operation area by an appropriate method.</SPAN></P>
-
+	<P class="unnamed"><SPAN lang="EN-US">Limit switch that is installed at the end of operation area of Robot’s each axis has been activated. The Robot will be immobilized immediately for a safety reason and will not be operational until it is moved to a safe operation area by an appropriate method.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="4"><SPAN lang="EN-US">1.1.1.2. </SPAN><SPAN lang="EN-AU">Causes and checking methods</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<DIV align="center">
-
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-
 			<TR style="height:121.85pt">
-
 				<TD width="512" style="width:383.65pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:121.85pt">
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please confirm if the Robot actually went out of operation area.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Actions to be taken when a Robot went out of operation area</SPAN></P>
-
 					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If an error occurs though a Robot is in the operation area.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Checking method from a System Board Connector (CNLS)</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Checking method from a Wire Harness (CER1 or CEC1)</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Checking method by examining a limit switch and internal wiring of main frame</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 		</TABLE>
-
 	</DIV>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please confirm if the Robot actually went out of operation area</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please confirm if the Robot actually went out of operation area. If a soft limit error has occurred simultaneously, the Robot did go out of operation area.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please take an appropriate action to move the Robot back into the operation area.</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Operation area may vary to the each Robot model, so as the installed location of limit switches. Please refer to the corresponding Robot's maintenance manual - "Limitations of Operation area"</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Operation area may vary to the each Robot model, so as the installed location of limit switches. Please refer to the corresponding Robot’s maintenance manual - “Limitations of Operation area”</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="355" src="images/image2.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174014"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.1 Installed Locations of Hardware Limit Switches for HS165/HS200 Robot</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="286" height="223" src="images/image3.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174015"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.2 Operation Area for S-axis Limit Switch of HS165/HS200 Robot</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-AU">Actions to be taken when a Robot went out of operation area</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">Please take following actions in order to move a Robot while a hardware limit switch is on. Firstly, enter the system with a manual mode and turn on the enabling switch of Teach Pendant.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="539" height="46" src="images/image4.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">From this stage, execute the Motor On command and move the Robot back into the operation area by using a jog key.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If an error occurs though a Robot is in the operation area</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Firstly, check if the limit (Over-Travel) is being entered consecutively from the Private input signal window of Teach Pendant.</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">This window can be accessed by selecting "</SPAN>『<SPAN lang="EN-US">[F1]: Service</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">1: Monitoring</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">2: Input/output Signal</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">1: Private input signal</SPAN>』<SPAN lang="EN-US">"</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">This window can be accessed by selecting “</SPAN>『<SPAN lang="EN-US">[F1]: Service</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">1: Monitoring</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">2: Input/output Signal</SPAN>』<SPAN lang="EN-US"> → </SPAN>『<SPAN lang="EN-US">1: Private input signal</SPAN>』<SPAN lang="EN-US">”</SPAN></P>
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">A yellow color status on limit (Over-travel) indicates an error status</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Cautions</SPAN><SPAN lang="EN-US">:</SPAN></P>
-
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">On manual mode, a monitoring is enabled only when a Teach Pendant's enabling switch is on. On automatic mode, a monitoring is enabled regardless of a status of enabling switch.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">On manual mode, a monitoring is enabled only when a Teach Pendant’s enabling switch is on. On automatic mode, a monitoring is enabled regardless of a status of enabling switch.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="443" height="266" src="images/image5.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174016"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.3 Limit (Over-Travel) Monitoring is Displayed from the Private input signal Window</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">In these cases, cause of this error can be found from the components that are related to the limit switch. As shown in the diagram below, the limit switch is connected to a controller's System Board from a main frame by using "CER1 &#8211; CEC1" cables.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">In these cases, cause of this error can be found from the components that are related to the limit switch. As shown in the diagram below, the limit switch is connected to a controller’s System Board from a main frame by using “CER1 &#8211; CEC1” cables.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="605" height="302" src="images/image6.jpg" alt="Adobe Systems"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="577" height="223" src="images/image227.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174017"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.4 </SPAN><SPAN lang="EN-AU">Wirings that are related to a Limit Switch Status Input</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Main check points and their orders are</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board </SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Internal wiring of a controller and connector</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">③<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Wire harness and connector</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">④<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Limit switch and a wiring of mainframe</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">And please jump the input line of limit switch at an appropriate point in order to check if a limit (Over-Travel) from monitoring windows turns to white color.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please proceed as follows.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-AU">Checking method from a System Board Connector (CNLS)</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN style="position:absolute;z-index:251585024;left:0px;margin-left:78px;margin-top:1px;width:511px;height:75px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="511" height="75" style="vertical-align:top"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251585024">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>
-
 <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-
 	<tr>
-
 		<td ><IMG src="images/warn.png"/></td>
-
 <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-
 <P class="unnamed"><B><SPAN lang="EN-AU" style="color:red">Warning</SPAN></B></P>
-
 		<P class="unnamed"><SPAN lang="EN-AU" style="color:red">Please make sure the power of a controller has been completely turned off before you connect or remove any cables. Electrocution may cause personal injuries or a property damages </SPAN></P>
-
 		</td>
-
 	</tr>
-
 </table>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">This method uses a CNLS connector of System Board to judge if the board malfunction caused this error.</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please jumper short the pins that are related to the limit switch's input from a CNLS connector as shown below. At this stage, please check the limit (Over-Travel) from the Private input signal monitoring windows.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please jumper short the pins that are related to the limit switch’s input from a CNLS connector as shown below. At this stage, please check the limit (Over-Travel) from the Private input signal monitoring windows.</SPAN></P>
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it turned to a white color, System Board malfunction caused this error. Please replace the board.</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.1pt;margin-bottom:.0001pt;text-indent:-20.15pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it is still yellow which indicates that the error persists.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="516" height="345" src="images/image9.jpg" alt="E-7.JPG"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-AU">Checking method from a wire harness (CER1 or CEC1)</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN style="position:absolute;z-index:251586048;left:0px;margin-left:79px;margin-top:2px;width:510px;height:71px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="510" height="71" style="vertical-align:top"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251586048">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>
-
 		<table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-
 	<tr>
-
 		<td ><IMG src="images/warn.png"/></td>
-
 <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-
 <P class="unnamed"><SPAN lang="EN-AU" style="color:red">Warning</SPAN></P>
-
 		<P class="unnamed"><SPAN lang="EN-AU" style="color:red">Please make sure the power of a controller has been completely turned off before you connect or remove any cables. Electrocution may cause personal injuries or a property damages</SPAN></P>
-
 		</td>
-
 	</tr>
-
 </table>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">This method uses a Wire Harness connector (CER1 or CEC1) to judge if the cable malfunction caused this error.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please remove CEC1 Wire Harness, and jumper short the pins that are related to the limit switch from a CEC1 connector which is attached to a controller. At this stage, please check the limit (Over-Travel) from the Private input signal monitoring windows.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it turned to a white color, internal CEC1 Connector (of a controller) - System Board cable or a connector malfunction caused this error. Please examine them or replace them. </SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it is still yellow which indicates that the error persists, please search a problem that caused this error in an area between the CEC1 connector and the limit switch of main frame.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please reconnect CEC1 Wire Harness, and remove the CER1 Wire Harness from a main frame. After that, please </SPAN><SPAN lang="EN-AU">jumper short the pins that are related to a limit switch from a CER1 connector. </SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">At this stage, please check a limit (Over-Travel) from the Private input signal monitoring windows.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it turned to a white color, Wire Harness cable between CER1 Connector-CEC1 Connector or a connector malfunction caused this error. Please examine them or replace them.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it is still yellow which indicates that the error persists, please search a problem that caused this error in an area between the mainframe sides's CER1 connector and the limit switch. </SPAN></P>
-
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If it is still yellow which indicates that the error persists, please search a problem that caused this error in an area between the mainframe sides’s CER1 connector and the limit switch. </SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="465" height="283" src="images/image10.jpg" alt="E-8.JPG"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-AU">Checking method by examining a limit switch and internal wiring of main frame</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN style="position:absolute;z-index:251587072;left:0px;margin-left:78px;margin-top:0px;width:510px;height:72px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="510" height="72" style="vertical-align:top"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251587072">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>	
-
 <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-
 	<tr>
-
 		<td ><IMG src="images/warn.png"/></td>
-
 <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-
 <P class="unnamed"><B><SPAN lang="EN-AU" style="color:red">Warning</SPAN></B></P>
-
 		<P class="unnamed"><B><SPAN lang="EN-AU" style="color:red">Please make sure the power of a controller has been completely turned off before you connect or remove any cables. Electrocution may cause personal injuries or a property damages.</SPAN></B></P>
-
 		</td>
-
 	</tr>
-
 </table>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please remove the CER1 Wire Harness from a main frame, and use a multi meter to run a short (shortage) test to examine the lines that are related to the limit switch from a main frame's CER1 connector.</SPAN></P>
-
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please remove the CER1 Wire Harness from a main frame, and use a multi meter to run a short (shortage) test to examine the lines that are related to the limit switch from a main frame’s CER1 connector.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If resistance is measures as open status, limit switch or a limit switch &#8211; CER1 connector or a connector malfunction is suspected. Please examine or replace them.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">If resistance is measured as short (shortage) status, other parts need to be examined.&nbsp; Please make an enquiry to our office.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="471" height="319" src="images/image11.jpg" alt="E-9.JPG"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 </BODY>
-
 </HTML>
-
