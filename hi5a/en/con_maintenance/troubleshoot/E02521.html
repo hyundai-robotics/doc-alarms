@@ -1,82 +1,82 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02521 (○ axis) IPM fault &#8211; low-voltage gate drive power</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><B><U><SPAN lang="ES">Previous error code: E0112 (○ axis) IPM fault</SPAN></U></B></P>
-	<P class="unnamed"><SPAN lang="ES">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="ES">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.62.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">A fault output has occurred from an IPM (Intelligent Power Module) </SPAN>&#8211;<SPAN lang="EN-US"> a switch device inside of Servo Drive Unit that drives the motor. IPM fault could occur due to a temperature increase in the heat protection plate, a drop in the control voltage, or an overcurrent output in the IPM. This error occurs when the IPM fault is detected while the servo is off. While in the servo off state, the IPM will carry out inspection only on the control voltage drop. Therefore, checking the gate drive power is required.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.62.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-			<TR style="height:134.2pt">
-				<TD width="605" style="width:16.0cm;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:134.2pt">
-					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt; When the IPM fault error occurs while in the servo off state &gt;</SPAN></B></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.45pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the components that are related to the motor drive.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:79.7pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Replace the CNBS cable of the relevant axis and then check the error.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please replace the servo drive unit and confirm the error.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please replace the servo board(BD544) and confirm the error.</SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the components that are related to the motor drive.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Servo Drive Unit that drives the motor receives a command from the Servo Board (BD544) through CNBS cable, and the current output of internal amplification circuit will be transferred to the motor through wirings that connected to each connectors of axis.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Examine the output cable that connects to the Servo Drive Unit</SPAN></B></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">Examine the wirings that connect the Servo Drive Unit to the motor. Please turn off the power of controller, and remove the connector from the Servo Drive Unit and measure the resistance value between grounds to inspect the occurrence of short circuit.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="511" height="272" src="images/image131.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S00 controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="510" height="271" src="images/image132.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-S30 controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="279" src="images/image133.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(c) Hi5a-N00 controller</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="471" height="277" src="images/image134.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(d) Hi5a-N30 controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998392"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.177 Checking the servo drive unit output cable</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Replacement and inspection of servo drive unit</SPAN></B></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Drive Unit, Servo Drive Unit is faulty. Please replace the Servo Drive Unit with new one.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-S controller</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size Robot’s Servo Drive Unit: SD3X3Y</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size Robot’s Servo Drive Unit: SD3A3D</SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-N controller </SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size Robot’s diode module : SD1L2C</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size Robot’s Servo Drive Unit : SA3A3D</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Replacement of Servo Board (BD544) and examine it</SPAN></B></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Board (BD544), Servo Board (BD544) is faulty. Please replace the Servo Board (BD544) with new one.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+癤�<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E02521 (징횤 axis) IPM fault &#8211; low-voltage gate drive power</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><B><U><SPAN lang="ES">Previous error code: E0112 (징횤 axis) IPM fault</SPAN></U></B></P>
+	<P class="unnamed"><SPAN lang="ES">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="ES">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.62.1. Outline</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">A fault output has occurred from an IPM (Intelligent Power Module) </SPAN>&#8211;<SPAN lang="EN-US"> a switch device inside of Servo Drive Unit that drives the motor. IPM fault could occur due to a temperature increase in the heat protection plate, a drop in the control voltage, or an overcurrent output in the IPM. This error occurs when the IPM fault is detected while the servo is off. While in the servo off state, the IPM will carry out inspection only on the control voltage drop. Therefore, checking the gate drive power is required.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.62.2. Causes and examine methods</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:134.2pt">
+				<TD width="605" style="width:16.0cm;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:134.2pt">
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt; When the IPM fault error occurs while in the servo off state &gt;</SPAN></B></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:58.45pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the components that are related to the motor drive.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:79.7pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Replace the CNBS cable of the relevant axis and then check the error.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please replace the servo drive unit and confirm the error.</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please replace the servo board(BD544) and confirm the error.</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the components that are related to the motor drive.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Servo Drive Unit that drives the motor receives a command from the Servo Board (BD544) through CNBS cable, and the current output of internal amplification circuit will be transferred to the motor through wirings that connected to each connectors of axis.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Examine the output cable that connects to the Servo Drive Unit</SPAN></B></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">Examine the wirings that connect the Servo Drive Unit to the motor. Please turn off the power of controller, and remove the connector from the Servo Drive Unit and measure the resistance value between grounds to inspect the occurrence of short circuit.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="511" height="272" src="images/image131.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S00 controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="510" height="271" src="images/image132.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-S30 controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="279" src="images/image133.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(c) Hi5a-N00 controller</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="471" height="277" src="images/image134.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(d) Hi5a-N30 controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998392"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.177 Checking the servo drive unit output cable</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Replacement and inspection of servo drive unit</SPAN></B></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Drive Unit, Servo Drive Unit is faulty. Please replace the Servo Drive Unit with new one.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">횠<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-S controller</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size Robot's Servo Drive Unit: SD3X3Y</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size Robot's Servo Drive Unit: SD3A3D</SPAN></P>
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">횠<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-N controller </SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size Robot's diode module : SD1L2C</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size Robot's Servo Drive Unit : SA3A3D</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><B><SPAN lang="EN-US">Replacement of Servo Board (BD544) and examine it</SPAN></B></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error does not persist after the replacement of Servo Board (BD544), Servo Board (BD544) is faulty. Please replace the Servo Board (BD544) with new one.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>

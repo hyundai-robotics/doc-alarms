@@ -1,143 +1,143 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E0119 (°€ Axis) Overload</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.16.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Motor or the drive unit is being overloaded. If motor or the drive unit is overloaded, the Servo Board detects an error and immobilizes the Robot.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.16.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-			<TR style="height:145.85pt">
-				<TD width="555" style="width:416.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:145.85pt">
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check if the Robot is loaded within its rated load.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if there is a possible collision point during the Robot°Øs operation.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check if the axis brake works properly.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please replace the Servo Board and examine an error.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if the Drive Unit operates normally.</SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if the Robot is loaded within its rated load.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the Robot is loaded within its rated load. This error may occur if the load exceeds Robot°Øs specification (load does not only include the tools that can be attached at the end of Robot, but also include all the cables and other components that can be attached to the Robot.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Using measuring equipment is recommended, but if it is not an option, load can be measured by using a °Æload estimation function°Ø from the controller. However this function only can measure the load of a tool that attached at the end of the Robot.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Method to estimate the load is as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Enter to the load estimate function</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt">°∫<SPAN lang="EN-US">[F2]: System</SPAN>°ª<SPAN lang="EN-US"> °Ê </SPAN>°∫<SPAN lang="EN-US">6: Automatic constant setting</SPAN>°ª<SPAN lang="EN-US">°Ê </SPAN>°∫<SPAN lang="EN-US">4: Load estimation function</SPAN>°ª</P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="261" src="images/image189.jpg"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image190.jpg"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image191.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Select the tool number, estimation method, enable status of inertia estimation from the load estimation function.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="442" height="264" src="images/image192.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Tool number to save after the load estimation</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Estimation method: Load estimation 2</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">®™<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Inertia estimation: Enable</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="444" height="266" src="images/image193.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Click Normal Drive to execute.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Press the Motor On switch, and hold the deadman and click the Play Normal.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="278" src="images/image194.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Decide if you want to register the result of load estimation.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Once the load estimation drive has completed, the estimated result will be displayed on the screen.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="473" height="330" src="images/image195.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If you press the close button, a message box will appear to ask you if you want to reflect the result. If you click °Æyes°Ø it will be saved.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if there is a possible collision point during the Robot°Øs operation.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if there is a point where the Robot may be interfered or have a collision in the operation area. This error may occur if the Robot is interfered by other equipment. In that case, please modify the job program so the interference will not occur.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if the axis brake works properly.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Brake release functions of the corresponding axis maybe have an error, or the release voltage of the brake release may have problem.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the brake release of each axis has an error</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please remove the motor°Øs power supply (motor OFF) and check if you can release the brake of the axis with manual brake switch. You can confirm it with the sound of brake release from the motor.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="280" height="285" src="images/image196.jpg"><IMG width="298" height="245" src="images/image178.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="557" height="242" src="images/image197.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998290"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.75 Location of the Manual Brake Release Switch</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">If the corresponding axis°Øs brake cannot be released, output status of the brake release voltage in the System Board need to be examined. Please remove the brake wiring (CNB2, CNB7, CNB8 connector) and use the manual brake switch for the brake voltage°Øs output.</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please measure the brake voltage of corresponding axis output (from the CNB2, CNB7, CNB8 connector) to check if it is over 20V. If there is an axis which has a voltage output under the 20V, System Board (BD530) is faulty. Please replace it.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="579" height="318" src="images/image180.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998291"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.76 Pin Locations of CNB2, CNB7 Connectors</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998412"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine the error on brake°Øs power supply.</SPAN></A></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If °∞E0012 Brake power error°± message is displayed at the same time, there is an error on Brake°Øs power supply unit. From TP, please access </SPAN>°∫<SPAN lang="EN-US">[F1]: Service</SPAN>°ª <SPAN lang="EN-US">°Ê</SPAN>°∫<SPAN lang="EN-US">1: Monitoring</SPAN>°ª <SPAN lang="EN-US">°Ê </SPAN>°∫<SPAN lang="EN-US">2: Input/Output signal</SPAN>°ª <SPAN lang="EN-US">°Ê </SPAN>°∫<SPAN lang="EN-US">1: Private input signal</SPAN>°ª <SPAN lang="EN-US">°Ê </SPAN>°∫<SPAN lang="EN-US">Overload(Brake Power supply)</SPAN>°ª<SPAN lang="EN-US">. If it is highlighted as yellow, the fuse for Brake (in the Electrical Module)°Øs power supply has been disconnected. Please replace the fuse.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="365" height="269" src="images/image181.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="445" height="282" src="images/image198.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998292"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.77 Electronic Module</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the fuse is normal, please measure the Brake power supply (DC24V) from the System Board. There are 3 test pins at the center of the board. Use the TMB as a reference terminal and the TPPB terminal value should be over DC20V. If it is below 20V, the power supply unit that generates the power for the brake has an error. Please replace the Electrical Module.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="564" height="194" src="images/image199.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998293"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.78 Brake Power Supply Test Pin</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please replace the Servo Board and examine an error.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">This error may occur if there is an error on the Servo Board. Please replace the board to check.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="345" height="302" src="images/image200.png"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="299" height="313" src="images/image201.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998294"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.79 Replacing the servo board</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if the Drive Unit operates normally.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the Drive Unit of corresponding axis (Motor, Decelerator) works properly.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="260" height="321" src="images/image202.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+Ôªø<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="ko-KR">
+<HEAD>
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+	<TITLE>E0119 (¬°√õ Axis) Overload</TITLE>
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+</HEAD>
+<BODY>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.16.1. Outline</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">Motor or the drive unit is being overloaded. If motor or the drive unit is overloaded, the Servo Board detects an error and immobilizes the Robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.16.2. Causes and examine methods</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<DIV align="center">
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+			<TR style="height:145.85pt">
+				<TD width="555" style="width:416.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:145.85pt">
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check if the Robot is loaded within its rated load.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if there is a possible collision point during the Robot's operation.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please check if the axis brake works properly.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please replace the Servo Board and examine an error.</SPAN></P>
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if the Drive Unit operates normally.</SPAN></P>
+				</TD>
+			</TR>
+		</TABLE>
+	</DIV>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if the Robot is loaded within its rated load.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the Robot is loaded within its rated load. This error may occur if the load exceeds Robot's specification (load does not only include the tools that can be attached at the end of Robot, but also include all the cables and other components that can be attached to the Robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Using measuring equipment is recommended, but if it is not an option, load can be measured by using a ¬°¬Æload estimation function' from the controller. However this function only can measure the load of a tool that attached at the end of the Robot.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Method to estimate the load is as below.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Enter to the load estimate function</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt">„Äé<SPAN lang="EN-US">[F2]: System</SPAN>„Äè<SPAN lang="EN-US"> ‚Üí </SPAN>„Äé<SPAN lang="EN-US">6: Automatic constant setting</SPAN>„Äè<SPAN lang="EN-US">‚Üí </SPAN>„Äé<SPAN lang="EN-US">4: Load estimation function</SPAN>„Äè</P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="261" src="images/image189.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image190.jpg"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="431" height="258" src="images/image191.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Select the tool number, estimation method, enable status of inertia estimation from the load estimation function.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="442" height="264" src="images/image192.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Tool number to save after the load estimation</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Estimation method: Load estimation 2</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">√ò<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Inertia estimation: Enable</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="444" height="266" src="images/image193.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Click Normal Drive to execute.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Press the Motor On switch, and hold the deadman and click the Play Normal.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="278" src="images/image194.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Decide if you want to register the result of load estimation.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Once the load estimation drive has completed, the estimated result will be displayed on the screen.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="473" height="330" src="images/image195.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If you press the close button, a message box will appear to ask you if you want to reflect the result. If you click ¬°¬Æyes' it will be saved.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if there is a possible collision point during the Robot's operation.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if there is a point where the Robot may be interfered or have a collision in the operation area. This error may occur if the Robot is interfered by other equipment. In that case, please modify the job program so the interference will not occur.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if the axis brake works properly.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Brake release functions of the corresponding axis maybe have an error, or the release voltage of the brake release may have problem.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the brake release of each axis has an error</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please remove the motor's power supply (motor OFF) and check if you can release the brake of the axis with manual brake switch. You can confirm it with the sound of brake release from the motor.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="280" height="285" src="images/image196.jpg"><IMG width="298" height="245" src="images/image178.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="557" height="242" src="images/image197.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998290"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.75 Location of the Manual Brake Release Switch</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">If the corresponding axis's brake cannot be released, output status of the brake release voltage in the System Board need to be examined. Please remove the brake wiring (CNB2, CNB7, CNB8 connector) and use the manual brake switch for the brake voltage's output.</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">Please measure the brake voltage of corresponding axis output (from the CNB2, CNB7, CNB8 connector) to check if it is over 20V. If there is an axis which has a voltage output under the 20V, System Board (BD530) is faulty. Please replace it.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="579" height="318" src="images/image180.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998291"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.76 Pin Locations of CNB2, CNB7 Connectors</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998412"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine the error on brake's power supply.</SPAN></A></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If "E0012 Brake power error" message is displayed at the same time, there is an error on Brake's power supply unit. From TP, please access </SPAN>„Äé<SPAN lang="EN-US">[F1]: Service</SPAN>„Äè <SPAN lang="EN-US">‚Üí</SPAN>„Äé<SPAN lang="EN-US">1: Monitoring</SPAN>„Äè <SPAN lang="EN-US">‚Üí </SPAN>„Äé<SPAN lang="EN-US">2: Input/Output signal</SPAN>„Äè <SPAN lang="EN-US">‚Üí </SPAN>„Äé<SPAN lang="EN-US">1: Private input signal</SPAN>„Äè <SPAN lang="EN-US">‚Üí </SPAN>„Äé<SPAN lang="EN-US">Overload(Brake Power supply)</SPAN>„Äè<SPAN lang="EN-US">. If it is highlighted as yellow, the fuse for Brake (in the Electrical Module)'s power supply has been disconnected. Please replace the fuse.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="365" height="269" src="images/image181.png"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="445" height="282" src="images/image198.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998292"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.77 Electronic Module</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the fuse is normal, please measure the Brake power supply (DC24V) from the System Board. There are 3 test pins at the center of the board. Use the TMB as a reference terminal and the TPPB terminal value should be over DC20V. If it is below 20V, the power supply unit that generates the power for the brake has an error. Please replace the Electrical Module.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="564" height="194" src="images/image199.jpg"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998293"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.78 Brake Power Supply Test Pin</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please replace the Servo Board and examine an error.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">This error may occur if there is an error on the Servo Board. Please replace the board to check.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="345" height="302" src="images/image200.png"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="299" height="313" src="images/image201.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998294"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.79 Replacing the servo board</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(5)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if the Drive Unit operates normally.</SPAN></B></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the Drive Unit of corresponding axis (Motor, Decelerator) works properly.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="260" height="321" src="images/image202.png" alt="Adobe Systems"></SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+</BODY>
+</HTML>
