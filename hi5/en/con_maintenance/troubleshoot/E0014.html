@@ -10,13 +10,13 @@
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US">1.1.4.1. Outline</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Ref215579260"></A><A name="_Toc215579032"><SPAN lang="EN-US">For some reason the motor’s power supply to AMP has been shut down. Main examines the safety signals in order find the reason of the motor’s power shut down. If no reason is found, this message will be displayed.</SPAN></A></P>
+	<P class="unnamed"><A name="_Ref215579260"></A><A name="_Toc215579032"><SPAN lang="EN-US">For some reason the motor's power supply to AMP has been shut down. Main examines the safety signals in order find the reason of the motor's power shut down. If no reason is found, this message will be displayed.</SPAN></A></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Following diagram shows compositions of various safety signals that can shut down the motor’s power. Main periodically examines the ON/OFF status of those safety signals. If a momentary contact malfunction occurs between the periods, main will not be able to detect it and displays this message instead.</SPAN></P>
+	<P class="unnamed"><SPAN lang="EN-US">Following diagram shows compositions of various safety signals that can shut down the motor's power. Main periodically examines the ON/OFF status of those safety signals. If a momentary contact malfunction occurs between the periods, main will not be able to detect it and displays this message instead.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="410" src="images/image27.jpg"></SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174027"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.14 Concept Diagram of Safety Circuit for Motor’s Power ON/OFF</SPAN></P>
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174027"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.14 Concept Diagram of Safety Circuit for Motor's Power ON/OFF</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="4"><SPAN lang="EN-US">1.1.4.2. </SPAN><SPAN lang="EN-AU">Causes and checking methods</SPAN></P>
@@ -39,19 +39,19 @@
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the status of DC 24V (P1-M1) power and cables.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the System Board is being supplied with DC 24V control power (P1, M1) properly. This error can be caused if there is a problem with the power as it will affect the safety sequence of the System Board. Power is to be supplied by SMPS’s CN6 Connector-System Board CNP2 Connector. Please check if the power level is varying or is there any problem with the cable.</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the System Board is being supplied with DC 24V control power (P1, M1) properly. This error can be caused if there is a problem with the power as it will affect the safety sequence of the System Board. Power is to be supplied by SMPS's CN6 Connector-System Board CNP2 Connector. Please check if the power level is varying or is there any problem with the cable.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="555" height="363" src="images/image28.jpg"></SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174028"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.15 Method of Connecting DC24V Power and Measuring Voltage of the System Board (BD530)</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check if there is a problem with CPUERR, EXOUT signals</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Main board generates CPUERR or EXOUT signals in a case when systemic error has occurred (e.g. power shut down, Servo error). This signal will be transferred to the System Board and block the motor on command in terms of hardware. Motor’s power will be immediately shut down for a safety reason. However, these signals may be generated abnormally, and it will shut down the motor’s power.</SPAN></P>
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Main board generates CPUERR or EXOUT signals in a case when systemic error has occurred (e.g. power shut down, Servo error). This signal will be transferred to the System Board and block the motor on command in terms of hardware. Motor's power will be immediately shut down for a safety reason. However, these signals may be generated abnormally, and it will shut down the motor's power.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">System Board’s 7-segment index may give you an indication of the situation.7-segment displays “H” when CPUERR is being transmitted to the System Board. Also the CPUERR, EXOUT LED which located at the center of the System Board indicate the error situation (figure 6.21) These LED lights will be on if it is a normal status, and the lights will be off if it is not.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">System Board's 7-segment index may give you an indication of the situation.7-segment displays "H" when CPUERR is being transmitted to the System Board. Also the CPUERR, EXOUT LED which located at the center of the System Board indicate the error situation (figure 6.21) These LED lights will be on if it is a normal status, and the lights will be off if it is not.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">However if the signal appears time to time for a very short moments, 7-segment and LED won’t be able to indicate it. In such case, error occurrence must be observed while ignoring the two signals by using DIP switch SW1. Method to ignore the signal is to, as shown in the figure 6.21, turn on the No 1(to ignore CPUERR) and the No 2 (to ignore EXOUT) of the DIP switch SW1. At this point all LED lights will be on.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">However if the signal appears time to time for a very short moments, 7-segment and LED won't be able to indicate it. In such case, error occurrence must be observed while ignoring the two signals by using DIP switch SW1. Method to ignore the signal is to, as shown in the figure 6.21, turn on the No 1(to ignore CPUERR) and the No 2 (to ignore EXOUT) of the DIP switch SW1. At this point all LED lights will be on.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error no longer persists after the system restart, main board generated these signals or CANS1 Connector/Cable malfunction is suspected.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
@@ -60,7 +60,7 @@
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc461174029"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.16 Location 7-SEG, LED and DIP Switch (CPUERR error related) on a System Board</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a Main Board generating this signal without any other indication of errors, please check the PLD version of the Main Board. Over V0.7 is normal. If main board’s PLD version is normal, please examine the CANS1 connector and cables.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a Main Board generating this signal without any other indication of errors, please check the PLD version of the Main Board. Over V0.7 is normal. If main board's PLD version is normal, please examine the CANS1 connector and cables.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed"><SPAN style="position:absolute;z-index:251588096;left:0px;margin-left:71px;margin-top:8px;width:541px;height:72px">
@@ -287,7 +287,7 @@
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (wires, connector etc.) malfunction</SPAN></P>
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the cabling between the Electrical Module (PSM or PDM) that an electrical connector is installed and the System Board (BD530) that collects monitoring signals.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The cable name is CNMS and it enters to the Electrical Module through the top rear of the System Board (figure 1.17). Please check the connection status of this cable’s connector.</SPAN></P>
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The cable name is CNMS and it enters to the Electrical Module through the top rear of the System Board (figure 1.17). Please check the connection status of this cable's connector.</SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="342" height="210" src="images/image55.jpg" alt="C-26"></SPAN></P>
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
