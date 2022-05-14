@@ -1,840 +1,420 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML lang="utf-8">
-<HTML lang="ko-KR">
-
 <HEAD>
-
 	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-
 	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-
 	<TITLE>E02830 Disconnection of communication with the system board</TITLE>
-
 	<LINK rel="stylesheet" href="../default.css" type="text/css">
-
 </HEAD>
-
 <BODY>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0022 Abnormal communication between internal modules</SPAN></U></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.87.1. Outline</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">Internal modules, such as the system board and the user application board, send data to and receive data from the main board using CAN communication. While the main board is communicating with the system board, if there is no replay within a certain time, this error will occur.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">The system board is a module that controls the input and output of the controller power sequence according to the safety signal input. Accordingly, once this error occurs, all the functions of the board will be stopped to maintain a safe state. At this time, the main board will cut off the CAN communication. In order to re active all the functions, a controller must be restarted. </SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.87.2. Causes and examine methods</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<DIV align="center">
-
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-
 			<TR style="height:212.9pt">
-
 				<TD width="603" style="width:451.95pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:212.9pt">
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>General examine</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please check the connection status of CAN communication cable.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please check the power status. (power voltage or connection status of cable)</SPAN></P>
-
 					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>If an error persists even after a restart of controller</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please check a System Board malfunction.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please replace a malfunction parts and test it (Main Board, System Board, cables)</SPAN></P>
-
 					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>If an error occurs while a controller is normally operating </SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please observe changes in surrounding environment.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the CAN communication line.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the CAN communication connector for user's module.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the connection of termination resistor.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the wiring structures.</SPAN></P>
-
 					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings;color:red">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine if a communication cable uses a twist line.</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 		</TABLE>
-
 	</DIV>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>General examine</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If this error occurred while a system is normally operating, please examine the following for a start.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<TABLE class="unnamed" border="0" cellspacing="0" cellpadding="0" style="background:#D9D9D9;border-collapse:collapse">
-
 		<TR style="height:70.9pt">
-
 			<TD width="80" style="width:60.3pt;padding:0cm 5.4pt 0cm 5.4pt;height:70.9pt">
-
 				<P class="unnamed"><SPAN lang="EN-US"><IMG width="66" height="55" src="images/image77.png"></SPAN></P>
-
 			</TD>
-
 			<TD width="539" style="width:404.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:70.9pt">
-
 				<P class="unnamed"><SPAN style="position:absolute;z-index:251739184;left:0px;margin-left:-5px;margin-top:3px;width:527px;height:91px">
-
 					<TABLE cellpadding="0" cellspacing="0">
-
 						<TR>
-
 							<TD width="527" height="91" style="vertical-align:top"></TD>
-
 						</TR>
-
 					</TABLE>
-
 					</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739184">
-
 					<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 						<TR>
-
 							<TD></TD>
-
 						</TR>
-
 					</TABLE>
-
 					</SPAN></P>
-
 				<DIV style="padding:3.6pt 7.2pt 3.6pt 7.2pt" class="shape">
-
 					<P class="unnamed"><B><SPAN lang="EN-US">Reference</SPAN></B></P>
-
 					<P class="unnamed"><B><SPAN lang="EN-US" style="color:red">Once "E0022 Communication error among inner modules" occurs, mainboard will not establish a communication with system board even if a system board initiates communication. Controller must be restarted in order to reestablish a communication. </SPAN></B></P>
-
 				</DIV>
-
 			</TD>
-
 		</TR>
-
 	</TABLE>
-
 	&nbsp;
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please check the connection status of CAN communication cable</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check if a CAN cable between Main Board and System Boards are well connected. Please remove and reconnect the CAN connectors of Main Board and System Board and check if an error persists, in order to check connector's connection status.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="292" height="331" src="images/image306.png"></SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN style="position:absolute;z-index:251739185;left:0px;margin-left:53px;margin-top:285px;width:90px;height:46px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="90" height="46" bgcolor="white" style="vertical-align:top;background:white"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739185">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>
-
 	<DIV style="padding:3.6pt 7.2pt 3.6pt 7.2pt" class="shape">
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Main board</SPAN></P>
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(BD511)</SPAN></P>
-
 	</DIV>
-
 	&nbsp;<SPAN lang="EN-US"><IMG width="459" height="412" src="images/image88.png" alt="Adobe Systems"></SPAN>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998446"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.231 CAN Communication Cable Connection between a Main Board (BD511) and a System Board (BD530)</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please check the power status (power voltage or connection status of cable).</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check if a DC 5V control power is being supplied to System Board properly. If there is a problem with a power, this error may occur as the System Board will not operate.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check if a power is being supplied or not by using a simple method. As a below diagram, there are LED CNP1 that indicates DC 5V voltage and 7-segment that indicates the board operating status on an upper right side of System Board.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><A name="_Toc443998494"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-12 Method to Check the whether the Rated Voltage on System Board is Normal or Not</SPAN></P>
-
 	<DIV align="center">
-
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="98%" style="width:98.0%;border-collapse:collapse;border:none">
-
 			<TR style="height:1.0cm">
-
 				<TD width="72" style="width:54.15pt;border:solid windowtext 1.0pt;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Category</SPAN></B></P>
-
 				</TD>
-
 				<TD width="80" style="width:60.0pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">LED</SPAN></B></P>
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">CNP1</SPAN></B></P>
-
 				</TD>
-
 				<TD width="95" style="width:70.9pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">7- Segment</SPAN></B></P>
-
 				</TD>
-
 				<TD width="360" style="width:269.95pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Result</SPAN></B></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="72" style="width:54.15pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">1</SPAN></P>
-
 				</TD>
-
 				<TD width="80" style="width:60.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Off</SPAN></P>
-
 				</TD>
-
 				<TD width="95" style="width:70.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Off</SPAN></P>
-
 				</TD>
-
 				<TD width="360" style="width:269.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">Power on a System Board is has not been authorized properly.</SPAN></P>
-
 					<P class="unnamed"><SPAN lang="EN-US">Please examine the power related parts such as SMPS, Cable, Connector connections etc.</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="72" style="width:54.15pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">2</SPAN></P>
-
 				</TD>
-
 				<TD width="80" style="width:60.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">On</SPAN></P>
-
 				</TD>
-
 				<TD width="95" style="width:70.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Off</SPAN></P>
-
 				</TD>
-
 				<TD width="360" style="width:269.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">Power of IO related board (BD531) that located at the rear of system is not authorized or malfunction. </SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="72" style="width:54.15pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">3</SPAN></P>
-
 				</TD>
-
 				<TD width="80" style="width:60.0pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">On</SPAN></P>
-
 				</TD>
-
 				<TD width="95" style="width:70.9pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">On</SPAN></P>
-
 				</TD>
-
 				<TD width="360" style="width:269.95pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">Please check the power voltage.</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 		</TABLE>
-
 	</DIV>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="291" height="210" src="images/image307.png"></SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998447"></A><A name="_Toc441656632"></A><A name="_Toc440289709"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.232 Check whether the DC 5V power is supplied to the system board</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">If the lights of LED CNP1 and 7-segment DC are all on as above table, please check if the DC 5V control power that authorized on a board is in a range of 5.0V~5.3V.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">If the voltage is out of this range, it may effect to the communication. Check points are as below diagram and it the voltage is out of range, please configure it to a range of 5.0V~5.3V from a SMPS.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN style="position:absolute;z-index:251739186;left:0px;margin-left:312px;margin-top:70px;width:243px;height:39px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="243" height="39" bgcolor="white" style="border:.75pt solid black;vertical-align:top;background:white"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739186">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>
-
 	<DIV style="padding:4.35pt 7.95pt 4.35pt 7.95pt" class="shape">
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">TB1 Voltage control: DC 5.0~5.3V</SPAN></P>
-
 	</DIV>
-
 	&nbsp;<SPAN style="position:absolute;z-index:251739187;left:0px;margin-left:301px;margin-top:364px;width:252px;height:37px">
-
 	<TABLE cellpadding="0" cellspacing="0">
-
 		<TR>
-
 			<TD width="252" height="37" bgcolor="white" style="border:.75pt solid black;vertical-align:top;background:white"></TD>
-
 		</TR>
-
 	</TABLE>
-
 	</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739187">
-
 	<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 		<TR>
-
 			<TD></TD>
-
 		</TR>
-
 	</TABLE>
-
 	</SPAN>
-
 	<DIV style="padding:4.35pt 7.95pt 4.35pt 7.95pt" class="shape">
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">TB1 Measuring voltage: DC 5.0~5.3V</SPAN></P>
-
 	</DIV>
-
 	&nbsp;<SPAN lang="EN-US"><IMG width="414" height="460" src="images/image308.jpg"></SPAN>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998448"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.233 Measuring a Voltage of DC 5V and Controlling Method</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>If an error persists even after a restart of controller</SPAN></B></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If an error message displayed because the error is already occurring even after the controller has been restarted, the faulty area can be identified by performing a series of examines.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<TABLE class="unnamed" border="0" cellspacing="0" cellpadding="0" style="background:#D9D9D9;border-collapse:collapse">
-
 		<TR style="height:94.9pt">
-
 			<TD width="80" style="width:60.2pt;padding:0cm 5.4pt 0cm 5.4pt;height:94.9pt">
-
 				<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="56" height="46" src="images/image91.png"></SPAN></P>
-
 			</TD>
-
 			<TD width="539" style="width:404.1pt;padding:0cm 5.4pt 0cm 5.4pt;height:94.9pt">
-
 				<P class="unnamed"><SPAN style="position:absolute;z-index:251739188;left:0px;margin-left:-6px;margin-top:3px;width:528px;height:121px">
-
 					<TABLE cellpadding="0" cellspacing="0">
-
 						<TR>
-
 							<TD width="528" height="121" style="vertical-align:top"></TD>
-
 						</TR>
-
 					</TABLE>
-
 					</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739188">
-
 					<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 						<TR>
-
 							<TD></TD>
-
 						</TR>
-
 					</TABLE>
-
 					</SPAN></P>
-
 				<DIV style="padding:3.6pt 7.2pt 3.6pt 7.2pt" class="shape">
-
 					<P class="unnamed"><B><SPAN lang="EN-AU">Reference</SPAN></B></P>
-
 					<P class="unnamed"><B><SPAN lang="EN-AU" style="color:red">If you are using's a user's module (BD58x), please remove a CAN cable that connected to this module before you perform this test. It is to eliminate possible elements that will effect to the test. If this error does not persists after a restart of a controller followed by a removal of user's module cable, the cause of an error is related to a user's module. Please refer to the following paragraph.</SPAN></B></P>
-
 				</DIV>
-
 			</TD>
-
 		</TR>
-
 	</TABLE>
-
 	&nbsp;
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">In order to remove a user's module CAN communication from a controller, please unplug the CAN2 and CANS2 connectors from a System Board as below diagram. If you restart the controller, only a Main Board and System Board will keep the CAN communication</SPAN><SPAN lang="EN-US">.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="529" height="228" src="images/image92.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998449"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.234 Method to Remove CAN Communication Connection from User's Module (BD58x)</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please check the malfunction status of System Board</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">System Board has a 7-segment that indicates a various status. By examining it, you may determine if a System Board is malfunctioning or not. After a controller has been restarted, if the indicator does not display the content in a rotation as below, System Board malfunction is suspected. Please replace it.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="453" height="203" src="images/image93.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998450"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.235 Location of 7-segment on a System Board (BD530)</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="388" height="219" src="images/image94.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998451"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.236 Normal Display of 7-segment on a System board when Restarted</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please replace a malfunction part and test it</SPAN><SPAN lang="EN-US">.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">If above examines do not resolve an error, you will have to replace the parts that related to this error and test them. The cause might be a circuit malfunction that related to CAN communication inside of the board and it is difficult to be identified from an outside.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">There are 3 parts as below diagram &#8211; System Board (BD530), Main Board (BD511), Cable. (If a Main Board and other option module (BD58x) were having a CAN communication, the cause of an error is not likely from Main Board or cable. Please replace a System Board and test it).</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="488" height="358" src="images/image87.png"></SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN style="position:absolute;z-index:251739189;left:0px;margin-left:47px;margin-top:282px;width:102px;height:48px">
-
 		<TABLE cellpadding="0" cellspacing="0">
-
 			<TR>
-
 				<TD width="102" height="48" bgcolor="white" style="vertical-align:top;background:white"></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN><SPAN style="position:absolute;left:0pt;z-index:251739189">
-
 		<TABLE cellpadding="0" cellspacing="0" width="100%">
-
 			<TR>
-
 				<TD></TD>
-
 			</TR>
-
 		</TABLE>
-
 		</SPAN></P>
-
 	<DIV style="padding:3.6pt 7.2pt 3.6pt 7.2pt" class="shape">
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Main board</SPAN></P>
-
 		<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(BD511)</SPAN></P>
-
 	</DIV>
-
 	&nbsp;<SPAN lang="EN-US"><IMG width="447" height="400" src="images/image95.png" alt="Adobe Systems"></SPAN>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998452"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.237 Location of CAN Communication Cable and a Main Board (BD511)</SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Error occurring while a controller is operating normally</SPAN></B></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please observe changes in surrounding environment.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-AU">Please observe if there have been any changes in the surrounding field. Check if a new large capacity electric power device has been installed. Quality of electric power and a shortage may effect to the communication and cause this error.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine a CAN communication line CAN.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Property of matter CAN communication line may be connected with a user's module (BD58x) as well as a System Board and this may cause an error due to a effect caused by a property of line's material. So, if a user's module is being used, please run the following examines.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please examine a CAN communication connector for user's module.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-AU">Data communication with a Main Board uses a half-duplex CAN. Sub modules of controllers are consists of a Daisy chain that uses CAN data communication. So the board has 2 CAN connectors that indicated as CANS1, CANS2. Please check if those connections are valid.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="423" height="178" src="images/image96.png" alt="Adobe Systems"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998453"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.238 CAN Connector CANS1, CANS2 of User's Module</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><A name="_Toc443998495"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-13 Pin Locations for CAN Connector of User's Module</SPAN></P>
-
 	<DIV align="center">
-
 		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-AU">Number</SPAN></B></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-AU">Title</SPAN></B></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border:solid windowtext 1.0pt;border-left:none;background:#FFFF99;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-AU">Use</SPAN></B></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">1</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">Shield</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">To connect the electric shield line of CAN cable</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">2</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(DC5V GND)</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-AU">To connect board power DC5V ground</SPAN></P>
-
 					<P class="unnamed"><SPAN lang="EN-AU">(Connection with CNP1 is recommended)</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">3</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">CAN_G</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">To connect a ground for CAN communication</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">4</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">CAN_L1</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">To connect L signal of CAN communication</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">5</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">CAN_H1</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-US">To connect H signal of CAN communication</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 			<TR style="height:1.0cm">
-
 				<TD width="67" style="width:50.3pt;border:solid windowtext 1.0pt;border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">6</SPAN></P>
-
 				</TD>
-
 				<TD width="78" style="width:58.25pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(DC5V)</SPAN></P>
-
 				</TD>
-
 				<TD width="460" style="width:345.05pt;border-top:none;border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-
 					<P class="unnamed"><SPAN lang="EN-AU">To connect board power DC 5V (Connection with CNP1 is recommended)</SPAN></P>
-
 				</TD>
-
 			</TR>
-
 		</TABLE>
-
 	</DIV>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please examine the connection of terminal resistor.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-AU">If numbers of boards are connected to each other, a terminal resistor must be handled clearly. CAN data communication uses daisy chain method. So the terminal resistor only should be connected to the last CAN communication cable and the terminal resistor must not be connected to any boards in between. Terminal resistor's connection uses a JP1 jumper that located next to the CANS1 and CANS2 connector on a board. If JP1 has been shorted it means that the terminal resistor is connected, and if JP1 has been opened, it eliminates the terminal resistor connection. Please refer to the following </SPAN><SPAN lang="EN-US">Figure</SPAN><SPAN lang="EN-AU">.</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="421" height="223" src="images/image97.png" alt="Adobe Systems"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998454"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.239 Connecting Method of Terminal Resistor on a CAN Communication Line</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please examine if a communication cable uses a twist line.</SPAN></P>
-
 	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">CAN communication uses twist </SPAN><SPAN lang="EN-AU">pair</SPAN><SPAN lang="EN-US"> wiring in order to ensure a high quality of communication against external noise. CAN_H1 and CAN_L1 signal line must be twisted to each other (please refer to figure 6.36).</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="180" height="126" src="images/image98.jpg" alt="http://www.misumi-ec.com/ekorkr/item/10400163330/main.jpg"></SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998455"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.240 Example of Twist pair</SPAN></P>
-
 	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-
 </BODY>
-
 </HTML>
-
