@@ -1,97 +1,194 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02500 AMP recovery discharge resistance overheating</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><U><SPAN lang="EN-US">Previous error code: E0010 AMP recovery discharge resistance overheating</SPAN></U></P>
-	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.50.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Recovery electric power that generated when Robot reduces a speed or moving toward to a gravity direction is discharged by resistance.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">This error is related to an overheat that caused by the resistance.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">It could occur due to the decreased performance of the cooling fan, a transient abrupt operation, and continuous robot operation, causing the regenerative discharge capacity to be exceeded.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.50.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-			<TR style="height:8.0cm">
-				<TD width="508" style="width:381.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:8.0cm">
-					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">The regenerative discharge resistor temperature increased the reference value. The robot playback speed is excessive or there is a problem with the cooling system. </SPAN></P>
-					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
-					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt;Case: Error occurs at a certain step according to the robot's operation speed&gt;</SPAN></B></P>
-					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please make changes on a speed of Robot</SPAN>'<SPAN lang="EN-US">s operation in order to confirm the error,</SPAN></P>
-					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please examine the recovery discharge resistance value.</SPAN></P>
-					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt; Case: Error occurs after 5 minutes from the start up of robot's operation &gt;</SPAN></B></P>
-					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please examine the controller's cooling system and recovery electric power level .</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the operational status of each fan.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the power voltage of each fan.</SPAN></P>
-					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Check the regenerative power capacity of the robot.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please reduce the speed of robot's operation in order to confirm the error.</SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please make changes on a speed of robot's operation in order to confirm the error.</SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">In case when a Robot's speed is reducing, or moving toward to gravity direction, direct current voltage of a Servo Drive Unit increases, and the voltage will be discharged with a recovery discharge resistance in order to prevent damages on components that may caused by voltage increase.</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If a Robot reduces its speed rapidly, or make a high speed movement toward to gravity direction, it may cause this error. Please confirm if this error occurs according to the speed of Robot's operation.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Make changes on a speed of Robot's operation</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a recovery electric power that generated by Robot's operation exceeds the controller's designed specification, recovery resistance overheat error may occurs. Please reduce the speed of a step that the error occurs and re-operate in order to confirm if the error persists. </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the recovery discharge resistance value.</SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining recovery discharge resistance value</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a measured resistance value at the end of CNDR cable exceeds over 10% of the value described in the manual, the resistor malfunction is the cause of this error. Please replace the resistor. Please refer to the previous page for the measuring method. </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-S controller</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size (SD3X3Y) recovery discharge resistance value: 5 ohm(S00)</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Large size (SD3X3Y) recovery discharge resistance value: 4 ohm(S80)</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size (SD3A3D) recovery discharge resistance value: 15 ohm(S30)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-N controller </SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size (SD1L2C) recovery discharge resistance value: 5 ohm</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size (SA3A3D) recovery discharge resistance value: 15 ohm</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the controller</SPAN>'<SPAN lang="EN-US">s cooling system and recovery electric power level.</SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If recovery resistance overheats error occurs after 5 minutes from the startup of Robot's activation, the cause would be either the controller's cooling system malfunction or a speed of Robot's operation exceeded the designed specification of the controller.</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Fans are being used at rear of the controller in order to cool down the Servo Drive Unit's heat sink and the recovery discharge resistor.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc443998490"></A><A name="_Toc441656658"></A><A name="_Toc440289735"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-8 Position for installing the controller pan(Hi5a-S)</SPAN></P>
-	<img src="images/image28.png" />
-	
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc443998491"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-9 Position for installing the controller pan(Hi5a-N)</SPAN></P>
-	<img src="images/image29.png" />
-	
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining the operational status of each fan</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please replace a fan if it does not spin, or the speed is abnormally slow. Lifetime of a fan may vary according to an operating environment or an amount of operated hours.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining fan's power voltage</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the input voltage of fans if all of them do not operate. Input voltage of a fan is set to AC220V and the allowed range is within 10% of the standard voltage. If voltage is lower than 10% of the standard voltage, the cooling effect will be reduced due to slow spinning speed of a fan. In case when the voltage is low, please check the input voltage for fan's power supply connector (CNFN2) and a controller.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Check the regenerative power capacity of the robot.</SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please confirm an occurrence of an error according to the speed of Robot's operation </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If an overheat error occurs during a continuous operation over 5 minutes, it is because of the consecutive operation of Robot exceeded the cooling capacity of a controller. Please reduce the speed of Robot's operation and check if the error persists. In order to resolve this error, if you had to reduce the operation speed too much just to resolve this error, please enquire at our office.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
+<HTML lang="ko-KR">
+
+<HEAD>
+
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+
+	<TITLE>E02500 AMP recovery discharge resistance overheating</TITLE>
+
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
+</HEAD>
+
+<BODY>
+
+	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><U><SPAN lang="EN-US">Previous error code: E0010 AMP recovery discharge resistance overheating</SPAN></U></P>
+
+	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.50.1. Outline</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">Recovery electric power that generated when Robot reduces a speed or moving toward to a gravity direction is discharged by resistance.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">This error is related to an overheat that caused by the resistance.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">It could occur due to the decreased performance of the cooling fan, a transient abrupt operation, and continuous robot operation, causing the regenerative discharge capacity to be exceeded.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.50.2. Causes and examine methods</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<DIV align="center">
+
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+
+			<TR style="height:8.0cm">
+
+				<TD width="508" style="width:381.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:8.0cm">
+
+					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">The regenerative discharge resistor temperature increased the reference value. The robot playback speed is excessive or there is a problem with the cooling system. </SPAN></P>
+
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&nbsp;</SPAN></B></P>
+
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt;Case: Error occurs at a certain step according to the robot's operation speed&gt;</SPAN></B></P>
+
+					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please make changes on a speed of Robot</SPAN>'<SPAN lang="EN-US">s operation in order to confirm the error,</SPAN></P>
+
+					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please examine the recovery discharge resistance value.</SPAN></P>
+
+					<P class="unnamed" style="margin-left:20.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+					<P class="unnamed" style="margin-left:20.0pt"><B><SPAN lang="EN-US">&lt; Case: Error occurs after 5 minutes from the start up of robot's operation &gt;</SPAN></B></P>
+
+					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please examine the controller's cooling system and recovery electric power level .</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the operational status of each fan.</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please examine the power voltage of each fan.</SPAN></P>
+
+					<P class="unknown422" style="margin-left:76.0pt;text-indent:-18.0pt"><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Check the regenerative power capacity of the robot.</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:101.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please reduce the speed of robot's operation in order to confirm the error.</SPAN></P>
+
+				</TD>
+
+			</TR>
+
+		</TABLE>
+
+	</DIV>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please make changes on a speed of robot's operation in order to confirm the error.</SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">In case when a Robot's speed is reducing, or moving toward to gravity direction, direct current voltage of a Servo Drive Unit increases, and the voltage will be discharged with a recovery discharge resistance in order to prevent damages on components that may caused by voltage increase.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If a Robot reduces its speed rapidly, or make a high speed movement toward to gravity direction, it may cause this error. Please confirm if this error occurs according to the speed of Robot's operation.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Make changes on a speed of Robot's operation</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a recovery electric power that generated by Robot's operation exceeds the controller's designed specification, recovery resistance overheat error may occurs. Please reduce the speed of a step that the error occurs and re-operate in order to confirm if the error persists. </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the recovery discharge resistance value.</SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining recovery discharge resistance value</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a measured resistance value at the end of CNDR cable exceeds over 10% of the value described in the manual, the resistor malfunction is the cause of this error. Please replace the resistor. Please refer to the previous page for the measuring method. </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-S controller</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size (SD3X3Y) recovery discharge resistance value: 5 ohm(S00)</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Large size (SD3X3Y) recovery discharge resistance value: 4 ohm(S80)</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size (SD3A3D) recovery discharge resistance value: 15 ohm(S30)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Hi5a-N controller </SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Medium size (SD1L2C) recovery discharge resistance value: 5 ohm</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:98.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Small size (SA3A3D) recovery discharge resistance value: 15 ohm</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the controller</SPAN>'<SPAN lang="EN-US">s cooling system and recovery electric power level.</SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If recovery resistance overheats error occurs after 5 minutes from the startup of Robot's activation, the cause would be either the controller's cooling system malfunction or a speed of Robot's operation exceeded the designed specification of the controller.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Fans are being used at rear of the controller in order to cool down the Servo Drive Unit's heat sink and the recovery discharge resistor.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc443998490"></A><A name="_Toc441656658"></A><A name="_Toc440289735"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-8 Position for installing the controller pan(Hi5a-S)</SPAN></P>
+
+	<img src="images/image28.png" />
+
+	
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc443998491"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-9 Position for installing the controller pan(Hi5a-N)</SPAN></P>
+
+	<img src="images/image29.png" />
+
+	
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining the operational status of each fan</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please replace a fan if it does not spin, or the speed is abnormally slow. Lifetime of a fan may vary according to an operating environment or an amount of operated hours.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examining fan's power voltage</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the input voltage of fans if all of them do not operate. Input voltage of a fan is set to AC220V and the allowed range is within 10% of the standard voltage. If voltage is lower than 10% of the standard voltage, the cooling effect will be reduced due to slow spinning speed of a fan. In case when the voltage is low, please check the input voltage for fan's power supply connector (CNFN2) and a controller.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(4)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Check the regenerative power capacity of the robot.</SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Please confirm an occurrence of an error according to the speed of Robot's operation </SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If an overheat error occurs during a continuous operation over 5 minutes, it is because of the consecutive operation of Robot exceeded the cooling capacity of a controller. Please reduce the speed of Robot's operation and check if the error persists. In order to resolve this error, if you had to reduce the operation speed too much just to resolve this error, please enquire at our office.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+</BODY>
+
+</HTML>
+

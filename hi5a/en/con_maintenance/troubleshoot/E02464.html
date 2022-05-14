@@ -1,78 +1,156 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02464 (¡Û axis) Encoder state error (BE) received</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0224 (¡Û axis) Abnormal encoder state</SPAN></U></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.48.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">While the servo board receives the encoder data periodically through serial communication with the encoder to carry out the servo control of the motor, this error occurs when the data received from the encoder is normal, but as for the encoder data, the result of the monitoring of the inside of the encoder itself is in an erroneous state (BE).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">BE (Battery error): This error occurs when the external battery voltage reaches below 3.1 V after the encoder main power is turned off.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.48.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-		<TR style="height:62.5pt">
-			<TD width="618" style="width:463.4pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:62.5pt">
-				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please check the voltage of encoder's backup battery.</SPAN></P>
-				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the encoder's battery connection status.</SPAN></P>
-				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please replace the motor(encoder) and test it. . </SPAN></P>
-				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-			</TD>
-		</TR>
-	</TABLE>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the voltage of encoder</SPAN>'<SPAN lang="EN-US">s battery. </SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Encoder's batter uses 3.6V. If the voltage decreases to 3.0V~3.2V, a message of "W0104 (¡Û Axis) Encoder battery voltage is low" will be displayed. Please replace the encoder's battery if this warning occurs. Replacement of encoder's battery must be done while the controller's power is on. If the encoder battery is replaced at this stage, Robot's operation will not be interrupted. </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the encoder battery voltage reaches 2.5</SPAN>&#8211;<SPAN lang="EN-US">3.0 V after the due date for replacing the encoder battery, the error </SPAN>"<SPAN lang="EN-US">E2470 </SPAN>¡Û<SPAN lang="EN-US"> axis encoder abnormal: Required to reset the encoder</SPAN>"<SPAN lang="EN-US"> will be generated when the controller power is turned on. At the point of this error occurs, the encoder already lost the location data.</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please move the Robot to reference position by using an axis coordinate manual control to re-adjust the axis's encoder followed by a replacement of encoder's battery and the reset of encoder.</SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="388" height="302" src="images/image290.jpg" alt="K-1"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998372"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.157 Location of Encoder's Battery Replacement</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Encoder reset can be executed from the below menu.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. Initialize</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">4. Serial encoder reset</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image130.jpg"></SPAN></P>
-	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the Encoder's battery connection status. </SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please examine the connection status from encoder</SPAN>'<SPAN lang="EN-US">s battery to the motor.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unknown422" style="margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please replace the motor(encoder) and test it. . </SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the error keeps occurring even when turning off/on the main power after resetting the error, replace the motor (encoder) and then test it. If there is no error after the replacement, the servo motor is defective. Replace the servo motor with a normal one.. The following figure shows the position of each of the axis motors of the HS165 robot, while it is required to carry out replacement by referring to the maintenance manual of the relevant equipment in case of other types of robot.</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="248" height="378" src="images/image287.jpg" alt="K-4"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998373"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.158 Locations of Each Axis's Motor (HS165 Robot)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
+<HTML lang="ko-KR">
+
+<HEAD>
+
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+
+	<TITLE>E02464 (○ axis) Encoder state error (BE) received</TITLE>
+
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
+</HEAD>
+
+<BODY>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0224 (○ axis) Abnormal encoder state</SPAN></U></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.48.1. Outline</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">While the servo board receives the encoder data periodically through serial communication with the encoder to carry out the servo control of the motor, this error occurs when the data received from the encoder is normal, but as for the encoder data, the result of the monitoring of the inside of the encoder itself is in an erroneous state (BE).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">BE (Battery error): This error occurs when the external battery voltage reaches below 3.1 V after the encoder main power is turned off.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.48.2. Causes and examine methods</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+
+		<TR style="height:62.5pt">
+
+			<TD width="618" style="width:463.4pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:62.5pt">
+
+				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-AU">Please check the voltage of encoder's backup battery.</SPAN></P>
+
+				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the encoder's battery connection status.</SPAN></P>
+
+				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+				<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please replace the motor(encoder) and test it. . </SPAN></P>
+
+				<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+			</TD>
+
+		</TR>
+
+	</TABLE>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the voltage of encoder</SPAN>'<SPAN lang="EN-US">s battery. </SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Encoder's batter uses 3.6V. If the voltage decreases to 3.0V~3.2V, a message of "W0104 (○ Axis) Encoder battery voltage is low" will be displayed. Please replace the encoder's battery if this warning occurs. Replacement of encoder's battery must be done while the controller's power is on. If the encoder battery is replaced at this stage, Robot's operation will not be interrupted. </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the encoder battery voltage reaches 2.5</SPAN>&#8211;<SPAN lang="EN-US">3.0 V after the due date for replacing the encoder battery, the error </SPAN>"<SPAN lang="EN-US">E2470 </SPAN>○<SPAN lang="EN-US"> axis encoder abnormal: Required to reset the encoder</SPAN>"<SPAN lang="EN-US"> will be generated when the controller power is turned on. At the point of this error occurs, the encoder already lost the location data.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please move the Robot to reference position by using an axis coordinate manual control to re-adjust the axis's encoder followed by a replacement of encoder's battery and the reset of encoder.</SPAN></P>
+
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="388" height="302" src="images/image290.jpg" alt="K-1"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998372"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.157 Location of Encoder's Battery Replacement</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Encoder reset can be executed from the below menu.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. Initialize</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">4. Serial encoder reset</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image130.jpg"></SPAN></P>
+
+	<P class="unnamed" align="left" style="text-align:left;word-break:keep-all"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine the Encoder's battery connection status. </SPAN></B></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please examine the connection status from encoder</SPAN>'<SPAN lang="EN-US">s battery to the motor.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unknown422" style="margin-left:40.0pt;text-indent:-20.0pt"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;"> </SPAN>Please replace the motor(encoder) and test it. . </SPAN></B></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">If the error keeps occurring even when turning off/on the main power after resetting the error, replace the motor (encoder) and then test it. If there is no error after the replacement, the servo motor is defective. Replace the servo motor with a normal one.. The following figure shows the position of each of the axis motors of the HS165 robot, while it is required to carry out replacement by referring to the maintenance manual of the relevant equipment in case of other types of robot.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="248" height="378" src="images/image287.jpg" alt="K-4"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998373"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.158 Locations of Each Axis's Motor (HS165 Robot)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+</BODY>
+
+</HTML>
+

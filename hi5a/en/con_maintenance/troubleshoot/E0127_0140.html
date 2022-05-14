@@ -1,349 +1,698 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E0140 MSPR operation error</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.19.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Motor's power supply is supplied to the AMP according to the open/close status of Magnetic contactor MC1, and MC2.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Status of MC1 and MC2 are being monitored by Main's conditions and E0127 (MSHP operation error) or E0140 (MSPR operation error) will be generated when an abnormal operation is detected.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>E0140 (MSPR operation error)</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">For a reason that cannot be identified by Main, the Magnetic contactor MC1</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Does not turn On while an attempt is made,</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Turns off while it should stays on </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>E0127 (MSHP operation error)</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">For a reason that cannot be identified by Main, the Magnetic contactor MC2</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Does not turn On while an attempt is made,</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Turns off while it should stays on </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">In order for MC1 or MC2 to on, many conditions need to be satisfied, and even if when they are on, they can be off for some reasons. Main can identify the causes for Magnetic contactor's operation error if it is a case that provides a monitoring function such as safety signals. However if the main cannot identify the Magnetic contactor's operation error, a number of examines are required.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.19.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-			<TR style="height:218.3pt">
-				<TD width="555" style="width:416.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:218.3pt">
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Command system malfunction</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on receiving data from the Main</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">CPUERR or EXOUT signal has occurred, or an error of the corresponding line </SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Old system I/O Board (BD531V10) is used from the remote mode</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on the safety signal system</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error that occurred due to the safety related unit's wiring malfunction </SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Monitoring system malfunction</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (Wire, Connector etc.) malfunction</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Module malfunction</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Other malfunction</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Case when E0043 and E0140 both occurs at the same time</SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">To identify the cause of these two errors (MSPR operation error, and MSHP operation error), you must understand the Motor's power supply insertion system. Basic concept of Motor's power supply to the Amp (Drive Unit) is as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Main will send out the MC1 Motor power on 1 command (MCON1) and waits (while monitoring the sub point of contact) until the MC1 is activated. At this stage, if the MC1 does not activates within certain amount of time, E0140 (MSPR operation error) will occur. On the other hand, if MC1 successfully operated, Main will send out the MC2 Motor power on 2 command (MCON2) and waits (while monitoring the sub point of contact) until the MC2 is activated. Again, if the MC1 does not activates within certain amount of time, E0127 (MSHP operation error) will occur.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">If the Magnetic contact MC1 and MC2 turns on according to the Main's command, AC220V R, S, T 3-phase power supply will be supplied to the Amp.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">While the motor is on, the Main will monitor if the MC1, and MC2's status is on at all time.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">If the Magnetic contact goes off for a reason that cannot be identified by the Main, these errors will occur.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="411" src="images/image208.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998297"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.82 Concept Diagram of Safety Circuit for Motor Power's Opening/Closing</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998417"></A><A name="_Toc215983190"></A><A name="_Toc215920471"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Command system malfunction</SPAN></B></A></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Motor on command from the main has been blocked for some reason, if you do not hear any sound of operation and a message of ¡®MSPR operation error' is displayed while the motor on attempt is made.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc215983191"></A><A name="_Toc215920472"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on receiving data from the Main</SPAN></A></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a communication error occurs between the Main Board and the System Board, the System Board will block the Motor On command for a safety reason. Generally the Main Board also detects the communication error at the same time, so the MSPR operation error or MSHP operation error will not occur. However if the Main cannot detect the communication error, these errors can be generated. This is a case when the control status of safety switch related components (Teach Pendant emergency stop switch input, OP panel's emergency stop switch input) are being transmitted to the Main Board, but output from the Main Board (Motor ON) will not be transmitted to the System so the hardware wise Motor On command is cannot be executed.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="453" height="243" src="images/image209.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998298"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.83 7-SEG Indicator of the System Board when a Communication Error Occurs</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">System Board's 7-segment index may give you an indication of the situation. 7-segment displays "o." to indicate that the current communication with the Main Board is in abnormal status. (Figure 6.90)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Firstly, please restart the controller and observe if the same error persists. If it does, the communication input unit of the System Board has an error. Please replace the System Board.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc215983192"></A><A name="_Toc215920473"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">CPUERR or EXOUT signal has occurred, or an error of the corresponding line </SPAN></A></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Main Board generates CPUERR or EXOUT signals in a case when systemic error has occurred (e.g. power shut down, Servo error). This signal will be transferred to the System Board and block the motor on command in terms of hardware. Motor's power will be immediately shut down for a safety reason. However, these signals may be generated abnormally, and it will shut down the motor's power.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">System Board's 7-segment index may give you an indication of the situation. 7-segment displays "H." when CPUERR is being transmitted to the System Board. Also the CPUERR, EXOUT LED which located at the center of the System Board indicate the error situation (Figure 6.90) These LED lights will be on if it is a normal status, and the lights will be off if it is not.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">However if the signal appears time to time for a very short moments, 7-segment and LED won't be able to indicate it. In such case, error occurrence must be observed while ignoring the two signals by using DIP switch SW1. Method to ignore the signal is to, as shown in the Figure 6.91, turn on the No 1 (to ignore CPUERR) and the No 2 (to ignore EXOUT) of the DIP switch SW1. At this point all LED lights will be on.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error no longer persists after the system restart, Main Board generated these signals or CANS1 Connector/Cable malfunction is suspected.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="442" height="224" src="images/image210.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998299"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.84 Indication of 7-SEG, LED (on System Board) when CPUERR Error is Occurred</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If a Main Board generating this signal without any other indication of errors, please check the PLD version of the Main Board. Over V0.7 is normal. If Main Board's PLD version is normal, please examine the CANS1 connector and cables.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	
-	
-	<P style="margin-left:40pt">
-        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-            <tr>
-                <td ><IMG src="images/prohibit.png"/></td>
-                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-                    Cautions: Please use only No 1 (to ignore CPUERR) and No2 (to ignore EXOUT) of the DIP switch SW1 for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
-                </td>
-            </tr>
-        </table>
-    </P>
-    
-    	
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc258998419"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Old system I/O Board (BD531V10) is used from the remote mode</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If an old system IO board (BD531V10) is used on a remote mode, this error may occur. Motor on command will not be executed because this type of board does not have remote mode function.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="213" src="images/image212.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998300"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.85 Checking Method of Old System I/O Board (BD531V10)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">This board is attached at the back of the System Board. Please remove the System Board from Electrical Module and check the system I/O board number at the back (Figure 6.92).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If the installed board is "BD531V10", please replace it with a board with the hardware version above "BD531V11".</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on the safety signal system</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Motor on command from the main has been blocked for some reason, if you do not hear any sound of operation and a message of ¡®MSPR operation error' is displayed while the motor on attempt is made without any other error messages.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The motor on command will not be executed if there is a problem on a safety signal system as explained earlier (Figure 6.89). Safety devices (Safety guard, emergency stop switch etc) are mechanically operating devices, but their monitoring is operated electronically. So a safety device malfunction, or any electronic shock (noise, surge), wiring error, short circuit can cause an error. To confirm, please remove the connected safety device's wiring and rewire them to ignore the input. (Figure 6.93, Figure 6.94, Figure 6.95, Figure 6.96, Figure 6.97).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	
-	<P style="margin-left:40pt">
-        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-            <tr>
-                <td ><IMG src="images/prohibit.png"/></td>
-                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
-                </td>
-            </tr>
-        </table>
-    </P>
-        
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="411" height="129" src="images/image213.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998301"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.86 Method to Ignore the External Emergency Stop Input</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="422" height="130" src="images/image214.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998302"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.87 Method to Ignore the Safety Guard (Auto) Input</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="411" height="135" src="images/image215.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998303"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.88 Method to Ignore the Safety Guard (General) Input</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="137" height="110" src="images/image216.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998304"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.89 Method to Ignore the (P-COM input) External Emergency Stop (3,4 of SW6 is ON)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="150" height="107" src="images/image217.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998305"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.90 Method to Ignore the (P-COM) Safety Guard (Auto) (1,2 of SW6 is ON)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">As explained, if the error does not persist when these safety switch inputs are ignored, the problem exists in the safety switches and wirings. Please check them.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:40pt">
-        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-            <tr>
-                <td ><IMG src="images/prohibit.png"/></td>
-                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
-                </td>
-            </tr>
-        </table>
-    </P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error that occurred due to the safety related unit's wiring malfunction </SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If there is a problem in a wiring of devices that are related to the safety such as Safety guard(Auto), the error for a corresponding safety signal may not be detected and it will generate E0140 (MSPR operation error).</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">This error occurs from a waiting of manual mode drive preparation (Status that the Teach Pendant's motor on LED is flickering) switches to automatic mode, and motor on attempt is made on an automatic mode.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">For example, there is a case when the wiring of Safety guard (Auto) is faulty. There are two types of input method (point of contact input, P-common input) that enters safeguard to the System Board (BD530) and the point of contact input's wiring error may cause a problem. Proper wiring separates each safe chain and connects the each end of point of contact (Figure 6.98) However if the chain's wiring is mixed and connected, the controller will not be able to detect the Safety guard's error due to an electronic error (Figure 6.99). If the motor on is attempted at this time, not sufficient power supply for Magnetic contactor's safe relay operation will be supplied and it will generate E0140 (MSPR operation error).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">Phenomenon of Safety guard wiring malfunction is as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If a safe chain connection is removed (5, 6 wiring or 7, 8 wiring), Safety guard error will be detected in automatic mode and displays E0043 error.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">However, if all chains are connected (5, 6, 7, 8 wiring are all connected), Safety guard error will not be detected in automatic mode (E0043 error does not occur).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If the above phenomenon appears, please examine the Safety guard (Auto)'s wiring. Firstly, please remove the terminal block TBEM from the board, and perform a short circuit test from a removed terminal block connector's (TBEM) safeguard input terminal (socket) while activating the guard device.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If you close the guard device (point of contact &#8211; close status), 5, 6 terminal (socket) will be shorted. Also 7, 8 terminal (socket) will be shorted.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If you open the guard device (point of contact &#8211; open status), 5, 6 terminal (socket) will be open. Also the 7, 8 terminal (socket) must be open status.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US"><IMG width="313" height="152" src="images/image218.png"></SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998306"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.91 Good example of Safety Guard (Auto) wiring</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US"><IMG width="294" height="142" src="images/image219.png"></SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998307"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.92 Bad example of Safety Guard (Auto) wiring</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: Please modify the wiring of Safety guard (Auto) correctly (Figure 6.99)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">Error occurrence caused by the wiring error of safeguard has been explained in above. This applies same to all safety related signals (Safety guard (General), Safety guard (Auto), external emergency stop switch, various limit switches), so please refer to (table 6-5) to compare the normal and abnormal wiring examples.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc443998489"></A><A name="_Toc258998555"></A><A name="_Toc215982736"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-7 Error on safety related device's wiring</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
-			<TR style="height:1.0cm">
-				<TD width="101" style="width:75.85pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Classification</SPAN></B></P>
-				</TD>
-				<TD width="250" style="width:187.8pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Normal wiring</SPAN></B></P>
-				</TD>
-				<TD width="268" style="width:200.65pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Abnormal wiring</SPAN></B></P>
-				</TD>
-			</TR>
-			<TR style="height:92.35pt">
-				<TD width="101" style="width:75.85pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">External emergency stop switch</SPAN></B></P>
-				</TD>
-				<TD width="250" style="width:187.8pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="111" src="images/image220.jpg"></SPAN></P>
-				</TD>
-				<TD width="268" style="width:200.65pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="111" src="images/image221.jpg"></SPAN></P>
-				</TD>
-			</TR>
-			<TR style="height:84.7pt">
-				<TD width="101" style="width:75.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety guard (Auto)</SPAN></B></P>
-				</TD>
-				<TD width="250" style="width:187.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="103" src="images/image222.jpg"></SPAN></P>
-				</TD>
-				<TD width="268" style="width:200.65pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="103" src="images/image223.jpg"></SPAN></P>
-				</TD>
-			</TR>
-			<TR style="height:85.2pt">
-				<TD width="101" style="width:75.85pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
-					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety Guard (General)</SPAN></B></P>
-				</TD>
-				<TD width="250" style="width:187.8pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="102" src="images/image224.jpg"></SPAN></P>
-				</TD>
-				<TD width="268" style="width:200.65pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
-					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="102" src="images/image225.jpg"></SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">When motor on is attempted, if you do not hear the activating sound of controller's internal Magnetic contactor (MC1) and a message of "MSPR operation error" is displayed, please examine all the above. If no problem is found from the above examinations and same error persists, System Board malfunction might be the cause. Please replace it.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><A name="_Toc258998427"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Monitoring system malfunction</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">When motor on is attempted, if you do hear the activating sound of controller's internal Magnetic contactor and a message of "MSPR operation error" or "MSHP operation error" is displayed, the cause of an error might be the Monitoring system malfunction. In order to confirm the Monitoring system malfunction, please do as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">The status of Magnetic contactor MC1 and MC2 is monitored by using the sub point of contact and can be accessed by the Teach Pendant. (Figure 6.100) From the Teach Pendant, MC1 (PreCharge) and MC2 (Motors Power) signal can be accessed by Private input signal monitoring window. Motor off status will be displayed as a white color background and motor on status will be displayed as yellow color background.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="504" height="107" src="images/image226.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998308"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.93 Method of Magnetic Contactor Monitoring</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please attempt the motor on in automatic or manual mode and confirm the activation sound of the Magnetic contactor as well as the displayed status of MC1, and MC2.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">At first, if MC1 is displayed with a yellow color for a moment (with the sound of Magnetic contactor's activation) and E0140 (MSPR operation error) message is appears, it means that there is no error in MC1's sub point of contact and the monitoring system.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">After the activation of MC1, if MC2 is displayed with a yellow color for a moment (with second sound of Magnetic contactor's activation) and E0127 (MSHP operation error) message is appears, it means that there is no error in MC1's sub point of contact and the monitoring system.</SPAN></P>
-	<P class="unknown422" style="margin-left:0cm"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">With the above methods, if you confirmed that the monitoring of MC1 and MC2 is not working (Monitoring signal is not displayed in yellow while you can hear the sound of Magnetic contactor's activation), the following devices has to be examined (Figure 6.101).</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cable CNMC </SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Board relay SR1, SR2 (inside of Electrical Module) </SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">③<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Sub point of contact for MC1 and MC2 &#8211; Magnetic contactor (inside of Electrical Module) </SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">④<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Wiring between the Electrical Board and the Magnetic contactor (inside of Electrical Module)</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">⑤<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board (input signal processing unit) </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="306" src="images/image227.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998309"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.94 Diagram of the Monitoring System &#8211; Magnetic Contactor</SPAN></P>
-	<P class="unnamed"><A name="_Toc258998429"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (wires, connector etc) malfunction</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the cabling between the Electrical Module (PSM or PDM) that an electrical connector is installed and the System Board (BD530) that collects monitoring signals.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The cable name is CNMC and it enters to the Electrical Module through the top rear of the System Board (Figure 6.102). Please check the connection status of this cable's connector.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="339" height="229" src="images/image228.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="438" height="250" src="images/image229.jpg" alt="K-20"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998310"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.95 CNMC Cable on the Electrical Module</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Module malfunction</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Monitoring signal of the Magnetic contactor is transmitted to the System Board through many devices that are inside of the Electrical Module. So if one of those devices has an error, the Main will not be able to detect even if the Magnetic contactor is operated. Internal electrical module malfunction can be categorized as a electrical board (BD5C2 or BD5C0), Electrical connector (MC1, MC2), and wirings between the electrical board and the electrical connector (Figure 6.103) However it is difficult to examine the inside of Electrical Module in a field where a Robot has already been installed, so alternatively please replace the Electrical Module </SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="533" height="280" src="images/image71.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG src="images/image230.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc258998430"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998311"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.96 Inner Structure of Electrical Module</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="499" height="312" src="images/image73.png"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller (BD5C2)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG  src="images/image231.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller (BD5C0)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998312"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.97 Electrical Board (BD5C2)</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Input signal process unit malfunction of the System Board can be the cause of this error. Please replace the System Board and check.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Other malfunction</SPAN></B></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Case when E0043 and E0140 both occurs at the same time</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">E0043(Safety Plug or Light Curtain) with the E0140(MSPR operation error) can occurs from a waiting of manual mode drive preparation (Status that the Teach Pendant's motor on LED is flickering) switches to automatic mode, and motor on attempt is made when the Safety guard (Auto) is open (and the Main software version is below V30.07-00). Please check the Main software version from the Teach Pendant and upgrade if the version is low.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
+<HTML lang="ko-KR">
+
+<HEAD>
+
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+
+	<TITLE>E0140 MSPR operation error</TITLE>
+
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
+</HEAD>
+
+<BODY>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.19.1. Outline</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">Motor's power supply is supplied to the AMP according to the open/close status of Magnetic contactor MC1, and MC2.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">Status of MC1 and MC2 are being monitored by Main's conditions and E0127 (MSHP operation error) or E0140 (MSPR operation error) will be generated when an abnormal operation is detected.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>E0140 (MSPR operation error)</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">For a reason that cannot be identified by Main, the Magnetic contactor MC1</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Does not turn On while an attempt is made,</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Turns off while it should stays on </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:38.0pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>E0127 (MSHP operation error)</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">For a reason that cannot be identified by Main, the Magnetic contactor MC2</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Does not turn On while an attempt is made,</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Turns off while it should stays on </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">In order for MC1 or MC2 to on, many conditions need to be satisfied, and even if when they are on, they can be off for some reasons. Main can identify the causes for Magnetic contactor's operation error if it is a case that provides a monitoring function such as safety signals. However if the main cannot identify the Magnetic contactor's operation error, a number of examines are required.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.19.2. Causes and examine methods</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<DIV align="center">
+
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+
+			<TR style="height:218.3pt">
+
+				<TD width="555" style="width:416.05pt;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:218.3pt">
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Command system malfunction</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on receiving data from the Main</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">CPUERR or EXOUT signal has occurred, or an error of the corresponding line </SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Old system I/O Board (BD531V10) is used from the remote mode</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on the safety signal system</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error that occurred due to the safety related unit's wiring malfunction </SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
+
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Monitoring system malfunction</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (Wire, Connector etc.) malfunction</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Module malfunction</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
+
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Other malfunction</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Case when E0043 and E0140 both occurs at the same time</SPAN></P>
+
+				</TD>
+
+			</TR>
+
+		</TABLE>
+
+	</DIV>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">To identify the cause of these two errors (MSPR operation error, and MSHP operation error), you must understand the Motor's power supply insertion system. Basic concept of Motor's power supply to the Amp (Drive Unit) is as below.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">Main will send out the MC1 Motor power on 1 command (MCON1) and waits (while monitoring the sub point of contact) until the MC1 is activated. At this stage, if the MC1 does not activates within certain amount of time, E0140 (MSPR operation error) will occur. On the other hand, if MC1 successfully operated, Main will send out the MC2 Motor power on 2 command (MCON2) and waits (while monitoring the sub point of contact) until the MC2 is activated. Again, if the MC1 does not activates within certain amount of time, E0127 (MSHP operation error) will occur.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">If the Magnetic contact MC1 and MC2 turns on according to the Main's command, AC220V R, S, T 3-phase power supply will be supplied to the Amp.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">While the motor is on, the Main will monitor if the MC1, and MC2's status is on at all time.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">If the Magnetic contact goes off for a reason that cannot be identified by the Main, these errors will occur.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="411" src="images/image208.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998297"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.82 Concept Diagram of Safety Circuit for Motor Power's Opening/Closing</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998417"></A><A name="_Toc215983190"></A><A name="_Toc215920471"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Command system malfunction</SPAN></B></A></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Motor on command from the main has been blocked for some reason, if you do not hear any sound of operation and a message of 'MSPR operation error' is displayed while the motor on attempt is made.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc215983191"></A><A name="_Toc215920472"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on receiving data from the Main</SPAN></A></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If a communication error occurs between the Main Board and the System Board, the System Board will block the Motor On command for a safety reason. Generally the Main Board also detects the communication error at the same time, so the MSPR operation error or MSHP operation error will not occur. However if the Main cannot detect the communication error, these errors can be generated. This is a case when the control status of safety switch related components (Teach Pendant emergency stop switch input, OP panel's emergency stop switch input) are being transmitted to the Main Board, but output from the Main Board (Motor ON) will not be transmitted to the System so the hardware wise Motor On command is cannot be executed.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="453" height="243" src="images/image209.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998298"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.83 7-SEG Indicator of the System Board when a Communication Error Occurs</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">System Board's 7-segment index may give you an indication of the situation. 7-segment displays "o." to indicate that the current communication with the Main Board is in abnormal status. (Figure 6.90)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Firstly, please restart the controller and observe if the same error persists. If it does, the communication input unit of the System Board has an error. Please replace the System Board.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc215983192"></A><A name="_Toc215920473"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">CPUERR or EXOUT signal has occurred, or an error of the corresponding line </SPAN></A></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Main Board generates CPUERR or EXOUT signals in a case when systemic error has occurred (e.g. power shut down, Servo error). This signal will be transferred to the System Board and block the motor on command in terms of hardware. Motor's power will be immediately shut down for a safety reason. However, these signals may be generated abnormally, and it will shut down the motor's power.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">System Board's 7-segment index may give you an indication of the situation. 7-segment displays "H." when CPUERR is being transmitted to the System Board. Also the CPUERR, EXOUT LED which located at the center of the System Board indicate the error situation (Figure 6.90) These LED lights will be on if it is a normal status, and the lights will be off if it is not.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">However if the signal appears time to time for a very short moments, 7-segment and LED won't be able to indicate it. In such case, error occurrence must be observed while ignoring the two signals by using DIP switch SW1. Method to ignore the signal is to, as shown in the Figure 6.91, turn on the No 1 (to ignore CPUERR) and the No 2 (to ignore EXOUT) of the DIP switch SW1. At this point all LED lights will be on.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the error no longer persists after the system restart, Main Board generated these signals or CANS1 Connector/Cable malfunction is suspected.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="442" height="224" src="images/image210.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998299"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.84 Indication of 7-SEG, LED (on System Board) when CPUERR Error is Occurred</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If a Main Board generating this signal without any other indication of errors, please check the PLD version of the Main Board. Over V0.7 is normal. If Main Board's PLD version is normal, please examine the CANS1 connector and cables.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	
+
+	
+
+	<P style="margin-left:40pt">
+
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+
+            <tr>
+
+                <td ><IMG src="images/prohibit.png"/></td>
+
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+
+                    Cautions: Please use only No 1 (to ignore CPUERR) and No2 (to ignore EXOUT) of the DIP switch SW1 for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </P>
+
+    
+
+    	
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc258998419"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Old system I/O Board (BD531V10) is used from the remote mode</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If an old system IO board (BD531V10) is used on a remote mode, this error may occur. Motor on command will not be executed because this type of board does not have remote mode function.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="213" src="images/image212.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998300"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.85 Checking Method of Old System I/O Board (BD531V10)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">This board is attached at the back of the System Board. Please remove the System Board from Electrical Module and check the system I/O board number at the back (Figure 6.92).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If the installed board is "BD531V10", please replace it with a board with the hardware version above "BD531V11".</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error on the safety signal system</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Motor on command from the main has been blocked for some reason, if you do not hear any sound of operation and a message of 'MSPR operation error' is displayed while the motor on attempt is made without any other error messages.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The motor on command will not be executed if there is a problem on a safety signal system as explained earlier (Figure 6.89). Safety devices (Safety guard, emergency stop switch etc) are mechanically operating devices, but their monitoring is operated electronically. So a safety device malfunction, or any electronic shock (noise, surge), wiring error, short circuit can cause an error. To confirm, please remove the connected safety device's wiring and rewire them to ignore the input. (Figure 6.93, Figure 6.94, Figure 6.95, Figure 6.96, Figure 6.97).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	
+
+	<P style="margin-left:40pt">
+
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+
+            <tr>
+
+                <td ><IMG src="images/prohibit.png"/></td>
+
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+
+                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </P>
+
+        
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="411" height="129" src="images/image213.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998301"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.86 Method to Ignore the External Emergency Stop Input</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="422" height="130" src="images/image214.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998302"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.87 Method to Ignore the Safety Guard (Auto) Input</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="411" height="135" src="images/image215.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998303"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.88 Method to Ignore the Safety Guard (General) Input</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="137" height="110" src="images/image216.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998304"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.89 Method to Ignore the (P-COM input) External Emergency Stop (3,4 of SW6 is ON)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="150" height="107" src="images/image217.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998305"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.90 Method to Ignore the (P-COM) Safety Guard (Auto) (1,2 of SW6 is ON)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">As explained, if the error does not persist when these safety switch inputs are ignored, the problem exists in the safety switches and wirings. Please check them.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:40pt">
+
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+
+            <tr>
+
+                <td ><IMG src="images/prohibit.png"/></td>
+
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+
+                    Cautions: Please use only for a testing purpose and please switch it back to normal after the test. This ignores the emergency safety related functions and it may cause safety related problems if operates while ignoring these functions.
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Error that occurred due to the safety related unit's wiring malfunction </SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If there is a problem in a wiring of devices that are related to the safety such as Safety guard(Auto), the error for a corresponding safety signal may not be detected and it will generate E0140 (MSPR operation error).</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">This error occurs from a waiting of manual mode drive preparation (Status that the Teach Pendant's motor on LED is flickering) switches to automatic mode, and motor on attempt is made on an automatic mode.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">For example, there is a case when the wiring of Safety guard (Auto) is faulty. There are two types of input method (point of contact input, P-common input) that enters safeguard to the System Board (BD530) and the point of contact input's wiring error may cause a problem. Proper wiring separates each safe chain and connects the each end of point of contact (Figure 6.98) However if the chain's wiring is mixed and connected, the controller will not be able to detect the Safety guard's error due to an electronic error (Figure 6.99). If the motor on is attempted at this time, not sufficient power supply for Magnetic contactor's safe relay operation will be supplied and it will generate E0140 (MSPR operation error).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">How to judge: </SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">Phenomenon of Safety guard wiring malfunction is as below.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If a safe chain connection is removed (5, 6 wiring or 7, 8 wiring), Safety guard error will be detected in automatic mode and displays E0043 error.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">However, if all chains are connected (5, 6, 7, 8 wiring are all connected), Safety guard error will not be detected in automatic mode (E0043 error does not occur).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">If the above phenomenon appears, please examine the Safety guard (Auto)'s wiring. Firstly, please remove the terminal block TBEM from the board, and perform a short circuit test from a removed terminal block connector's (TBEM) safeguard input terminal (socket) while activating the guard device.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If you close the guard device (point of contact &#8211; close status), 5, 6 terminal (socket) will be shorted. Also 7, 8 terminal (socket) will be shorted.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:100.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">l<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">If you open the guard device (point of contact &#8211; open status), 5, 6 terminal (socket) will be open. Also the 7, 8 terminal (socket) must be open status.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US"><IMG width="313" height="152" src="images/image218.png"></SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998306"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.91 Good example of Safety Guard (Auto) wiring</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US"><IMG width="294" height="142" src="images/image219.png"></SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998307"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.92 Bad example of Safety Guard (Auto) wiring</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Actions: Please modify the wiring of Safety guard (Auto) correctly (Figure 6.99)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:80.0pt"><SPAN lang="EN-US">Error occurrence caused by the wiring error of safeguard has been explained in above. This applies same to all safety related signals (Safety guard (General), Safety guard (Auto), external emergency stop switch, various limit switches), so please refer to (table 6-5) to compare the normal and abnormal wiring examples.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc443998489"></A><A name="_Toc258998555"></A><A name="_Toc215982736"><SPAN lang="EN-US">Table </SPAN></A><SPAN lang="EN-US">1-7 Error on safety related device's wiring</SPAN></P>
+
+	<DIV align="center">
+
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none">
+
+			<TR style="height:1.0cm">
+
+				<TD width="101" style="width:75.85pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Classification</SPAN></B></P>
+
+				</TD>
+
+				<TD width="250" style="width:187.8pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Normal wiring</SPAN></B></P>
+
+				</TD>
+
+				<TD width="268" style="width:200.65pt;border:none;border-top:solid #9BBB59 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:1.0cm">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Abnormal wiring</SPAN></B></P>
+
+				</TD>
+
+			</TR>
+
+			<TR style="height:92.35pt">
+
+				<TD width="101" style="width:75.85pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">External emergency stop switch</SPAN></B></P>
+
+				</TD>
+
+				<TD width="250" style="width:187.8pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="111" src="images/image220.jpg"></SPAN></P>
+
+				</TD>
+
+				<TD width="268" style="width:200.65pt;border:none;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:92.35pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="111" src="images/image221.jpg"></SPAN></P>
+
+				</TD>
+
+			</TR>
+
+			<TR style="height:84.7pt">
+
+				<TD width="101" style="width:75.85pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety guard (Auto)</SPAN></B></P>
+
+				</TD>
+
+				<TD width="250" style="width:187.8pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="103" src="images/image222.jpg"></SPAN></P>
+
+				</TD>
+
+				<TD width="268" style="width:200.65pt;border:none;padding:0cm 5.4pt 0cm 5.4pt;height:84.7pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="103" src="images/image223.jpg"></SPAN></P>
+
+				</TD>
+
+			</TR>
+
+			<TR style="height:85.2pt">
+
+				<TD width="101" style="width:75.85pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
+
+					<P class="unnamed" align="center" style="text-align:center"><B><SPAN lang="EN-US">Safety Guard (General)</SPAN></B></P>
+
+				</TD>
+
+				<TD width="250" style="width:187.8pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="102" src="images/image224.jpg"></SPAN></P>
+
+				</TD>
+
+				<TD width="268" style="width:200.65pt;border:none;border-bottom:solid #9BBB59 1.0pt;background:#EBF7D1;padding:0cm 5.4pt 0cm 5.4pt;height:85.2pt">
+
+					<P class="unnamed"><SPAN lang="EN-US"><IMG width="227" height="102" src="images/image225.jpg"></SPAN></P>
+
+				</TD>
+
+			</TR>
+
+		</TABLE>
+
+	</DIV>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">When motor on is attempted, if you do not hear the activating sound of controller's internal Magnetic contactor (MC1) and a message of "MSPR operation error" is displayed, please examine all the above. If no problem is found from the above examinations and same error persists, System Board malfunction might be the cause. Please replace it.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc258998427"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Monitoring system malfunction</SPAN></B></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">When motor on is attempted, if you do hear the activating sound of controller's internal Magnetic contactor and a message of "MSPR operation error" or "MSHP operation error" is displayed, the cause of an error might be the Monitoring system malfunction. In order to confirm the Monitoring system malfunction, please do as below.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">The status of Magnetic contactor MC1 and MC2 is monitored by using the sub point of contact and can be accessed by the Teach Pendant. (Figure 6.100) From the Teach Pendant, MC1 (PreCharge) and MC2 (Motors Power) signal can be accessed by Private input signal monitoring window. Motor off status will be displayed as a white color background and motor on status will be displayed as yellow color background.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="504" height="107" src="images/image226.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998308"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.93 Method of Magnetic Contactor Monitoring</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please attempt the motor on in automatic or manual mode and confirm the activation sound of the Magnetic contactor as well as the displayed status of MC1, and MC2.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">At first, if MC1 is displayed with a yellow color for a moment (with the sound of Magnetic contactor's activation) and E0140 (MSPR operation error) message is appears, it means that there is no error in MC1's sub point of contact and the monitoring system.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">After the activation of MC1, if MC2 is displayed with a yellow color for a moment (with second sound of Magnetic contactor's activation) and E0127 (MSHP operation error) message is appears, it means that there is no error in MC1's sub point of contact and the monitoring system.</SPAN></P>
+
+	<P class="unknown422" style="margin-left:0cm"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">With the above methods, if you confirmed that the monitoring of MC1 and MC2 is not working (Monitoring signal is not displayed in yellow while you can hear the sound of Magnetic contactor's activation), the following devices has to be examined (Figure 6.101).</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">①<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cable CNMC </SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">②<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Board relay SR1, SR2 (inside of Electrical Module) </SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">③<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Sub point of contact for MC1 and MC2 &#8211; Magnetic contactor (inside of Electrical Module) </SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">④<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Wiring between the Electrical Board and the Magnetic contactor (inside of Electrical Module)</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">⑤<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board (input signal processing unit) </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="604" height="306" src="images/image227.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998309"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.94 Diagram of the Monitoring System &#8211; Magnetic Contactor</SPAN></P>
+
+	<P class="unnamed"><A name="_Toc258998429"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Cabling (wires, connector etc) malfunction</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please check the cabling between the Electrical Module (PSM or PDM) that an electrical connector is installed and the System Board (BD530) that collects monitoring signals.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">The cable name is CNMC and it enters to the Electrical Module through the top rear of the System Board (Figure 6.102). Please check the connection status of this cable's connector.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="339" height="229" src="images/image228.png"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="438" height="250" src="images/image229.jpg" alt="K-20"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998310"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.95 CNMC Cable on the Electrical Module</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Electrical Module malfunction</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Monitoring signal of the Magnetic contactor is transmitted to the System Board through many devices that are inside of the Electrical Module. So if one of those devices has an error, the Main will not be able to detect even if the Magnetic contactor is operated. Internal electrical module malfunction can be categorized as a electrical board (BD5C2 or BD5C0), Electrical connector (MC1, MC2), and wirings between the electrical board and the electrical connector (Figure 6.103) However it is difficult to examine the inside of Electrical Module in a field where a Robot has already been installed, so alternatively please replace the Electrical Module </SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="533" height="280" src="images/image71.png"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG src="images/image230.png"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc258998430"><SPAN lang="EN-US">&nbsp;</SPAN></A></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998311"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.96 Inner Structure of Electrical Module</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="499" height="312" src="images/image73.png"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller (BD5C2)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG  src="images/image231.png"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller (BD5C0)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998312"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.97 Electrical Board (BD5C2)</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">System Board malfunction</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Input signal process unit malfunction of the System Board can be the cause of this error. Please replace the System Board and check.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(3)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Other malfunction</SPAN></B></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Case when E0043 and E0140 both occurs at the same time</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">E0043(Safety Plug or Light Curtain) with the E0140(MSPR operation error) can occurs from a waiting of manual mode drive preparation (Status that the Teach Pendant's motor on LED is flickering) switches to automatic mode, and motor on attempt is made when the Safety guard (Auto) is open (and the Main software version is below V30.07-00). Please check the Main software version from the Teach Pendant and upgrade if the version is low.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+</BODY>
+
+</HTML>
+

@@ -1,38 +1,76 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>Instructions in examining the Controller's internal voltage (3-phase)</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998449"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the Controller's internal 3-phase power voltage.</SPAN></B></A></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Electrical Module (PSM or PDM) that attached at the front of controller is in charge of the distribution and replay of each power supplies and the 3-phase power supply will be turned on/off by a Magnet switch in the Electrical Module. Please examine if the input voltage to the Electrical Module is within the 10% error range of AC220V standard. If the measured voltage is out of the allowed range, please examine as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="474" height="228" src="images/image318.png"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998465"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.250 3-Phase Power Input to the Electrical Module</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:40pt">
-        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-            <tr>
-                <td ><IMG src="images/warn.png"/></td>
-                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-                    <p style="color: #000000;"> Warning</p>
-                    Please be cautious. Short-circuit between phases or with surrounding components can occur while measuring the high voltage.
-                </td>
-            </tr>
-        </table>
-    </P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>If the input voltage to the controller is AC220V</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the input voltage to the controller is AC220V, input voltage from external to the power switch or terminal block must be same as the measured voltage from the internal Electrical Module. If there is a difference, please examine the 3-phase power supply wiring.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>If the input voltage to the controller is not AC220V</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the input voltage specification to the controller is not AC220V, please use the internally installed transformer to convert the 3-phase voltage into AC220V and it will be connected to the Electrical Module. Please examine if the voltage of the Electrical Module is within the 10% error range of AC220V standard.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the measured voltage is out of allowed range, please examine the input of internally installed transformer and the connection status of output terminal (socket). Primary column of the internally installed transformer must be connected with the voltage as it is displayed on a rating panel. Secondary column of the transformer must be set to AC3-phase 220V at all time. If the output from the output terminal (socket) is not AC 3-phase 220V even when the input and output terminals (socket) are connected properly, the transformer is faulty. At this stage the output voltage of transformer's error rate must be within 5 %.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
+<HTML lang="ko-KR">
+
+<HEAD>
+
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+
+	<TITLE>Instructions in examining the Controller's internal voltage (3-phase)</TITLE>
+
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
+</HEAD>
+
+<BODY>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><A name="_Toc258998449"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please check the Controller's internal 3-phase power voltage.</SPAN></B></A></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Electrical Module (PSM or PDM) that attached at the front of controller is in charge of the distribution and replay of each power supplies and the 3-phase power supply will be turned on/off by a Magnet switch in the Electrical Module. Please examine if the input voltage to the Electrical Module is within the 10% error range of AC220V standard. If the measured voltage is out of the allowed range, please examine as below.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="474" height="228" src="images/image318.png"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998465"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.250 3-Phase Power Input to the Electrical Module</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:40pt">
+
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+
+            <tr>
+
+                <td ><IMG src="images/warn.png"/></td>
+
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+
+                    <p style="color: #000000;"> Warning</p>
+
+                    Please be cautious. Short-circuit between phases or with surrounding components can occur while measuring the high voltage.
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>If the input voltage to the controller is AC220V</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the input voltage to the controller is AC220V, input voltage from external to the power switch or terminal block must be same as the measured voltage from the internal Electrical Module. If there is a difference, please examine the 3-phase power supply wiring.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN>If the input voltage to the controller is not AC220V</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the input voltage specification to the controller is not AC220V, please use the internally installed transformer to convert the 3-phase voltage into AC220V and it will be connected to the Electrical Module. Please examine if the voltage of the Electrical Module is within the 10% error range of AC220V standard.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">If the measured voltage is out of allowed range, please examine the input of internally installed transformer and the connection status of output terminal (socket). Primary column of the internally installed transformer must be connected with the voltage as it is displayed on a rating panel. Secondary column of the transformer must be set to AC3-phase 220V at all time. If the output from the output terminal (socket) is not AC 3-phase 220V even when the input and output terminals (socket) are connected properly, the transformer is faulty. At this stage the output voltage of transformer's error rate must be within 5 %.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+</BODY>
+
+</HTML>
+

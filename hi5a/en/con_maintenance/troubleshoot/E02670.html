@@ -1,119 +1,238 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML lang="ko-KR">
-<HEAD>
-	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
-	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
-	<TITLE>E02670 (¡Û axis) Command value error</TITLE>
-	<LINK rel="stylesheet" href="../default.css" type="text/css">
-</HEAD>
-<BODY>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0133 (¡Û axis) </SPAN></U></B><SPAN lang="EN-US">Command value error</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.82.1. Outline</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">This error may occur due to a communication error between the Main Board and the Servo Board, or a rapid change of motion. When a communication error occurs, a valid command cannot be transferred from the Main Board to the Servo Board, so this error will occur and immobilize the Robot to prevent the Robot's abnormal operation based on an invalid command.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">Also this error will occur and immobilized the Robot because the drive unit may not follow the rapid changes of motion command.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.82.2. Causes and examine methods</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<DIV align="center">
-		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
-			<TR style="height:99.7pt">
-				<TD width="605" style="width:16.0cm;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:99.7pt">
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if the main board and the servo board are installed properly.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is installed properly.</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if board is faulty.</SPAN></P>
-					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Examine if there is a job program that operates a Robot rapidly.</SPAN></P>
-				</TD>
-			</TR>
-		</TABLE>
-	</DIV>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if the Main Board and the Servo Board are installed properly.</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">This error may be caused by a communication problem if the Main Board and the Servo Board is not </SPAN><SPAN lang="EN-US">installed properly on a rack, or the board has an error.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
-	
-	<P style="margin-left:40pt">
-        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
-            <tr>
-                <td ><IMG src="images/warn.png"/></td>
-                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
-                    <p style="color: #000000;"> Warning</p>
-                    In order to protect the previous job programs, please back up all the files of Main board to the USB memory before you remove the board from the Rack.
-                </td>
-            </tr>
-        </table>
-    </P>
-    
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Method to back up the files from Main Board to USB memory is as below.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="567" height="169" src="images/image232.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) TP520</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="605" height="161" src="images/image166.jpg"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) TP511</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998431"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.216 Methods for inserting a USB into the teach pendant</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Once the USB is recognized by TP, the below icon will be displayed on a screen.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="288" src="images/image167.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">To back up the files enter to</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Service</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. File manager</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">And the screen that is similar to windows explorer will be displayed.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image168.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">At this stage, please copy the files shown in M/B and move them to USB.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="295" src="images/image169.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="455" height="287" src="images/image170.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">You may create a new folder on USB, or can rename the folder by using the soft keyboard just like the windows explorer.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="279" src="images/image233.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="451" height="265" src="images/image234.jpg"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is installed properly.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please remove the Main Board and the Servo Board from the Rack and re-install them again.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="402" height="358" src="images/image173.png"></SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="391" height="271" src="images/image207.png" alt="Adobe Systems"></SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998432"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.217 Location of Rack Inside of the Controller</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is faulty.</SPAN></P>
-	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">To examine if the board is faulty, please replace it with new one.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Examine if there is a job program that operates a Robot rapidly</SPAN></B></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the error occurs at a point where the Robot's motion changes rapidly. If the error occurs during the rapid motion, modification of job program is required.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">The reason that this error occurs during the rapid motion is as below. During the execution of job program, Robot's position may be twisted in order to move a short distance. At that point, the speed of Robot's axis suddenly increases, and the error may occur if the Servo Board follows the movement. In order to resolve this, please modify the Teaching point of the location (where the position changes rapidly) or make changes on the position of Robot.</SPAN></P>
-	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
-</BODY>
-</HTML>
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang="utf-8">
+<HTML lang="ko-KR">
+
+<HEAD>
+
+	<META http-equiv="Content-Type" content="text/html; charset=ks_c_5601-1987">
+
+	<META name="Generator" content="MGTEK Help Producer - www.helpproducer.com">
+
+	<TITLE>E02670 (○ axis) Command value error</TITLE>
+
+	<LINK rel="stylesheet" href="../default.css" type="text/css">
+
+</HEAD>
+
+<BODY>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><B><U><SPAN lang="EN-US">Previous error code: E0133 (○ axis) </SPAN></U></B><SPAN lang="EN-US">Command value error</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.82.1. Outline</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">This error may occur due to a communication error between the Main Board and the Servo Board, or a rapid change of motion. When a communication error occurs, a valid command cannot be transferred from the Main Board to the Servo Board, so this error will occur and immobilize the Robot to prevent the Robot's abnormal operation based on an invalid command.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">Also this error will occur and immobilized the Robot because the drive unit may not follow the rapid changes of motion command.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P style="margin-left:57.55pt" class="4"><SPAN lang="EN-US">1.1.82.2. Causes and examine methods</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<DIV align="center">
+
+		<TABLE class="unnamed" border="1" cellspacing="0" cellpadding="0" width="605" style="width:16.0cm;border-collapse:collapse;border:none">
+
+			<TR style="height:99.7pt">
+
+				<TD width="605" style="width:16.0cm;border:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;height:99.7pt">
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Please examine if the main board and the servo board are installed properly.</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is installed properly.</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:78.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if board is faulty.</SPAN></P>
+
+					<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+					<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp; </SPAN>Examine if there is a job program that operates a Robot rapidly.</SPAN></P>
+
+				</TD>
+
+			</TR>
+
+		</TABLE>
+
+	</DIV>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(1)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Please examine if the Main Board and the Servo Board are installed properly.</SPAN></B></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-AU">This error may be caused by a communication problem if the Main Board and the Servo Board is not </SPAN><SPAN lang="EN-US">installed properly on a rack, or the board has an error.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-AU">&nbsp;</SPAN></P>
+
+	
+
+	<P style="margin-left:40pt">
+
+        <table cellpadding="6" style="border: solid windowtext 1.0p; background: #F0F0F0;">
+
+            <tr>
+
+                <td ><IMG src="images/warn.png"/></td>
+
+                <td style="color: #FF0000;font:10.0pt;font-weight:bold;">
+
+                    <p style="color: #000000;"> Warning</p>
+
+                    In order to protect the previous job programs, please back up all the files of Main board to the USB memory before you remove the board from the Rack.
+
+                </td>
+
+            </tr>
+
+        </table>
+
+    </P>
+
+    
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Method to back up the files from Main Board to USB memory is as below.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="567" height="169" src="images/image232.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(a) TP520</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="605" height="161" src="images/image166.jpg"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">(b) TP511</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998431"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.216 Methods for inserting a USB into the teach pendant</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Once the USB is recognized by TP, the below icon will be displayed on a screen.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="288" src="images/image167.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">To back up the files enter to</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Service</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:80.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">Ø<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">5. File manager</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">And the screen that is similar to windows explorer will be displayed.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="441" height="264" src="images/image168.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">At this stage, please copy the files shown in M/B and move them to USB.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="454" height="295" src="images/image169.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="455" height="287" src="images/image170.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">You may create a new folder on USB, or can rename the folder by using the soft keyboard just like the windows explorer.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="452" height="279" src="images/image233.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="451" height="265" src="images/image234.jpg"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is installed properly.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">Please remove the Main Board and the Servo Board from the Rack and re-install them again.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="402" height="358" src="images/image173.png"></SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(a) Hi5a-S controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><SPAN lang="EN-US"><IMG width="391" height="271" src="images/image207.png" alt="Adobe Systems"></SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center;layout-grid-mode:char"><SPAN lang="EN-US">(b) Hi5a-N controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" align="center" style="text-align:center"><A name="_Toc443998432"><SPAN lang="EN-US">Figure </SPAN></A><SPAN lang="EN-US">1.217 Location of Rack Inside of the Controller</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:60.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><SPAN lang="EN-US" style="font-family:Wingdings">n<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp; </SPAN></SPAN><SPAN lang="EN-US">Examine if the board is faulty.</SPAN></P>
+
+	<P class="unnamed" style="margin-left:60.0pt"><SPAN lang="EN-US">To examine if the board is faulty, please replace it with new one.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:40.0pt;margin-bottom:.0001pt;text-indent:-20.0pt;line-height:normal;text-autospace:ideograph-numeric ideograph-other"><B><SPAN lang="EN-US">(2)<SPAN style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp; </SPAN>Examine if there is a job program that operates a Robot rapidly</SPAN></B></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">Please check if the error occurs at a point where the Robot's motion changes rapidly. If the error occurs during the rapid motion, modification of job program is required.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+	<P class="unnamed" style="margin-left:40.0pt"><SPAN lang="EN-US">The reason that this error occurs during the rapid motion is as below. During the execution of job program, Robot's position may be twisted in order to move a short distance. At that point, the speed of Robot's axis suddenly increases, and the error may occur if the Servo Board follows the movement. In order to resolve this, please modify the Teaching point of the location (where the position changes rapidly) or make changes on the position of Robot.</SPAN></P>
+
+	<P class="unnamed"><SPAN lang="EN-US">&nbsp;</SPAN></P>
+
+</BODY>
+
+</HTML>
+
