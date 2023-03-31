@@ -1,10 +1,8 @@
-{
+﻿{
 	"E1": {
 		"msg": "정전검출",
 		"cause": "모터ON상태에서 정전 또는 CB(Circuit Braker) OFF 되었습니다",
-		"remedy": "정전상태를 에러이력에 보관하기 위한 것이므로 조치가 필요없습니다.",
-		"help_idx": "",
-		"help_title": ""
+		"remedy": "정전상태를 에러이력에 보관하기 위한 것이므로 조치가 필요없습니다."
 	},
 	"E2": {
 		"msg": "하드웨어 리밋스위치 작동중",
@@ -21,9 +19,7 @@
 	"E4": {
 		"msg": "Arm간섭 리밋스위치 작동",
 		"cause": "로봇 arm의 간섭을 방지하기 위해 설치한 리밋스위치가 동작하였습니다.",
-		"remedy": "시스템 메뉴에서 모터ON(Enable 스위치를 잡은후 모터온 버튼을 누름)후 조그키를 사용하여 동작영역내로 이동하십시오.고장수리방법을 참조하십시오.",
-		"help_idx": "",
-		"help_title": ""
+		"remedy": "시스템 메뉴에서 모터ON(Enable 스위치를 잡은후 모터온 버튼을 누름)후 조그키를 사용하여 동작영역내로 이동하십시오.고장수리방법을 참조하십시오."
 	},
 	"E5": {
 		"msg": "Main보드의 Flash ROM에 DSP 버전이 없음",
@@ -756,7 +752,7 @@
 	"E225": {
 		"msg": "(%s축)소프트리밋 엔코더사용범위초과",
 		"cause": "현재 설정되어 있는 소프트리밋이 엔코더 가 사용할 수 있는 범위를 초과하였습니다.",
-		"remedy": "기계 파라미터 파일을 신규로 제어기에 로드한 경우 해당 축의 엔코더 리셋 후 엔코더 옵셋보정, 축 원점 설정, 소프트리밋 설정의 순서로 초기화를 실행하여 주십시오. 그렇지 않은 경우, 리밋을 확인하여 적당한 위치로 설정하십시오"
+		"remedy": "로봇 파라미터 파일을 신규로 제어기에 로드한 경우 해당 축의 엔코더 리셋 후 엔코더 옵셋보정, 축 원점 설정, 소프트리밋 설정의 순서로 초기화를 실행하여 주십시오. 그렇지 않은 경우, 리밋을 확인하여 적당한 위치로 설정하십시오"
 	},
 	"E226": {
 		"msg": "(%s축)엔코더 허용 범위 초과",
@@ -958,20 +954,35 @@
 		"cause": "동일 축에 할당된 모터가 2개는 초과했습니다.",
 		"remedy": "당사에 문의하십시오."
 	},
+	"E268": {
+		"msg": "(%s축) 고속 충돌이 발생했습니다.",
+		"cause": "해당 축에 급격한 외부의 힘이 가해졌습니다.",
+		"remedy": "충돌 원인을 확인바랍니다."
+	},
+	"E269": {
+		"msg": "(%s축) 저속 충돌이 발생했습니다.",
+		"cause": "해당 축에 완만한 외부의 힘이 가해졌습니다.",
+		"remedy": "충돌 원인을 확인바랍니다."
+	},
+	"E271": {
+		"msg": "(%s축) Main과 서보의 모터지령 위치편차 설정치 초과",
+		"cause": "서보가 Main의 지령을 수신하지 못하였습니다.",
+		"remedy": "당사에 문의하십시오."
+	},
 	"E300": {
 		"msg": "서보 초기화 이상",
 		"cause": "서보 초기화에 실패하였습니다.",
 		"remedy": "당사에 문의하십시오."
 	},
 	"E301": {
-		"msg": "서보 상태 이상",
+		"msg": "서보 상태 이상 (Main)",
 		"cause": "서보제어기 상태이상이 검지 되었습니다.",
 		"remedy": "지속적인 문제 발생 시 당사에 문의하십시오."
 	},
 	"E302": {
-		"msg": "%s축) 서보지령 이상",
-		"cause": "서보지령 이상이 검출 되었습니다.",
-		"remedy": "당사에 문의하십시오."
+		"msg": "%s축) 서보 상태 이상 (Drive)",
+		"cause": "서보드라이브 상태이상이 검지 되었습니다.",
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 문제가 지속적으로 발생하면 당사에 문의하십시오."
 	},
 	"E303": {
 		"msg": "엔코더 피드백 수신 실패",
@@ -1008,6 +1019,16 @@
 		"cause": "관측기의 상태 이상이 검지되었습니다.",
 		"remedy": "당사에 문의하십시오."
 	},
+	"E350": {
+		"msg": "%s축)모터 속도지령 모터 RPM 최대치 초과",
+		"cause": "모터 속도지령이 모터 RPM 최대치를 초과하였습니다.",
+		"remedy": "서보 파라미터들을 확인 하십시오."
+	},
+	"E351": {
+		"msg": "메인이 서보의 watchdog 검지",
+		"cause": "메인이 서보의 watchdog을 검지하였습니다.",
+		"remedy": "당사에 문의하십시오."
+	},
 	"E1001": {
 		"msg": "선택한 프로그램이 존재하지 않음",
 		"cause": "해당 프로그램이 제어기내에 존재하지 않습니다.",
@@ -1024,13 +1045,13 @@
 		"remedy": "불필요한 파일을 삭제하고 작성하십시오."
 	},
 	"E1004": {
-		"msg": "프로그램과 기계 파라미터의 축수가 다름",
-		"cause": "선택한 프로그램이 기계 파라미터에 등록되어 있는 로봇 축수와 다릅니다.",
+		"msg": "프로그램과 로봇 파라미터의 축수가 다름",
+		"cause": "선택한 프로그램이 로봇 파라미터에 등록되어 있는 로봇 축수와 다릅니다.",
 		"remedy": "다른 타입 로봇의 프로그램이거나 부가축수가 다른 로봇의 프로그램을 선택한 것 같습니다. 확인하십시오."
 	},
 	"E1005": {
-		"msg": "프로그램과 기계 파라미터의 본체가 다름",
-		"cause": "선택한 프로그램이 기계 파라미터에 등록되어 있는 로봇 타입과 다릅니다.",
+		"msg": "프로그램과 로봇 파라미터의 본체가 다름",
+		"cause": "선택한 프로그램이 로봇 파라미터에 등록되어 있는 로봇 타입과 다릅니다.",
 		"remedy": "다른 타입 로봇의 프로그램을 선택한 것 같습니다. 확인하십시오."
 	},
 	"E1006": {
@@ -1078,20 +1099,10 @@
 		"cause": "여러 경로를 통해, 4개보다 많은 복사작업이 시도되었습니다. (RS-232C, ethernet, SRAM card)",
 		"remedy": "잠시 기다렸다가 다른 사람의 복사가 끝나면 다시 시도해보십시오."
 	},
-	"E1015": {
-		"msg": "보호된 프로그램은 편집 불가능함",
-		"cause": "보호된 프로그램은 스텝 단위로 편집할 수 없습니다.",
-		"remedy": "해당 파일의 보호를 해제하고 난 후 실행하십시오."
-	},
 	"E1016": {
 		"msg": "개별적으로 수정할 수 없는 펑션",
 		"cause": "펑션 개별수정 기능에서 수정할 인 수가 없는 펑션을 선택하고 수정하려 하였습니다.",
 		"remedy": "수정할 펑션을 확인하십시오."
-	},
-	"E1017": {
-		"msg": "선택된 프로그램은 데이터가 없음",
-		"cause": "작성되지 않은 프로그램을 삭제 또는 수정하려 하였습니다.",
-		"remedy": "선택된 프로그램을 확인하십시오."
 	},
 	"E1018": {
 		"msg": "해당 스텝 데이터가 없는 프로그램",
@@ -1114,7 +1125,7 @@
 		"remedy": "팔레타이즈 카운터를 초기화하고 난 후 카운터값을 재설정하여 사용하십시오."
 	},
 	"E1025": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름",
 		"cause": "포즈/시프트 변수의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
@@ -1258,6 +1269,16 @@
 		"cause": "해당 명령문에 기록된 인자들에서 참조하는 부가축이 중복 지정된 경우입니다.",
 		"remedy": "해당 명령문을 확인하십시오."
 	},
+	"E1060": {
+		"msg": "지원하지 않는 형식의 래더 명령임",
+		"cause": "래더 파일에 기록된 명령들에서 지원하지 않는 형식이 존재하는 경우입니다.",
+		"remedy": "해당 래더 파일을 확인하십시오."
+	},
+	"E1061": {
+		"msg": "릴레이의 인덱스가 허용 범위를 초과함",
+		"cause": "래더 파일에 기록된 명령들에서 릴레이의 인덱스가 허용 범위를 초과한 경우입니다.",
+		"remedy": "해당 래더 파일을 확인하십시오."
+	},
 	"E1101": {
 		"msg": "(%s축)소프트 리밋 초과",
 		"cause": "티칭시나 자동운전시에 로봇 각축의 엔코더 데이터가 설정된 소프트 리밋에 도달한 경우입니다.",
@@ -1272,11 +1293,6 @@
 		"msg": "존재하지 않는 스텝으로 점프시도",
 		"cause": "실행하려는 스텝번호가 현재 선택된 프로그램의 최종 스텝 번호보다 큰 경우입니다.",
 		"remedy": "작성된 프로그램의 최종 스텝 번호를 확인하십시오."
-	},
-	"E1106": {
-		"msg": "존재하지 않는 펑션으로 점프시도",
-		"cause": "실행하려는 펑션번호가 현재 선택된 프로그램의 최종 펑션 번호보다 큰 경우입니다.",
-		"remedy": "작성된 프로그램의 최종 펑션번호를 확인하십시오."
 	},
 	"E1107": {
 		"msg": "퇴피스텝 번호가 부적절함",
@@ -1648,11 +1664,6 @@
 		"cause": "수식이나 함수나 포즈/시프트 상수 등의 필요한 위치에 괄호가 없습니다.",
 		"remedy": "괄호의 쌍이 적절히 사용되었는지 확인하십시오."
 	},
-	"E1206": {
-		"msg": "변수형지정자가 잘못 사용되었음",
-		"cause": "V 변수의 변수형지정자가 잘못 표기 되었습니다.",
-		"remedy": "변수형지정자로는 '%', '!', '$' 중 하나를 사용해 주십시오."
-	},
 	"E1207": {
 		"msg": "'['가 빠졌음",
 		"cause": "변수에서 번호가 빠졌거나 '['가 없습니다.",
@@ -1732,11 +1743,6 @@
 		"msg": "값이 범위를 벗어났음",
 		"cause": "각종 명령문에서 인수의 값이 제한된 범위를 벗어났습니다.",
 		"remedy": "인수의 값을 제한된 범위 내에서 사용해 주십시오."
-	},
-	"E1223": {
-		"msg": "입출력방향지정이 잘못되었음",
-		"cause": "PRINT문의 출력방향이나 INPUT문의 입력방향이 잘못되어 있습니다.",
-		"remedy": "입출력 방향으로는 '#0','#1','#2' 중의 하나를 사용해 주십시오."
 	},
 	"E1224": {
 		"msg": "스텝번호가 범위를 벗어났음",
@@ -2135,7 +2141,7 @@
 	},
 	"E1306": {
 		"msg": "건서치 기준위치기록이 안 되었음",
-		"cause": "기계 파라미터 파일 작성 후, 건서치 기준 위치기록을 실행하지 않고, 건서치 펑션 또는 스폿용접펑션을 재생하는 경우에 발생하는 에러입니다",
+		"cause": "로봇 파라미터 파일 작성 후, 건서치 기준 위치기록을 실행하지 않고, 건서치 펑션 또는 스폿용접펑션을 재생하는 경우에 발생하는 에러입니다",
 		"remedy": "마모되지 않는 새 전극을 부착하여 건서치기준위치 기록을 실행하여 주십시오."
 	},
 	"E1307": {
@@ -2389,8 +2395,8 @@
 		"remedy": "당사 A/S 요원들의 도움을 받아 메모리를 초기화하여 주십시오."
 	},
 	"E1361": {
-		"msg": "기계 파라미터 파일이 손상되었습니다.",
-		"cause": "기계 파라미터 파일의 구조체가 손상되었음",
+		"msg": "로봇 파라미터 파일이 손상되었습니다.",
+		"cause": "로봇 파라미터 파일의 구조체가 손상되었음",
 		"remedy": "당사 A/S 요원들의 도움을 받아 메모리를 초기화하여 주십시오."
 	},
 	"E1362": {
@@ -2399,9 +2405,9 @@
 		"remedy": "제어 파라미터 파일의 속성을 변경하십시오"
 	},
 	"E1363": {
-		"msg": "기계 파라미터 파일이 쓰기금지속성임.",
-		"cause": "기계 파라미터 파일에 데이터 기록불가.",
-		"remedy": "기계 파라미터 파일의 속성을 변경하십시오"
+		"msg": "로봇 파라미터 파일이 쓰기금지속성임.",
+		"cause": "로봇 파라미터 파일에 데이터 기록불가.",
+		"remedy": "로봇 파라미터 파일의 속성을 변경하십시오"
 	},
 	"E1364": {
 		"msg": "마스터 중복 설정 상태 입니다",
@@ -3305,17 +3311,42 @@
 	},
 	"E1548": {
 		"msg": "응답 대기시간을 초과했습니다.",
-		"cause": "SMOV를 수행할 축이 잠금상태입니다.",
-		"remedy": "축잠금 메뉴에서 해당 축의 잠금을 해제하십시오."
+		"cause": "지정된 시간내에 통신 응답이 없습니다.",
+		"remedy": "통신 연결 상태를 확인하십시오."
 	},
 	"E1549": {
 		"msg": "기동 입력에 대한 응답시간을 초과했습니다.",
 		"cause": "기동 입력에 대한 응답시간을 초과했습니다.",
 		"remedy": "수동 모드 시스템 메뉴 진입 후 에러를 해제하십시오."
 	},
+	"E1550": {
+		"msg": "통신이 연결되지 않았습니다.",
+		"cause": "통신 연결 오류입니다.",
+		"remedy": "통신 연결 상태를 확인하십시오."
+	},
+	"E1551": {
+		"msg": "수신된 데이터가 유효하지 않습니다.",
+		"cause": "수신된 데이터 크기가 약속된 것과 다릅니다.",
+		"remedy": "전송한 데이터를 확인하십시오."
+	},
+	"E1552": {
+		"msg": "데이터 전송에 실패했습니다.",
+		"cause": "데이터 전송에 실패했습니다.",
+		"remedy": "통신 연결 상태를 확인하십시오."
+	},
+	"E1553": {
+		"msg": "상대적 이동량 파라미터 좌표계 오류",
+		"cause": "본 명령어의 상대적 이동량은 직교좌표만을 지원합니다.",
+		"remedy": "기준 위치로 부터 상대적인 이동량을 직교좌표로 입력하세요. 다음 직교좌표 중 택일(base/robot/user)"
+	},
+	"E1554": {
+		"msg": "외부지령 동작 가능상태가 아닙니다.",
+		"cause": "외부지령을 수신 하였으나 현재 로봇이 동작 가능한 상태가 아닙니다",
+		"remedy": "자동 또는 원격 모드에서 로봇이 동작대기 상태인지 확인 하십시오."
+	},
 	"E2000": {
 		"msg": "정전검출",
-		"cause": "모터ON상태에서 정전 또는 CB(Circuit Braker) OFF 되었습니다.정전검출시, 타 에러가 동반될 수 있으며, 다음과 같습니다.E02506 AMP PN 저전압 발생E02507 AMP 다이오드모듈 이상 또는 교류 입력전압 부족E02631 (축)속도별 위치편차초과W00153 감속기 허용수준 초과하는 모터전류 검지됨",
+		"cause": "모터ON상태에서 정전 또는 CB(Circuit Braker) OFF 되었습니다.정전검출시, 타 에러가 동반될 수 있으며, 다음과 같습니다.\r\nE02506 AMP PN 저전압 발생\r\nE02507 AMP 다이오드모듈 이상 또는 교류 입력전압 부족\r\nE02631 (축)속도별 위치편차초과\r\nW00153 감속기 허용수준 초과하는 모터전류 검지됨\r\nE302 (축)서보 상태 이상 (Drive)\r\nE3050 (축)저전압- 통합 구동 모듈\r\nE7613Safety controller 1축 토크센서 통신 타임아웃(CH)",
 		"remedy": "정전상태를 에러이력에 보관하기 위한 것이므로 조치가 필요없습니다."
 	},
 	"E2001": {
@@ -4128,6 +4159,16 @@
 		"cause": "메인보드에서 ERRRSV를 발생시켰으나 시스템보드가 이에 응하지 않고 있습니다. ERRRSV 신호전달계통에 문제가 있습니다.",
 		"remedy": "1) 시스템보드의 ERRRSV라인 처리부가 고장입니다. 교체하십시오.2) CAN통신 케이블에 포함된 ERRRSV라인 배선에 문제가 있습니다. 케이블을 점검하십시오.3) 메인보드의 ERRRSV 생성부가 고장입니다. 교체하십시오."
 	},
+	"E2304": {
+		"msg": "안전모듈 에러(모듈1 에러)",
+		"cause": "안전모듈 작동신호가 없습니다. 모듈이 에러상태이거나 통신이 끊겼습니다.",
+		"remedy": "안전모듈이나 통신 모듈, 혹은 케이블을 확인하세요."
+	},
+	"E2305": {
+		"msg": "안전모듈 에러(모듈2 에러)",
+		"cause": "안전모듈 작동신호가 없습니다. 모듈이 에러상태이거나 통신이 끊겼습니다.",
+		"remedy": "안전모듈이나 통신 모듈, 혹은 케이블을 확인하세요."
+	},
 	"E2310": {
 		"msg": "자동모드 안전가드 스위치 동작중",
 		"cause": "자동모드에서 안전가드 스위치가 OPEN되었습니다.",
@@ -4635,6 +4676,13 @@
 		"help_idx": "E02508",
 		"help_title": "AMP PN 저전압 검지경로 이상 또는 방전 이상"
 	},
+	"E2509": {
+		"msg": "AMP 다이오드모듈 과열",
+		"cause": "다이오드모듈 온도가 허용범위를 벗어났습니다.",
+		"remedy": "1) 전원 관련 부품(서보 구동장치)을 점검하여 주십시오.",
+		"help_idx": "E02509",
+		"help_title": "AMP 다이오드모듈 과열"
+	},
 	"E2510": {
 		"msg": "AMP AC 입력전원 과전압 - 퓨즈 단선",
 		"cause": "서지전압 유입으로 서보 구동장치의 F1 또는 F2가 단선되었습니다.",
@@ -4669,6 +4717,21 @@
 		"remedy": "에러가 발생하는 스텝에서 로봇을 점검하여 주십시오,1) 에러가 발생하는 위치에서 로봇의 배선을 점검하여 주십시오.2) 로봇의 재생 속도를 낮추어 에러를 확인하여 주십시오.3) 티칭된 스텝의 보간을 변경한 후 에러를 확인하여 주십시오.",
 		"help_idx": "E02522",
 		"help_title": "(○축) IPM 폴트 – 특정스텝"
+	},
+	"E2523": {
+		"msg": "BD567T 앰프 보드 위치 이상",
+		"cause": "BD567T 앰프 보드 위치 이상.",
+		"remedy": "BD567T 슬롯 체결 상태나 보드 위치 점검"
+	},
+	"E2524": {
+		"msg": "BD568T 앰프 보드 위치 이상",
+		"cause": "BD568T 앰프 보드 위치 이상.",
+		"remedy": "BD568T 슬롯 체결 상태나 보드 위치 점검"
+	},
+	"E2525": {
+		"msg": "앰프 BD567T/658T 보드 위치 이상",
+		"cause": "앰프 BD567T/658T 보드 위치 이상",
+		"remedy": "BD567T/658T 슬롯 보드 위치 점검"		
 	},
 	"E2530": {
 		"msg": "AMP-시스템간 PWMON 배선에 단선/접촉불량",
@@ -4756,6 +4819,11 @@
 		"cause": "AMP의 다이나믹브레이크(DB)에 사용하는 SMPS의 출력전원에 이상이 발생하였습니다.",
 		"remedy": "E2560과 관련된 에러조치를 하십시오."
 	},
+	"E2554": {
+		"msg": "초기충전 릴레이 동작 이상",
+		"cause": "초기충전 릴레이 동작 이상.",
+		"remedy": "초기충전 릴레이 소손이나 케이블 점검."
+	},
 	"E2560": {
 		"msg": "브레이크 전원 공급이 차단됨.",
 		"cause": "브레이크 전원이 공급되지 않고 있습니다.",
@@ -4776,6 +4844,11 @@
 		"cause": "브레이크 전원 검지회로에 이상이 발생하였습니다. 브레이크 전원이 OFF되고 있지만 검지회로가 전원정상으로 표시하고 있습니다.",
 		"remedy": "시스템보드를 교체하십시오."
 	},
+	"E2570": {
+		"msg": "(%s 축)브레이크 출력이상",
+		"cause": "브레이크 신호 출력에 대한 피드백이 검출되지 않습니다.",
+		"remedy": "브레이크 동작이 안되므로 브레이크 상태나 브레이크 출력 케이블 점검."
+	},
 	"E2590": {
 		"msg": "시스템 보드의 서보브레이크 에러",
 		"cause": "모터 On 중에 서보에서 서보브레이크 신호를 해제하지 않았습니다.",
@@ -4785,6 +4858,11 @@
 		"msg": "확장 시스템 보드의 서보브레이크 에러",
 		"cause": "모터 On 중에 서보에서 서보브레이크 신호를 해제하지 않았습니다.",
 		"remedy": "초기화 에러가 발생하였거나 엔코더에러가 발생하여 모터 On 시킬 수 없는 상태인지 확인하십시오. BD542보드와 AMP, 확장시스템 보드 BD53E와 BD530보드를 통해 신호가 입력되므로 보드 및 중계 케이블을 점검하십시오."
+	},
+	"E2592": {
+		"msg": "시스템 보드의 모듈 %s 폴트상태",
+		"cause": "시스템 보드가 폴트 상태에 진입 하였습니다.", 
+		"remedy": "시스템 폴트 발생 원인을 해소하십시오. 시스템 보드가 폴트 상태에서 진입한 경우 복구를 위해서는 제어기 전원의 재부팅이 필요합니다."
 	},
 	"E2600": {
 		"msg": "Main보드의 Flash ROM에 DSP 버전이 없음",
@@ -5130,6 +5208,13 @@
 		"cause": "제2 서보보드의 DSP2이 메인의 watchdog 이상상태를 검지하였습니다.",
 		"remedy": "1) 메인보드 또는 서보보드의 장착상태를 점검하십시오.2) 메인보드 또는 서보보드를 교환하십시오."
 	},
+	"E2764": {
+		"msg": "H6SSM이 H6SIO SFST 검지",
+		"cause": "H6SIO 모듈이 Safety Fault 상태로 판단하고 H6SSM에 전달합니다.",
+		"remedy": "SAFETY FAULT 상태입니다. 전원 재투입 후 사용하십시오.",
+		"help_idx": "E02764",
+		"help_title": "[조치방법] SFST 에러가 검지되었습니다. 전원 재투입 후 사용하십시오."
+	},
 	"E2770": {
 		"msg": "(%s축)초기화에서 미정의서보에러발생",
 		"cause": "엔코더 초기 절대위치 데이터 수신 중에 서보보드로부터 알 수 없는 에러코드를 수신하였습니다.",
@@ -5442,7 +5527,7 @@
 		"help_title": "[조치방법]AMP의 과전압(P-N) 발생"
 	},
 	"E3013": {
-		"msg": "Motor ON 시도에서 서보가 동작하지 않음",
+		"msg": "%s축) Motor ON 시도에서 서보가 동작하지 않음",
 		"cause": "서보ON 조작시 제한시간 내 서보ON이 되지 않습니다.",
 		"remedy": "고장수리방법을 참조하십시오.",
 		"help_idx": "E0122",
@@ -5572,104 +5657,114 @@
 		"remedy": "서보툴 축 엔코더 전원 제어 계통의 이상을 점검하시고, 해당부분을 교체하여 주십시오."
 	},
 	"E3037": {
-		"msg": "%s축) 과전류 (H/W)",
-		"cause": " SMT_DA 서보 드라이버 알림",
-		"remedy": "전원을 재투입하여 시도하여 주십시오. 엔코더 노이즈 유입 원인을 제거하십시오. 문제가 지속되면 당사에 문의하십시오."
+		"msg": "%s축) 과전류 (H/W)- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 제어기를 재부팅하십시오. 2) 엔코더 노이즈 유입 원인을 제거하십시오. 3) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3038": {
-		"msg": "%s축) 과전류 (S/W)",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 에러가 클리어 되지 않으면 서보건 모터를 교체하십시오."
+		"msg": "%s축) 과전류 (S/W)- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 서보건에 R359기능을 이용하여 강제 엔코더 전원을 접속한 후, 엔코더 리셋 기능을 실행합니다. 3) 문제가 지속되면 통합 구동 모듈을 교체하십시오"
 	},
 	"E3039": {
-		"msg": "%s축) 과전류(H/W)",
-		"cause": "SMT_DA 서보 드라이버 알림",
+		"msg": "%s축) 과전류(H/W)- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
 		"remedy": "엔코더 전압, 케이블의 연결 상태와 제어기, 로봇측의 접지 상태를 점검하십시오."
 	},
 	"E3040": {
-		"msg": "%s축) 전류 옵셋 이상",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 서보 드라이브 전류 옵셋 이상- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "서보 드라이브를 교체 해주십시오."
 	},
 	"E3041": {
-		"msg": "%s축) 연속과부하",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 서보 드라이브 연속과부하- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "모터 브레이크 및 케이블, 엔코더 케이블, 기구부를 점검 해주십시오."
 	},
 	"E3042": {
-		"msg": "%s축) 드라이브과열1",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 서보 드라이브 과열1- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 드라이브 주위 온도를 낮쳐 주십시오(주위 온도가 110도가 넘는지 확인). 2) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3043": {
-		"msg": "%s축) 모터 단선",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 모터 단선- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 모터 케이블 혹은 모터를 교체해 주십시오. 2) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3044": {
-		"msg": "%s축) 드라이브 과열2",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 드라이브 과열2- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 드라이브 주위 온도를 낮쳐 주십시오(주위 온도가 100도가 넘는지 확인). 2) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3045": {
-		"msg": "%s축) SMT_DA 시리얼 엔코너 통신에러",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 시리얼 엔코너 통신에러- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람 ",
+		"remedy": "1) 엔코더 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오. 3) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3046": {
-		"msg": "%s축) SMT_DA 엔코더 케이블 단선",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 엔코더 케이블 단선- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 엔코더 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오. 3) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3047": {
-		"msg": "%s축) SMT_DA 엔코더 에러 발생",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 엔코더 에러 발생- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 엔코더 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오. 3) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3048": {
-		"msg": "%s축) SMT_DA 모터 ID 설정 오류",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 모터 ID 설정 오류- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 제어기를 재부팅하십시오. 3) 문제가 지속되면 드라이브를 교체하십시오."
 	},
 	"E3049": {
-		"msg": "%s축) SMT_DA 엔코더 배터리 저전압",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 엔코더 배터리 저전압- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 배터리 접속 상태를 점검해주십시오. 2) 배터리 전압이 3.3V 이상인지 확인하십시오. 3) 문제가 지속되면 배터리를 교체하십시오."
 	},
 	"E3050": {
-		"msg": "%s축) SMT_DA 저전압",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 저전압- 통합 구동 모듈",
+		"cause": "구동모듈의 전압이 기준치 이하입니다. 안전기능 위반으로 정지0 수행시 에러가 발생할 수 있습니다.",
+		"remedy": "1) 안전기능 위반 여부를 확인하십시오. 2) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 3) 주전원이 DC 40V 이상인지를 점검해주십시오. 4) 안전 정지 상태를 확인해주십시오. 5) 문제가 지속되면 드라이브를 교체해주십시오."
 	},
 	"E3051": {
-		"msg": "%s축) SMT_DA 과전압",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 과전압- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 주전원이 DC 58V 이하인지를 점검해주십시오. 2) 가감속 시간을 길게 설정해주십시오. 3) 문제가 지속되면 드라이브를 교체해주십시오."
 	},
 	"E3052": {
-		"msg": "%s축) SMT_DA 과속도",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 과속도- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 모터 및 엔코더 케이블을 점검해주십시오. 2) 문제가 지속되면 모터 혹은 드라이브를 교체해주십시오."
 	},
 	"E3053": {
-		"msg": "%s축) SMT_DA 위치오차과다",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 위치오차과다- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 기구부를 점검해주십시오. 2) 문제가 지속되면 드라이브를 교체해주십시오."
 	},
 	"E3054": {
-		"msg": "%s축) SMT_DA 속도오차과다",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 속도오차과다- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 모터 및 엔코더 케이블을 점검해주십시오. 2) 문제가 지속되면 모터 혹은 드라이브를 교체해주십시오."
 	},
 	"E3055": {
-		"msg": "%s축) SMT_DA 파라미터이상",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 파라미터이상- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 제어기를 재부팅해주십시오. 2) 문제가 지속되면 드라이브를 교체해주십시오."
 	},
 	"E3056": {
-		"msg": "%s축) SMT_DA 공장출하값이상",
-		"cause": "SMT_DA 서보 드라이버 알림",
-		"remedy": "접속은 되지었지만 문제이므로 엔코더 배터리를 교체하십시오."
+		"msg": "%s축) 공장출하값이상- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 제어기를 재부팅해주십시오. 2) 문제가 지속되면 드라이브를 교체해주십시오."
+	},
+	"E3057": {
+		"msg": "%s축) 모터 정렬 이상- 통합 구동 모듈",
+		"cause": "통합 구동 모듈 알람",
+		"remedy": "1) 제어기를 재부팅해주십시오. 2) 문제가 지속되면 드라이브를 교체해주십시오."
+	},
+	"E3060": {
+		"msg": "스터드웰딩 진입을 위한 서보 OFF가 되지 않음",
+		"cause": "제한시간 내 서보OFF가 되지 않습니다.",
+		"remedy": "1) 서보보드를 교체하십시오.2) 해결되지 않으면 당사에 문의하십시오."
 	},
 	"E4001": {
 		"msg": "FAULT_SafeSpace:CH_TYPE_DUPLICATED",
@@ -5680,6 +5775,11 @@
 		"msg": "FAULT_SafeSpace:PG_FLOW_ERROR",
 		"cause": "SafeSpace 에러입니다.",
 		"remedy": "1.제어기 전원을 재투입해 보십시오.2. 메인보드와 SafeSpace 모듈간에 EtherNet 케이블을 점검하십시오.3. 여전히 문제가 발생할 경우, SafeSpace 모듈을 교체하십시오."
+	},
+	"E4003": {
+		"msg": "ErrSafeSpace_Status_Timeout",
+		"cause": "SafeSpace 에러입니다.",
+		"remedy": "1.제어기 전원을 재투입해 보십시오.2. 여전히 문제가 발생할 경우, SafeSpace 모듈을 교체하십시오."
 	},
 	"E4100": {
 		"msg": "FAULT_SafeSpace:GET_PARAM_REQ_FAIL",
@@ -7521,6 +7621,61 @@
 		"cause": "엔드리스 스텝의 기록위치가 엔코더의 사용범위를 초과하였습니다.",
 		"remedy": "R350코드로 엔드리스 위치를 수동 리셋한 후에 스텝위치를 수정하십시오."
 	},
+	"E6310": {
+		"msg": "%s 축 실러 가압력 오차가 너무 큽니다.",
+		"cause": "압력센서 측정값과 모터측정 압력의 오차가 허용 범위를 초과 하였습니다.",
+		"remedy": "실러 가압력 튜닝 상태를 점검 하십시오."
+	},
+	"E6311": {
+		"msg": "%s 축 충전 중 실러 가압력이 너무 큽니다.",
+		"cause": "측정된 압력이 최대압력을 초과하였습니다.",
+		"remedy": "실링 장비의 상태를 점검하십시오."
+	},
+	"E6312": {
+		"msg": "%s 축 대기 중 실러 가압력이 너무 큽니다.",
+		"cause": "실러 압력이 허용 범위를 초과 하였습니다.",
+		"remedy": "실링장비 상태를 점검하십시오."
+	},
+	"E6313": {
+		"msg": "%s 축 실러 가압력이 너무 낮습니다.",
+		"cause": "실러 가압력이 허용 범위보다 낮습니다.",
+		"remedy": "실러 누액여부 및 압력센서 동작상태를 점검 하십시오."
+	},
+	"E6314": {
+		"msg": "%s 축 실러 가압력이 최대값을 초과 하였습니다.",
+		"cause": "실러 가압력이 최대 허용 범위를 초과 하였습니다.",
+		"remedy": "토출밸브의 개폐여부 및 실링 장비를 점검하십시오."
+	},
+	"E6315": {
+		"msg": "%s 축 실러 압력제어 시간초과.",
+		"cause": "실러 목표가압력 도달시간을 초과 하였습니다.",
+		"remedy": "설정압력 및 압력 튜닝상태를 확인 하세요."
+	},
+	"E6316": {
+		"msg": "실러 지령 과전류 발생",
+		"cause": "실러 축 지령제한값이 허용 범위를 초과했습니다.",
+		"remedy": "가압력 설정값 및 가압력 튜닝상태를 확인 하십시오."
+	},
+	"E6317": {
+		"msg": "실러 충전완료시간 초과",
+		"cause": "제한시간 내에 충전완료 조건이 충족되지 않았습니다.",
+		"remedy": "입력밸브 동작상태 및 소재공급펌프의 압력상태를 점검 하십시오."
+	},
+	"E6318": {
+		"msg": "실러 압력센서 데이터 이상",
+		"cause": "압력센서의 데이터가 이상합니다.",
+		"remedy": "센서 연결상태를 점검 하십시오."
+	},
+	"E6319": {
+		"msg": "실링 장비 통신이상",
+		"cause": "실링장비와의 통신에 오류가 발생하였습니다.",
+		"remedy": "장비와의 연결상태를 점검 하십시오."
+	},
+	"E6320": {
+		"msg": "실러 밸브제어 신호출력 불가",
+		"cause": "밸브제어 신호를 출력할 수 있는 상태가 아닙니다.",
+		"remedy": "내장 PLC를 정지하거나 SP11을 On으로 설정하여 Run 하십시오."
+	},
 	"E6400": {
 		"msg": "%s 축 토크오차 최대값 초과",
 		"cause": "해당 축의 토크가 정상 범위를 초과 하였습니다.",
@@ -7542,929 +7697,989 @@
 		"remedy": "부하추정을 실행하거나, 정확한 툴 부하를 입력하십시오."
 	},
 	"E7001": {
-		"msg": "Safety controller 초기화 오류",
+		"msg": "[Fault]Safety controller 초기화 오류",
 		"cause": "Safety controller와 main b/d간 통신 이상",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) Safety controller와 main b/d간의 통신 케이블을 확인하십시오. 3)문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7002": {
-		"msg": "로봇 정역학 데이터 초기화 실패",
+		"msg": "[Fault]로봇 정역학 데이터 초기화 실패",
 		"cause": "모션 초기화 실패로 safety controller로의 데이터 송신을 실패함",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 당사에 문의하십시오."
 	},
 	"E7003": {
-		"msg": "로봇 동역학 데이터 초기화 실패",
+		"msg": "[Fault]로봇 동역학 데이터 초기화 실패",
 		"cause": "모션 초기화 실패로 safety controller로의 데이터 송신을 실패함",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 당사에 문의하십시오."
 	},
 	"E7004": {
-		"msg": "안전 기능 파라미터 초기화 실패",
+		"msg": "[Fault]안전 기능 파라미터 초기화 실패",
 		"cause": "모션 초기화 실패로 safety controller로의 데이터 송신을 실패함",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 당사에 문의하십시오."
 	},
 	"E7005": {
-		"msg": "안전 기능 파라미터 송신 실패",
+		"msg": "[Fault]안전 기능 파라미터 송신 실패",
 		"cause": "Safety controller와 main b/d간 통신 이상",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) Safety controller와 main b/d간의 통신 케이블을 확인하십시오. 3)문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7010": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU EFUSE 이상",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7011": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU ECC 모듈 이상",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7012": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7013": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7014": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7015": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7016": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7017": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU POSCON 진단 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7018": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 메모리 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7019": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7020": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7021": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7022": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7023": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7024": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7025": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU 유효하지 않은 주변기기 접근 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7026": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU REG1 ADC RAM 패리티 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7027": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU REG2 ADC RAM 패리티 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7028": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU SPI1 MIBSPI ANALOG LOOPBACK TEST 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7029": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU SPI1 MIBSPI ECC_TEST_MODE_1BIT 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7030": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "CPU SPI1 MIBSPI ECC_TEST_MODE_1BIT 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7031": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_SPI1_MIBSPI_ECC_TEST_MODE_1BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7032": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_SPI1_MIBSPI_ECC_TEST_MODE_2BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7033": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_VIM_SOFTWARE_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7034": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN1_ECC_TEST_MODE_1BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7035": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN2_ECC_TEST_MODE_1BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7036": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN1_ECC_TEST_MODE_2BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7037": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN2_ECC_TEST_MODE_2BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7038": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN1_ECC_TEST_MODE_1BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7039": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN1_ECC_TEST_MODE_2BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7040": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN2_ECC_TEST_MODE_1BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7041": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_DCAN2_ECC_TEST_MODE_2BIT_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7042": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_FLASH_ECC_TEST_MODE_1BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7043": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_FLASH_ECC_TEST_MODE_2BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7044": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_SRAM_ECC_ERROR_FORCING_1BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7045": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_SRAM_ECC_ERROR_FORCING_2BIT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7046": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_ALL1PORTMEM_PBIST_EXECUTE",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7047": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_ALL2PORTMEM_PBIST_EXECUTE",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7048": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_ALLROMMEM_PBIST_EXECUTE",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7049": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_CPUCOMP_SELF_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7050": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_CPUCOMP_SELF_TEST_ERROR_FORCING",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7051": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_CPUCOMP_ERROR_FORCING_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7052": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_VIMCOMP_SELF_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7053": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_VIMCOMP_SELF_TEST_ERROR_FORCING",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7054": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_VIMCOMP_ERROR_FORCING_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7055": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_PDCOMP_SELF_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7056": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_PDCOMP_SELF_TEST_ERROR_FORCING",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7057": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_PDCOMP_ERROR_FORCING_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7058": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_INMCOMP_SELF_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7059": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_INMCOMP_SELF_TEST_ERROR_FORCING",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7060": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_INMCOMP_ERROR_FORCING_TEST",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7061": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_CPUCOMP_ERROR_FORCING_TEST_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7062": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_VIMCOMP_ERROR_FORCING_TEST_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7063": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_PDCOMP_ERROR_FORCING_TEST_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7064": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "ERR_CCMR5F_INMCOMP_ERROR_FORCING_TEST_FAULT_INJECT",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7065": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "RAM 진단 에러(ERR_RAM_MARCH_TEST)",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7066": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "Flash영역의 프로그램 코드의 CRC가 맞지 않습니다.(ERR_CRC_TEST)",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7067": {
-		"msg": "Safety controller CPU 진단 에러",
+		"msg": "[Fault]Safety controller CPU 진단 에러(CH%s)",
 		"cause": "Flash영역의 프로그램 코드의 CRC가 변질되었습니다.(ERR_CRC_TEST_BINARY_POLLUTION)",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7101": {
-		"msg": "Safety controller 안전 CPU(CH0) 워치독 에러",
+		"msg": "[Fault]Safety controller 안전 CPU(CH0) 워치독 에러(CH%s)",
 		"cause": "안전 CPU(CH0)의 Watchdog 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7102": {
-		"msg": "Safety controller 안전 CPU(CH1) 워치독 에러",
+		"msg": "[Fault]Safety controller 안전 CPU(CH1) 워치독 에러(CH%s)",
 		"cause": "안전 CPU(CH1)의 Watchdog 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7103": {
-		"msg": "Safety controller 1축 엔코더 진단 에러",
+		"msg": "Safety controller 1축 엔코더 진단 에러(CH%s)",
 		"cause": "1축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7104": {
-		"msg": "Safety controller 2축 엔코더 진단 에러",
+		"msg": "Safety controller 2축 엔코더 진단 에러(CH%s)",
 		"cause": "2축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7105": {
-		"msg": "Safety controller 3축 엔코더 진단 에러",
+		"msg": "Safety controller 3축 엔코더 진단 에러(CH%s)",
 		"cause": "3축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7106": {
-		"msg": "Safety controller 4축 엔코더 진단 에러",
+		"msg": "Safety controller 4축 엔코더 진단 에러(CH%s)",
 		"cause": "4축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7107": {
-		"msg": "Safety controller 5축 엔코더 진단 에러",
+		"msg": "Safety controller 5축 엔코더 진단 에러(CH%s)",
 		"cause": "5축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7108": {
-		"msg": "Safety controller 6축 엔코더 진단 에러",
+		"msg": "Safety controller 6축 엔코더 진단 에러(CH%s)",
 		"cause": "6축 엔코더 진단에서 에러 발생",
-		"remedy": "1) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오. 2) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) Safety controller과 엔코더간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7109": {
-		"msg": "Safety controller 1축 토크센서 진단 에러",
+		"msg": "Safety controller 1축 토크센서 진단 에러(CH%s)",
 		"cause": "1축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7110": {
-		"msg": "Safety controller 2축 토크센서 진단 에러",
+		"msg": "Safety controller 2축 토크센서 진단 에러(CH%s)",
 		"cause": "2축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7111": {
-		"msg": "Safety controller 3축 토크센서 진단 에러",
+		"msg": "Safety controller 3축 토크센서 진단 에러(CH%s)",
 		"cause": "3축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7112": {
-		"msg": "Safety controller 4축 토크센서 진단 에러",
+		"msg": "Safety controller 4축 토크센서 진단 에러(CH%s)",
 		"cause": "4축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7113": {
-		"msg": "Safety controller 5축 토크센서 진단 에러",
+		"msg": "Safety controller 5축 토크센서 진단 에러(CH%s)",
 		"cause": "5축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7114": {
-		"msg": "Safety controller 6축 토크센서 진단 에러",
+		"msg": "Safety controller 6축 토크센서 진단 에러(CH%s)",
 		"cause": "6축 토크센서 진단 에러 발생",
-		"remedy": "1) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 2) 해당축의 토크센서를 점검하십시오 3) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7115": {
-		"msg": "Safety controller 1축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 1축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "1축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7116": {
-		"msg": "Safety controller 2축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 2축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "2축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7117": {
-		"msg": "Safety controller 3축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 3축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "3축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7118": {
-		"msg": "Safety controller 4축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 4축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "4축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7119": {
-		"msg": "Safety controller 5축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 5축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "5축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량, 토크센서 옵셋 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7120": {
-		"msg": "Safety controller 6축 토크센서 진단 에러(2)",
+		"msg": "Safety controller 6축 토크센서 진단 에러(2)-(CH%s)",
 		"cause": "6축 토크센서 진단 에러 발생",
-		"remedy": "1) 툴 데이터가 실제와 같은지 확인하십시오. 2) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오. 3) 해당축의 토크센서를 점검하십시오 4) 제어기를 재부팅하십시오."
+		"remedy": "1) 안전 상태창으로 이동하여 복구 모드를 통해 에러 초기화 하시오. 2) 해당축의 토크센서를 점검하십시오.(툴데이터, 축별 부가중량 역시 점검바랍니다.) 3) Safety controller과 토크센서간의 CAN 통신 케이블을 점검하십시오."
 	},
 	"E7170": {
-		"msg": "Safety controller 저온 이상",
+		"msg": "[Fault]Safety controller 저온 이상(CH%s)",
 		"cause": "1번 온도센서 저온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7171": {
-		"msg": "Safety controller 저온 이상",
+		"msg": "[Fault]Safety controller 저온 이상(CH%s)",
 		"cause": "2번 온도센서 저온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7172": {
-		"msg": "Safety controller 저온 이상",
+		"msg": "[Fault]Safety controller 저온 이상(CH%s)",
 		"cause": "3번 온도센서 저온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7173": {
-		"msg": "Safety controller 고온 이상",
+		"msg": "[Fault]Safety controller 고온 이상(CH%s)",
 		"cause": "1번 온도센서 고온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7174": {
-		"msg": "Safety controller 고온 이상",
+		"msg": "[Fault]Safety controller 고온 이상(CH%s)",
 		"cause": "2번 온도센서 고온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7175": {
-		"msg": "Safety controller 고온 이상",
+		"msg": "[Fault]Safety controller 고온 이상(CH%s)",
 		"cause": "3번 온도센서 고온 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7176": {
-		"msg": "Safety controller 1.2V 전원 에러",
+		"msg": "[Fault]Safety controller 1.2V 전원 에러(CH%s)",
 		"cause": "0번 채널 1.2V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7177": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "0번 채널 3.3V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7178": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "0번 채널 3.3V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7179": {
-		"msg": "Safety controller 5V 전원 에러",
+		"msg": "[Fault]Safety controller 5V 전원 에러(CH%s)",
 		"cause": "0번 채널 5V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7180": {
-		"msg": "Safety controller 24V 전원 에러",
+		"msg": "[Fault]Safety controller 24V 전원 에러(CH%s)",
 		"cause": "0번 채널 24V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 24V 전원을 점검하십시오"
 	},
 	"E7181": {
-		"msg": "Safety controller 48V 전원 에러",
+		"msg": "[Fault]Safety controller 48V 전원 에러(CH%s)",
 		"cause": "0번 채널 48V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 48V 전원을 점검하십시오"
 	},
 	"E7182": {
-		"msg": "Safety controller 1.2V 전원 에러",
+		"msg": "[Fault]Safety controller 1.2V 전원 에러(CH%s)",
 		"cause": "1번 채널 1.2V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7183": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "1번 채널 3.3V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7184": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "1번 채널 3.3V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7185": {
-		"msg": "Safety controller 5V 전원 에러",
+		"msg": "[Fault]Safety controller 5V 전원 에러(CH%s)",
 		"cause": "1번 채널 5V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7186": {
-		"msg": "Safety controller 24V 전원 에러",
+		"msg": "[Fault]Safety controller 24V 전원 에러(CH%s)",
 		"cause": "1번 채널 24V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 24V 전원을 점검하십시오."
 	},
 	"E7187": {
-		"msg": "Safety controller 48V 전원 에러",
+		"msg": "[Fault]Safety controller 48V 전원 에러(CH%s)",
 		"cause": "1번 채널 48V가 기준값 미만입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 48V 전원을 점검하십시오."
 	},
 	"E7188": {
-		"msg": "Safety controller 1.2V 전원 에러",
+		"msg": "[Fault]Safety controller 1.2V 전원 에러(CH%s)",
 		"cause": "0번 채널 1.2V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7189": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "0번 채널 3.3V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7190": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "0번 채널 3.3V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7191": {
-		"msg": "Safety controller 5V 전원 에러",
+		"msg": "[Fault]Safety controller 5V 전원 에러(CH%s)",
 		"cause": "0번 채널 5V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7192": {
-		"msg": "Safety controller 24V 전원 에러",
+		"msg": "[Fault]Safety controller 24V 전원 에러(CH%s)",
 		"cause": "0번 채널 24V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 24V 전원을 점검하십시오."
 	},
 	"E7193": {
-		"msg": "Safety controller 48V 전원 에러",
+		"msg": "[Fault]Safety controller 48V 전원 에러(CH%s)",
 		"cause": "0번 채널 48V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 48V 전원을 점검하십시오."
 	},
 	"E7194": {
-		"msg": "Safety controller 1.2V 전원 에러",
+		"msg": "[Fault]Safety controller 1.2V 전원 에러(CH%s)",
 		"cause": "1번 채널 1.2V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7195": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "1번 채널 3.3V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7196": {
-		"msg": "Safety controller 3.3V 전원 에러",
+		"msg": "[Fault]Safety controller 3.3V 전원 에러(CH%s)",
 		"cause": "1번 채널 3.3V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7197": {
-		"msg": "Safety controller 5V 전원 에러",
+		"msg": "[Fault]Safety controller 5V 전원 에러(CH%s)",
 		"cause": "1번 채널 5V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7198": {
-		"msg": "Safety controller 24V 전원 에러",
+		"msg": "[Fault]Safety controller 24V 전원 에러(CH%s)",
 		"cause": "1번 채널 24V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 24V 전원을 점검하십시오."
 	},
 	"E7199": {
-		"msg": "Safety controller 48V 전원 에러",
+		"msg": "[Fault]Safety controller 48V 전원 에러(CH%s)",
 		"cause": "1번 채널 48V가 기준값 초과입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 제어기의 48V 전원을 점검하십시오."
 	},
 	"E7200": {
-		"msg": "Safety controller 온도 센서 읽기 실패",
+		"msg": "[Fault]Safety controller 온도 센서 읽기 실패(CH%s)",
 		"cause": "온도센서의 값을 읽을 수 없습니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7201": {
-		"msg": "Safety controller 전압 센서 읽기 실패",
+		"msg": "[Fault]Safety controller 전압 센서 읽기 실패(CH%s)",
 		"cause": "전압값을 읽을 수 없습니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7202": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7203": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7204": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7205": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7206": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7207": {
-		"msg": "Safety controller 프로그램 시퀀스 진단 에러",
+		"msg": "[Fault]Safety controller 프로그램 시퀀스 진단 에러(CH%s)",
 		"cause": "Safety controller의 안전 프로그램 동작 순서가 비정상적입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7210": {
-		"msg": "TCP 방향 cross check 에러",
+		"msg": "[Fault]TCP 방향 cross check 에러(CH%s)",
 		"cause": "두 CPU간의 TCP 방향 계산 결과가 다릅니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7211": {
-		"msg": "모멘텀 cross check 에러",
+		"msg": "[Fault]모멘텀 cross check 에러(CH%s)",
 		"cause": "두 CPU간의 모멘텀 계산 결과가 다릅니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7212": {
-		"msg": "TCP 힘 cross check 에러",
+		"msg": "[Fault]TCP 힘 cross check 에러(CH%s)",
 		"cause": "두 CPU간의 TCP 힘 계산 결과가 다릅니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7213": {
-		"msg": "파워 cross check 에러",
+		"msg": "[Fault]파워 cross check 에러(CH%s)",
 		"cause": "두 CPU간의 파워 계산 결과가 다릅니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7250": {
-		"msg": "Safety controller 채널간 상태 동기 에러",
+		"msg": "[Fault]Safety controller 채널간 상태 동기 에러(CH%s)",
 		"cause": "두 채널간의 상태가 다름니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7251": {
-		"msg": "Safety controller 상태 에러",
+		"msg": "[Fault]Safety controller 상태 에러(CH%s)",
 		"cause": "정의 되지 않은 상태입니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7252": {
-		"msg": "Safety controller 채널 에러",
+		"msg": "[Fault]Safety controller 채널 에러(CH%s)",
 		"cause": "두 채널의 ID가 정확하지 않습니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7253": {
-		"msg": "Safety controller 채널간 동기 타임아웃",
+		"msg": "[Fault]Safety controller 채널간 동기 타임아웃(CH%s)",
 		"cause": "두 채널의 동기를 맞출 수 없습니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
+	"E7761": {
+		"msg": "[Fault]Safety controller 툴번호 에러(CH%s)",
+		"cause": "메인으로부터 비정상적인 툴번호가 수신됨",
+		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
+	},
 	"E7301": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "EtherCAT 슬레이브와의 통신 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 메인 컴퓨터와 Safety controller간의 EtherCAT 통신 케이블을 점검하십시오."
 	},
 	"E7302": {
-		"msg": "Safety controller SDO 서브인덱스 에러",
+		"msg": "[Fault]Safety controller SDO 서브인덱스 에러(CH%s)",
 		"cause": "초기화 데이터 추출시의 비정상적인 서브인덱스",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
 	},
 	"E7303": {
-		"msg": "Safety controller Safety 통신 타임아웃",
+		"msg": "[Fault]Safety controller Safety 통신 타임아웃(CH%s)",
 		"cause": "EtherCAT 슬레이브와 통신 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 메인 컴퓨터와 Safety controller간의 EtherCAT 통신 케이블을 점검하십시오."
 	},
 	"E7304": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "통신 프레임의 비정상적 헤더 정보",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7305": {
-		"msg": "Safety controller Safety 통신 CRC 에러",
+		"msg": "[Fault]Safety controller Safety 통신 CRC 에러(CH%s)",
 		"cause": "통신 프레임의 CRC 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7306": {
-		"msg": "Safety controller Safety 통신 서브인덱스 에러",
+		"msg": "[Fault]Safety controller Safety 통신 서브인덱스 에러(CH%s)",
 		"cause": "통신 프레임의 서브인덱스가 범위 초과함",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7307": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "SDO 프레임의 비정상적 길이 정보",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7308": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "EtherCAT 슬레이브와 통신에서 잘못된 인자가 전달됨",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7309": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "EtherCAT 슬레이브에 오브젝트 쓰기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7310": {
-		"msg": "Safety controller Safety 통신 에러",
+		"msg": "[Fault]Safety controller Safety 통신 에러(CH%s)",
 		"cause": "메인으로부터 동일한 일련번호의 데이터가 수신됨",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7311": {
-		"msg": "Safety controller Safety 통신 타임아웃",
+		"msg": "[Fault]Safety controller Safety 통신 타임아웃(CH%s)",
 		"cause": "메인 컨트롤러와의 주기적 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7321": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Condition 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7326": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 1 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7327": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 2 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7328": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 3 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7329": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 4 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7330": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 5 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7331": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 6 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7332": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 7 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7333": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 8 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7334": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 9 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7335": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 10 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7336": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 11 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7337": {
-		"msg": "Safety controller 파라미터 범위 초과",
+		"msg": "[Fault]Safety controller 파라미터 범위 초과(CH%s)",
 		"cause": "Cartesian space 12 파라미터 범위 초과",
 		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
 	},
 	"E7338": {
-		"msg": "Safety controller 파라미터 초기화 실패",
+		"msg": "[Fault]Safety controller 파라미터 초기화 실패(CH%s)",
 		"cause": "중복된 안전 파라미터 수신",
 		"remedy": "제어기를 재부팅하십시오."
 	},
 	"E7339": {
-		"msg": "Safety controller 기구 정보 초기화 실패",
+		"msg": "[Fault]Safety controller 기구 정보 초기화 실패(CH%s)",
 		"cause": "메인으로부터 중복된 기구 정보 수신",
 		"remedy": "제어기를 재부팅하십시오."
 	},
 	"E7340": {
-		"msg": "Safety controller Dynamic 정보 초기화 실패",
+		"msg": "[Fault]Safety controller Dynamic 정보 초기화 실패(CH%s)",
 		"cause": "메인으로부터 중복된 Dynamic 정보 수신",
 		"remedy": "제어기를 재부팅하십시오."
 	},
+	"E7341": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "툴 파라미터 범위 초과",
+		"remedy": "설정한 툴 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7342": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "로봇 레이아웃 파라미터 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7343": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "축별 부가 중량 파라미터(S축) 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7344": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "축별 부가 중량 파라미터(H축) 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7345": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "축별 부가 중량 파라미터(V축) 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7346": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "안전 I/O 파라미터 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7347": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "안전 정지 파라미터 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
+	"E7348": {
+		"msg": "[Fault]Safety controller 파라미터 범위 초과",
+		"cause": "기본값(default) 파라미터 범위 초과",
+		"remedy": "설정한 안전 파라미터가 범위 내에 있는지 확인하십시오."
+	},
 	"E7403": {
-		"msg": "협동로봇 config. 파일 열기 실패.",
+		"msg": "[Fault]협동로봇 config. 파일 열기 실패.",
 		"cause": "협동로봇 config. 파일 열기에 실패했습니다.",
 		"remedy": "각 협동로봇 설정을 다시 수행하십시오."
 	},
 	"E7405": {
-		"msg": "협동로봇 config. 인증서 파일이 없음.",
+		"msg": "[Fault]협동로봇 config. 인증서 파일이 없음.",
 		"cause": "협동로봇 config. 파일을 위한 인증서 파일 열기에 실패했습니다.",
 		"remedy": "각 협동로봇 설정을 다시 수행하십시오."
 	},
 	"E7407": {
-		"msg": "협동로봇 config. 인증서 형식이 유효하지 않음.",
+		"msg": "[Fault]협동로봇 config. 인증서 형식이 유효하지 않음.",
 		"cause": "인증서 파일의 형식이 유효하지 않습니다. 파일이 무단변경되었을 가능성이 있습니다.",
 		"remedy": "각 협동로봇 설정을 다시 수행하십시오."
 	},
 	"E7409": {
-		"msg": "협동로봇 config. 인증서 코드가 일치하지 않음.",
+		"msg": "[Fault]협동로봇 config. 인증서 코드가 일치하지 않음.",
 		"cause": "인증서 파일의 코드가 유효하지 않습니다. 파일이 무단변경되었을 가능성이 있습니다.",
 		"remedy": "각 협동로봇 설정을 다시 수행하십시오."
 	},
 	"E7501": {
-		"msg": "협동로봇 안전보드 통신 불량.",
+		"msg": "[Fault]협동로봇 안전보드 통신 불량.",
 		"cause": "협동로봇 안전보드와의 통신이 동작하지 않고 있습니다.",
 		"remedy": "제어기를 재부팅하시기를 바랍니다. "
 	},
 	"E7601": {
-		"msg": "Safety controller 1축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 1축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 1축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7602": {
-		"msg": "Safety controller 2축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 2축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 2축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7603": {
-		"msg": "Safety controller 3축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 3축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 3축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7604": {
-		"msg": "Safety controller 4축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 4축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 4축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7605": {
-		"msg": "Safety controller 5축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 5축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 5축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7606": {
-		"msg": "Safety controller 6축 토크센서 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 6축 토크센서 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 6축 토크센서 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 토크센서들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7607": {
-		"msg": "Safety controller 1축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 1축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 1축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7608": {
-		"msg": "Safety controller 2축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 2축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 2축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7609": {
-		"msg": "Safety controller 3축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 3축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 3축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7610": {
-		"msg": "Safety controller 4축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 4축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 4축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7611": {
-		"msg": "Safety controller 5축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 5축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 5축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7612": {
-		"msg": "Safety controller 6축 엔코더 버전 정보 읽기 실패",
+		"msg": "[Fault]Safety controller 6축 엔코더 버전 정보 읽기 실패(CH%s)",
 		"cause": "Safety controller 6축 엔코더 버전 정보 읽기 실패",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오. 3) 1~6축 엔코더들의 CAN ID 설정을 점검하십시오"
 	},
 	"E7613": {
-		"msg": "Safety controller 1축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 1축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 1축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7614": {
-		"msg": "Safety controller 2축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 2축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 2축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7615": {
-		"msg": "Safety controller 3축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 3축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 3축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7616": {
-		"msg": "Safety controller 4축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 4축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 4축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7617": {
-		"msg": "Safety controller 5축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 5축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 5축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7618": {
-		"msg": "Safety controller 6축 토크센서 통신 타임아웃",
+		"msg": "[Fault]Safety controller 6축 토크센서 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 6축 토크센서 CAN 통신 타임아웃",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+		"remedy": "1) 제어기 전원 off시 발생했다면 조치가 필요하지 않습니다. 2) 제어기를 재부팅하십시오. 3) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7619": {
-		"msg": "Safety controller 1축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 1축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 1축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7620": {
-		"msg": "Safety controller 2축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 2축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 2축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7621": {
-		"msg": "Safety controller 3축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 3축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 3축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7622": {
-		"msg": "Safety controller 4축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 4축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 4축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7623": {
-		"msg": "Safety controller 5축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 5축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 5축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
 	},
 	"E7624": {
-		"msg": "Safety controller 6축 엔코더 통신 타임아웃",
+		"msg": "[Fault]Safety controller 6축 엔코더 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 6축 엔코더 CAN 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 로봇본체의 CAN 통신 케이블을 점검하시오."
+	},
+	"E7625": {
+		"msg": "[Fault]토크센서 및 엔코더 상태 정보 읽기 실패",
+		"cause": "에러 엔코더 및 토크센서 상태 정보를 읽을 수 없습니다.",
+		"remedy": "CAN 통신 케이블을 점검하십시오.."
+	},
+	"E7626": {
+		"msg": "[Fault]엔코더 에러",
+		"cause": "에러가 발생한 엔코더가 있습니다.",
+		"remedy": "안전 기능 모니터링 화면에서 엔코더의 에러 코드를 확인하십시오. "
+	},
+	"E7627": {
+		"msg": "[Fault]토크센서 에러",
+		"cause": "에러가 발생한 토크센서가 있습니다.",
+		"remedy": "안전 기능 모니터링 화면에서 토크센서의 에러 코드를 확인하십시오. "
 	},
 	"E7701": {
 		"msg": "TCP 속도 위반(%s [mm/s])",
@@ -8500,11 +8715,6 @@
 		"msg": "충돌 검지- 안전감시(%s축)",
 		"cause": "1) 충돌이 발생하였으면 충돌원인을 제거하십시오. 2) 충돌검지 레벨을 조정하십시오.",
 		"remedy": "설정한 안전 기준을 확인하십시오."
-	},
-	"E7708": {
-		"msg": "협동로봇 충돌이 검지되었습니다.-main",
-		"cause": "외부 요인으로 인하여 충돌이 발생하였습니다.",
-		"remedy": "1) 충돌이 발생하였으면 충돌원인을 제거하십시오.2) 충돌검지 레벨을 조정하십시오"
 	},
 	"E7711": {
 		"msg": "안전영역 TCP 위치 위반(cartesian space %s)",
@@ -8601,159 +8811,184 @@
 		"cause": "6축의 토크가 설정한 안정기준을 초과했습니다.",
 		"remedy": "1) 안전기능 조건 설정 메뉴에서 설정한 각 축 토크를 확인하십시오. 2) 안전기능 파라미터에서 표시되는 각 축 현재 토크를 확인하십시오."
 	},
-	"E7761": {
-		"msg": "Safety controller 툴번호 에러",
-		"cause": "메인으로부터 비정상적인 툴번호가 수신됨",
-		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller 보드를 교체하십시오."
-	},
 	"E7802": {
-		"msg": "Safety controller 모드 스위치 에러",
+		"msg": "[Fault]Safety controller 모드 스위치 에러(CH%s)",
 		"cause": "비정상적인 모드 스위치 신호 입력",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7804": {
-		"msg": "Safety controller 채널간 통신 에러",
+		"msg": "[Fault]Safety controller 채널간 통신 에러(CH%s)",
 		"cause": "두개의 안전 CPU간 통신 에러",
 		"remedy": "제어기를 재부팅하십시오. 문제가 지속되면 SAFETY CONTROLLER를 교체하십시오."
 	},
 	"E7805": {
-		"msg": "Safety controller 서보전원 제어용 신호 진단 에러",
+		"msg": "[Fault]Safety controller 서보전원 제어용 신호 진단 에러(CH%s)",
 		"cause": "서보전원 제어용 STO 신호 피드백 에러",
 		"remedy": "제어기를 재부팅하십시오. 문제가 지속되면 SAFETY CONTROLLER를 교체하십시오."
 	},
 	"E7806": {
-		"msg": "Safety controller TP 비상정지 신호 에러",
+		"msg": "[Fault]Safety controller TP 비상정지 신호 에러(CH%s)",
 		"cause": "TP의 비상정지 신호 에러",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7807": {
-		"msg": "Safety controller TP 인에이블 스위치 신호 에러",
+		"msg": "[Fault]Safety controller TP 인에이블 스위치 신호 에러(CH%s)",
 		"cause": "TP의 인에이블 스위치 신호 에러",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7808": {
-		"msg": "Safety controller 외부 안전가드 신호 에러",
+		"msg": "[Fault]Safety controller 외부 안전가드 신호 에러(CH%s)",
 		"cause": "외부 안전가드 신호 에러",
 		"remedy": "외부 안전가드 신호 케이블을 점검하십시오."
 	},
 	"E7809": {
-		"msg": "Safety controller 외부 비상정지 신호 에러",
+		"msg": "[Fault]Safety controller 외부 비상정지 신호 에러(CH%s)",
 		"cause": "외부 비상정지 신호 에러",
 		"remedy": "외부 비상정지 신호 케이블을 점검하십시오."
 	},
+	"E7810": {
+		"msg": "[Fault]Pre-charge 신호 진단 에러",
+		"cause": "Pre-charge 신호의 피드백 신호가 비정상입니다.",
+		"remedy": "안전 제어기 보드를 교체하십시오."
+	},
 	"E7811": {
-		"msg": "Safety controller TP 모드 스위치 신호 불일치",
+		"msg": "[Fault]Safety controller TP 모드 스위치 신호 불일치(CH%s)",
 		"cause": "TP 모드 스위치 듀얼 신호간의 불일치",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7812": {
-		"msg": "Safety controller TP 인에이블 스위치 신호 불일치",
+		"msg": "[Fault]Safety controller TP 인에이블 스위치 신호 불일치(CH%s)",
 		"cause": "TP 인에이블 스위치 듀얼 신호간의 불일치",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7813": {
-		"msg": "Safety controller 외부 비상정지 신호 불일치",
+		"msg": "[Fault]Safety controller 외부 비상정지 신호 불일치(CH%s)",
 		"cause": "외부 비상정지 이중채널 신호간의 불일치",
 		"remedy": "외부 비상정지 케이블을 점검하십시오."
 	},
 	"E7814": {
-		"msg": "Safety controller 외부 안전가드 신호 불일치",
+		"msg": "[Fault]Safety controller 외부 안전가드 신호 불일치(CH%s)",
 		"cause": "외부 안전가드 이중채널 신호간의 불일치",
 		"remedy": "외부 안전가드 케이블을 점검하십시오."
 	},
 	"E7815": {
-		"msg": "Safety controller TP 비상정지 신호 불일치",
+		"msg": "[Fault]Safety controller TP 비상정지 신호 불일치(CH%s)",
 		"cause": "TP 비상정지 이중채널 신호간의 불일치",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7816": {
-		"msg": "Safety controller 안전 입력 신호(0번) 불일치",
+		"msg": "[Fault]Safety controller 안전 입력 신호(0번) 불일치(CH%s)",
 		"cause": "안전 입력0 이중채널 신호간의 불일치",
 		"remedy": "입력 신호 케이블을 점검하십시오."
 	},
 	"E7817": {
-		"msg": "Safety controller 안전 입력 신호(1번) 불일치",
+		"msg": "[Fault]Safety controller 안전 입력 신호(1번) 불일치(CH%s)",
 		"cause": "안전 입력1 이중채널 신호간의 불일치",
 		"remedy": "입력 신호 케이블을 점검하십시오."
 	},
 	"E7818": {
-		"msg": "Safety controller 안전 입력 신호(2번) 불일치",
+		"msg": "[Fault]Safety controller 안전 입력 신호(2번) 불일치(CH%s)",
 		"cause": "안전 입력2 이중채널 신호간의 불일치",
 		"remedy": "입력 신호 케이블을 점검하십시오."
 	},
 	"E7819": {
-		"msg": "Safety controller 안전 입력 신호(3번) 불일치",
+		"msg": "[Fault]Safety controller 안전 입력 신호(3번) 불일치(CH%s)",
 		"cause": "안전 입력3 이중채널 신호간의 불일치",
 		"remedy": "입력 신호 케이블을 점검하십시오."
 	},
 	"E7821": {
-		"msg": "Safety controller 안전 출력 신호 설정 에러",
+		"msg": "[Fault]Safety controller 안전 출력 신호 설정 에러(CH%s)",
 		"cause": "비정상적인 안전 출력 신호의 용도 설정",
 		"remedy": "안전 파라미터의 출력 신호 할당을 점검하십시오."
 	},
 	"E7822": {
-		"msg": "Safety controller 안전 입력 신호 설정 에러",
+		"msg": "[Fault]Safety controller 안전 입력 신호 설정 에러(CH%s)",
 		"cause": "이중 안전 입력 신호의 용도 불일치",
 		"remedy": "안전 파라미터의 입력 신호 할당을 점검하십시오."
 	},
 	"E7823": {
-		"msg": "Safety controller 안전 출력 신호 설정 에러",
+		"msg": "[Fault]Safety controller 안전 출력 신호 설정 에러(CH%s)",
 		"cause": "이중 안전 출력 신호의 용도 불일치",
 		"remedy": "안전 파라미터의 출력 신호 할당을 점검하십시오."
 	},
+	"E7824": {
+		"msg": "[Fault]TPULSE 신호 진단 에러",
+		"cause": "TPULSE 신호의 피드백 신호가 비정상입니다.",
+		"remedy": "안전 제어기 보드를 교체하십시오."
+	},
 	"E7825": {
-		"msg": "Safety controller TP 인에이블 신호 진단 에러",
+		"msg": "[Fault]Safety controller TP 인에이블 신호 진단 에러(CH%s)",
 		"cause": "TP 인에이블 신호 진단에서 0V 진단 실패",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7826": {
-		"msg": "Safety controller TP 비상정지 신호 진단 에러",
+		"msg": "[Fault]Safety controller TP 비상정지 신호 진단 에러(CH%s)",
 		"cause": "TP 비상정지 신호 진단에서 0V 진단 실패",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7827": {
-		"msg": "Safety controller TP 인에이블 신호 진단 에러",
+		"msg": "[Fault]Safety controller TP 인에이블 신호 진단 에러(CH%s)",
 		"cause": "TP 인에이블 신호 High voltage 진단 실패",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7828": {
-		"msg": "Safety controller TP 비상정지 신호 진단 에러",
+		"msg": "[Fault]Safety controller TP 비상정지 신호 진단 에러(CH%s)",
 		"cause": "TP 비상정지 신호 High voltage 진단 실패",
 		"remedy": "TP 케이블을 점검하십시오."
 	},
 	"E7829": {
-		"msg": "안전 출력 신호 이상",
-		"cause": "TP 비상정지 신호 High voltage 진단 실패",
-		"remedy": "TP 케이블을 점검하십시오."
+		"msg": "[Fault]안전 출력 신호 이상(CH%s)",
+		"cause": "출력 신호 피드백 진단 에러",
+		"remedy": "1) 출력 신호 케이블을 점검하십시오. 2) 출력신호와 연결된 장치를 점검하십시오. 3) Safety controller을 교체하십시오."
 	},
 	"E7830": {
-		"msg": "직접교시 스위치 이상",
-		"cause": "TP 비상정지 신호 High voltage 진단 실패",
-		"remedy": "TP 케이블을 점검하십시오."
+		"msg": "[Fault]직접교시 스위치 이상(CH%s)",
+		"cause": "이중 채널간 신호 불일치",
+		"remedy": "1) 스위치 케이블 결선을 확인하십시오. 2) 스위치 모듈을 교체하십시오."
 	},
 	"E7901": {
-		"msg": "Safety controller 안전 CPU간 통신 에러",
+		"msg": "[Fault]Safety controller 안전 CPU간 통신 에러(CH%s)",
 		"cause": "안전 CPU간 통신 파라미터 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7902": {
-		"msg": "Safety controller 안전 CPU간 통신 에러",
+		"msg": "[Fault]Safety controller 안전 CPU간 통신 에러(CH%s)",
 		"cause": "안전 CPU간 통신 일반 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7903": {
-		"msg": "Safety controller 안전 CPU간 통신 타임아웃",
+		"msg": "[Fault]Safety controller 안전 CPU간 통신 타임아웃(CH%s)",
 		"cause": "Safety controller 안전 CPU간 통신 타임아웃",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7904": {
-		"msg": "Safety controller 안전 CPU간 통신 에러",
+		"msg": "[Fault]Safety controller 안전 CPU간 통신 에러(CH%s)",
 		"cause": "Safety controller 안전 CPU간 통신 TX 에러",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E7905": {
-		"msg": "Safety controller 안전 CPU간 통신 에러",
+		"msg": "[Fault]Safety controller 안전 CPU간 통신 에러(CH%s)",
 		"cause": "Safety controller 안전 CPU간 통신 TX 에러",
+		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
+	},
+	"E7996": {
+		"msg": "[Stop 2]안전 감시 기능 위반으로 인한 모션 불가",
+		"cause": "안전 감시 기능이 위반되었습니다(Stop 2 발생).",
+		"remedy": "1) Stop 2 발생 안내 창에서 [아니오]를 선택하여 바로 에러를 클리어 하십시오. 2) 안전 상태 모니터링에서 복구 모드를 활성화 하여 위반 원인을 제거하십시오. 3) 문제가 지속되면 제어기를 재부팅하십시오."
+	},
+	"E7997": {
+		"msg": "[Fault]시스템 폴트로 인한 모터온 불가",
+		"cause": "Safety controller에 Fault 신호가 검지되었습니다.",
+		"remedy": "1) 에러의 원인이 되는 폴트를 확인하시어 제거해주십시오. 2) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
+	},
+	"E7998": {
+		"msg": "[STO]안전 감시 기능 위반으로 인한 모터온 불가",
+		"cause": "Safety controller에 STO 신호가 검지되었습니다.",
+		"remedy": "1) 안전 기능 위반 내용을 안전 상태 모니터링에서 확인하십시오. 2) 복구 모드를 켜서 위반 원인을 제거하십시오. 3) 문제가 지속되면 제어기를 재부팅하십시오."
+	},
+	"E7999": {
+		"msg": "[Fault]정의되지 않은 에러가 Safety controller에서 발생하였습니다.",
+		"cause": "Safety controller에 이상 신호가 검지되었습니다.",
 		"remedy": "1) 제어기를 재부팅하십시오. 2) 문제가 지속되면 Safety controller을 교체하십시오."
 	},
 	"E8000": {
@@ -8855,6 +9090,86 @@
 		"msg": "현재 R축 위치에서는 X축 조그가 불가합니다.(LCD Non-Safety Jog Zone No.5 확인)",
 		"cause": "R축의 현재위치가 X축 이동시 간섭이 발생할 수 있는 설정 범위(Zone No.5)안에 있습니다.",
 		"remedy": "1.R축의 현재위치를 Zone No.5 설정범위 밖으로 조그하십시오.2. 안전상 문제가 없는 경우, Zone No.5 범위를 변경 하십시오."
+	},
+	"E8020": {
+		"msg": "실러축에 대한 조그를 사용할 수 없습니다.",
+		"cause": "실링 파라미터 설정이 완료되지 않아 조그 기능을 사용할 수 없습니다.",
+		"remedy": "실링 관련 파라미터 설정을 완료 하십시오."
+	},
+	"E9000": {
+		"msg": "충돌 검지- Main 안전감시(%s축)",
+		"cause": "1) 충돌이 발생하였으면 충돌원인을 제거하십시오. 2) 충돌검지 레벨을 조정하십시오.",
+		"remedy": "설정한 안전 기준을 확인하십시오."
+	},
+	"E9001": {
+		"msg": "직접교시/힘제어 모드 선택 이상",
+		"cause": "직접교시와 힘제어 모드 선택 이상",
+		"remedy": "당사에 문의 바랍니다."
+	},
+	"E9002": {
+		"msg": "센서리스기반 구속모션(직접교시) 기능 사용 불가",
+		"cause": "센서기반 구속모션(직접교시) 기능만 사용 가능",
+		"remedy": "구속모션(직접교시) 환경 설정에서 JTS기반으로 설정하여 사용"
+	},
+	"E9003": {
+		"msg": "JTS센서와 Model기반 토크값 차이 발생",
+		"cause": "JTS센서와 Model 토크값 차이가 기준값 초과",
+		"remedy": "1) Tool이 달려 있는 경우 Tool 질량/무게중심/이너셔 정보 확인후 JTS 오프셋 실시. 2) Tool이 없는 경우 Tool 질량/무게중심/이너셔 정보를 모두 0.0으로 설정 후 JTS 오프셋 실시"
+	},
+	"E9004": {
+		"msg": "직접교시 기능 초기값(위치) 설정 이상",
+		"cause": "직접교시 기능 초기값",
+		"remedy": "당사에 문의 바랍니다."
+	},
+	"E9005": {
+		"msg": "직접교시 기능 초기값(방향) 설정 이상",
+		"cause": "직접교시 기능 초기값",
+		"remedy": "당사에 문의 바랍니다."
+	},
+	"E9006": {
+		"msg": "직접교시 협동로봇 singular 자세",
+		"cause": "직접교시 기능 중 singular 자세 입니다.",
+		"remedy": "당사에 문의 바랍니다."
+	},
+	"E9007": {
+		"msg": "구속모션 직접교시 축 속도 초과",
+		"cause": "구속모션 축 속도 초과됨",
+		"remedy": "구속모션 직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9008": {
+		"msg": "직접교시 1축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9009": {
+		"msg": "직접교시 2축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9010": {
+		"msg": "직접교시 3축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9011": {
+		"msg": "직접교시 4축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9012": {
+		"msg": "직접교시 5축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9013": {
+		"msg": "직접교시 6축 관절 속도 제한 초과",
+		"cause": "축 관절 속도 제한 초과됨",
+		"remedy": "직접교시 상태에서 천천히 교시 바랍니다."
+	},
+	"E9014": {
+		"msg": "(협동로봇) 힘제어 singular 자세",
+		"cause": "힘제어 기능 중 singular 자세 입니다.",
+		"remedy": "당사에 문의 바랍니다."
 	},
 	"E10000": {
 		"msg": "로봇 %s과 ARM 간섭 검지(Level 1)",
@@ -9566,6 +9881,16 @@
 		"cause": "제어기 내부 계산 중 비정상적인 툴 번호가 입력되었습니다.",
 		"remedy": "제어기에 모든 파일을 백업하여, 당사로 송부바랍니다."
 	},
+	"E12120": {
+		"msg": "실러 명령을 실행할 수 없습니다.",
+		"cause": "실링조건 셋팅이 완료되지 않았습니다.",
+		"remedy": "실링 조건 셋팅을 완료하십시오"
+	},
+	"E12121": {
+		"msg": "실러 건번호 설정오류",
+		"cause": "실링 건번호 설정이 유효하지 않습니다.",
+		"remedy": "건번호 설정 및 건 할당 신호설정 상태를 확인 하십시오."
+	},
 	"E12200": {
 		"msg": "Undefined playback error_TRIGGOUT(OX,OY,OZ)",
 		"cause": "시스템(메인 소프트웨어) 에러입니다.",
@@ -9781,6 +10106,16 @@
 		"cause": "사용자 좌표계(현재, 기록된 스텝)가 서로 다릅니다.",
 		"remedy": "기록된 스텝의 사용자 좌표계를 확인하십시오."
 	},
+	"E12243": {
+		"msg": "메커니즘 구성에 주행축이 일부만 포함",
+		"cause": "스텝의 구성 메커니즘이 주행축의 일부만 포함하고 있을경우 Base 좌표계를 지원할 수 없습니다",
+		"remedy": "기록된 스텝의 메커니즘 구성을 확인하십시오."
+	},
+	"E12244": {
+		"msg": "로봇과 주행축 메커니즘 구성이 완전하지 않습니다",
+		"cause": "로봇과 주행축은 Base 좌표계를 공유하고 있으므로 분리될 수 없습니다",
+		"remedy": "기록된 스텝의 메커니즘 구성을 확인하십시오."
+	},
 	"E14000": {
 		"msg": "객체명과 멤버명은 '.'으로 구분해야 합니다.",
 		"cause": "멤버명 없이 객체명만 사용하거나, 잘못된 구분자가 사용된 문법 오류입니다.",
@@ -9886,10 +10221,35 @@
 		"cause": "\"WeldTime.\" 이후 지원하지 않는 멤버변수가 사용되었습니다.",
 		"remedy": "용접시간 변수의 철자가 틀리지 않았는지 확인하십시오. 혹은 제어기의 소프트웨어 버전이 해당 문법을 지원하지 않는 구버전인지 확인하십시오."
 	},
+	"E14021": {
+		"msg": "유효하지 않은 변수나 속성, 함수입니다.",
+		"cause": "변수나 속성, 함수로 해석하는데 실패했습니다.",
+		"remedy": "변수나 속성, 함수로서 유효한 문법이 사용되었는지 확인하십시오."
+	},
+	"E14022": {
+		"msg": "비동기 실행 busy 상태입니다.",
+		"cause": "task에서 비동기 실행을 이미 수행하고 있는 중에 같은 종류의 비동기 실행이 요청되었습니다.",
+		"remedy": "수행 중인 처리가 종료될 때까지 대기 후 재시도 바랍니다."
+	},
 	"E14026": {
 		"msg": "적법하지 않은 지수표기법입니다.",
 		"cause": "상수의 지수표기법(exponent notation)이 문법에 맞지 않습니다.",
 		"remedy": "'E' 혹은 'e' 다음은 공백없이 정수여야 합니다."
+	},
+	"E14027": {
+		"msg": "인수의 값이 범위를 초과했습니다.",
+		"cause": "명령문 인수의 값이 유효 범위를 초과했습니다.",
+		"remedy": "명령문 인수의 값을 유효 범위 내로 설정해주십시오."
+	},
+	"E14028": {
+		"msg": "단위가 허용되지 않는 명령문 인수입니다.",
+		"cause": "명령문 인수에 불필요한 단위가 사용되었습니다.",
+		"remedy": "명령문 인수에서 단위를 제거해주십시오."
+	},
+	"E14030": {
+		"msg": "명령문 최대 길이가 최대치를 초과했습니다.",
+		"cause": "명령문 길이가 최대치 255자를 초과했습니다.",
+		"remedy": "긴 명령문을 분할하여 입력하십시오."
 	},
 	"E14041": {
 		"msg": "산술식의 괄호의 쌍이 잘못 사용되었습니다.",
@@ -9945,16 +10305,6 @@
 		"msg": "ENDLESS문이 지원하지 않는 축입니다.",
 		"cause": "ENDLESS문은 R1과 부가축(Tn)만 지원합니다.",
 		"remedy": "지원되는 축 이름을 사용하십시오. RESET이나 ZERO를 입력했다면 철자가 틀렸는지 확인하십시오."
-	},
-	"E14153": {
-		"msg": "MKDIR문의 생성 위치의 문법오류입니다.",
-		"cause": "원본 위치 인수값이 문법에 맞지 않습니다.",
-		"remedy": "TP, USB, 혹은 EXT로 지정하십시오."
-	},
-	"E14154": {
-		"msg": "LOADF문의 원본 위치의 문법오류입니다.",
-		"cause": "원본 위치 인수값이 문법에 맞지 않습니다.",
-		"remedy": "TP, USB, 혹은 EXT로 지정하십시오."
 	},
 	"E14155": {
 		"msg": "SAVEF문의 대상 위치의 문법오류입니다.",
@@ -10036,10 +10386,35 @@
 		"cause": "wait 명령문의 조건식 인수에 유효하지 않은 문법을 지정했습니다.",
 		"remedy": "미정의 변수, 철자가 틀린 변수를 사용하거나, 잘못된 수식을 사용하지 않았는지 확인하십시오."
 	},
+	"E14172": {
+		"msg": "switch문의 조건식의 문법오류입니다.",
+		"cause": "switch 명령문의 조건식 인수에 유효하지 않은 문법을 지정했습니다.",
+		"remedy": "미정의 변수, 철자가 틀린 변수를 사용하거나, 잘못된 수식을 사용하지 않았는지 확인하십시오."
+	},
+	"E14173": {
+		"msg": "case문의 조건식의 문법오류입니다.",
+		"cause": "case 명령문의 조건식 인수에 유효하지 않은 문법을 지정했습니다.",
+		"remedy": "미정의 변수, 철자가 틀린 변수를 사용하거나, 잘못된 수식을 사용하지 않았는지 확인하십시오."
+	},
 	"E14180": {
 		"msg": "명령문 인수의 문법오류입니다.",
 		"cause": "명령문의 인수에 유효하지 않은 문법을 지정했습니다.",
 		"remedy": "미정의 변수, 철자가 틀린 변수를 사용하거나, 잘못된 수식을 사용하지 않았는지 확인하십시오."
+	},
+	"E14181": {
+		"msg": "모듈 import에 실패했습니다.",
+		"cause": "지정한 이름의 모듈파일을 찾지 못했거나, 모듈파일을 로드하는데 실패했습니다.",
+		"remedy": "1) 모듈명의 철자를 재확인하십시오. 2) 모듈파일이 올바른 경로에 설치되었는지 확인하십시오. 3) 모듈파일이 호환되는 버전인지 확인하십시오."
+	},
+	"E14182": {
+		"msg": "지원하지 않는 프로시져입니다.",
+		"cause": "지정한 프로시져를 찾을 수 없습니다.",
+		"remedy": "1) 프로시져명의 철자를 재확인하십시오. 2) 지정한 프로시져를 지원하는 소프트웨어 버전인지 확인하십시오."
+	},
+	"E14183": {
+		"msg": "retsub 수행 오류입니다.",
+		"cause": "gosub 다음 위치로의 복귀에 실패했습니다.",
+		"remedy": "R code 0(프로그램 카운터 리셋) 후 다시 실행해보십시오."
 	},
 	"E14262": {
 		"msg": "산술변수로의 대입문 실패",
@@ -10106,6 +10481,16 @@
 		"cause": "대입연산자(=)의 우변의 문법이 틀렸습니다.",
 		"remedy": "대입연산자(=) 오른쪽에 미정의 변수, 철자가 틀린 변수를 사용하거나, 잘못된 수식을 사용하지 않았는지 확인하십시오."
 	},
+	"E14284": {
+		"msg": "고정(fixed) 변수에는 대입할 수 없습니다.",
+		"cause": "고정 변수의 요소나 속성값에는 대입이 가능하지만, 고정 변수 자체에는 대입이 금지되어 있습니다.",
+		"remedy": "고정 변수의 변수형이나 값을 바꾸려면, 전역변수창을 사용하십시오."
+	},
+	"E14285": {
+		"msg": "가상변수명은 사용자변수명이나 파라미터명으로 사용할 수 없습니다.",
+		"cause": "입출력변수 등 가상 변수의 이름으로 사용자변수나 파라미터를 정의할 수 없습니다.",
+		"remedy": "다른 변수명을 사용하십시오."
+	},
 	"E14293": {
 		"msg": "FLOW 제어 블록 오류 (테이블 프로그램 번호 불일치)",
 		"cause": "현재 프로그램 번호가 블록 테이블과 일치하지 않습니다.",
@@ -10152,9 +10537,9 @@
 		"remedy": "JOB 프로그램의 FLOW 제어문들이 짝이 맞는지 점검하여 올바른 내포구조가 되도록 정정하십시오."
 	},
 	"E14302": {
-		"msg": "제어문 대응 오류 (elseif - if)",
-		"cause": "elseif문에 대응하는 if문이 없습니다.",
-		"remedy": "JOB 프로그램에서 if 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
+		"msg": "제어문 대응 오류 (elseif - else - endif)",
+		"cause": "elseif문에 대응하는 else나 endif문이 없습니다.",
+		"remedy": "JOB 프로그램에서 else나 endif 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14303": {
 		"msg": "대응 제어문 오류 (elseif - if, elseif)",
@@ -10162,9 +10547,9 @@
 		"remedy": "JOB 프로그램에서 if 문을 빠뜨렸거나, 제어문들의 내포 구조가 짝이 안 맞게 작성되었는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14304": {
-		"msg": "대응 제어문 없음 (else - if)",
-		"cause": "else 문에 대응하는 if 문이 없습니다.",
-		"remedy": "JOB 프로그램에서 if 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
+		"msg": "대응 제어문 없음 (else - endif)",
+		"cause": "else 문에 대응하는 endif 문이 없습니다.",
+		"remedy": "JOB 프로그램에서 endif 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14305": {
 		"msg": "대응 제어문 오류 (else - if, elseif)",
@@ -10172,9 +10557,9 @@
 		"remedy": "JOB 프로그램에서 if 문을 빠뜨렸거나, 제어문들의 내포 구조가 짝이 안 맞게 작성되었는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14306": {
-		"msg": "대응 제어문 없음 (endif - if)",
-		"cause": "endif 문에 대응하는 if 문이 없습니다.",
-		"remedy": "JOB 프로그램에서 if 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
+		"msg": "대응 제어문 없음 (if - elseif - else - endif)",
+		"cause": "if 문에 대응하는 elseif, else, 혹은 endif 문이 없습니다.",
+		"remedy": "JOB 프로그램에서 대응 명령문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14307": {
 		"msg": "대응 제어문 오류 (endif - if, elseif, else)",
@@ -10212,19 +10597,24 @@
 		"remedy": "JOB 프로그램에서 select 문을 빠뜨리거나, 제어문들의 내포 구조가 짝이 안 맞게 작성되었는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14314": {
-		"msg": "대응 제어문 없음 (exit_select - select, case, case else)",
-		"cause": "exit_select 문에 대응하는 select나 case, case else문이 없습니다.",
-		"remedy": "JOB 프로그램에서 select 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
+		"msg": "대응 제어문 없음 (switch - case - default)",
+		"cause": "switch 문에 대응하는 case나 default문이 없습니다.",
+		"remedy": "JOB 프로그램에서 'case'나 'default' 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
+	},
+	"E14317": {
+		"msg": "switch문에서 분기에 실패했습니다.",
+		"cause": "주소테이블에서 다음 case나 end_switch의 위치를 찾을 수 없습니다.",
+		"remedy": "커서 위치를 이동하지 말고 JOB 프로그램을 순서대로 수행하십시오."
 	},
 	"E14318": {
-		"msg": "대응 제어문 없음 (next - for)",
+		"msg": "대응 제어문 없음 (for - next)",
 		"cause": "next 문에 대응하는 for문이 없습니다.",
 		"remedy": "JOB 프로그램에서 for 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14319": {
-		"msg": "대응 제어문 오류 (next - for)",
-		"cause": "next 문에 대응하는 제어문이 for문이 아닙니다.",
-		"remedy": "JOB 프로그램에서 for 문을 빠뜨리거나, 제어문들의 내포 구조가 짝이 안 맞게 작성되었는지 확인하여 문법에 맞게 정정하십시오."
+		"msg": "대응 제어문 오류 (for - next)",
+		"cause": "for 문에 대응하는 next문이 없습니다.",
+		"remedy": "JOB 프로그램에서 next 문을 빠뜨렸는지 확인하여 문법에 맞게 정정하십시오."
 	},
 	"E14320": {
 		"msg": "FLOW 제어문의 분량이 용량을 초과했습니다.",
@@ -10272,9 +10662,9 @@
 		"remedy": "커서 위치를 이동하지 말고 JOB 프로그램을 순서대로 수행하십시오."
 	},
 	"E14329": {
-		"msg": "break 문은 loop에서만 사용할 수 있습니다.",
-		"cause": "대응하는 for나 select가 실행되지 않았습니다.",
-		"remedy": "for나 select문 구조를 확인하십시오. 커서 위치를 이동하지 말고 JOB 프로그램을 순서대로 수행하십시오."
+		"msg": "break 문은 loop나 switch문에서만 사용할 수 있습니다.",
+		"cause": "대응하는 for나 switch문이 없습니다.",
+		"remedy": "for나 switch문 구조를 확인하십시오. 커서 위치를 이동하지 말고 JOB 프로그램을 순서대로 수행하십시오."
 	},
 	"E14330": {
 		"msg": "break문 분기에 실패했습니다.",
@@ -10452,37 +10842,37 @@
 		"remedy": "출력인수를 포즈변수 문법에 맞게 정정하십시오."
 	},
 	"E14415": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(IdVar)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(IdVar)",
 		"cause": "포즈/시프트 변수(ID변수)의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14416": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(TONL)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(TONL)",
 		"cause": "(TONL) 포즈/시프트 변수 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14417": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(TONL case2)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(TONL case2)",
 		"cause": "(TONL) 포즈/시프트 변수의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14418": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(CalViaPs)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(CalViaPs)",
 		"cause": "CalViaPs에서 사용한 포즈/시프트 변수(ID변수)의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14419": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(CalViaPs case2)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(CalViaPs case2)",
 		"cause": "CalViaPs 포즈/시프트 변수의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14420": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(CalXLine)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(CalXLine)",
 		"cause": "CalXLine 포즈/시프트 변수의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
 	"E14421": {
-		"msg": "포즈/시프트 변수와 기계 파라미터 축수가 다름(CalXLine case2)",
+		"msg": "포즈/시프트 변수와 로봇 파라미터 축수가 다름(CalXLine case2)",
 		"cause": "CalXLine 포즈/시프트 변수의 축수가 시스템 초기화 시 설정한 ROBOT.MCH 파일의 축수와 일치하지 않습니다.",
 		"remedy": "포즈/시프트 변수파일이나 포즈/시프트 상수의 축수를 시스템 설정과 일치하도록 설정하십시오."
 	},
@@ -10686,6 +11076,11 @@
 		"cause": "HiNet I/O 변수의 인덱스가 유효범위를 초과했습니다.",
 		"remedy": "HiNet I/O 변수의 인덱스를 유효범위에 맞게 지정하십시오.GE1~16DE1~128"
 	},
+	"E14524": {
+		"msg": "변수의 인덱스 유효범위 초과",
+		"cause": "변수의 인덱스가 유효범위를 초과했습니다.",
+		"remedy": "변수의 인덱스를 유효범위에 맞게 지정하십시오."
+	},
 	"E14526": {
 		"msg": "DO 변수의 인덱스 유효범위를 초과했습니다.",
 		"cause": "DO 변수의 인덱스가 유효범위(1~4100)를 초과했습니다.",
@@ -10725,6 +11120,11 @@
 		"msg": "SI 변수의 인덱스 유효범위를 초과했습니다.",
 		"cause": "SI 변수의 인덱스가 유효범위(1~8,101~104)를 초과했습니다.",
 		"remedy": "SI 변수의 인덱스를 유효범위에 맞게 지정하십시오."
+	},
+	"E14540": {
+		"msg": "변수 사본을 만드는 데 실패했습니다.",
+		"cause": "변수 사본을 만드는 중 예기치 않은 오류가 발생하였습니다.",
+		"remedy": "문제가 반복될 경우 당사 A/S 요원에게 연락해 주십시오."
 	},
 	"E14541": {
 		"msg": "정의되지 않은 전역변수",
@@ -10937,39 +11337,44 @@
 		"remedy": "변수의 번호의 문법이 올바른 지를 확인하여 주십시오."
 	},
 	"E14590": {
-		"msg": "사용자 변수: 변수 집합이 존재하지 않음.",
-		"cause": "",
-		"remedy": ""
+		"msg": "변수 owner가 없거나 객체가 아닙니다.",
+		"cause": "owner 객체를 찾을 수 없습니다.",
+		"remedy": "owner 객체의 철자를 확인하십시오. 혹은 job을 처음부터 수행하십시오."
 	},
 	"E14591": {
-		"msg": "사용자 변수: 정의되지 않은 이름",
-		"cause": "",
-		"remedy": ""
+		"msg": "정의되지 않은 변수입니다.",
+		"cause": "정의되지 않은 변수가 사용되었습니다.",
+		"remedy": "1) var 혹은 global 명령문 실행이 누락되었는지 확인하여 주십시오. 2) 변수의 철자를 확인하십시오."
 	},
 	"E14592": {
 		"msg": "사용자 변수: 배열이 아닌데 index가 지정되었음.",
-		"cause": "",
-		"remedy": ""
+		"cause": "배열이 아닌 값에 대해 [] 연산자가 사용되었습니다.",
+		"remedy": "값의 데이터 타입을 재확인하십시오."
 	},
 	"E14593": {
-		"msg": "사용자 변수: 인덱스가 유효범위를 초과했습니다.",
-		"cause": "",
-		"remedy": ""
+		"msg": "사용자 변수: 인덱스가 유효한 타입이 아닙니다.",
+		"cause": "배열 인덱스로 숫자가 아닌 값이 사용되었습니다.",
+		"remedy": "배열 인덱스는 정수값을 사용하십시오."
 	},
 	"E14594": {
-		"msg": "E14594 사용자 변수: 지원하지 않는 type",
-		"cause": "",
-		"remedy": ""
+		"msg": "사용자 변수: 인덱스가 유효범위를 초과했습니다.",
+		"cause": "음수 혹은 배열의 크기를 초과하는 인덱스가 사용되었습니다.",
+		"remedy": "배열의 크기를 확인하고 범위에 맞는 인덱스를 사용하십시오."
 	},
 	"E14595": {
-		"msg": "E14595 사용자 변수: 사용자 변수가 아닙니다.",
-		"cause": "",
-		"remedy": ""
+		"msg": "사용자 변수: 지원하지 않는 type",
+		"cause": "지원하지 않는 데이터형이 사용되었습니다.",
+		"remedy": "명령문이나 함수의 문법을 확인하여 적절한 데이터형을 사용하십시오."
 	},
-	"E14596": {
-		"msg": "E14596 사용자 변수: 타입 불일치",
-		"cause": "",
-		"remedy": ""
+	"E14598": {
+		"msg": "사용자 변수: 유효하지 않은 속성입니다.",
+		"cause": "객체에 포함되지 않는 속성에 대한 접근이 시도되었습니다.",
+		"remedy": "잘못된 속성이름이 사용되지 않았는지 확인하십시오."
+	},
+	"E14599": {
+		"msg": "시작값 또는 종료값의 설정이 잘못되었습니다.",
+		"cause": "시작값이 종료값 보다 크게 설정되었습니다.",
+		"remedy": "설정값을 확인하십시오."
 	},
 	"E14600": {
 		"msg": "함수의 산술형 인수 위치의 문법 오류입니다.",
@@ -11006,6 +11411,47 @@
 		"cause": "CSTORS함수에서 사용하는 인자의 값이 잘못되었습니다.",
 		"remedy": "1번(1~9999),2번(1~2),3번(0~1)사이의 값이 되어야 합니다."
 	},
+
+	"E14611": {
+		"msg": "미지원 함수입니다.",
+		"cause": "지정한 함수를 찾을 수 없습니다.",
+		"remedy": "1) 함수명의 철자를 재확인하십시오. 2) 지정한 함수를 지원하는 소프트웨어 버전인지 확인하십시오."
+	},
+	"E14612": {
+		"msg": "def 문의 형식이 유효하지 않습니다.",
+		"cause": "def문의 형식이 문법에 맞지 않습니다.",
+		"remedy": "로봇언어 설명서를 참고하여 def문의 문법을 정정하십시오."
+	},
+	"E14613": {
+		"msg": "함수의 인수 개수가 불일치합니다.",
+		"cause": "함수의 인수 개수가 유효하지 않습니다.",
+		"remedy": "해당 함수의 설명서를 참고하여 유효한 개수의 인수를 사용하십시오."
+	},
+	"E14614": {
+		"msg": "함수의 인수 타입이 유효하지 않습니다.",
+		"cause": "함수의 인수 타입이 유효하지 않습니다.",
+		"remedy": "해당 함수의 설명서를 참고하여 유효한 타입의 인수를 사용하십시오."
+	},
+	"E14615": {
+		"msg": "함수의 인수값이 유효하지 않습니다.",
+		"cause": "함수의 인수값이 유효하지 않습니다.",
+		"remedy": "해당 함수의 설명서를 참고하여 유효한 값의 인수를 사용하십시오."
+	},
+	"E14616": {
+		"msg": "함수의 인수값이 유효한 범위를 초과합니다.",
+		"cause": "함수의 인수값이 유효한 범위를 초과합니다.",
+		"remedy": "해당 함수의 설명서를 참고하여 유효한 범위의 인수를 사용하십시오."
+	},
+	"E14620": {
+		"msg": "미정의 def 함수입니다.",
+		"cause": "지정한 def 함수를 찾을 수 없습니다.",
+		"remedy": "def 함수명의 철자를 재확인하십시오."
+	},
+	"E14621": {
+		"msg": "중복된 def 함수이름입니다.",
+		"cause": "다른 곳에서 이미 정의된 def 함수명입니다.",
+		"remedy": "히스토리 창(지난화면)의 중복된 def 함수명 메시지로 위치를 확인한 후, 고유한 이름으로 정정하십시오."
+	},
 	"E14700": {
 		"msg": "NOT 연산자 뒤에 공백이 없습니다.",
 		"cause": "NOT 연산자 뒤에 공백문자가 없습니다.",
@@ -11036,6 +11482,26 @@
 		"cause": "좌항 문자열식과 =,<>연산자 뒤에는 우항으로 문자열식이 와야 합니다.",
 		"remedy": "문자열 비교 연산자의 우항을 적법한 문자열식으로 정정하십시오."
 	},
+	"E14706": {
+		"msg": "지원하지 않는 연산입니다.",
+		"cause": "피연산자의 변수형이 지원하지 않는 연산입니다.",
+		"remedy": "적법한 연산식으로 정정하십시오."
+	},
+	"E14708": {
+		"msg": "우변 피연산자가 적절한 형이 아닙니다.",
+		"cause": "우변 피연산자가 적절한 형이 아닙니다.",
+		"remedy": "적법한 연산식으로 정정하십시오."
+	},
+	"E14709": {
+		"msg": "시프트연산의 좌변이 적절한 형이 아닙니다.",
+		"cause": "시프트연산의 좌변이 적절한 형이 아닙니다.",
+		"remedy": "적법한 시프트연산식으로 정정하십시오."
+	},
+	"E14710": {
+		"msg": "시프트연산의 우변이 적절한 형이 아닙니다.",
+		"cause": "시프트연산의 우변이 적절한 형이 아닙니다.",
+		"remedy": "적법한 시프트연산식으로 정정하십시오."
+	},
 	"E14800": {
 		"msg": "정수 범위를 초과한 실수를 정수로 변환하였습니다.",
 		"cause": "로봇 언어에서 정수로 변환하려는 실수값이 정수 범위 최대값인 2147483647을 초과하였습니다.",
@@ -11055,6 +11521,36 @@
 		"msg": "SoftLimit 변수에 잘못된 축명칭을 사용하였습니다.",
 		"cause": "현재 로봇에 존재하지 않는 축 명칭이거나, 잘못된 명칭을 사용하였습니다.",
 		"remedy": "명칭을 올바르게 수정하여 주시기 바랍니다."
+	},
+	"E14821": {
+		"msg": "유효하지 않은 배열 리터럴 표기입니다.",
+		"cause": "배열 리터럴(상수) 표기가 잘못되었습니다.",
+		"remedy": "[ ] 표기를 문법에 맞게 사용해주십시오."
+	},
+	"E14822": {
+		"msg": "유효하지 않은 객체 리터럴 표기입니다.",
+		"cause": "객체 리터럴(상수) 표기가 잘못되었습니다.",
+		"remedy": "{ } 표기를 문법에 맞게 사용해주십시오."
+	},
+	"E14901": {
+		"msg": "(python) 미정의 owner 객체입니다.",
+		"cause": "foo.bar() 형태의 함수 호출에서 foo는 유효하지 않은 python 객체입니다.",
+		"remedy": "python script를 재확인하십시오."
+	},
+	"E14902": {
+		"msg": "(python) 미정의 함수입니다.",
+		"cause": "foo.bar() 형태의 함수 호출에서 bar는 foo에 존재하지 않는 attribute입니다.",
+		"remedy": "python script에서 foo의 module 혹은 class 정의를 재확인하십시오."
+	},
+	"E14903": {
+		"msg": "(python) 함수가 아닙니다.",
+		"cause": "foo.bar() 형태의 함수 호출에서 bar는 함수가 아닙니다.",
+		"remedy": "python script에서 bar의 함수 정의를 재확인하십시오."
+	},
+	"E14904": {
+		"msg": "(python) 함수 호출에 실패했습니다.",
+		"cause": "python 함수를 호출하는데 실패했습니다.",
+		"remedy": "python script에서 함수 정의를 재확인하십시오."
 	},
 	"E16000": {
 		"msg": "제어정수 파일 버전이 상위 버전임.",
@@ -11155,6 +11651,31 @@
 		"msg": "스폿용접기 인터페이스용 파일 버전이 상위 버전임.",
 		"cause": "Main SW 버전을 하위버전으로 버전업하여 발생하였습니다.",
 		"remedy": "백업된 스폿용접기 인터페이스용 파일 로드 또는 초기화하여 사용하시기 바랍니다."
+	},
+	"E16050": {
+		"msg": "파일 열기에 실패했습니다.",
+		"cause": "파일 열기에 실패했습니다.",
+		"remedy": "지정된 경로파일명으로 파일이 존재하는지 확인하십시오."
+	},
+	"E16052": {
+		"msg": "경로 생성에 실패했습니다.",
+		"cause": "경로 생성 중 오류가 발생했습니다.",
+		"remedy": "지정된 경로명이 유효한 지 확인하십시오."
+	},
+	"E16053": {
+		"msg": "파일이나 폴더 복사에 실패했습니다.",
+		"cause": "파일이나 폴더 복사 중 오류가 발생했습니다.",
+		"remedy": "지정된 경로파일명이 유효한 지 확인하십시오."
+	},
+	"E16054": {
+		"msg": "파일이나 폴더 삭제에 실패했습니다.",
+		"cause": "파일이나 폴더 삭제 중 오류가 발생했습니다.",
+		"remedy": "지정된 경로파일명이 유효한 지 확인하십시오."
+	},
+	"E16061": {
+		"msg": "유효하지 않은 원본 경로파일명입니다.",
+		"cause": "지정한 경로파일명의 폴더 혹은 파일이 존재하지 않습니다.",
+		"remedy": "지정한 경로파일명을 재확인 바랍니다."
 	},
 	"E16101": {
 		"msg": "포즈/시프트 파일의 헤더 형식이 유효하지 않음.",
@@ -12061,6 +12582,36 @@
 		"cause": "#043 DeviceNet Slave Stack Settings의 Input Clear값이 최대 값보다 큽니다.1)호환되지 않는 버전으로 버전이 변경되었습니다.2)파일이 손상 되었습니다.3)파일의 설정 값을 직접 수정하였습니다.",
 		"remedy": "해당 항목 확인 후 이상이 없을 경우 '초기화 시 파일 검사'를 무효로 변경 후 재부팅 하십시오.1)초기화를 수행하거나 버전에 맞는 백업 파일을 복사하십시오.2)초기화를 수행하거나 버전에 맞는 백업 파일을 복사하십시오.3)설정 값을 확인 하십시오."
 	},
+	"E16644": {
+		"msg": "기정의변수 파일 행의 타입 열 오류입니다.",
+		"cause": "기정의변수 파일 (predef/*.csv) 로딩 중 오류가 발생했습니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
+	"E16645": {
+		"msg": "기정의변수 파일의 인덱스 형식 오류입니다.",
+		"cause": "기정의변수 파일 (predef/*.csv) 로딩 중 오류가 발생했습니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
+	"E16646": {
+		"msg": "기정의변수 파일의 배열 요소 개수 형식 오류입니다.",
+		"cause": "기정의변수 파일 (predef/*.csv) 에서 로딩 중 array 요소 개수에서 오류가 발생했습니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
+	"E16647": {
+		"msg": "기정의변수 파일의 배열 요소 값 생성 오류입니다.",
+		"cause": "기정의변수 파일 (predef/*.csv) 로딩 중 배열 요소 값을 생성하는데 실패했습니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
+	"E16648": {
+		"msg": "기정의변수 파일의 잘못된 배열 접근 표현입니다.",
+		"cause": "가령, arr[3][5]가 지정되었는데, arr 혹은 arr[3]이 배열이 아닙니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
+	"E16649": {
+		"msg": "기정의변수 파일의 배열 인덱스 범위 초과입니다.",
+		"cause": "기정의변수 파일 (predef/*.csv)에서 범위를 초과한 인덱스가 사용되었습니다.",
+		"remedy": "히스토리창에 출력된 .csv 파일명과 행번호를 참고하여 오류를 정정하십시오."
+	},
 	"E17030": {
 		"msg": "실행점 기록 실패 (작업헤더 연결 손상) 메인보드 초기화 필요!",
 		"cause": "메인보드의 백업 메모리 오류로 인해 디렉토리 엔트리와 JOB파일 헤더 간 연결이 손상되었습니다.",
@@ -12476,6 +13027,11 @@
 		"cause": "Itp값이 부적절 합니다.",
 		"remedy": "가감속 파라미터를 초기화 해주세요."
 	},
+	"E18106": {
+		"msg": "(%s축)실러 토출량 설정이 부적절 합니다.",
+		"cause": "실러 토출량 설정 값이 지정되지 않았습니다.",
+		"remedy": "부가축 설정에서 실러 토출량을 설정 해주세요."
+	},
 	"E18200": {
 		"msg": "제어기 부팅 중, 초기화에 실패했습니다.",
 		"cause": "제어기 부팅 중, 초기화에 실패했습니다.",
@@ -12596,15 +13152,40 @@
 		"cause": "연속모션 중 출력신호량이 너무 많습니다.",
 		"remedy": "스텝의 Accuracy를 0으로 설정하여 불연속 모션으로 변경하십시오."
 	},
-	"E22430": {
-		"msg": "BD525 CC-Link 슬레이브 시큐리티 메모리 미 부착",
-		"cause": "CC-Link 슬레이브 보드에 시큐리티 메모리가 미 부착되었습니다.",
-		"remedy": "하드웨어 불량입니다. BD525 통신 보드를 교체 하십시오."
+	"E23000": {
+		"msg": "CIFX PCI 통신 보드1 통신 에러",
+		"cause": "PCI 통신 카드의 통신 에러",
+		"remedy": "1) 통신 케이블을 점검하십시오.2) 상대방 마스터 또는 슬레이브를 점검하십시오."
+	},
+	"E23001": {
+		"msg": "CIFX PCI 통신 보드2 통신 에러",
+		"cause": "PCI 통신 카드의 통신 에러",
+		"remedy": "1) 통신 케이블을 점검하십시오.2) 상대방 마스터 또는 슬레이브를 점검하십시오."
+	},
+	"E23002": {
+		"msg": "CIFX PCI 통신 보드3 통신 에러",
+		"cause": "PCI 통신 카드의 통신 에러",
+		"remedy": "1) 통신 케이블을 점검하십시오.2) 상대방 마스터 또는 슬레이브를 점검하십시오."
+	},
+	"E23003": {
+		"msg": "CIFX PCI 통신 보드4 통신 에러",
+		"cause": "PCI 통신 카드의 통신 에러",
+		"remedy": "1) 통신 케이블을 점검하십시오.2) 상대방 마스터 또는 슬레이브를 점검하십시오."
+	},
+	"E23005": {
+		"msg": "CIFX PCI 통신 카드 스위치 설정 에러",
+		"cause": "로타리 스위치값 설정 에러",
+		"remedy": "1) 로타리 스위치를 1~4 범위에 맞게 설정하십시오"
 	},
 	"E23008": {
 		"msg": "내장 디바이스넷 마스터 CAN 포트 사용 불가",
 		"cause": "CAN 포트를 이미 내장 디바이스넷 슬레이브에서 사용 중입니다.",
-		"remedy": "1) 내장 디바이스넷 슬레이브를 사용하지 않으면 Off시키십시오.2) 내장 디바이스넷 슬레이브에서 사용하지 않는 CAN 포트를 사용하십시오."
+		"remedy": "1) 내장 디바이스넷 슬레이브를 사용하지 않으면 Off 시키십시오.2) 내장 디바이스넷 슬레이브에서 사용하지 않는 CAN 포트를 사용하십시오."
+	},
+	"E23020": {
+		"msg": "CIFX PCI 통신 펌웨어가 존재하지 않습니다.",
+		"cause": "PCI 통신 카드의 설정 에러",
+		"remedy": "1) 해당 경로의 파일이 있는지 확인해주세요 'ata0:2/cifX/ref_cifx'"
 	},
 	"E23027": {
 		"msg": "내장 디바이스넷 마스터의 사용권한 없음",
@@ -12738,7 +13319,7 @@
 	},
 	"E23123": {
 		"msg": "BD525 PROFIBUS FB3 사용 불가",
-		"cause": "FB3을 BD525 CC-Link IE 슬레이브에서 사용 중입니다..",
+		"cause": "FB3을 BD525 CC-Link IE 슬레이브에서 사용 중입니다.",
 		"remedy": "BD525 CC-Link IE 슬레이브를 사용하지 않으면 Off 시키십시오."
 	},
 	"E23130": {
@@ -12935,6 +13516,11 @@
 		"msg": "BD525 CC-Link 슬레이브 네트워크 주소 오류",
 		"cause": "CC-Link 슬레이브에서 유효하지 않은 네트워크 주소가 설정되었습니다.",
 		"remedy": "1) 제어기를 재 부팅하여 문제가 지속되는지 확인하십시오.2) 문제가 지속되면 통신 보드를 교체 하십시오."
+	},
+	"E22430": {
+		"msg": "BD525 CC-Link 슬레이브 시큐리티 메모리 미 부착",
+		"cause": "CC-Link 슬레이브 보드에 시큐리티 메모리가 미 부착되었습니다.",
+		"remedy": "하드웨어 불량입니다. BD525 통신 보드를 교체 하십시오."
 	},
 	"E23231": {
 		"msg": "BD525 CC-Link 슬레이브 네트워크 폴트",
@@ -14101,27 +14687,90 @@
 		"cause": "ROBOT.INL 파일이 없는 상태에서 파라미터 설정이 실행되었습니다.",
 		"remedy": "1)초기화 후 학습제어 기능을 유효로 설정하지 않은 경우 설정을 유효로 변경하십시오.2)파일을 삭제한 경우 기능 무효 후 유효로 변경하여 재생성 하십시오."
 	},
+	"E28201": {
+		"msg": "invalid argument 예외",
+		"cause": "로봇언어 명령문의 argument가 유효하지 않습니다.",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E28301": {
+		"msg": "Log flush buffer overflow",
+		"cause": "event log 데이터량이 flush buffer 크기를 초과했습니다.",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
 	"E29001": {
-		"msg": "이더켓 인터페이스 버전 불일치",
-		"cause": "이더켓 인터페이스 버전 불일치",
-		"remedy": "소프트웨어 모듈별 버전업 일치시켜 주십시오."
+		"msg": "서보 인터페이스 버전 불일치",
+		"cause": "서보 드라이브와 메인 S/W 간 인터페이스 버전 불일치",
+		"remedy": "1)통합 버전업 수행하십시오.2)문제가 지속되면 당사에 연락바랍니다."
 	},
 	"E29002": {
-		"msg": "이더켓 인터페이스 초기화 실패",
-		"cause": "이더켓 인터페이스 초기화 실패",
-		"remedy": " "
+		"msg": "서보 통신(EtherCAT) 초기화 실패",
+		"cause": "slave 장치 단락 발생, ENI 파일 불일치",
+		"remedy": "1)slave 장치 케이블 결선 상태 확인하십시오.2)당사에 ENI 파일을 요청하십시오"
 	},
 	"E29003": {
-		"msg": "이더켓 slave 장치 단락 발생",
-		"cause": "이더켓 slave 장치 단락 발생",
-		"remedy": " "
+		"msg": "slave 장치 단락 발생",
+		"cause": "slave 장치 이상 동작",
+		"remedy": "EC device info. 확인하여 단락된 장치를 점검하십시오."
+	},
+	"E29004": {
+		"msg": "Motion 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "Motion 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29005": {
+		"msg": "Playback 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "Playback 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
 	},
 	"E29006": {
-		"msg": "이더켓 slave ",
-		"cause": "이더켓 slave 장치 단락 발생33",
-		"remedy": " 44",
-		"help_idx": "",
-		"help_title": ""
+		"msg": "Servo 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "Servo 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29007": {
+		"msg": "I/O 메인 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "I/O 메인 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29008": {
+		"msg": "SDO Agent 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "SDO Agent 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29009": {
+		"msg": "MotCmdMgr 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "MotCmdMgr 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29010": {
+		"msg": "RobAppl 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "RobAppl 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29011": {
+		"msg": "MotPlan 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "MotPlan 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29012": {
+		"msg": "MainSvc 태스크 유효 동작 시간 초과(timeout)",
+		"cause": "MainSvc 태스크 내부 예외발생",
+		"remedy": "제어기 파일을 모두 백업하여 당사에 전달바랍니다"
+	},
+	"E29014": {
+		"msg": "ENI 파일을 찾을 수 없습니다.",
+		"cause": "ENI 파일 불러오기 실패",
+		"remedy": "제공받은 ENI 파일을 지정 경로(/ata0:2/lib)에 복사하십시오."
+	},
+	"E29015": {
+		"msg": "이더켓 설정과 실제 장치구성이 불일치합니다.",
+		"cause": "Slave 장치 연결 불능이나 유효하지 않은 ENI 파일 적용",
+		"remedy": "1) Slave 장치 동작 및 통신상태 점검.2)시스템 구성에 맞는 ENI 파일 적용(당사에 요청)"
+	},
+	"E29016": {
+		"msg": "이더켓 master 연결 끊김 발생",
+		"cause": "첫번째 slave 장치와 통신 불능",
+		"remedy": "Slave 장치 동작 및 통신상태 점검"
 	},
 	"E30000": {
 		"msg": "지정된 시간 내에 가압력 미일치.",
@@ -15128,6 +15777,26 @@
 		"cause": "냉각수의 순환 상태 이상 신호가 입력되고 있는 상태입니다.",
 		"remedy": "1) 냉각수 공급장치를 점검하여 주십시오.2) 이상이 없는 경우 '응용 파라미터->아크용접'의 설정에서 해당 항목의 입력 포트 설정을 확인해 주십시오."
 	},
+	"E32050": {
+		"msg": "위빙 시간 중 위빙정지시간(dwell time)이 너무 길게 설정되었습니다.",
+		"cause": "위빙 1주기 시간에 비해 위빙정지시간이 너무 깁니다.",
+		"remedy": "위빙 조건에서 위빙정지시간(dwell time)을 작게 설정하십시오."
+	},
+	"E32051": {
+		"msg": "부가축 위빙을 사용할 축 번호에 오류가 있습니다.",
+		"cause": "부가축 위빙 기능에서 지정한 위빙 축 번호가 유효한 부가축 번호가 아닙니다.",
+		"remedy": "위빙 조건설정의 부가축 지정 번호를 유효한 축 번호로 지정 하십시오."
+	},
+	"E32052": {
+		"msg": "부가축 위빙을 지원하지 않는 축입니다.",
+		"cause": "지정된 부가축이 위빙기능을 적용할 수 없는 유형의 부가축 입니다.",
+		"remedy": "부가축 위빙은 포지셔너 또는 지그축에서만 적용 가능합니다.."
+	},
+	"E32053": {
+		"msg": "위빙주기가 너무 짧습니다.",
+		"cause": "위빙주기가 너무 짧아 위빙기능을 실행할 수 없습니다.",
+		"remedy": "위빙 조건의 주파수를 5Hz 이하로 설정하십시오."
+	},
 	"E32201": {
 		"msg": "용접기 공급 전원의 전압이 낮습니다.",
 		"cause": "3 초간 정격 전압의 80% 이하의 전원이 인가되었습니다.",
@@ -15528,6 +16197,11 @@
 		"cause": "원래 티칭 궤적과 LVS tracking에 의해 변경된 궤적 간 RZ방향 각도가 궤적이탈 최대 허용 거리를 초과하였습니다.",
 		"remedy": "티칭 위치를 수정하거나, 궤적이탈 최대 허용각도를 조절하십시오."
 	},
+	"E32751": {
+		"msg": "센싱 초기 입력값이 너무 낮습니다.",
+		"cause": "아크센싱 시작시 센서에 검출된 입력 데이터가 너무 낮아 습니다.",
+		"remedy": "1)제어기의 센서 신호 입출력선 및 전원공급선을 확인하십시오, 2) 배선관련 문제가 없다면 멀티미터를 이용하여 용접 중 센서의 출력을 확인하십시오"
+	},
 	"E32752": {
 		"msg": "센싱 기능을 위한 데이터 입력신호 사용'이 '무효'입니다.",
 		"cause": "1)아크 응용설정의 '센싱 기능을 위한 데이터 입력 설정'이 '무효'로 설정되어 있습니다.",
@@ -15573,65 +16247,135 @@
 		"cause": "필터링 처리를 위해 입력된 sampling time이 비정상정인 값입니다.",
 		"remedy": "제어기에 모든 파일을 백업하여, 당사로 송부바랍니다."
 	},
+	"E32801": {
+		"msg": "터치센싱이 작업물을 감지하지 못했습니다.",
+		"cause": "작업물을 감지하는 신호가 입력되지 않았습니다.",
+		"remedy": "탐색거리를 늘려서 센싱해보십시오."
+	},
+	"E32802": {
+		"msg": "butt, grove 작업물에서는 lift_up 명령인수가 2보다 작습니다.",
+		"cause": "명령어의 lift_up 인수가 2보다 작습니다.",
+		"remedy": "명령어에 lift_up 인수를 3이상으로 설정하십시오."
+	},
+	"E32803": {
+		"msg": "와이어가 작업물에 닿은상태로 터치센싱을 시작할 수 없습니다.",
+		"cause": "센싱 시작시 와이어가 작업물에 접촉해있습니다.",
+		"remedy": "센싱 시작 위치를 변경하십시오."
+	},
+	"E32804": {
+		"msg": "토치가 수직이여서 Tool Projection이 불가능합니다.",
+		"cause": "토치가 수직이면 평면에 projection 할 수 없습니다.",
+		"remedy": "센싱 시작시 토치 자세를 변경하십시오."
+	},
+	"E32805": {
+		"msg": "2개의 포즈로 계산된 시프트 거리가 범위를 초과",
+		"cause": "쉬프트 범위를 벗어났습니다.",
+		"remedy": "센싱상태와 작업물을 점검하십시오."
+	},
+	"E32807": {
+		"msg": "터치센싱이 비정상적으로 종료되었습니다.",
+		"cause": "터치센싱의 비정상적 종료",
+		"remedy": "제어기에 모든 파일을 백업하여, 당사로 송부바랍니다."
+	},
+	"E32808": {
+		"msg": "계산결과 포즈가 지정되지 않았습니다.",
+		"cause": "pose 인수에 포즈가 지정되지 않았거나 선언되지 않은 포즈입니다.",
+		"remedy": "센싱시작전 var p10=cpo()와 같이 포즈변수를 선언하십시오."
+	},
+	"E32809": {
+		"msg": "진행거리, 후퇴거리 미설정",
+		"cause": "센싱에 필요한 거리 값이 설정되지 않았습니다.",
+		"remedy": "진행거리와 후퇴거리를 2mm이상 입력하십시오."
+	},
+	"E32810": {
+		"msg": "터치센싱 쉬프트리밋 초과",
+		"cause": "마스터포즈와 현재센싱 포즈의 쉬프트가 리밋을 초과하였습니다.",
+		"remedy": "센싱상태나 작업물상태를 확인하십시오."
+	},
+	"E32811": {
+		"msg": "센싱타입에 해당하는 명령어의 dir을 지정하십시오.",
+		"cause": "센싱 타입에서 요구하는 탐색방향 개수의 지정에 문제가 있습니다.",
+		"remedy": "메뉴얼을 참고하여 방향을 지정하십시오."
+	},
+	"E32820": {
+		"msg": "아크콘드 조건이 존재하지 않습니다.",
+		"cause": "보간하려는 arccond 조건이 없습니다.",
+		"remedy": "arccond 속성창에서 조건을 추가하십시오."
+	},
+	"E32821": {
+		"msg": "아크콘드 조건의 좌우 위빙폭 합이 너무 작습니다.",
+		"cause": "좌우 위빙폭 합이 너무 작아 보간이 불가합니다.",
+		"remedy": "arccond 속성창에서 위빙폭을 수정하십시오."
+	},
+	"E32822": {
+		"msg": "arccond 위빙조건은 ld, rd, freq가 모두 지정되어야 합니다.",
+		"cause": "위빙 파라미터가 모두 입력되지 않았습니다.",
+		"remedy": "명령어를 수정하십시오."
+	},
+	"E32823": {
+		"msg": "arccond cnd를 명시하지 않는 경우 cur, vol은 필수 입력인자 입니다.",
+		"cause": "cur와 vol의 인자가 입력되지 않았습니다.",
+		"remedy": "명령어를 수정하십시오."
+	},
 	"E34000": {
-		"msg": "System(Software) error: STEP3 of UnloadWithAlignment Function.",
-		"cause": "System (the main software) error.",
-		"remedy": "Back up all files on the controller and send it to us."
+		"msg": "시스템(소프트웨어)에러: UnloadWithAlignment 명령어 수행중 STEP3에서 문제 발생.",
+		"cause": "시스템 (메인 소프트웨어) 에러입니다.",
+		"remedy": "제어기에 모든 파일을 백업하여, 당사로 송부바랍니다."
 	},
 	"E34001": {
-		"msg": "System(Software) error: STEP2 of UnloadWithAlignment Function.",
-		"cause": "System (the main software) error",
-		"remedy": "Back up all files on the controller and send it to us."
+		"msg": "시스템(소프트웨어)에러: UnloadWithAlignment 명령어 수행중 STEP2에서 문제 발생.",
+		"cause": "시스템 (메인 소프트웨어) 에러입니다.",
+		"remedy": "제어기에 모든 파일을 백업하여, 당사로 송부바랍니다."
 	},
 	"E34002": {
-		"msg": "Invalid Hand (UnloadWithAlignment Function).",
-		"cause": "There is an error in the set hand the value of a variable(Hand variable).",
-		"remedy": "Please check the value of the variable((Hand). 0 or 1 are valid values."
+		"msg": "유효하지 않은 핸드가 선택됨 (UnloadWithAlignment Function).",
+		"cause": "핸드 값을 저장하는 변수에 이상이 있음.(핸드 변수).",
+		"remedy": "핸드 변수값을 확인하십시오. 0 또는 1이 유효한 값입니다."
 	},
 	"E34003": {
-		"msg": "The length of center point between Arm and TH axis is invalid (UnloadWithAlignment Function).",
-		"cause": "The length between the arm axis and the TH-axis will be smaller than zero.",
-		"remedy": "Please check the value of the variable(between the arm axis and the TH-axis). It is not possible to be smaller than zero."
+		"msg": "암과 TH축의 중심간의 Offset 길이가 유효하지 않음 (UnloadWithAlignment Function).",
+		"cause": "암과 TH축의 중심간의 Offset 길이가 0보다 작게 설정되어 있음.",
+		"remedy": "암과 TH축의 중심간의 Offset 길이를 설정하는 변수를 확인하십시오. 이 값은 0보다 작을 수 없습니다."
 	},
 	"E34004": {
-		"msg": "The length of ForkBracket is invalid (UnloadWithAlignment Function).",
-		"cause": "The length of ForkBracket will be smaller than zero.",
-		"remedy": "Please check the value of the variable(ForkBracket). It is not possible to be smaller than zero."
+		"msg": "핸드 브라켓의 길이가 유효하지 않음 (UnloadWithAlignment Function).",
+		"cause": "핸드 브라켓의 길이가 0보다 작게 설정되어 있음.",
+		"remedy": "핸드 브라켓의 길이를 확인하십시오. 0보다 큰 값 또는 부호를 확인하세요."
 	},
 	"E34005": {
-		"msg": "The length between ForkBracket and Glass edge is invalid (UnloadWithAlignment Function).",
-		"cause": "The length between ForkBracket and Glass edge will be smaller than zero.",
-		"remedy": "Please check the value of the variable(between ForkBracket and Glass edge). It is not possible to be smaller than zero."
+		"msg": "핸드 브라켓과 글라스 엣지간의 거리값이 유효하지 않음 (UnloadWithAlignment Function).",
+		"cause": "핸드 브라켓과 글라스 엣지간의 거리값이 0보다 작게 설정되어 있음.",
+		"remedy": "핸드 브라켓과 글라스 엣지간의 거리값을 확인하십시오. 이 값은 0보다 작을 수 없습니다."
 	},
 	"E34006": {
-		"msg": "The length of half-size glass is invalid (UnloadWithAlignment Function).",
-		"cause": "The length of half-size glass will be smaller than zero.",
+		"msg": "하프 사이즈의 글라스 길이가 유효하지 않음 (UnloadWithAlignment Function).",
+		"cause": "하프 사이즈의 글라스 길이가 0보다 작게 설정되어 있음.",
 		"remedy": "Please check the value of the variable(half-size glass). It is not possible to be smaller than zero."
 	},
 	"E34007": {
-		"msg": "Range of glass alignment is exceed (UnloadWithAlignment Function).",
-		"cause": "It is beyond the scope that can be glass alignment. (-PI/2 ~ PI/2)",
-		"remedy": "Please check the value of the variable(The delta TH)."
+		"msg": "글라스 얼라인먼트 보정 범위를 벗어남(UnloadWithAlignment Function).",
+		"cause": "글라스 얼라인먼트는 명령어내에서 (-PI/2 ~ PI/2)범위로 제한되어 있음.",
+		"remedy": "글라스 얼라인먼트 보정 요구값을 확인하십시오.(The delta TH)."
 	},
 	"E34008": {
-		"msg": "The length of center point between Arm and TH axis is invalid (LoadWithAlignment Function).",
-		"cause": "The length between the arm axis and the TH-axis will be smaller than zero.",
-		"remedy": "Please check the value of the variable(between the arm axis and the TH-axis). It is not possible to be smaller than zero."
+		"msg": "암과 선회축 중심간의 거리 값이 유효하지 않음.(LoadWithAlignment Function).",
+		"cause": "암과 선회축 중심간의 거리 값이 0보다 작게 설정되어 있음.",
+		"remedy": "암과 선회축 중심간의 거리 값을 확인하십시오. 이 값은 0보다 작을 수 없습니다."
 	},
 	"E34009": {
-		"msg": "Invalid Hand (LoadWithAlignment Function).",
-		"cause": "There is an error in the set hand the value of a variable(Hand variable).",
-		"remedy": "Please check the value (Hand variable) of the variable. 0 or 1 are valid values."
+		"msg": "유효하지 않은 핸드가 설정됨(LoadWithAlignment Function).",
+		"cause": "설정된 핸드 변수값이 유효하지 않음(Hand variable).",
+		"remedy": "설정된 핸드 변수값을 확인하십시오. 0 또는 1만 유효한 값입니다."
 	},
 	"E34010": {
-		"msg": "The pose value is invalid (LoadWithAlignment Function).",
-		"cause": "The reference pose value for LoadWithAlignment function is invalid.",
-		"remedy": "Please check the value of the reference pose of variable."
+		"msg": "유효하지 않은 포즈 값으로 설정됨 (LoadWithAlignment Function).",
+		"cause": "LoadWithAlignment 명령어 수행을 위한 기준 포즈가 유효하지 않음.",
+		"remedy": "기준 포즈값을 확인하십시오."
 	},
 	"E34011": {
-		"msg": "Range of glass alignment is exceed (LoadWithAlignment Function).",
-		"cause": "It is beyond the scope that can be glass alignment.(-24.0 ~ 24.0)",
-		"remedy": "Please check the value of the variable(The delta X)."
+		"msg": "글라스 로드 얼라인먼트 범위를 초과함 (LoadWithAlignment Function).",
+		"cause": "글라스 로드 얼라인먼트 범위는 명령어에서(-24.0 ~ 24.0)로 제한됨.",
+		"remedy": "로드 얼라인먼트 범위(The delta X)값을 확인하십시오."
 	},
 	"E34012": {
 		"msg": "ReceiveCMD_Abnormal System Booting status",
@@ -15752,5 +16496,367 @@
 		"msg": "SELBRUSH명령의 출력신호 설정이 byte 단위가 아닙니다.",
 		"cause": "byte 그룹신호의 첫 인덱스(8N+1)만 입력할 수 있습니다.(예를 들어, 1, 9, FB5.17, ..)",
 		"remedy": "시스템/응용파라미터/도장/출력신호할당에서 Brush 번호를 수정하십시오."
+	},
+	"E62000": {
+		"msg": "티칭펜던트 자동모드 입력 불일치(안전체인1 OFF)",
+		"cause": "티칭펜던트의 자동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62001": {
+		"msg": "티칭펜던트 자동모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "티칭펜던트의 자동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62002": {
+		"msg": "티칭펜던트 수동모드 입력 불일치 (안전체인1 OFF)",
+		"cause": "티칭펜던트의 수동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62003": {
+		"msg": "티칭펜던트 수동모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "티칭펜던트의 수동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62004": {
+		"msg": "티칭펜던트 원격모드 입력 불일치 (안전체인1 OFF)",
+		"cause": "티칭펜던트의 원격모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62005": {
+		"msg": "티칭펜던트 원격모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "티칭펜던트의 원격모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62006": {
+		"msg": "조작반(OP) 자동모드 입력 불일치 (안전체인1 OFF)",
+		"cause": "조작반(OP)의 자동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62007": {
+		"msg": "조작반(OP) 자동모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "조작반(OP)의 자동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+
+	},
+	"E62008": {
+		"msg": "조작반(OP) 수동모드 입력 불일치 (안전체인1 OFF)",
+		"cause": "조작반(OP)의 수동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62009": {
+		"msg": "조작반(OP) 수동모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "조작반(OP)의 수동모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+
+	},
+	"E62010": {
+		"msg": "조작반(OP) 원격모드 입력 불일치 (안전체인1 OFF)",
+		"cause": "조작반(OP)의 원격모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62011": {
+		"msg": "조작반(OP) 원격모드 입력 불일치 (안전체인2 OFF)",
+		"cause": "조작반(OP)의 원격모드 입력이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62012": {
+		"msg": "티칭펜던트 연결 에러(안전체인1)",
+		"cause": "티칭펜던트의 연결이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62013": {
+		"msg": "티칭펜던트 연결 에러(안전체인2)",
+		"cause": "티칭펜던트의 연결이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 티칭펜던트 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62014": {
+		"msg": "조작반(OP) 연결 에러 (안전체인1)",
+		"cause": "조작반(OP)의 연결이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62015": {
+		"msg": "조작반(OP) 연결 에러 (안전체인2)",
+		"cause": "조작반(OP)의 연결이 이중화되지 않았습니다. 안전보드의 안전체인1과 2의 입력상태가 다릅니다.",
+		"remedy": "1) 조작반(OP) 및 케이블을 점검 또는 교체하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E62200": {
+		"msg": "티칭펜던트 비상정지 출력회로 고장 (체인1)",
+		"cause": "안전보드의 티칭펜던트 비상정지 출력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62201": {
+		"msg": "티칭펜던트 비상정지 출력회로 고장 (체인2)",
+		"cause": "안전보드의 티칭펜던트 비상정지 출력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62202": {
+		"msg": "티칭펜던트 비상정지 입력회로 고장 (체인1)",
+		"cause": "안전보드의 티칭펜던트 비상정지 입력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62203": {
+		"msg": "티칭펜던트 비상정지 입력회로 고장 (체인2)",
+		"cause": "안전보드의 티칭펜던트 비상정지 입력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62204": {
+		"msg": "조작반(OP) 비상정지 출력회로 고장 (체인1)",
+		"cause": "안전보드의 조작반(OP) 비상정지 출력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62205": {
+		"msg": "조작반(OP) 비상정지 출력회로 고장 (체인2)",
+		"cause": "안전보드의 조작반(OP) 비상정지 출력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62206": {
+		"msg": "조작반(OP) 비상정지 입력회로 고장 (체인1)",
+		"cause": "안전보드의 조작반(OP) 비상정지 입력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62207": {
+		"msg": "조작반(OP) 비상정지 입력회로 고장 (체인2)",
+		"cause": "안전보드의 조작반(OP) 비상정지 입력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62208": {
+		"msg": "외부 비상정지(접점) 출력회로 고장 (체인1)",
+		"cause": "안전보드의 외부 비상정지(접점) 출력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62209": {
+		"msg": "외부 비상정지(접점) 출력회로 고장 (체인2)",
+		"cause": "안전보드의 외부 비상정지(접점) 출력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62210": {
+		"msg": "외부 비상정지(접점) 입력회로 고장 (체인1)",
+		"cause": "안전보드의 외부 비상정지(접점) 입력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62211": {
+		"msg": "외부 비상정지(접점) 입력회로 고장 (체인2)",
+		"cause": "안전보드의 외부 비상정지(접점) 입력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62400": {
+		"msg": "확장축(OVT8) 리밋SW 이중화 입력 실패 (안전체인1-OFF, 안전체인2-ON)",
+		"cause": "확장축(OVT8) 안전체인1의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.",
+		"remedy": "1) 확장축(OVT8)  배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 기구부에 부착된 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E62401": {
+		"msg": "확장축(OVT8) 리밋SW 이중화 입력 실패 (안전체인1-ON, 안전체인2-OFF)",
+		"cause": "확장축(OVT8) 안전체인2의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.",
+		"remedy": "1) 확장축(OVT8)  배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 기구부에 부착된 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E62800": {
+		"msg": "MC상태 체크(FDBK) 출력회로 고장 (체인1)",
+		"cause": "안전보드의 MC상태 체크(FDBK) 출력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62801": {
+		"msg": "MC상태 체크(FDBK) 출력회로 고장 (체인2)",
+		"cause": "안전보드의 MC상태 체크(FDBK) 출력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62802": {
+		"msg": "MC상태 체크(FDBK) 입력회로 고장 (체인1)",
+		"cause": "안전보드의 MC상태 체크(FDBK) 입력회로가 고장났습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E62803": {
+		"msg": "MC상태 체크(FDBK) 입력회로 고장 (체인2)",
+		"cause": "안전보드의 MC상태 체크(FDBK) 입력회로가 고장났습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63004": {
+		"msg": "자동모드 안전가드(SGA2) 입력 불일치 (안전체인1 OFF)",
+		"cause": "자동모드 안전가드2(SGA2) 안전체인1의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.",
+		"remedy": "1)자동모드 안전가드2(SGA2) 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 자동모드 안전가드 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E63005": {
+		"msg": "자동모드 안전가드(SGA2) 입력 불일치 (안전체인2 OFF)",
+		"cause": "자동모드 안전가드2(SGA2) 안전체인2의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.",
+		"remedy": "1)자동모드 안전가드2(SGA2) 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 자동모드 안전가드 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E63600": {
+		"msg": "SIO CPU 자가진단 에러(안전체인1)",
+		"cause": "안전보드의 CPU의 자가진단 에러가 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63601": {
+		"msg": "SIO CPU 자가진단 에러(안전체인2)",
+		"cause": "안전보드의 CPU의 자가진단 에러가 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63602": {
+		"msg": "SIO RAM 자가진단 에러(안전체인1)",
+		"cause": "안전보드의 RAM의 자가진단 에러가 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63603": {
+		"msg": "SIO RAM 자가진단 에러(안전체인2)",
+		"cause": "안전보드의 RAM의 자가진단 에러가 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63604": {
+		"msg": "SIO ROM 자가진단 에러(안전체인1)",
+		"cause": "안전보드의 ROM의 자가진단 에러가 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63605": {
+		"msg": "SIO ROM 자가진단 에러(안전체인2)",
+		"cause": "안전보드의 ROM의 자가진단 에러가 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63606": {
+		"msg": "SIO Release MC 타임아웃 에러(안전체인1)",
+		"cause": "안전보드의 MC Release 타임아웃이 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63607": {
+		"msg": "SIO Release MC 타임아웃 에러(안전체인2)",
+		"cause": "안전보드의 MC Release 타임아웃이 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63608": {
+		"msg": "SIO Hold 타임아웃 에러(안전체인1)",
+		"cause": "안전보드의 HOLD 타임아웃이 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63609": {
+		"msg": "SIO Hold 타임아웃 에러(안전체인2)",
+		"cause": "안전보드의 HOLD 타임아웃이 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63610": {
+		"msg": "SIO Hold MC 타임아웃 에러(안전체인1)",
+		"cause": "안전보드의 MC HOLD 타임아웃이 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63611": {
+		"msg": "SIO Hold MC 타임아웃 에러(안전체인2)",
+		"cause": "안전보드의 MC HOLD 타임아웃이 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63612": {
+		"msg": "SIO Upgrade Fail (안전체인1)",
+		"cause": "안전보드의 업그레이드 실패가 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63613": {
+		"msg": "SIO Upgrade Fail (안전체인2)",
+		"cause": "안전보드의 업그레이드 실패가 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63800": {
+		"msg": "SIO 제어전원(DC24V) 에러 (안전체인1)",
+		"cause": "안전보드의 제어전원(DC24V)에 문제가 발생하였습니다. (안전체인1)",
+		"remedy": "1) 안전보드에 연결된 DC24V전원 케이블을 점검하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E63801": {
+		"msg": "SIO 제어전원(DC24V) 에러 (안전체인2)",
+		"cause": "안전보드의 제어전원(DC24V)에 문제가 발생하였습니다. (안전체인2)",
+		"remedy": "1) 안전보드에 연결된 DC24V전원 케이블을 점검하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E63802": {
+		"msg": "SIO 제어전원(DC3.3V) 에러 (안전체인1)",
+		"cause": "안전보드의 제어전원(3.3V)에 문제가 발생하였습니다. (안전체인1)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63803": {
+		"msg": "SIO 제어전원(DC3.3V) 에러 (안전체인2)",
+		"cause": "안전보드의 제어전원(3.3V)에 문제가 발생하였습니다. (안전체인2)",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E63804": {
+		"msg": "SIO IO전원(DC24V) 에러 (안전체인1)",
+		"cause": "안전보드의 IO전원(DC24V)에 문제가 발생하였습니다. (안전체인1)",
+		"remedy": "1) 안전보드에 연결된 DC24V전원 케이블을 점검하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E63805": {
+		"msg": "SIO IO전원(DC24V) 에러 (안전체인2)",
+		"cause": "안전보드의 IO전원(DC24V)에 문제가 발생하였습니다. (안전체인2)",
+		"remedy": "1) 안전보드에 연결된 DC24V전원 케이블을 점검하십시오.\n2) 안전보드를 교체하십시오."
+	},
+	"E64000": {
+		"msg": "SIO BLACK BOX 통신 에러",
+		"cause": "안전보드의 BLACK BOX 통신 에러가 발생하였습니다.",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E64001": {
+		"msg": "SIO INTER-MCU 통신 에러",
+		"cause": "안전보드의 INTER-MCU 통신 에러가 발생하였습니다.",
+		"remedy": "안전보드를 교체하십시오."
+	},
+	"E64002": {
+		"msg": "H6COM-T 에러",
+		"cause": "H6COM의 CPU에러가 발생하였습니다.",
+		"remedy": "1) EtherCAT케이블을 점검하십시오.\n2) H6COM을 교체하십시오.\n3) 서보보드를 교체하십시오."
+	},
+	"E64003": {
+		"msg": "서보모듈(SVST) 에러",
+		"cause": "서보보드 고장이 발생하였습니다.",
+		"remedy": "1) 서보보드를 교체하십시오.\n2) 서보보드와 연결된 케이블을 점검 또는 교체하십시오\n3) 안전보드를 교체하십시오"
+	},
+	"E64004": {
+		"msg": "서보 모듈 상태 입력 불일치(안전체인1)",
+		"cause": "서보보드 상태 입력의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.(안전체인1)",
+		"remedy": "1) 서보보드에 연결된 케이블을 점검 또는 교체하십시오.\n2) 서보보드를 교체합시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64005": {
+		"msg": "서보 모듈 상태 입력 불일치(안전체인2)",
+		"cause": "서보보드 상태 입력의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.(안전체인2)",
+		"remedy": "1) 서보보드에 연결된 케이블을 점검 또는 교체하십시오.\n2) 서보보드를 교체합시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64006": {
+		"msg": "조작반 설치 SW (OP Install) 입력 불일치(안전체인1)",
+		"cause": "조작반 설치(OP Install) 스위치가 고장났거나 조작반(OP) 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.(안전체인1)",
+		"remedy": "1) 조작반 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반을 교체하십시오\n3) 안전보드를 교체하십시오."
+	},
+	"E64007": {
+		"msg": "조작반 설치 SW (OP Install) 입력 불일치(안전체인2)",
+		"cause": "조작반 설치(OP Install) 스위치가 고장났거나 조작반(OP) 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다.(안전체인2)",
+		"remedy": "1) 조작반 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반을 교체하십시오\n3) 안전보드를 교체하십시오."
+	},
+	"E64008": {
+		"msg": "조작반 모터온 입력 불일치(안전체인1)",
+		"cause": "조작반(OP) 모터온 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인1)",
+		"remedy": "1)조작반(OP) 모터온 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 모터온 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64009": {
+		"msg": "조작반 모터온 입력 불일치(안전체인2)",
+		"cause": "조작반(OP) 모터온 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인2)",
+		"remedy": "1)조작반(OP) 모터온 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 모터온 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64010": {
+		"msg": "조작반 정지 입력 불일치(안전체인1)",
+		"cause": "조작반(OP) 정지 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인1)",
+		"remedy": "1)조작반(OP) 정지 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 정지 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64011": {
+		"msg": "조작반 정지 입력 불일치(안전체인2)",
+		"cause": "조작반(OP) 정지 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인2)",
+		"remedy": "1)조작반(OP) 정지 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 정지 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64012": {
+		"msg": "조작반 기동 입력 불일치(안전체인1)",
+		"cause": "조작반(OP) 기동 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인1)",
+		"remedy": "1)조작반(OP) 기동 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 기동 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64013": {
+		"msg": "조작반 기동 입력 불일치(안전체인2)",
+		"cause": "조작반(OP) 기동 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인2)",
+		"remedy": "1)조작반(OP) 기동 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 조작반(OP) 기동 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64014": {
+		"msg": "외부 모터온(EXMON) 입력 불일치(안전체인1)",
+		"cause": "외부 모터온(EXMON) 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인1)",
+		"remedy": "1)외부 모터온(EXMON) 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 외부 모터온(EXMON) 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오."
+	},
+	"E64015": {
+		"msg": "외부 모터온(EXMON) 입력 불일치(안전체인2)",
+		"cause": "외부 모터온(EXMON) 스위치의 배선경로에서 단선이 발생했거나 커넥터 등이 접속되지 않았습니다. (안전체인2)",
+		"remedy": "1)외부 모터온(EXMON) 스위치의 배선경로에서 단선이나 커넥터 접속을 점검 및 수리하십시오.\n2) 외부 모터온(EXMON) 스위치가 고장일 수 있으니 점검하십시오.\n3) 안전보드를 교체하십시오." 
 	}
 }
