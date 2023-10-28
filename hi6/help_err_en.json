@@ -1,4 +1,4 @@
-﻿{ 
+﻿{
 	"E1": {
 		"msg": "Power failure detected",
 		"cause": "Power failure or CB (circuit brake) off while in the Motor On state",
@@ -1264,11 +1264,11 @@
 		"cause": "Case of executing the relevant command while not in the servo tool change environment.",
 		"remedy": "Reset the controller into the servo tool change environment."
 	},
-    "E1057": {
-        "msg": "Same additional axis designated in duplication",
-        "cause": "Additional axis which the parameters, recorded in the relevant command, will refer to is designated in duplication.",
-        "remedy": "Check the relevant command statement."
-    },
+	"E1057": {
+		"msg": "Same additional axis designated in duplication",
+		"cause": "Additional axis which the parameters, recorded in the relevant command, will refer to is designated in duplication.",
+		"remedy": "Check the relevant command statement."
+	},
 	"E1060": {
 		"msg": "Ladder instruction in an unsupported format",
 		"cause": "This is the case when there is a format that is not supported by the instructions recorded in the ladder file.",
@@ -3354,6 +3354,31 @@
 		"cause": "Motor on tried during power failure input",
 		"remedy": "Check the power failure wiring and electromic module"
 	},
+	"E2003": {
+		"msg": "Power failure handling did not start. Restart from Step 0.",
+		"cause": "When powered off, the power failure handling to back up data to the SSD did not start.",
+		"remedy": "1) Move to the home position and restart from step 0 of the MAIN JOB.\r\n2) If the problem repeats, check the buffer module and the connection."
+	},
+	"E2004": {
+		"msg": "Power failure handling unfinished. Restart from Step 0.",
+		"cause": "When powered off, a power outage was performed to back up the data to the SSD and was aborted incompletely.",
+		"remedy": "1) Move to the home position and restart from step 0 of the MAIN JOB.\r\n2) If the robot language variables set is very large, a power failure handling timeout may occurs.\r\n3) If the problem repeats, check the buffer module and the connection."
+	},
+	"E2005": {
+		"msg": "Power failure handling log is abnormal. Restart from Step 0.",
+		"cause": "When powered off, the log at the beginning and end of the power failure handling to back up the data to the SSD remains abnormal.",
+		"remedy": "1) Move to the home position and restart from step 0 of the MAIN JOB.\r\n2) If the problem repeats, check the buffer module and the connection."
+	},
+	"E2006": {
+		"msg": "Power failure handling .bin file format is abnormal. Restart from Step 0.",
+		"cause": "Power failure backup binary file is cleared because of abnormal format. Some power failure backup didn't work.\r\nThis may be a temporary problem due to version up.",
+		"remedy": "1) Move to the home position and restart from step 0 of the MAIN JOB.\r\n2) If the problem repeats, check the buffer module and the connection."
+	},
+	"E2009": {
+		"msg": "Start is attempted while power failure backup missed.",
+		"cause": "Internal or external start is attempted while power failure backup missed. Start is prohibited because of a possibility of a robot collision.",
+		"remedy": "Move to home position, and restart from step 0 of the MAIN JOB with R code 0(program counter reset) or external reset input signal."
+	},
 	"E2010": {
 		"msg": "Control AC power abnormal (fuse disconnected)",
 		"cause": "Overcurrent generated in the AC power line for the control power, disconnecting the fuse.",
@@ -5178,12 +5203,12 @@
 		"cause": "DSP 2 of the servo board 2 detected abnormality with the watchdog of the main.",
 		"remedy": "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
 	},
-	"E2764" : {
-		"msg" : "H6SIO SAFETY FAULT Error is detected by H6SSM",
-		"cause" : "H6SIO Module State enter to 'Fault State'",
-		"remedy" : "SAFETY FAULT State. Please reboot the controller.",
-		"help_idx" : "E02764",
-		"help_title" : "[TroubleShoot] SFST Error is detected. Reboot the controller"
+	"E2764": {
+		"msg": "H6SIO SAFETY FAULT Error is detected by H6SSM",
+		"cause": "H6SIO Module State enter to 'Fault State'",
+		"remedy": "SAFETY FAULT State. Please reboot the controller.",
+		"help_idx": "E02764",
+		"help_title": "[TroubleShoot] SFST Error is detected. Reboot the controller"
 	},
 	"E2770": {
 		"msg": "(%s axis) undefined servo error generated in initialization",
@@ -5275,12 +5300,17 @@
 		"help_idx": "E02830",
 		"help_title": "[TroubleShoot]Communication off with the system board"
 	},
-	"E2832": {
-		"msg": "System board communication not opened",
-		"cause": "After booting, the communication is not opened with the system board.",
-		"remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether the power is supplied to the system board.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main board.6) If the same phenomenon persists even after replacing the main board, replace the cable.",
-		"help_idx": "E02832",
-		"help_title": "[TroubleShoot]System board communication not opened"
+    "E2832": {
+        "msg": "System board communication not opened",
+        "cause": "After booting, the communication is not opened with the system board.",
+        "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether the power is supplied to the system board.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main board.6) If the same phenomenon persists even after replacing the main board, replace the cable.",
+        "help_idx": "E02832",
+        "help_title": "[TroubleShoot]System board communication not opened"
+    },
+	"E2833": {
+		"msg": "Undefined system board error occurred",
+		"cause": "Unknown error code received from the system board during operation.",
+        "remedy": "1) Open the history window and check unknown error number. 2) Update system board firmware. 3) Replace the system board."
 	},
 	"E2840": {
 		"msg": "Communication off with the user digital IO board(No.1)",
@@ -5733,11 +5763,26 @@
 		"cause": "Integrated driving module alarm",
 		"remedy": "1) Reboot the controller. 2) If the error persists, replace the servo drive."
 	},
-	"E3060": {
-		"msg": "Cannot make servo off for stud-welding function",
-		"cause": "When executing Servo Off or releasing stud welding mode, Servo Off was not executed within the set time.",
-		"remedy": "1) Replace the servo board.2) If the same error occurs, contact with our service department. TEL   : 052-202-7927,7949 052-202-7956,7957 FAX   : 052-202-7960 E-Mail: robotas@hhi.co.kr"
-	},
+    "E3060": {
+        "msg": "Cannot make servo off for stud-welding function",
+        "cause": "When executing Servo Off or releasing stud welding mode, Servo Off was not executed within the set time.",
+        "remedy": "1) Replace the servo board.2) If the same error occurs, contact with our service department. TEL   : 052-202-7927,7949 052-202-7956,7957 FAX   : 052-202-7960 E-Mail: robotas@hhi.co.kr"
+    },
+    "E3070": {
+		"msg": "Main board CPU overheating detected",
+		"cause": "Main board CPU temperature exceeded permitted range.",
+		"remedy": "Check the controller according to the fault repair methods."
+    },
+    "E3071": {
+		"msg": "Main board overheating detected",
+		"cause": "Main board temperature exceeded permitted range.",
+		"remedy": "Check the controller according to the fault repair methods."
+    },
+    "E3072": {
+		"msg": "System board overheating detected",
+		"cause": "System board temperature exceeded permitted range.",
+		"remedy": "Check the controller according to the fault repair methods."
+    },
 	"E4001": {
 		"msg": "FAULT_SafeSpace:CH_TYPE_DUPLICATED",
 		"cause": "SafeSpace error",
@@ -10198,10 +10243,10 @@
 		"cause": "Exponent notataion of a constant number is not in accordance with the syntex.",
 		"remedy": "After 'E' or 'e', there should be an integer number without whitespace."
 	},
-	"E14027" : {
-		"msg" : "Parameter value exceeded the range.",
-		"cause" : "Parameter value exceeded the valid range.",
-		"remedy" : "Set the parameter value within the valid range."
+	"E14027": {
+		"msg": "Parameter value exceeded the range.",
+		"cause": "Parameter value exceeded the valid range.",
+		"remedy": "Set the parameter value within the valid range."
 	},
 	"E14028": {
 		"msg": "Statement parameter with no unit permitted.",
@@ -11043,6 +11088,11 @@
 		"cause": "Index of the variable exceeded the enabled range.",
 		"remedy": "Designate the variable index according to the enabled range."
 	},
+	"E14525": {
+		"msg": "Invalid fn object index.",
+		"cause": "Index of fn object not set is used.",
+		"remedy": "Check the input/output signal setting - fn block allocation."
+	},
 	"E14526": {
 		"msg": "DO variable's index exceeded valid range.",
 		"cause": "Index of the DO variable exceeded the enabled range (1~4100).",
@@ -11618,6 +11668,11 @@
 		"msg": "Failed in opening file.",
 		"cause": "Failed in opening file.",
 		"remedy": "Make sure the file exists with the specified pathname."
+	},
+	"E16051": {
+		"msg": "Failed in saving file.",
+		"cause": "Failed in saving file.",
+		"remedy": "1) On the HISTORY screen, check the pathname that failed to save.\r\n2) Check if it is running out of free storage."
 	},
 	"E16052": {
 		"msg": "Failed in creating path.",
@@ -13009,11 +13064,36 @@
 		"cause": "Project file type is invailid",
 		"remedy": "Check the project file is not damaged. If it damaged, using backup file or system initialization again"
 	},
-	"E18205": {
-		"msg": "Project file version not matched",
-		"cause": "Version not matching between the project file and the sofrware",
-		"remedy": "System initialization again or use software version that matched project file."
-	},
+    "E18205": {
+        "msg": "Project file version not matched",
+        "cause": "Version not matching between the project file and the sofrware",
+        "remedy": "System initialization again or use software version that matched project file."
+    },
+        "E18206": {
+        "msg": "Failed to read motor information file.",
+        "cause": "Failed to read motor info. file during initialization.",
+        "remedy": "Check if the motor information file(Motor_info.fbr) is in the proper path."
+    },
+    "E18207": {
+        "msg": "Failed to read AMP information file.",
+        "cause": "Failed to read AMP info. file during initialization.",
+        "remedy": "Check if the AMP information file(Amp_info.fbr) is in the proper path."
+    },
+    "E18208": {
+        "msg": "Failed to read reducer information file.",
+        "cause": "Failed to read reducer info. file during initialization.",
+        "remedy": "Check if the reducer information file(Reducer_info.fbr) is in the proper path."
+    },
+    "E18209": {
+        "msg": "Failed to read standard accessory information file.",
+        "cause": "Failed to read standard accessory info. file during initialization.",
+        "remedy": "Check if the standard accessory information file(Positioner_info.fbr) is in the proper path."
+    },
+     "E18210": {
+        "msg": "Failed to read robot information file.(%s)",
+        "cause": "Failed to read robot info. file during initialization.",
+        "remedy": "Check if the robot information file(robot model_num.fbr) is in the proper path."
+    },
 	"E21001": {
 		"msg": "The axis for brake test was not selected.",
 		"cause": "The axis for brake test was not selected in the brake test function.",
@@ -13144,9 +13224,9 @@
 		"cause": "CAN port is already being used in the embedded DeviceNet slave.",
 		"remedy": "1) If not using the embedded DeviceNet slave, turn it off.2) Use a CAN port that is not used in the embedded DeviceNet slave."
 	},
-	"E23020" : {
-		"msg" : "CIFX PCI Firmware files are not exist",
-		"cause" : "Communication setting error",
+	"E23020": {
+		"msg": "CIFX PCI Firmware files are not exist",
+		"cause": "Communication setting error",
 		"remedy": "1) Check the files in 'ata0:2/cifX/ref_cifx'"
 	},
 	"E23027": {
@@ -14674,65 +14754,65 @@
 		"cause": "unable to communication between master and slave devices",
 		"remedy": "1)check connection of ethernet cables in the controller.2)If the problem persists, please contact us."
 	},
-	"E29004" : {
-		"msg" : "Motion task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in Motion task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29004": {
+		"msg": "Motion task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in Motion task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29005" : {
-		"msg" : "Playback task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in Playback task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29005": {
+		"msg": "Playback task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in Playback task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29006" : {
-		"msg" : "servo task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in servo task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29006": {
+		"msg": "servo task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in servo task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29007" : {
-		"msg" : "I/O main task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in I/O main task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29007": {
+		"msg": "I/O main task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in I/O main task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29008" : {
-		"msg" : "SDO Agent task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in SDO Agent task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29008": {
+		"msg": "SDO Agent task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in SDO Agent task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29009" : {
-		"msg" : "MotCmdMgr task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in MotCmdMgr task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29009": {
+		"msg": "MotCmdMgr task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in MotCmdMgr task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29010" : {
-		"msg" : "RobAppl task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in RobAppl task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29010": {
+		"msg": "RobAppl task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in RobAppl task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29011" : {
-		"msg" : "MotPlan task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in MotPlan task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29011": {
+		"msg": "MotPlan task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in MotPlan task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29012" : {
-		"msg" : "MainSvc task exceeded the valid range of time(timeout)",
-		"cause" : "S/W Exception occured in MainSvc task",
-		"remedy" : "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	"E29012": {
+		"msg": "MainSvc task exceeded the valid range of time(timeout)",
+		"cause": "S/W Exception occured in MainSvc task",
+		"remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
-	"E29014" : {
-		"msg" : "can't find the ENI file.",
-		"cause" : "unable to load the ENI file",
-		"remedy" : "upload the valid ENI file to the designated path(/ata0:2/lib)"
+	"E29014": {
+		"msg": "can't find the ENI file.",
+		"cause": "unable to load the ENI file",
+		"remedy": "upload the valid ENI file to the designated path(/ata0:2/lib)"
 	},
-	"E29015" : {
-		"msg" : "ENI configuration doesn't match to the actual settings of network",
-		"cause" : "unable to make an connection to a certain slave or apply an invalid ENI file",
-		"remedy" : "1) Check whether slave devices works well.2) request a valid ENI file(to the customer service deparment of this company)"
+	"E29015": {
+		"msg": "ENI configuration doesn't match to the actual settings of network",
+		"cause": "unable to make an connection to a certain slave or apply an invalid ENI file",
+		"remedy": "1) Check whether slave devices works well.2) request a valid ENI file(to the customer service deparment of this company)"
 	},
-	"E29016" : {
-		"msg" : "Disconnection occured between EC master and the first slave device",
-		"cause" : "unable to make an connection to the first slave device",
-		"remedy" : "Check whether slave devices works well"
+	"E29016": {
+		"msg": "Disconnection occured between EC master and the first slave device",
+		"cause": "unable to make an connection to the first slave device",
+		"remedy": "Check whether slave devices works well"
 	},
 	"E30000": {
 		"msg": "Pressure is not matched in time.",
@@ -16209,6 +16289,51 @@
 		"cause": "Abnormal sampling time value was inputted for filtering.",
 		"remedy": "Execute the backup of all files of the controller, and send them to our company."
 	},
+	"E32770": {
+		"msg": "Tracking distance by multipass function exceeds limit distance.",
+		"cause": "Tracking dist+shift distance by arcsensing exceeds limit distance. ",
+		"remedy": "Before sensing, modify the teaching position to match the saved program with the actual workpiece."
+	},
+	"E32771": {
+		"msg": "A multipass command was executed twice.",
+		"cause": "Multipath commands cannot be executed repeatedly before ending execution.",
+		"remedy": "Modify the work program so that multi-pass save and end commands are performed only once."
+	},
+	"E32772": {
+		"msg": "Arcsensing was executed in multipass load mode.",
+		"cause": "Arcsensing cannot be run in multipass load mode.",
+		"remedy": "For weaving conditions executed during multipass loading, set arc sensing to invalid."
+	},
+	"E32773": {
+		"msg": "Loading multipass data is invalid.",
+		"cause": "Saved multipath data does not exist.",
+		"remedy": "Run a multipass save command first, then execute multipass load command."
+	},
+	"E32775": {
+		"msg": "The address of the continuous section start step could not be found.",
+		"cause": "There is an error in the robot language after the ARC_COND command.",
+		"remedy": "Check ARC_COND section of the job program."
+	},
+	"E32776": {
+		"msg": "The address of the next step in the continuous section could not be found.",
+		"cause": "There is an error in the robot language after the ARC_COND command.",
+		"remedy": "Check ARC_COND section of the job program."
+	},
+	"E32777": {
+		"msg": "The limit on the number of steps in the continuous change section has been exceeded.",
+		"cause": "There are too many steps in the welding condition continuous change section.",
+		"remedy": "Reduce the number of steps in the welding condition continuous change section and execute again."
+	},
+	"E32778": {
+		"msg": "There is no ARCOF command after the ARC_COND command.",
+		"cause": "There is no arc off command after the ARC_COND command.",
+		"remedy": "Insert the ARCOF command after the ARC_COND command."
+	},
+	"E32780": {
+		"msg": "The height sensing function has been executed in the subtask.",
+		"cause": "The height sensing function can only be executed in the main task. ",
+		"remedy": "Back up all files on the controller and send them to us."
+	},
 	"E34000": {
 		"msg": "System(Software) error: STEP3 of UnloadWithAlignment Function.",
 		"cause": "System (the main software) error.",
@@ -16390,359 +16515,898 @@
 		"remedy": "Change the brush number in System / Application Parameter / Painting / Output Signal Assignment."
 	},
 	"E62000": {
-		"msg": "Teaching pendant automatic mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The automatic mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Teaching pendant connection error (safety chain 1)",
+		"cause": "Enabling input of the teaching pendant. Noise has flowed from the outside into the wiring route of safety chain 1, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62001": {
-		"msg": "Teaching pendant automatic mode input inconsistancy(safety chain 2 OFF)",
-		"cause": "The automatic mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Teaching pendant connection error (safety chain 2)",
+		"cause": "Enabling input of the teaching pendant Noise from the outside entered the wiring route of safety chain 2 or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62002": {
-		"msg": "Teaching pendant manual mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The manual mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Operation Panel (OP) connection error (safety chain 1)",
+		"cause": "Enabling input of teaching pendant is not redundant. Input status of safety chain 1 and 2 of safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62003": {
-		"msg": "Teaching pendant manual mode input inconsistancy(safety chain 2 OFF)",
-		"cause": "The manual mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Operation Panel (OP) connection error (safety chain 2)",
+		"cause": "Enabling input of teaching pendant is not redundant. Input status of safety chain 1 and 2 of safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62004": {
-		"msg": "Teaching pendant remote mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The remote mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in teaching pendant emergency stop switch input wiring path (safety chain 1)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62005": {
-		"msg": "Teaching pendant remote mode input inconsistancy(safety chain 2 OFF)",
-		"cause": "The remote mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in teaching pendant emergency stop switch input wiring path (safety chain 2)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62006": {
-		"msg": "Operation panel automatic mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The automatic mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Teaching pendant emergency stop switch input mismatch (safety chain 1 OFF)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62007": {
-		"msg": "Operation panel automatic mode input inconsistancy(safety chain 2 OFF)",
-		"cause": "The automatic mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Teaching pendant emergency stop switch input mismatch (safety chain 2 OFF)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62008": {
-		"msg": "Operation panel manual mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The manual mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Operation Panel (OP) emergency stop switch input wiring path noise / contact failure (safety chain 1)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
-	"E62009": { "msg": "Operation panel manual mode input inconsistancy(safety chain 2 OFF)", "cause": "The manual mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.", "remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board." },
+	"E62009": {
+		"msg": "Operation Panel (OP) emergency stop switch input wiring path noise / contact failure (safety chain 2)",
+		"cause": "Noise from outside entered the wiring route of the auto mode input safety chain 1 of the teaching pendant, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
 	"E62010": {
-		"msg": "Operation panel remote mode input inconsistancy(safety chain 1 OFF)",
-		"cause": "The remote mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Operation Panel (OP) emergency stop switch input mismatch (safety chain 1 OFF)",
+		"cause": "The automatic mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62011": {
-		"msg": "Operation panel remote mode input inconsistancy(safety chain 2 OFF)",
-		"cause": "The remote mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Operation Panel (OP) emergency stop switch input mismatch (safety chain 2 OFF)",
+		"cause": "The automatic mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62012": {
-		"msg": "Teaching pendant connection error (safety chain 1)",
-		"cause": "The connection of the teaching pendant is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in the external emergency stop (contact point) switch input wiring path (safety chain 1)",
+		"cause": "The manual mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62013": {
-		"msg": "Teaching pendant connection error (safety chain 2)",
-		"cause": "The connection of the teaching pendant is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the teaching pendant and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in the external emergency stop (contact point) switch input wiring path (safety chain 2)",
+		"cause": "The manual mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62014": {
-		"msg": "Operation panel connection error (safety chain 1)",
-		"cause": "The connection of the Operation panel is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in the external emergency stop (NPN) switch input wiring path (safety chain 1)",
+		"cause": "The remote mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62015": {
-		"msg": "Operation panel connection error (safety chain 2)",
-		"cause": "The connection of the Operation panel is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
-		"remedy": "1) Check or replace the operation panel and cable.\n2) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in the external emergency stop (NPN) switch input wiring path (safety chain 2)",
+		"cause": "The remote mode input of the teaching pendant is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
-	"E62200": {
-		"msg": "Teaching pendant emergency stop output circuit failure (safety chain 1)",
-		"cause": "The teaching pendant emergency stop output circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+	"E62016": {
+		"msg": "External emergency stop (contact point) switch input mismatch (safety chain 1 OFF)",
+		"cause": "Noise has flowed from the outside into the wiring route of the SW1 input safety chain 1 of the control panel (OP), or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
-	"E62201": {
-		"msg": "Teaching pendant emergency stop output circuit failure (safety chain 2)",
-		"cause": "The teaching pendant emergency stop output circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+	"E62017": {
+		"msg": "External emergency stop (NPN) switch input mismatch (safety chain 1 OFF)",
+		"cause": "Noise has flowed from the outside into the wiring route of the SW1 input safety chain 2 of the control panel (OP), or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
-	"E62202": {
-		"msg": "Teaching pendant emergency stop input circuit failure (safety chain 1)",
-		"cause": "The teaching pendant emergency stop input circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+	"E62018": {
+		"msg": "External emergency stop (contact point) switch input mismatch (safety chain 2 OFF)",
+		"cause": "Noise has flowed from the outside into the wiring route of the SW2 input safety chain 1 of the control panel (OP), or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62019": {
+		"msg": "External emergency stop (NPN) switch input mismatch (safety chain 2 OFF)",
+		"cause": "Noise has flowed from the outside into the wiring route of the SW2 input safety chain 2 of the control panel (OP), or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62020": {
+		"msg": "Teaching pendant emergency stop output circuit failure (chain 1)",
+		"cause": "The automatic mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62021": {
+		"msg": "Teaching pendant emergency stop output circuit failure (chain 2)",
+		"cause": "The automatic mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62022": {
+		"msg": "Teaching pendant emergency stop input circuit failure (Chain 1)",
+		"cause": "The manual mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62023": {
+		"msg": "Teaching pendant emergency stop input circuit failure (chain 2)",
+		"cause": "The manual mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62024": {
+		"msg": "Teaching pendant emergency stop driving circuit failure (safety chain 1)",
+		"cause": "The remote mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62025": {
+		"msg": "Teaching pendant emergency stop driving circuit failure (safety chain 2)",
+		"cause": "The remote mode input of the Operation panel is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62026": {
+		"msg": "Operation Panel (OP) emergency stop output circuit failure (safety chain 1)",
+		"cause": "The connection of the teaching pendant is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62027": {
+		"msg": "Operation Panel (OP) emergency stop output circuit failure (safety chain 2)",
+		"cause": "The connection of the teaching pendant is not redundant. The input state of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62028": {
+		"msg": "Operation Panel (OP) emergency stop input circuit failure (safety chain 1)",
+		"cause": "The Operation panel (OP) connection is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E62029": {
+		"msg": "Operation Panel (OP) emergency stop input circuit failure (safety chain 2)",
+		"cause": "The Operation panel (OP) connection is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E62203": {
-		"msg": "Teaching pendant emergency stop input circuit failure (safety chain 2)",
-		"cause": "The teaching pendant emergency stop input circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "External emergency stop (contact) output circuit failure (chain 2)",
+		"cause": "Emergency stop input of the teaching pendant Noise from the outside entered the wiring route of the safety chain 1, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62204": {
-		"msg": "Operation panel emergency stop output circuit failure (safety chain 1)",
-		"cause": "The Operation panel emergency stop output circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "External emergency stop (contact point) input circuit failure (chain 1)",
+		"cause": "Emergency stop input of the teaching pendant Noise from the outside entered the wiring route of the safety chain 2, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62205": {
-		"msg": "Operation panel emergency stop output circuit failure (safety chain 2)",
-		"cause": "The Operation panel emergency stop output circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "External emergency stop (contact point) input circuit failure (chain 2)",
+		"cause": "Emergency stop switch input of teaching pendant is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
 	"E62206": {
-		"msg": "Operation panel emergency stop input circuit failure (safety chain 1)",
-		"cause": "The Operation panel emergency stop input circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "External emergency stop (contact) drive circuit failure (chain 1)",
+		"cause": "Emergency stop switch input of teaching pendant is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
 	},
-	"E62207": {
-		"msg": "Operation panel emergency stop input circuit failure (safety chain 2)",
-		"cause": "The Operation panel emergency stop input circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+	"E62216": {
+		"msg": "Over-Travel (OVT8) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "External noise has flowed into the wiring path of emergency stop input safety chain 1 of the control panel (OP) or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
 	},
-	"E62208": {
-		"msg": "External emergency stop output circuit failure (safety chain 1)",
-		"cause": "The External emergency stop output circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+	"E62217": {
+		"msg": "Over-Travel (OVT8) noise inflow/faulty contact in the input wiring path (safety chain 2)",
+		"cause": "External noise has flowed into the wiring path of emergency stop input safety chain 2 of the control panel (OP), or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
 	},
-	"E62209": {
-		"msg": "External emergency stop output circuit failure (safety chain 2)",
-		"cause": "The External emergency stop output circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+	"E62218": {
+		"msg": "Over-Travel (OVT8) input mismatch (safety chain 1 OFF)",
+		"cause": "The emergency stop switch input of the Operation panel (OP) is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
 	},
-	"E62210": {
-		"msg": "External emergency stop input circuit failure (safety chain 1)",
-		"cause": "The External emergency stop input circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+	"E62219": {
+		"msg": "Over-Travel (OVT8) input mismatch (safety chain 2 OFF)",
+		"cause": "The emergency stop switch input of the Operation panel (OP) is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
 	},
-	"E62211": {
-		"msg": "External emergency stop input circuit failure (safety chain 2)",
-		"cause": "The External emergency stop input circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+	"E62232": {
+		"msg": "Magnetic contactor (MC1) failure/detection error in servo ON state",
+		"cause": "External emergency stop (contact point) input Safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
 	},
-	"E62400": {
-		"msg": "Extended axis (OVT8) limit SW redundant input failure (safety chain 1-OFF, safety chain 2-ON)",
-		"cause": "A disconnection occurred in the wiring path of the extended axis(OVT8) safety chain 1 or the connector is not connected.",
-		"remedy": "1) Check and repair the disconnection or connector connection in the extension axis (OVT8) wiring path.\n2) Check if the switch attached to the mechanism may be defective.\n3) Replace the safety board."
+	"E62233": {
+		"msg": "Noise inflow/faulty contact in the external emergency stop (contact point) switch input wiring path (safety chain 2)",
+		"cause": "External emergency stop (contact point) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
 	},
-	"E62401": {
-		"msg": "Extended axis (OVT8) limit SW redundant input failure (safety chain 1-ON, safety chain 2-OFF)",
-		"cause": "A disconnection occurred in the wiring path of the extended axis(OVT8) safety chain 2 or the connector is not connected.",
-		"remedy": "1) Check and repair the disconnection or connector connection in the extension axis (OVT8) wiring path.\n2) Check if the switch attached to the mechanism may be defective.3) Replace the safety board."
+	"E62234": {
+		"msg": "Noise inflow/faulty contact in the external emergency stop (NPN) switch input wiring path (safety chain 1)",
+		"cause": "External emergency stop (NPN) input Safety chain 1 wiring path has noise from the outside, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62235": {
+		"msg": "Noise inflow/faulty contact in the external emergency stop (NPN) switch input wiring path (safety chain 2)",
+		"cause": "External emergency stop (NPN) input safety chain 2 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62236": {
+		"msg": "External emergency stop (contact point) switch input mismatch (safety chain 1 OFF)",
+		"cause": "External emergency stop (contact) switch input is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62237": {
+		"msg": "External emergency stop (NPN) switch input mismatch (safety chain 1 OFF)",
+		"cause": "External emergency stop (NPN) switch input is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62238": {
+		"msg": "External emergency stop (contact point) switch input mismatch (safety chain 2 OFF)",
+		"cause": "External emergency stop (contact) switch input is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62239": {
+		"msg": "Magnetic contactor (MC1) failure/detection error at servo OFF",
+		"cause": "External emergency stop (NPN) switch input is not redundant. The input status of safety chain 1 and 2 is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62252": {
+		"msg": "Automatic mode safety guard (SGA1) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "A diagnosis error occurred in the output circuit of the teaching pendant emergency stop safety chain 1 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62253": {
+		"msg": "Automatic mode safety guard (SGA1) noise inflow/faulty contact in the input wiring path (safety chain 2)",
+		"cause": "A diagnosis error occurred in the output circuit of the teaching pendant emergency stop safety chain 2 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62254": {
+		"msg": "Automatic mode safety guard (SGA1) input mismatch (safety chain 1 OFF)",
+		"cause": "A diagnosis error occurred in the input circuit of the teaching pendant emergency stop safety chain 1 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62255": {
+		"msg": "Automatic mode safety guard (SGA1) input mismatch (safety chain 2 OFF)",
+		"cause": "A diagnosis error occurred in the input circuit of the teaching pendant emergency stop safety chain 2 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62256": {
+		"msg": "Noise inflow/faulty contact in the general safety guard (SGG) input wiring path (safety chain 1)",
+		"cause": "A failure occurred in the teaching pendant emergency stop drive circuit of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62257": {
+		"msg": "Inflow of noise/faulty contact in the general safety guard (SGG) input wiring path (safety chain 2)",
+		"cause": "A failure occurred in the teaching pendant emergency stop drive circuit of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the teaching pendant. 5) Replace the safety board."
+	},
+	"E62258": {
+		"msg": "General safety guard (SGG) input mismatch (safety chain 1 OFF)",
+		"cause": "A diagnosis error occurred in the output circuit of the Operaion panel (OP) emergency stop safety chain 1 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62259": {
+		"msg": "General safety guard (SGG) input mismatch (safety chain 2 OFF)",
+		"cause": "A diagnosis error occurred in the output circuit of the Operaion panel (OP) emergency stop safety chain 2 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62260": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SGA2) input wiring path (safety chain 1)",
+		"cause": "A diagnosis error occurred in the input circuit of the Operation panel (OP) emergency stop safety chain 1 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62261": {
+		"msg": "Noise inflow/faulty contact in the automatic mode safety guard (SGA2) input wiring path (safety chain 2)",
+		"cause": "A diagnosis error occurred in the input circuit of the Operation panel (OP) emergency stop safety chain 2 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62262": {
+		"msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 1 OFF)",
+		"cause": "A failure occurred in the emergency stop driving circuit of the operation panel (OP) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62263": {
+		"msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 2 OFF)",
+		"cause": "A failure occurred in the emergency stop driving circuit of the operation panel (OP) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP) emergency stop switch. 5) Replace the safety board."
+	},
+	"E62264": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SG) input wiring path (safety chain 1)",
+		"cause": "A diagnosis error occurred in the output circuit of the external emergency stop (contact) safety chain 1 of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62265": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SG) input wiring path (safety chain 2)",
+		"cause": "External emergency stop (contact point) of safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 2.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62266": {
+		"msg": "Automatic mode safety guard (SG) input mismatch (safety chain 1 OFF)",
+		"cause": "A diagnosis error occurred in the input circuit of the safety chain 1 of the external emergency stop (contact point) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62267": {
+		"msg": "Automatic mode safety guard (SG) input mismatch (safety chain 2 OFF)",
+		"cause": "External emergency stop (contact point) of the safety board (BD632) A diagnosis error occurred in the input circuit of the safety chain 2.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62268": {
+		"msg": "Safety board (BD632) MCU failure (safety chain 1)",
+		"cause": "An external emergency stop (contact point) drive circuit of the safety board (BD632) has a failure.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62269": {
+		"msg": "External emergency stop (contact point) drive circuit failure (chain 2)",
+		"cause": "An external emergency stop (contact point) drive circuit of the safety board (BD632) has a failure",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external emergency stop switch. 5) Replace the safety board."
+	},
+	"E62407": {
+		"msg": "Over-Travel (OVT6) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "Over-Travel (OVT6) input Safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62408": {
+		"msg": "Over-Travel (OVT6) input wiring path noise/contact failure (safety chain 2)",
+		"cause": "Over-Travel (OVT6) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62409": {
+		"msg": "Over-Travel (OVT6) input mismatch (safety chain 1 OFF)",
+		"cause": "Over-Travel (OVT6) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62410": {
+		"msg": "Over-Travel (OVT6) input mismatch (safety chain 2 OFF)",
+		"cause": "Over-Travel (OVT6) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62421": {
+		"msg": "Over-Travel (OVT7) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "Over-Travel (OVT7) input Safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62422": {
+		"msg": "Over-Travel (OVT7) noise inflow/faulty contact in the input wiring path (safety chain 2)",
+		"cause": "Over-Travel (OVT7) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62423": {
+		"msg": "Over-Travel (OVT7) input mismatch (safety chain 1 OFF)",
+		"cause": "Over-Travel (OVT7) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62424": {
+		"msg": "Over-Travel (OVT7) input mismatch (safety chain 2 OFF)",
+		"cause": "Over-Travel (OVT7) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62428": {
+		"msg": "Over-Travel (OVT8) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "Over-Travel (OVT8) input Safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62429": {
+		"msg": "Over-Travel (OVT8) noise inflow/faulty contact in the input wiring path (safety chain 2)",
+		"cause": "Over-Travel (OVT8) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62430": {
+		"msg": "Over-Travel (OVT8) input mismatch (safety chain 1 OFF)",
+		"cause": "Over-Travel (OVT8) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62431": {
+		"msg": "Over-Travel (OVT8) input mismatch (safety chain 2 OFF)",
+		"cause": "Over-Travel (OVT8) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Over-Travel switch. 5) Replace the safety board."
+	},
+	"E62604": {
+		"msg": "Inflow of noise/faulty contact in the limit switch (LS) input wiring path (safety chain 1)",
+		"cause": "Limit switch (LS) input Safety chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the limit switch. 5) Replace the safety board."
+	},
+	"E62605": {
+		"msg": "Inflow of noise/faulty contact in the limit switch (LS) input wiring path (safety chain 2)",
+		"cause": "Limit switch (LS) input Safety chain 2's wiring route has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the limit switch. 5) Replace the safety board."
+	},
+	"E62606": {
+		"msg": "Limit switch (LS) input mismatch (safety chain 1 OFF)",
+		"cause": "Limit switch (LS) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the limit switch. 5) Replace the safety board."
+	},
+	"E62607": {
+		"msg": "Limit switch (LS) input mismatch (safety chain 2 OFF)",
+		"cause": "Limit switch (LS) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the limit switch. 5) Replace the safety board."
 	},
 	"E62800": {
-		"msg": "MC status check (FDBK) output circuit failure (chain 1)",
-		"cause": "The MC status check (FDBK) output circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Magnetic contactor (MC2) failure/detection error during servo ON attempt",
+		"cause": "",
+		"remedy": ""
 	},
 	"E62801": {
+		"msg": "Magnetic contactor (MC2) failure/detection error in servo ON state",
+		"cause": "A magnet Contact(MC2) detection error occurred while the servo was on.",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
+	},
+	"E62810": {
+		"msg": "MC2 not operating during servo ON attempt (safety chain 1 or higher)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62813": {
+		"msg": "MC2 OFF in Servo ON state (safety chain 2 or more)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62814": {
+		"msg": "Magnetic contactor (MC2) driving circuit error while trying to turn on the servo",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62815": {
+		"msg": "Electromagnetic contactor (MC2) driving circuit error in servo ON state",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62818": {
+		"msg": "Magnetic contactor (MC2) failure/detection error at servo OFF",
+		"cause": "A magnet contact (MC2) detection error occurred in the servo OFF state.",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
+	},
+	"E62819": {
+		"msg": "Magnetic contactor (MC1) failure/detection error during servo ON attempt",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62820": {
+		"msg": "Magnetic contactor (MC1) failure/detection error in servo ON state",
+		"cause": "A detection error of the magnet contact (MC1) occurred while the servo was on.",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
+	},
+	"E62829": {
+		"msg": "MC1 does not operate while servo ON is attempted (safety chain 1)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62830": {
+		"msg": "MC1 OFF in Servo ON state (safety chain 1)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62831": {
+		"msg": "MC1 not operating during servo ON attempt (safety chain 2)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62832": {
+		"msg": "MC2 OFF in Servo ON state (safety chain 2)",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62833": {
+		"msg": "Magnetic contactor (MC1) driving circuit error while trying to turn on the servo",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62834": {
+		"msg": "Magnetic contactor (MC1) drive circuit error in servo ON state",
+		"cause": "",
+		"remedy": ""
+	},
+	"E62837": {
+		"msg": "Magnetic contactor (MC1) failure/detection error at servo OFF",
+		"cause": "A magnet contact (MC1) detection error occurred in the servo OFF state.",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
+	},
+	"E62842": {
+		"msg": "MC status check (FDBK) output circuit failure (Chain 1)",
+		"cause": "A diagnosis error occurred in the output circuit of safety chain 1 of the MC status check (FDBK) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E62843": {
 		"msg": "MC status check (FDBK) output circuit failure (chain 2)",
-		"cause": "The MC status check (FDBK) output circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+		"cause": "A diagnosis error occurred in the output circuit of safety chain 2 of the MC status check (FDBK) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
 	},
-	"E62802": {
-		"msg": "MC status check (FDBK) input circuit failure (chain 1)",
-		"cause": "The MC status check (FDBK) output circuit of the safety board is broken. (Safety chain 1)",
-		"remedy": "Replace the safety board."
+	"E62844": {
+		"msg": "MC status check (FDBK) input circuit failure (Chain 1)",
+		"cause": "A diagnosis error occurred in the input circuit of safety chain 1 of the MC status check (FDBK) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
 	},
-	"E62803": {
+	"E62845": {
 		"msg": "MC status check (FDBK) input circuit failure (chain 2)",
-		"cause": "The MC status check (FDBK) output circuit of the safety board is broken. (Safety chain 2)",
-		"remedy": "Replace the safety board."
+		"cause": "A diagnosis error occurred in the input circuit of safety chain 2 of the MC status check (FDBK) of the safety board (BD632).",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E62846": {
+		"msg": "STO output circuit failure (Chain 1)",
+		"cause": "The STO output circuit of the safety board (BD632) has a diagnosis error in the output circuit of safety chain 1.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E62847": {
+		"msg": "STO output circuit failure (Chain 2)",
+		"cause": "A diagnosis error occurred in the STO output circuit of the safety board (BD632) and the output circuit of safety chain 2.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E62850": {
+		"msg": "Inflow of noise/faulty contact in the MCON input wiring path (safety chain 1)",
+		"cause": "Noise has flowed into the wiring path of the MCON input safety chain 1 or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV cable connector, the connection status of wiring and connector, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board."
+	},
+	"E62851": {
+		"msg": "Inflow of noise/faulty contact in the MCON input wiring path (safety chain 2)",
+		"cause": "Noise has entered the wiring path of the MCON input safety chain 2 or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV cable connector, the connection status of wiring and connector, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board."
+	},
+	"E62852": {
+		"msg": "MCON status input mismatch (safety chain 1 OFF)",
+		"cause": "MCON inputs are not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV cable connector, the connection status of wiring and connector, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the safety board (BD632) 5) Replace the servo board (BD640)."
+	},
+	"E62853": {
+		"msg": "MCON status input mismatch (safety chain 2 OFF)",
+		"cause": "MCON inputs are not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV cable connector, the connection status of wiring and connector, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the safety board (BD632) 5) Replace the servo board (BD640)."
+	},
+	"E62854": {
+		"msg": "Magnet status output mismatch (safety chain 1 OFF)",
+		"cause": "Magnet status output of the safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 1.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E62855": {
+		"msg": "Magnet status output mismatch (safety chain 2 OFF)",
+		"cause": "Magnet status output of the safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 2.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
 	},
 	"E63004": {
-		"msg": "Auto mode safety guard (SGA2) input mismatch (safety chain 1 OFF)",
-		"cause": "Automatic mode Safety guard 2 (SGA2) There is a disconnection in the wiring path of safety chain 1 or the connector is not connected.",
-		"remedy": "1) Check and repair the disconnection or connector connection in the automatic mode safety guard 2 (SGA2) wiring path.\n2) Check the automatic mode safety guard switch as it may be defective.3) Replace the safety board."
+		"msg": "Automatic mode safety guard (SGA1) noise inflow/faulty contact in the input wiring path (safety chain 1)",
+		"cause": "Automatic Mode Safety Guard (SGA1) Input Safety Chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
 	},
 	"E63005": {
-		"msg": "Auto mode safety guard (SGA2) input mismatch (safety chain 2 OFF)",
-		"cause": "Automatic mode Safety guard 2 (SGA2) There is a disconnection in the wiring path of safety chain 2 or the connector is not connected.",
-		"remedy": "1) Check and repair the disconnection or connector connection in the automatic mode safety guard 2 (SGA2) wiring path.\n2) Check the automatic mode safety guard switch as it may be defective.3) Replace the safety board."
+		"msg": "Automatic mode safety guard (SGA1) noise inflow/faulty contact in the input wiring path (safety chain 2)",
+		"cause": "Automatic Mode Safety Guard (SGA1) Input Safety Chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63006": {
+		"msg": "Automatic mode safety guard (SGA1) input mismatch (safety chain 1 OFF)",
+		"cause": "Automatic mode safety guard (SGA1) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63007": {
+		"msg": "Automatic mode safety guard (SGA1) input mismatch (safety chain 2 OFF)",
+		"cause": "Automatic mode safety guard (SGA1) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63015": {
+		"msg": "Noise inflow/faulty contact in the general safety guard (SGG) input wiring path (safety chain 1)",
+		"cause": "Noise has flowed into the wiring path of the general safety guard (SGG) input safety chain 1, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63016": {
+		"msg": "Inflow of noise/faulty contact in the general safety guard (SGG) input wiring path (safety chain 2)",
+		"cause": "Noise has flowed from the outside into the wiring path of the general safety guard (SGG) input safety chain 2, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63017": {
+		"msg": "General safety guard (SGG) input mismatch (safety chain 1 OFF)",
+		"cause": "General safety guard (SGG) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63018": {
+		"msg": "General safety guard (SGG) input mismatch (safety chain 2 OFF)",
+		"cause": "General safety guard (SGG) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63026": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SGA2) input wiring path (safety chain 1)",
+		"cause": "Automatic mode safety guard (SGA2) input Safety chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63027": {
+		"msg": "Noise inflow/faulty contact in the automatic mode safety guard (SGA2) input wiring path (safety chain 2)",
+		"cause": "Automatic mode safety guard (SGA2) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63028": {
+		"msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 1 OFF)",
+		"cause": "Automatic mode safety guard (SGA2) input Safety chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63029": {
+		"msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 2 OFF)",
+		"cause": "Automatic mode safety guard (SGA2) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63033": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SG) input wiring path (safety chain 1)",
+		"cause": "Automatic mode safety guard (SG) input Safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63034": {
+		"msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SG) input wiring path (safety chain 2)",
+		"cause": "Automatic mode safety guard (SG) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63035": {
+		"msg": "Automatic mode safety guard (SG) input mismatch (safety chain 1 OFF)",
+		"cause": "Automatic mode safety guard (SG) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63036": {
+		"msg": "Automatic mode safety guard (SG) input mismatch (safety chain 2 OFF)",
+		"cause": "Automatic mode safety guard (SG) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+	},
+	"E63037": {
+		"msg": "MC status mismatch (safety chain 1 OFF)",
+		"cause": "Magnet status is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check the connector connection status, wiring and connector connection status, and cable status. 2) Replace the cable. 3) Replace the magnet contact. 4) Replace the safety board."
+	},
+	"E63038": {
+		"msg": "MC status mismatch (safety chain 2 OFF)",
+		"cause": "Magnet status is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check the connector connection status, wiring and connector connection status, and cable status. 2) Replace the cable. 3) Replace the magnet contact. 4) Replace the safety board."
 	},
 	"E63600": {
-		"msg": "Safety board CPU self-diagnosis error (safety chain 1)",
-		"cause": "The CPU self-diagnosis error of the safety board has occurred. (Safety Chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 1)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 1)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63601": {
-		"msg": "Safety board CPU self-diagnosis error (safety chain 2)",
-		"cause": "The CPU self-diagnosis error of the safety board has occurred. (Safety Chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 2)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 2)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63602": {
-		"msg": "Safety board RAM self-diagnosis error (safety chain 1)",
-		"cause": "The RAM self-diagnosis error of the safety board has occurred. (Safety Chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 1)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 1)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63603": {
-		"msg": "Safety board RAM self-diagnosis error (safety chain 2)",
-		"cause": "The RAM self-diagnosis error of the safety board has occurred. (Safety Chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 2)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 2)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63604": {
-		"msg": "Safety board ROM self-diagnosis error (safety chain 1)",
-		"cause": "The ROM self-diagnosis error of the safety board has occurred. (Safety Chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 1)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 1)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63605": {
-		"msg": "Safety board ROM self-diagnosis error (safety chain 2)",
-		"cause": "The ROM self-diagnosis error of the safety board has occurred. (Safety Chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) MCU failure (safety chain 2)",
+		"cause": "The safety board (BD632) MCU self-diagnosis error has occurred. (Safety Chain 2)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63606": {
-		"msg": "Safety Board Release MC Timeout Error (Safety Chain 1)",
-		"cause": "SIO Release MC timeout error (safe chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) servo on input timeout error (safety chain 1)",
+		"cause": "Safety board (BD632) servo on input timeout error occurred. (safety chain 1)",
+		"remedy": "1) Check the CNSV cable. 2) Check if EtherCAT communication is properly connected. 3) Replace the servo board (BD640). 4) Replace the safety board (BD632)."
 	},
 	"E63607": {
-		"msg": "Safety Board Release MC Timeout Error (Safety Chain 2)",
-		"cause": "SIO Release MC timeout error (safe chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) servo on input timeout error (safety chain 2)",
+		"cause": "Safety board (BD632) servo on input timeout error occurred. (safety chain 2)",
+		"remedy": "1) Check the CNSV cable. 2) Check if EtherCAT communication is properly connected. 3) Replace the servo board (BD640). 4) Replace the safety board (BD632)."
 	},
 	"E63608": {
-		"msg": "Safety board hold timeout error (safety chain 1)",
-		"cause": "SIO Hold timeout error (safety chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) servo off input timeout error (safety chain 1)",
+		"cause": "Safety board (BD632) servo off input timeout error occurred. (safety chain 1)",
+		"remedy": "1) Check the CNSV cable. 2) Check if EtherCAT communication is properly connected. 3) Replace the servo board (BD640). 4) Replace the safety board (BD632)."
 	},
 	"E63609": {
-		"msg": "Safety board hold timeout error (safety chain 2)",
-		"cause": "SIO Hold timeout error (safety chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) servo off input timeout error (safety chain 2)",
+		"cause": "Safety board (BD632) servo off input timeout error occurred. (safety chain 2)",
+		"remedy": "1) Check the CNSV cable. 2) Check if EtherCAT communication is properly connected. 3) Replace the servo board (BD640). 4) Replace the safety board (BD632)."
 	},
 	"E63610": {
-		"msg": "Safety board Hold MC timeout error (safety chain 1)",
-		"cause": "SIO Hold MC timeout error (safety chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) magnet drive (unconnected) timeout error (safety chain 1)",
+		"cause": "Safety board (BD632) magnet drive (unconnected) A timeout error occurred. (safety chain 1)",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
 	},
 	"E63611": {
-		"msg": "Safety board Hold MC timeout error (safety chain 2)",
-		"cause": "SIO Hold MC timeout error (safety chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) magnet drive (unconnected) timeout error (safety chain 2)",
+		"cause": "Safety board (BD632) magnet drive (unconnected) timeout error occurred (safety chain 2)",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
 	},
 	"E63612": {
-		"msg": "Safety Board Upgrade Fail (Safety Chain 1)",
-		"cause": "SIO Upgrade Fail (Safety Chain 1)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) upgrade failure (safety chain 1)",
+		"cause": "Upgrade of the safety board (BD632) has failed. (Safety Chain 1)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63613": {
-		"msg": "Safety Board Upgrade Fail (Safety Chain 2)",
-		"cause": "SIO Upgrade Fail (Safety Chain 2)",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) upgrade failure (safety chain 2)",
+		"cause": "Upgrade of the safety board (BD632) has failed. (Safety Chain 2)",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
-	"E63800": {
-		"msg": "Safety board control power (DC24V) error (safety chain 1)",
-		"cause": "There is a problem with the control power supply (DC24V) of the safety board. (Safety Chain 1)",
-		"remedy": "1) Check the DC24V power cable connected to the safety board.\n2) Replace the safety board."
+	"E63614": {
+		"msg": "Safety board (BD632) magnet operation (connection) timeout error (safety chain 1)",
+		"cause": "Safety board (BD632) magnet operation (connection) timeout error occurred. (safety chain 1)",
+		"remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
 	},
-	"E63801": {
-		"msg": "Safety board control power (DC24V) error (safety chain 2)",
-		"cause": "There is a problem with the control power supply (DC24V) of the safety board. (Safety Chain 2)",
-		"remedy": "1) Check the DC24V power cable connected to the safety board.\n2) Replace the safety board."
+    "E63615": {
+        "msg": "Safety board (BD632) magnet drive (connection) timeout error (safety chain 2)",
+        "cause": "Safety board (BD632) magnet drive (connection) timeout error occurred (safety chain 2)",
+        "remedy": "1) Check if the cable connected from the CNMC connector of the safety board to the magnet contact (MC) has any problems (pin order, cable cut, broken). 2) Replace the cable. 3) Replace the safety board (BD632)."
+    },
+	"E63620": {
+		"msg": "Safety board (BD632) Diagosis Fault Code 1",
+		"cause": "A safety board (BD632) detect Diagosis Fault Code 1",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
-	"E63802": {
-		"msg": "Safety board control power (DC3.3V) error (safety chain 1)",
-		"cause": "There is a problem with the control power supply (DC3.3V) of the safety board. (Safety Chain 1)",
-		"remedy": "Replace the safety board."
-	},
-	"E63803": {
-		"msg": "Safety board control power (DC3.3V) error (safety chain 2)",
-		"cause": "There is a problem with the control power supply (DC3.3V) of the safety board. (Safety Chain 2)",
-		"remedy": "Replace the safety board."
+    "E63621": {
+        "msg": "Safety board (BD632) Diagosis Fault Code 2",
+        "cause": "A safety board (BD632) detect Diagosis Fault Code 2",
+        "remedy": "1) Replace the safety board (BD632)."
+    },
+    "E63622": {
+        "msg": "Safety board (BD632) Diagosis Fault Code 3",
+        "cause": "A safety board (BD632) detect Diagosis Fault Code 3",
+        "remedy": "1) Replace the safety board (BD632)."
+    },
+	"E63623": {
+		"msg": "Safety board (BD632) Diagosis Fault Code 4",
+		"cause": "A safety board (BD632) detect Diagosis Fault Code 4",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E63804": {
-		"msg": "Safety board IO power (DC24V) error (safety chain 1)",
-		"cause": "There is a problem with the IO power supply (DC24V) of the safety board. (Safety Chain 1)",
-		"remedy": "1) Check the DC24V power cable connected to the safety board.\n2) Replace the safety board."
+		"msg": "Safety board (BD632) power supply (DC 24V) error (safety chain 1)",
+		"cause": "An error occurred in the safety board (BD632) power supply (DC 24V). (Safety chain 1)",
+		"remedy": "1) Check DC24V cable and connector and connection condition. 2) Check if DC24V is normally output from BD6C2. 3) Check if the safety board fuse is blown. 4) Replace the safety board."
 	},
 	"E63805": {
-		"msg": "Safety board IO power (DC24V) error (safety chain 2)",
-		"cause": "There is a problem with the IO power supply (DC24V) of the safety board. (Safety Chain 2)",
-		"remedy": "1) Check the DC24V power cable connected to the safety board.\n2) Replace the safety board."
+		"msg": "Safety board (BD632) power supply (DC 24V) error (safety chain 2)",
+		"cause": "A safety board (BD632) power supply (DC 24V) error has occurred. (Safety chain 2)",
+		"remedy": "1) Check DC24V cable and connector and connection condition. 2) Check if DC24V is normally output from BD6C2. 3) Check if the safety board fuse is blown. 4) Replace the safety board."
+	},
+	"E63806": {
+		"msg": "Safety board (BD632) power (DC 3.3V) error (safety chain 1)",
+		"cause": "A safety board (BD632) power supply (DC 3.3V) error has occurred. (Safety Chain 1)",
+		"remedy": "1) Check if the DC24V input to the safety board is normal. 2) Check if the safety board fuse is blown. 3) Replace the safety board (BD632)."
+	},
+	"E63807": {
+		"msg": "Safety board (BD632) power (DC 3.3V) error (safety chain 2)",
+		"cause": "A safety board (BD632) power supply (DC 3.3V) error has occurred. (Safety Chain 2)",
+		"remedy": "1) Check if the DC24V input to the safety board is normal. 2) Check if the safety board fuse is blown. 3) Replace the safety board (BD632)."
 	},
 	"E64000": {
-		"msg": "Safety board BLACK BOX communication error",
-		"cause": "An error occurred in the BLACK BOX communication of the safety board.",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) internal communication (UART) error",
+		"cause": "A safety board (BD632) internal communication (UART) error occurred.",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E64001": {
-		"msg": "Safety board INTER-MCU communication error",
-		"cause": "An INTER-MCU communication error of the safety board has occurred.",
-		"remedy": "Replace the safety board."
+		"msg": "Safety board (BD632) internal communication (SCI) error",
+		"cause": "A safety board (BD632) internal communication (SCI) error occurred.",
+		"remedy": "1) Replace the safety board (BD632)."
 	},
 	"E64002": {
-		"msg": "H6COM error",
+		"msg": "H6COM-T error",
 		"cause": "H6COM CPU error has occurred.",
-		"remedy": "1) Check the EtherCAT cable.\n2) Replace H6COM.\n3) Replace the servo board."
+		"remedy": "1) Check the EtherCAT communication connection status. 2) Check if the main task cycle is within the normal range. (Min, Max standard) 3) Make sure you have the latest firmware. 4) Check whether it is affected by the installation of cards and other options."
 	},
 	"E64003": {
-		"msg": "Servo Board error",
-		"cause": "A servo board failure has occurred.",
-		"remedy": "1) Replace the servo board.\n2) Check or replace the cable connected to the servo board\n3) Replace the safety board"
-	},
-	"E64004": {
-		"msg": "Servo module status input inconsistancy(safety chain 1)",
-		"cause": "There is a disconnection in the wiring path of the servo board status input or the connector is not connected. (Safety chain 1)",
-		"remedy": "1) Check or replace the cable connected to the servo board.\n2) Replace the servo board.\n3) Replace the safety board."
-	},
-	"E64005": {
-		"msg": "Servo module status input inconsistancy(safety chain 2)",
-		"cause": "There is a disconnection in the wiring path of the servo board status input or the connector is not connected. (Safety chain 2)",
-		"remedy": "1) Check or replace the cable connected to the servo board.\n2) Replace the servo board.3) Replace the safety board."
+		"msg": "Servo module (SVST) error",
+		"cause": "A servo board(BD640) failure has occurred.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV connector, the connection status of the wiring and connector, and the cable status. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632)."
 	},
 	"E64006": {
-		"msg": "Operation panel installation SW (OP Install) input inconsistancy(safety chain 1)",
-		"cause": "The OP Install switch is broken, there is a disconnection in the wiring path of the operation panel (OP), or the connector is not connected. (Safety chain 1)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the control panel.\n2) Replace the operation panel\n3) Replace the safety board."
+		"msg": "Servo board (BD640) status input mismatch (safety chain 1)",
+		"cause": "Servo board status input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV connector, the connection status of the wiring and connector, and the cable status. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632)."
 	},
 	"E64007": {
-		"msg": "Operation panel installation SW (OP Install) input inconsistancy(safety chain 2)",
-		"cause": "The OP Install switch is broken, there is a disconnection in the wiring path of the operation panel (OP), or the connector is not connected. (Safety chain 2)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the control panel.\n2) Replace the operation panel\n3) Replace the safety board."
+		"msg": "Servo board (BD640) status input mismatch (safety chain 2)",
+		"cause": "Servo board status input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV connector, the connection status of the wiring and connector, and the cable status. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632)."
 	},
 	"E64008": {
-		"msg": "Operation panel motor on input inconsistancy(safety chain 1)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) motor on switch or the connector is not connected. (Safety Chain 1)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the operation panel (OP) motor on switch.\n2) Check the operation panel (OP) motor on switch may be defective.\n3) Replace the safety board."
+		"msg": "Operation Panel installation SW (OP Install) input mismatch (safety chain 1)",
+		"cause": "Operation panel installation (OP Install) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check the SW1, SW2 switches of the safety board (BD632). 2) Replace the safety board (BD632)."
 	},
 	"E64009": {
-		"msg": "Operation panel motor on input inconsistancy(safety chain 2)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) motor on switch or the connector is not connected. (Safety Chain 2)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the operation panel (OP) motor on switch.\n2) Check the operation panel (OP) motor on switch may be defective.\n3) Replace the safety board."
+		"msg": "Operation Panel installation SW (OP Install) input mismatch (safety chain 2)",
+		"cause": "Operation panel installation (OP Install) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check the SW1, SW2 switches of the safety board (BD632). 2) Replace the safety board (BD632)."
 	},
 	"E64010": {
-		"msg": "Operation panel stop input inconsistancy(safety chain 1)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) stop switch or the connector is not connected. (Safety Chain 1)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the control panel (OP) stop switch.\n2) Check if the operation panel (OP) stop switch may be malfunctioning.\n3) Replace the safety board."
+		"msg": "Operation Panel (OP) motor-on input wiring path noise / contact failure (safety chain 1)",
+		"cause": "Operation panel (OP) motor-on input safety chain 1 wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E64011": {
-		"msg": "Operation panel stop input inconsistancy(safety chain 2)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) stop switch or the connector is not connected. (Safety Chain 2)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the control panel (OP) stop switch.\n2) Check if the operation panel (OP) stop switch may be malfunctioning.\n3) Replace the safety board."
+		"msg": "Operation Panel (OP) motor on input wiring path noise inflow / contact failure (safety chain 2)",
+		"cause": "Operation panel (OP) motor-on input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E64012": {
-		"msg": "Operation panel start input inconsistancy(safety chain 1)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) start switch or the connector is not connected. (Safety Chain 1)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the operation panel (OP) start switch.\n2) Check the operation panel (OP) start switch may be defective.\n3) Replace the safety board."
+		"msg": "Operation Panel (OP) stop input wiring path noise / contact failure (safety chain 1)",
+		"cause": "Operation panel (OP) stop input Safety chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E64013": {
-		"msg": "Operation panel start input inconsistancy(safety chain 2)",
-		"cause": "There is a disconnection in the wiring path of the operation panel (OP) start switch or the connector is not connected. (Safety Chain 2)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the operation panel (OP) start switch.\n2) Check the operation panel (OP) start switch may be defective.\n3) Replace the safety board."
+		"msg": "Operation Panel (OP) stop input wiring path noise/contact failure (safety chain 2)",
+		"cause": "Operation panel (OP) stop input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E64014": {
-		"msg": "External motor on (EXMON) input inconsistancy(safety chain 1)",
-		"cause": "There is a disconnection in the wiring path of the external motor on (EXMON) switch or the connector is not connected. (Safety Chain 1)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the external motor on (EXMON) switch.\n2) Check if the external motor on (EXMON) switch may be defective.\n3) Replace the safety board."
+		"msg": "Noise inflow/faulty contact in the Operation Panel (OP) start input wiring path (safety chain 1)",
+		"cause": "Operation panel (OP) start input Safety chain 1 wiring path has noise from the outside, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
 	},
 	"E64015": {
-		"msg": "External motor on (EXMON) input inconsistancy(safety chain 2)",
-		"cause": "There is a disconnection in the wiring path of the external motor on (EXMON) switch or the connector is not connected. (Safety Chain 2)",
-		"remedy": "1) Check and repair the disconnection or connector connection in the wiring path of the external motor on (EXMON) switch.\n2) Check if the external motor on (EXMON) switch may be defective.\n3) Replace the safety board." 
+		"msg": "Inflow of noise/faulty contact in the Operation Panel (OP) start input wiring path (safety chain 2)",
+		"cause": "Operation panel (OP) start input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64016": {
+		"msg": "Operation Panel (OP) motor on input mismatch (Chain 1)",
+		"cause": "Operation panel (OP) motor-on input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64017": {
+		"msg": "Operation Panel (OP) motor on input mismatch (chain 2)",
+		"cause": "Operation panel (OP) motor-on input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64018": {
+		"msg": "Operation Panel (OP) stop input mismatch (chain 1)",
+		"cause": "Operation panel (OP) stop input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64019": {
+		"msg": "Operation Panel (OP) stop input mismatch (chain 2)",
+		"cause": "Operation panel (OP) stop input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64020": {
+		"msg": "Operation Panel (OP) start input mismatch (Chain 1)",
+		"cause": "Operation panel (OP) start input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64021": {
+		"msg": "Operation Panel (OP) start input mismatch (chain 2)",
+		"cause": "Operation panel (OP) start input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the Operation panel (OP). 5) Replace the safety board."
+	},
+	"E64022": {
+		"msg": "Inflow of noise/faulty contact in the external motor-on (EXMON) input wiring path (safety chain 1)",
+		"cause": "External motor on (EXMON) input Safety chain 1 wiring route has noise from the outside, or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external motor on (EXMON) switch. 5) Replace the safety board."
+	},
+	"E64023": {
+		"msg": "Noise inflow/faulty contact in the external motor-on (EXMON) input wiring path (safety chain 2)",
+		"cause": "External motor on (EXMON) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external motor on (EXMON) switch. 5) Replace the safety board."
+	},
+	"E64024": {
+		"msg": "External motor-on (EXMON) input mismatch (safety chain 1)",
+		"cause": "The external motor-on (EXMON) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external motor on (EXMON) switch. 5) Replace the safety board."
+	},
+	"E64025": {
+		"msg": "External motor-on (EXMON) input mismatch (safety chain 2)",
+		"cause": "The external motor-on (EXMON) input is not redundant. The input status of safety chain 1 and 2 of the safety board is different.",
+		"remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the external motor on (EXMON) switch. 5) Replace the safety board."
+	},
+	"E64034": {
+		"msg": "Safety module status output (SFST) mismatch (safety chain 1 OFF)",
+		"cause": "Safety board status output of safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 1.",
+		"remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV connector, the connection status of the wiring and connector, and the cable status. 3) Replace the CNSV cable 4) Replace the safety board (BD632) 5) Replace the servo board (BD640)."
+	},
+    "E64035": {
+        "msg": "Safety module status output (SFST) mismatch (safety chain 2 OFF)",
+        "cause": "Safety board status output of safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 2.",
+        "remedy": "1) Check if there is a power line or cable that can introduce noise into the CNSV wiring path. 2) Check the connection status of the CNSV connector, the connection status of the wiring and connector, and the cable status. 3) Replace the CNSV cable 4) Replace the safety board (BD632) 5) Replace the servo board (BD640)."
+    },
+    "E64050": {
+        "msg": "Safety board (BD632) temperature (high/low temperature) error (safety chain 1)",
+        "cause": "A Temperature of safety board (BD632) is abnormal",
+        "remedy": "1) Check the temperature inside the control panel and the operation of the cooling fan. 2) Replace the safety board (BD632)"
+    },
+    "E64051": {
+        "msg": "Safety board (BD632) temperature (high/low temperature) error (safety chain 2)",
+        "cause": "A Temperature of safety board (BD632) is abnormal",
+        "remedy": "1) Check the temperature inside the control panel and the operation of the cooling fan. 2) Replace the safety board (BD632)"
+    },
+    "E64052": {
+		"msg": "Safety board (BD632) is Warning state",
+		"cause": "Magnetic contact switch or safety board (BD632) is abnormal",
+		"remedy": "1) Replace the magnetic contact switch. 2) Replace the safety board. 3) Check the error list that occurred simultaneously."
 	}
 }

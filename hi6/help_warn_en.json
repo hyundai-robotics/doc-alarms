@@ -639,30 +639,15 @@
 		"cause": "While field weakening is being applied, the maximum speed is lower than when not applied",
 		"remedy": "Check motor and control properties. If there is no problem, it is recommended to turn off field weakening control."
 	},
+	"W230": {
+		"msg": "System board(SIO) overheating detected",
+		"cause": "System board temperature exceeded permitted range.",
+		"remedy": "Check the controller according to the fault repair methods."
+	},
 	"W2000": {
 		"msg": "Power failure is operating",
-		"cause": "The power failure is operating in motor on.When the power failure is operating, it can generate the following errors.E02506 AMP PN undervoltage occurredE02507 AMP diode module abnormal or insufficient AC input voltageE02631 (%s axis) position deviation exceeded for each speedW00153 Reducer motor current that exceeds the allowable level is detected.",
+		"cause": "The power failure is operating in motor on. When the power failure is operating, it can generate the following errors.\r\nE02506 AMP PN undervoltage occurredE02507 AMP diode module abnormal or insufficient AC input voltage\r\nE02631 (%s axis) position deviation exceeded for each speed\r\nW00153 Reducer motor current that exceeds the allowable level is detected.",
 		"remedy": "Check main power of the controller and signal block diagram of the power failure."
-	},
-	"W2011": {
-		"msg": "Power failure handling did not start.",
-		"cause": "When powered off, the power failure handling to back up data to the SSD did not start.",
-		"remedy": "Check the buffer module and connection."
-	},
-	"W2012": {
-		"msg": "Power failure handling unfinished.",
-		"cause": "When powered off, a power outage was performed to back up the data to the SSD and was aborted incompletely.",
-		"remedy": "1) If the robot language variables set is very large, a power failure handling timeout may occur. 2) Check the buffer module and connection."
-	},
-	"W2019": {
-		"msg": "Power failure handling log is abnormal.",
-		"cause": "When powered off, the log at the beginning and end of the power failure handling to back up the data to the SSD remains abnormal.",
-		"remedy": "If the problem repeats, check the buffer module and connection."
-	},
-	"W2020": {
-		"msg": "Power failure handling .bin file format is abnormal.",
-		"cause": "Power failure backup binary file is cleared because of abnormal format. Some power failure backup will not work until the next reboot.",
-		"remedy": "Reboot and restart from Step 0."
 	},
 	"W2101": {
 		"msg": "SYSTEM_WARNING-HardwareInterrupt",
@@ -935,9 +920,14 @@
 		"remedy": "Enter a integer between 1 to 32 in WEAVON condition number."
 	},
 	"W16001": {
-		"msg": "Job number %s file is duplicated.",
+		"msg": "Job file's number is duplicated.",
 		"cause": "Duplicated numbered job file was forcibly stored through a method such as FTP.",
-		"remedy": "To avoid confusion, please delete the duplicated numbered job file using FileManager."
+		"remedy": "Check for the duplicated job number. Please delete the duplicated numbered job file using FileManager."
+	},
+	"W16002": {
+		"msg": "Lad number %s file is duplicated.",
+		"cause": "Duplicated numbered lad file was forcibly stored through a method such as FTP.",
+		"remedy": "Please delete the duplicated numbered lad file using FileManager."
 	},
 	"W21001": {
 		"msg": "%s axis)Test result are not suitable for test.",
@@ -999,10 +989,30 @@
 		"cause": "The auto mode was duplicated in robot ready condition.",
 		"remedy": "In the condition screen of System-Control parameter-Robot ready, select the auto mode between 1 cycle and repetition."
 	},
-	"W22201": {
-		"msg": "The output signal was not assigned in home position.",
-		"cause": "The output signal was not assigned in home position.",
-		"remedy": "In the screen of System-Control parameter-Origin registration, set the use of items that will not be used as off."
+    "W22201": {
+        "msg": "The output signal was not assigned in home position.",
+        "cause": "The output signal was not assigned in home position.",
+        "remedy": "In the screen of System-Control parameter-Origin registration, set the use of items that will not be used as off."
+    },
+    "W23001": {
+		"msg": "No communication connection CIFX PCI Slot1",
+		"cause": "Communication is diconnected or lost",
+		"remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+	},
+	"W23002": {
+		"msg": "No communication connection CIFX PCI Slot2",
+		"cause": "Communication is diconnected or lost",
+		"remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+	},
+	"W23003": {
+		"msg": "No communication connection CIFX PCI Slot3",
+		"cause": "Communication is diconnected or lost",
+		"remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+	},
+	"W23004": {
+		"msg": "No communication connection CIFX PCI Slot4",
+		"cause": "Communication is diconnected or lost",
+		"remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
 	},
 	"W26000": {
 		"msg": "CIE:All task is executing. Wait minute.",
@@ -1764,6 +1774,356 @@
 		"cause": "Undefined weld error occurred in welding machine.",
 		"remedy": "1) Check the actually inputted welder error number through the welding monitoring screen.2) Check the relevant error number in the welder manual or with the welder company."
 	},
+	"W32301": {
+		"msg": "용접기 와이어 송급 에러가 발생했습니다.",
+		"cause": "용접기의 와이어 송급 시스템에서 이상이 발생했습니다.",
+		"remedy": "용접기의 와이어 송급시스템인 피더, 케이블, 버퍼, 서보토치를 점검하십시오."
+	},
+	"W32302": {
+		"msg": "용접기 인버터 비상 정지. 회로 온도 에러",
+		"cause": "용접기의 1차 회로에서 과열이 검출되었습니다.",
+		"remedy": "작업을 중단하고 용접기를 대기시켜 온도를 낮추십시오."
+	},
+	"W32303": {
+		"msg": "용접기 주전원 전압 초과",
+		"cause": "용접기의 공급 전원에서 과전압이 발생했습니다.",
+		"remedy": "용접기 공급 전원의 전압을 확인하십시오."
+	},
+	"W32304": {
+		"msg": "용접기 주전원 전압 부족",
+		"cause": "용접기의 공급 전원에서 저전압이 발생했습니다.",
+		"remedy": "용접기 공급 전원의 전압을 확인하십시오."
+	},
+	"W32305": {
+		"msg": "용접기 냉각수 수위 부족",
+		"cause": "용접기에서 냉각수 수위 부족을 검출하였습니다.",
+		"remedy": "냉각 유닛을 점검하십시오."
+	},
+	"W32306": {
+		"msg": "용접기 가스 에러",
+		"cause": "용접기에서 가스 에러를 검출하였습니다.",
+		"remedy": "가스 공급 상태를 점검하십시오."
+	},
+	"W32307": {
+		"msg": "용접기 2차 회로 전압 초과",
+		"cause": "용접기 2차 회로에서 과전압이 검출되었습니다.",
+		"remedy": "1)용접기 회로를 점검하십시오.2) 용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32308": {
+		"msg": "용접기 보호 컨덕터 에러",
+		"cause": "용접기 보호 컨덕터 에러가 검출되었습니다.",
+		"remedy": "1)용접기 회로를 점검하십시오.2) 용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32309": {
+		"msg": "용접기 시스템 고속 정지",
+		"cause": "용접기에서 시스템 고속 정지가 발생했습니다.",
+		"remedy": "제어기 전원을 재투입한 후 점검하십시오."
+	},
+	"W32310": {
+		"msg": "용접기 내부 에러. EWM 연락 요망.",
+		"cause": "용접기 내부 처리에서 에러가 발생했습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32311": {
+		"msg": "용접기 점화 프로세스 에러",
+		"cause": "용접 점화 프로세스 진행 중 에러가 발생하였습니다.",
+		"remedy": "1) 와이어 피더의 송급상태를 검사하십시오.2) 용접을 수행하기 위한 연결선들을 점검하십시오."
+	},
+	"W32312": {
+		"msg": "용접기 Arc 중단 에러",
+		"cause": "용접기에서 용접 중 Arc 중단 발생을 검출하였습니다.",
+		"remedy": "1) 용접을 다시 수행하십시오.2) 문제가 다시 발생하면 용접기를 교체하십시오."
+	},
+	"W32313": {
+		"msg": "용접기 온도 초과로 비상 종료",
+		"cause": "용접기에서 과열이 검출되었습니다.",
+		"remedy": "1) 용접기의 통풍 상태를 점검하십시오.2) 내부에 과열이 지속적으로 발생하는 경우 용접기를 교체합시오."
+	},
+	"W32314": {
+		"msg": "용접기 와이어 송급장치 구성 오류",
+		"cause": "용접기 와이어 송급장치의 구성에 이상이 있습니다.",
+		"remedy": "와이어 송급장치 연결을 점검하십시오."
+	},
+	"W32315": {
+		"msg": "용접기 연결되지 않은 와이어 송급장치로 전환",
+		"cause": "용접기에 사용할 와이어 송급장치 전환 시 오류가 발생하였습니다.",
+		"remedy": "정상적인 와이어 송급장치로 전환하십시오."
+	},
+	"W32316": {
+		"msg": "용접기 오픈 회로 전압이 정의된 값까지 감소되지 않습니다.",
+		"cause": "용접기 오픈 회로 전압이 정상적으로 감소되지 않았습니다.",
+		"remedy": "1)용접기 회로를 점검하십시오.2) 용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32317": {
+		"msg": "용접기 전원장치 연결 에러",
+		"cause": "용접기 전원장치 연결에 오류가 있습니다.",
+		"remedy": "용접기 연결선을 점검하십시오."
+	},
+	"W32318": {
+		"msg": "용접기 미정의 용접기 에러",
+		"cause": "용접기에서 알 수 없는 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32321": {
+		"msg": "입력 교류 주전원 저전압 오류",
+		"cause": "3상 교류 입력전압이 187VAC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32322": {
+		"msg": "입력 교류 주전원 과전압 오류",
+		"cause": "3상 교류 입력전압이 253VAC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32323": {
+		"msg": "DC-Link 저전압 오류",
+		"cause": "DC-Link 전압이 264VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32324": {
+		"msg": "DC-Link 과전압 오류",
+		"cause": "DC-Link 전압이 358VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32325": {
+		"msg": "DC-Link(1차) 과전류 오류",
+		"cause": "DC-Link(1차) 전류가 150A 이상으로 10ms 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32326": {
+		"msg": "용접 무부하 출력 저전압 오류",
+		"cause": "용접을 시작하여 무부하 전압이 저전압 기준 이하로 50ms 이상 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32327": {
+		"msg": "용접 출력 전압 미검출 오류",
+		"cause": "용접 시퀀스 진행 중 용접 출력 전압이 기준전압 이하로 75ms이상 미검출 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32328": {
+		"msg": "용접 출력 전류 미검출 오류",
+		"cause": "용접 시퀀스 진행 중 용접 출력 전류가 2초 이상 미검출 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32329": {
+		"msg": "용접 출력 과전류 오류",
+		"cause": "용접 시퀀스 진행 중 용접 출력 전류가 450A 이상으로 100ms간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32330": {
+		"msg": "Stick 상태 오류",
+		"cause": "용접 종료 후 Stick 검사결과 Stick 상태가 발생되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32331": {
+		"msg": "용접제어 PCB 입력 +24VDC 저전압 오류",
+		"cause": "용접제어 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +19.2VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32332": {
+		"msg": "용접제어 PCB 입력 +24VDC 과전압 오류",
+		"cause": "용접제어 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +28.8VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32333": {
+		"msg": "전력변환 PCB 입력 +24VDC 저전압 오류",
+		"cause": "전력변환 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +19.2VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32334": {
+		"msg": "전력변환 PCB 입력 +24VDC 과전압 오류",
+		"cause": "전력변환 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +28.8VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32335": {
+		"msg": "냉각팬 입력 +24VDC 저전압 오류",
+		"cause": "냉각팬이 가동중일 때 냉각팬용 SMPS +24VDC가 +19.2VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32336": {
+		"msg": "냉각팬 입력 +24VDC 과전압 오류",
+		"cause": "냉각팬이 가동중일 때 냉각팬용 SMPS +24VDC가 +28.8VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32337": {
+		"msg": "인터페이스 PCB +24VDC 저전압 오류",
+		"cause": "인터페이스 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +19.2VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32338": {
+		"msg": "인터페이스 PCB +24VDC 과전압 오류",
+		"cause": "인터페이스 PCB로 입력되는 SMPS로부터 공급되는 +24VDC가 +28.8VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32339": {
+		"msg": "용접제어 PCB 보조전원 +15VDC 저전압 오류",
+		"cause": "보조전원 +15VDC가 +13.5VDC 이하로 1초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32340": {
+		"msg": "용접제어 PCB 보조전원 +15VDC 과전압 오류",
+		"cause": "보조전원 +15VDC가 +16.5VDC 이상으로 1초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32341": {
+		"msg": "용접제어 PCB 보조전원 -15VDC 저전압 오류",
+		"cause": "보조전원 -15VDC가 -16.5VDC 이상으로 1초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32342": {
+		"msg": "용접제어 PCB 보조전원 -15VDC 과전압 오류",
+		"cause": "보조전원 -15VDC가 -13.5VDC 이하로 1초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32343": {
+		"msg": "용접전원 최초 전원 ON 시 토치 ON 입력 오류",
+		"cause": "용접전원의 주전원 스위치를 최초 ON 한 상태일 때, 토치 신호가 ON 상태로 입력 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32344": {
+		"msg": "용접 무부하 지속 출력 오류",
+		"cause": "무부하 출력 시퀀스에서 다른 시퀀스로 천이되지 않고서 10초 이상 무부하 출력 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32345": {
+		"msg": "용접 시너직 DB 설정 오류",
+		"cause": "용접 시스템에 내장되지 않은 용접 시너직 DB를 설정하거나, 허가되지 않은 사용불가능한 용접시너직 DB가 선택되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32346": {
+		"msg": "외부장치 토치 충돌 오류",
+		"cause": "용접 시스템과 연결되어 있는 외부장치(용접 자동화 설비 또는 로봇등)에서 토치 충돌이 감시되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32347": {
+		"msg": "용접전원 내부 우측 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 75℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32348": {
+		"msg": "용접전원 내부 MOSFET 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 75℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32349": {
+		"msg": "용접전원 내부 좌측 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 75℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32350": {
+		"msg": "용접전원 내부 출력 다이오드 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 110℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32351": {
+		"msg": "용접전원 내부 주변압기 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 125℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32352": {
+		"msg": "용접전원 내부 상부 과온도 오류",
+		"cause": "해당 부위의 NTC 온도센서 측정 온도가 75℃ 이상 5초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32353": {
+		"msg": "Daisy Chain1 인식 오류",
+		"cause": "용접기에서 알 수 없는 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32354": {
+		"msg": "Daisy Chain2 인식 오류",
+		"cause": "용접기에서 알 수 없는 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32355": {
+		"msg": "냉각팬 릴레이 동작 오류",
+		"cause": "냉각팬 릴레이 제어 신호가 ON 상태인데 실제 접점이 OFF 상태이거나 제어 신호가 OFF 상태인데 접점이 ON 상태로 2초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32356": {
+		"msg": "냉각팬1(상부팬) 동작 오류",
+		"cause": "냉각팬의 이물질 및 기타의 사유로 인하여 정상적인 냉각팬 작동이 불가한 상태로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32357": {
+		"msg": "냉각팬2(하부팬) 동작 오류",
+		"cause": "냉각팬의 이물질 및 기타의 사유로 인하여 정상적인 냉각팬 작동이 불가한 상태로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32358": {
+		"msg": "용접제어 PCB NVSRAM 응답없음 오류",
+		"cause": "용접기에서 알 수 없는 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32359": {
+		"msg": "내부 CAN 통신 오류",
+		"cause": "내부 CAN 통신 데이터가 3초 이상 수신되지 않는 상태로 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32360": {
+		"msg": "내부 RS-232 통신 오류",
+		"cause": "용접기에서 알 수 없는 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32361": {
+		"msg": "송급장치 입력 저전압 오류",
+		"cause": "송급장치의 +48VDC의 입력 전압이 +43.2VDC 이하로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32362": {
+		"msg": "송급장치 입력 과전압 오류",
+		"cause": "송급장치의 +48VDC의 입력 전압이 +52.8VDC 이상으로 3초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32363": {
+		"msg": "송급장치 모터 출력 과전압 오류",
+		"cause": "송급장치의 모터 출력 전류가 10A이상 1초간 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32364": {
+		"msg": "송급장치 모터 엔코더 오류",
+		"cause": "모터 회전 간 엔코더 신호가 500ms 이상 인식되지 않았습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32365": {
+		"msg": "송급장치 쇼크센서 오류",
+		"cause": "송급장치의 쇼크센서 오류 입력 신호가 100ms 이상 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32366": {
+		"msg": "송급장치 CAN 통신 오류",
+		"cause": "송급장치로부터 수신되는 CAN 통신 데이터가 3초 이상 수신되지 않는 상태로 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32367": {
+		"msg": "DC-Link Hardware OCP Trip 오류",
+		"cause": "DC-Link 출력 전류가 하드웨어 회로에서 OCP로 감지되는 기준 이상으로 과전류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32368": {
+		"msg": "Hi-COMM 채널 1 오류",
+		"cause": "용접전원 외부의 Hi-COMM 채널 1에 연결된 Hi-COMM의 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32369": {
+		"msg": "Hi-COMM 채널 2 오류",
+		"cause": "용접전원 외부의 Hi-COMM 채널 2에 연결된 Hi-COMM의 오류가 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32370": {
+		"msg": "HMI 비상정지",
+		"cause": "HMI에서 사용자에 의해 비상정지 입력이 발생하였습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32371": {
+		"msg": "UCC3895 PWM 저주파수 오류",
+		"cause": "UCC3895의 Sync핀에서 출력되는 Pulse 신호의 주파수가 96kHz 미만으로 10ms 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},
+	"W32372": {
+		"msg": "UCC3895 PWM 과주파수 오류",
+		"cause": "UCC3895의 Sync핀에서 출력되는 Pulse 신호의 주파수가 144kHz 초과로 10ms 유지되었습니다.",
+		"remedy": "용접기 After-Sales Service에 연락하십시오."
+	},	
 	"W32401": {
 		"msg": "Abnomal current port setting for GIFAW.",
 		"cause": "The current cannot be output because of wrong port number in general interface for arc welding machine(GIFAW).1) The number of port is not assigned.2) If you've already assigned it, the 'ROBOT.AGP' may be corrupted.",
