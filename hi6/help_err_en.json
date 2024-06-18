@@ -777,7 +777,7 @@
 	"E230": {
 		"msg": "%s axis) encoder state abnormality not deactivated during servo tool access",
 		"cause": "In the servo tool to access, the error state, such as errors related to overflow, overspeed, internal condenser voltage, and LED, is received from the encoder.",
-		"remedy": "Access the encoder power by force using the R359 function of the servo gun, and then execute the encoder reset function. If the error not cleared, replace the motor of the servo gun."
+		"remedy": "1) Access the encoder power by force using the R359 function of the servo gun, and then execute the encoder reset function. 2) Replace the battery in case of a voltage drop after checking the voltage of the encoder backup battery. 3) If the error not cleared, replace the motor of the servo gun."
 	},
 	"E231": {
 		"msg": "%s axis) encoder disconnected / communication failed during servo tool access",
