@@ -108,5 +108,6 @@
 	"N131": { "msg": "SSM module versions are not equal. Please update the version." },
 	"N160": { "msg": "Auto backup started." },
 	"N161": { "msg": "Auto backup completed." },
-	"N162": { "msg": "Callstack is cleared by editing job." }
+	"N162": { "msg": "Callstack is cleared by editing job." },
+	"N167": { "msg": "Manual operation prohibition signal is on." }
 }
