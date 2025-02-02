@@ -4682,35 +4682,35 @@
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "Regenerative discharge resistor temperature increased above the reference value. Excessive robot playback speed, or problem with the cooling system.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.3) Check the cooling system.4) Check the regenerative power capacity of robot.",
-        "help_idx": "E02500",
+        "help_idx": "1-servo-amp-board-part/E02500",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E2501": {
         "msg": "AMP regenerative discharge resistor disconnected, resistor or circuit abnormal",
         "cause": "Overheating error will be generated if a resistor is disconnected or the discharge control is abnormal. In addition, this could be generated when the regenerative discharge resistance value and the 3-phase power voltage values increase",
         "remedy": "1) Check the regenerative discharge resistor value(CNDR).2) Check the servo drive module.3) Check the controller power voltage.",
-        "help_idx": "E02501",
+        "help_idx": "1-servo-amp-board-part/E02501",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor disconnected, resistor or circuit abnormal"
     },
     "E2502": {
         "msg": "AMP regenerative discharge resistor detection path abnormal",
         "cause": "Abnormality generated with the overheating error detection path, or the resistor value has varied.",
         "remedy": "1) Check the power-related cables(CNTR, CNSGC).2) Check the parts(system board, servo drive module)  related to AMP discharge resistor overheat error detection.",
-        "help_idx": "E02502",
+        "help_idx": "1-servo-amp-board-part/E02502",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor detection path abnormal"
     },
     "E2503": {
         "msg": "AMP PN overvoltage occured",
         "cause": "May be occured when the robot playback speed changes rapidly or when the regenerative discharge resistor value increases.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.",
-        "help_idx": "E02503",
+        "help_idx": "1-servo-amp-board-part/E02503",
         "help_title": "[TroubleShoot]AMP PN overvoltage occured"
     },
     "E2504": {
         "msg": "AMP diode module abnormal or AC input voltage exceeded",
         "cause": "Abnormality generated with the diode module, causing the PN voltage to exceed the allowable range. In addition, the 3-phase voltage is inputted into the servo drive module (AMP) at a abnormally high level.",
         "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage.",
-        "help_idx": "E02504",
+        "help_idx": "1-servo-amp-board-part/E02504",
         "help_title": "[TroubleShoot]AMP diode module abnormal or AC input voltage exceeded"
     },
     "E2505": {
