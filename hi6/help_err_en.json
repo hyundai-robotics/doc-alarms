@@ -4682,35 +4682,35 @@
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "Regenerative discharge resistor temperature increased above the reference value. Excessive robot playback speed, or problem with the cooling system.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.3) Check the cooling system.4) Check the regenerative power capacity of robot.",
-        "help_idx": "1-servo-amp-board-part/E02500",
+        "help_idx": "E02500",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E2501": {
         "msg": "AMP regenerative discharge resistor disconnected, resistor or circuit abnormal",
         "cause": "Overheating error will be generated if a resistor is disconnected or the discharge control is abnormal. In addition, this could be generated when the regenerative discharge resistance value and the 3-phase power voltage values increase",
         "remedy": "1) Check the regenerative discharge resistor value(CNDR).2) Check the servo drive module.3) Check the controller power voltage.",
-        "help_idx": "1-servo-amp-board-part/E02501",
+        "help_idx": "E02501",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor disconnected, resistor or circuit abnormal"
     },
     "E2502": {
         "msg": "AMP regenerative discharge resistor detection path abnormal",
         "cause": "Abnormality generated with the overheating error detection path, or the resistor value has varied.",
         "remedy": "1) Check the power-related cables(CNTR, CNSGC).2) Check the parts(system board, servo drive module)  related to AMP discharge resistor overheat error detection.",
-        "help_idx": "1-servo-amp-board-part/E02502",
+        "help_idx": "E02502",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor detection path abnormal"
     },
     "E2503": {
         "msg": "AMP PN overvoltage occured",
         "cause": "May be occured when the robot playback speed changes rapidly or when the regenerative discharge resistor value increases.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.",
-        "help_idx": "1-servo-amp-board-part/E02503",
+        "help_idx": "E02503",
         "help_title": "[TroubleShoot]AMP PN overvoltage occured"
     },
     "E2504": {
         "msg": "AMP diode module abnormal or AC input voltage exceeded",
         "cause": "Abnormality generated with the diode module, causing the PN voltage to exceed the allowable range. In addition, the 3-phase voltage is inputted into the servo drive module (AMP) at a abnormally high level.",
         "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage.",
-        "help_idx": "1-servo-amp-board-part/E02504",
+        "help_idx": "E02504",
         "help_title": "[TroubleShoot]AMP diode module abnormal or AC input voltage exceeded"
     },
     "E2505": {
@@ -4782,6 +4782,21 @@
         "remedy": "Check the robot at the step where the error is generated.1) Check the wiring of the robot at the position where the error is generated.2) Check the error by lowering the robot playback speed.3) Check the error after changing the interpolation of the taught step.",
         "help_idx": "E02522",
         "help_title": "[TroubleShoot](%s axis) IPM fault-Specific step"
+    },
+    "E2523": {
+        "msg": "AMP Board Connection Error Detected (BD658T, BD657T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (641T). 5) If the error persists, replace the backplane board."
+    },
+    "E2524": {
+        "msg": "AMP Board Connection Error Detected (BD658T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board (BD658T) is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (BD641T). 5) If the error persists, replace the backplane board."
+    },
+    "E2525": {
+        "msg": "AMP Board Connection Error Detected (BD657T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board (BD657T) is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (BD641T). 5) If the error persists, replace the backplane board."
     },
     "E2530": {
         "msg": "Disconnection/Defective contact on the PWMON wiring between AMP and the system",
@@ -5254,9 +5269,9 @@
         "remedy": "1) Check the installation status of the main board or servo board.2) Replace the main board or the servo board."
     },
     "E2764": {
-        "msg": "H6SIO SAFETY FAULT Error is detected by H6SSM",
-        "cause": "H6SIO Module State enter to 'Fault State'",
-        "remedy": "SAFETY FAULT State. Please reboot the controller.",
+        "msg": "Safety Board (BD632) Error is detected",
+        "cause": "BD632 enters 'Safety Fault' state and transmits it to BD640.'",
+        "remedy": "Safety Fault state. Please reboot the controller. 2) Check the version information. 3) Replace the BD632 board. 4) Replace the main board. 5) Replace the servo board.",
         "help_idx": "E02764",
         "help_title": "[TroubleShoot] SFST Error is detected. Reboot the controller"
     },
@@ -10348,6 +10363,11 @@
         "cause": "Unnecessary unit was used for statement parameter.",
         "remedy": "Remove the unit from the statement parameter."
     },
+   "E14029": {
+      "msg": "The minimum value is set greater than the maximum value.",
+      "cause": "The minimum value parameter in the statement is set greater than the maximum value parameter.",
+      "remedy": "Please correct the parameter values in the statement."
+   },
     "E14030": {
         "msg": "The length of the statement exceeded the max.limit.",
         "cause": "The length of the statement exceeded 255 characters.",
@@ -10497,6 +10517,11 @@
         "msg": "Syntax error of case statement's condition expression.",
         "cause": "An invalid syntax was specified as case statement's condition expression.",
         "remedy": "Make sure you are not using undefined variables, misspelled variables, or incorrect expression."
+    },
+    "E14174": {
+        "msg": "The spot gun number has not been selected.",
+        "cause": "A command was entered without selecting the spot gun number",
+        "remedy": "Please check if the spot gun number has been selected."
     },
     "E14180": {
         "msg": "Syntax error of statement's parameter.",
@@ -10817,6 +10842,11 @@
         "msg": "Syntax error of label.",
         "cause": "After '*', legal alphanumeric indentifier has to be come.",
         "remedy": "Correct the label in accordance with the syntax."
+    },
+    "E14340": {
+        "msg": "Address invalidated by job editing.",
+        "cause": "Address invalidated by job editing, such as delete, remark.",
+		"remedy": "Please modify the address parameter into the branch address equivalent to the pre-editing location, manually."
     },
     "E14351": {
         "msg": "'input' statement shelter address branching fault.",
@@ -14900,14 +14930,14 @@
         "remedy": "Check bootlog and repo/sysinfo.hi6.json, and redo the integrated version-up."
     },
     "E29001": {
-        "msg": "Servo protocol does not match to Main S/W",
-        "cause": "Servo-Drive protocol between servo and Main S/W does not match to each other",
-        "remedy": "1)Perform S/W version upgrade.2)If the problem persists, please contact us."
+        "msg": "Servo communication (EtherCAT) initialization failure",
+        "cause": "Short circuit occurred in servo board (BD640), safety board (BD632) devices, or communication setting file (ENI) mismatch",
+        "remedy": "1) Check the wiring status of communication cables between boards. 2) Request communication setting file verification from our company"
     },
     "E29002": {
-        "msg": "fail to create the communication channel for servo-drive",
-        "cause": "unable to communication between master and slave devices for Servo-Drive",
-        "remedy": "1)check connection of ethernet cables in the controller.2)If the problem persists, please contact us."
+        "msg": "Servo communication (EtherCAT) disconnection occurred",
+        "cause": "Servo board (BD640) or safety board (BD632) malfunction, or communication cable disconnection",
+        "remedy": "1) Check the wiring status of communication cables between boards. 2) Request status verification of servo board and safety board from our company"
     },
     "E29003": {
         "msg": "Disconnection between master and slave devices occurred",
@@ -16443,6 +16473,11 @@
         "msg": "LVS step creation failed.",
         "cause": "Failed to create a move step.",
         "remedy": "The location is not accessible for path interpolation."
+    },
+    "E32729": {
+        "msg": "There is no global pose or shift variable assigned to LVS command's mp or ms argument.",
+        "cause": "There is no global variable assigned to lvs command's mp or ms argument.",
+        "remedy": "Check whether there is a global variable of the mp or ms argument in the lvs command or not."
     },
     "E32751": {
         "msg": "The input data detected at initial sensing is too low.",

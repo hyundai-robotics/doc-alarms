@@ -954,6 +954,16 @@
         "cause": "Failed to rename .job.~tmp file to .job file. This may be due to momentary file occupation,",
         "remedy": "Please try saving .job again by performing any job editing."
     },
+    "W16006": {
+        "msg": "USB drive was unmounted during use.",
+        "cause": "The USB drive was removed before use was completed, or it was disconnected due to poor contact or a hardware malfunction.",
+        "remedy": "Please reinsert the USB drive and retry it. If the issue persists, scan the USB drive for errors or consider replacing it."
+    },
+    "W16007": {
+        "msg": "TP storage space is insufficient.",
+        "cause": "The free TP storage is below the threshold (50MB), which may cause malfunction.",
+        "remedy": "Please, delete unnecessary files (such as old backups) from the TP."
+    },
     "W21001": {
         "msg": "%s axis)Test result are not suitable for test.",
         "cause": "The hold test angle variation of warning axis exceeds the release test angle variation.",
@@ -1529,6 +1539,11 @@
         "cause": "Communication is diconnected or lost",
         "remedy": "1) Check the cable.  2) Check the Communicaiton Status of the other party connected to the EtherCAT Master"
     },
+	"W29202": {
+        "msg": "Connected slave status is abnormal EtherCAT Master IO Channel",
+        "cause": "There is a slave whose communication status is not in Operation Mode",
+        "remedy": "1) Check the cable.  2) Check the Communicaiton Status of the other party connected to the EtherCAT Master"
+    },
     "W30001": {
         "msg": "%s gun) moving tip exceeded the wear amount for replacement(ServoGun)",
         "cause": "It occurs when moving tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
@@ -1623,6 +1638,11 @@
         "msg": "Cannot reverse beyond crater retreat position.",
         "cause": "No stored trajectory, so crater movement is not possible.",
         "remedy": "If the problem persists after normal welding, please back up all files from the controller and contact the A/S department of our company."
+    },
+    "W32033": {
+        "msg": "The robot movement speed in the welding section is abnormal. It must be checked.",
+        "cause": "The speed in the welding section is set to 20% or higher.",
+        "remedy": "Adjust the robot movement speed in the welding section to 20% or lower. 2) Check if the arcoff command is omitted at the welding end position."
     },
     "W32041": {
         "msg": "Welder abnormality signal input",
