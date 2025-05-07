@@ -104,10 +104,15 @@
 	"N115": { "msg": "Sensing tracking has been cleared." },
 	"N116": { "msg": "External motor off is entered." },
 	"N117": { "msg": "Motor on is attempted with TP not yet connected." },
+	"N118": { "msg": "TP reboot is requested." },
+	"N119": { "msg": "Backup to TP is requested." },
+	"N121": { "msg": "TP screen-saver has been released." },
 	"N130": { "msg": "SMT module versions are not equal. Please update the version." },
 	"N131": { "msg": "SSM module versions are not equal. Please update the version." },
 	"N160": { "msg": "Auto backup started." },
 	"N161": { "msg": "Auto backup completed." },
 	"N162": { "msg": "Callstack is cleared by editing job." },
+	"N165": { "msg": "An app's listmenu is updated." },
+	"N166": { "msg": "In spotpak communication, welder error occurred." },
 	"N167": { "msg": "Manual operation prohibition signal is on." }
 }

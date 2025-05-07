@@ -569,6 +569,11 @@
         "cause": "The sealer axis is not endless axis.",
         "remedy": "Perform the endless setting for the rotational sealer axis."
     },
+	"W184": {
+		"msg": "(%s axis) Reducer expected lifespan is less than 6,000 hours",
+		"cause": "Based on recent operation patterns, the expected lifespan of the reducer on this axis is estimated to be less than 6,000 hours, increasing the risk of reducer failure.",
+		"remedy": "Please check whether the tool's physical properties have been entered correctly. Reduce the operation speed or acceleration to decrease the load on the reducer."
+	},
     "W188": {
         "msg": "Please check the error from torque sensor or robot tool data",
         "cause": "Please check the error from torque sensor or robot tool data",
@@ -953,16 +958,6 @@
         "msg": "Failed to rename job temporary file.",
         "cause": "Failed to rename .job.~tmp file to .job file. This may be due to momentary file occupation,",
         "remedy": "Please try saving .job again by performing any job editing."
-    },
-    "W16006": {
-        "msg": "USB drive was unmounted during use.",
-        "cause": "The USB drive was removed before use was completed, or it was disconnected due to poor contact or a hardware malfunction.",
-        "remedy": "Please reinsert the USB drive and retry it. If the issue persists, scan the USB drive for errors or consider replacing it."
-    },
-    "W16007": {
-        "msg": "TP storage space is insufficient.",
-        "cause": "The free TP storage is below the threshold (50MB), which may cause malfunction.",
-        "remedy": "Please, delete unnecessary files (such as old backups) from the TP."
     },
     "W21001": {
         "msg": "%s axis)Test result are not suitable for test.",
@@ -1527,6 +1522,16 @@
     "W29107": {
         "msg": "Abnormal Motion Plan task execution time detected",
         "cause": "Exceeded the execution time threshold within the Motion Plan task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29108": {
+        "msg": "Abnormal Main service task execution time detected",
+        "cause": "Exceeded the execution time threshold within the Main service task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29109": {
+        "msg": "Abnormal 1ms task execution time detected",
+        "cause": "Exceeded the execution time threshold within the 1ms task",
         "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
     },
     "W29200": {
@@ -3204,6 +3209,16 @@
         "cause": "The filter applied to the weaving section does not match the settings.",
         "remedy": "1) Ensure that the F1, F2, and Fc filter values for all axes in the robot's servo parameters are the same. 2) If there are no issues, back up the controller file and contact us."
     },
+    "W32758": {
+        "msg": "The weaving width is less than the minimum width allowed in the arc sensing.",
+        "cause": "The weaving width is less than the minimum range allowed.",
+        "remedy": "Set the weaving width, larger than the minimum range."
+    },
+    "W32759": {
+        "msg": "The welding line for arc sensing calibration is too short.",
+        "cause": "The test data collected for arc sensing calibration is too little.",
+        "remedy": "Perform the test by increasing the length of the testing welding line or by decreasing the moving speed."
+    },
     "W32760": {
         "msg": "Current regression is overflowed",
         "cause": "regression impossible",
@@ -3263,5 +3278,220 @@
         "msg": "GUN LED is not actived([GUN] key on T/P)",
         "cause": "The GUN LED using painting App. is not actived.",
         "remedy": "Press [SHIFT][GUN] key simultaneously in auto mode."
+    },
+	 "SW652": {
+        "msg": "TCP position violation (Cell %s)",
+        "cause": "TCP position is out of the cell area.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
+    },
+    "SW653": {
+        "msg": "Robot self collision detection",
+        "cause": "The collision detected between the robot moel and the tool model.",
+        "remedy": "1) Change the mode to manual. 2) Jong the robot to prevent collsion. 3) Verify the job program."
+    },
+    "SW654": {
+        "msg": "TCP orientation violation (%s [deg])",
+        "cause": "TCP orientation exceeded the limits.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the TCP orientation in job program."
+    },
+    "SW655": {
+        "msg": "TCP speed violation in manual mode(%s [mm/s])",
+        "cause": "TCP speed exceeded the limits in manual mode.",
+        "remedy": "Check the value set in the safety function menu."
+    },
+    "SW656": {
+        "msg": "Joint space violation(%s [deg])",
+        "cause": "Joint position is out of the safe space.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
+    },
+    "SW657": {
+        "msg": "Joint speed violation(%s [deg/s])",
+        "cause": "Joint speed exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed in job program."
+    },
+    "SW658": {
+        "msg": "Robot power violation(%s [N])",
+        "cause": "Robot power exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed and position in job program."
+    },
+    "SW659": {
+        "msg": "Robot momentum violation(%s [kg m/s])",
+        "cause": "Robot momentum exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed and position in job program."
+    },
+    "SW660": {
+        "msg": "Collision detection- safety(%s axis)",
+        "cause": "1) If a collision occurrs, remove the cause of the collision. 2) Verify the sensitivity of collision detection.",
+        "remedy": "Check the value set in the safety function menu."
+    },
+    "SW661": {
+        "msg": "TCP speed violation in reduced mode(%s [mm/s])",
+        "cause": "TCP speed exceeded the limits in reduced mode",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
+    },
+    "SW662": {
+        "msg": "Stopping distance violation",
+        "cause": "Stopping distance exceeded the limits",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
+    },
+    "SW663": {
+        "msg": "Stopping time violation",
+        "cause": "Stopping time exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
+    },
+    "SW664": {
+        "msg": "TCP speed violation(%s [mm/s])",
+        "cause": "TCP speed exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
+    },
+	"W54902": {
+        "msg": "2nd Encoder BISS communication error detection",
+        "cause": "2nd Encoder BISS communication error detected.",
+        "remedy": "1) Check the MB4 register status to verify the connection of the problematic 2nd encoder and the 2nd encoder cable. \n2) Reboot the controller. \n3) If the problem persists, replace the 2nd Encoder Cable or the 2nd Encoder with a new one.  \n4) If the problem persists, replace the Sensor Control board with a new one. "
+    },
+	"W54913": {
+        "msg": "1-Axis 2nd Encoder Sensor error detection",
+        "cause": "1-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54914": {
+        "msg": "1-Axis 2nd Encoder Sensor warning detection",
+        "cause": "1-Axis 2nd Encoder Sensor warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54915": {
+        "msg": "1-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "1-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54923": {
+        "msg": "2-Axis 2nd Encoder Sensor error detection",
+        "cause": "2-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54924": {
+        "msg": "2-Axis 2nd Encoder Sensor warning detection",
+        "cause": "2-Axis 2nd Encoder Sensor warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54925": {
+        "msg": "2-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "2-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54933": {
+        "msg": "3-Axis 2nd Encoder Sensor error detection",
+        "cause": "3-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54934": {
+        "msg": "3-Axis 2nd Encoder Sensor warning detection",
+        "cause": "3-Axis 2nd Encoder Sensor warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54935": {
+        "msg": "3-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "3-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54943": {
+        "msg": "4-Axis 2nd Encoder Sensor error detection",
+        "cause": "4-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54944": {
+        "msg": "4-Axis 2nd Encoder Sensor warning detection",
+        "cause": "4-Axis 2nd Encoder Sensor warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54945": {
+        "msg": "4-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "4-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54953": {
+        "msg": "5-Axis 2nd Encoder Sensor error detection",
+        "cause": "5-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54954": {
+        "msg": "5-Axis 2nd Encoder Sensor warning detection",
+        "cause": "5-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54955": {
+        "msg": "5-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "5-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+	"W54963": {
+        "msg": "6-Axis 2nd Encoder Sensor error detection",
+        "cause": "6-Axis 2nd Encoder Sensor error detected.",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54964": {
+        "msg": "6-Axis 2nd Encoder Sensor warning detection",
+        "cause": "6-Axis 2nd Encoder Sensor warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W54965": {
+        "msg": "6-Axis 2nd Encoder Sensor error and warning detection",
+        "cause": "6-Axis 2nd Encoder Sensor error and warning detected",
+        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+    },
+    "W55001": {
+        "msg": "UserDIO Board (#%s) EtherCAT communication status abnormality detection",
+        "cause": "UserDIO Board EtherCAT communication status abnormality detected",
+        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
+    },
+    "W55002": {
+        "msg": "UserDIO Board (#%s) EtherCAT disconnect detection",
+        "cause": "UserDIO Board EtherCAT disconnect detected",
+        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
+    },
+	"W55003": {
+        "msg": "UserDIO Board (#%s) MAIN COM INIT Setting Value Error detection",
+        "cause": "UserDIO Board MAIN COM INIT Setting Value Error detected",
+        "remedy": "1) Reboot the controller.  \n2) Please re-run the UserDIO Board setup in the TP menu. "
+    },
+    "W55100": {
+        "msg": "UserDIO Board (#%s) IPC CRC Error detection(CPU1 -> CM)",
+        "cause": "UserDIO Board IPC CRC Error detected",
+        "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+	"W55101": {
+        "msg": "UserDIO Board (#%s) INIT Setting Value Error detection",
+        "cause": "UserDIO Board INIT Setting Value Error detected",
+        "remedy": "1) Reboot the controller.  \n2) Please re-run the UserDIO Board setup in the TP menu. "
+    },
+    "W55200": {
+        "msg": "UserDIO Board (#%s) IPC CRC Error detection(CM -> CPU1)",
+        "cause": "UserDIO Board IPC CRC Error detected",
+        "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+	"W55210": {
+        "msg": "UserDIO Board (#%s) CPU1 version upgrade file's CRC error detection",
+        "cause": "UserDIO Board CPU1 version upgrade file's CRC error detected",
+        "remedy": "1) Please verify if this is the correct version upgrade file. \n2) After rebooting the controller, please try Version Upgrading the user DIO board again. \n3) Replace the UserDIO Board with a new one.  \n4) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+	"W55211": {
+        "msg": "UserDIO Board (#%s) CPU1 version upgrade file's size error detection",
+        "cause": "UserDIO Board CPU1 version upgrade file's size error detected",
+        "remedy": "1) Please verify if this is the correct version upgrade file. \n2) After rebooting the controller, please try Version Upgrading the user DIO board again. \n3) Replace the UserDIO Board with a new one.  \n4) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+    "W55301": {
+        "msg": "UserDIO Board (#%s) DSP Watchdog Error detection",
+        "cause": "UserDIO Board DSP Watchdog Error detected",
+        "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+    "W55302": {
+        "msg": "UserDIO Board (#%s) Watchdog Chip Error detection",
+        "cause": "UserDIO Board Watchdog Chip Error detected",
+        "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
+    },
+    "W55303": {
+        "msg": "UserDIO Board (#%s) Watchdog Chip initialization Error detection",
+        "cause": "UserDIO Board Watchdog Chip initialization Error detected",
+        "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
     }
 }
