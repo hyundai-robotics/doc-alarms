@@ -4240,8 +4240,8 @@
     },
     "E2305": {
         "msg": "Safety moulde fault(module 2 is not alive)",
-        "cause": "Hearbeat from Safety Module is lost. module may be in fault or communication is failed",
-        "remedy": "Check the Safety module, communication module and cable"
+        "cause": "No operation signal received from the safety module. The module may be in an error state or communication may have been lost.",
+        "remedy": "Check the safety module, communication module, and EtherCAT communication cable. If the issue persists, replace the servo board (BD640) and safety board (BD632) in sequence."
     },
     "E2310": {
         "msg": "Auto mode safety guard switch operating",
@@ -4582,46 +4582,46 @@
         "remedy": "Retry the temperature setting for encoder overheating detection"
     },
     "E2450": {
-        "msg": "(%s axis) encoder not replying to the request",
-        "cause": "Serial encoder not responding the request signal.",
-        "remedy": "1) Check the connection state of the cable and the connector related to the encoder2) Check the ground state of the encoder-related cable.3) Replace Motor(with Encoder)4) Replace Servo board.5) Replace Encoder-related cable.",
+        "msg": "(%s axis) No Encoder Response",
+        "cause": "The serial encoder did not respond to the data request signal.",
+        "remedy": "1) Check the encoder power supply voltage. 2) Inspect the encoder wiring and connectors, including grounding. 3) Replace the servo board (BD640). 4) Replace the motor (encoder).",
         "help_idx": "E02450",
-        "help_title": "[TroubleShoot](%s axis) encoder not replying to the request"
+        "help_title": "[TroubleShoot](%s axis) No Encoder Response"
     },
     "E2451": {
-        "msg": "(%s axis) Count of the received encoder data is wrong.",
-        "cause": "Count of the received encoder data is wrong.",
-        "remedy": "1) Check the ground state of the encoder-related cable.2) Check the connection state of the cable and the connector related to the encoder3) Replace Motor(with Encoder)4) Replace Servo board.5) Replace Encoder-related cable.",
+        "msg": "(%s axis) Abnormal Number of Encoder Data Received",
+        "cause": "The number of data received from the encoder is outside the normal range.",
+        "remedy": "1) Check the grounding of the encoder cable. 2) Inspect the connection status of the encoder cable and connectors. 3) Replace the motor (encoder). 4) Replace the servo board (BD640). 5) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02451",
-        "help_title": "[TroubleShoot](%s axis) Count of the received encoder data is wrong."
+        "help_title": "[TroubleShoot](%s axis) Abnormal Number of Encoder Data Received"
     },
     "E2452": {
-        "msg": "(%s axis) Encoder data end signal is not received.",
-        "cause": "End signal of the received encoder data not received",
-        "remedy": "1) Check the ground state of the encoder-related cable.2) Check the connection state of the cable and the connector related to the encoder.3) Replace Motor(with Encoder).4) Replace Servo board5) Replace Encoder-related cable",
+        "msg": "(%s axis) Encoder End Signal (Ser_End) Not Received",
+        "cause": "The encoder did not complete data transmission, or the end signal (Ser_End) was not received correctly.",
+        "remedy": "1) Check the grounding of the encoder cable. 2) Inspect the connection status of the encoder cable and connectors. 3) Replace the motor (encoder). 4) Replace the servo board (BD640). 5) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02452",
-        "help_title": "[TroubleShoot](%s axis) Encoder data end signal is not received."
+        "help_title": "[TroubleShoot](%s axis) Encoder End Signal (Ser_End) Not Received"
     },
     "E2453": {
-        "msg": "(%s axis) encoder data CRC error",
-        "cause": "CRC error with the received encoder data.",
-        "remedy": "1) Check the ground state of the encoder-related cable.2) Check the connection state of the cable and the connector related to the encoder.3) Encoder defective4) Servo board defective5) Encoder-related cable defective",
+        "msg": "(%s axis) Encoder Data Error (CRC Error Detected)",
+        "cause": "A CRC mismatch was detected in the data received from the encoder, indicating a data error.",
+        "remedy": "1) Check the grounding of the encoder cable. 2) Inspect the connection status of the encoder cable and connectors. 3) Replace the motor (encoder). 4) Replace the servo board (BD640). 5) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02453",
-        "help_title": "[TroubleShoot](%s axis) encoder data CRC error"
+        "help_title": "[TroubleShoot](%s axis) Encoder Data Error (CRC Error Detected)"
     },
     "E2454": {
-        "msg": "(%s axis) encoder disconnected or defective contact-Motor Off",
-        "cause": "Encoder signal not received while in the Motor Off state.",
-        "remedy": "1) Check the connection state of the cable and the connector related to the encoder2) Encoder defective3) Servo board defective4) Encoder-related cable defective",
+        "msg": "(%s axis) Encoder Disconnected or Contact Failure (Motor OFF State)",
+        "cause": "Communication between the encoder and the servo board is unstable or not received at all, indicating a possible cable disconnection or contact failure.",
+        "remedy": "1) Check the grounding of the encoder cable. 2) Inspect the connection status of the encoder cable and connectors. 3) Replace the motor (encoder). 4) Replace the servo board (BD640). 5) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02454",
-        "help_title": "[TroubleShoot](%s axis) encoder disconnected or defective contact-Motor Off"
+        "help_title": "[TroubleShoot](%s axis) Encoder Disconnected or Contact Failure (Motor OFF State)"
     },
     "E2455": {
-        "msg": "(%s axis) encoder data jump error",
-        "cause": "For the position value of the received encoder data, the value of the jump, measured by being compared with the previous process, is received.",
-        "remedy": "1) Check the connection state of the cable and the connector related to the encoder2) Check the encoder power line.3) Servo board defective",
+        "msg": "(%s axis) Abnormal Encoder Data (Irregular Value Detected)",
+        "cause": "The position or speed value received from the encoder changed abnormally for a moment, indicating unreliable encoder data.",
+        "remedy": "1) Check the encoder power line. 2) Check the grounding of the encoder cable. 3) Inspect the connection status of the encoder cable and connectors. 4) Replace the motor (encoder). 5) Replace the servo board (BD640). 6) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02455",
-        "help_title": "[TroubleShoot](%s axis) encoder data jump error"
+        "help_title": "[TroubleShoot](%s axis) Abnormal Encoder Data (Irregular Value Detected)"
     },
     "E2456": {
         "msg": "Servo board 1 encoder disconnected or power abnormal",
@@ -4639,53 +4639,53 @@
         "remedy": ""
     },
     "E2459": {
-        "msg": "(%s axis) encoder disconnected or defective contact-Motor On",
-        "cause": "Encoder data not received while in the Motor On state.",
-        "remedy": "1. Check the connection state of the cable and the connector related to the encoder2. Encoder defective3. Servo board defective4. Encoder-related cable defective",
+        "msg": "(%s axis) Encoder Disconnected or Contact Failure (Motor ON State)",
+        "cause": "Communication between the encoder and the servo board is unstable or not received at all, indicating a possible cable disconnection or contact failure.",
+        "remedy": "1) Check the grounding of the encoder cable. 2) Inspect the connection status of the encoder cable and connectors. 3) Replace the motor (encoder). 4) Replace the servo board (BD640). 5) Check for disconnection or noise in the encoder-related cables.",
         "help_idx": "E02459",
-        "help_title": "[TroubleShoot](%s axis) encoder disconnected or defective contact-Motor On"
+        "help_title": "[TroubleShoot](%s axis) Encoder Disconnected or Contact Failure (Motor ON State)"
     },
     "E2460": {
-        "msg": "(%s axis) encoder state error (CE) received",
-        "cause": "Will be generated in a case in which malfunction or fault with the 1-rotation data causes the position to deviated when the encoder main power is on.",
-        "remedy": "1) Check the encoder supply voltage2) After resetting the encoder error, the encoder main power OFF / ON3) When the error is generated continuously, replace the motor or encoder.",
+        "msg": "(%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)",
+        "cause": "An error occurred in storing the encoder's internal rotation value, causing the CE (Counter Error) bit to be set. The rotation count information may have been stored incorrectly or the internal calculation is unreliable.",
+        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the encoder power supply status. 3) If the error persists, replace the motor (encoder). 4) Replace the servo board (BD640).",
         "help_idx": "E02460",
-        "help_title": "[TroubleShoot](%s axis) encoder state error (CE) received"
+        "help_title": "[TroubleShoot](%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)"
     },
     "E2461": {
-        "msg": "(%s axis) encoder state error (OS) received",
-        "cause": "While driving using the external battery power after the encoder main power is off, if the encoder rotates exceeding the power failure mode regulated value (6000 rpm), the main power will be on, generating the error.",
-        "remedy": "1) Check the encoder supply voltage2) After resetting the encoder error, the encoder main power OFF / ON3) When the error is generated continuously, replace the motor or encoder.",
+        "msg": "(%s axis) Encoder Overspeed Error (OS Bit Detected)",
+        "cause": "The encoder rotation speed has exceeded the allowable range, setting the OS (Overspeed) bit. This may be due to an actual overspeed condition or a false detection caused by signal anomalies.",
+        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the encoder power supply status. 3) Inspect the encoder wiring. 4) If the error persists, replace the motor (encoder). 5) Replace the servo board (BD640).",
         "help_idx": "E02461",
-        "help_title": "[TroubleShoot](%s axis) encoder state error (OS) received"
+        "help_title": "[TroubleShoot](%s axis) Encoder Overspeed Error (OS Bit Detected)"
     },
     "E2462": {
-        "msg": "(%s axis) encoder state error (FS) received",
-        "cause": "Will be generated in a case in which the encoder main power is on while the encoder axis rotates exceeding 100 rpm. When the Dl flag is generated, the position resolution is 5 bit. When the resolution becomes 17 bit, it will be released automatically.",
-        "remedy": "1) Check the encoder supply voltage2) After resetting the encoder error, the encoder main power OFF / ON3) When the error is generated continuously, replace the motor or encoder.",
+        "msg": "(%s axis) Encoder Position Not Initialized (FS Bit Detected)",
+        "cause": "The encoder has not reached the Full Absolute state, resulting in incomplete position information. This may occur due to power-on initialization failure or loss of backup data.",
+        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the encoder power supply status. 3) If the error persists, replace the motor (encoder). 4) Replace the servo board (BD640).",
         "help_idx": "E02462",
-        "help_title": "[TroubleShoot](%s axis) encoder state error (FS) received"
+        "help_title": "[TroubleShoot](%s axis) Encoder Position Not Initialized (FS Bit Detected)"
     },
     "E2463": {
-        "msg": "(%s axis) encoder state error (ME) received",
-        "cause": "While the encoder main power is on, multi-rotation signal jump occurs.",
-        "remedy": "1) Check the encoder supply voltage2) After resetting the encoder error, the encoder main power OFF / ON3) When the error is generated continuously, replace the motor or encoder.",
+        "msg": "(%s axis) Encoder Multiturn Storage Error (ME Bit Detected)",
+        "cause": "A problem occurred while storing rotation count information in the multiturn encoder, causing the ME (Multiturn Error) bit to be set. This may be due to power issues, storage circuit failure, or battery degradation.",
+        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the encoder power supply status. 3) If the error persists, replace the motor (encoder). 4) Replace the servo board (BD640).",
         "help_idx": "E02463",
-        "help_title": "[TroubleShoot](%s axis) encoder state error (ME) received"
+        "help_title": "[TroubleShoot](%s axis) Encoder Multiturn Storage Error (ME Bit Detected)"
     },
     "E2464": {
-        "msg": "(%s axis) encoder state error (BE) received",
-        "cause": "When the encoder main power is off, the external battery voltage is 3. Will be generated when below 1V.",
-        "remedy": "1) Check the encoder supply voltage2) After resetting the encoder error, the encoder main power OFF / ON3) When the error is generated continuously, replace the motor or encoder.",
+        "msg": "(%s axis) Encoder Battery Error (BE Bit Detected)",
+        "cause": "The encoder battery voltage dropped below the threshold (3.1V), or a connection issue occurred, causing the BE (Battery Error) bit to be set.",
+        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the voltage of the encoder backup battery. 3) Inspect the encoder battery wiring connection. 4) If the error persists, replace the motor (encoder). 5) Replace the servo board (BD640).",
         "help_idx": "E02464",
-        "help_title": "[TroubleShoot](%s axis) encoder state error (BE) received"
+        "help_title": "[TroubleShoot](%s axis) Encoder Battery Error (BE Bit Detected)"
     },
     "E2470": {
-        "msg": "(%s axis) encoder abnormal: Encoder reset required",
-        "cause": "Encoder data outside the offset function application range.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Encoder Error: Reset Required",
+        "cause": "The encoder has lost its position data due to delayed battery replacement. A serial encoder reset procedure is required.",
+        "remedy": "Refer to the encoder reset procedure in the service manual.",
         "help_idx": "E02470",
-        "help_title": "[TroubleShoot](%s axis) encoder abnormal: Encoder reset required"
+        "help_title": "[TroubleShoot](%s axis) Encoder Error: Reset Required"
     },
     "E2471": {
         "msg": "%s axis) encoder battery replacement&reset required",
@@ -4693,9 +4693,11 @@
         "remedy": "Check the state related to encoder battery voltage and connection of cables, and then replace the battery before resetting the encoder."
     },
     "E2472": {
-        "msg": "(%s axis) encoder overheating detected",
-        "cause": "Encoder internal temperature increased to the limit value.",
-        "remedy": "Check the motor temperature, and adjust the robot operation speed."
+        "msg": "(%s axis) Encoder Overheat Detected (OH Bit Set)",
+        "cause": "The internal temperature of the encoder has reached the specified upper limit.",
+        "remedy": "1) Test with a replacement motor (encoder). 2) Check the operating conditions (speed, load, etc.). 3) Inspect the ambient temperature around the encoder. 4) Replace the servo board (BD640).",
+        "help_idx": "E02472",
+        "help_title": "[TroubleShoot](%s axis) Encoder Overheat Detected (OH Bit Set)"
     },
     "E2500": {
         "msg": "AMP regenerative discharge resistor overheated",
@@ -4889,14 +4891,18 @@
         "remedy": "Take measures for the error related to E2560."
     },
     "E2554": {
-        "msg": "Initial charge relay malfunction.",
-        "cause": "Malfunction of the initial charge relay.",
-        "remedy": "Check for damage to the initial charge relay or cables."
+        "msg": "Initial Pre-Charge Relay Operation Failure",
+        "cause": "An abnormality was detected in the operation of the initial pre-charge relay.",
+        "remedy": "1) Replace the servo board (BD640).",
+        "help_idx": "E02554",
+        "help_title": "[TroubleShoot] Initial Pre-Charge Relay Operation Failure"
     },
     "E2560": {
-        "msg": "Brake power supply shut off",
-        "cause": "Brake power not supplied.",
-        "remedy": "1) Check the brake power.2) If the power is not measured, check the CNB wiring.3) Replace the brake SMPS inside the electronic module."
+        "msg": "Brake Power Supply Error",
+        "cause": "The brake power supply is not being delivered.",
+        "remedy": "1) Check if the 24V brake power is being supplied properly. (Inspect SMPS input/output and the output terminal of the noise filter.) 2) Check for disconnection or contact failure in the brake power cable. 3) Replace the servo board (BD640).",
+        "help_idx": "E02560",
+        "help_title": "[TroubleShoot] Brake Power Supply Error"
     },
     "E2561": {
         "msg": "Brake power supply unstable",
@@ -4914,14 +4920,18 @@
         "remedy": "Replace the system board."
     },
     "E2564": {
-        "msg": "(%s axis )Brake output overcurrent detected",
-        "cause": "Brake output overcurrent has been detected.",
-        "remedy": "Check the brake status. If the issue persists, replace the brake and system board."
+        "msg": "(%s axis) Brake Output Overcurrent Detected",
+        "cause": "An overcurrent condition was detected in the brake output.",
+        "remedy": "1) Check the condition of the brake output line (wiring and connectors). 2) Replace the servo board (BD640).",
+        "help_idx": "E02564",
+        "help_title": "[TroubleShoot](%s axis) Brake Output Overcurrent Detected"
     },
     "E2570": {
-        "msg": "(%s axis) brake output abnormality.",
-        "cause": "No feedback detected for the brake signal output.",
-        "remedy": "Since the brake is not functioning, check the brake status or brake output cables."
+        "msg": "(%s axis) Brake Output Error",
+        "cause": "No feedback is detected from the brake output signal.",
+        "remedy": "1) Replace the servo board (BD640). 2) Check the condition of the brake output line (wiring and connectors).",
+        "help_idx": "E02570",
+        "help_title": "[TroubleShoot](%s axis) Brake Output Error"
     },
     "E2590": {
         "msg": "System board servo brake error",
@@ -5033,11 +5043,11 @@
         "help_title": "[TroubleShoot](%s axis) position deviation exceeded"
     },
     "E2631": {
-        "msg": "(%s axis) position deviation exceeded for each speed",
-        "cause": "Position deviation exceeded the set error value for each speed.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Speed-Based Position Deviation Excess",
+        "cause": "The position deviation has exceeded the configured threshold based on speed.",
+        "remedy": "1) Check for mechanical interference on the affected axis. 2) Verify proper brake release operation; if abnormal, check the brake power supply. 3) Ensure the system is operating under rated load. 4) Inspect the U, V, W motor wiring. 5) Check the configured position deviation level. 6) Confirm the version information of the servo board (BD640) and main COM. 7) If the problem persists, sequentially replace the servo board, AMP, PSM, and motor for diagnosis.",
         "help_idx": "E02631",
-        "help_title": "[TroubleShoot](%s axis) position deviation exceeded"
+        "help_title": "[TroubleShoot](%s axis) Speed-Based Position Deviation Excess"
     },
     "E2632": {
         "msg": "(%s axis) position deviation exceeded (brake voltage lowered)",
@@ -5054,11 +5064,11 @@
         "help_title": "[TroubleShoot](%s axis) position deviation exceeded - load estimation not executed"
     },
     "E2634": {
-        "msg": "(%s axis) position deviation exceeded (low temperature friction increased)",
-        "cause": "Position deviation exceeded the set error value because the grease viscosity friction coefficient increases in low temperatures.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Position Deviation Excess (Increased Friction at Low Temperature)",
+        "cause": "When the encoder operates under low temperature conditions, the viscosity of the grease increases, leading to higher friction and causing the position deviation to exceed the configured error threshold.",
+        "remedy": "Refer to the service manual for troubleshooting procedures.",
         "help_idx": "E02634",
-        "help_title": "[TroubleShoot](%s axis) position deviation exceeded – low temperature friction increased"
+        "help_title": "[TroubleShoot](%s axis) Position Deviation Excess – Increased Friction at Low Temperature"
     },
     "E2635": {
         "msg": "(%s axis) position deviation exceeded (Unable to transmit position command)",
@@ -5099,25 +5109,25 @@
         "remedy": "Refer to the fault repair methods."
     },
     "E2650": {
-        "msg": "(%s axis) motor overloaded",
-        "cause": "Motor being operated by force above the set level.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Motor Overload",
+        "cause": "The motor has continuously operated beyond its rated current, resulting in an overload condition.",
+        "remedy": "Refer to the service manual for troubleshooting procedures.",
         "help_idx": "E02650",
-        "help_title": "[TroubleShoot](%s axis) motor overloaded"
+        "help_title": "[TroubleShoot](%s axis) Motor Overload"
     },
     "E2651": {
-        "msg": "(%s axis) motor overloaded (brake voltage lowered)",
-        "cause": "Current flowing through the motor exceeded the set continuous rating because the brake cannot be released.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Motor Overload (Brake Voltage Drop)",
+        "cause": "A motor overload error occurred due to continuous operation above rated current, caused by the brake failing to release properly due to insufficient brake voltage.",
+        "remedy": "Refer to the service manual for troubleshooting procedures.",
         "help_idx": "E02651",
-        "help_title": "[TroubleShoot](%s axis) Motor overloading - brake voltage lowered"
+        "help_title": "[TroubleShoot](%s axis) Motor Overload – Brake Voltage Drop"
     },
     "E2652": {
-        "msg": "(%s axis) motor overloaded (load estimation not executed)",
-        "cause": "Current flowing through the overloaded motor exceeded the set continuous rating because the load estimation is not executed.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Motor Overload (Load Estimation Not Performed)",
+        "cause": "A motor overload error occurred due to continuous operation above rated current, as load estimation was not performed.",
+        "remedy": "Refer to the service manual for troubleshooting procedures.",
         "help_idx": "E02652",
-        "help_title": "[TroubleShoot](%s axis) Motor overloading - load estimation not executed"
+        "help_title": "[TroubleShoot](%s axis) Motor Overload – Load Estimation Not Performed"
     },
     "E2653": {
         "msg": "(%s axis) motor overloaded (low-temperature friction increased)",
@@ -5149,11 +5159,11 @@
         "help_title": "[TroubleShoot](%s axis) command value abnormal"
     },
     "E2680": {
-        "msg": "(%s axis) max. speed exceeded",
-        "cause": "Position command, transmitted to the servo board, exceeded the max. speed.",
-        "remedy": "Refer to the fault repair methods.",
+        "msg": "(%s axis) Maximum Speed Exceeded",
+        "cause": "The command sent to the servo board exceeded the configured maximum speed.",
+        "remedy": "Refer to the service manual for troubleshooting procedures.",
         "help_idx": "E02680",
-        "help_title": "[TroubleShoot](%s axis) max. speed exceeded"
+        "help_title": "[TroubleShoot](%s axis) Maximum Speed Exceeded"
     },
     "E2690": {
         "msg": "Servo on time limit exceeded",
@@ -5305,18 +5315,18 @@
         "remedy": "1) Check the mounting state of the main board or the servo board.2) Replace the main board or the servo board."
     },
     "E2780": {
-        "msg": "(%s axis) impossible to maintain servo lock-Problems with wiring and generation of current",
-        "cause": "Check the motor wiring, AMP, the BD542 board, and the CNBS cable between AMP and the BD542 board.",
-        "remedy": "1. Check the motor wire, AMP, and the CNBS cable between the servo board and AMP.2. Replace AMP3. Replace the servo board",
+        "msg": "(%s axis) Servo Lock Cannot Be Maintained – Current Generation Error",
+        "cause": "Current is not being properly supplied to the motor due to issues such as disconnection between the motor and controller or wiring faults.",
+        "remedy": "1) Verify that the correct robot model is configured. 2) Inspect the motor power and encoder communication lines. 3) Check the cable connection between the servo board and the amplifier board. 4) If the issue persists, replace and test in the following order: servo board, amplifier board, wire harness, motor, and PSM.",
         "help_idx": "E02780",
-        "help_title": "[TroubleShoot](%s axis) impossible to maintain servo lock-Problems with wiring and generation of current"
+        "help_title": "[TroubleShoot](%s axis) Servo Lock Cannot Be Maintained – Current Generation Error"
     },
     "E2781": {
-        "msg": "(%s axis) impossible to maintain servo lock-Problems with gain",
-        "cause": "Gain setting error",
-        "remedy": "Check the setting of gain.",
+        "msg": "(%s axis) Servo Lock Cannot Be Maintained – Parameter Error",
+        "cause": "Current is not being properly supplied to the motor due to issues such as disconnection between the motor and controller or wiring faults.",
+        "remedy": "1) Verify that the correct robot model is configured. 2) Inspect the motor power and encoder communication lines. 3) Check the cable connection between the servo board and the amplifier board. 4) If the issue persists, replace and test in the following order: servo board, amplifier board, wire harness, and motor.",
         "help_idx": "E02781",
-        "help_title": "[TroubleShoot](%s axis) impossible tomaintain servo lock-Problems with gain"
+        "help_title": "[TroubleShoot](%s axis) Servo Lock Cannot Be Maintained – Parameter Error"
     },
     "E2785": {
         "msg": "(%s axis) current deviation error-Problems with wiring and generation of current",
