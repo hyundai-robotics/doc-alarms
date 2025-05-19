@@ -959,6 +959,21 @@
         "cause": "Failed to rename .job.~tmp file to .job file. This may be due to momentary file occupation,",
         "remedy": "Please try saving .job again by performing any job editing."
     },
+    "W16006": {
+        "msg": "USB drive was unmounted during use.",
+        "cause": "The USB drive was removed before use was completed, or it was disconnected due to poor contact or a hardware malfunction.",
+        "remedy": "Please reinsert the USB drive and retry it. If the issue persists, scan the USB drive for errors or consider replacing it."
+    },
+    "W16007": {
+        "msg": "TP storage space is insufficient.",
+        "cause": "The free TP storage is below the threshold (50MB), which may cause malfunction.",
+        "remedy": "Please, delete unnecessary files (such as old backups) from the TP."
+    },
+    "W16008": {
+        "msg": "The job %s's filename is invalid.",
+        "cause": "The job filename contains disallowed special characters. (#*+<>\"?/|\\)",
+        "remedy": "Please correct the job filename using FileManager or FTP."
+    },
     "W21001": {
         "msg": "%s axis)Test result are not suitable for test.",
         "cause": "The hold test angle variation of warning axis exceeds the release test angle variation.",
@@ -3279,6 +3294,11 @@
         "cause": "The GUN LED using painting App. is not actived.",
         "remedy": "Press [SHIFT][GUN] key simultaneously in auto mode."
     },
+    "W38000": {
+        "msg": "(HTTP Server) Excessive Close connections detected.",
+        "cause": "Repeated HTTP requests using the 'Close' connection method place excessive load on the Hi6 system, potentially causing serious issues such as robot halts. As a result, the requesting client has been blacklisted (will reset after 60 seconds).",
+        "remedy": "For repeated API requests or persistent HTTP connections, please set the 'Connection' header to 'Keep-Alive'."
+    },
 	 "SW652": {
         "msg": "TCP position violation (Cell %s)",
         "cause": "TCP position is out of the cell area.",
@@ -3493,5 +3513,5 @@
         "msg": "UserDIO Board (#%s) Watchdog Chip initialization Error detection",
         "cause": "UserDIO Board Watchdog Chip initialization Error detected",
         "remedy": "1) Replace the UserDIO Board with a new one.  \n2) Please contact the maintenance department of this company if the same error occurs again even after replacing the UserDIO Board. "
-    }
+	}
 }

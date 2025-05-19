@@ -257,9 +257,9 @@
         "remedy": "Check the set robot type."
     },
     "E103": {
-        "msg": "(%s axis) encoder abnormal: Communication processing time exceeded",
-        "cause": "Encoder data has not been received within the encoder communication processing time.",
-        "remedy": "Refer to the troubleshooting manual"
+        "msg": "Parameter Transfer Failure During Boot (BD640)",
+        "cause": "The encoder parameter values exchanged between the main controller (hi6COM) and the servo board (BD640) do not match, or no response was received within the specified time.",
+        "remedy": "1)nVerify that the firmware versions of the main controller (hi6COM) and the servo board (BD640) are compatible. 2) Check the EtherCAT communication status between the main controller and the servo board. 3) If the issue persists, perform replacement tests in the following order: servo board (BD640), then main controller (hi6COM)."
     },
     "E104": {
         "msg": "(%s axis) encoder abnormal: Data frame incomplete",
@@ -4648,7 +4648,7 @@
     "E2460": {
         "msg": "(%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)",
         "cause": "An error occurred in storing the encoder's internal rotation value, causing the CE (Counter Error) bit to be set. The rotation count information may have been stored incorrectly or the internal calculation is unreliable.",
-        "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Check the encoder power supply status. 3) If the error persists, replace the motor (encoder). 4) Replace the servo board (BD640).",
+        "remedy": "1) 1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. 2) Inspect the connection status of the encoder cable and connectors. 3) If the error persists, replace the motor (encoder). 4) Replace the servo board (BD640).",
         "help_idx": "E02460",
         "help_title": "[TroubleShoot](%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)"
     },
@@ -4702,63 +4702,63 @@
     "E2500": {
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "Regenerative discharge resistor temperature increased above the reference value. Excessive robot playback speed, or problem with the cooling system.",
-        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.3) Check the cooling system.4) Check the regenerative power capacity of robot.",
+        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.3) Check the cooling system.4) Check the regenerative power capacity of robot. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02500",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E2501": {
         "msg": "AMP regenerative discharge resistor disconnected, resistor or circuit abnormal",
         "cause": "Overheating error will be generated if a resistor is disconnected or the discharge control is abnormal. In addition, this could be generated when the regenerative discharge resistance value and the 3-phase power voltage values increase",
-        "remedy": "1) Check the regenerative discharge resistor value(CNDR).2) Check the servo drive module.3) Check the controller power voltage.",
+        "remedy": "1) Check the regenerative discharge resistor value(CNDR).2) Check the servo drive module.3) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02501",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor disconnected, resistor or circuit abnormal"
     },
     "E2502": {
         "msg": "AMP regenerative discharge resistor detection path abnormal",
         "cause": "Abnormality generated with the overheating error detection path, or the resistor value has varied.",
-        "remedy": "1) Check the power-related cables(CNTR, CNSGC).2) Check the parts(system board, servo drive module)  related to AMP discharge resistor overheat error detection.",
+        "remedy": "1) Check the power-related cables(CNTR).2) Check the parts(servo board, servo drive module)  related to AMP discharge resistor overheat error detection. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02502",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor detection path abnormal"
     },
     "E2503": {
         "msg": "AMP PN overvoltage occured",
         "cause": "May be occured when the robot playback speed changes rapidly or when the regenerative discharge resistor value increases.",
-        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value.",
+        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the regenerative discharge resistor value. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02503",
         "help_title": "[TroubleShoot]AMP PN overvoltage occured"
     },
     "E2504": {
         "msg": "AMP diode module abnormal or AC input voltage exceeded",
         "cause": "Abnormality generated with the diode module, causing the PN voltage to exceed the allowable range. In addition, the 3-phase voltage is inputted into the servo drive module (AMP) at a abnormally high level.",
-        "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage.",
+        "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02504",
         "help_title": "[TroubleShoot]AMP diode module abnormal or AC input voltage exceeded"
     },
     "E2505": {
         "msg": "AMP PN overvoltage detection path abnormal or discharge abnormal",
         "cause": "Detection path of AMP PN overervoltage or regenerative discharge circuit is abnormal.",
-        "remedy": "1) Check the cables(CNSGC) related to AMP PN Overoltage detection.2) Check the parts(system board, servo drive module)  related to AMP PN Overvoltage error detection.",
+        "remedy": "Please check after replacing the servo board or servo drive. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02505",
         "help_title": "[TroubleShoot]AMP PN overvoltage detection path abnormal or discharge abnormal"
     },
     "E2506": {
         "msg": "AMP PN undervoltage occurred",
         "cause": "If error occured at a specific step depending on the robot playback speed, PN voltage lowered because of the significant use of energy. May be generated because the controller input power is unstable.",
-        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the controller power voltage when the robot is operating.",
+        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the controller power voltage when the robot is operating. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02506",
         "help_title": "[TroubleShoot]AMP PN undervoltage occurred"
     },
     "E2507": {
         "msg": "AMP diode module abnormal or insufficient AC input voltage",
         "cause": "Abnormality occurred at the diode module, causing the PN voltage not to be charged. In addition, the error may be generated because the 3-phase voltage inputted into the servo drive module is lowered.",
-        "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage.",
+        "remedy": "1) Check the power-related parts(servo drive module).2) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02507",
         "help_title": "[TroubleShoot]AMP diode module abnormal or insufficient AC input voltage"
     },
     "E2508": {
         "msg": "AMP PN undervoltage detection path abnormal or discharge abnormal",
         "cause": "Detection path of AMP PN undervoltage or PN discharge circuit is abnormal.",
-        "remedy": "1) Check the cables(CNSGC) related to AMP PN undervoltage detection.2) Check the parts(system board, servo drive module)  related to AMP PN undervoltage error detection.",
+        "remedy": "Please check after replacing the servo board or servo drive. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02508",
         "help_title": "[TroubleShoot]AMP PN undervoltage detection path abnormal or discharge abnormal"
     },
@@ -4786,7 +4786,7 @@
     "E2520": {
         "msg": "(%s axis) IPM fault",
         "cause": "Fault signal generated with IPM of the relevant axis in the drive system.",
-        "remedy": "Check the motor drive parts.1) Check the output cable accessing the servo drive system.2) Check the terminal of the switching device inside the servo drive system.3) Check the error after replacing the CNBS 1, 2, and 3 cables.4) Check the error after replacing the servo board.5) Check the error after replacing the servo drive system.6) Check the error after replacing the servo motor.",
+        "remedy": "1) Check the motor drive parts. 2) Check the controller's cooling fan. (Refer to the troubleshooting manual for details.)",
         "help_idx": "E02520",
         "help_title": "[TroubleShoot](%s axis) IPM fault"
     },
@@ -4800,9 +4800,24 @@
     "E2522": {
         "msg": "(%s axis) IPM fault-Specific step",
         "cause": "When the IPM fault error is generated at specific steps, it means that the effect of the damage to the mechanical wiring for a taught step is shown significantly, or the axis sped varies significantly when the posture conversion of a taught program takes place.",
-        "remedy": "Check the robot at the step where the error is generated.1) Check the wiring of the robot at the position where the error is generated.2) Check the error by lowering the robot playback speed.3) Check the error after changing the interpolation of the taught step.",
+        "remedy": "1) Check the robot at the step where the error is generated. (Refer to the troubleshooting manual for details.)",
         "help_idx": "E02522",
         "help_title": "[TroubleShoot](%s axis) IPM fault-Specific step"
+    },
+    "E2523": {
+        "msg": "AMP Board Connection Error Detected (BD658T, BD657T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (641T). 5) If the error persists, replace the backplane board."
+    },
+    "E2524": {
+        "msg": "AMP Board Connection Error Detected (BD658T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board (BD658T) is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (BD641T). 5) If the error persists, replace the backplane board."
+    },
+    "E2525": {
+        "msg": "AMP Board Connection Error Detected (BD657T)",
+        "cause": "Please check the attachment status of the AMP board.",
+        "remedy": "1) Check whether the AMP board (BD657T) is properly attached. 2) Verify that BD658T and BD657T are installed in the correct positions. 3) If the error persists, replace the AMP board. 4) If the error persists, replace the servo board (BD641T). 5) If the error persists, replace the backplane board."
     },
     "E2530": {
         "msg": "Disconnection/Defective contact on the PWMON wiring between AMP and the system",
@@ -4861,7 +4876,7 @@
     "E2541": {
         "msg": "(%s axis) drive system control voltage lowered",
         "cause": "+15 V, the control power supplied to the servo drive system, lowered.",
-        "remedy": "Refer to the fault repair methods.",
+        "remedy": "1) Check the power display LED. 2) Check the output of the control power supply. 3) Check the control power supply. 4) Replace the related parts and check the power display LED. (Refer to the Troubleshooting Manual for details. )",
         "help_idx": "E02541",
         "help_title": "[TroubleShoot](%s axis) drive system control voltage lowered"
     },
@@ -4893,7 +4908,7 @@
     "E2554": {
         "msg": "Initial Pre-Charge Relay Operation Failure",
         "cause": "An abnormality was detected in the operation of the initial pre-charge relay.",
-        "remedy": "1) Replace the servo board (BD640).",
+        "remedy": "1) Check the connection between the power module and the servo board, including the cable and connector (CNPRC1). 2) If the issue persists, replace the servo board (BD640) and then the power module (PSM) in sequence.",
         "help_idx": "E02554",
         "help_title": "[TroubleShoot] Initial Pre-Charge Relay Operation Failure"
     },
@@ -4929,7 +4944,7 @@
     "E2570": {
         "msg": "(%s axis) Brake Output Error",
         "cause": "No feedback is detected from the brake output signal.",
-        "remedy": "1) Replace the servo board (BD640). 2) Check the condition of the brake output line (wiring and connectors).",
+        "remedy": "1) Check the condition of the brake output line (wiring and connectors). 2) Replace the servo board (BD640).",
         "help_idx": "E02570",
         "help_title": "[TroubleShoot](%s axis) Brake Output Error"
     },
@@ -5066,7 +5081,7 @@
     "E2634": {
         "msg": "(%s axis) Position Deviation Excess (Increased Friction at Low Temperature)",
         "cause": "When the encoder operates under low temperature conditions, the viscosity of the grease increases, leading to higher friction and causing the position deviation to exceed the configured error threshold.",
-        "remedy": "Refer to the service manual for troubleshooting procedures.",
+        "remedy": "1) Verify that the correct robot model is configured. 2) Refer to the service manual and perform load estimation.",
         "help_idx": "E02634",
         "help_title": "[TroubleShoot](%s axis) Position Deviation Excess – Increased Friction at Low Temperature"
     },
@@ -5078,7 +5093,7 @@
     "E2636": {
         "msg": "(%s axis) position deviation exceeded",
         "cause": "Position deviation exceeded the set error value.",
-        "remedy": "1) Check any mechanical interference of axis of question. 2) Check the brake release, and if there is any problem, check the brake power (CMR1). 3) Check the rated load. 4) Check the positional deviation setting level. For more details, Refer to the troubleshooting manual.",
+        "remedy": "1) Check for mechanical interference on the affected axis. 2) Verify proper brake release operation; if abnormal, inspect the brake power supply (CMR1). 3) Check the connector status on the BD640 servo board; if abnormal, reconnect securely. 4) Ensure that the system is operating under rated load. 5) Check the configured position deviation level. For details, refer to the service manual.",
         "help_idx": "E02630",
         "help_title": "[TroubleShoot](Axis ○) position deviation exceeded"
     },
@@ -13263,6 +13278,11 @@
         "cause": "There are multiple robot registration files with duplicate numbers.",
         "remedy": "Delete the files with duplicate numbers in the robot registration directory (robot model_num.fbr) except for the selected model."
     },
+    "E18212": {
+        "msg": "Invalid motor data exists (%s)",
+        "cause": "Motor registration files contain incorrect data.",
+        "remedy": "Update to the latest version to refresh the motor information file. After refreshing, check whether the Additional Axis Motor specification is correct."
+    },
     "E21001": {
         "msg": "The axis for brake test was not selected.",
         "cause": "The axis for brake test was not selected in the brake test function.",
@@ -14953,6 +14973,31 @@
         "cause": "The Hi6Main executable on TP storage is corrupted or replaced.",
         "remedy": "Check bootlog and repo/sysinfo.hi6.json, and redo the integrated version-up."
     },
+    "E28570": {
+        "msg": "SIO version mismatch",
+        "cause": "The SIO version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
+    "E28571": {
+        "msg": "SIO GW version mismatch",
+        "cause": "The SIO GW version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
+    "E28572": {
+        "msg": "SSM version mismatch",
+        "cause": "The SSM version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
+    "E28573": {
+        "msg": "SAFETY version mismatch",
+        "cause": "The SAFETY version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
+    "E28574": {
+        "msg": "SERVO version mismatch",
+        "cause": "The SERVO version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
     "E29001": {
         "msg": "Servo communication (EtherCAT) initialization failure",
         "cause": "Short circuit occurred in servo board (BD640), safety board (BD632) devices, or communication setting file (ENI) mismatch",
@@ -16524,35 +16569,50 @@
         "cause": "Failed to create a move step.",
         "remedy": "The location is not accessible for path interpolation."
     },
+    "E32729": {
+        "msg": "There is no global pose or shift variable assigned to LVS command's mp or ms argument.",
+        "cause": "There is no global variable assigned to lvs command's mp or ms argument.",
+        "remedy": "Check whether there is a global variable of the mp or ms argument in the lvs command or not."
+    },
     "E32730": {
-        "msg": "LPS step creation failed.",
-        "cause": "Failed to create a move step.",
-        "remedy": "The location is not accessible for path interpolation."
+        "msg": "LPS non-existent commands option",
+        "cause": "The command option does not exist.",
+        "remedy": "Check and re-enter the bottom panel of the command input."
     },
     "E32731": {
-        "msg": "LPS No Calibration information.",
-        "cause": "To use the LPS function, calibration must be performed first.",
-        "remedy": "Perform tool-sensor calibration through the command."
+        "msg": "LPS orientation factor error",
+        "cause": "The direction is not set, or both directions are set.",
+        "remedy": "Perform Tx or Ty with values in only one direction."
     },
     "E32732": {
-        "msg": "LPS No step detected.",
-        "cause": "No step can be detected within the sensing range.",
-        "remedy": "1) Set the sensing range longer, or 2) change the gap-coefficient setting in the lps properties window."
+        "msg": "LPS failed to create step",
+        "cause": "Move step creation failed.",
+        "remedy": "The position cannot be moved due to path interpolation."
     },
     "E32733": {
-        "msg": "LPS Invalid orientation factor.",
-        "cause": "The direction is not set, or both directions are set.",
-        "remedy": "Please perform Tx or Ty with values in only one direction."
+        "msg": "LPS Calibration - Edge detection failed",
+        "cause": "Edge detection failed during calibration.",
+        "remedy": "Check the position of the laser point and give more movement(see manual)"
     },
     "E32734": {
-        "msg": "LPS Gathering failed.",
-        "cause": "The file was not generated successfully or was not gathered due to a path problem.",
-        "remedy": "1) Please check the project folder path, or 2) execute the backup all the files in the controller and send them to our company."
+        "msg": "LPS No Calibration information",
+        "cause": "To use the LPS function, calibration must be performed first.",
+        "remedy": "Perform tool-to-sensor calibration through the command."
     },
-    "E32735": {
-        "msg": "LPS Scan mode did not work.",
-        "cause": "TBD",
-        "remedy": "Please contact our comany."
+    "E32740": {
+        "msg": "LPS Failed to detect step",
+        "cause": "No step is detected within the sensing range.",
+        "remedy": "1) Set the sensing range larger, or 2) change the gap-coefficient setting in the lps properties window."
+    },
+    "E32741": {
+        "msg": "LPS Gathering Failed",
+        "cause": "The file was not generated successfully or there was a path problem.",
+        "remedy": "1) Check the project folder path, or 2) execute the backup all the files in the controller and send them to us."
+    },
+    "E32742": {
+        "msg": "LPS Scanmode - seam point detection failed",
+        "cause": "No seam point found in current absence.",
+        "remedy": "please contact us."
     },
     "E32751": {
         "msg": "The input data detected at initial sensing is too low.",
@@ -17934,7 +17994,7 @@
     "E64003": {
         "msg": "Servo Board (BD640) Status Input Error",
         "cause": "A fault occurred in the servo board.",
-        "remedy": "1) Check for power lines or cables that could introduce noise into the CNSV wiring path. 2) Check the CNSV connector connection status, the wiring to connector connection, and the cable condition. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632).",
+        "remedy": "1) Check for power lines or cables near the CNSV wiring path that may introduce electrical noise. 2) Inspect the connection status of the CNSV connector, the wiring-to-connector interface, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632). 6) If more than 9 axes are configured, check the DIP switch settings of the extended-axis safety interface board (BD6H0).",
         "help_idx": "E64003",
         "help_title": "[TroubleShoot] Servo Board (BD640) Status Input Error"
     },
