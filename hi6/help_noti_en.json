@@ -33,7 +33,7 @@
 	"N32": { "msg": "Check whether the motor is turned Off before working." },
 	"N33": { "msg": "#Auto Mode Error" },
 	"N34": { "msg": "$Manual Full Mode Error" },
-	"N35": { "msg": "%Manual Mode Error" },
+	"N35": { "msg": "Cannot run at manual mode" },
 	"N36": { "msg": "@ManualFullSpdStatus Chain Error" },
 	"N37": { "msg": "#TPOperationMode Chain Error" },
 	"N38": { "msg": "$DeadManSwitch1 Chain Error" },

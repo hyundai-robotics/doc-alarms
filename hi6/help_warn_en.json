@@ -415,7 +415,7 @@
         "remedy": "Check whether the panel is missed.Record the gun search position, and carry out gun search again."
     },
     "W153": {
-        "msg": "Reducer motor current that exceeds the allowable level is detected.",
+        "msg": "(%s axis) Reducer motor current that exceeds the allowable level is detected.",
         "cause": "The load of tool and additional weight is not correct, or the current of a motor is increased due to increase of motor temperature.",
         "remedy": "Check the tool load and the additional weight. If normal, contact the A/S department of our company for inquiries."
     },

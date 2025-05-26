@@ -255,12 +255,7 @@
         "msg": "Robot type not matched",
         "cause": "Unsupported robot type.",
         "remedy": "Check the set robot type."
-    },
-    "E103": {
-        "msg": "Parameter Transfer Failure During Boot (BD640)",
-        "cause": "The encoder parameter values exchanged between the main controller (hi6COM) and the servo board (BD640) do not match, or no response was received within the specified time.",
-        "remedy": "1)nVerify that the firmware versions of the main controller (hi6COM) and the servo board (BD640) are compatible. 2) Check the EtherCAT communication status between the main controller and the servo board. 3) If the issue persists, perform replacement tests in the following order: servo board (BD640), then main controller (hi6COM)."
-    },
+    },   
     "E104": {
         "msg": "(%s axis) encoder abnormal: Data frame incomplete",
         "cause": "Data received but not in the set typeIncomplete data frame has received in encoder communication.",
@@ -1045,6 +1040,11 @@
         "msg": "%s axis) Main-servo control mode mismatch",
         "cause": "The control mode between the main system and the servo system does not match",
         "remedy": "contact our company for inquiries"
+    },
+    "E354": {
+        "msg": "%s axis) Motor feedforward torque limit exceeded",
+        "cause": "The motor feedforward torque command has exceeded the maximum limit",
+        "remedy": "If the error persists, please contact our company for inquiries"
     },
     "E1000": {
         "msg": "User-defined error (Number:%s) occurred, (check the previous screen).",
@@ -5891,6 +5891,11 @@
         "msg": "System board overheating detected",
         "cause": "System board temperature exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
+    },
+	 "E3080": {
+        "msg": "Parameter Transfer Failure During Boot (BD640)",
+        "cause": "The encoder parameter values exchanged between the main controller (hi6COM) and the servo board (BD640) do not match, or no response was received within the specified time.",
+        "remedy": "1)nVerify that the firmware versions of the main controller (hi6COM) and the servo board (BD640) are compatible. 2) Check the EtherCAT communication status between the main controller and the servo board. 3) If the issue persists, perform replacement tests in the following order: servo board (BD640), then main controller (hi6COM)."
     },
     "E4001": {
         "msg": "FAULT_SafeSpace:CH_TYPE_DUPLICATED",
@@ -17224,6 +17229,16 @@
         "cause": "Voltage D_P1V2 is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },	
+	"E54554": {
+		"msg": "Radar sensor %s MCU[%s] detection failure error",
+		"cause": "Continuous detection failures occurring",
+		"remedy": "1) Check if there are any objects blocking the radar sensor. 2) If the problem persists, replace the sensor."
+	},
+	"E54555": {
+		"msg": "Radar sensor %s MCU[%s] CAN communication error",
+		"cause": "CAN communication data duplication or loss occurring",
+		"remedy": "1) Replace the corresponding sensor. 2) Replace the BD6F1 board. 3) If the problem persists, please contact our company."
+	}
     "E62000": {
         "msg": "Teaching pendant connection error (safety chain 1)",
         "cause": "Enabling input of the teaching pendant. Noise has flowed from the outside into the wiring route of safety chain 1, or the contact state of the connector is unstable.",
