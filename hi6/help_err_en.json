@@ -15084,12 +15084,17 @@
         "help_idx": "E29016",
         "help_title": "[TroubleShoot] Board Communication (EtherCAT) Master Disconnection Detected"
     },
-	"E29017": {
+    "E29017": {
+        "msg": "1ms task valid operation time exceeded (timeout)",
+        "cause": "Exception occurred within the 1ms task",
+        "remedy": "Please back up all controller files and send them to us"
+    },
+	"E29018": {
         "msg": "SafetyComm task exceeded the valid range of time(timeout)",
         "cause": "S/W Exception occured in SafetyComm task",
         "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
     },
-	"E29018": {
+	"E29019": {
         "msg": "SafetyServer task exceeded the valid range of time(timeout)",
         "cause": "S/W Exception occured in SafetyServer task",
         "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
