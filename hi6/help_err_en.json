@@ -17243,7 +17243,7 @@
 		"msg": "Radar sensor %s MCU[%s] CAN communication error",
 		"cause": "CAN communication data duplication or loss occurring",
 		"remedy": "1) Replace the corresponding sensor. 2) Replace the BD6F1 board. 3) If the problem persists, please contact our company."
-	}
+	},
     "E62000": {
         "msg": "Teaching pendant connection error (safety chain 1)",
         "cause": "Enabling input of the teaching pendant. Noise has flowed from the outside into the wiring route of safety chain 1, or the contact state of the connector is unstable.",
