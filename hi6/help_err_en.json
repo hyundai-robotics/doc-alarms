@@ -16665,9 +16665,9 @@
         "remedy": "welding line, check if the arc sensing parameters (data lag time, maximum correction distance per second, etc.) are normal. 4) If the arc sensing parameters are normal, check if the data input for sensing are normal. 5) If no anomaly is found during the above checkups, increase the distance limit of the vertical path deviation."
     },
     "E32759": {
-        "msg": "Abnormal cutoff frequency input during filtering",
-        "cause": "Abnormal cutoff frequency value was inputted for filtering.",
-        "remedy": "Please back up all files of controller, and then send them to us."
+        "msg": "Arc sensing only can be used with weaving frequency from 0.5 to 4.0 Hz. (0Hz if moving and dwell time exsists)",
+        "cause": "Weaving frequency range is abnormal.",
+        "remedy": "Check frequency range. Check moving and dwell time if the frequency is 0Hz."
     },
     "E32760": {
         "msg": "Abnormal sampling time input during filtering",

@@ -100,6 +100,8 @@
 	"N99": { "msg": "Fail to send safety pameters! Please reboot the controller." },
 	"N100": { "msg": "Motor on is impossible due to system fault.\nPlease check the fault list."},
 	"N101": { "msg": "Motor on is impossible due to violation of safety monitoring.\nPlease check and recovery the violation status." },
+	"N102": { "msg": "Start is impossible due to violation of safety monitoring.\nPlease check and recovery the violation status." },
+	"N103": { "msg": "Use after rebooting the controller." },
 	"N114": { "msg": "External motor on is entered." },
 	"N115": { "msg": "Sensing tracking has been cleared." },
 	"N116": { "msg": "External motor off is entered." },
@@ -115,4 +117,6 @@
 	"N165": { "msg": "An app's listmenu is updated." },
 	"N166": { "msg": "In spotpak communication, welder error occurred." },
 	"N167": { "msg": "Manual operation prohibition signal is on." }
+	"N169": { "msg": "Self-Diagnosis Complete!!!\n\nHi6 booting completed!!!" },
+	"N170": { "msg": "Self-Diagnosis Complete!!!\n\nHi6a booting completed!!!" }
 }
