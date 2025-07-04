@@ -109,6 +109,7 @@
 	"N118": { "msg": "TP reboot is requested." },
 	"N119": { "msg": "Backup to TP is requested." },
 	"N121": { "msg": "TP screen-saver has been released." },
+	"N122": { "msg": "Auto version up to TP is requested." },
 	"N130": { "msg": "SMT module versions are not equal. Please update the version." },
 	"N131": { "msg": "SSM module versions are not equal. Please update the version." },
 	"N160": { "msg": "Auto backup started." },

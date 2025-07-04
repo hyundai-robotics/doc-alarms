@@ -7,7 +7,7 @@
     "E2": {
 		"msg": "Primary Axis Limit Switch Activated",
 		"cause": "The limit switch installed at the end of the robot's operating range has been triggered.",
-		"remedy": "1) Enter the system menu, hold the Enable switch, press the Motor ON button, and use the jog keys to move the robot back into the operating range. 2) Check the IO power LED on the safety board (BD632). 3) Refer to the troubleshooting guide.",
+		"remedy": "1) Enter the system menu, hold the Enable switch, press the Motor ON button, and use the jog keys to move the robot back into the operating range.\r\n2) Check the BD632 safety board fuse by inspecting the IO power LED.\r\n3) Refer to [Troubleshooting Guide] for details.",
 		"help_idx": "E0002",
         "help_title": "[TroubleShoot]Primary Axis Limit Switch Activated"
     },
@@ -178,11 +178,11 @@
         "remedy": "Check the access state of the general safety guard or of the line."
     },
     "E43": {
-        "msg": "Auto Mode Safety Guard (Auto Guard) Switch Connection Error",
-        "cause": "A connection error has occurred with the Auto Guard switch during Auto mode operation.",
-        "remedy": "1) Check the Auto Mode Safety Guard switch and the line connection status. 2) Check the IO power LED on the safety board (BD632). 3) Inspect the TP cable for any damage.",
+		"msg": "Safety Plug Connection Error (Auto Mode Guard Switch)",
+		"cause": "A connection error occurred with the Auto Mode safety guard switch.",
+        "remedy": "1) Check the Auto Mode Safety Guard switch and the line connection status.\r\n2) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n3) Inspect the TP cable for any damage.\r\n4) Refer to the [Troubleshooting Guide] for details.",		
         "help_idx": "E0043",
-        "help_title": "[TroubleShoot] Auto Mode Safety Guard (Auto Guard) Switch Connection Error"
+        "help_title": "[TroubleShoot]Safety Plug Connection Error (Auto Mode Guard Switch)"
     },
     "E44": {
         "msg": "Lift axis belt breaking detection sensor operating",
@@ -3634,7 +3634,7 @@
     "E2143": {
         "msg": "TP emergency SW input not matched (safety chain 1 off)",
         "cause": "Input of the TP emergency switch is not dualized. Different input state between the safety chain 1 and safety chain 2.",
-        "remedy": "1) Check the unduplicated signal line or connection status. 2) Inspect the TP emergency stop switch for possible failure. 3) Check the IO power LED on the safety board (BD632)."
+        "remedy": "1) Check the unduplicated signal line or connection status.\r\n2) Inspect the TP emergency stop switch for possible failure.\r\n3) Check the IO power LED for a blown fuse on the BD632 safety board."
     },
     "E2144": {
         "msg": "TP emergency SW input not matched (safety chain 2 off)",
@@ -4016,9 +4016,9 @@
     "E2260": {
         "msg": "Magnetic contactor (MC2) fault/detection abnormal while trying servo on",
         "cause": "Magnet MC2 not operated, causing servo on not to take place.",
-        "remedy": "1) Check the magnetic contactor MC2. 2) Check the IO power LED on the safety board (BD632). 3) If the issue persists, replace the safety board (BD632). 4) If the issue persists, replace the power supply module (H6PSM30). 5) If the issue persists, replace the servo amplifier. 6) If the system is configured for 9 axes or more, check the DIP switch settings on the Extended Axis Safety Interface Board (BD6H0).",        
+        "remedy": "1) Refer to the [Troubleshooting Guide] and inspect MC2.\r\n2) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n3) If the issue persists, replace the safety board (BD632).\r\n4) If the issue persists, replace the power supply module (H6PSM30).\r\n5) If the issue persists, replace the servo amplifier.\r\n6) If the system is configured for 9 axes or more, check the DIP switch settings on the Extended Axis Safety Interface Board (BD6H0).",        
         "help_idx": "E02260",
-        "help_title": "[TroubleShoot]Magnetic contactor (MC2) fault/detection abnormal while trying servo on"
+        "help_title": "[TroubleShoot]Magnetic contactor (MC2) fault/detection abnormal while trying servo on"    
     },
     "E2261": {
         "msg": "Magnetic contactor (MC2) fault/detection abnormal while in the servo on state",
@@ -4217,11 +4217,11 @@
         "remedy": "1) The CPUERR line processing section on the system board is faulty. Replace the system board. 2) The issue may be with the safety board (BD632). Inspect it. 3) If the issue persists, replace the Main Control Module (H6COM-T)."       
     },
     "E2301": {
-        "msg": "CPUERR Signal Mismatch (H6COM Task Error)",
-        "cause": "H6COM task error has occurred.",
-        "remedy": "1) Check whether the main task cycle is within the normal range. 2) If the issue persists, replace the Main Control Module (H6COM-T). 3) If the issue persists, replace the safety board (BD632).",
+        "msg": "CPUERR Signal Mismatch (Electrical Board Signal Mismatch)",
+        "cause": "A CPUERR was triggered by Hi6COM, but an inconsistency was detected in the signal from the electrical board.",
+        "remedy": "1) Refer to the [Troubleshooting Guide] and check if the main task cycle is within the normal range.\r\n2) If the issue persists, replace the Main Control Module (H6COM-T).\r\n3) If the issue persists, replace the safety board (BD632).\r\n4) Check communication with external devices, such as welding equipment.",
         "help_idx": "E2301",
-        "help_title": "[TroubleShoot] CPUERR Signal Mismatch (H6COM Task Error)"
+        "help_title": "[TroubleShoot]CPUERR Signal Mismatch (Electrical Board Signal Mismatch)"
     },
     "E2302": {
         "msg": "ERRRSV signal not matched (system board error detected)",
@@ -4236,12 +4236,12 @@
     "E2304": {
         "msg": "Safety moulde fault(module 1 is not alive)",
         "cause": "Hearbeat from Safety Module is lost. module may be in fault or communication is failed",
-        "remedy": "Check the Safety module, communication module and cable"
+		"remedy": "1) Check connections of the safety module, communication module, and EtherCAT cables.\r\n2) If the issue persists, replace the servo board (BD640).\r\n3) If the issue persists, replace the safety board (BD632)."
     },
     "E2305": {
         "msg": "Safety moulde fault(module 2 is not alive)",
         "cause": "No operation signal received from the safety module. The module may be in an error state or communication may have been lost.",
-        "remedy": "Check the safety module, communication module, and EtherCAT communication cable. If the issue persists, replace the servo board (BD640) and safety board (BD632) in sequence."
+		"remedy": "1) Check connections of the safety module, communication module, and EtherCAT cables.\r\n2) If the issue persists, replace the servo board (BD640).\r\n3) If the issue persists, replace the safety board (BD632)."
     },
     "E2310": {
         "msg": "Auto mode safety guard switch operating",
@@ -17837,12 +17837,12 @@
     "E63028": {
         "msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 1 OFF)",
         "cause": "Automatic mode safety guard (SGA2) input Safety chain 1's wiring path has noise from the outside or the contact state of the connector is unstable.",
-        "remedy": "1) Check if there is a power line or cable that may introduce noise into the wiring path. 2) Check the connector connection status, wiring and connector connection status, and cable status. 3) Replace the cable. 4) Replace the magnet contact (MC). 5) Replace the safety board."
+        "remedy": "1) Check for power lines or cables that could introduce noise into the wiring path.\r\n2) Check the connector connection status, the wiring to connector connection, and the cable condition.\r\n3) Replace the cable.\r\n4) Replace the safety guard switch.\r\n5) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n6) If the issue persists, replace the safety board (BD632)."
     },
     "E63029": {
         "msg": "Automatic mode safety guard (SGA2) input mismatch (safety chain 2 OFF)",
         "cause": "Automatic mode safety guard (SGA2) input Safety chain 2's wiring path has noise from the outside or the contact state of the connector is unstable.",
-        "remedy": "1) Check for power lines or cables that could introduce noise into the wiring path. 2) Check the connector connection status, the wiring to connector connection, and the cable condition. 3) Replace the cable. 4) Replace the safety guard switch. 5) Check the IO power LED on the safety board (BD632). 6) If the issue persists, replace the safety board (BD632)."
+        "remedy": "1) Check for power lines or cables that could introduce noise into the wiring path.\r\n2) Check the connector connection status, the wiring to connector connection, and the cable condition.\r\n3) Replace the cable.\r\n4) Replace the safety guard switch.\r\n5) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n6) If the issue persists, replace the safety board (BD632)."
     },
     "E63033": {
         "msg": "Inflow of noise/faulty contact in the automatic mode safety guard (SG) input wiring path (safety chain 1)",
@@ -18014,9 +18014,9 @@
     "E64003": {
         "msg": "Servo Board (BD640) Status Input Error",
         "cause": "A fault occurred in the servo board.",
-        "remedy": "1) Check for power lines or cables near the CNSV wiring path that may introduce electrical noise. 2) Inspect the connection status of the CNSV connector, the wiring-to-connector interface, and the condition of the cable. 3) Replace the CNSV cable. 4) Replace the servo board (BD640). 5) Replace the safety board (BD632). 6) If more than 9 axes are configured, check the DIP switch settings of the extended-axis safety interface board (BD6H0).",
+        "remedy": "1) Check for power lines or cables near the CNSV wiring path that may introduce electrical noise.\r\n2) Inspect the connection status of the CNSV connector, the wiring-to-connector interface, and the condition of the cable.\r\n3) Replace the CNSV cable.\r\n4) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n5)Replace the servo board (BD640).\r\n6) Replace the safety board (BD632).\r\n7) If more than 9 axes are configured, check the DIP switch settings of the extended-axis safety interface board (BD6H0).",
         "help_idx": "E64003",
-        "help_title": "[TroubleShoot] Servo Board (BD640) Status Input Error"
+        "help_title": "[TroubleShoot] Servo Board (BD640) Status Input Error"  
     },
     "E64006": {
         "msg": "Servo board (BD640) status input mismatch (safety chain 1)",
@@ -18126,9 +18126,9 @@
     "E64035": {
         "msg": "Safety module status output (SFST) mismatch (safety chain 2 OFF)",
         "cause": "Safety board status output of safety board (BD632) A diagnosis error occurred in the output circuit of safety chain 2.",
-        "remedy": "1) Check for power lines or cables that could introduce noise into the CNSV wiring path. 2) Check the CNSV connector connection status, the wiring to connector connection, and the cable condition. 3) Replace the CNSV cable. 4) Check the IO power LED on the safety board (BD632). 5) Replace the safety board (BD632). 6) Replace the servo board (BD640).",
+        "remedy": "1) Check for power lines or cables that could introduce noise into the CNSV wiring path.\r\n2) Check the CNSV connector connection status, the wiring to connector connection, and the cable condition.\r\n3) Replace the CNSV cable.\r\n4) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n5) Replace the safety board (BD632).\r\n6) Replace the servo board (BD640).",
         "help_idx": "E64035",
-        "help_title": "[TroubleShoot]Safety module status output (SFST) mismatch (safety chain 2 OFF)"
+        "help_title": "[TroubleShoot]Safety module status output (SFST) mismatch (safety chain 2 OFF)"   
     },
     "E64050": {
         "msg": "Safety board (BD632) temperature (high/low temperature) error (safety chain 1)",
