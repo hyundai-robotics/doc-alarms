@@ -7847,6 +7847,11 @@
         "cause": "An algorithm error occurred due to excessive auto-tuning time.",
         "remedy": "If the error persists, consult with Hyundai Robotics."
     },
+	"E6500": {
+        "msg": "Geometry parameter error is too large.",
+        "cause": "The error of the geometric parameters as a result of the calibration is too large.",
+        "remedy": "Check that the calibration result is correct and that there are no problems with the assembly of the robot body."
+    },
     "E7001": {
         "msg": "[Fault]Error in the initialization of the safety controller",
         "cause": "Error in communication between the safety controller and the mainboard",

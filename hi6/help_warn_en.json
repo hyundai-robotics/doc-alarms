@@ -629,11 +629,6 @@
         "cause": "Main board VTT voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
-    "W210": {
-        "msg": "Geometry parameter error is too large.",
-        "cause": "The error of the geometric parameters as a result of the calibration is too large.",
-        "remedy": "Check that the calibration result is correct and that there are no problems with the assembly of the robot body."
-    },
     "W220": {
         "msg": "(%s Axis)Motor NT model error",
         "cause": "Abnormal NT model",
@@ -974,6 +969,11 @@
         "cause": "The job filename contains disallowed special characters. (#*+<>\"?/|\\)",
         "remedy": "Please correct the job filename using FileManager or FTP."
     },
+    "W16009": {
+        "msg": "Invalid step branches in job %s have been corrected.",
+        "cause": "Remarked steps are treated as functions starting from version V60.30-00. Misaligned step-branches of statement such as 'goto' were automatically adjusted.",
+        "remedy": "Please, verify that the job adjusted correctly. The original .job file before adjustment is saved in the backup/keep/ folder."
+    },  
     "W21001": {
         "msg": "%s axis)Test result are not suitable for test.",
         "cause": "The hold test angle variation of warning axis exceeds the release test angle variation.",
