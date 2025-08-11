@@ -966,8 +966,33 @@
     },
     "W16008": {
         "msg": "The job %s's filename is invalid.",
-        "cause": "The job filename contains disallowed special characters. (#*+<>\"?/|\\)",
+        "cause": "The job filename contains disallowed special characters. (#*+<>\"?/|\\:[]{})",
         "remedy": "Please correct the job filename using FileManager or FTP."
+    },
+    "W17120": {
+        "msg": "There is an invalid parameter value in current robot fbr file.",
+        "cause": "The robot configuration in the fbr file does not match the actual hardware, which may cause the robot to move to an abnormal position.",
+        "remedy": "Please review and correct the parameters in current robot fbr file."
+    },
+    "W17121": {
+        "msg": "There is an invalid parameter value in the Motor_info.fbr file.",
+        "cause": "The Motor fbr file contains parameters that do not match the actual hardware configuration.",
+        "remedy": "Please review and correct the parameters in the Motor_info.fbr file."
+    },
+    "W17122": {
+        "msg": "There is an invalid parameter value in the Amp_info.fbr file.",
+        "cause": "The Amp fbr file contains parameters that do not match the actual hardware configuration.",
+        "remedy": "Please review and correct the parameters in the Amp_info.fbr file."
+    },
+    "W17123": {
+        "msg": "There is an invalid parameter value in the Reducer_info.fbr file.",
+        "cause": "The Reducer fbr file contains parameters that do not match the actual hardware configuration.",
+        "remedy": "Please review and correct the parameters in the Reducer_info.fbr file."
+    },
+    "W17124": {
+        "msg": "There is an invalid parameter value in the Positioner_info.fbr file.",
+        "cause": "The Positioner fbr file contains parameters that do not match the actual hardware configuration.",
+        "remedy": "Please review and correct the parameters in the Positioner_info.fbr file."
     },
     "W16009": {
         "msg": "Invalid step branches in job %s have been corrected.",
@@ -1043,6 +1068,16 @@
         "msg": "The gas spring pressure(stop) error.(Load not estimated)",
         "cause": "The gas spring pressure error was occured without load estimation.",
         "remedy": "1) Please run the gas spring presuure test after load estimation.2) If the load estimatno is unavailable, change the option of 'the gas spring pressure estimation at standstill' to estimation."
+    },
+    "W21018": {
+        "msg": "Gas spring sensor pressure is less than the minimum tolerance warning value.(%s bar)",
+        "cause": "The measured gas spring sensor pressure is less than the minimum value of the tolerance warning.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
+    },
+    "W21019": {
+        "msg": "Gas spring sensor pressure is greater than the minimum value for tolerance warning.(%s bar)",
+        "cause": "The measured gas spring sensor pressure is greater than the minimum value for the tolerance warning.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
     },
     "W21021": {
         "msg": "(%s axis)Driving part abnormality detected.",
@@ -1279,6 +1314,11 @@
         "cause": "Error generated while collecting data as requested by the HRMS client.",
         "remedy": "Contact our company for inquiries."
     },
+    "W28005": {
+        "msg": "W28005 OPC UA SERVER communication failed.",
+        "cause": "Communication error occurred with the OPC UA SERVER.",
+        "remedy": "Check the operating status of the OPC UA SERVER."
+    },
     "W28300": {
         "msg": "Mismatch of the selected program.",
         "cause": "The selected external program number differ from running it.",
@@ -1373,6 +1413,16 @@
         "msg": "In backup process, failed to create local folder.",
         "cause": "During backup into TeachPendant, failed to create destination local folder in TP.",
         "remedy": "Check the result of backup at the time of this warning and try again if it failed."
+    },
+    "W28383": {
+        "msg": "Failed to save context before backup.",
+        "cause": "Failed to save variables, execution position, etc. due to a timeout or a temporary communication error.",
+        "remedy": "Please retry the backup."
+    },
+    "W28384": {
+        "msg": "Failed to flush logs before backup.",
+        "cause": "Failed to save log data in the buffer due to a timeout or a temporary communication error.",
+        "remedy": "Please retry the backup."
     },
     "W28400": {
         "msg": "On-Line command buffer full",
@@ -3299,70 +3349,10 @@
         "cause": "Repeated HTTP requests using the 'Close' connection method place excessive load on the Hi6 system, potentially causing serious issues such as robot halts. As a result, the requesting client has been blacklisted (will reset after 60 seconds).",
         "remedy": "For repeated API requests or persistent HTTP connections, please set the 'Connection' header to 'Keep-Alive'."
     },
-	 "SW652": {
-        "msg": "TCP position violation (Cell %s)",
-        "cause": "TCP position is out of the cell area.",
-        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
-    },
-    "SW653": {
-        "msg": "Robot self collision detection",
-        "cause": "The collision detected between the robot moel and the tool model.",
-        "remedy": "1) Change the mode to manual. 2) Jong the robot to prevent collsion. 3) Verify the job program."
-    },
-    "SW654": {
-        "msg": "TCP orientation violation (%s [deg])",
-        "cause": "TCP orientation exceeded the limits.",
-        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the TCP orientation in job program."
-    },
-    "SW655": {
-        "msg": "TCP speed violation in manual mode(%s [mm/s])",
-        "cause": "TCP speed exceeded the limits in manual mode.",
-        "remedy": "Check the value set in the safety function menu."
-    },
-    "SW656": {
-        "msg": "Joint space violation(%s [deg])",
-        "cause": "Joint position is out of the safe space.",
-        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
-    },
-    "SW657": {
-        "msg": "Joint speed violation(%s [deg/s])",
-        "cause": "Joint speed exceeded the limits.",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed in job program."
-    },
-    "SW658": {
-        "msg": "Robot power violation(%s [N])",
-        "cause": "Robot power exceeded the limits.",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed and position in job program."
-    },
-    "SW659": {
-        "msg": "Robot momentum violation(%s [kg m/s])",
-        "cause": "Robot momentum exceeded the limits.",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed and position in job program."
-    },
-    "SW660": {
-        "msg": "Collision detection- safety(%s axis)",
-        "cause": "1) If a collision occurrs, remove the cause of the collision. 2) Verify the sensitivity of collision detection.",
-        "remedy": "Check the value set in the safety function menu."
-    },
-    "SW661": {
-        "msg": "TCP speed violation in reduced mode(%s [mm/s])",
-        "cause": "TCP speed exceeded the limits in reduced mode",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
-    },
-    "SW662": {
-        "msg": "Stopping distance violation",
-        "cause": "Stopping distance exceeded the limits",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
-    },
-    "SW663": {
-        "msg": "Stopping time violation",
-        "cause": "Stopping time exceeded the limits.",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
-    },
-    "SW664": {
-        "msg": "TCP speed violation(%s [mm/s])",
-        "cause": "TCP speed exceeded the limits.",
-        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
+	"W50113": {
+        "msg": "(%s axis) Encoder Overheat",
+        "cause": "Encoder internal temperature has exceeded the limit.",
+        "remedy": "1) Check the motor temperature and adjust the robot's operating speed. \n2) If the error persists, replace the motor."
     },
 	"W54902": {
         "msg": "2nd Encoder BISS communication error detection",

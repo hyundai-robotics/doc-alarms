@@ -2919,7 +2919,7 @@
     "E1461": {
         "msg": "Program selection signal input is not zero",
         "cause": "Program selection assignment signal value inputted as zero at the time of startup in remote mode.",
-        "remedy": "Adjust the I/O sequence in a way in which the external startup can be turned on after the program selection signal is inputted. Or, check whether the signal connection is normal."
+        "remedy": "Adjust the I/O sequence in a way in which the external startup can be turned on after the program selection signal is inputted. Program selection signal – 0.2-second delay – external start signal. Or, check whether the signal connection is normal."
     },
     "E1462": {
         "msg": "Plasma welder not responding.",
@@ -4783,6 +4783,13 @@
         "help_idx": "E02511",
         "help_title": "[TroubleShoot]AMP AC input power overvoltage-Detection path abnormal"
     },
+    "E2512": {
+        "msg": "AMP PN Undervoltage Occurred (MC Issue)",
+        "cause": "An undervoltage occurred in the AMP's PN line due to abnormal operation of the magnetic contactor. Please inspect the MC-related components and the three-phase power supply input to the servo drive.",
+        "remedy": "1) Check whether the connection cable (CNSV) between BD632 and the servo board is properly connected and whether noise is affecting the signal. 2) Check the operation status of the magnetic contactor (MC). 3) If the problem persists, try replacing the BD632, BD640, and the amplifier board in sequence.",
+        "help_idx": "E02512",
+        "help_title": "AMP PN Undervoltage Occurred (MC Issue)"
+    },
     "E2520": {
         "msg": "(%s axis) IPM fault",
         "cause": "Fault signal generated with IPM of the relevant axis in the drive system.",
@@ -4915,7 +4922,7 @@
     "E2560": {
         "msg": "Brake Power Supply Error",
         "cause": "The brake power supply is not being delivered.",
-        "remedy": "1) Check if the 24V brake power is being supplied properly. (Inspect SMPS input/output and the output terminal of the noise filter.) 2) Check for disconnection or contact failure in the brake power cable. 3) Replace the servo board (BD640).",
+        "remedy": "1) Check whether the brake power supply (24V) is being supplied properly. (Check SMPS input/output and the output terminal of the noise filter.)\n2) Check for any disconnection or poor contact in the brake power cable.\n3) Check the connection cable (CNMC) between BD632 and the PSM. If the MC (Magnetic Contactor) does not operate, the brake power will not be supplied.\n4) Try replacing the servo board (BD640), PSM, and safety board (BD632) in that order.",
         "help_idx": "E02560",
         "help_title": "[TroubleShoot] Brake Power Supply Error"
     },
@@ -5545,6 +5552,16 @@
         "msg": "Communication not opened with the arc welding I/F board(4)",
         "cause": "After booting, the communication is not opened with the arc welding I/F board(4).",
         "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the arc welding I/F board(4) program is removed.3) Check whether there is abnormality with the arc welding I/F board(4) power.4) If there is no abnormality with the above items, replace the arc welding I/F board(4).5) If the same phenomenon persists even after replacing the arc welding I/F board(4), replace the main board.6) If the same phenomenon persists even after replacing the main board, replace the cable.6) If the same phenomenon persists even after replacing the main board, replace the cable."
+    },
+    "E2950": {
+        "msg": "%s axis) Exceeded allowed time for motor-on state",
+        "cause": "Motor did not turn on within the allowed time(voltage on).",
+        "remedy": "Check the system version information."
+    },
+    "E2951": {
+        "msg": "%s axis) Exceeded allowed time for motor-on state.",
+        "cause": "Motor did not turn on within the allowed time(switch on).",
+        "remedy": "Check the system version information."
     },
     "E3000": {
         "msg": "AMP Low-Volatge by MSPR NOT Operating",
@@ -10567,11 +10584,6 @@
         "cause": "An invalid syntax was specified as case statement's condition expression.",
         "remedy": "Make sure you are not using undefined variables, misspelled variables, or incorrect expression."
     },
-    "E14174": {
-        "msg": "The spot gun number has not been selected.",
-        "cause": "A command was entered without selecting the spot gun number",
-        "remedy": "Please check if the spot gun number has been selected."
-    },
     "E14180": {
         "msg": "Syntax error of statement's parameter.",
         "cause": "An invalid syntax was specified as statement's parameter.",
@@ -13363,6 +13375,16 @@
         "cause": "The data for gas spring pressure test is abnormal.",
         "remedy": "1) Please run the gas pressure test command after normal MOVE command.2) Please run the command after checking whether the number is normal."
     },
+    "E21018": {
+        "msg": "Gas spring sensor pressure is less than the minimum tolerance error value.(%s bar)",
+        "cause": "The measured gas spring sensor pressure is less than the minimum value of the tolerance error.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
+    },
+    "E21019": {
+        "msg": "Gas spring sensor pressure is greater than the minimum value for tolerance error.(%s bar)",
+        "cause": "The measured gas spring sensor pressure is greater than the minimum value for the tolerance error.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
+    },
     "E21021": {
         "msg": "Unauthorized user for HRBasic load estimation function.",
         "cause": "You do not have authorization to execute HRBasic base load estimation.(Unauthorized user)",
@@ -15008,6 +15030,11 @@
         "cause": "The SERVO version is not compatible with the integrated version",
         "remedy": "Please update all of the version again."
     },
+    "E28575": {
+        "msg": "USER DIO version mismatch",
+        "cause": "The USER DIO version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
     "E29001": {
         "msg": "Servo communication (EtherCAT) initialization failure",
         "cause": "Short circuit occurred in servo board (BD640), safety board (BD632) devices, or communication setting file (ENI) mismatch",
@@ -15104,6 +15131,11 @@
         "cause": "S/W Exception occured in SafetyServer task",
         "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
     },
+	"E29020": {
+		"msg": "Controller(servo, safety) restart failed after update",
+		"cause": "Controller did not restart normally after update",
+		"remedy": "Turn OFF controller power, wait at least 5 seconds, then turn power ON"
+	},
     "E30000": {
         "msg": "Pressure is not matched in time.",
         "cause": "The pressure is not matched in time during spot welding.1)Insufficient command offset of servo gun.2) The pressure-current table is not set.",
@@ -17029,168 +17061,746 @@
         "cause": "Enter the first index (8N+1) of byte group signal only. (e.g., 1, 9, FB5.17, ...)",
         "remedy": "Change the brush number in System / Application Parameter / Painting / Output Signal Assignment."
     },
+    "E38500": {
+        "msg": "Attempted to call API while not in Remote mode",
+        "cause": "An API request was attempted while the system was in Manual or Auto mode.",
+        "remedy": "Set the TP mode switch to Remote mode before sending the API request."
+    },
+    "E50000": {
+        "msg": "EtherCAT state transition occurred(OP to SafeOP)",
+        "cause": "An EtherCAT communication error caused the AL status to transition to SafeOP (or PreOP/Init).",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary."
+    },
+    "E50001": {
+        "msg": "Abnormal EtherCAT Command",
+        "cause": "The servo has detected that the EtherCAT PDO data cannot be updated.",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary."
+    },
+    "E50002": {
+        "msg": "Abnormal current feedback",
+        "cause": "Servo CPU did not receive current data from the Safety CPU in time.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50003": {
+        "msg": "Servo CPU watchdog timer expired 1",
+        "cause": "Watchdog timer expired for the main control function heartbeat signal from the Servo CPU.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50004": {
+        "msg": "Fail to clear Servo CPU error",
+        "cause": "Error during execution of error reset on Servo CPU after receiving command from Safety CPU.",
+        "remedy": "1) Check if the error has been resolved.\n2) Replace the BD642 board."
+    },
+    "E50005": {
+        "msg": "CRC mismatch in data between Servo CPU and Safety CPU [MCU A]",
+        "cause": "A CRC error occurred in the communication data sent from the Safety CPU (MCU A) to the Servo CPU (Zynq).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50006": {
+        "msg": "CRC mismatch in data between Servo CPU and Safety CPU [MCU B]",
+        "cause": "A CRC error occurred in the communication data sent from the Safety CPU (MCU B) to the Servo CPU (Zynq).",
+        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
+    },
+    "E50007": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 1) [MCU A]",
+        "cause": "Communication data from Safety CPU (MCU A, CPU1) to Servo CPU (Zynq) is not being updated (incremental number not increasing).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50008": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 1) [MCU B]",
+        "cause": "Communication data from Safety CPU (MCU B, CPU1) to Servo CPU (Zynq) is not being updated (incremental number not increasing).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50009": {
+        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) due to abnormal changes in incremental numbers.",
+        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) have increased incorrectly.",
+        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
+    },
+    "E50010": {
+        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) due to abnormal changes in incremental numbers.",
+        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) have increased incorrectly.",
+        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
+    },
+    "E50011": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 2) [MCU A]",
+        "cause": "Communication data from Safety CPU (MCU A, CPU2) to Servo CPU (Zynq) is not being updated (incremental number not increasing).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50012": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 2) [MCU B]",
+        "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU (Zynq) is not being updated (incremental number not increasing).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50013": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 3) [MCU A]",
+        "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU (Zynq) was abnormally updated (incremental number not incrementing correctly).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50014": {
+        "msg": "Communication data update error between Servo CPU and Safety CPU (Error Code 3) [MCU B]",
+        "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU (Zynq) was abnormally updated (incremental number not incrementing correctly).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50015": {
+        "msg": "CRC error during servo control parameter transmission",
+        "cause": "A CRC error occurred during the download of servo control parameters via EtherCAT SDO.",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary."
+    },
+    "E50016": {
+        "msg": "Incompatible Safety CPU version detected [MCU A]",
+        "cause": "The version of Safety CPU (MCU A) is incompatible with the Servo CPU.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board."
+    },
+    "E50017": {
+        "msg": "Incompatible Safety CPU version detected [MCU B]",
+        "cause": "The version of Safety CPU (MCU B) is incompatible with the Servo CPU.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board." 
+    },
+    "E50018": {
+        "msg": "EtherCAT AL Status NOSYNCERROR",
+        "cause": "Failed to detect DC Sync signal during Servo CPU state transition (SafeOP to OP).",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary." 
+    },
+    "E50020": {
+        "msg": "EtherCAT AL Status SMWATCHDOG",
+        "cause": "No EtherCAT RxPDO data received by Servo CPU within the expected timeframe.",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary." 
+    },
+    "E50021": {
+        "msg": "Servo CPU watchdog timer expired 2",
+        "cause": "Watchdog timer expired for the current control function heartbeat signal of the Servo CPU.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board." 
+    },
+    "E50022": {
+        "msg": "Executing version update while motor is running",
+        "cause": "An attempt was made to perform a version upgrade while the motor is running.",
+        "remedy": "1) Try updating the version after turning off the servo motor." 
+    },
+    "E50023": {
+        "msg": "EtherCAT AL Status FATALSYNCERROR",
+        "cause": "Watchdog timer expired for the EtherCAT DC Sync detection signal of the Servo CPU.",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary." 
+    },
+    "E50024": {
+        "msg": "Abnormal Servo CPU state",
+        "cause": "Servo CPU is not in a state to safely drive the motor (self-diagnostic bit not activated).",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board." 
+    },
+    "E50025": {
+        "msg": "Abnormal Safety CPU state [MCU A]",
+        "cause": "The Safety CPU cannot safely operate the motor due to an error in safety parameter initialization.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board." 
+    },
+    "E50026": {
+        "msg": "Abnormal Safety CPU state [MCU B]",
+        "cause": "The Safety CPU cannot safely operate the motor due to an error in safety parameter initialization.",
+        "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the BD642 board." 
+    },
+    "E50027": {
+        "msg": "EtherCAT PDI detection failed (Watchdog timeout)",
+        "cause": "Servo CPU did not receive new EtherCAT frames within the expected time.",
+        "remedy": "1) Check the EtherCAT connection status of the BD642 board.\n2) Inspect the mounting condition of the main board or BD642 board.\n3) Replace the main board or BD642 board if necessary." 
+    },
+    "E50100": {
+        "msg": "(%s axis) Encoder configuration type",
+        "cause": "The configured encoder type (ABSE) is not supported.",
+        "remedy": "1) Check the motor settings. \n2) Check the robot registration information. \n3) Check the main version."
+    },
+    "E50101": {
+        "msg": "(%s axis) Invalid encoder command field setting",
+        "cause": "Abnormal value detected in the encoder command field (CF).",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50102": {
+        "msg": "(%s axis) Encoder received data length",
+        "cause": "Received encoder data length is incorrect.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50103": {
+        "msg": "(%s axis) Invalid encoder data termination signal",
+        "cause": "Encoder termination signal was not received.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50104": {
+        "msg": "(%s axis) CRC error deteced in encoder data",
+        "cause": "A CRC error occurred in the received encoder data.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50105": {
+        "msg": "(%s axis) Encoder line open detected (Motor Off)",
+        "cause": "Encoder reception error detected while servo motor is OFF.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50106": {
+        "msg": "(%s axis) Encoder data abnormal variation detected",
+        "cause": "Encoder position data updated beyond allowable range.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50107": {
+        "msg": "(%s axis) Encoder line open detected (Motor On)",
+        "cause": "Encoder reception error detected while servo motor is ON.",
+        "remedy": "1) Check the connection status of the encoder-related cables and connectors. \n2) Check the grounding status of the encoder-related cables. \n3) Inspect the encoder cables for faults. \n4) Replace the BD642 board."
+    },
+    "E50108": {
+        "msg": "(%s axis) Encoder Counting error",
+        "cause": "Abnormality detected in encoder rotation data.",
+        "remedy": "1) Attempt to reset the encoder error. \n2) Power the controller off and on. \n3) If the error persists, replace the motor."
+    },
+    "E50109": {
+        "msg": "(%s axis) Encoder Overspeed",
+        "cause": "While running on external battery after main power shutdown, the Smart-Abs shaft exceeded the specified speed limit for Power-off mode.",
+        "remedy": "1) Attempt to reset the encoder error. \n2) Replace the encoder battery. \n3) Power the controller off and on. \n4) If the error persists, replace the motor."
+    },
+    "E50110": {
+        "msg": "(%s axis) Encoder Full absolute status",
+        "cause": "The encoder's main power was turned on while the encoder shaft was rotating at 100 RPM or higher.",
+        "remedy": "1) Reduce the rotational speed to below 100 RPM and wait until the error state is cleared. \n2) If the error persists, replace the motor. \n3) Attempt to reset the encoder error."
+    },
+    "E50111": {
+        "msg": "(%s axis) Encoder Counting error",
+        "cause": "Change in multiturn value exceeded allowable range.",
+        "remedy": "1) Attempt to reset the encoder error. \n2) Replace the encoder battery. \n3) Power the controller off and on. \n4) If the error persists, replace the motor."
+    },
+    "E50112": {
+        "msg": "(%s axis) Encoder Battery error",
+        "cause": "Encoder external battery voltage is low (voltage of built-in capacitor is below 2.5V).",
+        "remedy": "1) Replace the encoder battery. \n2) Check the battery wiring. \n3) If the error persists, replace the motor."
+    },
+    "E50114": {
+        "msg": "(%s axis) Unexpected change detected in encoder data",
+        "cause": "Encoder position data updated beyond allowable range.",
+        "remedy": "1) Replace the motor."
+    },
+    "E50115": {
+        "msg": "(%s axis) Detection of abnormal changes in encoder temperature data",
+        "cause": "An abnormality in encoder temperature data was detected.",
+        "remedy": "1) Check for encoder wiring \n2) If the problem persists, replace the Safety Controller board."
+    },
+    "E50200": {
+        "msg": "(%s axis) Motor overload",
+        "cause": "The current flowing through the motor exceeds the rated continuous current.",
+        "remedy": "1) Check for any mechanical interference within the robot’s operating range. \n2) Verify proper operation of the brake release. \n3) If the error persists, replace the motor."
+    },
+    "E50201": {
+        "msg": "(%s axis) Motor overload (Increased Friction Due to Low Temperature)",
+        "cause": "Operating the motor in a low-temperature state (without preheating) increases the viscous friction coefficient, causing the current flowing through the motor to exceed the rated continuous current.",
+        "remedy": "1) Operate the robot at low speed to warm it up. \n2) Check for any mechanical interference within the robot’s operating range. \n3) Verify proper operation of the brake release. \n4) If the error persists, replace the motor.",
+        "help_idx": "E02653",
+        "help_title": "[Remedy](○ Axis) Motor Overload – Increased Friction Due to Low Temperature"
+    },
+    "E50202": {
+        "msg": "(%s Axis) UV Phase Current Sensor Offset Exceeded Error",
+        "cause": "The offset of the UV phase current sensor exceeds the reference value.",
+        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
+    },
+    "E50203": {
+        "msg": "(%s Axis) U Phase Current Sensor Offset Exceeded Error",
+        "cause": "The offset of the U phase current sensor exceeds the reference value.",
+        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
+    },
+    "E50204": {
+        "msg": "(%s Axis) V Phase Current Sensor Offset Exceeded Error",
+        "cause": "The offset of the V phase current sensor exceeds the reference value.",
+        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
+    },
+    "E50205": {
+        "msg": "(%s axis) Unable to sustain servo lock – abnormal current output",
+        "cause": "Motor current is not being properly supplied due to wire harness issues such as poor contact, disconnection, short circuit, miswiring, or problems with the amplifier or board.",
+        "remedy": "1) Check the wiring between the controller and the robot. \n2) Check the status of the amplifier board. \n3) Check the status of the BD642 board. \n4) If the problem persists, replace the BD642 and amplifier boards.",
+        "help_idx": "E02780",
+        "help_title": "[Action Method](○ Axis) Servo Lock Maintenance Impossible – Wiring or Current Generation Issue"
+    },
+    "E50206": {
+        "msg": "(%s axis) Unable to sustain servo lock – abnormal parameter",
+        "cause": "Abnormal current was applied due to incorrect motor parameter settings.",
+        "remedy": "1) Check the robot registration information. \n2) Verify the servo control gains.",
+        "help_idx": "E02781",
+        "help_title": "[Action Method](○ Axis) Unable to maintain servolock - Gain issue"
+    },
+    "E50207": {
+        "msg": "(%s axis) Current error exceeded",
+        "cause": "The difference between the current command and the current feedback has exceeded the set value.",
+        "remedy": "1) Check the wiring between the controller and the robot. \n2) Check the status of the amplifier board. \n3) Check the status of the BD642 board. \n4) If the problem persists, replace the BD642 and amplifier boards."
+    },
+    "E50300": {
+        "msg": "(%s axis) IPM fault",
+        "cause": "An IPM fault signal occurred during Servo ON.",
+        "remedy": "1) Check the status of the amplifier board. \n2) Verify the board connector is securely connected. \n3) Check the robot registration information. \n4) Replace the amplifier module. \n5) Replace the motor."
+    },
+   "E50301": {
+        "msg": "(%s axis) IPM fault - low voltage",
+        "cause": "An IPM fault signal occurred during Servo OFF.",
+        "remedy": "1) Check the board connector connection status. \n2) Replace the amplifier board. \n3) Replace the BD642 board."
+    },
+    "E50400": {
+        "msg": "(%s axis) Position Deviation exceeded",
+        "cause": "The position deviation has exceeded the error threshold.",
+        "remedy": "1) Check for mechanical interference on the problematic axis. \n2) Verify proper operation of the brake release. \n3) Confirm that the rated load is being used. \n4) Check the robot registration information. \n5) Verify the position deviation setting level."
+    },
+    "E50401": {
+        "msg": "(%s axis) Speed-Based Position Deviation Exceeded",
+        "cause": "The position deviation has exceeded the speed-based error threshold.",
+        "remedy": "1) Check for any mechanical interference in the problematic axis. 2) Verify that the brake is releasing properly, and if there are issues, inspect the brake power supply. 3) Ensure that the rated load is being used. 4) Check the position deviation setting level. For more details, refer to the troubleshooting guide."
+    },
+    "E50402": {
+        "msg": "(%s axis) Position Deviation Exceeded (Cold Temperature Friction Increase)",
+        "cause": "Increased viscosity friction coefficient of grease due to operation in cold temperature (unwarmed state) has caused the position deviation to exceed the error threshold.",
+        "remedy": "Refer to the troubleshooting guide."
+    },
+    "E50403": {
+        "msg": "(%s axis) Position Deviation Exceeded (Control Unavailable)",
+        "cause": "The position deviation has exceeded the error threshold in a situation where the servo cannot control it.",
+        "remedy": "1) Verify the normal operation of the main unit. 2) Check the normal operation of the Safety Controller."
+    },
+    "E50500": {
+        "msg": "(%s axis) Exceeded Maximum Speed",
+        "cause": "The axis has exceeded the configured maximum speed during operation.",
+        "remedy": "1) Check the servo control gain. 2) Inspect the motor and encoder status. 3) Refer to the troubleshooting guide.",
+        "help_idx": "E02680",
+        "help_title": "[Remedy](○ axis) Exceeded Maximum Speed"
+    },
+    "E51000": {
+        "msg": "The received safety configuration file has been corrupted",
+        "cause": "The received CRC32 data does not match the original value",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+    "E51100": {
+        "msg": "The Response of safety board has been delayed",
+        "cause": "Safety communication(FSoE) encountered a response delay error",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+    "E51101": {
+        "msg": "Data corruption error of safety communication(FSoE)",
+        "cause": "CRC data received in the safety communication module does not match originao value",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+    "E51200": {
+        "msg": "The internal communication error (CPU1-CM) in the safety board",
+        "cause": "The safety board MCU internal IPC communication data CRC error between CPU1 and CM",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+    "E51201": {
+        "msg": "The internal communication error(FSI) in the safety board",
+        "cause": "FSI communication CRC error occured between MCUs in the safety board",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+	"E51202": {
+        "msg": "The internal communication(FSI) delay error",
+        "cause": "The Communication dealy occured between MCUs in the safety board",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+	"E51203": {
+        "msg": "The received file through the internal communication(FSI) has been corrupted",
+        "cause": "The recevied CRC value does not match the original value",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+	"E51300": {
+        "msg": "The data corruption error occured between CPU1-CPU2 in the safety board",
+        "cause": "Safetyboard MCU internal CPU1-CPU2 IPC communication data CRC error",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+	"E51301": {
+        "msg": "The delay error occured between CPU1-CPU2 in the safety board",
+        "cause": "The Communication(IPC) dealy occured between CPU1 and CPU2 in the safety board",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board." 
+    },
+	"E51302": {
+        "msg": "The data corruption error occured between CPU2-CPU2 in the safety board",
+        "cause": "The recevied CRC data does not match the original value during performing SCI communication",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+	"E51303": {
+        "msg": "The delay error occured between CPU2-CPU2 in the safety board",
+        "cause": "Communication delay occured during performing SCI communication",
+        "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
+    },
+    "E51501": {
+        "msg": "Safe parameter range exceeded(General setup)",
+        "cause": "The parameter set in the General setup configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51502": {
+        "msg": "Safe parameter range exceeded(Joint space)",
+        "cause": "The parameter set in the Joint space configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51503": {
+        "msg": "Safe parameter range exceeded(Joint speed)",
+        "cause": "The parameter set in the Joint speed configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51504": {
+        "msg": "Safe parameter range exceeded(SOS)",
+        "cause": "The parameter set in the SOS configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51505": {
+        "msg": "Safe parameter range exceeded(TCP speed)",
+        "cause": "The parameter set in the TCP speed configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51506": {
+        "msg": "Safe parameter range exceeded(Cell ares)",
+        "cause": "The parameter set in the Cell area configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51507": {
+        "msg": "Safe parameter range exceeded(Tool model)",
+        "cause": "The parameter set in the Tool model configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51508": {
+        "msg": "Safe parameter range exceeded(Robot model)",
+        "cause": "The parameter set in the Robot model configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51509": {
+        "msg": "Safe parameter range exceeded(Self collision)",
+        "cause": "The parameter set in the Self collision configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51510": {
+        "msg": "Safe parameter range exceeded(TCP orientation)",
+        "cause": "The parameter set in the TCP orientation configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51511": {
+        "msg": "Safe parameter range exceeded(Replan)",
+        "cause": "The parameter set in the Replan configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51512": {
+        "msg": "Safe parameter range exceeded(Power)",
+        "cause": "The parameter set in the Power configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Power configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51513": {
+        "msg": "Safe parameter range exceeded(Momentum)",
+        "cause": "The parameter set in the Momentum configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51514": {
+        "msg": "Safe parameter range exceeded(Collision detection)",
+        "cause": "The parameter set in the Collision detection configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51515": {
+        "msg": "Safe parameter range exceeded(Safe stop)",
+        "cause": "The parameter set in the Safe stop configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51516": {
+        "msg": "Safe parameter range exceeded(PROFINET)",
+        "cause": "The parameter set in the PROFINET configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51517": {
+        "msg": "Safe parameter range exceeded(PROFIsafe)",
+        "cause": "The parameter set in the PROFIsafe configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51518": {
+        "msg": "Safe parameter range exceeded(Safety IO)",
+        "cause": "The parameter set in the Safety IO configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51519": {
+        "msg": "Safe parameter range exceeded(Add Safety IO)",
+        "cause": "The parameter set in the Add Safety IO configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51520": {
+        "msg": "Safe parameter range exceeded(IO Function Setting)",
+        "cause": "The parameter set in the IO Function Setting configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51521": {
+        "msg": "Safe parameter range exceeded(Additional load)",
+        "cause": "The parameter set in the Additional load configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51522": {
+        "msg": "Safe parameter range exceeded(Tool info)",
+        "cause": "The parameter set in the Tool info configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+    },
+    "E51523": {
+        "msg": "Safe parameter range exceeded(Maintenance)",
+        "cause": "The parameter set in the Maintenance configuration menu has exceeded the range.",
+        "remedy": "1) Check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+    },
+    "E51530": {
+        "msg": "Fail to create safe space(space_%s)",
+        "cause": "The space cannot be formed because there are not enough vertices.",
+        "remedy": "1) Check that there are at least 3 vertices.\n2) Initialize the safety parameters.\n3) Replace the safety board."
+    },
+    "E51531": {
+        "msg": "Exceeded size of safe sapce",
+        "cause": "The configured safe zone size exceeds the maximum allowable value.",
+        "remedy": "1) Reduce the size or number of safe spaces.\n2) Initialize the safety parameters.\n3) Replace the safety board."
+    },
+    "E51544": {
+        "msg": "Communication Failure with Radar Sensor Control Board",
+        "cause": "Abnormal communication status with the radar sensor control board.",
+        "remedy": "1) Check the communication and power cables of the radar sensor control board.\n2) If the radar is not installed, disable the Radar Replan function.\n3) Perform safety parameter initialization.\n4) Replace the safety board."
+    },
+    "E51601": {
+        "msg": "Stopping distance violation",
+        "cause": "Stopping distance exceeded the limits",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
+    },
+    "E51610": {
+        "msg": "Stopping time violation",
+        "cause": "Stopping time exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the robot's speed in job program."
+    },
+    "E51620": {
+        "msg": "Joint speed violation(%s axis, speed_%s)",
+        "cause": "Joint speed exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed in job program."
+    },
+    "E51630": {
+        "msg": "Joint space violation(%s axis, space_%s)",
+        "cause": "Joint position is out of the safe space.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
+    },
+    "E51640": {
+        "msg": "(%s axis) Robot Safety Stop Violation",
+        "cause": "Movement was detected while the robot was supposed to be in a stationary state.",
+        "remedy": "Verify that the brake is functioning properly."
+    },
+    "E51650": {
+        "msg": "TCP speed violation in manual mode",
+        "cause": "TCP speed exceeded the limits in manual mode.",
+        "remedy": "Check the value set in the safety function menu."
+    },
+    "E51660": {
+        "msg": "TCP speed violation(speed_%s)",
+        "cause": "TCP speed exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
+    },
+    "E51661": {
+        "msg": "Elbow linear speed violation(speed_%s)",
+        "cause": "The elbow linear speed has exceeded the safety limit.",
+        "remedy": "1) Check the configured values in the Safety Function Settings menu.\n2) Verify the robot's TCP speed in the written program."
+    },
+    "E51662": {
+        "msg": "Wrist axis linear speed violation (speed_%s)",
+        "cause": "The wrist axis linear speed has exceeded the safety limit.",
+        "remedy": "1) Check the configured values in the Safety Function Settings menu.\n2) Verify the robot's TCP speed in the written program."
+    },
+    "E51670": {
+        "msg": "TCP speed violation in reduced mode",
+        "cause": "TCP speed exceeded the limits in reduced mode",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed in job program."
+    },
+    "E51680": {
+        "msg": "TCP orientation violation(orient_%s)",
+        "cause": "TCP orientation exceeded the limits.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the TCP orientation in job program."
+    },
+    "E51690": {
+        "msg": "Robot self collision detection",
+        "cause": "The collision detected between the robot moel and the tool model.",
+        "remedy": "1) Change the mode to manual. 2) Jong the robot to prevent collsion. 3) Verify the job program."
+    },
+    "E51700": {
+        "msg": "TCP position violation(space_%s)",
+        "cause": "TCP position is out of the cell area.",
+        "remedy": "1) Change the mode to manual. 2) Jog the robot to safety area. 3) Verify the job program."
+    },
+    "E51801": {
+        "msg": "Robot power violation(power_%s)",
+        "cause": "Robot power exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the joint speed and position in job program."
+    },
+    "E51810": {
+        "msg": "Robot momentum violation(mmt_%s)",
+        "cause": "Robot momentum exceeded the limits.",
+        "remedy": "1) Check the value set in the safety function menu. 2) Verify the TCP speed and position in job program."
+    },
+    "E51820": {
+        "msg": "Collision detection- safety(%s axis, coldet_%s)",
+        "cause": "1) If a collision occurrs, remove the cause of the collision. 2) Verify the sensitivity of collision detection.",
+        "remedy": "Check the value set in the safety function menu."
+    },
+    "E51901": {
+        "msg": "Radar sensor zone violation detected",
+        "cause": "An object was detected in the protected zone monitored by the radar sensor.",
+        "remedy": "1) Move the person/object to a safe area.\n2) Switch to manual mode and verify the program and the configured zones."
+    },
+    "E51902": {
+        "msg": "Radar sensor control board diagnostic error",
+        "cause": "The radar sensor control board is in an abnormal state.",
+        "remedy": "1) Reboot the controller.\n2) If the issue persists, replace the radar sensor control board."
+    },
+    "E51903": {
+        "msg": "Radar sensor control board abnormal status",
+        "cause": "The radar sensor control board is in an abnormal state.",
+        "remedy": "1) Reboot the controller.\n2) If the issue persists, replace the radar sensor control board."
+    },
 	"E52800": {
-        "msg": "MCU HW-BIST Diagnostic error [MCU%s]",
+        "msg": "MCU HW-BIST Diagnostic error",
         "cause": "CPU,FPU of CPU1 are abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52801": {
-        "msg": "MCU PIE_RAM Diagnostic error [MCU%s]",
+        "msg": "MCU PIE_RAM Diagnostic error",
         "cause": "Address of cpu1 PIE Vector handler mismatch.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52802": {
-        "msg": "MCU CPU register Diagnostic error [MCU%s]",
+        "msg": "MCU CPU register Diagnostic error",
         "cause": "CPU1 Core Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52803": {
-        "msg": "MCU FPU register Diagnostic error [MCU%s]",
+        "msg": "MCU FPU register Diagnostic error",
         "cause": "CPU1 FPU Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52804": {
-        "msg": "MCU VCRC register Diagnostic error [MCU%s]",
+        "msg": "MCU VCRC register Diagnostic error",
         "cause": "CPU1 VCRC Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52805": {
-        "msg": "MCU march ram Diagnostic error [MCU%s]",
+        "msg": "MCU march ram Diagnostic error",
         "cause": "CPU1 ram read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52806": {
-        "msg": "MCU march ram Diagnostic error [MCU%s]",
+        "msg": "MCU march ram Diagnostic error",
         "cause": "CPU1 ram copy area read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52807": {
-        "msg": "MCU FLASH crc Diagnostic error [MCU%s]",
+        "msg": "MCU FLASH crc Diagnostic error",
         "cause": "CPU1 Flash crc value is inconsistent.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52808": {
-        "msg": "MCU oscillator Diagnostic error [MCU%s]",
+        "msg": "MCU oscillator Diagnostic error",
         "cause": "CPU1 external oscillator is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
 	"E52809": {
-        "msg": "MCU CPU1 Timeout error [MCU%s]",
+        "msg": "MCU CPU1 Timeout error",
         "cause": "CPU1 operation is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
 	"E52810": {
-        "msg": "MCU boot flash CRC error [MCU%s]",
+        "msg": "MCU boot flash CRC error",
         "cause": "CPU1 boot Flash crc value is inconsistent.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU1 executable."
     },
     "E52811": {
-        "msg": "MCU boot RAM CRC error [MCU%s]",
+        "msg": "MCU boot RAM CRC error",
         "cause": "CPU1 boot ram crc value is inconsistent.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU1 executable."
     },
 	"E52812": {
-        "msg": "MCU Temperature limit error [MCU%s]",
+        "msg": "MCU Temperature limit error",
         "cause": "The temperature of the SCM board is too high.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52813": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The P15V voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52814": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The ZP3V3 voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52815": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The P24V voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52816": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The S_P24V voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52817": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The D_P3V3 voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52818": {
-        "msg": "MCU Voltage limit error [MCU%s]",
+        "msg": "MCU Voltage limit error",
         "cause": "The D_P1V2 voltage supply on the SCM board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52819": {
-        "msg": "MCU CM timeout error [MCU%s]",
+        "msg": "MCU CM timeout error",
         "cause": "CM operation is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
 	"E52820": {
-        "msg": "MCU CPU1 main loop timeout error [MCU%s]",
+        "msg": "MCU CPU1 main loop timeout error",
         "cause": "CPU1 runtime is abnormal",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
 	"E52821": {
-        "msg": "CPU1 firmware version mismatch [MCU%s]",
+        "msg": "CPU1 firmware version mismatch",
         "cause": "Mismatch between mcua and mcub firmware",
         "remedy": "1) Please update the firmware again. 2) If the problem persists, replace the Safety controller board."
     },
 	"E52822": {
-        "msg": "CPU2 firmware version mismatch [MCU%s]",
+        "msg": "CPU2 firmware version mismatch",
         "cause": "Mismatch between mcua and mcub firmware",
         "remedy": "1) Please update the firmware again. 2) If the problem persists, replace the Safety controller board."
     },
 	"E52823": {
-        "msg": "CM firmware version mismatch [MCU%s]",
+        "msg": "CM firmware version mismatch",
         "cause": "Mismatch between mcua and mcub firmware",
         "remedy": "1) Please update the firmware again. 2) If the problem persists, replace the Safety controller board."
     },
 	"E52824": {
-        "msg": "SDRAM read and write error [MCU%s]",
+        "msg": "SDRAM read and write error",
         "cause": "It is not possible read and write SDRAM",
         "remedy": "1)  Reboot the controller. 2) If the problem persists, replace the Safety controller board."
     },
     "E52900": {
-        "msg": "MCU CPU2 timeout error [MCU%s]",
+        "msg": "MCU CPU2 timeout error",
         "cause": "CPU2 operation is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52901": {
-        "msg": "MCU PIE_RAM Diagnostic error [MCU%s]",
+        "msg": "MCU PIE_RAM Diagnostic error",
         "cause": "Address of cpu2 PIE Vector handler mismatch.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52902": {
-        "msg": "MCU CPU2 register Diagnostic error [MCU%s]",
+        "msg": "MCU CPU2 register Diagnostic error",
         "cause": "CPU2 Core Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52903": {
-        "msg": "MCU FPU register Diagnostic error [MCU%s]",
+        "msg": "MCU FPU register Diagnostic error",
         "cause": "CPU2 FPU Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52904": {
-        "msg": "MCU VCRC register Diagnostic error [MCU%s]",
+        "msg": "MCU VCRC register Diagnostic error",
         "cause": "CPU2 VCRC Register read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52905": {
-        "msg": "MCU march ram Diagnostic error [MCU%s]",
+        "msg": "MCU march ram Diagnostic error",
         "cause": "CPU2 ram read/write is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52906": {
-        "msg": "MCU flash crc Diagnostic error [MCU%s]",
+        "msg": "MCU flash crc Diagnostic error",
         "cause": "CPU2 Flash crc value is inconsistent.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
     },
     "E52907": {
-        "msg": "MCU boot flash CRC error [MCU%s]",
+        "msg": "MCU boot flash CRC error",
         "cause": "CPU2 boot Flash crc value is inconsistent.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },
@@ -17209,46 +17819,226 @@
         "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (CPU 2) have increased incorrectly.",
         "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
     },
-	"53300": {
-        "msg": "Temp cross check error [MCU%s]",
+    "E52952": {
+        "msg": "Program sequence diagnosis error",
+        "cause": "Safety controller has an abnormal sequence of safety program operations. (null_table).",
+        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
+    },
+    "E52953": {
+        "msg": "Program sequence diagnosis error",
+        "cause": "Safety controller has an abnormal sequence of safety program operations. (number error)",
+        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
+    },
+    "E52954": {
+        "msg": "Program sequence diagnosis error",
+        "cause": "Safety controller has an abnormal sequence of safety program operations.(local value error)",
+        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
+    },
+    "E53000": {
+        "msg": "Encoder Diagnostics Error",
+        "cause": "The encoder diagnostics result is abnormal.",
+        "remedy": "1) Reboot the controller. 2) Check the status of the encoder on the affected axis. 3) If the issue persists, replace the Safety Controller board."
+    },
+    "E53001": {
+        "msg": "Encoder Communication Error",
+        "cause": "The encoder communication is abnormal.",
+        "remedy": "1) Reboot the controller. 2) Check the encoder cable connections. 3) If the issue persists, replace the Safety Controller board."
+    },
+    "E53002": {
+        "msg": "Encoder Offset Too Large",
+        "cause": "The deviation between the encoder value stored in the controller and the current encoder value exceeds the standard threshold.",
+        "remedy": "1) Reboot the controller. 2) Check the encoder status. 3) If the issue persists, replace the Safety Controller board."
+    },
+    "E53100": {
+        "msg": "W Phase Current Diagnostic Error",
+        "cause": "The diagnostic result for the W phase current is abnormal.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53101": {
+        "msg": "U Phase Current Diagnostic Error",
+        "cause": "The diagnostic result for the U phase current is abnormal.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53102": {
+        "msg": "UV Phase Current Sensor Offset Exceeds Error",
+        "cause": "The UV phase current sensor offset exceeds the standard value.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53103": {
+        "msg": "VW Phase Current Sensor Offset Exceeds Error",
+        "cause": "The VW phase current sensor offset exceeds the standard value.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53104": {
+        "msg": "U Phase Current Sensor Offset Exceeds Error",
+        "cause": "The U phase current sensor offset exceeds the standard value.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53105": {
+        "msg": "V Phase Current Sensor Offset Exceeds Error",
+        "cause": "The V phase current sensor offset exceeds the standard value.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53106": {
+        "msg": "W Phase Current Sensor Offset Exceeds Error",
+        "cause": "The W phase current sensor offset exceeds the standard value.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53107": {
+        "msg": "Current Sensor Connection Disruption",
+        "cause": "Unable to read the values from the current sensor.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
+    },
+    "E53200": {
+        "msg": "Servo module no response",
+        "cause": "The watchdog count of the servo module is not increasing.",
+        "remedy": "1)Perform S/W version upgrade."
+    },
+    "E53201": {
+        "msg": "Zynq version incompatible",
+        "cause": "The version of the Safety CPU isn't compatible with the Servo CPU.",
+        "remedy": "1)Perform S/W version upgrade. 2) If the problem persists, replace the Safety Controller board."
+    },
+	"E53300": {
+        "msg": "Temp cross check error",
         "cause": "Temp is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },
-    "53301": {
-        "msg": "Diagnosis cross check error [MCU%s]",
+    "E53301": {
+        "msg": "Diagnosis cross check error",
         "cause": "Diagnosis result is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },
-    "53302": {
-        "msg": "Voltage CROSS CHECK ERROR [MCU%s]",
+    "E53302": {
+        "msg": "Voltage CROSS CHECK ERROR",
         "cause": "Voltage P24V is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },
-    "53303": {
-        "msg": "Voltage CROSS CHECK ERROR [MCU%s]",
+    "E53303": {
+        "msg": "Voltage CROSS CHECK ERROR",
         "cause": "Voltage S_P24V is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
     },	
-    "53304": {
-        "msg": "Voltage CROSS CHECK ERROR [MCU%s]",
+    "E53304": {
+        "msg": "Voltage CROSS CHECK ERROR",
         "cause": "Voltage D_P3V3 is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
-    },	
-    "53305": {
-        "msg": "Voltage CROSS CHECK ERROR [MCU%s]",
+    },
+    "E53305": {
+        "msg": "Voltage CROSS CHECK ERROR",
         "cause": "Voltage D_P1V2 is different between Mcua and Mcub",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the CPU2 executable."
+    },
+    "E53350": {
+        "msg": "Sequence cross check error",
+        "cause": "Sequence performance results between the two CPUs are different.",
+        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+    },
+    "E53352": {
+        "msg": "TCP orientation cross check error",
+        "cause": "TCP orientation calculation results between the two CPUs are different.",
+        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+    },
+    "E53353": {
+        "msg": "Momentum cross check error",
+        "cause": "The momentum calculation results between the two CPUs are different.",
+        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+    },
+    "E53354": {
+        "msg": "TCP force cross check error",
+        "cause": "The TCP force calculation results between the two CPUs are different.",
+        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+    },
+    "E53355": {
+        "msg": "Power cross check error",
+        "cause": "The Power calculation results between the two CPUs are different.",
+        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+    },
+    "E53360": {
+        "msg": "Joint position cross check error",
+        "cause": "Each axis has a different command and actual axis position.",
+        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
+    },
+    "E53400": {
+        "msg": "Undefined servo/safety error",
+        "cause": "에러번호 및 부가정보에 이상이 있습니다.",
+        "remedy": "1) Reboot the robot controller. 2) Check the system version information."
+    },
+    "E53361": {
+        "msg": "TCP position cross check error",
+        "cause": "The TCP position calculated by the main and the position calculated by the safety controller are different.",
+        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
     },	
+    "E53362": {
+        "msg": "Main computer task abnormal",
+        "cause": "Abnormal behavior detected in some tasks on the main computer.",
+        "remedy": "1) Check the task monitor. 2) Check the system version information."
+    },
+    "E53610": {
+        "msg": "Tool information mismatch(Weight)",
+        "cause": "The tool weight in the safety settings does not match the robot's tool parameter data.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe tool information] match the weight values in [Robot parameter]-[Tool data]."
+    },
+    "E53611": {
+        "msg": "Tool information mismatch(Center)",
+        "cause": "The tool center in the safety settings does not match the robot's tool parameter data.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe tool information] match the center values in [Robot parameter]-[Tool data]."
+    },
+    "E53612": {
+        "msg": "Tool information mismatch(Inertia)",
+        "cause": "The tool inertia in the safety settings does not match the robot's tool parameter data.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe tool information] match the inertia values in [Robot parameter]-[Tool data]."
+    },
+    "E53613": {
+        "msg": "Tool information mismatch(Length).",
+        "cause": "The tool length in the safety settings does not match the robot's tool parameter data.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe tool information] match the length values in [Robot parameter]-[Tool data]."
+    },
+    "E53614": {
+        "msg": "Additional load information mismatch(Weight)",
+        "cause": "The safety additional load weight does not match the robot's additional load parameter.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe additional load] match the weight values in [Robot parameter]-[Additional weight on each axis]."
+    },
+    "E53615": {
+        "msg": "Additional load information mismatch(Center)",
+        "cause": "The safety additional load center does not match the robot's additional load parameter.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe additional load] match the center values in [Robot parameter]-[Additional weight on each axis]."
+    },
+    "E53616": {
+        "msg": "Additional load information mismatch(Inertia)",
+        "cause": "The safety additional inertia weight does not match the robot's additional load parameter.",
+        "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe additional load] match the inertia values in [Robot parameter]-[Additional weight on each axis]."
+    },
 	"E54554": {
 		"msg": "Radar sensor %s MCU[%s] detection failure error",
 		"cause": "Continuous detection failures occurring",
 		"remedy": "1) Check if there are any objects blocking the radar sensor. 2) If the problem persists, replace the sensor."
 	},
-	"E54555": {
-		"msg": "Radar sensor %s MCU[%s] CAN communication error",
-		"cause": "CAN communication data duplication or loss occurring",
-		"remedy": "1) Replace the corresponding sensor. 2) Replace the BD6F1 board. 3) If the problem persists, please contact our company."
-	},
+    "E54555": {
+        "msg": "Radar sensor %s MCU[%s] CAN communication error",
+        "cause": "CAN communication data duplication or loss occurring",
+        "remedy": "1) Replace the corresponding sensor. 2) Replace the BD6F1 board. 3) If the problem persists, please contact our company."
+    },
+    "E55002": {
+        "msg": "UserDIO Board (#%s) EtherCAT disconnect detection",
+        "cause": "UserDIO Board EtherCAT disconnect detected",
+        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
+    },
+    "E55003": {
+        "msg": "UserDIO Board (#%s) initial boot value transmission error detection",
+        "cause": "UserDIO Board initial boot value transmission error detected",
+        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
+    },
+    "E55004": {
+        "msg": "UserDIO Board (#%s) HW Test Mode Setting detection",
+        "cause": "UserDIO Board HW Test Mode Setting detected",
+        "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
+    },
+    "E55005": {
+        "msg": "Error detection for the number of UserDIO boards controlling the Expansion DIO board.",
+        "cause": "The number of UserDIO boards controlling the Expansion DIO boards exceeds 1.",
+        "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
+    },
     "E62000": {
         "msg": "Teaching pendant connection error (safety chain 1)",
         "cause": "Enabling input of the teaching pendant. Noise has flowed from the outside into the wiring route of safety chain 1, or the contact state of the connector is unstable.",
@@ -18149,563 +18939,5 @@
         "msg": "Safety board (BD632) is Warning state",
         "cause": "Magnetic contact switch or safety board (BD632) is abnormal",
         "remedy": "1) Replace the magnetic contact switch. 2) Replace the safety board. 3) Check the error list that occurred simultaneously."
-    },
-    "E51000": {
-        "msg": "The received safety configuration file has been corrupted [MCU%s]",
-        "cause": "The received CRC32 data does not match the original value",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-    "E51100": {
-        "msg": "The Response of safety board has been delayed [MCU%s] [MCU%s]",
-        "cause": "Safety communication(FSoE) encountered a response delay error",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-    "E51101": {
-        "msg": "Data corruption error of safety communication(FSoE) [MCU%s]",
-        "cause": "CRC data received in the safety communication module does not match originao value",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-    "E51200": {
-        "msg": "The internal communication error (CPU1-CM) in the safety board [MCU%s]",
-        "cause": "The safety board MCU internal IPC communication data CRC error between CPU1 and CM",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-    "E51201": {
-        "msg": "The internal communication error(FSI) in the safety board [MCU%s]",
-        "cause": "FSI communication CRC error occured between MCUs in the safety board",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-	"E51202": {
-        "msg": "The internal communication(FSI) delay error [MCU%s]",
-        "cause": "The Communication dealy occured between MCUs in the safety board",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-	"E51203": {
-        "msg": "The received file through the internal communication(FSI) has been corrupted [MCU%s]",
-        "cause": "The recevied CRC value does not match the original value",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-	"E51300": {
-        "msg": "The data corruption error occured between CPU1-CPU2 in the safety board [MCU%s]",
-        "cause": "Safetyboard MCU internal CPU1-CPU2 IPC communication data CRC error",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-	"E51301": {
-        "msg": "The delay error occured between CPU1-CPU2 in the safety board [MCU%s]",
-        "cause": "The Communication(IPC) dealy occured between CPU1 and CPU2 in the safety board",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board." 
-    },
-	"E51302": {
-        "msg": "The data corruption error occured between CPU2-CPU2 in the safety board [MCU%s]",
-        "cause": "The recevied CRC data does not match the original value during performing SCI communication",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-	"E51303": {
-        "msg": "The delay error occured between CPU2-CPU2 in the safety board [MCU%s]",
-        "cause": "Communication delay occured during performing SCI communication",
-        "remedy": "1)Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
-    },
-    "SE601": {
-        "msg": "Safe parameter range exceeded(General setup)",
-        "cause": "The parameter set in the General setup configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE602": {
-        "msg": "Safe parameter range exceeded(Joint space)",
-        "cause": "The parameter set in the Joint space configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE603": {
-        "msg": "Safe parameter range exceeded(Joint speed)",
-        "cause": "The parameter set in the Joint speed configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE604": {
-        "msg": "Safe parameter range exceeded(SOS)",
-        "cause": "The parameter set in the SOS configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE605": {
-        "msg": "Safe parameter range exceeded(TCP speed)",
-        "cause": "The parameter set in the TCP speed configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE606": {
-        "msg": "Safe parameter range exceeded(Cell ares)",
-        "cause": "The parameter set in the Cell area configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE607": {
-        "msg": "Safe parameter range exceeded(Tool model)",
-        "cause": "The parameter set in the Tool model configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE608": {
-        "msg": "Safe parameter range exceeded(Robot model)",
-        "cause": "The parameter set in the Robot model configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE609": {
-        "msg": "Safe parameter range exceeded(Self collision)",
-        "cause": "The parameter set in the Self collision configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE610": {
-        "msg": "Safe parameter range exceeded(TCP orientation)",
-        "cause": "The parameter set in the TCP orientation configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE611": {
-        "msg": "Safe parameter range exceeded(Replan)",
-        "cause": "The parameter set in the Replan configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
-    },
-    "SE612": {
-        "msg": "Safe parameter range exceeded(Power)",
-        "cause": "The parameter set in the Power configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Power configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
-    },
-    "SE613": {
-        "msg": "Safe parameter range exceeded(Momentum)",
-        "cause": "The parameter set in the Momentum configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
-    },
-    "SE614": {
-        "msg": "Safe parameter range exceeded(Collision detection)",
-        "cause": "The parameter set in the Collision detection configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
-    },
-    "SE615": {
-        "msg": "Safe parameter range exceeded(Safe stop)",
-        "cause": "The parameter set in the Safe stop configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
-    },
-    "SE616": {
-        "msg": "Safe parameter range exceeded(PROFINET)",
-        "cause": "The parameter set in the PROFINET configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE617": {
-        "msg": "Safe parameter range exceeded(PROFIsafe)",
-        "cause": "The parameter set in the PROFIsafe configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE618": {
-        "msg": "Safe parameter range exceeded(Safety IO)",
-        "cause": "The parameter set in the Safety IO configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE619": {
-        "msg": "Safe parameter range exceeded(Add Safety IO)",
-        "cause": "The parameter set in the Add Safety IO configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE620": {
-        "msg": "Safe parameter range exceeded(IO Function Setting)",
-        "cause": "The parameter set in the IO Function Setting configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE621": {
-        "msg": "Safe parameter range exceeded(Additional load)",
-        "cause": "The parameter set in the Additional load configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE622": {
-        "msg": "Safe parameter range exceeded(Tool info)",
-        "cause": "The parameter set in the Tool info configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE623": {
-        "msg": "Safe parameter range exceeded(Maintenance)",
-        "cause": "The parameter set in the Maintenance configuration menu has exceeded the range.",
-        "remedy": "1)Please check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
-    },
-    "SE1381": {
-        "msg": "Program sequence diagnosis error",
-        "cause": "Safety controller has an abnormal sequence of safety program operations.",
-        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
-    },
-    "SE1382": {
-        "msg": "Program sequence diagnosis error",
-        "cause": "Safety controller has an abnormal sequence of safety program operations. (null_table).",
-        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
-    },
-    "SE1383": {
-        "msg": "Program sequence diagnosis error",
-        "cause": "Safety controller has an abnormal sequence of safety program operations. (number error)",
-        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
-    },
-    "SE1384": {
-        "msg": "Program sequence diagnosis error",
-        "cause": "Safety controller has an abnormal sequence of safety program operations.(local value error)",
-        "remedy": "1) Reboot the controller 2) If the problem persists, replace the Safety controller board."
-    },
-    "SE1850": {
-        "msg": "Sequence cross check error",
-        "cause": "Sequence performance results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
-    },
-    "SE1852": {
-        "msg": "TCP orientation cross check error",
-        "cause": "TCP orientation calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
-    },
-    "SE1853": {
-        "msg": "Momentum cross check error",
-        "cause": "The momentum calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
-    },
-    "SE1854": {
-        "msg": "TCP force cross check error",
-        "cause": "The TCP force calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
-    },
-    "SE1855": {
-        "msg": "Power cross check error",
-        "cause": "The Power calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
-    },
-    "SE1856": {
-        "msg": "Joint position cross check error",
-        "cause": "Each axis has a different command and actual axis position.",
-        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
-    },
-    "SE1857": {
-        "msg": "TCP position cross check error",
-        "cause": "The TCP position calculated by the main and the position calculated by the safety controller are different.",
-        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
-    },
-    "E50000": {
-        "msg": "Communication Disconnection Detected Between Servo Board and Main",
-        "cause": "The servo has detected a communication disconnection with the Main.",
-        "remedy": "1) Check the mounting status of the Main or Safety Controller. 2) Replace the Main or Safety Controller."
-    },
-    "E50001": {
-        "msg": "Unable to Update EtherCAT Data Detected on Servo Board",
-        "cause": "The servo has detected that the EtherCAT PDO data cannot be updated.",
-        "remedy": "1) Check the mounting status of the Main or Safety Controller. 2) Replace the Main or Safety Controller."
-    },
-    "E50002": {
-        "msg": "Unable to Communicate with Safety CPU Detected in Servo",
-        "cause": "The servo has detected a communication fault with the Safety CPU.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50003": {
-        "msg": "Servo CPU Watchdog Detected",
-        "cause": "The watchdog of the servo CPU (Zynq) has been detected.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50004": {
-        "msg": "Failed to Clear Servo Error by Safety Controller",
-        "cause": "The Safety Controller was unable to clear the servo error.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50005": {
-        "msg": "Communication error (CRC) between the Servo CPU (Zynq) and the Safety CPU (MCU A).",
-        "cause": "A CRC error occurred in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A).",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50006": {
-        "msg": "Communication error (CRC) between the Servo CPU (Zynq) and the Safety CPU (MCU B).",
-        "cause": "A CRC error occurred in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B).",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50007": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) due to abnormal increment in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) are not increasing.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50008": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) due to abnormal increment in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) are not increasing.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50009": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) due to abnormal changes in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 1) have increased incorrectly.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50010": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) due to abnormal changes in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 1) have increased incorrectly.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50011": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 2) due to abnormal increment in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 2) are not increasing.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50012": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 2) due to abnormal increment in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 2) are not increasing.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50013": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 2) due to abnormal changes in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU A, CPU 2) have increased incorrectly.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50014": {
-        "msg": "Communication error between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 2) due to abnormal changes in incremental numbers.",
-        "cause": "The incremental numbers in the communication data between the Servo CPU (Zynq) and the Safety CPU (MCU B, CPU 2) have increased incorrectly.",
-        "remedy": "1) Check the status of the Safety Controller. 2) Replace the Safety Controller."
-    },
-    "E50016": {
-        "msg": "Motor parameter download CRC error",
-        "cause": "A CRC error occured during the motor parameter download.",
-        "remedy": "1) Check the EtherCAT communication connection status. 2) Make sure you have the latest firmware."
-    },
-    "E50017": {
-        "msg": "Safety CPU version incompatible [MCU A]",
-        "cause": "The version of the Safety CPU (MCU A) isn't compatible with the Servo CPU",
-        "remedy": "1) Make sure you have the latest firmware." 
-    },
-    "E50018": {
-        "msg": "Safety CPU version incompatible [MCU B]",
-        "cause": "The version of the Safety CPU (MCU B) isn't compatible with the Servo CPU",
-        "remedy": "1) Make sure you have the latest firmware." 
-    },
-    "E50100": {
-        "msg": "Unsupported Encoder Type Connected",
-        "cause": "Check the encoder connection.",
-        "remedy": "1) Replace the motor or encoder. 2) Replace the Safety Controller."
-    },
-    "E50101": {
-        "msg": "(%s Axis) Encoder Not Responding to Request",
-        "cause": "The serial encoder is not responding to the request signal.",
-        "remedy": "1) Check the connection status of encoder-related cables and connectors. 2) Verify the grounding status of encoder-related cables. 3) Inspect the encoder for faults. 4) Check the Safety Controller for faults. 5) Inspect encoder-related cables for faults."
-    },
-    "E50102": {
-        "msg": "(%s Axis) Encoder Data Reception Count Error",
-        "cause": "The number of received encoder data is incorrect.",
-        "remedy": "1) Check the grounding status of encoder-related cables. 2) Inspect the connection status of encoder-related cables and connectors. 3) Check the encoder for faults. 4) Verify the Safety Controller for faults. 5) Inspect encoder-related cables for faults."
-    },
-    "E50103": {
-        "msg": "(%s Axis) Encoder Data End Signal Not Received",
-        "cause": "The end signal of the encoder data was not received.",
-        "remedy": "1) Check the grounding status of encoder-related cables. 2) Inspect the connection status of encoder-related cables and connectors. 3) Check the encoder for faults. 4) Verify the Safety Controller for faults. 5) Inspect encoder-related cables for faults."
-    },
-    "E50104": {
-        "msg": "(%s Axis) Encoder Data CRC Error",
-        "cause": "A CRC error occurred in the received encoder data.",
-        "remedy": "1) Check the grounding status of encoder-related cables. 2) Inspect the connection status of encoder-related cables and connectors. 3) Check the encoder for faults. 4) Verify the Safety Controller for faults. 5) Inspect encoder-related cables for faults."
-    },
-    "E50105": {
-        "msg": "(%s Axis) Encoder Disconnection or Poor Contact - Motor Off State",
-        "cause": "Encoder signals were not received while the motor was off.",
-        "remedy": "1) Check the connection status of encoder-related cables and connectors. 2) Inspect the encoder for faults. 3) Check the Safety Controller for faults. 4) Inspect the encoder-related cables for faults."
-    },
-    "E50106": {
-        "msg": "(%s Axis) Encoder Data Jump Error",
-        "cause": "The received encoder data position value has exceeded the allowable range compared to the previous revolution.",
-        "remedy": "1) Check the connection status of encoder-related cables and connectors. 2) Inspect the encoder power line. 3) Check the Safety Controller for faults. 4) Inspect the encoder for faults."
-    },
-    "E50107": {
-        "msg": "(%s Axis) Encoder Disconnection or Poor Contact - Motor On State",
-        "cause": "Encoder signals were not received while the motor was in the ON state.",
-        "remedy": "1) Check the connection status of the encoder-related cables and connectors. 2) Inspect the encoder for faults. 3) Check the Safety Controller for faults. 4) Inspect the encoder-related cables for faults."
-    },
-    "E50108": {
-        "msg": "(%s Axis) Encoder Status Error (CE) Received",
-        "cause": "An anomaly occurred in the 1-revolution data due to a fault or defect while the encoder's main power was on.",
-        "remedy": "1) Attempt to clear the encoder error. 2) Turn the encoder power ON/OFF. 3) If the error persists, replace the motor or encoder."
-    },
-    "E50109": {
-        "msg": "(%s Axis) Encoder Status Error (OS) Received",
-        "cause": "After the encoder's main power was turned off, the encoder exceeded the emergency mode limit (6000 RPM) while the external battery was on.",
-        "remedy": "1) Attempt to clear the encoder error. 2) If the error persists, replace the motor or encoder."
-    },
-    "E50110": {
-        "msg": "(%s Axis) Encoder Status Error (FS) Received",
-        "cause": "The encoder's main power was turned on while the encoder shaft was rotating at 100 RPM or higher.",
-        "remedy": "1) Reduce the rotation speed to below 100 RPM and wait until the error condition clears. 2) If the error persists, replace the motor or encoder. 3) Attempt to clear the encoder error."
-    },
-    "E50111": {
-        "msg": "(%s Axis) Encoder Status Error (ME) Received",
-        "cause": "The change in multi-turn signals exceeded the permissible range while the encoder's main power was on.",
-        "remedy": "1) Attempt to clear the encoder error. 2) If the error persists, replace the motor or encoder."
-    },
-    "E50112": {
-        "msg": "(%s Axis) Encoder Status Error (BE) Received",
-        "cause": "The voltage of the capacitor inside the encoder dropped below 2.5V while the main power to the encoder was off.",
-        "remedy": "1) Check the voltage of the external battery. 2) Inspect the battery wiring. 3) If the error persists, replace the motor or encoder."
-    },
-    "E50113": {
-        "msg": "(%s Axis) Encoder Overheat Detected",
-        "cause": "The internal temperature of the encoder has risen to the limit.",
-        "remedy": "1) Check the motor temperature and adjust the robot's operating speed. 2) If the error persists, replace the motor or encoder."
-    },
-    "E50114": {
-        "msg": "Encoder position data jump (%s axis)",
-        "cause": "The encoder position data has increased abnormally compared to the previous cycle.",
-        "remedy": "1) Replace the encoder. 2) Replace the motor."
-    },
-    "E50200": {
-        "msg": "(%s Axis) Motor Overload",
-        "cause": "The current flowing through the motor exceeds the rated continuous current.",
-        "remedy": "1) Check for mechanical interference within the robot's operating range. 2) Verify that the brake release is functioning correctly. 3) If the error persists, replace the motor."
-    },
-    "E50201": {
-        "msg": "(%s Axis) Motor Overload (Increased Friction Due to Low Temperature)",
-        "cause": "Operating the motor in a low-temperature state (without preheating) increases the viscous friction coefficient, causing the current flowing through the motor to exceed the rated continuous current.",
-        "remedy": "Refer to the troubleshooting guide.",
-        "help_idx": "E02653",
-        "help_title": "[Remedy](○ Axis) Motor Overload – Increased Friction Due to Low Temperature"
-    },
-    "E50202": {
-        "msg": "(%s Axis) UV Phase Current Sensor Offset Exceeded Error",
-        "cause": "The offset of the UV phase current sensor exceeds the reference value.",
-        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
-    },
-    "E50203": {
-        "msg": "(%s Axis) U Phase Current Sensor Offset Exceeded Error",
-        "cause": "The offset of the U phase current sensor exceeds the reference value.",
-        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
-    },
-    "E50204": {
-        "msg": "(%s Axis) V Phase Current Sensor Offset Exceeded Error",
-        "cause": "The offset of the V phase current sensor exceeds the reference value.",
-        "remedy": "1) Check the +/-15V power supply of the power unit. 2) Replace the Safety Controller. 3) Replace the amplifier board."
-    },
-    "E50205": {
-        "msg": "(%s Axis) Servo Lock Maintenance Impossible - Wiring or Current Generation Issue",
-        "cause": "Problems with the amplifier or servo board due to poor contact, open circuits, shorts, or incorrect wiring.",
-        "remedy": "1) Check the wiring connections between the Safety Controller and the robot. 2) Verify the wiring connections between the amplifier and Safety Controller, and ensure the amplifier board is functioning properly. 3) Check if the Safety Controller is operating normally. 4) If the problem persists, replace the Safety Controller and amplifier board.",
-        "help_idx": "E02780",
-        "help_title": "[Action Method](○ Axis) Servo Lock Maintenance Impossible – Wiring or Current Generation Issue"
-    },
-    "E50206": {
-        "msg": "(%s Axis) Unable to maintain servolock - Gain issue",
-        "cause": "Gain setting error",
-        "remedy": "1) Check the servo control gain settings. 2) Verify that the robot registration information is correct.",
-        "help_idx": "E02781",
-        "help_title": "[Action Method](○ Axis) Unable to maintain servolock - Gain issue"
-    },
-    "E50207": {
-        "msg": "(%s Axis) Current deviation error",
-        "cause": "The difference between the current command and the current feedback has exceeded the set value.",
-        "remedy": "1) Check the motor wiring status. 2) Check the connection between the Safety Controller and the amplifier board. 3) Verify the control gain settings of the Safety Controller. 4) Replace the amplifier board. 5) Replace the Safety Controller."
-    },
-    "E50300": {
-        "msg": "(%s Axis) IPM Fault Detected",
-        "cause": "A fault occurred in the Intelligent Power Module (IPM) inside the amplifier.",
-        "remedy": "Please inspect the motor drive components. 1) Check the current output cable connected to the Safety Controller. 2) Inspect the terminals of the switching elements within the Safety Controller. 3) Verify the cable connections and connector engagement on the amplifier board. 4) Confirm the robot registration information. 5) Replace the Safety Controller and then verify the error. 6) Replace the amplifier module and check for errors. 7) Replace the drive motor and check for errors."
-    },
-   "E50301": {
-        "msg": "(%s axis) IPM Fault - Gate Drive Power Low Voltage",
-        "cause": "A fault signal occurred in the IPM while the motor was in the OFF state. This is likely due to an issue with the gate drive power or a connection problem in the amplifier line.",
-        "remedy": "1) Check the connections between the amplifier board and the Safety Controller. 2) Replace the amplifier board. 3) Replace the Safety Controller."
-},
-    "E50400": {
-        "msg": "(%s axis) Position Deviation Exceeded",
-        "cause": "The position deviation has exceeded the error threshold.",
-        "remedy": "1) Check for any mechanical interference in the problematic axis. 2) Verify that the brake is releasing properly, and if there are issues, inspect the brake power supply. 3) Ensure that the rated load is being used. 4) Check the position deviation setting level. For more details, refer to the troubleshooting guide."
-    },
-    "E50401": {
-        "msg": "(%s axis) Speed-Based Position Deviation Exceeded",
-        "cause": "The position deviation has exceeded the speed-based error threshold.",
-        "remedy": "1) Check for any mechanical interference in the problematic axis. 2) Verify that the brake is releasing properly, and if there are issues, inspect the brake power supply. 3) Ensure that the rated load is being used. 4) Check the position deviation setting level. For more details, refer to the troubleshooting guide."
-    },
-    "E50402": {
-        "msg": "(%s axis) Position Deviation Exceeded (Cold Temperature Friction Increase)",
-        "cause": "Increased viscosity friction coefficient of grease due to operation in cold temperature (unwarmed state) has caused the position deviation to exceed the error threshold.",
-        "remedy": "Refer to the troubleshooting guide."
-    },
-    "E50403": {
-        "msg": "(%s axis) Position Deviation Exceeded (Control Unavailable)",
-        "cause": "The position deviation has exceeded the error threshold in a situation where the servo cannot control it.",
-        "remedy": "1) Verify the normal operation of the main unit. 2) Check the normal operation of the Safety Controller."
-    },
-    "E50500": {
-        "msg": "(%s axis) Exceeded Maximum Speed",
-        "cause": "The axis has exceeded the configured maximum speed during operation.",
-        "remedy": "1) Check the servo control gain. 2) Inspect the motor and encoder status. 3) Refer to the troubleshooting guide.",
-        "help_idx": "E02680",
-        "help_title": "[Remedy](○ axis) Exceeded Maximum Speed"
-    },
-    "E53000": {
-        "msg": "Encoder Diagnostics Error",
-        "cause": "The encoder diagnostics result is abnormal.",
-        "remedy": "1) Reboot the controller. 2) Check the status of the encoder on the affected axis. 3) If the issue persists, replace the Safety Controller board."
-    },
-    "E53001": {
-        "msg": "Encoder Communication Error",
-        "cause": "The encoder communication is abnormal.",
-        "remedy": "1) Reboot the controller. 2) Check the encoder cable connections. 3) If the issue persists, replace the Safety Controller board."
-    },
-    "E53002": {
-        "msg": "Encoder Offset Too Large",
-        "cause": "The deviation between the encoder value stored in the controller and the current encoder value exceeds the standard threshold.",
-        "remedy": "1) Reboot the controller. 2) Check the encoder status. 3) If the issue persists, replace the Safety Controller board."
-    },
-    "E53100": {
-        "msg": "W Phase Current Diagnostic Error",
-        "cause": "The diagnostic result for the W phase current is abnormal.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53101": {
-        "msg": "U Phase Current Diagnostic Error",
-        "cause": "The diagnostic result for the U phase current is abnormal.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53102": {
-        "msg": "UV Phase Current Sensor Offset Exceeds Error",
-        "cause": "The UV phase current sensor offset exceeds the standard value.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53103": {
-        "msg": "VW Phase Current Sensor Offset Exceeds Error",
-        "cause": "The VW phase current sensor offset exceeds the standard value.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53104": {
-        "msg": "U Phase Current Sensor Offset Exceeds Error",
-        "cause": "The U phase current sensor offset exceeds the standard value.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53105": {
-        "msg": "V Phase Current Sensor Offset Exceeds Error",
-        "cause": "The V phase current sensor offset exceeds the standard value.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53106": {
-        "msg": "W Phase Current Sensor Offset Exceeds Error",
-        "cause": "The W phase current sensor offset exceeds the standard value.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53107": {
-        "msg": "Current Sensor Connection Disruption",
-        "cause": "Unable to read the values from the current sensor.",
-        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board."
-    },
-    "E53200": {
-        "msg": "Servo module no response [MCU%s]",
-        "cause": "The watchdog count of the servo module is not increasing.",
-        "remedy": "1)Perform S/W version upgrade."
-    },
-    "E53201": {
-        "msg": "Zynq version incompatible [MCU%s]",
-        "cause": "The version of the Safety CPU isn't compatible with the Servo CPU.",
-        "remedy": "1)Perform S/W version upgrade. 2) If the problem persists, replace the Safety Controller board."
-    },
-    "E55002": {
-        "msg": "UserDIO Board (#%s) EtherCAT disconnect detection",
-        "cause": "UserDIO Board EtherCAT disconnect detected",
-        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
-    },
-    "E55003": {
-        "msg": "UserDIO Board (#%s) initial boot value transmission error detection",
-        "cause": "UserDIO Board initial boot value transmission error detected",
-        "remedy": "1) Check the EtherCAT cable status of the UserDIO Board.  \n2) Check the EtherCAT Master settings and status. \n3) Reboot the controller. \n4) If the problem persists, replace the EtherCAT cable or UserDIO Board with a new one. "
-    },
-    "E55004": {
-        "msg": "UserDIO Board (#%s) HW Test Mode Setting detection",
-        "cause": "UserDIO Board HW Test Mode Setting detected",
-        "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
-    },
-    "E55005": {
-        "msg": "Error detection for the number of UserDIO boards controlling the Expansion DIO board.",
-        "cause": "The number of UserDIO boards controlling the Expansion DIO boards exceeds 1.",
-        "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
     }
 }

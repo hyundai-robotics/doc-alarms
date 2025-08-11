@@ -117,7 +117,9 @@
 	"N162": { "msg": "Callstack is cleared by editing job." },
 	"N165": { "msg": "An app's listmenu is updated." },
 	"N166": { "msg": "In spotpak communication, welder error occurred." },
-	"N167": { "msg": "Manual operation prohibition signal is on." }
+	"N167": { "msg": "Manual operation prohibition signal is on." },
 	"N169": { "msg": "Self-Diagnosis Complete!!!\n\nHi6 booting completed!!!" },
-	"N170": { "msg": "Self-Diagnosis Complete!!!\n\nHi6a booting completed!!!" }
+    "N170": { "msg": "Self-Diagnosis Complete!!!\n\nHi6a booting completed!!!" },
+    "N171": { "msg": "Mismatch detected between tool information and safet tool information." },
+	"N172": { "msg": "Mismatch detected between additional weight on each axis and safet additional load." }
 }
