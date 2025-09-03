@@ -1584,6 +1584,11 @@
         "cause": "Exceeded the execution time threshold within the Motion Command task",
         "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
     },
+    "W29106": {
+        "msg": "Abnormal RobAppl task execution time detected",
+        "cause": "Exceeded the execution time threshold within the RobAppl task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
     "W29107": {
         "msg": "Abnormal Motion Plan task execution time detected",
         "cause": "Exceeded the execution time threshold within the Motion Plan task",
@@ -1613,6 +1618,11 @@
         "msg": "Connected slave status is abnormal EtherCAT Master IO Channel",
         "cause": "There is a slave whose communication status is not in Operation Mode",
         "remedy": "1) Check the cable.  2) Check the Communicaiton Status of the other party connected to the EtherCAT Master"
+    },
+	"W29110": {
+        "msg": "ENI Information Changed in the EtherCAT Configuration File",
+        "cause": "The ENI information in the EtherCAT configuration file has been modified because the ENI settings differ from the actual EtherCAT network connection.",
+        "remedy": "No action is required. \nIf you continue to use the current EtherCAT network connection, this warning will not appear at the next controller startup."
     },
     "W30001": {
         "msg": "%s gun) moving tip exceeded the wear amount for replacement(ServoGun)",

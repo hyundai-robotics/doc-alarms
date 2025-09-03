@@ -3391,6 +3391,11 @@
         "cause": "FT sensor signal transmission/reception malfunction.",
         "remedy": "Ensure the sensor and cable are properly connected."
     },
+    "E1561": {
+        "msg": "No license key for the sensor based force control function.",
+        "cause": "No license key for using the sensor based force control function.",
+        "remedy": "Contact the head office of our company for inquiries, and get the official license."
+    },
     "E2000": {
         "msg": "Power failure detected",
         "cause": "Power failure or CB (circuit brake) off while in the Motor On state.When the power failure is operating, it can generate the following errors.E02506 AMP PN undervoltage occurredE02507 AMP diode module abnormal or insufficient AC input voltageE02631 (%s axis) position deviation exceeded for each speedW00153 Reducer motor current that exceeds the allowable level is detected.",
@@ -15035,6 +15040,11 @@
         "cause": "The USER DIO version is not compatible with the integrated version",
         "remedy": "Please update all of the version again."
     },
+    "E28576": {
+        "msg": "RADAR version mismatch",
+        "cause": "The RADAR version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
     "E29001": {
         "msg": "Servo communication (EtherCAT) initialization failure",
         "cause": "Short circuit occurred in servo board (BD640), safety board (BD632) devices, or communication setting file (ENI) mismatch",
@@ -16517,9 +16527,9 @@
         "remedy": "1) Adjust the position of start point searching.2) Check the welding seam type.3) Decrease the minimum distance of position sampling."
     },
     "E32709": {
-        "msg": "Detected seam point is not enough.(during retrying)",
-        "cause": "1) The laser scan line does not move on the welding seam line.2) Improper welding seam type is defined.3) Detected welding seam line is not enough to infer the start point.4) Fail to detect the seam line at the position after moving by retrying condition.",
-        "remedy": "1) Adjust the position of start point searching.2) Check the welding seam type.3) Decrease the minimum distance of position sampling.4) Adjust the condition of retrying."
+        "msg": "LVS function activated with arcsensing on.",
+        "cause": "LVS function can't be used with arcsensing on.",
+        "remedy": "Turn off the arcsensing function."
     },
     "E32710": {
         "msg": "Detected seam point is not enough.(during restart)",
