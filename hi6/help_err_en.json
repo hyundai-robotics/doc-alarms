@@ -907,7 +907,7 @@
         "remedy": "Reset the EN2 network by referring to the function manual."
     },
     "E259": {
-        "msg": "Force sensor communication failed",
+        "msg": "Force sensor communication failed(1)",
         "cause": "Cable disconnected or Net-box power cut off.",
         "remedy": "Check the cable between the sensor and the controller, and the Net-box power connection."
     },
@@ -970,6 +970,16 @@
         "msg": "Unsupported FT sensor model",
         "cause": "This sensor does not support force control functionality.",
         "remedy": "contact our company for inquiries."
+    },
+    "E273": {
+        "msg": "Force sensor communication failed(2)",
+        "cause": "Cable disconnected or Net-box power cut off.",
+        "remedy": "Check the cable between the sensor and the controller, and the Net-box power connection."
+    },
+    "E274": {
+        "msg": "Force sensor communication failed(3)",
+        "cause": "Cable disconnected or Net-box power cut off.",
+        "remedy": "Check the cable between the sensor and the controller, and the Net-box power connection."
     },
     "E300": {
         "msg": "Servo initialization abnormal",
@@ -3110,6 +3120,11 @@
         "msg": "Allowable deviation exceeded.",
         "cause": "When executing TONL (online coordinate conversion) SFT/3POS/NPOS, the calculated deviation amount exceeded the allowable deviation.",
         "remedy": "Check the poses used in the reference position and in the measured position."
+    },
+    "E1500": {
+        "msg": "The program has no subtasks running.",
+        "cause": "When the task wait/stop/reset sub=0 command is executed, the program specified in job does not have a running subtask.",
+        "remedy": "Check if the program has any running subtasks."
     },
     "E1501": {
         "msg": "Low air pressure in the painting robot.",
@@ -15137,7 +15152,7 @@
         "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
     },
 	"E29019": {
-        "msg": "SafetyServer task exceeded the valid range of time(timeout)",
+        "msg": "SafetyServer task exceeded the valid range of time(cycle timeout)",
         "cause": "S/W Exception occured in SafetyServer task",
         "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
     },
@@ -15145,6 +15160,46 @@
 		"msg": "Controller(servo, safety) restart failed after update",
 		"cause": "Controller did not restart normally after update",
 		"remedy": "Turn OFF controller power, wait at least 5 seconds, then turn power ON"
+	},
+    "E29021": {
+        "msg": "RobAppl task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in RobAppl task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+    },
+    "E29022": {
+        "msg": "Playback task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in Playback task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+    },
+    "E29023": {
+        "msg": "MotAppl task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in MotAppl",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+    },
+    "E29024": {
+        "msg": "ServoComm task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in ServoComm task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+    },
+    "E29025": {
+        "msg": "1ms task valid cycle time exceeded (cycle timeout)",
+        "cause": "Exception occurred within the 1ms task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	},
+    "E29026": {
+        "msg": "IoMain task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in IoMain task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	},
+    "E29027": {
+        "msg": "MotCmdMgr task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in MotCmdMgr task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
+	},
+    "E29028": {
+        "msg": "MotPlan task exceeded the valid range of cycle time(cycle timeout)",
+        "cause": "S/W Exception occured in MotPlan task",
+        "remedy": "Take a photo of the result of monitoring of task info. and then send them to the customer service deparment of this company."
 	},
     "E30000": {
         "msg": "Pressure is not matched in time.",
@@ -18045,9 +18100,9 @@
         "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
     },
     "E55005": {
-        "msg": "Error detection for the number of UserDIO boards controlling the Expansion DIO board.",
-        "cause": "The number of UserDIO boards controlling the Expansion DIO boards exceeds 1.",
-        "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
+        "msg": "The 2nd User DIO Board switch setting error detected.",
+        "cause": "The 2nd User DIO Board switch is turned OFF.",
+        "remedy": "1) Turn off the controller power and remove the 2nd User DIO Board. Then change 'DSW2 switch' to ON.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the User DIO Board with a new one. "
     },
     "E62000": {
         "msg": "Teaching pendant connection error (safety chain 1)",

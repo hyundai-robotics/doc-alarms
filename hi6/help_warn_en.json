@@ -1624,6 +1624,46 @@
         "cause": "The ENI information in the EtherCAT configuration file has been modified because the ENI settings differ from the actual EtherCAT network connection.",
         "remedy": "No action is required. \nIf you continue to use the current EtherCAT network connection, this warning will not appear at the next controller startup."
     },
+    "W29111": {
+        "msg": "Abnormal RobAppl task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the RobAppl task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29112": {
+        "msg": "Abnormal Playback task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the Playback task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29113": {
+        "msg": "Abnormal MotAppl task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the MotAppl task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29114": {
+        "msg": "Abnormal ServoComm task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the ServoComm task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29115": {
+        "msg": "Abnormal 1ms task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the 1ms task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29116": {
+        "msg": "Abnormal IoMain task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the IoMain task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29117": {
+        "msg": "Abnormal MotCmdMgr task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the MotCmdMgr task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
+    "W29118": {
+        "msg": "Abnormal MotPlan task cycle time detected",
+        "cause": "Exceeded the cycle time threshold within the MotPlan task",
+        "remedy": "Software misoperation occurred. After backup the controller files, and contact the A/S department of our company."
+    },
     "W30001": {
         "msg": "%s gun) moving tip exceeded the wear amount for replacement(ServoGun)",
         "cause": "It occurs when moving tip wear detected with gun search is in excess of moving tip exchange wear amount set in servo gun parameter.",
