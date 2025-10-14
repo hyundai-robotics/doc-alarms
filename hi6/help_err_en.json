@@ -3078,8 +3078,8 @@
     },
     "E1491": {
         "msg": "ARCON command of unsupported type",
-        "cause": "Commands of a type, not supported in the current arc welding setting, used.",
-        "remedy": "Use the ARCON command of the type that can be used currently in the welder.Ex.) ARCON ASF#=1"
+        "cause": "Commands of ARCON currently used is not supported.",
+        "remedy": "Refer to the arc manual for commands supported."
     },
     "E1492": {
         "msg": "Interstep distance is too short to execute weaving",
@@ -17480,129 +17480,129 @@
         "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
     },
     "E51501": {
-        "msg": "Safe parameter range exceeded(General setup)",
+        "msg": "(General setup)Safe parameter range exceeded",
         "cause": "The parameter set in the General setup configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51502": {
-        "msg": "Safe parameter range exceeded(Joint space)",
+        "msg": "(Joint space)Safe parameter range exceeded",
         "cause": "The parameter set in the Joint space configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51503": {
-        "msg": "Safe parameter range exceeded(Joint speed)",
+        "msg": "(Joint speed)Safe parameter range exceeded",
         "cause": "The parameter set in the Joint speed configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51504": {
-        "msg": "Safe parameter range exceeded(SOS)",
+        "msg": "(SOSSafe parameter range exceeded)",
         "cause": "The parameter set in the SOS configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51505": {
-        "msg": "Safe parameter range exceeded(TCP speed)",
+        "msg": "(TCP speed)Safe parameter range exceeded",
         "cause": "The parameter set in the TCP speed configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51506": {
-        "msg": "Safe parameter range exceeded(Cell ares)",
+        "msg": "(Cell ares)Safe parameter range exceeded",
         "cause": "The parameter set in the Cell area configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51507": {
-        "msg": "Safe parameter range exceeded(Tool model)",
+        "msg": "(Tool model)Safe parameter range exceeded",
         "cause": "The parameter set in the Tool model configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51508": {
-        "msg": "Safe parameter range exceeded(Robot model)",
+        "msg": "(Robot model)Safe parameter range exceeded",
         "cause": "The parameter set in the Robot model configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51509": {
-        "msg": "Safe parameter range exceeded(Self collision)",
+        "msg": "(Self collision)Safe parameter range exceeded",
         "cause": "The parameter set in the Self collision configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51510": {
-        "msg": "Safe parameter range exceeded(TCP orientation)",
+        "msg": "(TCP orientation)Safe parameter range exceeded",
         "cause": "The parameter set in the TCP orientation configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51511": {
-        "msg": "Safe parameter range exceeded(Replan)",
+        "msg": "(Replan)Safe parameter range exceeded",
         "cause": "The parameter set in the Replan configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51512": {
-        "msg": "Safe parameter range exceeded(Power)",
+        "msg": "(Power)Safe parameter range exceeded",
         "cause": "The parameter set in the Power configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Power configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Power configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51513": {
-        "msg": "Safe parameter range exceeded(Momentum)",
+        "msg": "(Momentum)Safe parameter range exceeded",
         "cause": "The parameter set in the Momentum configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51514": {
-        "msg": "Safe parameter range exceeded(Collision detection)",
+        "msg": "(Collision detection)Safe parameter range exceeded",
         "cause": "The parameter set in the Collision detection configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51515": {
-        "msg": "Safe parameter range exceeded(Safe stop)",
+        "msg": "(Safe stop)Safe parameter range exceeded",
         "cause": "The parameter set in the Safe stop configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51516": {
-        "msg": "Safe parameter range exceeded(PROFINET)",
+        "msg": "(PROFINET)Safe parameter range exceeded",
         "cause": "The parameter set in the PROFINET configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51517": {
-        "msg": "Safe parameter range exceeded(PROFIsafe)",
+        "msg": "(PROFIsafe)Safe parameter range exceeded",
         "cause": "The parameter set in the PROFIsafe configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51518": {
-        "msg": "Safe parameter range exceeded(Safety IO)",
+        "msg": "(Safety IO)Safe parameter range exceeded",
         "cause": "The parameter set in the Safety IO configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51519": {
-        "msg": "Safe parameter range exceeded(Add Safety IO)",
+        "msg": "(Add Safety IO)Safe parameter range exceeded",
         "cause": "The parameter set in the Add Safety IO configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51520": {
-        "msg": "Safe parameter range exceeded(IO Function Setting)",
+        "msg": "(IO Function Setting)Safe parameter range exceeded",
         "cause": "The parameter set in the IO Function Setting configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51521": {
-        "msg": "Safe parameter range exceeded(Additional load)",
+        "msg": "(Additional load)Safe parameter range exceeded",
         "cause": "The parameter set in the Additional load configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51522": {
-        "msg": "Safe parameter range exceeded(Tool info)",
+        "msg": "(Tool info)Safe parameter range exceeded",
         "cause": "The parameter set in the Tool info configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51523": {
-        "msg": "Safe parameter range exceeded(Maintenance)",
+        "msg": "(Maintenance)Safe parameter range exceeded",
         "cause": "The parameter set in the Maintenance configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Perform a safe parameter initialization.\n3) Replace the safety board."
+        "remedy": "1) Check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51530": {
         "msg": "Fail to create safe space(space_%s)",
         "cause": "The space cannot be formed because there are not enough vertices.",
-        "remedy": "1) Check that there are at least 3 vertices.\n2) Initialize the safety parameters.\n3) Replace the safety board."
+        "remedy": "1) Check that there are at least 3 vertices.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51531": {
         "msg": "Exceeded size of safe sapce",
         "cause": "The configured safe zone size exceeds the maximum allowable value.",
-        "remedy": "1) Reduce the size or number of safe spaces.\n2) Initialize the safety parameters.\n3) Replace the safety board."
+        "remedy": "1) Reduce the size or number of safe spaces.\n2) Check the version information of safety board and Hi6Com \3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51544": {
         "msg": "Communication Failure with Radar Sensor Control Board",
@@ -17996,48 +17996,48 @@
     },
     "E53350": {
         "msg": "Sequence cross check error",
-        "cause": "Sequence performance results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+        "cause": "Sequence performance results between the two MCUs are different.",
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
     },
     "E53352": {
         "msg": "TCP orientation cross check error",
-        "cause": "TCP orientation calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+        "cause": "TCP orientation calculation results between the two MCUs are different.",
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the orientation threshold to the maximum, and then reboot the controller. 3) If the issue persists, replace the Safety Controller board."
     },
     "E53353": {
         "msg": "Momentum cross check error",
-        "cause": "The momentum calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+        "cause": "The momentum calculation results between the two MCUs are different.",
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the momentum threshold to the maximum, and then reboot the controller. 3) If the issue persists, replace the Safety Controller board."
     },
     "E53354": {
         "msg": "TCP force cross check error",
-        "cause": "The TCP force calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+        "cause": "The TCP force calculation results between the two MCUs are different.",
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the tcp force threshold to the maximum, and then reboot the controller. 3) If the issue persists, replace the Safety Controller board."
     },
     "E53355": {
         "msg": "Power cross check error",
-        "cause": "The Power calculation results between the two CPUs are different.",
-        "remedy": "1) Please reboot the controller. 2) If the issue persists, replace the Safety Controller board. 3) If the issue continues, replace the Amp board. "
+        "cause": "The Power calculation results between the two MCUs are different.",
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the power threshold to the maximum, and then reboot the controller. 3) If the issue persists, replace the Safety Controller board."
     },
     "E53360": {
         "msg": "Joint position cross check error",
         "cause": "Each axis has a different command and actual axis position.",
-        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
-    },
-    "E53400": {
-        "msg": "Undefined servo/safety error",
-        "cause": "에러번호 및 부가정보에 이상이 있습니다.",
-        "remedy": "1) Reboot the robot controller. 2) Check the system version information."
+        "remedy": "1) Please reboot the controller and check if the problem persists. 2) Check the version information of the system. 3) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the joint position threshold to the maximum, and then reboot the controller."
     },
     "E53361": {
         "msg": "TCP position cross check error",
-        "cause": "The TCP position calculated by the main and the position calculated by the safety controller are different.",
-        "remedy": "1) Please reboot the controller. 2) Check the version information of the system."
-    },	
+        "cause": "The TCP position calculated by the main computer and the position calculated by the safety controller are different.",
+        "remedy": "1) Please reboot the controller. 2) Check the version information of the system. 3) If the problem persists, enter Engineer Mode, navigate to [Safety System] - [General setup] - [Safety Diagnosis Value Settings], set the tcp position threshold to the maximum, and then reboot the controller."
+    },
     "E53362": {
         "msg": "Main computer task abnormal",
         "cause": "Abnormal behavior detected in some tasks on the main computer.",
         "remedy": "1) Check the task monitor. 2) Check the system version information."
+    },
+    "E53400": {
+        "msg": "Undefined servo/safety error",
+        "cause": "There is an issue with the error number and additional information.",
+        "remedy": "1) Reboot the robot controller. 2) Check the system version information."
     },
     "E53610": {
         "msg": "Tool information mismatch(Weight)",
