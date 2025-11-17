@@ -930,9 +930,9 @@
         "remedy": "Enter a integer between 1 to 32 in WEAVON condition number."
     },
     "W16001": {
-        "msg": "Job file's number is duplicated.",
+        "msg": "Job numer %s file is duplicated.",
         "cause": "Duplicated numbered job file was forcibly stored through a method such as FTP.",
-        "remedy": "Check for the duplicated job number. Please delete the duplicated numbered job file using FileManager."
+        "remedy": "Please delete the duplicated numbered job file using FileManager."
     },
     "W16002": {
         "msg": "Lad number %s file is duplicated.",
@@ -1233,6 +1233,16 @@
         "msg": "EIP Adapter Internal Communication 2(Config Write) Warning",
         "cause": "Internal Communication 2(Config Write) is failed.",
         "remedy": "1) Check EtherNet/IP S/W version."
+    },
+    "W24100": {
+        "msg": "No communication connection EtherNet/IP Scanner",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the EtherNet/IP"
+    },
+    "W24200": {
+        "msg": "No communication connection EtherNet/IP Adapter",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the EtherNet/IP"
     },
     "W26000": {
         "msg": "CIE:All task is executing. Wait minute.",

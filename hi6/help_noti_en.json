@@ -121,5 +121,11 @@
 	"N169": { "msg": "Self-Diagnosis Complete!!!\n\nHi6 booting completed!!!" },
     "N170": { "msg": "Self-Diagnosis Complete!!!\n\nHi6a booting completed!!!" },
     "N171": { "msg": "Mismatch detected between tool information and safet tool information." },
-	"N172": { "msg": "Mismatch detected between additional weight on each axis and safet additional load." }
+	"N172": { "msg": "Mismatch detected between additional weight on each axis and safet additional load." },
+	"N181": { "msg": "PCI slot 1 - Online again." },
+	"N182": { "msg": "PCI slot 2 - Online again." },
+	"N183": { "msg": "PCI slot 3 - Online again." },
+	"N186": { "msg": "EtherNet/IP Adapter - Online again." },
+	"N187": { "msg": "EtherCAT Master IO - Online again." },
+	"N190": { "msg": "EtherNet/IP Scanner - Online again." }
 }
