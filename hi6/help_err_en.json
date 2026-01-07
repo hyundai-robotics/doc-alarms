@@ -4036,7 +4036,7 @@
     "E2260": {
         "msg": "Magnetic contactor (MC2) fault/detection abnormal while trying servo on",
         "cause": "Magnet MC2 not operated, causing servo on not to take place.",
-        "remedy": "1) Refer to the [Troubleshooting Guide] and inspect MC2.\r\n2) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n3) If the issue persists, replace the safety board (BD632).\r\n4) If the issue persists, replace the power supply module (H6PSM30).\r\n5) If the issue persists, replace the servo amplifier.\r\n6) If the system is configured for 9 axes or more, check the DIP switch settings on the Extended Axis Safety Interface Board (BD6H0).",        
+        "remedy": "1) Refer to the [Troubleshooting Guide] and inspect MC2.\r\n2) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n3) Verify the CNT1 cable connection and the CP ON/OFF status of the PSM module.\r\n4) If the issue persists, replace the safety board (BD632).\r\n5) If the issue persists, replace the power supply module (H6PSM30).\r\n6) If the issue persists, replace the servo amplifier.\r\n7) If the system is configured for 9 axes or more, check the DIP switch settings on the Extended Axis Safety Interface Board (BD6H0).",        
         "help_idx": "E02260",
         "help_title": "[TroubleShoot]Magnetic contactor (MC2) fault/detection abnormal while trying servo on"    
     },
@@ -11554,6 +11554,11 @@
         "cause": "Syntax of the constant or expression, used as the number of the variable, wrong",
         "remedy": "Check whether the variable number syntax is used properly."
     },
+    "E14589": {
+        "msg": "The top-level array variable name conflicts with an existing one.",
+        "cause": "A top-level array variable with the same name (case-insensitive) already exists.\n(Variable names are generally case-sensitive, however, top-level array variables are an exception.)",
+        "remedy": "Please use a different array variable name."
+    },
     "E14590": {
         "msg": "Variable owner does not exist, or is not an object.",
         "cause": "Cannot find owner object.",
@@ -11902,8 +11907,8 @@
 	 },
     "E16090": {
         "msg": "The job file #%s's format of line %s is invalid.",
-        "cause": "Failed to load the .job file due to an invalid format.",
-        "remedy": "Use HRWorkbench to correct the format of the .job text file, then reload it."
+        "cause": "There is a statement line with an invalid format.",
+        "remedy": "Use HRWorkbench to correct the format of the .job text file, then reload it.\nIn the address field (columns 1~5), place only the line number or step number."
     },
     "E16101": {
         "msg": "Pose/shift file header type not enabled.",
@@ -13408,6 +13413,11 @@
     "E21019": {
         "msg": "Gas spring sensor pressure is greater than the minimum value for tolerance error.(%s bar)",
         "cause": "The measured gas spring sensor pressure is greater than the minimum value for the tolerance error.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
+    },
+    "E21020": {
+        "msg": "Gas spring sensor pressure error occurred.",
+        "cause": "An abnormal pressure error occurred in the gas spring sensor.",
         "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
     },
     "E21021": {
@@ -15078,6 +15088,11 @@
     "E28576": {
         "msg": "RADAR version mismatch",
         "cause": "The RADAR version is not compatible with the integrated version",
+        "remedy": "Please update all of the version again."
+    },
+	"E28577": {
+        "msg": "PROFINET version mismatch",
+        "cause": "The PROFINET version is not compatible with the integrated version",
         "remedy": "Please update all of the version again."
     },
     "E28580": {
@@ -17524,6 +17539,158 @@
         "cause": "Communication delay occured during performing SCI communication",
         "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
     },
+	"E51400": {
+		"msg": "AMP Regenerative Discharge Resistor Overheating",
+		"cause": "The temperature of the regenerative discharge resistor has risen above the allowable threshold. This may occur due to excessive robot regenerative speed or a malfunction in the cooling system.",
+		"remedy": "1) Reduce the robot's regenerative speed and check whether the error persists. 2) Inspect the regenerative discharge resistor value. 3) Check the controller’s cooling system. 4) Verify the robot’s regenerative power level."
+	},
+	"E51401": {
+		"msg": "AMP PN Overvoltage Detected",
+		"cause": "This may occur when the robot's motion changes abruptly or when the value of the regenerative discharge resistor increases.",
+		"remedy": "1) Reduce the robot's speed and check whether the error persists. 2) Inspect the regenerative discharge resistor value."
+	},
+	"E51402": {
+		"msg": "AMP Diode Module Fault or Excessive AC Input Voltage",
+		"cause": "A fault has occurred in the diode module, causing the PN voltage to fall outside the allowable range. This may also occur if the three-phase AC voltage supplied to the servo amplifier (AMP) is abnormally high.",
+		"remedy": "1) Inspect power-related components (servo amplifier). 2) Check the controller’s input power voltage."
+	},
+	"E51403": {
+		"msg": "(%s Axis) Servo On/Off Command Failed to Execute Properly",
+		"cause": "This may occur when the AMP is not in a normal operating state.",
+		"remedy": "1) Check the status of the AMP. 2) Verify the firmware version of the safety board."
+	},
+	"E51404": {
+		"msg": "Motor-On Control Internal State Error",
+		"cause": "The internal state did not transition correctly during the Motor-On operation.",
+		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
+	},
+	"E51405": {
+		"msg": "(%s Axis) Motor-On Control 2-Channel Application Error",
+		"cause": "The output values of the 2-channel application differed during the Motor-On control process.",
+		"remedy": "1) Check the status of the safety communication. 2) Verify the firmware version of the safety board."
+	},
+	"E51406": {
+		"msg": "Immediate Stop Triggered in Servo Module",
+		"cause": "An error requiring an immediate stop has occurred within the servo module.",
+		"remedy": "1) Check the subsequent servo alarms. 2) Verify the firmware version of the safety board."
+	},
+	"E51407": {
+		"msg": "No Response from Servo Module 1",
+		"cause": "The first watchdog counter of the servo module is not increasing.",
+		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
+	},
+	"E51408": {
+		"msg": "No Response from Servo Module 2",
+		"cause": "The second watchdog counter of the servo module is not increasing.",
+		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
+	},
+	"E51409": {
+        "msg": "AMP PN undervoltage occurred",
+        "cause": "If error occured at a specific step depending on the robot playback speed, PN voltage lowered because of the significant use of energy. May be generated because the controller input power is unstable.",
+        "remedy": "1) Check the error by lowering the robot playback speed.2) Check the controller power voltage when the robot is operating. (Refer to the troubleshooting manual for details)",
+        "help_idx": "E02506",
+        "help_title": "[TroubleShoot]AMP PN undervoltage occurred"
+    },	
+	"E51420": {
+		"msg": "Hi6Com Self-Diagnosis Error Detected",
+		"cause": "A self-diagnosis error has occurred in the Hi6Com module.",
+		"remedy": "1) Check the software version of Hi6Com. 2) Replace the Hi6Com module."
+	},
+	"E51421": {
+		"msg": "Magnetic Contactor Error Occurred",
+		"cause": "An error occurred during the control of the Magnetic contactor.",
+		"remedy": "1) Check the connector connections, wiring, and cable conditions. 2) Replace the cable. 3) Replace the magnetic contactor. 4) Replace the safety board."
+	},
+	"E51422": {
+		"msg": "(%s Axis) Servo Control Timeout Parameter Setting Error",
+		"cause": "An error exists in the configured servo control timeout parameter value.",
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+	},
+	"E51423": {
+		"msg": "(%s Axis) Hardware Signal Error Timeout Parameter Setting Error",
+		"cause": "An error exists in the configured hardware signal error timeout parameter value.",
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+	},
+	"E51424": {
+		"msg": "PN Charging Timeout Parameter Setting Error",
+		"cause": "An error exists in the configured PN charging timeout parameter value.",
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+	},
+	"E51425": {
+		"msg": "(%s Axis) Timeout While Waiting for Servo Off Command",
+		"cause": "A timeout occurred while waiting for the Servo Off command.",
+		"remedy": "1) Check the brake lock delay time parameter. 2) Verify the firmware version of the safety board."
+	},
+	"E51426": {
+		"msg": "Initial Charging Timeout Error",
+		"cause": "An initial charging timeout error has occurred.",
+		"remedy": "1) Inspect the initial charging relay and cable. 2) Check for abnormalities in the main power supply."	
+	},
+	"E51427": {
+		"msg": "Discharge Resistor Control Error",
+		"cause": "The state of the discharge resistor control does not match the expected command.",
+		"remedy": "1) Inspect the discharge resistor relay and cable. 2) Verify the firmware version of the safety board."
+	},
+	"E51428": {
+		"msg": "PN Charging Failed",
+		"cause": "The PN-side charging operation has failed.",
+		"remedy": "Inspect the servo amplifier’s input power and cables."
+	},
+	"E51429": {
+		"msg": "Initial Charging Resistor Relay Feedback Error",
+		"cause": "The feedback of the initial charging resistor relay does not match the command.",
+		"remedy": "Inspect the initial charging relay and cables."
+	},
+	"E51430": {
+		"msg": "Discharge Resistor Relay Feedback Error",
+		"cause": "The feedback of the discharge resistor relay does not match the command.",
+		"remedy": "Inspect the discharge resistor relay and cables."
+	},
+	"E51431": {
+		"msg": "Magnetic Contactor Feedback Error",
+		"cause": "The feedback of the Magnetic contactor does not match the command.",
+		"remedy": "Inspect the contactor and cables."
+	},
+	"E51432": {
+		"msg": "Abnormal Servo Control Command from Hi6COM",
+		"cause": "The servo control command issued by Hi6COM is incorrect.",
+		"remedy": "1) Check the software version of Hi6COM. 2) Verify the firmware version of the safety board."
+	},
+	"E51440": {
+		"msg": "(%s Axis) Brake Control Command Error",
+		"cause": "The brake control command does not match between the two channels.",
+		"remedy": "1) Check the software version of Hi6Com. 2) Verify the firmware version of the safety board."
+	},
+	"E51441": {
+		"msg": "(%s Axis) Brake Feedback Error",
+		"cause": "The brake control command does not match the feedback signal.",
+		"remedy": "1) Verify the firmware version of the safety board. 2) Replace the safety board."
+	},
+	"E51442": {
+		"msg": "Brake Test Start Error",
+		"cause": "The system is not in a valid state to start the brake test.",
+		"remedy": "1) Check the software version of Hi6Com. 2) Verify the firmware version of the safety board."
+	},
+	"E51443": {
+		"msg": "Brake Power Error",
+		"cause": "The brake control power was not supplied.",
+		"remedy": "1) Check the brake power supply and cables."
+	},
+	"E51444": {
+		"msg": "(%s Axis) Brake Release Delay Time Setting Error",
+		"cause": "The configured brake release delay time is outside the allowable range.",
+		"remedy": "Check the safety parameters."
+	},
+	"E51445": {
+		"msg": "(%s Axis) Brake Lock Delay Time Setting Error",
+		"cause": "The configured brake lock delay time is outside the allowable range.",
+		"remedy": "Check the safety parameters."
+	},
+	"E51499": {
+		"msg": "(%s Axis) Undefined Servo-Related Error",
+		"cause": "An undefined servo-related error has occurred.",
+		"remedy": "Update the safety board firmware to the latest version."
+	},
     "E51501": {
         "msg": "(General setup)Safe parameter range exceeded",
         "cause": "The parameter set in the General setup configuration menu has exceeded the range.",
@@ -17749,6 +17916,411 @@
         "cause": "The radar sensor control board is in an abnormal state.",
         "remedy": "1) Reboot the controller.\n2) If the issue persists, replace the radar sensor control board."
     },
+	"E52000": {
+        "msg": "Safety input signal filter setting error",
+        "cause": "The filter setting value of the safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52001": {
+        "msg": "Safety input signal mismatch setting error",
+        "cause": "The mismatch setting value of the safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52002": {
+        "msg": "Safety input signal error latch setting error",
+        "cause": "The error latch setting value of the safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52003": {
+        "msg": "Safety output signal error latch setting error",
+        "cause": "The error latch setting value of the safety output signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52004": {
+        "msg": "Additional safety input signal filter setting error",
+        "cause": "The filter setting value of the additional safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52005": {
+        "msg": "Additional safety input signal mismatch setting error",
+        "cause": "The mismatch setting value of the additional safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52006": {
+        "msg": "Additional safety input signal error latch setting error",
+        "cause": "The error latch setting value of the additional safety input signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52007": {
+        "msg": "Additional safety output signal error latch setting error",
+        "cause": "The error latch setting value of the additional safety output signal is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52010": {
+        "msg": "Additional safety I/O board communication error",
+        "cause": "A communication error has occurred in the additional safety I/O board.",
+        "remedy": "1) Check the assembly status of the additional safety I/O board. 2) Replace the additional safety I/O board."
+    },
+    "E52020": {
+        "msg": "Safety output test pulse error",
+        "cause": "A test pulse error has occurred on the safety output.",
+        "remedy": "Check the wiring status of the safety output."
+    },
+    "E52021": {
+        "msg": "Safety output feedback error",
+        "cause": "The command and feedback of the safety output do not match.",
+        "remedy": "Check the wiring status of the safety output."
+    },
+    "E52030": {
+        "msg": "(%s ch) Safety input assignment duplication",
+        "cause": "The safety input assignment is duplicated.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52031": {
+        "msg": "(%s ch) PROFIsafe input assignment duplication",
+        "cause": "The PROFIsafe input assignment is duplicated.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52032": {
+        "msg": "(%s ch) Safety input and PROFIsafe input assignment duplication",
+        "cause": "The assignments of the safety input and PROFIsafe input are duplicated.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52033": {
+        "msg": "(%s ch) Safety input assignment error",
+        "cause": "The safety input assignment is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52034": {
+        "msg": "(%s ch) Safety output assignment error",
+        "cause": "The safety output assignment is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52035": {
+        "msg": "(%s ch) PROFIsafe input assignment error",
+        "cause": "The PROFIsafe input assignment is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52036": {
+        "msg": "(%s ch) PROFIsafe output assignment error",
+        "cause": "The PROFIsafe output assignment is incorrect.",
+        "remedy": "Check the safety parameters."
+    },
+    "E52040": {
+        "msg": "(%s ch) Noise on safety input signal",
+        "cause": "Noise has been introduced into the safety input signal.",
+        "remedy": "Check the wiring status of the safety input."
+    },
+    "E52041": {
+        "msg": "(%s ch) Noise on additional safety input signal",
+        "cause": "Noise has been introduced into the additional safety input signal.",
+        "remedy": "Check the wiring status of the additional safety input."
+    },
+    "E52042": {
+        "msg": "(%s ch) Safety input signal mismatch",
+        "cause": "A mismatch in the safety input signal has occurred.",
+        "remedy": "1) Check the wiring status of the safety input. 2) Check the parameters related to the safety input."
+    },
+    "E52043": {
+        "msg": "(%s ch) Additional safety input signal mismatch",
+        "cause": "A mismatch in the additional safety input signal has occurred.",
+        "remedy": "1) Check the wiring status of the additional safety input. 2) Check the parameters related to the safety input."
+    },
+    "E52046": {
+        "msg": "(%s ch) Additional safety output signal feedback error",
+        "cause": "There is an error in the feedback of the additional safety output signal.",
+        "remedy": "Check the wiring status of the additional safety output."
+    },
+    "E52047": {
+        "msg": "(%s ch) Safety input signal test pulse error",
+        "cause": "A test pulse error has occurred on the safety input signal.",
+        "remedy": "Check the wiring status of the safety input signal."
+    },
+    "E52100": {
+        "msg": "TP mode input signal error",
+        "cause": "The TP mode input signal is incorrect.",
+        "remedy": "1) Check the wiring status of the TP cable. 2) Replace the TP device."
+    },
+    "E52101": {
+        "msg": "External mode input signal error",
+        "cause": "The external mode input signal is incorrect.",
+        "remedy": "Check the wiring status of the external mode input cable."
+    },
+    "E52102": {
+        "msg": "TP disconnection condition abnormal",
+        "cause": "The TP disconnection condition has not been satisfied.",
+        "remedy": "Check the wiring status and remote mode input of the cable."
+    },
+    "E52120": {
+        "msg": "TP emergency stop test pulse error",
+        "cause": "A TP emergency stop test pulse error has occurred.",
+        "remedy": "Check the wiring status of the TP emergency stop cable."
+    },
+    "E52121": {
+        "msg": "TP enable test pulse error",
+        "cause": "A TP enable test pulse error has occurred.",
+        "remedy": "Check the wiring status of the TP enable cable."
+    },
+    "E52122": {
+        "msg": "OP emergency stop test pulse error",
+        "cause": "An OP emergency stop test pulse error has occurred.",
+        "remedy": "Check the wiring status of the OP emergency stop cable."
+    },
+    "E52123": {
+        "msg": "Contactor feedback (STO) test pulse error",
+        "cause": "A contactor feedback (STO) test pulse error has occurred.",
+        "remedy": "Check the wiring status of the contactor feedback (STO) cable."
+    },
+    "E52130": {
+        "msg": "TP emergency stop input dual-channel mismatch error",
+        "cause": "A TP emergency stop input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the TP emergency stop input cable."
+    },
+    "E52131": {
+        "msg": "TP enable input dual-channel mismatch error",
+        "cause": "A TP enable input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the TP enable input cable."
+    },
+    "E52132": {
+        "msg": "TP remote mode input dual-channel mismatch error",
+        "cause": "A TP remote mode input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the TP remote mode input cable."
+    },
+    "E52133": {
+        "msg": "TP manual mode input dual-channel mismatch error",
+        "cause": "A TP manual mode input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the TP manual mode input cable."
+    },
+    "E52134": {
+        "msg": "TP automatic mode input dual-channel mismatch error",
+        "cause": "A TP automatic mode input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the TP automatic mode input cable."
+    },
+    "E52135": {
+        "msg": "OP emergency stop input dual-channel mismatch error",
+        "cause": "An OP emergency stop input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the OP emergency stop input cable."
+    },
+    "E52136": {
+        "msg": "Contactor feedback (STO) input dual-channel mismatch error",
+        "cause": "A contactor feedback (STO) input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the contactor feedback (STO) input cable."
+    },
+    "E52137": {
+        "msg": "Contactor B-contact input dual-channel mismatch error",
+        "cause": "A contactor B-contact input dual-channel mismatch error has occurred.",
+        "remedy": "Check the wiring status of the contactor B-contact input cable."
+    },
+    "E52150": {
+        "msg": "TP emergency stop input signal noise",
+        "cause": "Noise is being introduced into the TP emergency stop input signal.",
+        "remedy": "Check the wiring status of the TP emergency stop input cable."
+    },
+    "E52151": {
+        "msg": "TP enable input signal noise",
+        "cause": "Noise is being introduced into the TP enable input signal.",
+        "remedy": "Check the wiring status of the TP enable input cable."
+    },
+    "E52152": {
+        "msg": "TP remote mode input signal noise",
+        "cause": "Noise is being introduced into the TP remote mode input signal.",
+        "remedy": "Check the wiring status of the TP remote mode input cable."
+    },
+    "E52153": {
+        "msg": "TP manual mode input signal noise",
+        "cause": "Noise is being introduced into the TP manual mode input signal.",
+        "remedy": "Check the wiring status of the TP manual mode input cable."
+    },
+    "E52154": {
+        "msg": "TP automatic mode input signal noise",
+        "cause": "Noise is being introduced into the TP automatic mode input signal.",
+        "remedy": "Check the wiring status of the TP automatic mode input cable."
+    },
+    "E52155": {
+        "msg": "OP emergency stop input signal noise",
+        "cause": "Noise is being introduced into the OP emergency stop input signal.",
+        "remedy": "Check the wiring status of the OP emergency stop input cable."
+    },
+    "E52156": {
+        "msg": "Contactor feedback (STO) input signal noise",
+        "cause": "Noise is being introduced into the contactor feedback (STO) input signal.",
+        "remedy": "Check the wiring status of the contactor feedback (STO) input cable."
+    },
+    "E52157": {
+        "msg": "Contactor B-contact input signal noise",
+        "cause": "Noise is being introduced into the contactor B-contact input signal.",
+        "remedy": "Check the wiring status of the contactor B-contact input cable."
+    },
+    "E52160": {
+        "msg": "Pre-charge relay feedback input signal noise",
+        "cause": "Noise is being introduced into the pre-charge relay feedback input signal.",
+        "remedy": "Check the wiring status of the pre-charge relay feedback input cable."
+    },
+    "E52161": {
+        "msg": "Discharge relay feedback input signal noise",
+        "cause": "Noise is being introduced into the discharge relay feedback input signal.",
+        "remedy": "Check the wiring status of the discharge relay feedback input cable."
+    },
+    "E52200": {
+        "msg": "PROFINET settings not applied",
+        "cause": "Settings cannot be applied while PROFINET I/O communication is active.",
+        "remedy": "1) Disconnect the connection between the PROFINET board and the master. 2) Reboot the robot controller."
+    },
+    "E52201": {
+        "msg": "PROFINET setting save failure",
+        "cause": "Failed to save the PROFINET settings.",
+        "remedy": "1) Reboot the robot controller. 2) Replace the PROFINET board."
+    },
+    "E52202": {
+        "msg": "PROFINET communication disconnection alarm",
+        "cause": "A PROFINET communication disconnection alarm has occurred.",
+        "remedy": "1) Check the Ethernet cable connection between the PROFINET board and the master. 2) Reboot the robot controller."
+    },
+    "E52203": {
+        "msg": "PROFIsafe functional safety alarm",
+        "cause": "A PROFIsafe functional safety alarm has occurred.",
+        "remedy": "1) Check the connection status between the PROFINET board and the master. 2) Reboot the robot controller."
+    },
+    "E52204": {
+        "msg": "PROFIsafe I/O alarm",
+        "cause": "A PROFIsafe I/O alarm has occurred.",
+        "remedy": "1) Check the connection status between the PROFINET board and the master. 2) Reboot the robot controller."
+    },
+    "E52205": {
+        "msg": "PROFIsafe module no communication response",
+        "cause": "No communication response from the PROFIsafe module.",
+        "remedy": "1) Check the installation status of the PROFINET board. 2) Replace the servo/safety board. 3) Reboot the robot controller."
+    },
+    "E52206": {
+        "msg": "PROFINET input data update error",
+        "cause": "PROFINET input data has not been updated.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52207": {
+        "msg": "PROFINET input data integrity error",
+        "cause": "A PROFINET input data integrity error has occurred.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52208": {
+        "msg": "No PROFINET output data response",
+        "cause": "There is no PROFINET output data response.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52209": {
+        "msg": "PROFINET parameter setting failure",
+        "cause": "Failed to set PROFINET parameters.",
+        "remedy": "1) Check the parameter setting range. 2) If communicating with the PROFINET master, disconnect the connection. 3) Update the PROFINET board to the latest version."
+    },
+    "E52210": {
+        "msg": "PROFINET board EtherCAT LAN port 1 disconnected",
+        "cause": "The connection on PROFINET board EtherCAT LAN port 1 has been lost.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check the Ethernet cable connection between MainCom and the PROFINET board. 3) Replace the PROFINET board."
+    },
+    "E52211": {
+        "msg": "PROFINET board EtherCAT LAN port 2 disconnected",
+        "cause": "The connection on PROFINET board EtherCAT LAN port 2 has been lost.",
+        "remedy": "1) The PROFINET board does not use EtherCAT LAN port 2. Use LAN port 1 for the Ethernet cable connection between MainCom and the PROFINET board."
+    },
+    "E52212": {
+        "msg": "PROFINET output data update error",
+        "cause": "PROFINET output data has not been updated.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52213": {
+        "msg": "PROFINET output data integrity error",
+        "cause": "A PROFINET output data integrity error has occurred.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52214": {
+        "msg": "No PROFINET input data response",
+        "cause": "There is no PROFINET input data response.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check that the MainCom SW version is up to date. 3) Replace the PROFINET board."
+    },
+    "E52215": {
+        "msg": "PROFINET slot status error",
+        "cause": "The PROFINET slot status is incorrect.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Replace the PROFINET board."
+    },
+    "E52216": {
+        "msg": "PROFINET parameter transfer failure",
+        "cause": "Internal parameter transfer failure in the PROFINET board.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Replace the PROFINET board."
+    },
+    "E52298": {
+        "msg": "PROFINET internal communication alarm",
+        "cause": "A communication alarm has occurred between the PROFINET board and MainCom.",
+        "remedy": "1) Check that the PROFINET SW version is up to date. 2) Check the Ethernet cable connection between MainCom and the PROFINET board. 3) Replace the PROFINET board."
+    },
+    "E52299": {
+        "msg": "Undefined PROFIsafe alarm",
+        "cause": "An undefined alarm has occurred on the PROFIsafe board.",
+        "remedy": "Replace the PROFIsafe board."
+    },
+    "E52300": {
+        "msg": "F-Dst address error",
+        "cause": "The F-Dst address is incorrect.",
+        "remedy": "Check the setting values of the safety parameters."
+    },
+    "E52301": {
+        "msg": "F-Watchdog setting error",
+        "cause": "The F-Watchdog setting value is incorrect.",
+        "remedy": "Check the safety parameter values of the F-Host."
+    },
+    "E52302": {
+        "msg": "F-Dest address differs from F-Host setting value",
+        "cause": "The F-Dest address differs from the F-Host setting value.",
+        "remedy": "1) Check the F-Dest address value. 2) Check the safety parameter values of the F-Host."
+    },
+    "E52303": {
+        "msg": "F-Src address differs from F-Host setting value",
+        "cause": "The F-Src address differs from the F-Host setting value.",
+        "remedy": "1) Check the F-Src address value. 2) Check the safety parameter values of the F-Host."
+    },
+    "E52304": {
+        "msg": "F-Parameter CRC value error",
+        "cause": "There is an error in the F-Parameter CRC value.",
+        "remedy": "1) Check the safety parameter values of the F-Host. 2) Reboot the F-Host."
+    },
+    "E52305": {
+        "msg": "F-Output CRC value error",
+        "cause": "There is an error in the F-Output CRC value.",
+        "remedy": "1) Check the PROFIsafe communication cable. 2) Reboot the F-Device."
+    },
+    "E52306": {
+        "msg": "F-Watchdog alarm occurred",
+        "cause": "An error has occurred in the F-Watchdog alarm.",
+        "remedy": "1) Check the PROFIsafe communication cable. 2) Reboot the F-Device."
+    },
+    "E52307": {
+        "msg": "F-Parameter error occurred",
+        "cause": "An error has occurred in the F-Parameter.",
+        "remedy": "1) Check the safety parameter values of the F-Host. 2) Reboot the F-Host."
+    },
+    "E52308": {
+        "msg": "CRC size error occurred",
+        "cause": "A CRC size error has occurred.",
+        "remedy": "Check the safety parameter values of the F-Host."
+    },
+    "E52309": {
+        "msg": "F-Parameter version error",
+        "cause": "An error has occurred in the F-Parameter version.",
+        "remedy": "Check the safety parameter values of the F-Host."
+    },
+    "E52310": {
+        "msg": "F-Block ID error",
+        "cause": "An error has occurred in the F-Block ID.",
+        "remedy": "Check the safety parameter values of the F-Host."
+    },
+    "E52320": {
+        "msg": "RS-485 communication timeout",
+        "cause": "A timeout has occurred in RS-485 communication.",
+        "remedy": "1) Check the RS-485 communication cable. 2) Replace the safety communication board."
+    },
+    "E52321": {
+        "msg": "RS-485 communication error",
+        "cause": "An error has occurred in RS-485 communication.",
+        "remedy": "1) Check the RS-485 communication cable. 2) Replace the safety communication board."
+    },
 	"E52500": {
 		"msg": "CIP Safety communication error.",
 		"cause": "A CIP Safety communication error has occurred.",
@@ -17764,6 +18336,96 @@
 		"cause": "A communication error occurred while receiving the CIP Safety TCOO message.",
 		"remedy": "1) Verify the communication cable connection and check the Link LED indication.\r\n2) Confirm that the EtherNet/IP task execution cycle is configured correctly."
 	},
+	"E52600": {
+        "msg": "Internal CAN communication timeout",
+        "cause": "An internal CAN communication timeout has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52601": {
+        "msg": "Internal CAN communication error",
+        "cause": "An internal CAN communication error has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52602": {
+        "msg": "Internal CAN communication synchronization error",
+        "cause": "An internal CAN communication synchronization error has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52620": {
+        "msg": "F-Input internal communication CRC error",
+        "cause": "An internal communication CRC error has occurred in F-Input.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52621": {
+        "msg": "F-Input dual-channel value mismatch",
+        "cause": "A mismatch has occurred between the values of the two F-Input channels.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52622": {
+        "msg": "PNIO parameter CRC error",
+        "cause": "A CRC error has occurred in the PNIO parameters.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Check the Hi6 MainCom SW version."
+    },
+    "E52623": {
+        "msg": "F-Input update error",
+        "cause": "F-Input data is not being updated.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52640": {
+        "msg": "F-Output internal communication CRC error",
+        "cause": "An internal communication CRC error has occurred in F-Output.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52641": {
+        "msg": "F-Output dual-channel value mismatch",
+        "cause": "A mismatch has occurred between the values of the two F-Output channels.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52642": {
+        "msg": "F-Output update error",
+        "cause": "F-Output data is not being updated.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52650": {
+        "msg": "System time receive timeout",
+        "cause": "A system time receive timeout has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52651": {
+        "msg": "RX CRC receive timeout",
+        "cause": "An RX CRC receive timeout has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52652": {
+        "msg": "CTRL FLOW receive timeout",
+        "cause": "A CTRL FLOW receive timeout has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52653": {
+        "msg": "TX DATA receive timeout",
+        "cause": "A TX DATA receive timeout has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52660": {
+        "msg": "System time difference detected",
+        "cause": "A system time difference between the two channels has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52661": {
+        "msg": "RX CRC difference detected",
+        "cause": "An RX CRC difference between the two channels has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52662": {
+        "msg": "CTRL FLOW difference detected",
+        "cause": "A CTRL FLOW difference between the two channels has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
+    "E52663": {
+        "msg": "TX DATA difference detected",
+        "cause": "A TX DATA difference between the two channels has occurred.",
+        "remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+    },
 	"E52800": {
         "msg": "MCU HW-BIST Diagnostic error",
         "cause": "CPU,FPU of CPU1 are abnormal.",
@@ -18094,6 +18756,11 @@
         "cause": "Abnormal behavior detected in some tasks on the main computer.",
         "remedy": "1) Check the task monitor. 2) Check the system version information."
     },
+    "E53363": {
+        "msg": "Safe tool information not configured",
+        "cause": "Safe tool information has not been configured for the activated tool.",
+        "remedy": "Configure the robot tool number and its associated information in [Safety System]-[General setup]-[Safe tool information] ."
+    },
     "E53400": {
         "msg": "Undefined servo/safety error",
         "cause": "There is an issue with the error number and additional information.",
@@ -18134,6 +18801,11 @@
         "cause": "The safety additional inertia weight does not match the robot's additional load parameter.",
         "remedy": "Verify that the settings in [Safety System]-[General setup]-[Safe additional load] match the inertia values in [Robot parameter]-[Additional weight on each axis]."
     },
+    "E53617": {
+        "msg": "Safe tool information not configured",
+        "cause": "Activated robot tool data is not configured in safe tool information",
+        "remedy": "Configure a tool number in [Safety System]-[General setup]-[Safe tool information] and verify that the corresponding values are consistent with those in [Robot parameter]-[Tool data]."
+    },
 	"E54554": {
 		"msg": "Radar sensor %s MCU[%s] detection failure error",
 		"cause": "Continuous detection failures occurring",
@@ -18167,7 +18839,7 @@
 	"E55006": {
         "msg": "User DIO board EtherCAT communication CRC error detected.",
         "cause": "A CRC error has been detected in the EtherCAT communication of the User DIO board.",
-        "remedy": "1) Use the integrated version update function to update the board and COM module versions.  \n2) After completing the version update, reboot the controller. \n3) If the problem persists, replace the User DIO Board or EtherCAT cable with a new one. "
+        "remedy": "1) After checking the EtherCAT cable and communication connection status, reboot the controller. \n2) Use the integrated version update function to update the board and COM module versions.  \n3) After completing the version update, reboot the controller. \n4) If the problem persists, replace the User DIO Board or EtherCAT cable with a new one. "
     },
     "E62000": {
         "msg": "Teaching pendant connection error (safety chain 1)",

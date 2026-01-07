@@ -457,7 +457,7 @@
     "W161": {
         "msg": "Impossible to use the gravity compensation function.",
         "cause": "A stiffness value is invalid.",
-        "remedy": "Check the stiffness value in the CLB file."
+        "remedy": "Check the stiffness value in the calibration.json file."
     },
     "W162": {
         "msg": "(%s axis) abnormality detected during the brake hold test.",
@@ -574,11 +574,6 @@
 		"cause": "Based on recent operation patterns, the expected lifespan of the reducer on this axis is estimated to be less than 6,000 hours, increasing the risk of reducer failure.",
 		"remedy": "Please check whether the tool's physical properties have been entered correctly. Reduce the operation speed or acceleration to decrease the load on the reducer."
 	},
-    "W188": {
-        "msg": "Please check the error from torque sensor or robot tool data",
-        "cause": "Please check the error from torque sensor or robot tool data",
-        "remedy": "1) In case of detecting abnormal torque sensor offset, please set up tool data accurately. 2) With accurate robot tool data, please execute torque sensor offset"
-    },
     "W190": {
         "msg": "(%s Axis) The set maximum joint speed exceeds the default.",
         "cause": "The project joint maximum speed set value exceeds the default.",
@@ -588,6 +583,11 @@
         "msg": "(%s Axis) The set acceleration time is less than the default.",
         "cause": "The project joint acceleration setting time is less than the default.",
         "remedy": "Initialize the Accel and decel parameter."
+    },
+    "W199": {
+        "msg": "calibration.json file is not exist.",
+        "cause": "calibration.json file is not exist in the project folder",
+        "remedy": "Execute [restore] in the System/Auto calibration/Robot and tool calibration menu."
     },
     "W200": {
         "msg": "Main board VCORE voltage exceeded the range",
@@ -1077,6 +1077,11 @@
     "W21019": {
         "msg": "Gas spring sensor pressure is greater than the minimum value for tolerance warning.(%s bar)",
         "cause": "The measured gas spring sensor pressure is greater than the minimum value for the tolerance warning.",
+        "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
+    },
+    "W21020": {
+        "msg": "Gas spring sensor pressure warning occurred.",
+        "cause": "An abnormal pressure warning occurred in the gas spring sensor.",
         "remedy": "1) Check the gas spring pressure sensor. 2) Check the gas spring pressure."
     },
     "W21021": {
@@ -3413,6 +3418,31 @@
         "msg": "(%s axis) Encoder Overheat",
         "cause": "Encoder internal temperature has exceeded the limit.",
         "remedy": "1) Check the motor temperature and adjust the robot's operating speed. \n2) If the error persists, replace the motor."
+    },
+	"E52102": {
+		"msg": "TP Detach Condition Error",
+		"cause": "The required conditions for TP detachment were not satisfied.",
+		"remedy": "Check the wiring and input status of the remote mode signal and related cables."
+	},
+	"W52620": {
+		"msg": "F-Input Internal Communication CRC Error",
+		"cause": "A CRC error occurred in the internal communication of the F-Input.",
+		"remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+	},
+	"W52623": {
+		"msg": "F-Input Update Error",
+		"cause": "The F-Input data is not being updated.",
+		"remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
+	},
+    "W53601": {
+        "msg": "Protective stop being inputted.",
+        "cause": "It occurs when [Motor ON] is done in an protective stop state.",
+        "remedy": "Please check the input signals in the Safety I/O status monitoring and take the necessary actions."
+    },
+    "W53602": {
+        "msg": "Normal stop being inputted.",
+        "cause": "It occurs when [Motor ON] is done in an normal stop state.",
+        "remedy": "Please check the input signals in the Safety I/O status monitoring and take the necessary actions."
     },
 	"W54902": {
         "msg": "2nd Encoder BISS communication error detection",

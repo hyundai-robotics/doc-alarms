@@ -1,7 +1,7 @@
 ﻿{
 	"N1": { "msg": "Environment variable initialization and system state check (please wait for a short while)" },
 	"N2": { "msg": "Self-Diagnosis Complete!!!" },
-	"N3": { "msg": "@ESC1 Chain Error" },
+	"N3": { "msg": "The controller needs to be rebooted." },
 	"N4": { "msg": "#MotorOnKey1 Chain Error" },
 	"N5": { "msg": "#Power save function start" },
 	"N6": { "msg": "#Power save function end" },
@@ -15,7 +15,7 @@
 	"N14": { "msg": "Cannot run internal operation! Check mode state" },
 	"N15": { "msg": "Cannot run external operation! Check mode state" },
 	"N16": { "msg": "Cannot run remote operation! Check mode state" },
-	"N17": { "msg": "Use after rebooting the controller." },
+	"N17": { "msg": "The controller needs to be rebooted.\nDo want to reboot it now?" },
 	"N18": { "msg": "Press the operating switch from the playback mode." },
 	"N19": { "msg": "There is an error for detecting collision." },
 	"N20": { "msg": "Internal stop key is entered." },
@@ -127,5 +127,6 @@
 	"N183": { "msg": "PCI slot 3 - Online again." },
 	"N186": { "msg": "EtherNet/IP Adapter - Online again." },
 	"N187": { "msg": "EtherCAT Master IO - Online again." },
-	"N190": { "msg": "EtherNet/IP Scanner - Online again." }
+	"N190": { "msg": "EtherNet/IP Scanner - Online again." },
+	"N191": { "msg": "The controller will automatically reboot in 10 seconds.\nDuring reboot, communication with the controller may be temporarily interrupted.\n\nIf you do not want the reboot,please disable the Auto Reboot item in System → 4. Application Parameters." }
 }
