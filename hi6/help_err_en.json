@@ -2932,79 +2932,9 @@
         "remedy": "Adjust the I/O sequence in a way in which the external startup can be turned on after the program selection signal is inputted. Program selection signal – 0.2-second delay – external start signal. Or, check whether the signal connection is normal."
     },
     "E1462": {
-        "msg": "Plasma welder not responding.",
-        "cause": "The communication error between Hi5 controller and the plasma welder.",
-        "remedy": "1) Check the communication line connection between the controller and the welder.2) In the item of “System>>2:Control parameter>>3:Serial port,” check the controller communication setting state.3) Check the communication state through the “communication test” function in the relevant dialog box."
-    },
-    "E1463": {
-        "msg": "Plasma welder error (E01) pilot arc not ignited",
-        "cause": "Pilot arc does not ignited within 2 seconds after pilot startup.",
-        "remedy": "Check and clear the trouble, and then deactivate the welder error state. After that, try pilot ignition again."
-    },
-    "E1464": {
-        "msg": "Plasma welder error (E02) pilot arc not ignited",
-        "cause": "Main arc does not ignited within 2 seconds after main arc startup.",
-        "remedy": "Check and clear the trouble, and then deactivate the welder error state. Afterward, try main arc ignition while in pilot arc ignition."
-    },
-    "E1465": {
-        "msg": "Plasma welder error (E03) system overheated",
-        "cause": "Trance, reactor, semiconductor is overheated due to an operation over-load",
-        "remedy": "After waiting for the inside of the power main body to be cooled down by the internal fan, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1466": {
-        "msg": "Plasma welder error (E04) primary overcurrent",
-        "cause": "Abnormality detected in IGBT of the welder main.",
-        "remedy": "Check and clear the causes, and then supply the power again to resume the next work.When the same error repeats itself, stop use. After that, contact the welder company for inquiries."
-    },
-    "E1467": {
-        "msg": "Plasma welder error (E06) shield gas pressure lowered",
-        "cause": "Shield gas pressure is lowered below  0.15 MPa.",
-        "remedy": "Check the shield gas pressure.When the gas valve is closed, open it full, and then deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1468": {
-        "msg": "Plasma welder error (E07) pilot gas pressure lowered",
-        "cause": "1) Pilot gas pressure is lowered below 0.15 MPa.2) Pilot gas flow is lowered below 0.08 L/min during welding.",
-        "remedy": "1) Check pilot gas pressure.When the gas valve is closed, open it full, and then deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work.2) After investigating and clearing the causes, try deactivating the welder error state. After that, confirm whether the error displayed on the welder front disappeared, and then resume the work."
-    },
-    "E1469": {
-        "msg": "Plasma welder error (E08) coolant flow insufficient",
-        "cause": "Coolant flow is insufficient.",
-        "remedy": "After investigating and clearing the causes (torch water passage blocked, pump capacity lowered and fault with flow sensors), deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work.At this time, check whether the flow switch moves on the acrylic board at the side of the welder."
-    },
-    "E1470": {
-        "msg": "Plasma welder error (E09) emergency stop",
-        "cause": "Emergency stop signal is inputted.",
-        "remedy": "After the emergency stop is deactivated, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1471": {
-        "msg": "Plasma welder error (E11) chiller abnormal",
-        "cause": "Abnormality generated while accessing the chiller-embedded cooling circulation system or the unit cooler.",
-        "remedy": "Investigate the chiller all the way through the chiller embedded coolant circulation system, and resolve the problem. Afterward, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1472": {
-        "msg": "Plasma welder error (E20) input overvoltage",
-        "cause": "Voltage of higher than 240 V is inputted.",
-        "remedy": "Check the power voltage, and resolve the problem. Afterward, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1473": {
-        "msg": "Plasma welder error (E21) input undervoltage",
-        "cause": "Voltage of lower than 180 V is inputted.",
-        "remedy": "Check the power voltage and resolve the problem. Afterward, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1474": {
-        "msg": "Plasma welder error (E81) input overvoltage",
-        "cause": "400 V voltage is inputted while in the setting for 200 V, or 200 V voltage is inputted while in the setting for 400 V",
-        "remedy": "Check the power voltage and resolve the problem. After that, deactivate the welder error state.When it is confirmed that the error code displayed on the welder front disappeared, resume the next work."
-    },
-    "E1475": {
-        "msg": "Plasma welder error (E85) startup failed",
-        "cause": "Power startup failed.",
-        "remedy": "Try resuming the work by resupplying the power.If the problem repeats itself, contact the welder company for inquiries."
-    },
-    "E1476": {
-        "msg": "Plasma welder error (E94) memory abnormal",
-        "cause": "Abnormality generated with the memory that reserves the parameter.",
-        "remedy": "Try resuming the work by resupplying the power.If the problem repeats itself, contact the welder company for inquiries."
+        "msg": "No license key for the LPS function.",
+        "cause": "No license key for using the LpS function.",
+        "remedy": "Contact the head office of our company for inquiries, and get the official license."
     },
     "E1477": {
         "msg": "Required to execute while in the Motor On mode.",
@@ -3411,6 +3341,11 @@
         "cause": "No license key for using the sensor based force control function.",
         "remedy": "Contact the head office of our company for inquiries, and get the official license."
     },
+	"E1562": {
+		"msg": "Maximum jerk parameter error",
+		"cause": "Invalid maximum jerk parameter value",
+		"remedy": "Check the maximum jerk value in the acceleration/deceleration parameters."
+	},
     "E2000": {
         "msg": "Power failure detected",
         "cause": "Power failure or CB (circuit brake) off while in the Motor On state.When the power failure is operating, it can generate the following errors.E02506 AMP PN undervoltage occurredE02507 AMP diode module abnormal or insufficient AC input voltageE02631 (%s axis) position deviation exceeded for each speedW00153 Reducer motor current that exceeds the allowable level is detected.",
@@ -5932,7 +5867,7 @@
 	 "E3080": {
         "msg": "Parameter Transfer Failure During Boot (BD640)",
         "cause": "The encoder parameter values exchanged between the main controller (hi6COM) and the servo board (BD640) do not match, or no response was received within the specified time.",
-        "remedy": "1)nVerify that the firmware versions of the main controller (hi6COM) and the servo board (BD640) are compatible. 2) Check the EtherCAT communication status between the main controller and the servo board. 3) If the issue persists, perform replacement tests in the following order: servo board (BD640), then main controller (hi6COM)."
+        "remedy": "1) Verify that the firmware versions of the main controller (hi6COM) and the servo board (BD640) are compatible. 2) Check the EtherCAT communication status between the main controller and the servo board. 3) If the issue persists, perform replacement tests in the following order: servo board (BD640), then main controller (hi6COM).\r\n- This error may occur because the controller is configured in software for the default axes (6 axes), and there is a mismatch with the settings of the additional axes you intend to use. \r\n1) Please refer to the Quick Guide attached to the controller. (System initialization and additional axis setup) \r\n2) Please refer to the Kakao Channel support service: “FAQ – How to operate the Hi6 9-axis controller when additional axes are not connected.”"
     },
     "E4001": {
         "msg": "FAULT_SafeSpace:CH_TYPE_DUPLICATED",
@@ -11745,6 +11680,11 @@
         "cause": "Axis name that does not exist in the current robot or the wrong name was used.",
         "remedy": "Adjust the name correct"
     },
+    "E14804": {
+        "msg": "Error copying object of a different type",
+        "cause": "An object was copied into a variable of a different type between objects.",
+        "remedy": "Please perform the copy with an object of the same type."
+    },
     "E14821": {
         "msg": "Invalid array literal notation.",
         "cause": "Array literal (constant) notation is invalid.",
@@ -11900,11 +11840,11 @@
         "cause": "An error occurred while deleting file or folder.",
         "remedy": "Make sure the specified pathname is valid."
     },
-	 "E16061": {
-		  "msg": "Invalid source-pathname",
-		  "cause": "The folder or file with the specified pathname does not exist",
-		  "remedy": "Re-confirm the specified pathname."
-	 },
+    "E16061": {
+        "msg": "Invalid source-pathname",
+        "cause": "The folder or file with the specified pathname does not exist",
+        "remedy": "Re-confirm the specified pathname."
+    },
     "E16090": {
         "msg": "The job file #%s's format of line %s is invalid.",
         "cause": "There is a statement line with an invalid format.",
@@ -15100,6 +15040,11 @@
         "cause": "MAIN SW may leak memory. MAIN SW may malfunction.",
         "remedy": "1) You can check the free memory with [R86,2,enter] operation.\r\n2) Back up all the controller files and forward them to us.\r\n3) Power off and on the controller to restore the free memory."
     },
+    "E28590": {
+        "msg": "An object or variable was created beyond the allowed limit.",
+        "cause": "The number of created objects or variables exceeded the limit of 50,000.",
+        "remedy": "Reduce the size of the array or the number of variables and try again."
+    },
     "E29001": {
         "msg": "Servo communication (EtherCAT) initialization failure",
         "cause": "Short circuit occurred in servo board (BD640), safety board (BD632) devices, or communication setting file (ENI) mismatch",
@@ -16762,16 +16707,26 @@
         "remedy": "1) Set the sensing range larger, or 2) change the gap-coefficient setting in the lps properties window."
     },
     "E32741": {
-        "msg": "LPS Gathering Failed",
-        "cause": "The file was not generated successfully or there was a path problem.",
-        "remedy": "1) Check the project folder path, or 2) execute the backup all the files in the controller and send them to us."
+        "msg": "LPS Straight Section Scan",
+        "cause": "A straight section has been scaned, making it impossible to detect the welding seam point.",
+        "remedy": "Check whether the scanned section is flat and reteach the robot accordingly."
     },
     "E32742": {
-        "msg": "LPS Scanmode - seam point detection failed",
-        "cause": "No seam point found on the current workpiece.",
-        "remedy": "Check the workpiece, sensing position, and distance. \nIf necessary, perform 'gathering' under the same conditions and send the file to us."
+        "msg": "LPS Minimum Point Detection Failed",
+        "cause": "The minimum point cannot be detected within the sensing range.",
+        "remedy": "Verify that the scanned section includes a seam point, and send us the scan file from the time the error occured."
     },
     "E32743": {
+        "msg": "LPS Error During Flat Area Detection",
+        "cause": "An error occured while searching for the section required for base material type detection.",
+        "remedy": "Check the workpiece shape, sensing position, and distance, and send us the scan file from the time the error occured."
+    },
+    "E32744": {
+        "msg": "LPS Scanmode - Seam point Detection Failed",
+        "cause": "The difference between the calculated minimum point and the estimated seam point is too large.",
+        "remedy": "Check the workpiece shape, sensing position, and distance, and send us the scan file from the time the error occured."
+    },
+    "E32745": {
         "msg": "LPS Scanmode - Linear Regression Failed",
         "cause": "The global minima was detected incorrectly, or the scanned shape is skewed to one side.",
         "remedy": "Check the sensing start position, distance, and weld point(seam point), then reconfigure the settings."
@@ -17391,6 +17346,11 @@
         "cause": "Encoder external battery voltage is low (voltage of built-in capacitor is below 2.5V).",
         "remedy": "1) Replace the encoder battery. \n2) Check the battery wiring. \n3) If the error persists, replace the motor."
     },
+    "E50113": {
+        "msg": "(%s axis) Encoder Overheat",
+        "cause": "Encoder internal temperature has exceeded the limit.",
+        "remedy": "1) Check the motor temperature and adjust the robot's operating speed. \n2) If the error persists, replace the motor."
+    },
     "E50114": {
         "msg": "(%s axis) Unexpected change detected in encoder data",
         "cause": "Encoder position data updated beyond allowable range.",
@@ -17540,17 +17500,17 @@
         "remedy": "1) Replace the safety board with a new one.\n2)Please contact the maintenance department of this company if the same error occurs again even after replacing the safety board."
     },
 	"E51400": {
-		"msg": "AMP Regenerative Discharge Resistor Overheating",
+		"msg": "SCM Board #(%s) AMP Regenerative Discharge Resistor Overheating",
 		"cause": "The temperature of the regenerative discharge resistor has risen above the allowable threshold. This may occur due to excessive robot regenerative speed or a malfunction in the cooling system.",
 		"remedy": "1) Reduce the robot's regenerative speed and check whether the error persists. 2) Inspect the regenerative discharge resistor value. 3) Check the controller’s cooling system. 4) Verify the robot’s regenerative power level."
 	},
 	"E51401": {
-		"msg": "AMP PN Overvoltage Detected",
+		"msg": "SCM Board #(%s) AMP PN Overvoltage Detected",
 		"cause": "This may occur when the robot's motion changes abruptly or when the value of the regenerative discharge resistor increases.",
 		"remedy": "1) Reduce the robot's speed and check whether the error persists. 2) Inspect the regenerative discharge resistor value."
 	},
 	"E51402": {
-		"msg": "AMP Diode Module Fault or Excessive AC Input Voltage",
+		"msg": "SCM Board #(%s) AMP Diode Module Fault or Excessive AC Input Voltage",
 		"cause": "A fault has occurred in the diode module, causing the PN voltage to fall outside the allowable range. This may also occur if the three-phase AC voltage supplied to the servo amplifier (AMP) is abnormally high.",
 		"remedy": "1) Inspect power-related components (servo amplifier). 2) Check the controller’s input power voltage."
 	},
@@ -17560,7 +17520,7 @@
 		"remedy": "1) Check the status of the AMP. 2) Verify the firmware version of the safety board."
 	},
 	"E51404": {
-		"msg": "Motor-On Control Internal State Error",
+		"msg": "SCM Board #(%s) Motor-On Control Internal State Error",
 		"cause": "The internal state did not transition correctly during the Motor-On operation.",
 		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
 	},
@@ -17570,51 +17530,56 @@
 		"remedy": "1) Check the status of the safety communication. 2) Verify the firmware version of the safety board."
 	},
 	"E51406": {
-		"msg": "Immediate Stop Triggered in Servo Module",
+		"msg": "SCM Board #(%s) Immediate Stop Triggered in Servo Module",
 		"cause": "An error requiring an immediate stop has occurred within the servo module.",
 		"remedy": "1) Check the subsequent servo alarms. 2) Verify the firmware version of the safety board."
 	},
 	"E51407": {
-		"msg": "No Response from Servo Module 1",
+		"msg": "SCM Board #(%s) No Response from Servo Module 1",
 		"cause": "The first watchdog counter of the servo module is not increasing.",
 		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
 	},
 	"E51408": {
-		"msg": "No Response from Servo Module 2",
+		"msg": "SCM Board #(%s) No Response from Servo Module 2",
 		"cause": "The second watchdog counter of the servo module is not increasing.",
 		"remedy": "1) Check the status of the safety board. 2) Verify the firmware version of the safety board."
 	},
 	"E51409": {
-        "msg": "AMP PN undervoltage occurred",
+        "msg": "SCM Board #(%s) AMP PN undervoltage occurred",
         "cause": "If error occured at a specific step depending on the robot playback speed, PN voltage lowered because of the significant use of energy. May be generated because the controller input power is unstable.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the controller power voltage when the robot is operating. (Refer to the troubleshooting manual for details)",
         "help_idx": "E02506",
         "help_title": "[TroubleShoot]AMP PN undervoltage occurred"
-    },	
+    },
+    "E51410": {
+        "msg": "SCM Board #(%s) AMP PN undervoltage detection path abnormal or discharge abnormal",
+        "cause": "Detection path of AMP PN undervoltage or PN discharge circuit is abnormal.",
+        "remedy": "Please check after replacing the servo board or servo drive."
+    },
 	"E51420": {
-		"msg": "Hi6Com Self-Diagnosis Error Detected",
-		"cause": "A self-diagnosis error has occurred in the Hi6Com module.",
-		"remedy": "1) Check the software version of Hi6Com. 2) Replace the Hi6Com module."
+		"msg": "SCM Board #(%s) MainCom Self-Diagnosis Error Detected",
+		"cause": "A self-diagnosis error has occurred in the MainCom module.",
+		"remedy": "1) Check the software version of MainCom. 2) Replace the MainCom module."
 	},
 	"E51421": {
-		"msg": "Magnetic Contactor Error Occurred",
-		"cause": "An error occurred during the control of the Magnetic contactor.",
-		"remedy": "1) Check the connector connections, wiring, and cable conditions. 2) Replace the cable. 3) Replace the magnetic contactor. 4) Replace the safety board."
+		"msg": "SCM Board #(%s) Magnetic Contactor Control Timeout Parameter setting error",
+		"cause": "An error exists in the configured Magnetic Contactor control timeout parameter value.",
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of MainCom."
 	},
 	"E51422": {
 		"msg": "(%s Axis) Servo Control Timeout Parameter Setting Error",
 		"cause": "An error exists in the configured servo control timeout parameter value.",
-		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of MainCom."
 	},
 	"E51423": {
-		"msg": "(%s Axis) Hardware Signal Error Timeout Parameter Setting Error",
+		"msg": "SCM Board #(%s) Hardware Signal Error Timeout Parameter Setting Error",
 		"cause": "An error exists in the configured hardware signal error timeout parameter value.",
-		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of MainCom."
 	},
 	"E51424": {
-		"msg": "PN Charging Timeout Parameter Setting Error",
+		"msg": "SCM Board #(%s) PN Charging Timeout Parameter Setting Error",
 		"cause": "An error exists in the configured PN charging timeout parameter value.",
-		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of Hi6Com."
+		"remedy": "1) Check the minimum and maximum allowable values for the parameter. 2) Verify the firmware version of the safety board. 3) Check the software version of MainCom."
 	},
 	"E51425": {
 		"msg": "(%s Axis) Timeout While Waiting for Servo Off Command",
@@ -17622,44 +17587,49 @@
 		"remedy": "1) Check the brake lock delay time parameter. 2) Verify the firmware version of the safety board."
 	},
 	"E51426": {
-		"msg": "Initial Charging Timeout Error",
+		"msg": "SCM Board #(%s) Initial Charging Timeout Error",
 		"cause": "An initial charging timeout error has occurred.",
 		"remedy": "1) Inspect the initial charging relay and cable. 2) Check for abnormalities in the main power supply."	
 	},
 	"E51427": {
-		"msg": "Discharge Resistor Control Error",
+		"msg": "SCM Board #(%s) Discharge Resistor Control Error",
 		"cause": "The state of the discharge resistor control does not match the expected command.",
 		"remedy": "1) Inspect the discharge resistor relay and cable. 2) Verify the firmware version of the safety board."
 	},
 	"E51428": {
-		"msg": "PN Charging Failed",
+		"msg": "SCM Board #(%s) PN Charging Failed",
 		"cause": "The PN-side charging operation has failed.",
 		"remedy": "Inspect the servo amplifier’s input power and cables."
 	},
 	"E51429": {
-		"msg": "Initial Charging Resistor Relay Feedback Error",
+		"msg": "SCM Board #(%s) Initial Charging Resistor Relay Feedback Error",
 		"cause": "The feedback of the initial charging resistor relay does not match the command.",
 		"remedy": "Inspect the initial charging relay and cables."
 	},
 	"E51430": {
-		"msg": "Discharge Resistor Relay Feedback Error",
+		"msg": "SCM Board #(%s) Discharge Resistor Relay Feedback Error",
 		"cause": "The feedback of the discharge resistor relay does not match the command.",
 		"remedy": "Inspect the discharge resistor relay and cables."
 	},
 	"E51431": {
-		"msg": "Magnetic Contactor Feedback Error",
+		"msg": "SCM Board #(%s) Magnetic Contactor A Feedback Error",
 		"cause": "The feedback of the Magnetic contactor does not match the command.",
 		"remedy": "Inspect the contactor and cables."
 	},
 	"E51432": {
-		"msg": "Abnormal Servo Control Command from Hi6COM",
-		"cause": "The servo control command issued by Hi6COM is incorrect.",
-		"remedy": "1) Check the software version of Hi6COM. 2) Verify the firmware version of the safety board."
+		"msg": "SCM Board #(%s) Abnormal Servo Control Command from MainCom",
+		"cause": "The servo control command issued by MainCom is incorrect.",
+		"remedy": "1) Check the software version of MainCom. 2) Verify the firmware version of the safety board."
+	},
+    "E51433": {
+		"msg": "SCM Board #(%s) Magnetic Contactor B Feedback Error",
+		"cause": "The feedback of the Magnetic contactor does not match the command.",
+		"remedy": "Inspect the contactor and cables."
 	},
 	"E51440": {
 		"msg": "(%s Axis) Brake Control Command Error",
 		"cause": "The brake control command does not match between the two channels.",
-		"remedy": "1) Check the software version of Hi6Com. 2) Verify the firmware version of the safety board."
+		"remedy": "1) Check the software version of MainCom. 2) Verify the firmware version of the safety board."
 	},
 	"E51441": {
 		"msg": "(%s Axis) Brake Feedback Error",
@@ -17667,12 +17637,12 @@
 		"remedy": "1) Verify the firmware version of the safety board. 2) Replace the safety board."
 	},
 	"E51442": {
-		"msg": "Brake Test Start Error",
+		"msg": "SCM Board #(%s) Brake Test Start Error",
 		"cause": "The system is not in a valid state to start the brake test.",
-		"remedy": "1) Check the software version of Hi6Com. 2) Verify the firmware version of the safety board."
+		"remedy": "1) Check the software version of MainCom. 2) Verify the firmware version of the safety board."
 	},
 	"E51443": {
-		"msg": "Brake Power Error",
+		"msg": "SCM Board #(%s) Brake Power Error",
 		"cause": "The brake control power was not supplied.",
 		"remedy": "1) Check the brake power supply and cables."
 	},
@@ -17694,132 +17664,147 @@
     "E51501": {
         "msg": "(General setup)Safe parameter range exceeded",
         "cause": "The parameter set in the General setup configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the General setup configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51502": {
         "msg": "(Joint space)Safe parameter range exceeded",
         "cause": "The parameter set in the Joint space configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Joint space configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51503": {
         "msg": "(Joint speed)Safe parameter range exceeded",
         "cause": "The parameter set in the Joint speed configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Joint speed configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51504": {
         "msg": "(SOSSafe parameter range exceeded)",
         "cause": "The parameter set in the SOS configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the SOS configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51505": {
         "msg": "(TCP speed)Safe parameter range exceeded",
         "cause": "The parameter set in the TCP speed configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the TCP speed configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51506": {
         "msg": "(Cell ares)Safe parameter range exceeded",
         "cause": "The parameter set in the Cell area configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Cell area configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51507": {
         "msg": "(Tool model)Safe parameter range exceeded",
         "cause": "The parameter set in the Tool model configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Tool model configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51508": {
         "msg": "(Robot model)Safe parameter range exceeded",
         "cause": "The parameter set in the Robot model configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Robot model configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51509": {
         "msg": "(Self collision)Safe parameter range exceeded",
         "cause": "The parameter set in the Self collision configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Self collision configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51510": {
         "msg": "(TCP orientation)Safe parameter range exceeded",
         "cause": "The parameter set in the TCP orientation configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the TCP orientation configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51511": {
         "msg": "(Replan)Safe parameter range exceeded",
         "cause": "The parameter set in the Replan configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Replan configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51512": {
         "msg": "(Power)Safe parameter range exceeded",
         "cause": "The parameter set in the Power configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Power configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Power configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51513": {
         "msg": "(Momentum)Safe parameter range exceeded",
         "cause": "The parameter set in the Momentum configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Momentum configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51514": {
         "msg": "(Collision detection)Safe parameter range exceeded",
         "cause": "The parameter set in the Collision detection configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Collision detection configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51515": {
         "msg": "(Safe stop)Safe parameter range exceeded",
         "cause": "The parameter set in the Safe stop configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Safe stop configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51516": {
         "msg": "(PROFINET)Safe parameter range exceeded",
         "cause": "The parameter set in the PROFINET configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the PROFINET configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51517": {
         "msg": "(PROFIsafe)Safe parameter range exceeded",
         "cause": "The parameter set in the PROFIsafe configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the PROFIsafe configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51518": {
         "msg": "(Safety IO)Safe parameter range exceeded",
         "cause": "The parameter set in the Safety IO configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51519": {
         "msg": "(Add Safety IO)Safe parameter range exceeded",
         "cause": "The parameter set in the Add Safety IO configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Add Safety IO configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51520": {
         "msg": "(IO Function Setting)Safe parameter range exceeded",
         "cause": "The parameter set in the IO Function Setting configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the IO Function Setting configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51521": {
         "msg": "(Additional load)Safe parameter range exceeded",
         "cause": "The parameter set in the Additional load configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Additional load configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51522": {
         "msg": "(Tool info)Safe parameter range exceeded",
         "cause": "The parameter set in the Tool info configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Tool info configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51523": {
         "msg": "(Maintenance)Safe parameter range exceeded",
         "cause": "The parameter set in the Maintenance configuration menu has exceeded the range.",
-        "remedy": "1) Check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that the parameters set in the Maintenance configuration menu do not exceed the range.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+    },
+    "E51524": {
+        "msg": "(Collision detection)Axis tolerance range exceeded",
+        "cause": "The Axis tolerance in collision detection configuration menu has exceeded the range.",
+        "remedy": "1) In engineer mode, reset all detect criteria by axis of [System]-[3:Robot parameter]-[14:Impact detection]-[1:Model-based impact detection] menu. \n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51530": {
         "msg": "Fail to create safe space(space_%s)",
         "cause": "The space cannot be formed because there are not enough vertices.",
-        "remedy": "1) Check that there are at least 3 vertices.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Check that there are at least 3 vertices.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51531": {
         "msg": "Exceeded size of safe sapce",
         "cause": "The configured safe zone size exceeds the maximum allowable value.",
-        "remedy": "1) Reduce the size or number of safe spaces.\n2) Check the version information of safety board and Hi6Com \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
+        "remedy": "1) Reduce the size or number of safe spaces.\n2) Check the version information of safety board and MainCom \n3) Perform a safe parameter initialization.\n4) Replace the safety board." 
     },
     "E51544": {
         "msg": "Communication Failure with Radar Sensor Control Board",
         "cause": "Abnormal communication status with the radar sensor control board.",
         "remedy": "1) Check the communication and power cables of the radar sensor control board.\n2) If the radar is not installed, disable the Radar Replan function.\n3) Perform safety parameter initialization.\n4) Replace the safety board."
+    },
+    "E51550": {
+        "msg": "Safety borad initialization parameter error(robot information)",
+        "cause": "Robot information CRC mismatch received from the safety board",
+        "remedy": "1) Check the version information of safety board and Hi6Com. \n2) Perform total S/W version upgrade. \n3) Replace the safety board."
+    },
+    "E51551": {
+        "msg": "Safety borad initialization parameter error(safety parameter)",
+        "cause": "Safety parameter CRC mismatch received from the safety board",
+        "remedy": "1) Check the version information of safety board and Hi6Com. \n2) Perform total S/W version upgrade. \n3) Perform safety parameter initialization. \n4) Replace the safety board." 
     },
     "E51601": {
         "msg": "Stopping distance violation",
@@ -18336,6 +18321,16 @@
 		"cause": "A communication error occurred while receiving the CIP Safety TCOO message.",
 		"remedy": "1) Verify the communication cable connection and check the Link LED indication.\r\n2) Confirm that the EtherNet/IP task execution cycle is configured correctly."
 	},
+    "E52503": {
+        "msg": "CIP Safety TUNID mismatch error.",
+        "cause": "The Target Unique Network Identifier (TUNID) in the safety configuration does not match the actual device ID. This usually occurs after changeing safety parameters or modifying the network configuration.",
+        "remedy": "1) Check if the Safety Network Number (SNN) and IP address are correctly configured. 2) Perform the 'Reset Ownership' or 'Clear TUNID' procedure in the safety configuration tool. 3) Re-download the safety project to synchronize the TUNID with the target device."
+    },
+	"E52599": {
+        "msg": "Network configuration does not support CIP Safety",
+        "cause": "The current network configuration does not support CIP Safety.",
+        "remedy": "1)Please check the CIP Safety communication settings.\r\n2) Contact us regarding the network configuration."
+    },
 	"E52600": {
         "msg": "Internal CAN communication timeout",
         "cause": "An internal CAN communication timeout has occurred.",
@@ -18816,6 +18811,11 @@
         "cause": "CAN communication data duplication or loss occurring",
         "remedy": "1) Replace the corresponding sensor. 2) Replace the BD6F1 board. 3) If the problem persists, please contact our company."
     },
+	"E54901": {
+        "msg": "2nd Encoder BISS communication error detection(12 times or more)",
+        "cause": "2nd Encoder BISS communication error detected.(12 times or more)",
+        "remedy": "1) Check the MB4 register status to verify the connection of the problematic 2nd encoder and the 2nd encoder cable. \n2) Reboot the controller. \n3) If the problem persists, replace the 2nd Encoder Cable or the 2nd Encoder with a new one.  \n4) If the problem persists, replace the Sensor Control board with a new one. "
+    },
     "E55002": {
         "msg": "UserDIO Board (#%s) EtherCAT disconnect detection",
         "cause": "UserDIO Board EtherCAT disconnect detected",
@@ -18832,9 +18832,9 @@
         "remedy": "1) Turn off the controller power and remove the UserDIO board to check the HW status.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the UserDIO Board with a new one. "
     },
     "E55005": {
-        "msg": "The 2nd User DIO Board switch setting error detected.",
-        "cause": "The 2nd User DIO Board switch is turned OFF.",
-        "remedy": "1) Turn off the controller power and remove the 2nd User DIO Board. Then change 'DSW2 switch' to ON.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the User DIO Board with a new one. "
+        "msg": "User DIO Board switch setting error detected.",
+        "cause": "Both User DIO boards have their switches turned OFF.",
+        "remedy": "1) Turn off the controller power and remove the standalone User DIO Board. Then change 'DSW2 switch' to ON.  \n2) After reassembling the board, reboot the controller. \n3) If the problem persists, replace the User DIO Board with a new one. "
     },
 	"E55006": {
         "msg": "User DIO board EtherCAT communication CRC error detected.",

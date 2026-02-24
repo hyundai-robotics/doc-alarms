@@ -15,7 +15,7 @@
         "remedy": "Delete the program, and load the backup program again."
     },
     "W4": {
-        "msg": "Emergency stop being inputted.",
+        "msg": "Emergency stop(TP) is being input.",
         "cause": "It occurs when [Motor ON] is done in an emergency stop state.",
         "remedy": "Execute after deactivating emergency stop."
     },
@@ -55,18 +55,18 @@
         "remedy": "Check whether the CC-Link master and slave parameters are set properly, and, if something is wrong, make a correction."
     },
     "W15": {
-        "msg": "Fieldbus general error",
-        "cause": "BD420 board fieldbus has an error.",
-        "remedy": "Check whether there is a problem with the setting of the fieldbus and master as well as with the cabling."
+        "msg": "Emergency stop(OP) is being input.",
+        "cause": "It happens when [motor ON] is done at the status that emergency(OP) is being input.",
+        "remedy": "In the exclusive input signal monitoring menu, check the state and take measures."
     },
     "W16": {
-        "msg": "Improper numbers used for GE or DE signal",
-        "cause": "The specified values for GE or DE variable are incorrect. The values are out of range.",
-        "remedy": "1) Different from the value that is based on the cooperative robot number.2)GE: Min.=(Robot#-1)*4+1, Max.=(Robot#-1)*4+43)DE: Min.=(Robot#-1)*32+1, Max.=(Robot#-1)*32+32"
+        "msg": "Emergency stop(PLC) is being input.",
+        "cause": "It happens when [motor ON] is done at the status that emergency(PLC) is being input.",
+        "remedy": "In the exclusive input signal monitoring menu, check the state and take measures."
     },
     "W17": {
-        "msg": "External emergency stop being inputted.",
-        "cause": "It happens when [motor ON] is done at the status that external emergency halt is inserted.",
+        "msg": "External emergency stop is being input.",
+        "cause": "It happens when [motor ON] is done at the status that external emergency is being input.",
         "remedy": "In the exclusive input signal monitoring menu, check the state and take measures."
     },
     "W18": {
@@ -653,6 +653,11 @@
         "msg": "Anti-Vibration control is set to invalid.",
         "cause": "Although the robot is applicable to anti-vibration control, it is set to invalid.",
         "remedy": "If this is not what you intended, change the control mode to anti-vibration control."
+    },
+    "W241": {
+        "msg": "The triggout signal configured in step %s was not generated within the specified step range.",
+        "cause": "The triggout triggering conditions were not satisfied in the preceding or subsequent step ranges.",
+        "remedy": "Verify the step intervals and motion conditions, then adjust the signal output conditions accordingly."
     },
     "W2000": {
         "msg": "Power failure is operating",
@@ -3374,6 +3379,16 @@
         "cause": "Unable to calculate a multi-pass trajectory close to the current position.",
         "remedy": "1) Check if the multi-pass trajectory corresponding to the current position has been loaded correctly. 2) Verify that the coordinate system is the same as the current coordinate system when saving the multi-pass."
     },
+    "W32781": {
+        "msg": "Scanned Data Range Is Biased to One Side.",
+        "cause": "The welding seam point detection range is biased toward either the start or the end of the scan.",
+        "remedy": "Adjust the taught start point or the detection distance so that the detection (scan) range is not excessively biased."
+    },
+    "W32782": {
+        "msg": "The difference between the data scan results and the weld seam estimation results is too large.",
+        "cause": "The weld seam estimation results may be incorrect.",
+        "remedy": "Please check 1) the scanned data results and 2) the estimated pose values to prevent a robot collision."
+    },
     "W34100": {
         "msg": "Supplying grease automatically is not possible because #%s grease feeder is empty.",
         "cause": "The grease pouch is empty.",
@@ -3414,12 +3429,12 @@
         "cause": "Repeated HTTP requests using the 'Close' connection method place excessive load on the Hi6 system, potentially causing serious issues such as robot halts. As a result, the requesting client has been blacklisted (will reset after 60 seconds).",
         "remedy": "For repeated API requests or persistent HTTP connections, please set the 'Connection' header to 'Keep-Alive'."
     },
-	"W50113": {
-        "msg": "(%s axis) Encoder Overheat",
-        "cause": "Encoder internal temperature has exceeded the limit.",
-        "remedy": "1) Check the motor temperature and adjust the robot's operating speed. \n2) If the error persists, replace the motor."
+    "W52037": {
+        "msg": "Mandatory Safety Input Not Selected",
+        "cause": "The required safety input signals (EX_EM, SGG, SGA) are not selected or active.",
+        "remedy": "Please select or check the status of the following Safety Inputs: 1) External Emergency (EX_EM) 2) Safety Guard General (SGG) 3) Safety Guard Auto (SGA)."    
     },
-	"E52102": {
+	"W52102": {
 		"msg": "TP Detach Condition Error",
 		"cause": "The required conditions for TP detachment were not satisfied.",
 		"remedy": "Check the wiring and input status of the remote mode signal and related cables."
@@ -3445,8 +3460,13 @@
         "remedy": "Please check the input signals in the Safety I/O status monitoring and take the necessary actions."
     },
 	"W54902": {
-        "msg": "2nd Encoder BISS communication error detection",
-        "cause": "2nd Encoder BISS communication error detected.",
+        "msg": "2nd Encoder BISS communication error detection(1 time)",
+        "cause": "2nd Encoder BISS communication error detected.(1 time)",
+        "remedy": "1) Check the MB4 register status to verify the connection of the problematic 2nd encoder and the 2nd encoder cable. \n2) Reboot the controller. \n3) If the problem persists, replace the 2nd Encoder Cable or the 2nd Encoder with a new one.  \n4) If the problem persists, replace the Sensor Control board with a new one. "
+    },
+	"W54903": {
+        "msg": "2nd Encoder BISS communication error detection(6 times)",
+        "cause": "2nd Encoder BISS communication error detected.(6 times)",
         "remedy": "1) Check the MB4 register status to verify the connection of the problematic 2nd encoder and the 2nd encoder cable. \n2) Reboot the controller. \n3) If the problem persists, replace the 2nd Encoder Cable or the 2nd Encoder with a new one.  \n4) If the problem persists, replace the Sensor Control board with a new one. "
     },
 	"W54913": {
