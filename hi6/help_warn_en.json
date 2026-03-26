@@ -21,7 +21,7 @@
     },
     "W5": {
         "msg": "Backup battery voltage lowered.",
-        "cause": "Backup battery voltage connected to Main board BATCN connector is below the reference value.",
+        "cause": "Backup battery voltage connected to main computer BATCN connector is below the reference value.",
         "remedy": "Replace the backup battery."
     },
     "W9": {
@@ -510,13 +510,13 @@
         "remedy": "Correct the teaching at the sync position, or lower the sensor input speed."
     },
     "W172": {
-        "msg": "Main board CPU overheating detected",
-        "cause": "Main board CPU temperature exceeded permitted range.",
+        "msg": "main computer CPU overheating detected",
+        "cause": "main computer CPU temperature exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W173": {
-        "msg": "Main board overheating detected",
-        "cause": "Main board temperature exceeded permitted range.",
+        "msg": "main computer overheating detected",
+        "cause": "main computer temperature exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W174": {
@@ -590,43 +590,43 @@
         "remedy": "Execute [restore] in the System/Auto calibration/Robot and tool calibration menu."
     },
     "W200": {
-        "msg": "Main board VCORE voltage exceeded the range",
-        "cause": "Main board VCORE voltage exceeded permitted range.",
+        "msg": "main computer VCORE voltage exceeded the range",
+        "cause": "main computer VCORE voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W201": {
-        "msg": "Main board 3.3V voltage exceeded the range",
-        "cause": "Main board 3.3V voltage exceeded permitted range.",
+        "msg": "main computer 3.3V voltage exceeded the range",
+        "cause": "main computer 3.3V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W202": {
-        "msg": "Main board 5V voltage exceeded the range",
-        "cause": "Main board 5V voltage exceeded permitted range.",
+        "msg": "main computer 5V voltage exceeded the range",
+        "cause": "main computer 5V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W203": {
-        "msg": "Main board 12V voltage exceeded the range",
-        "cause": "Main board 12V voltage exceeded permitted range.",
+        "msg": "main computer 12V voltage exceeded the range",
+        "cause": "main computer 12V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W204": {
-        "msg": "Main board 5VSB voltage exceeded the range",
-        "cause": "Main board 5VSB voltage exceeded permitted range.",
+        "msg": "main computer 5VSB voltage exceeded the range",
+        "cause": "main computer 5VSB voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W205": {
-        "msg": "Main board 3VSB voltage exceeded the range",
-        "cause": "Main board 3VSB voltage exceeded permitted range.",
+        "msg": "main computer 3VSB voltage exceeded the range",
+        "cause": "main computer 3VSB voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W206": {
-        "msg": "Main board battery voltage exceeded the range",
-        "cause": "Main board battery voltage exceeded permitted range.",
-        "remedy": "Replace the Main board battery."
+        "msg": "main computer battery voltage exceeded the range",
+        "cause": "main computer battery voltage exceeded permitted range.",
+        "remedy": "Replace the main computer battery."
     },
     "W207": {
-        "msg": "Main board VTT voltage exceeded the range",
-        "cause": "Main board VTT voltage exceeded permitted range.",
+        "msg": "main computer VTT voltage exceeded the range",
+        "cause": "main computer VTT voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W220": {
@@ -890,13 +890,13 @@
         "remedy": "1) Check if the current capacity of the applied motor is greater than that of the drive. 2) Check for any duplicates in the digital I/O setup."
     },
     "W3000": {
-        "msg": "The safety controller is initializing.",
-        "cause": "The safety controller is initializing.",
+        "msg": "The safety board is initializing.",
+        "cause": "The safety board is initializing.",
         "remedy": "1) if the warning persists, reboot the controller. 2) if the problem persists, replace the controller."
     },
     "W3001": {
-        "msg": "Activated the external stop signal by Safety controller.(Safety Input signal)",
-        "cause": "Activated the external stop signal by Safety controller.(Safety Input signal)",
+        "msg": "Activated the external stop signal by safety board.(Safety Input signal)",
+        "cause": "Activated the external stop signal by safety board.(Safety Input signal)",
         "remedy": "1) Check the safety input signal assignment. 2) Check the activation status of input signal in Safety status monitoring."
     },
     "W4705": {
@@ -928,6 +928,11 @@
         "msg": "It is close to the safety space during direct teaching.",
         "cause": "It is close to the safety space boundary during direct teaching.",
         "remedy": "Check the joint angle limit or safety layout settings in cobot safety setting."
+    },
+    "W9102": {
+        "msg": "%s axis) Slip detected",
+        "cause": "Axis misalignment has occurred",
+        "remedy": "Mastering is required. Please perform mastering (Reset All) in the Simple Encoder Offset menu"
     },
     "W14150": {
         "msg": "There are syntax error in WEAVON condition number.",
@@ -1124,6 +1129,26 @@
         "cause": "Communication is diconnected or lost",
         "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
     },
+    "W23011": {
+        "msg": "Cyclic I/O Update Failed CIFX PCI Slot1",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+    },
+    "W23012": {
+        "msg": "Cyclic I/O Update Failed CIFX PCI Slot2",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+    },
+    "W23013": {
+        "msg": "Cyclic I/O Update Failed CIFX PCI Slot3",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+    },
+    "W23014": {
+        "msg": "Cyclic I/O Update Failed CIFX PCI Slot4",
+        "cause": "Communication is diconnected or lost",
+        "remedy": "1) Check the communication settings.  2) Check the cable.  3) Check the Communicaiton Status of the other party connected to the PCI"
+    },
     "W23101": {
         "msg": "EtherNet/IP Intialize Warning",
         "cause": "EtherNet/IP intialization is failed.",
@@ -1132,7 +1157,7 @@
     "W23102": {
         "msg": "EtherNet/IP communication timeout",
         "cause": "EtherNet/IP communication is disconnected.",
-        "remedy": "1) Check communication settings. 2) Check the LAN cable.  3) Check the Communicaiton Status both Hi6 and PLC."
+        "remedy": "1) Check communication settings. 2) Check the LAN cable.  3) Check the Communicaiton Status both the main control module and PLC."
     },
     "W23103": {
         "msg": "EIP Adapter CPF O2T Intialize Warning",
@@ -1312,7 +1337,7 @@
     "W28000": {
         "msg": "HRMS server operation failed",
         "cause": "Impossible to create a network channel for operating HRMS server.",
-        "remedy": "Check the connection of the main board Ethernet connector."
+        "remedy": "Check the connection of the main computer Ethernet connector."
     },
     "W28001": {
         "msg": "HRMS service channel generation impossible",
@@ -1345,8 +1370,8 @@
         "remedy": "Please check the main process program."
     },
     "W28301": {
-        "msg": "Mismatch of S/W version between teach pendant - main b/d",
-        "cause": "The software version is mismatched between teach pendant and main b/d. There is chance of mis-operation.",
+        "msg": "Mismatch of S/W version between teach pendant - main computer",
+        "cause": "The software version is mismatched between teach pendant and main computer. There is chance of mis-operation.",
         "remedy": "Please match the version by software update."
     },
     "W28302": {
@@ -3426,8 +3451,13 @@
     },
     "W38000": {
         "msg": "(HTTP Server) Excessive Close connections detected.",
-        "cause": "Repeated HTTP requests using the 'Close' connection method place excessive load on the Hi6 system, potentially causing serious issues such as robot halts. As a result, the requesting client has been blacklisted (will reset after 60 seconds).",
+        "cause": "Repeated HTTP requests using the 'Close' connection method place excessive load on the controller CPU, potentially causing serious issues such as robot halts. As a result, the requesting client has been blacklisted (will reset after 60 seconds).",
         "remedy": "For repeated API requests or persistent HTTP connections, please set the 'Connection' header to 'Keep-Alive'."
+    },
+    "W50113": {
+        "msg": "(%s axis) Encoder Overheat",
+        "cause": "Encoder internal temperature has exceeded the limit.",
+        "remedy": "1) Check the motor temperature and adjust the robot's operating speed. \n2) If the error persists, replace the motor."
     },
     "W52037": {
         "msg": "Mandatory Safety Input Not Selected",
@@ -3449,6 +3479,16 @@
 		"cause": "The F-Input data is not being updated.",
 		"remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
 	},
+	"E52700": {
+        "msg": "Safety[#%s] p15v Voltage limit error",
+        "cause": "The p15v voltage supply on the Safety board is abnormal.",
+        "remedy": "1) Reboot the controller 2) If the problem persists, replace the safety board."
+    },
+    "E52701": {
+        "msg": "Safety[#%s] p15v low Voltage error",
+        "cause": "The p15v voltage supply on the Safety board is abnormal.",
+        "remedy": "1) Reboot the controller 2) If the problem persists, replace the safety board."
+    },
     "W53601": {
         "msg": "Protective stop being inputted.",
         "cause": "It occurs when [Motor ON] is done in an protective stop state.",
@@ -3472,92 +3512,92 @@
 	"W54913": {
         "msg": "1-Axis 2nd Encoder Sensor error detection",
         "cause": "1-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 1-Axis. \n2) Clear the 2nd encoder latch status of 1-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 1-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 1-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 1-Axis or its sensor cable."
     },
     "W54914": {
         "msg": "1-Axis 2nd Encoder Sensor warning detection",
         "cause": "1-Axis 2nd Encoder Sensor warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 1-Axis. \n2) Clear the 2nd encoder latch status of 1-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 1-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 1-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 1-Axis or its sensor cable."
     },
 	"W54915": {
         "msg": "1-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "1-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 1-Axis 2nd Encoder assembly. \n3) Clear the 1-Axis 2nd Encoder Latch status. \n4) Reset the 1-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 1-Axis 2nd Encoder Sensor or 1-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 1-Axis. \n2) Clear the 2nd encoder latch status of 1-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 1-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 1-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 1-Axis or its sensor cable."
     },
 	"W54923": {
         "msg": "2-Axis 2nd Encoder Sensor error detection",
         "cause": "2-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 2-Axis. \n2) Clear the 2nd encoder latch status of 2-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 2-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 2-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 2-Axis or its sensor cable."
     },
     "W54924": {
         "msg": "2-Axis 2nd Encoder Sensor warning detection",
         "cause": "2-Axis 2nd Encoder Sensor warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 2-Axis. \n2) Clear the 2nd encoder latch status of 2-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 2-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 2-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 2-Axis or its sensor cable."
     },
 	"W54925": {
         "msg": "2-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "2-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 2-Axis 2nd Encoder assembly. \n3) Clear the 2-Axis 2nd Encoder Latch status. \n4) Reset the 2-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 2-Axis 2nd Encoder Sensor or 2-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 2-Axis. \n2) Clear the 2nd encoder latch status of 2-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 2-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 2-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 2-Axis or its sensor cable."
     },
 	"W54933": {
         "msg": "3-Axis 2nd Encoder Sensor error detection",
         "cause": "3-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 3-Axis. \n2) Clear the 2nd encoder latch status of 3-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 3-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 3-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 3-Axis or its sensor cable."
     },
     "W54934": {
         "msg": "3-Axis 2nd Encoder Sensor warning detection",
         "cause": "3-Axis 2nd Encoder Sensor warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 3-Axis. \n2) Clear the 2nd encoder latch status of 3-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 3-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 3-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 3-Axis or its sensor cable."
     },
 	"W54935": {
         "msg": "3-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "3-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 3-Axis 2nd Encoder assembly. \n3) Clear the 3-Axis 2nd Encoder Latch status. \n4) Reset the 3-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 3-Axis 2nd Encoder Sensor or 3-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 3-Axis. \n2) Clear the 2nd encoder latch status of 3-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 3-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 3-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 3-Axis or its sensor cable."
     },
 	"W54943": {
         "msg": "4-Axis 2nd Encoder Sensor error detection",
         "cause": "4-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 4-Axis. \n2) Clear the 2nd encoder latch status of 4-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 4-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 4-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 4-Axis or its sensor cable."
     },
     "W54944": {
         "msg": "4-Axis 2nd Encoder Sensor warning detection",
         "cause": "4-Axis 2nd Encoder Sensor warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 4-Axis. \n2) Clear the 2nd encoder latch status of 4-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 4-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 4-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 4-Axis or its sensor cable."
     },
 	"W54945": {
         "msg": "4-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "4-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 4-Axis 2nd Encoder assembly. \n3) Clear the 4-Axis 2nd Encoder Latch status. \n4) Reset the 4-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 4-Axis 2nd Encoder Sensor or 4-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 4-Axis. \n2) Clear the 2nd encoder latch status of 4-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 4-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 4-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 4-Axis or its sensor cable."
     },
 	"W54953": {
         "msg": "5-Axis 2nd Encoder Sensor error detection",
         "cause": "5-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 5-Axis. \n2) Clear the 2nd encoder latch status of 5-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 5-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 5-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 5-Axis or its sensor cable."
     },
     "W54954": {
         "msg": "5-Axis 2nd Encoder Sensor warning detection",
         "cause": "5-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 5-Axis. \n2) Clear the 2nd encoder latch status of 5-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 5-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 5-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 5-Axis or its sensor cable."
     },
 	"W54955": {
         "msg": "5-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "5-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 5-Axis 2nd Encoder assembly. \n3) Clear the 5-Axis 2nd Encoder Latch status. \n4) Reset the 5-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 5-Axis 2nd Encoder Sensor or 5-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 5-Axis. \n2) Clear the 2nd encoder latch status of 5-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 5-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 5-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 5-Axis or its sensor cable."
     },
 	"W54963": {
         "msg": "6-Axis 2nd Encoder Sensor error detection",
         "cause": "6-Axis 2nd Encoder Sensor error detected.",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 6-Axis. \n2) Clear the 2nd encoder latch status of 6-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 6-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 6-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 6-Axis or its sensor cable."
     },
     "W54964": {
         "msg": "6-Axis 2nd Encoder Sensor warning detection",
         "cause": "6-Axis 2nd Encoder Sensor warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 6-Axis. \n2) Clear the 2nd encoder latch status of 6-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 6-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 6-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 6-Axis or its sensor cable."
     },
     "W54965": {
         "msg": "6-Axis 2nd Encoder Sensor error and warning detection",
         "cause": "6-Axis 2nd Encoder Sensor error and warning detected",
-        "remedy": "1) Reboot the controller. \n2) Check the condition of the 6-Axis 2nd Encoder assembly. \n3) Clear the 6-Axis 2nd Encoder Latch status. \n4) Reset the 6-Axis 2nd Encoder Sensor. \n5) If the problem persists, replace the 6-Axis 2nd Encoder Sensor or 6-Axis 2nd Encoder Sensor Cable with a new one. "
+        "remedy": "1) Check the 2nd encoder latch status of 6-Axis. \n2) Clear the 2nd encoder latch status of 6-Axis, then verify the latch status again. \n3) If the issue persists, reset the 2nd encoder sensor of 6-Axis and check the latch status. \n4) If the issue persists, inspect the assembly condition of the 2nd encoder on 6-Axis. \n5) If the issue persists, replace the 2nd encoder sensor of 6-Axis or its sensor cable."
     },
     "W55001": {
         "msg": "UserDIO Board (#%s) EtherCAT communication status abnormality detection",
