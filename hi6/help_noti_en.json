@@ -137,5 +137,6 @@
     "N201": { "msg": "OpenStream Server daemon has stopped." },
     "N202": { "msg": "OpenStream Connection session has started." },
     "N203": { "msg": "OpenStream Connection session has ended." },
-    "N204": { "msg": "The number of OpenStream Connection sessions has exceeded 2. Please terminate a running session before proceeding." }
+    "N204": { "msg": "The number of OpenStream Connection sessions has exceeded 2. Please terminate a running session before proceeding." },
+    "N210": { "msg": "Restarting the system program %s." }
 }

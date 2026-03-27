@@ -15107,7 +15107,7 @@
     "E29011": {
         "msg": "MotPlan task exceeded the valid range of time(timeout)",
         "cause": "S/W Exception occured in MotPlan task",
-        "remedy": "1) Back up all controller files and send them to the manufacturer for analysis. 2) If the issue persists, replace the Main computer
+        "remedy": "1) Back up all controller files and send them to the manufacturer for analysis. 2) If the issue persists, replace the Main computer"
     },
     "E29012": {
         "msg": "MainSvc task exceeded the valid range of time(timeout)",
