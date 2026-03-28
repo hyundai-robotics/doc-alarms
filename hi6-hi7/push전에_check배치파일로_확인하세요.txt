@@ -1,0 +1,11 @@
+﻿
+
+.json을 push하기 전에 반드시 적법한 .json 문법인지를 확인하세요!!
+문법이 깨진 채로 push하면 전세계적으로 HRAlarms 서비스가 중단됩니다!!
+
+
+1) PC에 node.js 가 설치되어 있어야 합니다.
+   https://nodejs.org/ko/download
+
+2) PowerShell이나 명령창, 혹은 vscode 하단의 TERMINAL 창에서 아래 실행
+   ./check
