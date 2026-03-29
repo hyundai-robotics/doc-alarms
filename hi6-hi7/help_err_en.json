@@ -8,7 +8,7 @@
 		"msg": "Primary Axis Limit Switch Activated",
 		"cause": "The limit switch installed at the end of the robot's operating range has been triggered.",
 		"remedy": "1) Enter the system menu, hold the Enable switch, press the Motor ON button, and use the jog keys to move the robot back into the operating range.\r\n2) Check the Safety board fuse by inspecting the IO power LED.\r\n3) Refer to [Troubleshooting Guide] for details.",
-		"help_idx": "E0002",
+		"help_idx": "3-safety-board-part/E0002",
         "help_title": "[TroubleShoot]Primary Axis Limit Switch Activated"
     },
     "E3": {
@@ -4658,7 +4658,7 @@
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "Regenerative discharge resistor temperature increased above the reference value. Excessive robot playback speed, or problem with the cooling system.",
         "remedy": "1) Check the error by lowering the robot playback speed.\n2) Check the regenerative discharge resistor value.\n3) Check the cooling system.\n4) Check the regenerative power capacity of robot. (Refer to the troubleshooting manual for details)",
-        "help_idx": "E02500",
+        "help_idx": "2-servo-control-board-part/E02500",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E2501": {
