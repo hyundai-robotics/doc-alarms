@@ -18,4 +18,13 @@ echo.
 echo help_warn_en.json:
 node .\check_json_format.js ./help_warn_en.json
 
+echo zh =======================================
+echo.
+echo help_err_zh.json:
+node .\check_json_format.js ./help_err_zh.json
+
+echo.
+echo help_warn_zh.json:
+node .\check_json_format.js ./help_warn_zh.json
+
 pause
