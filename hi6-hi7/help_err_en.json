@@ -633,7 +633,7 @@
     "E211": {
         "msg": "%s) axis servo tool servo on time limit exceeded",
         "cause": "Servo of the servo tool not on within the time limit.",
-        "remedy": ""
+        "remedy": "ATC connection error: Encoder signal failure. Check ATC mechanical coupling and encoder output."
     },
     "E212": {
         "msg": "%s) axis servo tool filter clear time exceeded",
