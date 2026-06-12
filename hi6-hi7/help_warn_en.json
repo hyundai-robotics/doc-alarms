@@ -21,7 +21,7 @@
     },
     "W5": {
         "msg": "Backup battery voltage lowered.",
-        "cause": "Backup battery voltage connected to Main board BATCN connector is below the reference value.",
+        "cause": "Backup battery voltage connected to main computer BATCN connector is below the reference value.",
         "remedy": "Replace the backup battery."
     },
     "W9": {
@@ -345,7 +345,7 @@
         "remedy": "Check whether the B-axis is near 0 deg. It is required to manipulate the axis coordinate manually when the B-axis is near 0 deg."
     },
     "W138": {
-        "msg": "Reducer residual rated lifetime left under 10%",
+        "msg": "(%s axis) Reducer residual rated lifetime left under 10%",
         "cause": "The reducer of the warned axis has less than 10% of the initial rated life-time.",
         "remedy": "By referring to the expected lifetime of the reducer of the relevant axis under the current operation condition, prepare for its replacement."
     },
@@ -510,13 +510,13 @@
         "remedy": "Correct the teaching at the sync position, or lower the sensor input speed."
     },
     "W172": {
-        "msg": "Main board CPU overheating detected",
-        "cause": "Main board CPU temperature exceeded permitted range.",
+        "msg": "main computer CPU overheating detected",
+        "cause": "main computer CPU temperature exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W173": {
-        "msg": "Main board overheating detected",
-        "cause": "Main board temperature exceeded permitted range.",
+        "msg": "main computer overheating detected",
+        "cause": "main computer temperature exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W174": {
@@ -590,43 +590,43 @@
         "remedy": "Execute [restore] in the System/Auto calibration/Robot and tool calibration menu."
     },
     "W200": {
-        "msg": "Main board VCORE voltage exceeded the range",
-        "cause": "Main board VCORE voltage exceeded permitted range.",
+        "msg": "main computer VCORE voltage exceeded the range",
+        "cause": "main computer VCORE voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W201": {
-        "msg": "Main board 3.3V voltage exceeded the range",
-        "cause": "Main board 3.3V voltage exceeded permitted range.",
+        "msg": "main computer 3.3V voltage exceeded the range",
+        "cause": "main computer 3.3V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W202": {
-        "msg": "Main board 5V voltage exceeded the range",
-        "cause": "Main board 5V voltage exceeded permitted range.",
+        "msg": "main computer 5V voltage exceeded the range",
+        "cause": "main computer 5V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W203": {
-        "msg": "Main board 12V voltage exceeded the range",
-        "cause": "Main board 12V voltage exceeded permitted range.",
+        "msg": "main computer 12V voltage exceeded the range",
+        "cause": "main computer 12V voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W204": {
-        "msg": "Main board 5VSB voltage exceeded the range",
-        "cause": "Main board 5VSB voltage exceeded permitted range.",
+        "msg": "main computer 5VSB voltage exceeded the range",
+        "cause": "main computer 5VSB voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W205": {
-        "msg": "Main board 3VSB voltage exceeded the range",
-        "cause": "Main board 3VSB voltage exceeded permitted range.",
+        "msg": "main computer 3VSB voltage exceeded the range",
+        "cause": "main computer 3VSB voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W206": {
-        "msg": "Main board battery voltage exceeded the range",
-        "cause": "Main board battery voltage exceeded permitted range.",
-        "remedy": "Replace the Main board battery."
+        "msg": "main computer battery voltage exceeded the range",
+        "cause": "main computer battery voltage exceeded permitted range.",
+        "remedy": "Replace the main computer battery."
     },
     "W207": {
-        "msg": "Main board VTT voltage exceeded the range",
-        "cause": "Main board VTT voltage exceeded permitted range.",
+        "msg": "main computer VTT voltage exceeded the range",
+        "cause": "main computer VTT voltage exceeded permitted range.",
         "remedy": "Check the controller according to the fault repair methods."
     },
     "W220": {
@@ -1337,7 +1337,7 @@
     "W28000": {
         "msg": "HRMS server operation failed",
         "cause": "Impossible to create a network channel for operating HRMS server.",
-        "remedy": "Check the connection of the main board Ethernet connector."
+        "remedy": "Check the connection of the main computer Ethernet connector."
     },
     "W28001": {
         "msg": "HRMS service channel generation impossible",
@@ -1370,8 +1370,8 @@
         "remedy": "Please check the main process program."
     },
     "W28301": {
-        "msg": "Mismatch of S/W version between teach pendant - main b/d",
-        "cause": "The software version is mismatched between teach pendant and main b/d. There is chance of mis-operation.",
+        "msg": "Mismatch of S/W version between teach pendant - main computer",
+        "cause": "The software version is mismatched between teach pendant and main computer. There is chance of mis-operation.",
         "remedy": "Please match the version by software update."
     },
     "W28302": {
@@ -3479,15 +3479,20 @@
 		"cause": "The F-Input data is not being updated.",
 		"remedy": "1) Check the firmware version of the safety board. 2) Replace the safety board."
 	},
-	"E52700": {
+	"W52700": {
         "msg": "Safety[#%s] p15v Voltage limit error",
         "cause": "The p15v voltage supply on the Safety board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the safety board."
     },
-    "E52701": {
+    "W52701": {
         "msg": "Safety[#%s] p15v low Voltage error",
         "cause": "The p15v voltage supply on the Safety board is abnormal.",
         "remedy": "1) Reboot the controller 2) If the problem persists, replace the safety board."
+    },
+    "W53370": {
+        "msg": "Diagnostics Disabled",
+        "cause": "The diagnostic function that monitors the status between each module has been deactivated.",
+        "remedy": "Complete the system and safety function settings, then reboot the system if necessary."
     },
     "W53601": {
         "msg": "Protective stop being inputted.",
@@ -3499,6 +3504,256 @@
         "cause": "It occurs when [Motor ON] is done in an normal stop state.",
         "remedy": "Please check the input signals in the Safety I/O status monitoring and take the necessary actions."
     },
+	"W54301": {
+		"msg": "Diagnostic error on the radar board MCU",
+		"cause": "The hardware logic of the MCU is abnormal.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54302": {
+		"msg": "Interrupt diagnostic error on the radar board",
+		"cause": "MCU interrupt address mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54303": {
+		"msg": "CPU register diagnostic error on the radar board",
+		"cause": "Read,write operation abnormality in the CPU1 core register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54304": {
+		"msg": "FPU register diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the CPU1 FPU register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54305": {
+		"msg": "VCRC register diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the CPU1 VCRC register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54306": {
+		"msg": "RAM diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the MCU RAM.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54307": {
+		"msg": "RAM diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the MCU RAM copy area.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54308": {
+		"msg": "Flash diagnostic error on the radar board",
+		"cause": "MCU Flash CRC mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54309": {
+		"msg": "Oscillator diagnostic error on the radar board",
+		"cause": "Abnormality in the radar board's external oscillator.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54311": {
+		"msg": "Boot Flash CRC error on the radar board",
+		"cause": "Boot Flash CRC mismatch on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54312": {
+		"msg": "Program RAM CRC error on the radar board",
+		"cause": "RAM CRC mismatch on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54314": {
+		"msg": "(Channel %s) 24V voltage error on the radar board",
+		"cause": "24V voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54315": {
+		"msg": "(Channel %s) EX24V voltage error on the radar board",
+		"cause": "EX24V voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54316": {
+		"msg": "(Channel %s) 3V3 voltage error on the radar board",
+		"cause": "3V3 voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54317": {
+		"msg": "(Channel %s) 1V2 voltage error on the radar board",
+		"cause": "1V2 voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54323": {
+		"msg": "Cross-check error in the radar board diagnostic functions",
+		"cause": "Diagnostic result mismatch between MCUs.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54324": {
+		"msg": "(Channel %s) radar board Temperature sensor measurement error",
+		"cause": "Temperature deviation between sensors exceeds 15°C.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54325": {
+		"msg": "Synchronization error detected on radar board CPU1",
+		"cause": "Synchronization issue detected on radar board CPU1.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54326": {
+		"msg": "Overheat detected on radar board temperature sensor (Channel %s)",
+		"cause": "Board temperature exceeds the safety threshold",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54331": {
+		"msg": "Program execution sequence error on the radar board",
+		"cause": "The program execution sequence deviates from the expected flow",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54332": {
+		"msg": "Program execution sequence error on the radar board",
+		"cause": "The program execution sequence deviates from the expected flow",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54333": {
+		"msg": "Program execution sequence cross-check error on the radar board",
+		"cause": "Inter-MCU program execution sequence mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54334": {
+		"msg": "Program execution timeout error on the radar board",
+		"cause": "Program execution time deviates from the expected duration.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54335": {
+		"msg": "Program execution measurement error on the radar board",
+		"cause": "Abnormal program operation detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54341": {
+		"msg": "Cross-check error detected in radar board operation",
+		"cause": "Operational anomaly detected in the redundant MCU.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54342": {
+		"msg": "External watchdog malfunction detected on the radar board",
+		"cause": "Operational anomaly detected in the external watchdog timer.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54351": {
+		"msg": "Firmware version mismatch detected on the radar board",
+		"cause": "Firmware version mismatch detected on the radar board.",
+		"remedy": "1) Please proceed with the firmware update. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54450": {
+		"msg": "FSI (Fast Serial Interface) synchronization error detected on the radar board.",
+		"cause": "FSI synchronization error detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54451": {
+		"msg": "Internal communication (FSI) error detected on the radar board.",
+		"cause": "Internal communication (FSI) error detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54452": {
+		"msg": "FSI initialization and ping test failure detected on the radar board",
+		"cause": "FSI initialization and ping test failure detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54500": {
+        "msg": "The radar sensor (#%s) exhibits a response latency",
+        "cause": "Radar sensor response latency observed.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+    },
+	"W54501": {
+        "msg": "Radar sensor (#%s) is non-responsive",
+        "cause": "Radar sensor is non-responsive.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+    },
+	"W54504": {
+		"msg": "Radar sensor (#%S) ID mismatch detected",
+		"cause": "The responded ID does not match the requested value",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54505": {
+		"msg": "CRC error detected in radar sensor data response",
+		"cause": "Data corruption detected in the radar sensor response.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54506": {
+		"msg": "CRC error detected during radar sensor data request",
+		"cause": "Data corruption detected during the radar sensor request sequence.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"W54550": {
+		"msg": "Radar sensor (#%S) status cross-check error detected",
+		"cause": "Radar sensor status inconsistency detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control sensor."
+	},
+	"W54554": {
+		"msg": "Radar sensor (#%S) detection data inconsistency detected",
+		"cause": "Consecutive detection data inconsistency detected on the radar sensor.",
+		"remedy": "1) Please check for any objects obstructing the radar sensor. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54555": {
+		"msg": "CAN communication (#%S) error detected on radar sensor",
+		"cause": "Data duplication and packet loss detected",
+		"remedy": "1) Please replace the corresponding radar sensor. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54560": {
+		"msg": "24V power supply error detected on radar sensor (#%S)",
+		"cause": "24V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54561": {
+		"msg": "5V power supply error detected on radar sensor (#%S)",
+		"cause": "5V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54562": {
+		"msg": "3V3 power supply error detected on radar sensor (#%S)",
+		"cause": "3V3 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54563": {
+		"msg": "1V8 power supply error detected on radar sensor (#%S)",
+		"cause": "1V8 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54564": {
+		"msg": "1V2 power supply error detected on radar sensor (#%S)",
+		"cause": "1V2 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54565": {
+		"msg": "1V power supply error detected on radar sensor (#%S)",
+		"cause": "1V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54566": {
+		"msg": "Over-temperature error detected on radar sensor (#%S)",
+		"cause": "Over-temperature error detected on the radar sensor.",
+		"remedy": "1) Please turn off the sensor power for 5 minutes 2) If the problem persists, replace the radar sensor."
+	},
+	"W54567": {
+		"msg": "Diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54568": {
+		"msg": "Boot diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54569": {
+		"msg": "Overall diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"W54570": {
+		"msg": "Version mismatch detected on radar sensor (#%S)",
+		"cause": "Radar sensor is running an outdated firmware version",
+		"remedy": "1) Please update the sensor firmware to the latest version 2) If the problem persists, replace the radar sensor."
+	},
+	"W54571": {
+		"msg": "Radar sensor is running an outdated firmware version (#%S)",
+		"cause": "The radar sensor is running an outdated firmware version.",
+		"remedy": "1) Please update the sensor firmware to the latest version 2) If the problem persists, replace the radar sensor."
+	},
 	"W54902": {
         "msg": "2nd Encoder BISS communication error detection(1 time)",
         "cause": "2nd Encoder BISS communication error detected.(1 time)",

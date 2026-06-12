@@ -8,7 +8,7 @@
 		"msg": "Primary Axis Limit Switch Activated",
 		"cause": "The limit switch installed at the end of the robot's operating range has been triggered.",
 		"remedy": "1) Enter the system menu, hold the Enable switch, press the Motor ON button, and use the jog keys to move the robot back into the operating range.\r\n2) Check the Safety board fuse by inspecting the IO power LED.\r\n3) Refer to [Troubleshooting Guide] for details.",
-		"help_idx": "3-safety-board-part/E00002",
+		"help_idx": "E0002",
         "help_title": "[TroubleShoot]Primary Axis Limit Switch Activated"
     },
     "E3": {
@@ -49,12 +49,16 @@
     "E10": {
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "The regenerative discharge resistor temperature increased above the reference value and the overheating detection sensor is abnormal.",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E0010",
+        "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E11": {
         "msg": "AMP overvoltage (P-N) generated",
         "cause": "The motor voltage (P-N) set value exceeded.",
-        "remedy": "Check the controller panel AC input power (Usable in the rated power). Check the connection state of the regenerative discharge resistor."
+        "remedy": "Check the controller panel AC input power (Usable in the rated power). Check the connection state of the regenerative discharge resistor.",
+        "help_idx": "E0011",
+        "help_title": "[TroubleShoot]AMP overvoltage (P-N) generated"
     },
     "E12": {
         "msg": "Brake power abnormal",
@@ -70,13 +74,15 @@
         "msg": "Safety switch (EM, OTR, TS, and others) instant contact generated",
         "cause": "Safety switch (emergency stop, motor overheating, limit switch, and others) instant contact generated.",
         "remedy": "1) Check the safety switch.2) Even after taking the above measures, if the error should occur again, contact our company for inquiries.",
-        "help_idx": "3-safety-board-part/E00014",
+        "help_idx": "E0014",
         "help_title": "[TroubleShoot]Safety switch (EM, OTR, TS, and others) instant contact generated"
     },
     "E15": {
         "msg": "Teaching pendant operation abnormal",
         "cause": "Communication disconnection detected between the teaching pendant and the main computer.",
-        "remedy": "Simply ignore it.Contact our company for inquiries for T/P errors.Teaching pendant is abnormal, or communication is defective.Please contact to HHI.TEL   : 052-202-7927,7949,7956,7957FAX   : 052-202-7960E-Mail: robotas@hhi.co.kr"
+        "remedy": "Simply ignore it.Contact our company for inquiries for T/P errors.Teaching pendant is abnormal, or communication is defective.Please contact to HHI.TEL   : 052-202-7927,7949,7956,7957FAX   : 052-202-7960E-Mail: robotas@hhi.co.kr",
+        "help_idx": "E0015",
+        "help_title": "[TroubleShoot]Teaching pendant operation abnormal"
     },
     "E17": {
         "msg": "Conveyor pulse line abnormal",
@@ -106,7 +112,9 @@
     "E22": {
         "msg": "Intermodule communication abnormal",
         "cause": "Communication error generated between the main computer and  system I/O(BS530) module.",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E0022",
+        "help_title": "[TroubleShoot]Intermodule communication abnormal"
     },
     "E31": {
         "msg": "Mode switch fault",
@@ -116,17 +124,23 @@
     "E32": {
         "msg": "User IO board (#%s) communication abnormal",
         "cause": "Communication error generated among the main computer and user I/O modules.",
-        "remedy": "Refer to the measures for the relevant items of the user I/O modules."
+        "remedy": "Refer to the measures for the relevant items of the user I/O modules.",
+        "help_idx": "E0032",
+        "help_title": "[TroubleShoot]User IO board (#%s) communication abnormal"
     },
     "E33": {
         "msg": "AMP undervoltage generated",
         "cause": "Servo amp P-N voltage lowered.",
-        "remedy": "Check the state of the regenerative discharge and the servo amp input power."
+        "remedy": "Check the state of the regenerative discharge and the servo amp input power.",
+        "help_idx": "E0033",
+        "help_title": "[TroubleShoot]AMP undervoltage generated"
     },
     "E34": {
         "msg": "AMP overcurrent generated",
         "cause": "Surge voltage inflow into the servo amp, disconnecting F1 or F2.",
-        "remedy": "Check the connection state of the controller external and internal power."
+        "remedy": "Check the connection state of the controller external and internal power.",
+        "help_idx": "E0034",
+        "help_title": "[TroubleShoot]AMP overcurrent generated"
     },
     "E35": {
         "msg": "Hardware limit (additional axis)",
@@ -167,13 +181,15 @@
 		"msg": "Safety Plug Connection Error (Auto Mode Guard Switch)",
 		"cause": "A connection error occurred with the Auto Mode safety guard switch.",
         "remedy": "1) Check the Auto Mode Safety Guard switch and the line connection status.\r\n2) Check the IO power LED for a blown fuse on the Safety board.\r\n3) Inspect the TP cable for any damage.\r\n4) Refer to the [Troubleshooting Guide] for details.",		
-        "help_idx": "3-safety-board-part/E0043",
+        "help_idx": "E0043",
         "help_title": "[TroubleShoot]Safety Plug Connection Error (Auto Mode Guard Switch)"
     },
     "E44": {
         "msg": "Lift axis belt breaking detection sensor operating",
         "cause": "Lift axis motor driving belt broken. Or, sensor cable broken inside the robot.",
-        "remedy": "Replace the motor driving  belt, or check the sensor cable inside the robot."
+        "remedy": "Replace the motor driving  belt, or check the sensor cable inside the robot.",
+        "help_idx": "E0044",
+        "help_title": "[TroubleShoot]Lift axis belt breaking detection sensor operating"
     },
     "E45": {
         "msg": "Shift to auto mode remotely requested",
@@ -263,32 +279,44 @@
     "E108": {
         "msg": "(%s axis) encoder abnormal: Encoder reset required",
         "cause": "Encoder data is out of valid range.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0108",
+        "help_title": "[TroubleShoot](%s axis) encoder abnormal: Encoder reset required"
     },
     "E112": {
         "msg": "(%s axis) IPM fault signal detected",
         "cause": "Fault signal generated at IPM of the faulty axis.",
-        "remedy": "1) Check the motor-drive parts.2) Check the robot operation.3) Check the controller cooling fan.4) Refer to the troubleshooting manual"
+        "remedy": "1) Check the motor-drive parts.2) Check the robot operation.3) Check the controller cooling fan.4) Refer to the troubleshooting manual",
+        "help_idx": "E0112",
+        "help_title": "[TroubleShoot](%s axis) IPM fault signal detected"
     },
     "E113": {
         "msg": "(%s axis) overcurrent generated",
         "cause": "Current, above the allowable value, flowing through the motor or the drive system.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0113",
+        "help_title": "[TroubleShoot](%s axis) overcurrent generated"
     },
     "E114": {
         "msg": "(%s axis) drive system control voltage lowered",
         "cause": "+15 V, the control power supplied to the servo drive system, lowered.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0114",
+        "help_title": "[TroubleShoot](%s axis) drive system control voltage lowered"
     },
     "E115": {
         "msg": "(%s axis) received command code abnormal",
         "cause": "Wrong command code has received by the servo board from the main computer.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0115",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal"
     },
     "E117": {
         "msg": "(%s axis) position deviation set value exceeded",
         "cause": "Position deviation is larger than the setting value.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0117",
+        "help_title": "[TroubleShoot](%s axis) position deviation set value exceeded"
     },
     "E118": {
         "msg": "(%s axis) speed deviation set value exceeded",
@@ -298,12 +326,16 @@
     "E119": {
         "msg": "(%s axis) overload generated",
         "cause": "Motor is being operated above the setting overload level.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0119",
+        "help_title": "[TroubleShoot](%s axis) overload generated"
     },
     "E122": {
         "msg": "Servo on time limit exceeded",
         "cause": "Servo On has not executed within the time limit when servo on operated or power saving deactivated.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E123": {
         "msg": "Servo off time limit exceeded",
@@ -328,7 +360,9 @@
     "E127": {
         "msg": "MSHP operation abnormal",
         "cause": "MSHP is not operable.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0127",
+        "help_title": "[TroubleShoot]MSHP operation abnormal"
     },
     "E131": {
         "msg": "(%s axis) bit jump (normal operation) error",
@@ -343,12 +377,16 @@
     "E133": {
         "msg": "(%s axis) command value abnormal",
         "cause": "The servo board has received invalid position command.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0133",
+        "help_title": "[TroubleShoot](%s axis) command value abnormal"
     },
     "E134": {
         "msg": "(%s axis) max. speed exceeded",
         "cause": "Position command, transmitted to the servo board, exceeded the max. speed.",
-        "remedy": "Refer to the troubleshooting manual"
+        "remedy": "Refer to the troubleshooting manual",
+        "help_idx": "E0134",
+        "help_title": "[TroubleShoot](%s axis) max. speed exceeded"
     },
     "E135": {
         "msg": "(%s axis) PWM off when servo on",
@@ -378,7 +416,9 @@
     "E140": {
         "msg": "MSPR operation abnormal",
         "cause": "Drive system main power supply relay is not operable.",
-        "remedy": "Check the CNPC cable and the MSPR relay of the drive system."
+        "remedy": "Check the CNPC cable and the MSPR relay of the drive system.",
+        "help_idx": "E0140",
+        "help_title": "[TroubleShoot]MSPR operation abnormal"
     },
     "E150": {
         "msg": "Fault by CPU exception",
@@ -448,7 +488,9 @@
     "E165": {
         "msg": "(%s axis) impossible to maintain servo lock for the %s phase",
         "cause": "Impossible to supply current to the motor.It is Impossible to supply current to the motor.",
-        "remedy": "Check the motor wire, AMP, the servo board, and the CNBS cable between AMP and the servo board."
+        "remedy": "Check the motor wire, AMP, the servo board, and the CNBS cable between AMP and the servo board.",
+        "help_idx": "E0165",
+        "help_title": "[TroubleShoot](%s axis) impossible to maintain servo lock for the %s phase"
     },
     "E170": {
         "msg": "Stopping time (5 seconds) exceeded",
@@ -693,12 +735,16 @@
     "E223": {
         "msg": "(%s axis) encoder disconnected or communication failed",
         "cause": "Error generated while receiving position data from the serial encoder.",
-        "remedy": "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot."
+        "remedy": "Check the related to encoder voltage, the connection of cables, and the field grounding(FG) status of the robot.",
+        "help_idx": "E0223",
+        "help_title": "[TroubleShoot](%s axis) encoder disconnected or communication failed"
     },
     "E224": {
         "msg": "(%s axis) encoder state abnormality generated",
         "cause": "Error state, such as errors related to overflow, overspeed, internal condenser voltage, and LED, received from the encoder.",
-        "remedy": "If errors continue to be generated even when resetting in the encoder reset function, replace the encoder (motor)."
+        "remedy": "If errors continue to be generated even when resetting in the encoder reset function, replace the encoder (motor).",
+        "help_idx": "E0224",
+        "help_title": "[TroubleShoot](%s axis) encoder state abnormality generated"
     },
     "E225": {
         "msg": "(%s axis) soft limit encoder use range exceeded",
@@ -3749,21 +3795,21 @@
         "msg": "Manipulator limit SW operating",
         "cause": "The limit switch, installed at the end of the operation area of each of the robot’s axis, is operated. Deviated from the soft limit area also.",
         "remedy": "Move the axis, which deviated from the area, within the operation area.",
-        "help_idx": "3-safety-board-part/E02200",
+        "help_idx": "E02200",
         "help_title": "[TroubleShoot]Manipulator limit SW operating"
     },
     "E2201": {
         "msg": "Manipulator limit SW input not matched (safety chain 1 off)",
         "cause": "The limit switch, installed at the end of the operation area of each of the robot’s axis, is operated. Deviated from the soft limit area also. However, only the hardware limit chain 1 is off, while the chain 2 is in the normal input state.",
         "remedy": "1) Check whether the limit switch chain 2 wiring is cut.2) Check whether there is a problem with the limit switch chain 2 contact point.",
-        "help_idx": "3-safety-board-part/E02201_E2208",
+        "help_idx": "E02201",
         "help_title": "[TroubleShoot]Manipulator limit SW input not matched (safety chain 1 off)"
     },
     "E2202": {
         "msg": "Manipulator limit SW input not matched (safety chain 2 off)",
         "cause": "When normal hardware limit is generated, the limit switch, installed at the end of the operation area of each of the robot’s axis, is operated. However, as abnormality is generated with the hardware limit chain 2 input, it is required to check.",
         "remedy": "Check the hardware limit channel 2.",
-        "help_idx": "3-safety-board-part/E02201_E2208",
+        "help_idx": "E02202",
         "help_title": "[TroubleShoot]Manipulator limit SW input not matched (safety chain 2 off)"
     },
     "E2203": {
@@ -3785,21 +3831,21 @@
         "msg": "Manipulator limit SW disconnected or not accessed",
         "cause": "Disconnection generated with the wiring path for the hardware limit, or connectors not accessed, for example.",
         "remedy": "1) Check for any disconnection or connector access in the hardware limit wiring path, and carry out repair.2) There is a possible fault with the switch attached to the mechanical section; thus, please check it.",
-        "help_idx": "3-safety-board-part/E02201_E2208",
+        "help_idx": "E02206",
         "help_title": "[TroubleShoot]Manipulator limit SW disconnected or not accessed"
     },
     "E2207": {
         "msg": "Manipulator limit SW input not matched (safety chain 1 off)",
         "cause": "Disconnection generated with the wiring path for the hardware limit safety chain 1, or connectors not accessed, for example.",
         "remedy": "1) Check for any disconnection or connector access in the hardware limit wiring path, and carry out repair.2) There is a possible fault with the switch attached to the mechanical section; thus, please check it.",
-        "help_idx": "3-safety-board-part/E02201_E2208",
+        "help_idx": "E02207",
         "help_title": "[TroubleShoot]Manipulator limit SW input not matched (safety chain 1 off)"
     },
     "E2208": {
         "msg": "Manipulator limit SW input not matched (safety chain 2 off)",
         "cause": "Disconnection generated with the wiring path for the hardware limit safety chain 2, or connectors not accessed, for example.",
         "remedy": "1) Check for any disconnection or connector access in the hardware limit wiring path, and carry out repair.2) There is a possible fault with the switch attached to the mechanical section; thus, please check it.",
-        "help_idx": "3-safety-board-part/E02201_E2208",
+        "help_idx": "E02208",
         "help_title": "[TroubleShoot]Manipulator limit SW input not matched (safety chain 2 off)"
     },
     "E2209": {
@@ -3926,14 +3972,14 @@
         "msg": "Magnetic contactor (MC2) fault/detection abnormal while trying servo on",
         "cause": "Magnet MC2 not operated, causing servo on not to take place.",
         "remedy": "1) Refer to the [Troubleshooting Guide] and inspect MC2.\r\n2) Check the IO power LED for a blown fuse on the safety board.\r\n3) Verify the CNT1 cable connection and the CP ON/OFF status of the PSM module.\r\n4) If the issue persists, replace the safety board.\r\n5) If the issue persists, replace the power supply module.\r\n6) If the issue persists, replace the servo amplifier.\r\n7) If the system is configured for 9 axes or more, check the DIP switch settings on the Extended Axis Safety Interface Board.",        
-        "help_idx": "3-safety-board-part/E02260",
+        "help_idx": "E02260",
         "help_title": "[TroubleShoot]Magnetic contactor (MC2) fault/detection abnormal while trying servo on"    
     },
     "E2261": {
         "msg": "Magnetic contactor (MC2) fault/detection abnormal while in the servo on state",
         "cause": "While in the servo on state, the magnet MC2 is off abnormally.",
         "remedy": "1) There is a fault with magnetic contactor MC2. Please check it. 2) If the issue persists, replace the power supply module. 3) If the issue persists, replace the safety board.",       
-        "help_idx": "3-safety-board-part/E02261",
+        "help_idx": "E02261",
         "help_title": "[TroubleShoot]Magnetic contactor (MC2) fault/detection abnormal while in the servo on state"
     },
     "E2262": {
@@ -4025,14 +4071,14 @@
         "msg": "Magnetic contactor (MC1) fault/detection abnormal while trying servo on",
         "cause": "Magnet MC1 not operated, causing servo on not to take place.",
         "remedy": "1) Magnet MC1 abnormal. Please check.2) Distribution board (BD5C0) abnormal. Please check.3) System board monitoring system possibly abnormal. Please check.",
-        "help_idx": "3-safety-board-part/E02280",
+        "help_idx": "E02280",
         "help_title": "[TroubleShoot]Magnetic contactor (MC1) fault/detection abnormal while trying servo on"
     },
     "E2281": {
         "msg": "Magnetic contactor (MC1) fault/detection abnormal while in the servo on state",
         "cause": "While in the servo on state, the magnet MC1 is off abnormally.",
         "remedy": "1) Magnet MC1 abnormal. Please check.2) Distribution board (BD5C0) abnormal. Please check.3) System board monitoring system possibly abnormal. Please check.",
-        "help_idx": "3-safety-board-part/E02281",
+        "help_idx": "E02281",
         "help_title": "[TroubleShoot]Magnetic contactor (MC1) fault/detection abnormal while in the servo on state"
     },
     "E2282": {
@@ -4129,7 +4175,7 @@
         "msg": "CPUERR Signal Mismatch (Electrical Board Signal Mismatch)",
         "cause": "A CPUERR was triggered by main computer, but an inconsistency was detected in the signal from the electrical board.",
         "remedy": "1) Refer to the [Troubleshooting Guide] and check if the main task cycle is within the normal range.\r\n2) If the issue persists, replace the Main computer.\r\n3) If the issue persists, replace the safety board.\r\n4) Check communication with external devices, such as welding equipment.",
-        "help_idx": "3-safety-board-part/E02301",
+        "help_idx": "E2301",
         "help_title": "[TroubleShoot]CPUERR Signal Mismatch (Electrical Board Signal Mismatch)"
     },
     "E2302": {
@@ -4290,47 +4336,65 @@
     "E2340": {
         "msg": "Lift axis belt sensor operating",
         "cause": "Lift axis motor drive system belt broken. Or, sensor cable broken inside the robot.",
-        "remedy": "Replace the motor drive unit belt, or check the sensor cable inside the robot."
+        "remedy": "Replace the motor drive unit belt, or check the sensor cable inside the robot.",
+        "help_idx": "E02340",
+        "help_title": "[TroubleShoot]Lift axis belt sensor operating"
     },
     "E2341": {
         "msg": "Noise inflow / defective contact on the lift axis belt sensor wiring",
         "cause": "External noise inflow into the wiring path for the lift axis belt sensor, or defective contact with connectors, for example, making the input unstable.",
-        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully."
+        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully.",
+        "help_idx": "E02341",
+        "help_title": "[TroubleShoot]Noise inflow / defective contact on the lift axis belt sensor wiring"
     },
     "E2342": {
         "msg": "Noise/defective contact on the lift axis belt sensor wiring (chain 1)",
         "cause": "External noise inflow into the wiring path for the lift axis belt sensor safety chain 1, or defective contact with connectors, for example, making the input unstable.",
-        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor safety chain 1. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully."
+        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor safety chain 1. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully.",
+        "help_idx": "E02342",
+        "help_title": "[TroubleShoot]Noise/defective contact on the lift axis belt sensor wiring (chain 1)"
     },
     "E2343": {
         "msg": "Noise/defective contact on the lift axis belt sensor wiring (chain 2)",
         "cause": "External noise inflow into the wiring path for the lift axis belt sensor safety chain 2, or defective contact with connectors, for example, making the input unstable.",
-        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor safety chain 2. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully."
+        "remedy": "1) Check and arrange the power line or cabling that could generate noise inflow into the wiring path for the lift axis belt sensor safety chain 2. Or, check the connectors, and attach and remove them to ensure that stable access is maintained.2) There is a possible fault with the lift axis belt sensor; thus, please check the switch attached to the mechanical section carefully.",
+        "help_idx": "E02343",
+        "help_title": "[TroubleShoot]Noise/defective contact on the lift axis belt sensor wiring (chain 2)"
     },
     "E2344": {
         "msg": "Lift axis belt sensor input not matched (safety chain 1 off)",
         "cause": "Input of the lift axis is not dualized. Different input state between the safety chain 1 and safety chain 2. Safety chain 2 is off, but the safety chain 1 is on.",
-        "remedy": "1) Check the undualized signal line or its access state.2) There is a possible fault with the lift axis belt sensor; thus, please check it."
+        "remedy": "1) Check the undualized signal line or its access state.2) There is a possible fault with the lift axis belt sensor; thus, please check it.",
+        "help_idx": "E02344",
+        "help_title": "[TroubleShoot]Lift axis belt sensor input not matched (safety chain 1 off)"
     },
     "E2345": {
         "msg": "Lift axis belt sensor input not matched (safety chain 2 off)",
         "cause": "Input of the lift axis is not dualized. Different input state between the safety chain 1 and safety chain 2. Safety chain 2 is off, but the safety chain 1 is on.",
-        "remedy": "1) Check the undualized signal line or its access state.2) There is a possible fault with the lift axis belt sensor; thus, please check it."
+        "remedy": "1) Check the undualized signal line or its access state.2) There is a possible fault with the lift axis belt sensor; thus, please check it.",
+        "help_idx": "E02345",
+        "help_title": "[TroubleShoot]Lift axis belt sensor input not matched (safety chain 2 off)"
     },
     "E2346": {
         "msg": "Lift axis belt sensor safety circuit fault",
         "cause": "Abnormality generated with the lift axis belt sensor safety circuit. While the final result of the safety chain is normal, the lift axis belt sensor is monitored as off.",
-        "remedy": "Replace the system board."
+        "remedy": "Replace the system board.",
+        "help_idx": "E02346",
+        "help_title": "[TroubleShoot]Lift axis belt sensor safety circuit fault"
     },
     "E2347": {
         "msg": "Lift axis belt sensor safety circuit fault (chain 1)",
         "cause": "Abnormality generated with the lift axis belt sensor related safety monitoring circuit. While the final result of the safety chain is normal, the lift axis belt sensor chain 1 is monitored as off.",
-        "remedy": "Replace the system board."
+        "remedy": "Replace the system board.",
+        "help_idx": "E02347",
+        "help_title": "[TroubleShoot]Lift axis belt sensor safety circuit fault (chain 1)"
     },
     "E2348": {
         "msg": "Lift axis belt sensor safety circuit fault (chain 2)",
         "cause": "Abnormality generated with the lift axis belt sensor related safety monitoring circuit. While the final result of the safety chain is normal, the lift axis belt sensor chain 2 is monitored as off.",
-        "remedy": "Replace the system board."
+        "remedy": "Replace the system board.",
+        "help_idx": "E02348",
+        "help_title": "[TroubleShoot]Lift axis belt sensor safety circuit fault (chain 2)"
     },
     "E2380": {
         "msg": "Failure in safety circuits in the AUTO MODE",
@@ -4476,42 +4540,42 @@
         "msg": "(%s axis) No Encoder Response",
         "cause": "The serial encoder did not respond to the data request signal.",
         "remedy": "1) Check the encoder power supply voltage. \n2) Inspect the encoder wiring and connectors, including grounding. \n3) Replace the servo board. \n4) Replace the motor (encoder).",
-        "help_idx": "4-servo-board-part/E02450",
+        "help_idx": "E02450",
         "help_title": "[TroubleShoot](%s axis) No Encoder Response"
     },
     "E2451": {
         "msg": "(%s axis) Abnormal Number of Encoder Data Received",
         "cause": "The number of data received from the encoder is outside the normal range.",
         "remedy": "1) Check the grounding of the encoder cable. \n2) Inspect the connection status of the encoder cable and connectors. \n3) Replace the motor (encoder). \n4) Replace the servo board. \n5) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02451",
+        "help_idx": "E02451",
         "help_title": "[TroubleShoot](%s axis) Abnormal Number of Encoder Data Received"
     },
     "E2452": {
         "msg": "(%s axis) Encoder End Signal (Ser_End) Not Received",
         "cause": "The encoder did not complete data transmission, or the end signal (Ser_End) was not received correctly.",
         "remedy": "1) Check the grounding of the encoder cable. \n2) Inspect the connection status of the encoder cable and connectors. \n3) Replace the motor (encoder). \n4) Replace the servo board. \n5) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02452",
+        "help_idx": "E02452",
         "help_title": "[TroubleShoot](%s axis) Encoder End Signal (Ser_End) Not Received"
     },
     "E2453": {
         "msg": "(%s axis) Encoder Data Error (CRC Error Detected)",
         "cause": "A CRC mismatch was detected in the data received from the encoder, indicating a data error.",
         "remedy": "1) Check the grounding of the encoder cable. \n2) Inspect the connection status of the encoder cable and connectors. \n3) Replace the motor (encoder). \n4) Replace the servo board. \n5) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02453",
+        "help_idx": "E02453",
         "help_title": "[TroubleShoot](%s axis) Encoder Data Error (CRC Error Detected)"
     },
     "E2454": {
         "msg": "(%s axis) Encoder Disconnected or Contact Failure (Motor OFF State)",
         "cause": "Communication between the encoder and the servo board is unstable or not received at all, indicating a possible cable disconnection or contact failure.",
         "remedy": "1) Check the grounding of the encoder cable. \n2) Inspect the connection status of the encoder cable and connectors. \n3) Replace the motor (encoder). \n4) Replace the servo board. \n5) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02454",
+        "help_idx": "E02454",
         "help_title": "[TroubleShoot](%s axis) Encoder Disconnected or Contact Failure (Motor OFF State)"
     },
     "E2455": {
         "msg": "(%s axis) Abnormal Encoder Data (Irregular Value Detected)",
         "cause": "The position or speed value received from the encoder changed abnormally for a moment, indicating unreliable encoder data.",
         "remedy": "1) Check the encoder power line. \n2) Check the grounding of the encoder cable. \n3) Inspect the connection status of the encoder cable and connectors. \n4) Replace the motor (encoder). \n5) Replace the servo board. \n6) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02455",
+        "help_idx": "E02455",
         "help_title": "[TroubleShoot](%s axis) Abnormal Encoder Data (Irregular Value Detected)"
     },
     "E2456": {
@@ -4533,49 +4597,49 @@
         "msg": "(%s axis) Encoder Disconnected or Contact Failure (Motor ON State)",
         "cause": "Communication between the encoder and the servo board is unstable or not received at all, indicating a possible cable disconnection or contact failure.",
         "remedy": "1) Check the grounding of the encoder cable. \n2) Inspect the connection status of the encoder cable and connectors. \n3) Replace the motor (encoder). \n4) Replace the servo board. \n5) Check for disconnection or noise in the encoder-related cables.",
-        "help_idx": "4-servo-board-part/E02459",
+        "help_idx": "E02459",
         "help_title": "[TroubleShoot](%s axis) Encoder Disconnected or Contact Failure (Motor ON State)"
     },
     "E2460": {
         "msg": "(%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)",
         "cause": "An error occurred in storing the encoder's internal rotation value, causing the CE (Counter Error) bit to be set. The rotation count information may have been stored incorrectly or the internal calculation is unreliable.",
         "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. \n2) Inspect the connection status of the encoder cable and connectors. \n3) If the error persists, replace the motor (encoder). \n4) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02460",
+        "help_idx": "E02460",
         "help_title": "[TroubleShoot](%s axis) Encoder Internal Rotation Value Error (CE Bit Detected)"
     },
     "E2461": {
         "msg": "(%s axis) Encoder Overspeed Error (OS Bit Detected)",
         "cause": "The encoder rotation speed has exceeded the allowable range, setting the OS (Overspeed) bit. This may be due to an actual overspeed condition or a false detection caused by signal anomalies.",
         "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. \n2) Check the encoder power supply status. \n3) Inspect the encoder wiring. \n4) If the error persists, replace the motor (encoder). \n5) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02461",
+        "help_idx": "E02461",
         "help_title": "[TroubleShoot](%s axis) Encoder Overspeed Error (OS Bit Detected)"
     },
     "E2462": {
         "msg": "(%s axis) Encoder Position Not Initialized (FS Bit Detected)",
         "cause": "The encoder has not reached the Full Absolute state, resulting in incomplete position information. This may occur due to power-on initialization failure or loss of backup data.",
         "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. \n2) Check the encoder power supply status. \n3) If the error persists, replace the motor (encoder). \n4) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02462",
+        "help_idx": "E02462",
         "help_title": "[TroubleShoot](%s axis) Encoder Position Not Initialized (FS Bit Detected)"
     },
     "E2463": {
         "msg": "(%s axis) Encoder Multiturn Storage Error (ME Bit Detected)",
         "cause": "A problem occurred while storing rotation count information in the multiturn encoder, causing the ME (Multiturn Error) bit to be set. This may be due to power issues, storage circuit failure, or battery degradation.",
         "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. \n2) Check the encoder power supply status. \n3) If the error persists, replace the motor (encoder). \n4) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02463",
+        "help_idx": "E02463",
         "help_title": "[TroubleShoot](%s axis) Encoder Multiturn Storage Error (ME Bit Detected)"
     },
     "E2464": {
         "msg": "(%s axis) Encoder Battery Error (BE Bit Detected)",
         "cause": "The encoder battery voltage dropped below the threshold (3.1V), or a connection issue occurred, causing the BE (Battery Error) bit to be set.",
         "remedy": "1) Clear the serial encoder error and restart the controller by turning the power OFF and ON. \n2) Check the voltage of the encoder backup battery. \n3) Inspect the encoder battery wiring connection. \n4) If the error persists, replace the motor (encoder). \n5) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02464",
+        "help_idx": "E02464",
         "help_title": "[TroubleShoot](%s axis) Encoder Battery Error (BE Bit Detected)"
     },
     "E2470": {
         "msg": "(%s axis) Encoder Error: Reset Required",
         "cause": "The encoder has lost its position data due to delayed battery replacement. A serial encoder reset procedure is required.",
         "remedy": "Refer to the encoder reset procedure in the service manual.",
-        "help_idx": "4-servo-board-part/E02470",
+        "help_idx": "E02470",
         "help_title": "[TroubleShoot](%s axis) Encoder Error: Reset Required"
     },
     "E2471": {
@@ -4587,111 +4651,119 @@
         "msg": "(%s axis) Encoder Overheat Detected (OH Bit Set)",
         "cause": "The internal temperature of the encoder has reached the specified upper limit.",
         "remedy": "1) Test with a replacement motor (encoder). \n2) Check the operating conditions (speed, load, etc.). \n3) Inspect the ambient temperature around the encoder. \n4) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02472",
+        "help_idx": "E02472",
         "help_title": "[TroubleShoot](%s axis) Encoder Overheat Detected (OH Bit Set)"
     },
     "E2500": {
         "msg": "AMP regenerative discharge resistor overheated",
         "cause": "Regenerative discharge resistor temperature increased above the reference value. Excessive robot playback speed, or problem with the cooling system.",
         "remedy": "1) Check the error by lowering the robot playback speed.\n2) Check the regenerative discharge resistor value.\n3) Check the cooling system.\n4) Check the regenerative power capacity of robot. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02500",
+        "help_idx": "E02500",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor overheated"
     },
     "E2501": {
         "msg": "AMP regenerative discharge resistor disconnected, resistor or circuit abnormal",
         "cause": "Overheating error will be generated if a resistor is disconnected or the discharge control is abnormal. In addition, this could be generated when the regenerative discharge resistance value and the 3-phase power voltage values increase",
         "remedy": "1) Check the regenerative discharge resistor value(CNDR).\n2) Check the servo drive module.\n3) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02501",
+        "help_idx": "E02501",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor disconnected, resistor or circuit abnormal"
     },
     "E2502": {
         "msg": "AMP regenerative discharge resistor detection path abnormal",
         "cause": "Abnormality generated with the overheating error detection path, or the resistor value has varied.",
         "remedy": "1) Check the power-related cables(CNTR).\n2) Check the parts(servo board, servo drive module)  related to AMP discharge resistor overheat error detection. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02502",
+        "help_idx": "E02502",
         "help_title": "[TroubleShoot]AMP regenerative discharge resistor detection path abnormal"
     },
     "E2503": {
         "msg": "AMP PN overvoltage occured",
         "cause": "May be occured when the robot playback speed changes rapidly or when the regenerative discharge resistor value increases.",
         "remedy": "1) Check the error by lowering the robot playback speed.\n2) Check the regenerative discharge resistor value. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02503",
+        "help_idx": "E02503",
         "help_title": "[TroubleShoot]AMP PN overvoltage occured"
     },
     "E2504": {
         "msg": "AMP diode module abnormal or AC input voltage exceeded",
         "cause": "Abnormality generated with the diode module, causing the PN voltage to exceed the allowable range. In addition, the 3-phase voltage is inputted into the servo drive module (AMP) at a abnormally high level.",
         "remedy": "1) Check the power-related parts(servo drive module).\n2) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02504",
+        "help_idx": "E02504",
         "help_title": "[TroubleShoot]AMP diode module abnormal or AC input voltage exceeded"
     },
     "E2505": {
         "msg": "AMP PN overvoltage detection path abnormal or discharge abnormal",
         "cause": "Detection path of AMP PN overervoltage or regenerative discharge circuit is abnormal.",
         "remedy": "Please check after replacing the servo board or servo drive. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02505",
+        "help_idx": "E02505",
         "help_title": "[TroubleShoot]AMP PN overvoltage detection path abnormal or discharge abnormal"
     },
     "E2506": {
         "msg": "AMP PN undervoltage occurred",
         "cause": "If error occured at a specific step depending on the robot playback speed, PN voltage lowered because of the significant use of energy. May be generated because the controller input power is unstable.",
         "remedy": "1) Check the error by lowering the robot playback speed.\n2) Check the controller power voltage when the robot is operating. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02506",
+        "help_idx": "E02506",
         "help_title": "[TroubleShoot]AMP PN undervoltage occurred"
     },
     "E2507": {
         "msg": "AMP diode module abnormal or insufficient AC input voltage",
         "cause": "Abnormality occurred at the diode module, causing the PN voltage not to be charged. In addition, the error may be generated because the 3-phase voltage inputted into the servo drive module is lowered.",
         "remedy": "1) Check the power-related parts(servo drive module).\n2) Check the controller power voltage. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02507",
+        "help_idx": "E02507",
         "help_title": "[TroubleShoot]AMP diode module abnormal or insufficient AC input voltage"
     },
     "E2508": {
         "msg": "AMP PN undervoltage detection path abnormal or discharge abnormal",
         "cause": "Detection path of AMP PN undervoltage or PN discharge circuit is abnormal.",
         "remedy": "Please check after replacing the servo board or servo drive. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02508",
+        "help_idx": "E02508",
         "help_title": "[TroubleShoot]AMP PN undervoltage detection path abnormal or discharge abnormal"
     },
     "E2509": {
         "msg": "AMP diode module is overheated",
         "cause": "Internal temperature of AMP diode module is over the limited value",
-        "remedy": "1) Check the power-related parts(servo drive module)"
+        "remedy": "1) Check the power-related parts(servo drive module)",
+        "help_idx": "E02509",
+        "help_title": "[TroubleShoot]AMP diode module overheated"
     },
     "E2510": {
         "msg": "AMP AC input power overvoltage-Fuse disconnected",
         "cause": "Because of surge voltage flow into the servo drive module, F1 or F2 is disconneced.",
-        "remedy": "1) Check the fuse of srevo drive module.2) Check the controller power voltage.3) Check the power-related parts(servo drive module)."
+        "remedy": "1) Check the fuse of srevo drive module.2) Check the controller power voltage.3) Check the power-related parts(servo drive module).",
+        "help_idx": "E02510",
+        "help_title": "[TroubleShoot]AMP AC input power overvoltage-Fuse disconnected"
     },
     "E2511": {
         "msg": "AMP AC input power overvoltage-Detection path abnormal",
         "cause": "Detection path of AC input power overvoltage is abnormal.",
-        "remedy": "1) Check the fuse of srevo drive module.2) Check the cables(CNSGC) related to AC overvoltage error detection.3) Check the parts(system board, servo drive module) related to AC overvoltage error detection."
+        "remedy": "1) Check the fuse of srevo drive module.2) Check the cables(CNSGC) related to AC overvoltage error detection.3) Check the parts(system board, servo drive module) related to AC overvoltage error detection.",
+        "help_idx": "E02511",
+        "help_title": "[TroubleShoot]AMP AC input power overvoltage-Detection path abnormal"
     },
     "E2512": {
         "msg": "AMP PN Undervoltage Occurred (MC Issue)",
         "cause": "An undervoltage occurred in the AMP's PN line due to abnormal operation of the magnetic contactor. Please inspect the MC-related components and the three-phase power supply input to the servo drive.",
-        "remedy": "1) Check whether the connection cable (CNSV) between BD632 and the servo board is properly connected and whether noise is affecting the signal. 2) Check the operation status of the magnetic contactor (MC). 3) If the problem persists, try replacing the BD632, BD640, and the amplifier board in sequence."
+        "remedy": "1) Check whether the connection cable (CNSV) between BD632 and the servo board is properly connected and whether noise is affecting the signal. 2) Check the operation status of the magnetic contactor (MC). 3) If the problem persists, try replacing the BD632, BD640, and the amplifier board in sequence.",
+        "help_idx": "E02512",
+        "help_title": "AMP PN Undervoltage Occurred (MC Issue)"
     },
     "E2520": {
         "msg": "(%s axis) IPM fault",
         "cause": "Fault signal generated with IPM of the relevant axis in the drive system.",
         "remedy": "1) Check the motor drive parts. 2) Check the controller's cooling fan. (Refer to the troubleshooting manual for details.)",
-        "help_idx": "2-servo-control-board-part/E02520",
+        "help_idx": "E02520",
         "help_title": "[TroubleShoot](%s axis) IPM fault"
     },
     "E2521": {
         "msg": "(%s axis) IPM fault-Gate drive power undervoltage",
         "cause": "IPMF generated while in the Motor Off state. Problem with the gate drive power, or, more likely, problem with amp line connection.",
         "remedy": "1) Check the connection state of the CBNS line2) Replace AMP.3) Replace the servo board.",
-        "help_idx": "2-servo-control-board-part/E02521",
+        "help_idx": "E02521",
         "help_title": "[TroubleShoot](%s axis) IPM fault-Gate drive power undervoltage"
     },
     "E2522": {
         "msg": "(%s axis) IPM fault-Specific step",
         "cause": "When the IPM fault error is generated at specific steps, it means that the effect of the damage to the mechanical wiring for a taught step is shown significantly, or the axis sped varies significantly when the posture conversion of a taught program takes place.",
         "remedy": "1) Check the robot at the step where the error is generated. (Refer to the troubleshooting manual for details.)",
-        "help_idx": "2-servo-amp-board-part/E02522",
+        "help_idx": "E02522",
         "help_title": "[TroubleShoot](%s axis) IPM fault-Specific step"
     },
     "E2523": {
@@ -4712,7 +4784,9 @@
     "E2530": {
         "msg": "Disconnection/Defective contact on the PWMON wiring between AMP and the system",
         "cause": "Defective contact generated with the wiring path for the PWMON signal between AMP and the system board. This makes the PWM command in AMP cut off.",
-        "remedy": "Check the CNSGA cable of the drive system.Even after taking the above measures, if the error should occur again, contact our company for inquiries."
+        "remedy": "Check the CNSGA cable of the drive system.Even after taking the above measures, if the error should occur again, contact our company for inquiries.",
+        "help_idx": "E02530",
+        "help_title": "[TroubleShoot]Disconnection/Defective contact on the PWMON wiring between AMP and the system"
     },
     "E2531": {
         "msg": "PWM error-PWMON signal off",
@@ -4752,7 +4826,9 @@
     "E2538": {
         "msg": "PWM error-PWMON signal generation circuit fault",
         "cause": "All magnetic contactors are on, but the PWMON signal is not generated adequately.",
-        "remedy": "Replace the system board."
+        "remedy": "Replace the system board.",
+        "help_idx": "E02538",
+        "help_title": "[TroubleShoot]PWM error-PWMON signal generation circuit fault"
     },
     "E2540": {
         "msg": "(%s axis) PWM off when servo on",
@@ -4763,7 +4839,7 @@
         "msg": "(%s axis) drive system control voltage lowered",
         "cause": "+15 V, the control power supplied to the servo drive system, lowered.",
         "remedy": "1) Check the power display LED. 2) Check the output of the control power supply. 3) Check the control power supply. 4) Replace the related parts and check the power display LED. (Refer to the Troubleshooting Manual for details. )",
-        "help_idx": "2-servo-amp-board-part/E02541",
+        "help_idx": "E02541",
         "help_title": "[TroubleShoot](%s axis) drive system control voltage lowered"
     },
     "E2542": {
@@ -4795,14 +4871,14 @@
         "msg": "Initial Pre-Charge Relay Operation Failure",
         "cause": "An abnormality was detected in the operation of the initial pre-charge relay.",
         "remedy": "1) Check the connection between the power module and the servo board, including the cable and connector (CNPRC1). \n2) If the issue persists, replace the servo board and then the power module (PSM) in sequence.",
-        "help_idx": "4-servo-board-part/E02554",
+        "help_idx": "E02554",
         "help_title": "[TroubleShoot] Initial Pre-Charge Relay Operation Failure"
     },
     "E2560": {
         "msg": "Brake Power Supply Error",
         "cause": "The brake power supply is not being delivered.",
         "remedy": "1) Check whether the brake power supply (24V) is being supplied properly. (Check SMPS input/output and the output terminal of the noise filter.)\n2) Check for any disconnection or poor contact in the brake power cable.\n3) Check the connection cable (CNMC) between BD632 and the PSM. If the MC (Magnetic Contactor) does not operate, the brake power will not be supplied.\n4) Try replacing the servo board, PSM, and safety board in that order.",
-        "help_idx": "4-servo-board-part/E02560",
+        "help_idx": "E02560",
         "help_title": "[TroubleShoot] Brake Power Supply Error"
     },
     "E2561": {
@@ -4824,14 +4900,14 @@
         "msg": "(%s axis) Brake Output Overcurrent Detected",
         "cause": "An overcurrent condition was detected in the brake output.",
         "remedy": "1) Check the condition of the brake output line (wiring and connectors). \n2) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02564",
+        "help_idx": "E02564",
         "help_title": "[TroubleShoot](%s axis) Brake Output Overcurrent Detected"
     },
     "E2570": {
         "msg": "(%s axis) Brake Output Error",
         "cause": "No feedback is detected from the brake output signal.",
         "remedy": "1) Check the condition of the brake output line (wiring and connectors). \n2) Replace the servo board.",
-        "help_idx": "4-servo-board-part/E02570",
+        "help_idx": "E02570",
         "help_title": "[TroubleShoot](%s axis) Brake Output Error"
     },
     "E2590": {
@@ -4857,57 +4933,79 @@
     "E2610": {
         "msg": "(%s axis) motor UV phase overcurrent generated",
         "cause": "Overcurrent generated with the motor U and V phases",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02610",
+        "help_title": "[TroubleShoot](%s axis) motor UV phase overcurrent generated"
     },
     "E2611": {
         "msg": "(%s axis) motor U phase overcurrent generated",
         "cause": "Overcurrent generated with the motor U phase",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02611",
+        "help_title": "[TroubleShoot](%s axis) motor U phase overcurrent generated"
     },
     "E2612": {
         "msg": "(%s axis) motor V phase overcurrent generated",
         "cause": "Overcurrent generated with the motor V phase",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02612",
+        "help_title": "[TroubleShoot](%s axis) motor V phase overcurrent generated"
     },
     "E2613": {
         "msg": "(%s axis) motor W phase overcurrent generated",
         "cause": "Overcurrent generated with the motor W phase",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02613",
+        "help_title": "[TroubleShoot](%s axis) motor W phase overcurrent generated"
     },
     "E2620": {
         "msg": "(%s axis) received command code abnormal-1",
         "cause": "Filter 1 size set as zero or negative",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02620",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-1"
     },
     "E2621": {
         "msg": "(%s axis) received command code abnormal-2",
         "cause": "Filter 1 size set as larger than the regulated range",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02621",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-2"
     },
     "E2622": {
         "msg": "(%s axis) received command code abnormal-3",
         "cause": "Filter 2 size set as zero or negative",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02622",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-3"
     },
     "E2623": {
         "msg": "(%s axis) received command code abnormal-4",
         "cause": "Filter 2 size set as larger than the regulated range",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02623",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-4"
     },
     "E2624": {
         "msg": "(%s axis) received command code abnormal-5",
         "cause": "Filter 3 size set as zero or negative",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02624",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-5"
     },
     "E2625": {
         "msg": "(%s axis) received command code abnormal-6",
         "cause": "Filter 3 size set as larger than the regulated range",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02625",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-6"
     },
     "E2626": {
         "msg": "(%s axis) received command code abnormal-7",
         "cause": "Command codes from the main are not regulated",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02626",
+        "help_title": "[TroubleShoot](%s axis) received command code abnormal-7"
     },
     "E2629": {
         "msg": "(%s axis)Command checksum error",
@@ -4918,35 +5016,35 @@
         "msg": "(%s axis) position deviation exceeded",
         "cause": "Position deviation exceeded the set error value.",
         "remedy": "1) Check for mechanical interference on the affected axis.\n2) Verify that the brake releases properly. If abnormal, check the brake power supply.\n3) Ensure that the rated load is being used.\n4) Check the U, V, W motor wiring connections.\n5) Verify the position deviation limit setting.\n6) Check the version information of the servo board and the main computer.\n7) Replace and check in order: servo board → AMP → PSM → motor.",
-        "help_idx": "4-servo-board-part/E02630",
+        "help_idx": "E02630",
         "help_title": "[TroubleShoot](%s axis) position deviation exceeded"
     },
     "E2631": {
         "msg": "(%s axis) Speed-Based Position Deviation Excess",
         "cause": "The position deviation has exceeded the configured threshold based on speed.",
         "remedy": "1) Check for mechanical interference on the affected axis. \n2) Verify proper brake release operation; if abnormal, check the brake power supply. \n3) Ensure the system is operating under rated load. \n4) Inspect the U, V, W motor wiring. \n5) Check the configured position deviation level. \n6) Confirm the version information of the servo board and main COM. \n7) If the problem persists, sequentially replace the servo board, AMP, PSM, and motor for diagnosis.",
-        "help_idx": "4-servo-board-part/E02631",
+        "help_idx": "E02631",
         "help_title": "[TroubleShoot](%s axis) Speed-Based Position Deviation Excess"
     },
     "E2632": {
         "msg": "(%s axis) position deviation exceeded (brake voltage lowered)",
         "cause": "Position deviation exceeded the set error value because the brake cannot be released.",
         "remedy": "Refer to the fault repair methods.",
-        "help_idx": "4-servo-board-part/E02632",
+        "help_idx": "E02632",
         "help_title": "[TroubleShoot](%s axis) position deviation exceeded - brake voltage lowered"
     },
     "E2633": {
         "msg": "(%s axis) position deviation exceeded (load estimation not executed)",
         "cause": "Position deviation exceeded the set error value because load estimation is not executed (overload).",
         "remedy": "Refer to the fault repair methods.",
-        "help_idx": "4-servo-board-part/E02633",
+        "help_idx": "E02633",
         "help_title": "[TroubleShoot](%s axis) position deviation exceeded - load estimation not executed"
     },
     "E2634": {
         "msg": "(%s axis) Position Deviation Excess (Increased Friction at Low Temperature)",
         "cause": "When the encoder operates under low temperature conditions, the viscosity of the grease increases, leading to higher friction and causing the position deviation to exceed the configured error threshold.",
         "remedy": "1) Verify that the correct robot model is configured. \n2) Refer to the service manual and perform load estimation.",
-        "help_idx": "4-servo-board-part/E02634",
+        "help_idx": "E02634",
         "help_title": "[TroubleShoot](%s axis) Position Deviation Excess – Increased Friction at Low Temperature"
     },
     "E2635": {
@@ -4958,28 +5056,28 @@
         "msg": "(%s axis) position deviation exceeded",
         "cause": "Position deviation exceeded the set error value.",
         "remedy": "1) Check for mechanical interference on the affected axis. \n2) Verify proper brake release operation; if abnormal, inspect the brake power supply (CMR1). \n3) Check the connector status on the BD640 servo board; if abnormal, reconnect securely. \n4) Ensure that the system is operating under rated load. \n5) Check the configured position deviation level. For details, refer to the service manual.",
-        "help_idx": "4-servo-board-part/E02630",
+        "help_idx": "E02630",
         "help_title": "[TroubleShoot](Axis ○) position deviation exceeded"
     },
     "E2637": {
         "msg": "(Axis %s) position deviation exceeded for each speed",
         "cause": "The positional deviation exceeded the error setting value by speed.",
         "remedy": "1) Check any mechanical interference of axis of question. 2) Check the brake release, and if there is any problem, check the brake power (CMR1). 3) Check the rated load. 4) Check the positional deviation setting level. For more details, refer to the troubleshooting manual.",
-        "help_idx": "4-servo-board-part/E02631",
+        "help_idx": "E02631",
         "help_title": "[TroubleShoot](Axis ○) position deviation exceeded for each speed"
     },
     "E2638": {
         "msg": "(%s axis) position deviation exceeded",
         "cause": "The positional deviation exceeded the error setting value.",
         "remedy": "1) Check any mechanical interference of axis of question. 2) Check the brake release and if there is any problem, check the brake power (CMR2). 3) Check the rated load. 4) Check the positional deviation setting level. For more details, Refer to the troubleshooting manual.",
-        "help_idx": "4-servo-board-part/E02630",
+        "help_idx": "E02630",
         "help_title": "[TroubleShoot](Axis ○) position deviation exceeded"
     },
     "E2639": {
         "msg": "(Axis %s) position deviation exceeded for each speed",
         "cause": "The positional deviation exceeded the error setting value by speed.",
         "remedy": "1) Check any mechanical interference of axis of question. 2) Check the brake release and if there is any problem, check the brake power (CMR2). 3) Check the rated load. 4) Check the positional deviation setting level. For more details, Refer to the troubleshooting manual.",
-        "help_idx": "4-servo-board-part/E02631",
+        "help_idx": "E02631",
         "help_title": "[TroubleShoot](Axis ○) position deviation exceeded for each speed"
     },
     "E2640": {
@@ -4991,28 +5089,28 @@
         "msg": "(%s axis) Motor Overload",
         "cause": "The motor has continuously operated beyond its rated current, resulting in an overload condition.",
         "remedy": "Refer to the service manual for troubleshooting procedures.",
-        "help_idx": "4-servo-board-part/E02650",
+        "help_idx": "E02650",
         "help_title": "[TroubleShoot](%s axis) Motor Overload"
     },
     "E2651": {
         "msg": "(%s axis) Motor Overload (Brake Voltage Drop)",
         "cause": "A motor overload error occurred due to continuous operation above rated current, caused by the brake failing to release properly due to insufficient brake voltage.",
         "remedy": "Refer to the service manual for troubleshooting procedures.",
-        "help_idx": "4-servo-board-part/E02651",
+        "help_idx": "E02651",
         "help_title": "[TroubleShoot](%s axis) Motor Overload – Brake Voltage Drop"
     },
     "E2652": {
         "msg": "(%s axis) Motor Overload (Load Estimation Not Performed)",
         "cause": "A motor overload error occurred due to continuous operation above rated current, as load estimation was not performed.",
         "remedy": "Refer to the service manual for troubleshooting procedures.",
-        "help_idx": "4-servo-board-part/E02652",
+        "help_idx": "E02652",
         "help_title": "[TroubleShoot](%s axis) Motor Overload – Load Estimation Not Performed"
     },
     "E2653": {
         "msg": "(%s axis) motor overloaded (low-temperature friction increased)",
         "cause": "Current flowing through the motor exceeded the set continuous rating because the grease viscosity friction coefficient increases in low temperatures.",
         "remedy": "Refer to the fault repair methods.",
-        "help_idx": "4-servo-board-part/E02653",
+        "help_idx": "E02653",
         "help_title": "[TroubleShoot](%s axis) Motor overloading - low-temperature friction increased"
     },
     "E2654": {
@@ -5034,20 +5132,22 @@
         "msg": "(%s axis) command value abnormal",
         "cause": "Abnormality with the position command transmitted to the servo board.",
         "remedy": "Refer to the fault repair methods.",
-        "help_idx": "4-servo-board-part/E02670",
+        "help_idx": "E02670",
         "help_title": "[TroubleShoot](%s axis) command value abnormal"
     },
     "E2680": {
         "msg": "(%s axis) Maximum Speed Exceeded",
         "cause": "The command sent to the servo board exceeded the configured maximum speed.",
         "remedy": "Refer to the service manual for troubleshooting procedures.",
-        "help_idx": "4-servo-board-part/E02680",
+        "help_idx": "E02680",
         "help_title": "[TroubleShoot](%s axis) Maximum Speed Exceeded"
     },
     "E2690": {
         "msg": "Servo on time limit exceeded",
         "cause": "Servo On not executed within the time limit when servo on operated or power saving deactivated.",
-        "remedy": "Refer to the fault repair methods."
+        "remedy": "Refer to the fault repair methods.",
+        "help_idx": "E02690",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E2691": {
         "msg": "Servo off time limit exceeded",
@@ -5167,7 +5267,9 @@
     "E2764": {
         "msg": "Safety Board Error is detected",
         "cause": "Safety Board enters 'Safety Fault' state and transmits it to Servo Board.",
-        "remedy": "Safety Fault state. Please reboot the controller. \n2) Check the version information. \n3) Replace the Safety board. 4) Replace the main computer. 5) Replace the servo board."
+        "remedy": "Safety Fault state. Please reboot the controller. \n2) Check the version information. \n3) Replace the Safety board. 4) Replace the main computer. 5) Replace the servo board.",
+        "help_idx": "E02764",
+        "help_title": "[TroubleShoot] SFST Error is detected. Reboot the controller"
     },
     "E2765": {
         "msg": "Detected abnormal EtherCAT communication on the servo board (EtherCAT Sync manager watchdog)",
@@ -5193,14 +5295,14 @@
         "msg": "(%s axis) Servo Lock Cannot Be Maintained – Current Generation Error",
         "cause": "Current is not being properly supplied to the motor due to issues such as disconnection between the motor and controller or wiring faults.",
         "remedy": "1) Verify that the correct robot model is configured. \n2) Inspect the motor power and encoder communication lines. \n3) Check the cable connection between the servo board and the amplifier board. \n4) If the issue persists, replace and test in the following order: servo board, amplifier board, wire harness, motor, and PSM.",
-        "help_idx": "4-servo-board-part/E02780",
+        "help_idx": "E02780",
         "help_title": "[TroubleShoot](%s axis) Servo Lock Cannot Be Maintained – Current Generation Error"
     },
     "E2781": {
         "msg": "(%s axis) Servo Lock Cannot Be Maintained – Parameter Error",
         "cause": "Current is not being properly supplied to the motor due to issues such as disconnection between the motor and controller or wiring faults.",
         "remedy": "1) Verify that the correct robot model is configured. \n2) Inspect the motor power and encoder communication lines. \n3) Check the cable connection between the servo board and the amplifier board. \n4) If the issue persists, replace and test in the following order: servo board, amplifier board, wire harness, and motor.",
-        "help_idx": "4-servo-board-part/E02781",
+        "help_idx": "E02781",
         "help_title": "[TroubleShoot](%s axis) Servo Lock Cannot Be Maintained – Parameter Error"
     },
     "E2785": {
@@ -5231,12 +5333,16 @@
     "E2800": {
         "msg": "Teaching pendant operation abnormal",
         "cause": "Communication disconnection detected between the teaching pendant and the main computer.",
-        "remedy": "Simply ignore it.Contact our company for inquiries for T/P errors.If robot operation is urgent, R314 and increase the time-setting of \"[F2:System]-1:User environment-10:Teach pendant disconnect.Teaching pendant is abnormal, or communication is defective.Please contact to HHI.TEL   : 052-202-7927,7949,7956,7957FAX   : 052-202-7960E-Mail: robotas@hhi.co.kr"
+        "remedy": "Simply ignore it.Contact our company for inquiries for T/P errors.If robot operation is urgent, R314 and increase the time-setting of \"[F2:System]-1:User environment-10:Teach pendant disconnect.Teaching pendant is abnormal, or communication is defective.Please contact to HHI.TEL   : 052-202-7927,7949,7956,7957FAX   : 052-202-7960E-Mail: robotas@hhi.co.kr",
+        "help_idx": "E02800",
+        "help_title": "[TroubleShoot]Teaching pendant operation abnormal"
     },
     "E2801": {
         "msg": "TP watchdog time gap exceeded",
         "cause": "The execution of routine doing TP communication has been delayed.",
-        "remedy": "Please contact to HHI.If robot operation is urgent, R314 and increase the time-setting of \"[F2:System]-1:User environment-10:Teach pendant disconnect.\""
+        "remedy": "Please contact to HHI.If robot operation is urgent, R314 and increase the time-setting of \"[F2:System]-1:User environment-10:Teach pendant disconnect.\"",
+        "help_idx": "E02800",
+        "help_title": "[TroubleShoot]Teaching pendant operation abnormal"
     },
     "E2810": {
         "msg": "System CAN communication error - bus-off state",
@@ -5261,12 +5367,16 @@
     "E2830": {
         "msg": "Communication off with the system board",
         "cause": "Communication abruptly disconnected with the system board.",
-        "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether there is abnormality with the system board power.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main computer.6) If the same phenomenon persists even after replacing the main computer, replace the cable."
+        "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether there is abnormality with the system board power.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main computer.6) If the same phenomenon persists even after replacing the main computer, replace the cable.",
+        "help_idx": "E02830",
+        "help_title": "[TroubleShoot]Communication off with the system board"
     },
     "E2832": {
         "msg": "System board communication not opened",
         "cause": "After booting, the communication is not opened with the system board.",
-        "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether the power is supplied to the system board.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main computer.6) If the same phenomenon persists even after replacing the main computer, replace the cable."
+        "remedy": "1) Check the access state of the CAN communication cable.2) Check whether the system board program is removed.3) Check whether the power is supplied to the system board.4) If there is no abnormality with the above items, replace the system board.5) If the same phenomenon persists even after replacing the system board, replace the main computer.6) If the same phenomenon persists even after replacing the main computer, replace the cable.",
+        "help_idx": "E02832",
+        "help_title": "[TroubleShoot]System board communication not opened"
     },
     "E2833": {
         "msg": "Undefined system board error occurred",
@@ -5411,92 +5521,128 @@
     "E3000": {
         "msg": "AMP Low-Volatge by MSPR NOT Operating",
         "cause": "The MSPR relay for precharging the capacitor did not work.",
-        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit."
+        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit.",
+        "help_idx": "E0140",
+        "help_title": "[TroubleShoot]MSPR operation abnormal"
     },
     "E3001": {
         "msg": "MSPR does not operate during Motor ON status",
         "cause": "The MSPR relay for precharging the capacitor did not work.",
-        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit."
+        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit.",
+        "help_idx": "E0140",
+        "help_title": "[TroubleShoot]MSPR operation abnormal"
     },
     "E3002": {
         "msg": "MSPR Relay signal is ON but it does not operate",
         "cause": "The MSPR relay for precharging the capacitor did not work.",
-        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit."
+        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit.",
+        "help_idx": "E0140",
+        "help_title": "[TroubleShoot]MSPR operation abnormal"
     },
     "E3003": {
         "msg": "MSPR does not work when trying to make Motor ON",
         "cause": "The MSPR relay for precharging the capacitor did not work.",
-        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit."
+        "remedy": "Check up the MSPR relay and the CNPC cable on drive unit.",
+        "help_idx": "E0140",
+        "help_title": "[TroubleShoot]MSPR operation abnormal"
     },
     "E3004": {
         "msg": "AMP Low-Volatge by MSHP NOT Operating",
         "cause": "MSHP doesn't work.",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0127",
+        "help_title": "[TroubleShoot]MSHP operation abnormal"
     },
     "E3005": {
         "msg": "MSHP does not operate during Motor ON status",
         "cause": "MSHP doesn't work.",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0127",
+        "help_title": "[TroubleShoot]MSHP operation abnormal"
     },
     "E3006": {
         "msg": "MSHP does not work when trying to make Motor ON",
         "cause": "MSHP does not work when making AMP or Motor ON ready",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0127",
+        "help_title": "[TroubleShoot]MSHP operation abnormal"
     },
     "E3007": {
         "msg": "Under-voltage error of AMP(RobotAxes) during Motor ON status",
         "cause": "PN voltage of servo AMP(Robot Axes) became low during Motor On status.",
-        "remedy": "Please check input power of servo AMP and recovery discharging status."
+        "remedy": "Please check input power of servo AMP and recovery discharging status.",
+        "help_idx": "E0033",
+        "help_title": "[TroubleShoot]AMP undervoltage generated"
     },
     "E3008": {
         "msg": "Under-voltage error of AMP(Auxiliary Axes) during Motor ON status",
         "cause": "PN voltage of servo AMP(Auxiliary Axes) became low during Motor On status.",
-        "remedy": "Please check input power of servo AMP and recovery discharging status."
+        "remedy": "Please check input power of servo AMP and recovery discharging status.",
+        "help_idx": "E0033",
+        "help_title": "[TroubleShoot]AMP undervoltage generated"
     },
     "E3009": {
         "msg": "Under-voltage error of AMP(Robot Axes) when trying to make Motor ON",
         "cause": "Under-voltage of AMP(Robot Axes) is detected when making AMP or Motor ON ready. PN voltage of main servo AMP bacame low.",
-        "remedy": "Please check input power of servo AMP and recovery discharging status."
+        "remedy": "Please check input power of servo AMP and recovery discharging status.",
+        "help_idx": "E0033",
+        "help_title": "[TroubleShoot]AMP undervoltage generated"
     },
     "E3010": {
         "msg": "Under-voltage error of AMP(Auxiliary Axes) when trying to make Motor ON",
         "cause": "Under-voltage of AMP(Auxiliary Axes) is detected when making AMP or Motor ON ready. PN voltage of auxiliary servo AMP bacame low.",
-        "remedy": "Please check input power of servo AMP and recovery discharging status."
+        "remedy": "Please check input power of servo AMP and recovery discharging status.",
+        "help_idx": "E0033",
+        "help_title": "[TroubleShoot]AMP undervoltage generated"
     },
     "E3011": {
         "msg": "Over-voltage of AMP(Robot Axes) when trying to make Motor On",
         "cause": "It is detected that Pre-defined servo AMP(Robot Axes) voltage(P-N) is over.",
-        "remedy": "Check the AC input voltage in the controller.Check the connection of discharge resistor."
+        "remedy": "Check the AC input voltage in the controller.Check the connection of discharge resistor.",
+        "help_idx": "E0011",
+        "help_title": "[TroubleShoot]AMP overvoltage (P-N) generated"
     },
     "E3012": {
         "msg": "Over-voltage of AMP(Auxiliary Axes) when trying to make Motor On",
         "cause": "It is detected that Pre-defined servo AMP(Auxiliary Axes) voltage(P-N) is over.",
-        "remedy": "Check the AC input voltage in the controller.Check the connection of discharge resistor."
+        "remedy": "Check the AC input voltage in the controller.Check the connection of discharge resistor.",
+        "help_idx": "E0011",
+        "help_title": "[TroubleShoot]AMP overvoltage (P-N) generated"
     },
     "E3013": {
         "msg": "%s axis) Cannot make servo on trying to make Motor On",
         "cause": "When trying to make Motor On to operate, Servo On was not executed within the limited time.",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E3014": {
         "msg": "Servo errors are not cleared trying to make Motor On",
         "cause": "When trying to make Motor On to operate, Servo errors are not cleared so that servo on was failed",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E3015": {
         "msg": "Servo On is failed when trying to make PWM ON",
         "cause": "After finishing SPOT(stud) function, Servo On is failed within the limited time.",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E3016": {
         "msg": "Servo On is failed by clearing errors after releasing power-saving mode",
         "cause": "Servo errors are not cleared so that making servo on is failed after power-saving mode",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E3017": {
         "msg": "Servo On is failed after releasing power-saving mode",
         "cause": "Maing servo on is failed after power-saving mode",
-        "remedy": "Please refer to trouble shooting."
+        "remedy": "Please refer to trouble shooting.",
+        "help_idx": "E0122",
+        "help_title": "[TroubleShoot]Servo on time limit exceeded"
     },
     "E3018": {
         "msg": "Cannot make servo off when trying to make Motor Off",
@@ -10418,6 +10564,11 @@
         "cause": "Failed in returning to the next program counter of gosub.",
         "remedy": "Retry after R code 0(program counter reset)."
     },
+    "E14184": {
+        "msg": "Invalid command; exclusive to HDC series",
+        "cause": "HDC-exclusive command was executed on a non-HDC robot.",
+        "remedy": "Delete or modify the command."
+    },
     "E14262": {
         "msg": "Failed in assignment statement to arithmetic variable.",
         "cause": "Failed in assignment statement to arithmetic variable.",
@@ -14912,13 +15063,15 @@
     "E29002": {
         "msg": "Board Communication (EtherCAT) Initialization Failure",
         "cause": "Board Communication can't be initialized on the servo board or the safety board, or there is a mismatch in the communication configuration file (ENI).",
-        "remedy": "1) Check the communication cable connections between boards. 2) Request an inspection of the communication configuration file from the manufacturer. 3) If the issue persists, replace the servo board. 4) If the issue persists, replace the safety board."
+        "remedy": "1) Check the communication cable connections between boards. 2) Request an inspection of the communication configuration file from the manufacturer. 3) If the issue persists, replace the servo board. 4) If the issue persists, replace the safety board.",
+        "help_idx": "E29002",
+        "help_title": "[TroubleShoot] Board Communication (EtherCAT) Initialization Failure"
     },
     "E29003": {
         "msg": "Board Communication Error (EtherCAT Disconnected)",
         "cause": "There is a fault in the servo board or the safety board, or a communication cable disconnection has occurred.",
         "remedy": "1) Check the communication cable connections between boards. 2) If the issue persists, replace the servo board. 3) If the issue persists, replace the safety board.",
-        "help_idx": "5-communication/E29003",
+        "help_idx": "E29003",
         "help_title": "[TroubleShoot] Board Communication Error (EtherCAT Disconnected)"
     },
     "E29004": {
@@ -14980,7 +15133,7 @@
         "msg": "Board Communication (EtherCAT) Master Disconnection Detected",
         "cause": "Unable to communicate with the first connected device.",
         "remedy": "1) Check the operation and communication status of the first connected device. 2) Inspect the servo board and replace it if the issue persists.",
-        "help_idx": "5-communication/E29016",
+        "help_idx": "E29016",
         "help_title": "[TroubleShoot] Board Communication (EtherCAT) Master Disconnection Detected"
     },
     "E29017": {
@@ -16409,9 +16562,9 @@
         "remedy": "Take measures by referring to the sensor error number displayed on the history screen, and also to the sensor manual.1: Error with communication set with PC -Failed to carry out communication with PC2: Abnormality with the sensor camera -No sensor head video existent3: Abnormality with the sensor link -No sensor head communication existent. Abnormality with the camera cable?4: No sensor connected -No video or communication existent. Is a sensor installed?5: Abnormality with the sensor operation temperature-Too hot or too cold6: Abnormality with the sensor power-Sensor head power exceeded the power supply range of 24 V. Abnormality with the camera cable?7: Check the laser disable-laser enable key switch and the laser warning lamp.8: No sensor calibration executed-Abnormality with sensor calibration. Try another sensor head.9: Exceeding the shape range-No strip existent in the video.10: No shape visible for analysis. Data existent but failed to analyze in search mode.11: Not usable for this connection.12: No shape set. Is the shape number correct?13: No shape in the image for tracking.14: While the robot is communicating with the sensor, the [Esc] key in the tool program is pressed.15: Abnormality with the memory of the sensor control system. Carry out reformatting and load the backup file.16: Failed to read the system data17: Error with reading the shape from the flash memory-Damaged?18: Error with reading the shape from the flash memory-Damaged?19: Abnormality with the analog circuit (POST)20: Error with the video collection hardware21: Error with the timer hardware22: Damage to the flash memory-Required to replace.23: Insufficient data flash memory24: Damaged sector existent in the flash memory-Just warning25: Error with the error log26: No power for I/O of SAPEII board27: ESTOP operation-Check the ESTOP link or connection.28: Existent within the 5 degrees of temperature limit."
     },
     "E32705": {
-        "msg": "Error is recieved from LVS.(SLS)",
-        "cause": "LVS has sent error message to robot.(SLS)",
-        "remedy": "Take measures by referring to the sensor error number displayed on the history screen, and also to the sensor manual.1: Error with communication set with PC -Failed to carry out communication with PC2: Abnormality with the sensor camera -No sensor head video existent3: Abnormality with the sensor link -No sensor head communication existent. Abnormality with the camera cable?4: No sensor connected -No video or communication existent. Is a sensor installed?5: Abnormality with the sensor operation temperature-Too hot or too cold6: Abnormality with the sensor power-Sensor head power exceeded the power supply range of 24 V. Abnormality with the camera cable?7: Check the laser disable-laser enable key switch and the laser warning lamp.8: No sensor calibration executed-Abnormality with sensor calibration. Try another sensor head.9: Exceeding the shape range-No strip existent in the video.10: No shape visible for analysis. Data existent but failed to analyze in search mode.11: Not usable for this connection.12: No shape set. Is the shape number correct?13: No shape in the image for tracking.14: While the robot is communicating with the sensor, the [Esc] key in the tool program is pressed.15: Abnormality with the memory of the sensor control system. Carry out reformatting and load the backup file.16: Failed to read the system data17: Error with reading the shape from the flash memory-Damaged?18: Error with reading the shape from the flash memory-Damaged?19: Abnormality with the analog circuit (POST)20: Error with the video collection hardware21: Error with the timer hardware22: Damage to the flash memory-Required to replace.23: Insufficient data flash memory24: Damaged sector existent in the flash memory-Just warning25: Error with the error log26: SAPEII보드의 I/O에 전원 누락27: ESTOP operation-Check the ESTOP link or connection.28: Existent within the 5 degrees of temperature limit."
+        "msg": "Tracking is not possible because the tracking queue is empty.",
+        "cause": "The target points for tracking are empty.",
+        "remedy": "Please perform a search command prior to tracking. If this error occurs during welding, improve sensing stability through LVS weld line settings and reduce the impact of spatter by attaching covers."
     },
     "E32706": {
         "msg": "Failure to detect start point during stop searching.",
@@ -16424,9 +16577,9 @@
         "remedy": "1) Adjust the position of start point searching.2) Check the welding seam type.3) Decrease the minimum distance of position sampling."
     },
     "E32708": {
-        "msg": "Detected seam point is not enough.(during start point searching)",
-        "cause": "1) The laser scan line does not move on the welding seam line.2) Improper welding seam type is defined.3) Detected welding seam line is not enough to infer the start point.",
-        "remedy": "1) Adjust the position of start point searching.2) Check the welding seam type.3) Decrease the minimum distance of position sampling."
+        "msg": "Unable to start search because the seam is not recognized.",
+        "cause": "1) The scan line does not pass over the weld line. 2) The defined weld line type is incorrect. 3) The sensor cannot recognize the seam.",
+        "remedy": "1) Adjust the starting point detection search range. 2) Check the weld line type."
     },
     "E32709": {
         "msg": "LVS function activated with arcsensing on.",
@@ -16434,9 +16587,9 @@
         "remedy": "Turn off the arcsensing function."
     },
     "E32710": {
-        "msg": "Detected seam point is not enough.(during restart)",
-        "cause": "1) The laser scan line does not move on the welding seam line.2) Improper welding seam type is defined.3) Detected welding seam line is not enough to infer the start point.",
-        "remedy": "1) Adjust the position of start point searching.2) Check the welding seam type.3) Decrease the minimum distance of position sampling."
+        "msg": "Detected seam point is not enough during search.",
+        "cause": "1) Detected welding seam is not enough to infer the start point. 2) The laser scan line is not on the welding seam line. 3) Improper welding seam type is loaded from lvs controller.",
+        "remedy": "1) Check the welding seam type and sensing validity. 2) Check the position of start point searching. 3) Set padding function valid on search option. padding function works when more than 50% of the seam can be detected in the search region."
     },
     "E32711": {
         "msg": "Detected seam point is not enough.(tracking start)",
@@ -16499,9 +16652,9 @@
         "remedy": "Correct the teaching position, or adjust the maximum permissible deviation angle of the trajectory."
     },
     "E32723": {
-        "msg": "adjust LVS HW position to near nominal height position.",
-        "cause": "Calibration is impossible due to large difference from HW height to nominal height.",
-        "remedy": "Modify LVS sensor HW position to near nominal height position."
+        "msg": "LVS automatic calibration failed.",
+        "cause": "Failed to align the sensor's roll angle parallel to the calibration plate.",
+        "remedy": "Check the seam settings on the LVS controller and verify that the roll angle is being properly sensed. Check the surface condition of the calibration plate."
     },
     "E32724": {
         "msg": "LVS seam finding exceeds allowable sensing range.",
@@ -17004,140 +17157,145 @@
         "remedy": "Set the TP mode switch to Remote mode before sending the API request."
     },
     "E50000": {
-        "msg": "Servo[#%S] EtherCAT state transition occurred(OP to SafeOP)",
+        "msg": "Servo[#%s] EtherCAT state transition occurred(OP to SafeOP)",
         "cause": "An EtherCAT communication error caused the AL status to transition to SafeOP (or PreOP/Init).",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or servo board if necessary."
     },
     "E50001": {
-        "msg": "Servo[#%S] Abnormal EtherCAT Command",
+        "msg": "Servo[#%s] Abnormal EtherCAT Command",
         "cause": "The servo board has detected that the EtherCAT PDO data cannot be updated.",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary."
 
     },
     "E50002": {
-        "msg": "Servo[#%S] Abnormal current feedback",
+        "msg": "Servo[#%s] Abnormal current feedback",
         "cause": "Servo CPU did not receive current data from the Safety CPU in time.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50003": {
-        "msg": "Servo[#%S] CPU watchdog timer expired 1",
+        "msg": "Servo[#%s] CPU watchdog timer expired 1",
         "cause": "Watchdog timer expired for the main computer function heartbeat signal from the Servo CPU.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50004": {
-        "msg": "Servo[#%S] Fail to clear error",
+        "msg": "Servo[#%s] Fail to clear error",
         "cause": "Error during execution of error reset on Servo CPU after receiving command from Safety CPU.",
         "remedy": "1) Check that all recently occurred errors in the error history have been resolved.\n2) Replace the servo board."
     },
     "E50005": {
-        "msg": "Safety[#%S] - CRC error in communication data with servo board CPU [MCU A]",
+        "msg": "Safety[#%s] - CRC error in communication data with servo board CPU [MCU A]",
         "cause": "A CRC error occurred in the communication data sent from the Safety board CPU (MCU A) to the Servo CPU.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Safety board."
     },
     "E50006": {
-        "msg": "Safety[#%S] - CRC error in communication data with servo board CPU [MCU B]",
+        "msg": "Safety[#%s] - CRC error in communication data with servo board CPU [MCU B]",
         "cause": "A CRC error occurred in the communication data sent from the Safety board CPU (MCU B) to the Servo CPU.",
         "remedy": "1) Check the status of the Safety Controller. \n2) Replace the Safety board."
     },
     "E50007": {
-        "msg": "Safety[#%S] - Communication data update error with servo CPU (Error Code 1) [MCU A]",
+        "msg": "Safety[#%s] - Communication data update error with servo CPU (Error Code 1) [MCU A]",
         "cause": "Communication data from Safety CPU (MCU A, CPU1) to Servo CPU is not being updated (incremental number not increasing).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50008": {
-        "msg": "Safety[#%S] - Communication data update error 1 with servo CPU [MCU B]",
+        "msg": "Safety[#%s] - Communication data update error 1 with servo CPU [MCU B]",
         "cause": "Communication data from Safety CPU (MCU B, CPU1) to Servo CPU is not being updated (incremental number not increasing).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50009": {
-        "msg": "Safety[#%S] - Communication error with servo CPU due to abnormal incremental count [MCU A]",
+        "msg": "Safety[#%s] - Communication error with servo CPU due to abnormal incremental count [MCU A]",
         "cause": "The incremental numbers in the communication data between the Servo CPU and the Safety CPU (MCU A, CPU 1) have increased incorrectly.",
         "remedy": "1) Check the status of the Safety board. \n2) Replace the Servo board."
     },
     "E50010": {
-        "msg": "Safety[#%S] - Communication error with servo CPU due to abnormal incremental count [MCU B]",
+        "msg": "Safety[#%s] - Communication error with servo CPU due to abnormal incremental count [MCU B]",
         "cause": "The incremental numbers in the communication data between the Servo CPU and the Safety CPU (MCU B, CPU 1) have increased incorrectly.",
         "remedy": "1) Check the status of the Safety board.\n 2) Replace the Servo board."
     },
     "E50011": {
-        "msg": "Safety[#%S] - Communication update error 2 with servo CPU [MCU A]",
+        "msg": "Safety[#%s] - Communication update error 2 with servo CPU [MCU A]",
         "cause": "Communication data from Safety CPU (MCU A, CPU2) to Servo CPU is not being updated (incremental number not increasing).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50012": {
-        "msg": "Safety[#%S] - Communication update error 2 with servo CPU [MCU B]",
+        "msg": "Safety[#%s] - Communication update error 2 with servo CPU [MCU B]",
         "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU is not being updated (incremental number not increasing).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50013": {
-        "msg": "Safety[#%S] - Communication update error 3 with servo CPU [MCU A]",
+        "msg": "Safety[#%s] - Communication update error 3 with servo CPU [MCU A]",
         "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU was abnormally updated (incremental number not incrementing correctly).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50014": {
-        "msg": "Safety[#%S] - Communication update error 3 with servo CPU [MCU B]",
+        "msg": "Safety[#%s] - Communication update error 3 with servo CPU [MCU B]",
         "cause": "Communication data from Safety CPU (MCU B, CPU2) to Servo CPU was abnormally updated (incremental number not incrementing correctly).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
 
 
     },
     "E50015": {
-        "msg": "Servo[#%S] - CRC error during servo control parameter transmission",
+        "msg": "Servo[#%s] - CRC error during servo control parameter transmission",
         "cause": "A CRC error occurred during the download of servo control parameters via EtherCAT SDO.",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary."
     },
     "E50016": {
-        "msg": "Servo[#%S] - Incompatible Safety CPU version detected [MCU A]",
+        "msg": "Servo[#%s] - Incompatible Safety CPU version detected [MCU A]",
         "cause": "The version of Safety CPU (MCU A) is incompatible with the Servo CPU.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board."
     },
     "E50017": {
-        "msg": "Servo[#%S] - Incompatible Safety CPU version detected [MCU B]",
+        "msg": "Servo[#%s] - Incompatible Safety CPU version detected [MCU B]",
         "cause": "The version of Safety CPU (MCU B) is incompatible with the Servo CPU.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board." 
     },
     "E50018": {
-        "msg": "Servo[#%S] - EtherCAT AL Status NOSYNCERROR",
+        "msg": "Servo[#%s] - EtherCAT AL Status NOSYNCERROR",
         "cause": "Failed to detect DC Sync signal during Servo CPU state transition (SafeOP to OP).",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary." 
     },
+    "E50019": {
+        "msg": "Servo[#%s] - EtherCAT AL Status DC PLL",
+        "cause": "The servo board CPU has detected a clock synchronization fault via EtherCAT DC.",
+        "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Replace the main computer or Servo board if necessary." 
+    },
     "E50020": {
-        "msg": "Servo[#%S] - EtherCAT AL Status SMWATCHDOG",
+        "msg": "Servo[#%s] - EtherCAT AL Status SMWATCHDOG",
         "cause": "No EtherCAT RxPDO data received by Servo CPU within the expected timeframe.",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary." 
     },
     "E50021": {
-        "msg": "Servo[#%S] - CPU watchdog timer expired 2",
+        "msg": "Servo[#%s] - CPU watchdog timer expired 2",
         "cause": "Watchdog timer expired for the current control function heartbeat signal of the Servo CPU.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board." 
     },
     "E50022": {
-        "msg": "Servo[#%S] - Executing version update while motor is running",
+        "msg": "Servo[#%s] - Executing version update while motor is running",
         "cause": "An attempt was made to perform a version upgrade while the motor is running.",
         "remedy": "1) Try updating the version after turning off the servo motor." 
     },
     "E50023": {
-        "msg": "Servo[#%S] - EtherCAT AL Status FATALSYNCERROR",
+        "msg": "Servo[#%s] - EtherCAT AL Status FATALSYNCERROR",
         "cause": "Watchdog timer expired for the EtherCAT DC Sync detection signal of the Servo CPU.",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary." 
     },
     "E50024": {
-        "msg": "Servo[#%S] - Abnormal CPU state",
+        "msg": "Servo[#%s] - Abnormal CPU state",
         "cause": "Servo CPU is not in a state to safely drive the motor (self-diagnostic bit not activated).",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board." 
     },
     "E50025": {
-        "msg": "Servo[#%S] - Abnormal Safety CPU state [MCU A]",
+        "msg": "Servo[#%s] - Abnormal Safety CPU state [MCU A]",
         "cause": "The Safety CPU cannot safely operate the motor due to an error in safety parameter initialization.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board." 
     },
     "E50026": {
-        "msg": "Servo[#%S] - Abnormal Safety CPU state [MCU B]",
+        "msg": "Servo[#%s] - Abnormal Safety CPU state [MCU B]",
         "cause": "The Safety CPU cannot safely operate the motor due to an error in safety parameter initialization.",
         "remedy": "1) Check the versions of the Servo and Safety.\n2) Replace the Servo board." 
     },
     "E50027": {
-        "msg": "Servo[#%S] - EtherCAT PDI detection failed (Watchdog timeout)",
+        "msg": "Servo[#%s] - EtherCAT PDI detection failed (Watchdog timeout)",
         "cause": "Servo CPU did not receive new EtherCAT frames within the expected time.",
         "remedy": "1) Check the EtherCAT connection status of the Servo board.\n2) Inspect the mounting condition of the main computer or Servo board.\n3) Replace the main computer or Servo board if necessary." 
     },
@@ -17225,7 +17383,7 @@
         "msg": "(%s axis) Motor overload (Increased Friction Due to Low Temperature)",
         "cause": "Operating the motor in a low-temperature state (without preheating) increases the viscous friction coefficient, causing the current flowing through the motor to exceed the rated continuous current.",
         "remedy": "1) Operate the robot at low speed to warm it up. \n2) Check for any mechanical interference within the robot’s operating range. \n3) Verify proper operation of the brake release. \n4) If the error persists, replace the motor.",
-        "help_idx": "4-servo-board-part/E50201",
+        "help_idx": "E02653",
         "help_title": "[Remedy](○ Axis) Motor Overload – Increased Friction Due to Low Temperature"
     },
     "E50202": {
@@ -17247,14 +17405,14 @@
         "msg": "(%s axis) Unable to sustain servo lock – abnormal current output",
         "cause": "Motor current is not being properly supplied due to wire harness issues such as poor contact, disconnection, short circuit, miswiring, or problems with the amplifier or board.",
         "remedy": "1) Check the wiring between the controller and the robot. \n2) Check the status of the amplifier board. \n3) Check the status of the Servo board. \n4) If the problem persists, replace the Servo and amplifier boards.",
-        "help_idx": "4-servo-board-part/E50205",
+        "help_idx": "E02780",
         "help_title": "[Action Method](○ Axis) Servo Lock Maintenance Impossible – Wiring or Current Generation Issue"
     },
     "E50206": {
         "msg": "(%s axis) Unable to sustain servo lock – abnormal parameter",
         "cause": "Abnormal current was applied due to incorrect motor parameter settings.",
         "remedy": "1) Check the robot registration information. \n2) Verify the servo control gains.",
-        "help_idx": "4-servo-board-part/E50206",
+        "help_idx": "E02781",
         "help_title": "[Action Method](○ Axis) Unable to maintain servolock - Gain issue"
     },
     "E50207": {
@@ -17280,7 +17438,7 @@
     "E50401": {
         "msg": "(%s axis) Speed-Based Position Deviation Exceeded",
         "cause": "The position deviation has exceeded the speed-based error threshold.",
-        "remedy": "1) Check for any mechanical interference in the problematic axis. \n2) Verify that the brake is releasing properly, and if there are issues, inspect the brake power supply. \n3) Ensure that the rated load is being used. \n4) Check the position deviation setting level. For more details, refer to the troubleshooting guide."
+        "remedy": "1) Check for any mechanical interference in the problematic axis. \n2) Verify that the brake is releasing properly, and if there are issues, inspect the brake power supply. \n3) Ensure that the rated load is being used. \n4) Check the position deviation setting level. \n5) Check the acceleration and deceleration parameter settings. For more details, refer to the troubleshooting guide."
     },
     "E50402": {
         "msg": "(%s axis) Position Deviation Exceeded (Cold Temperature Friction Increase)",
@@ -17296,7 +17454,7 @@
         "msg": "(%s axis) Exceeded Maximum Speed",
         "cause": "The axis has exceeded the configured maximum speed during operation.",
         "remedy": "1) Check the servo control gain. \n2) Inspect the motor and encoder status. \n3) Refer to the troubleshooting guide.",
-        "help_idx": "4-servo-board-part/E02680",
+        "help_idx": "E02680",
         "help_title": "[Remedy](○ axis) Exceeded Maximum Speed"
     },
     "E51000": {
@@ -17408,7 +17566,7 @@
         "msg": "Safety[#%s] AMP PN undervoltage occurred",
         "cause": "If error occured at a specific step depending on the robot playback speed, PN voltage lowered because of the significant use of energy. May be generated because the controller input power is unstable.",
         "remedy": "1) Check the error by lowering the robot playback speed.2) Check the controller power voltage when the robot is operating. (Refer to the troubleshooting manual for details)",
-        "help_idx": "2-servo-amp-board-part/E02506",
+        "help_idx": "E02506",
         "help_title": "[TroubleShoot]AMP PN undervoltage occurred"
     },
     "E51410": {
@@ -18186,6 +18344,11 @@
         "cause": "The Target Unique Network Identifier (TUNID) in the safety configuration does not match the actual device ID. This usually occurs after changeing safety parameters or modifying the network configuration.",
         "remedy": "1) Check if the Safety Network Number (SNN) and IP address are correctly configured. 2) Perform the 'Reset Ownership' or 'Clear TUNID' procedure in the safety configuration tool. 3) Re-download the safety project to synchronize the TUNID with the target device."
     },
+    "E52504": {
+        "msg": "CIP Safety SVS timestamp delta is zero",
+        "cause": "The timestamp delta of the Safety Validator Server is zero.",
+        "remedy": "1) Check the software version of the main computer.\r\n2) Check the software version of the safety board."
+    },
 	"E52599": {
         "msg": "Network configuration does not support CIP Safety",
         "cause": "The current network configuration does not support CIP Safety.",
@@ -18396,10 +18559,35 @@
         "cause": "Mismatch between mcua and mcub firmware",
         "remedy": "1) Please update the firmware again. 2) If the problem persists, replace the safety board."
     },
-	"E52824": {
+    "E52824": {
         "msg": "Safety[#%s] SDRAM read and write error",
         "cause": "It is not possible read and write SDRAM",
         "remedy": "1)  Reboot the controller. 2) If the problem persists, replace the safety board."
+    },
+    "E52825": {
+        "msg": "Safety[#%s] N15V voltage error",
+        "cause": "The N15V voltage on the safety board is abnormal.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the safety board."
+    },
+	"E52826": {
+        "msg": "Safety[#%s] Voltage P5V error",
+        "cause": "The P5V voltage on the safety board is abnormal.",
+        "remedy": "1) Reboot the controller. 2) If the problem persists, replace the safety board."
+    },
+    "E52830": {
+        "msg": "Safety[#%s] Firmware version compatibility error 1",
+        "cause": "There is a firmware compatibility issue between modules.",
+        "remedy": "1) Update the firmware again.  2) If the problem persists, replace the safety board."
+    },
+	"E52831": {
+        "msg": "Safety[#%s] Firmware version compatibility error 2",
+        "cause": "There is a firmware compatibility issue between modules.",
+        "remedy": "1) Update the firmware again.  2) If the problem persists, replace the safety board."
+    },
+	"E52832": {
+        "msg": "Safety[#%s] Firmware version compatibility error 3",
+        "cause": "There is a firmware compatibility issue between modules.",
+        "remedy": "1) Update the firmware again.  2) If the problem persists, replace the safety board."
     },
 	"E52841": {
         "msg": "Safety[#%s] ZP3V3 Low Voltage error",
@@ -18641,6 +18829,21 @@
         "cause": "There is an issue with the error number and additional information.",
         "remedy": "1) Reboot the robot controller. 2) Check the system version information."
     },
+    "E53602": {
+        "msg": "Failed to open SafeSpace 2.0 configuration file",
+        "cause": "Failed to open the SafeSpace 2.0 configuration file.",
+        "remedy": "After resetting the parameters in the [Safety System] menu, click [Apply All]. If the issue persists, initialize the safety parameters."
+    },
+   "E53604": {
+        "msg": "SafeSpace 2.0 config: Invalid certificate format",
+        "cause": "The certificate file format is invalid. The file may have been tampered with.",
+        "remedy": "After resetting the parameters in the [Safety System] menu, click [Apply All]. If the issue persists, initialize the safety parameters."
+    },
+	"E53605": {
+        "msg": "SafeSpace 2.0 configration certificate code does not match",
+        "cause": "The certificate file code is invalid. The file may have been tampered with.",
+        "remedy": "After resetting the parameters in the [Safety System] menu, click [Apply All]. If the issue persists, initialize the safety parameters."
+    },
     "E53610": {
         "msg": "Tool information mismatch(Weight)",
         "cause": "The tool weight in the safety settings does not match the robot's tool parameter data.",
@@ -18681,16 +18884,246 @@
         "cause": "Activated robot tool data is not configured in safe tool information",
         "remedy": "Configure a tool number in [Safety System]-[General setup]-[Safe tool information] and verify that the corresponding values are consistent with those in [Robot parameter]-[Tool data]."
     },
-	"E54554": {
-		"msg": "Radar sensor %s MCU[%s] detection failure error",
-		"cause": "Continuous detection failures occurring",
-		"remedy": "1) Check if there are any objects blocking the radar sensor. 2) If the problem persists, replace the sensor."
+	"E54301": {
+		"msg": "Diagnostic error on the radar board MCU",
+		"cause": "The hardware logic of the MCU is abnormal.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
 	},
-    "E54555": {
-        "msg": "Radar sensor %s MCU[%s] CAN communication error",
-        "cause": "CAN communication data duplication or loss occurring",
-        "remedy": "1) Replace the corresponding sensor. 2) Replace the sensor control board. 3) If the problem persists, please contact our company."
-    },
+	"E54302": {
+		"msg": "Interrupt diagnostic error on the radar board",
+		"cause": "MCU interrupt address mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54303": {
+		"msg": "CPU register diagnostic error on the radar board",
+		"cause": "Read,write operation abnormality in the CPU1 core register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54304": {
+		"msg": "FPU register diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the CPU1 FPU register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54305": {
+		"msg": "VCRC register diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the CPU1 VCRC register.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54306": {
+		"msg": "RAM diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the MCU RAM.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54307": {
+		"msg": "RAM diagnostic error on the radar board",
+		"cause": "Read,write abnormality in the MCU RAM copy area.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54308": {
+		"msg": "Flash diagnostic error on the radar board",
+		"cause": "MCU Flash CRC mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54309": {
+		"msg": "Oscillator diagnostic error on the radar board",
+		"cause": "Abnormality in the radar board's external oscillator.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54311": {
+		"msg": "Boot Flash CRC error on the radar board",
+		"cause": "Boot Flash CRC mismatch on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54312": {
+		"msg": "Program RAM CRC error on the radar board",
+		"cause": "RAM CRC mismatch on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54314": {
+		"msg": "(Channel %s) 24V voltage error on the radar board",
+		"cause": "24V voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54315": {
+		"msg": "(Channel %s) EX24V voltage error on the radar board",
+		"cause": "EX24V voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54316": {
+		"msg": "(Channel %s) 3V3 voltage error on the radar board",
+		"cause": "3V3 voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54317": {
+		"msg": "(Channel %s) 1V2 voltage error on the radar board",
+		"cause": "1V2 voltage issue detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54323": {
+		"msg": "Cross-check error in the radar board diagnostic functions",
+		"cause": "Diagnostic result mismatch between MCUs.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54324": {
+		"msg": "(Channel %s) radar board Temperature sensor measurement error",
+		"cause": "Temperature deviation between sensors exceeds 15°C.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54325": {
+		"msg": "Synchronization error detected on radar board CPU1",
+		"cause": "Synchronization issue detected on radar board CPU1.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54326": {
+		"msg": "Overheat detected on radar board temperature sensor (Channel %s)",
+		"cause": "Board temperature exceeds the safety threshold",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54331": {
+		"msg": "Program execution sequence error on the radar board",
+		"cause": "The program execution sequence deviates from the expected flow",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54332": {
+		"msg": "Program execution sequence error on the radar board",
+		"cause": "The program execution sequence deviates from the expected flow",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54333": {
+		"msg": "Program execution sequence cross-check error on the radar board",
+		"cause": "Inter-MCU program execution sequence mismatch detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54334": {
+		"msg": "Program execution timeout error on the radar board",
+		"cause": "Program execution time deviates from the expected duration.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54335": {
+		"msg": "Program execution measurement error on the radar board",
+		"cause": "Abnormal program operation detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54341": {
+		"msg": "Cross-check error detected in radar board operation",
+		"cause": "Operational anomaly detected in the redundant MCU.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54342": {
+		"msg": "External watchdog malfunction detected on the radar board",
+		"cause": "Operational anomaly detected in the external watchdog timer.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54351": {
+		"msg": "Firmware version mismatch detected on the radar board",
+		"cause": "Firmware version mismatch detected on the radar board.",
+		"remedy": "1) Please proceed with the firmware update. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54450": {
+		"msg": "FSI (Fast Serial Interface) synchronization error detected on the radar board.",
+		"cause": "FSI synchronization error detected on the radar board.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54451": {
+		"msg": "Internal communication (FSI) error detected on the radar board.",
+		"cause": "Internal communication (FSI) error detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54452": {
+		"msg": "FSI initialization and ping test failure detected on the radar board",
+		"cause": "FSI initialization and ping test failure detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54504": {
+		"msg": "Radar sensor (#%S) ID mismatch detected",
+		"cause": "The responded ID does not match the requested value",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54505": {
+		"msg": "CRC error detected in radar sensor data response",
+		"cause": "Data corruption detected in the radar sensor response.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54506": {
+		"msg": "CRC error detected during radar sensor data request",
+		"cause": "Data corruption detected during the radar sensor request sequence.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control board."
+	},
+	"E54550": {
+		"msg": "Radar sensor (#%S) status cross-check error detected",
+		"cause": "Radar sensor status inconsistency detected.",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the sensor control sensor."
+	},
+	"E54554": {
+		"msg": "Radar sensor (#%S) detection data inconsistency detected",
+		"cause": "Consecutive detection data inconsistency detected on the radar sensor.",
+		"remedy": "1) Please check for any objects obstructing the radar sensor. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54555": {
+		"msg": "CAN communication (#%S) error detected on radar sensor",
+		"cause": "Data duplication and packet loss detected",
+		"remedy": "1) Please replace the corresponding radar sensor. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54560": {
+		"msg": "24V power supply error detected on radar sensor (#%S)",
+		"cause": "24V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54561": {
+		"msg": "5V power supply error detected on radar sensor (#%S)",
+		"cause": "5V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54562": {
+		"msg": "3V3 power supply error detected on radar sensor (#%S)",
+		"cause": "3V3 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54563": {
+		"msg": "1V8 power supply error detected on radar sensor (#%S)",
+		"cause": "1V8 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54564": {
+		"msg": "1V2 power supply error detected on radar sensor (#%S)",
+		"cause": "1V2 power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54565": {
+		"msg": "1V power supply error detected on radar sensor (#%S)",
+		"cause": "1V power supply error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54566": {
+		"msg": "Over-temperature error detected on radar sensor (#%S)",
+		"cause": "Over-temperature error detected on the radar sensor.",
+		"remedy": "1) Please turn off the sensor power for 5 minutes 2) If the problem persists, replace the radar sensor."
+	},
+	"E54567": {
+		"msg": "Diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54568": {
+		"msg": "Boot diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54569": {
+		"msg": "Overall diagnostic failure detected on radar sensor (#%S)",
+		"cause": "Diagnostic function error detected on the radar sensor",
+		"remedy": "1) Reboot the controller. 2) If the problem persists, replace the radar sensor."
+	},
+	"E54570": {
+		"msg": "Version mismatch detected on radar sensor (#%S)",
+		"cause": "Radar sensor is running an outdated firmware version",
+		"remedy": "1) Please update the sensor firmware to the latest version 2) If the problem persists, replace the radar sensor."
+	},
+	"E54571": {
+		"msg": "Radar sensor is running an outdated firmware version (#%S)",
+		"cause": "The radar sensor is running an outdated firmware version.",
+		"remedy": "1) Please update the sensor firmware to the latest version 2) If the problem persists, replace the radar sensor."
+	},
 	"E54901": {
         "msg": "2nd Encoder BISS communication error detection(12 times or more)",
         "cause": "2nd Encoder BISS communication error detected.(12 times or more)",
@@ -19485,14 +19918,14 @@
         "msg": "Main computer Heartbeat Update Stopped Error",
         "cause": "The main computer Heartbeat was not updated.",
         "remedy": "1) Check the EtherCAT communication connection status. 2) Verify that the main task cycle is within the normal range (Min/Max standards). 3) Check if the firmware is the latest version. 4) Check if the issue is related to the installation of cards or other optional components. 5) If the issue persists, replace the main computer.",
-        "help_idx": "3-safety-board-part/E64002",
+        "help_idx": "E64002",
         "help_title": "[TroubleShoot] The main computer Heartbeat Update Stopped Error"
     },
     "E64003": {
         "msg": "Servo Board Status Input Error",
         "cause": "A fault occurred in the servo board.",
         "remedy": "1) Check for power lines or cables near the CNSV wiring path that may introduce electrical noise.\r\n2) Inspect the connection status of the CNSV connector, the wiring-to-connector interface, and the condition of the cable.\r\n3) Replace the CNSV cable.\r\n4) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n5)Replace the servo board.\r\n6) Replace the safety board.\r\n7) If more than 9 axes are configured, check the DIP switch settings of the extended-axis safety interface board (BD6H0).",
-        "help_idx": "3-safety-board-part/E64003",
+        "help_idx": "E64003",
         "help_title": "[TroubleShoot] Servo Board Status Input Error"  
     },
     "E64006": {
@@ -19604,7 +20037,7 @@
         "msg": "Safety module status output (SFST) mismatch (safety chain 2 OFF)",
         "cause": "Safety board status output of safety board A diagnosis error occurred in the output circuit of safety chain 2.",
         "remedy": "1) Check for power lines or cables that could introduce noise into the CNSV wiring path.\r\n2) Check the CNSV connector connection status, the wiring to connector connection, and the cable condition.\r\n3) Replace the CNSV cable.\r\n4) Check the IO power LED for a blown fuse on the BD632 safety board.\r\n5) Replace the safety board.\r\n6) Replace the servo board.",
-        "help_idx": "3-safety-board-part/E64035",
+        "help_idx": "E64035",
         "help_title": "[TroubleShoot]Safety module status output (SFST) mismatch (safety chain 2 OFF)"   
     },
     "E64050": {
