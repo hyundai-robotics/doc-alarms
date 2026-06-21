@@ -2,9 +2,11 @@ const fs = require('fs');
 const nodepath = require('path');
 
 const pathname_ts_summary = "R:/git_repo/doc/doc-hi7-troubleshoot/SUMMARY.md";
-const pathname_help = "./hi6-hi7/help_err_ko.json";
+const pathname_help = "./hi6-hi7/help_err_zh.json";
 
-const help_title_header = pathname_help.includes('_ko.') ? '[조치방법]' : '[TroubleShoot]';
+let help_title_header = '[TroubleShoot]';
+if (pathname_help.includes('_ko.')) help_title_header = '[조치방법]';
+else if (pathname_help.includes('_zh.')) help_title_header = '[处理方法]';
 
 
 // --------------------------------------------------------
