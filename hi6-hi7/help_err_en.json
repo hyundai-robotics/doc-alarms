@@ -754,7 +754,7 @@
     "E236": {
         "msg": "Motion plan failed",
         "cause": "Motion plan failed, processing the robot as in the stopped state.",
-        "remedy": "Contact our R&D center. Adjust the speed or the step position as a temporary method."
+        "remedy": "Contact the A/S department of our company for inquiries. Adjust the speed or the step position as a temporary method."
     },
     "E237": {
         "msg": "Detection of interference with the robot 0) arm area",

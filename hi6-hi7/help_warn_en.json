@@ -3427,7 +3427,7 @@
     "W34102": {
         "msg": "The status of grese feeder is not properly determined!",
         "cause": "It occurs when the determination of grease feeder's status is incorrect",
-        "remedy": "1)Check the warning message took place consistently.2)Contact our company for inquiries."
+        "remedy": "1)Check the warning message took place consistently.2)Contact the A/S department of our company for inquiries."
     },
     "W34103": {
         "msg": "Supplying grease automatically need a charge because #%s grease feeder is Low.",
